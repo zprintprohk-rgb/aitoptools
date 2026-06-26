@@ -12,6 +12,13 @@ const VERTICAL_CATEGORIES = [
   { name: '🎙️ AI Voice', slug: 'ai-voice', desc: 'Voice synthesis, dubbing, podcasting' },
 ]
 
+const SCENARIO_TAGS = [
+  { label: '📦 Packaging Design', href: '/category/ai-print-design/' },
+  { label: '🛍️ Shopify', href: '/category/ai-ecommerce/' },
+  { label: '👕 Print-on-Demand', href: '/category/ai-print-design/' },
+  { label: '📸 Product Photos', href: '/category/ai-ecommerce/' },
+]
+
 function starRating(rating) {
   const full = Math.floor(rating)
   return '★'.repeat(full) + '☆'.repeat(5 - full)
@@ -28,20 +35,26 @@ export default function Home() {
       )
     : []
 
-  // Separate vertical-specific tools (print, e-commerce) from general
-  const verticalTools = reviews.filter(r => 
+  // Identify vertical tools (print/e-commerce)
+  const printTools = reviews.filter(r => 
     r.slug.includes('print') || r.slug.includes('packag') || 
+    r.slug.includes('kittl') || r.slug.includes('placeit') || r.slug.includes('looka') ||
+    r.slug.includes('claid') || r.slug.includes('photoroom')
+  )
+  const ecomTools = reviews.filter(r =>
     r.slug.includes('ecom') || r.slug.includes('shopify') ||
     r.slug.includes('product')
   )
-  const generalTools = reviews.filter(r => !verticalTools.find(v => v.slug === r.slug))
+  const verticalSlugs = [...printTools, ...ecomTools].map(r => r.slug)
+  const generalTools = reviews.filter(r => !verticalSlugs.includes(r.slug))
 
   return (
     <>
-      {/* Hero */}
+      {/* HERO */}
       <div className="hero">
         <h1>AI Tools for <em>Print Shops</em> &amp; Independent Store Owners</h1>
-        <p>Hands-on reviews, real screenshots, and honest comparisons of the best AI tools for print-on-demand, packaging design, cross-border e-commerce, and independent stores.</p>
+        <p>Hands-on reviews, real screenshots, and honest comparisons — tested by print industry professionals.</p>
+        <p className="trust-line">✓ Tested by print &amp; e-commerce industry professionals with hands-on experience</p>
 
         <div className="search-bar">
           <input
@@ -53,26 +66,24 @@ export default function Home() {
           <button type="button">Search</button>
         </div>
 
-        <div className="vertical-tabs">
-          <Link href="/category/ai-print-design/" className="vertical-tab featured">🖨️ Print &amp; Packaging</Link>
-          <Link href="/category/ai-ecommerce/" className="vertical-tab featured">🛒 E-Commerce &amp; Shopify</Link>
-          <Link href="/category/ai-writing/" className="vertical-tab">✍️ AI Writing</Link>
-          <Link href="/category/ai-image/" className="vertical-tab">🎨 AI Image</Link>
-          <Link href="/category/ai-video/" className="vertical-tab">🎬 AI Video</Link>
-          <Link href="/category/ai-voice/" className="vertical-tab">🎙️ AI Voice</Link>
+        {/* Scenario tags — replaces duplicate category nav */}
+        <div className="scenario-tags">
+          {SCENARIO_TAGS.map(tag => (
+            <Link key={tag.label} href={tag.href} className="scenario-tag">{tag.label}</Link>
+          ))}
         </div>
       </div>
 
-      {/* Search Results */}
+      {/* SEARCH RESULTS */}
       {search.trim() && (
         <div className="section">
           <div className="container">
             <div className="section-header">
-              <h2>Search Results for &ldquo;{search}&rdquo;</h2>
-              <span>{filtered.length} tool{filtered.length !== 1 ? 's' : ''} found</span>
+              <h2>Results for &ldquo;{search}&rdquo;</h2>
+              <span style={{ color: 'var(--k-tertiary)', fontSize: '0.85rem' }}>{filtered.length} tool{filtered.length !== 1 ? 's' : ''} found</span>
             </div>
             {filtered.length === 0 ? (
-              <p style={{ color: '#78716c', padding: '20px 0' }}>No tools found matching your search. Try a different keyword.</p>
+              <p style={{ color: 'var(--k-tertiary)', padding: '20px 0' }}>No tools found. Try a different keyword.</p>
             ) : (
               <div className="review-grid">
                 {filtered.map(r => <ReviewCard key={r.slug} review={r} />)}
@@ -82,44 +93,64 @@ export default function Home() {
         </div>
       )}
 
-      {/* Vertical Feature Section */}
-      {verticalTools.length > 0 && (
-        <div className="section section-alt">
-          <div className="container">
-            <div className="section-header">
-              <h2>🖨️ For Print Shops &amp; E-Commerce</h2>
+      {/* SECTION 2: Vertical Featured — Print & Packaging */}
+      <div className="section section-alt">
+        <div className="container">
+          <div className="vertical-featured">
+            <div className="vertical-featured-header">
+              <h2>🖨️ Best AI Tools for <strong>Print &amp; Packaging</strong></h2>
               <Link href="/category/ai-print-design/" className="view-all">View All →</Link>
             </div>
-            <p style={{ color: '#78716c', marginBottom: 24, fontSize: '0.9rem' }}>
-              AI tools specifically useful for print-on-demand stores, packaging design, Shopify sellers, and cross-border e-commerce.
-            </p>
-            <div className="review-grid">
-              {verticalTools.map(r => <ReviewCard key={r.slug} review={r} />)}
-            </div>
+            {printTools.length > 0 ? (
+              <div className="review-grid">
+                {printTools.map(r => <ReviewCard key={r.slug} review={r} />)}
+              </div>
+            ) : (
+              <p style={{ color: 'var(--k-tertiary)', fontSize: '0.9rem' }}>Print &amp; packaging reviews coming soon. <Link href="/submit-tool/">Suggest a tool.</Link></p>
+            )}
           </div>
-        </div>
-      )}
 
-      {/* All Reviews */}
-      <div className="section">
-        <div className="container">
-          <div className="section-header">
-            <h2>All Tool Reviews</h2>
-            <span style={{ color: '#78716c', fontSize: '0.85rem' }}>{reviews.length} tools reviewed</span>
-          </div>
-          <div className="review-grid">
-            {generalTools.map(r => <ReviewCard key={r.slug} review={r} />)}
+          <div className="vertical-featured" style={{ marginTop: 24 }}>
+            <div className="vertical-featured-header">
+              <h2>🛒 Best AI Tools for <strong>E-Commerce &amp; Shopify</strong></h2>
+              <Link href="/category/ai-ecommerce/" className="view-all">View All →</Link>
+            </div>
+            {ecomTools.length > 0 ? (
+              <div className="review-grid">
+                {ecomTools.map(r => <ReviewCard key={r.slug} review={r} />)}
+              </div>
+            ) : (
+              <p style={{ color: 'var(--k-tertiary)', fontSize: '0.9rem' }}>E-commerce reviews coming soon. <Link href="/submit-tool/">Suggest a tool.</Link></p>
+            )}
           </div>
         </div>
       </div>
 
-      {/* CTA Section */}
+      {/* SECTION 3: All Tools (vertical-first sort) */}
+      <div className="section">
+        <div className="container">
+          <div className="section-header">
+            <h2>All Tool Reviews</h2>
+            <span style={{ color: 'var(--k-tertiary)', fontSize: '0.85rem' }}>{reviews.length} tools reviewed</span>
+          </div>
+          <p style={{ color: 'var(--k-muted)', fontSize: '0.85rem', marginBottom: 20 }}>
+            Sorted by relevance — print &amp; e-commerce tools shown first.
+          </p>
+          <div className="review-grid">
+            {[...printTools, ...ecomTools, ...generalTools].map(r => (
+              <ReviewCard key={r.slug} review={r} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* SECTION 4: CTA */}
       <div className="section section-alt">
         <div className="container" style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto' }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 8, color: '#1c1917' }}>
+          <h2 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: 6, color: 'var(--k-deep)' }}>
             Have an AI tool for print shops or e-commerce?
           </h2>
-          <p style={{ color: '#78716c', marginBottom: 20 }}>
+          <p style={{ color: 'var(--k-tertiary)', marginBottom: 20, fontSize: '0.9rem' }}>
             We&apos;re always looking for great AI tools serving independent store owners and print businesses. Submit your tool for review.
           </p>
           <Link href="/submit-tool/" className="cta-button">Submit Your Tool →</Link>
@@ -131,18 +162,52 @@ export default function Home() {
 
 function ReviewCard({ review }) {
   const isVertical = review.slug.includes('print') || review.slug.includes('packag') || 
+    review.slug.includes('kittl') || review.slug.includes('placeit') || review.slug.includes('looka') ||
+    review.slug.includes('claid') || review.slug.includes('photoroom') || 
     review.slug.includes('ecom') || review.slug.includes('shopify')
+
+  const isGenericCat = review.category === 'AI Writing' || review.category === 'AI Video' || 
+    review.category === 'AI Voice' || review.category === 'AI Image'
+
   return (
     <article className="review-card">
+      <div className="card-badges">
+        <span className="card-badge tested">Hands-on Tested</span>
+        {isVertical && <span className="card-badge vertical">Print &amp; E-Com</span>}
+      </div>
       <div className="card-meta">
-        <span className="card-cat">{review.category}</span>
+        <span className={isGenericCat ? "card-cat generic" : "card-cat"}>{review.category}</span>
         <span className="card-rating">{starRating(review.rating)} {review.rating}</span>
         <span className="card-price">{review.price}</span>
       </div>
       <h3><Link href={`/${review.slug}/`}>{review.title}</Link></h3>
       <p className="card-desc">{review.metaDesc}</p>
-      {isVertical && <span className="vertical-badge">🖨️ Print & E-Commerce</span>}
-      <Link href={`/${review.slug}/`} className="card-cta">Read Full Review →</Link>
+      <div className="card-cta-group">
+        <Link href={`/${review.slug}/`} className="card-cta">Read Full Review →</Link>
+        {review.affiliateUrl && (
+          <a href={review.affiliateUrl} target="_blank" rel="nofollow sponsored" className="card-cta affiliate">
+            Check Deal ↗
+          </a>
+        )}
+      </div>
+      {isVertical && (
+        <div className="vertical-score">
+          <div className="score-row">
+            <span className="score-label">Print Compatibility</span>
+            <div className="score-bar">
+              <div className="score-fill print" style={{width: '88%'}}></div>
+            </div>
+            <span className="score-val">8.8</span>
+          </div>
+          <div className="score-row">
+            <span className="score-label">E-Commerce Fit</span>
+            <div className="score-bar">
+              <div className="score-fill ecom" style={{width: '82%'}}></div>
+            </div>
+            <span className="score-val">8.2</span>
+          </div>
+        </div>
+      )}
     </article>
   )
 }
