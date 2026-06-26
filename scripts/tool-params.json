@@ -764,6 +764,168 @@
       "datePublished": "2026-06-25",
       "status": "pending",
       "official_url": "https://stability.ai"
+    },
+    {
+      "slug": "kittl",
+      "name": "Kittl",
+      "category": "AI Print Design",
+      "price_monthly": 18,
+      "rating": 4.5,
+      "affiliateLink": "https://kittl.com/?fpr=partner",
+      "visitUrl": "https://kittl.com",
+      "competitor": "canva",
+      "pros": [
+        "Best-in-class for print-on-demand designs",
+        "Thousands of editable templates for t-shirts, mugs, packaging",
+        "Built-in mockup generator for product previews",
+        "Commercial license included on Pro plan",
+        "Excellent typography and text effects"
+      ],
+      "cons": [
+        "No free plan (trial only)",
+        "Limited vector export options",
+        "Less general-purpose than Canva"
+      ],
+      "description": "Kittl is the leading AI-powered design platform for print-on-demand products, t-shirts, and packaging.",
+      "datePublished": "2026-06-26",
+      "status": "pending",
+      "official_url": "https://kittl.com",
+      "vertical": "print"
+    },
+    {
+      "slug": "placeit",
+      "name": "Placeit",
+      "category": "AI Print Design",
+      "price_monthly": 14.97,
+      "rating": 4.0,
+      "affiliateLink": "https://placeit.net/?fpr=partner",
+      "visitUrl": "https://placeit.net",
+      "competitor": "kittl",
+      "pros": [
+        "World's largest mockup library",
+        "T-shirt, hoodie, mug, and packaging mockups",
+        "Easy drag-and-drop editor",
+        "No design skills needed",
+        "Unlimited downloads on subscription"
+      ],
+      "cons": [
+        "Less AI-powered than competitors",
+        "Template quality varies",
+        "Design tools are basic"
+      ],
+      "description": "Placeit by Envato is the go-to mockup generator for print-on-demand sellers with thousands of realistic product mockups.",
+      "datePublished": "2026-06-26",
+      "status": "pending",
+      "official_url": "https://placeit.net",
+      "vertical": "print"
+    },
+    {
+      "slug": "looka",
+      "name": "Looka",
+      "category": "AI Print Design",
+      "price_monthly": 0,
+      "rating": 4.0,
+      "affiliateLink": "https://looka.com/?fpr=partner",
+      "visitUrl": "https://looka.com",
+      "competitor": "hatchful",
+      "pros": [
+        "AI logo generator in seconds",
+        "Brand kit with colors, fonts, and business cards",
+        "High-resolution logo files included",
+        "Affordable one-time purchase option",
+        "Good for print shop branding"
+      ],
+      "cons": [
+        "Logo variations can feel generic",
+        "Limited editing after purchase",
+        "Better for simple vs complex logos"
+      ],
+      "description": "Looka is an AI logo maker and brand identity tool for small businesses and print shop owners.",
+      "datePublished": "2026-06-26",
+      "status": "pending",
+      "official_url": "https://looka.com",
+      "vertical": "print"
+    },
+    {
+      "slug": "claid-ai",
+      "name": "Claid AI",
+      "category": "AI E-Commerce",
+      "price_monthly": 49,
+      "rating": 4.5,
+      "affiliateLink": "https://claid.ai/?fpr=partner",
+      "visitUrl": "https://claid.ai",
+      "competitor": "photoroom",
+      "pros": [
+        "Enterprise-grade AI product photo editing",
+        "Batch processing for catalogs",
+        "Background removal, retouching, upscaling",
+        "CMYK support for print-ready images",
+        "API integration for e-commerce platforms"
+      ],
+      "cons": [
+        "More expensive at $49/mo",
+        "Overkill for casual users",
+        "No free tier"
+      ],
+      "description": "Claid AI is a professional AI photo editing platform for e-commerce product photography with print-ready export.",
+      "datePublished": "2026-06-26",
+      "status": "pending",
+      "official_url": "https://claid.ai",
+      "vertical": "ecommerce"
+    },
+    {
+      "slug": "photoroom",
+      "name": "Photoroom",
+      "category": "AI E-Commerce",
+      "price_monthly": 9.99,
+      "rating": 4.5,
+      "affiliateLink": "https://photoroom.com/?fpr=partner",
+      "visitUrl": "https://photoroom.com",
+      "competitor": "remove-bg",
+      "pros": [
+        "Best AI background removal on mobile",
+        "Batch processing available",
+        "Product photo enhancement tools",
+        "Affordable at $9.99/mo",
+        "Great for quick product mockups"
+      ],
+      "cons": [
+        "Mobile app better than web version",
+        "Limited CMYK/print support",
+        "Batch processing on paid plan only"
+      ],
+      "description": "Photoroom is the best AI background removal and product photo editing app for e-commerce sellers.",
+      "datePublished": "2026-06-26",
+      "status": "pending",
+      "official_url": "https://photoroom.com",
+      "vertical": "ecommerce"
+    },
+    {
+      "slug": "shopify-magic",
+      "name": "Shopify Magic",
+      "category": "AI E-Commerce",
+      "price_monthly": 0,
+      "rating": 4.0,
+      "affiliateLink": "https://shopify.com/magic",
+      "visitUrl": "https://shopify.com/magic",
+      "competitor": "gempages",
+      "pros": [
+        "Built into Shopify - no extra cost",
+        "AI product descriptions in one click",
+        "AI image generation for store products",
+        "Automated email subject lines",
+        "FAQ answers auto-generated"
+      ],
+      "cons": [
+        "Requires Shopify subscription ($1/mo trial)",
+        "Limited to Shopify platform only",
+        "Output quality depends on input data"
+      ],
+      "description": "Shopify Magic is Shopify's built-in AI suite for product descriptions, images, and store optimization.",
+      "datePublished": "2026-06-26",
+      "status": "pending",
+      "official_url": "https://shopify.com/magic",
+      "vertical": "ecommerce"
     }
   ],
   "categories": [
@@ -866,6 +1028,22 @@
       "name": "Freelance",
       "tools": [
         "fiverr"
+      ]
+    },
+    {
+      "name": "AI Print Design",
+      "tools": [
+        "kittl",
+        "placeit",
+        "looka"
+      ]
+    },
+    {
+      "name": "AI E-Commerce",
+      "tools": [
+        "claid-ai",
+        "photoroom",
+        "shopify-magic"
       ]
     }
   ]
