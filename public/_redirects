@@ -1,0 +1,5 @@
+# Redirect www to non-www
+www.aitoptools.net/* https://aitoptools.net/:splat 301
+
+# Redirect pages.dev to main domain
+*.pages.dev/* https://aitoptools.net/:splat 301

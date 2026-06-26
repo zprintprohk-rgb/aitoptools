@@ -1,0 +1,872 @@
+{
+  "tools": [
+    {
+      "slug": "jasper-ai",
+      "name": "Jasper AI",
+      "category": "AI Writing",
+      "price_monthly": 49,
+      "rating": 4.5,
+      "affiliateLink": "https://jasper.ai/?fpr=partner",
+      "visitUrl": "https://jasper.ai",
+      "competitor": "writesonic",
+      "pros": [
+        "Best-in-class brand voice customization",
+        "Supports 30+ languages",
+        "Powerful SEO mode for long-form content",
+        "Reliable output quality",
+        "Good for marketing teams"
+      ],
+      "cons": [
+        "More expensive at $49/mo",
+        "Steep learning curve",
+        "No free plan, only 7-day trial"
+      ],
+      "description": "Jasper AI is an enterprise-grade AI writing assistant with advanced brand voice customization and SEO integration.",
+      "datePublished": "2026-06-25",
+      "status": "published",
+      "official_url": "https://jasper.ai"
+    },
+    {
+      "slug": "writesonic",
+      "name": "Writesonic",
+      "category": "AI Writing",
+      "price_monthly": 20,
+      "rating": 4.5,
+      "affiliateLink": "https://writesonic.com/?fpr=partner",
+      "visitUrl": "https://writesonic.com",
+      "competitor": "jasper-ai",
+      "pros": [
+        "Best value at $20/mo unlimited words",
+        "Built-in SEO editor with real-time scoring",
+        "Chatsonic AI chat + writing combo",
+        "Great for short and long-form"
+      ],
+      "cons": [
+        "Brand voice less consistent than Jasper",
+        "Some templates produce generic output",
+        "Slow support on basic plan"
+      ],
+      "description": "Writesonic is a budget-friendly AI writing tool with built-in SEO checker and chat capabilities.",
+      "datePublished": "2026-06-25",
+      "status": "published",
+      "official_url": "https://writesonic.com"
+    },
+    {
+      "slug": "heygen",
+      "name": "HeyGen",
+      "category": "AI Video",
+      "price_monthly": 29,
+      "rating": 4.5,
+      "affiliateLink": "https://heygen.com/?fpr=partner",
+      "visitUrl": "https://heygen.com",
+      "competitor": "synthesia",
+      "pros": [
+        "Most realistic AI avatars on the market",
+        "120+ languages and accents",
+        "Easy-to-use video editor",
+        "Perfect for sales and training"
+      ],
+      "cons": [
+        "Free plan has watermark",
+        "Custom avatar creation expensive ($500+)",
+        "Lip sync slightly off on complex words"
+      ],
+      "description": "HeyGen is the leading AI video avatar platform for creating professional videos with realistic AI presenters.",
+      "datePublished": "2026-06-25",
+      "status": "published",
+      "official_url": "https://heygen.com"
+    },
+    {
+      "slug": "elevenlabs",
+      "name": "ElevenLabs",
+      "category": "AI Voice",
+      "price_monthly": 22,
+      "rating": 4.5,
+      "affiliateLink": "https://elevenlabs.io/?fpr=partner",
+      "visitUrl": "https://elevenlabs.io",
+      "competitor": "murf-ai",
+      "pros": [
+        "Most natural-sounding AI voices",
+        "Voice cloning incredibly accurate",
+        "New sound effects generator",
+        "Low latency for real-time apps"
+      ],
+      "cons": [
+        "Free plan only 10K chars/month",
+        "Pro $99 is expensive",
+        "Some robotic artifacts in non-English"
+      ],
+      "description": "ElevenLabs is the gold standard for AI voice generation with ultra-realistic speech synthesis.",
+      "datePublished": "2026-06-25",
+      "status": "published",
+      "official_url": "https://elevenlabs.io"
+    },
+    {
+      "slug": "hostinger",
+      "name": "Hostinger",
+      "category": "Web Hosting",
+      "price_monthly": 2.99,
+      "rating": 4.0,
+      "affiliateLink": "https://hostinger.com/?fpr=partner",
+      "visitUrl": "https://hostinger.com",
+      "competitor": "bluehost",
+      "pros": [
+        "Cheapest at $2.99/mo for 4 years",
+        "99.9% uptime",
+        "Fast LiteSpeed caching",
+        "Free domain on Business plan"
+      ],
+      "cons": [
+        "Renewal is $7.99/mo",
+        "Chat-only support",
+        "No daily backups on cheapest plan"
+      ],
+      "description": "Hostinger is a budget web hosting provider offering excellent price-to-performance for small sites.",
+      "datePublished": "2026-06-25",
+      "status": "published",
+      "official_url": "https://hostinger.com"
+    },
+    {
+      "slug": "copy-ai",
+      "name": "Copy.ai",
+      "category": "AI Writing",
+      "price_monthly": 36,
+      "rating": 4.0,
+      "affiliateLink": "https://copy.ai/?fpr=partner",
+      "visitUrl": "https://copy.ai",
+      "competitor": "writesonic",
+      "pros": [
+        "Best workflow automation for marketing teams",
+        "Excellent GTM AI platform features",
+        "Strong social media content generation",
+        "Good collaboration features"
+      ],
+      "cons": [
+        "More expensive than Writesonic at $36/mo",
+        "Long-form blog quality inconsistent",
+        "Free plan is very limited"
+      ],
+      "description": "Copy.ai is a GTM AI platform for marketing teams with powerful workflow automation features.",
+      "datePublished": "2026-06-25",
+      "status": "published",
+      "official_url": "https://copy.ai"
+    },
+    {
+      "slug": "rytr",
+      "name": "Rytr",
+      "category": "AI Writing",
+      "price_monthly": 9,
+      "rating": 3.5,
+      "affiliateLink": "https://rytr.me/?fpr=partner",
+      "visitUrl": "https://rytr.me",
+      "competitor": "writesonic",
+      "pros": [
+        "Cheapest paid plan at $9/mo",
+        "Built-in plagiarism checker",
+        "Supports 40+ languages",
+        "Simple and easy to use"
+      ],
+      "cons": [
+        "Output quality noticeably lower than Jasper/Writesonic",
+        "Limited long-form capabilities",
+        "Basic SEO features",
+        "Fewer templates than competitors"
+      ],
+      "description": "Rytr is the most affordable AI writing assistant at $9/mo for freelancers and students.",
+      "datePublished": "2026-06-25",
+      "status": "published",
+      "official_url": "https://rytr.me"
+    },
+    {
+      "slug": "midjourney",
+      "name": "Midjourney",
+      "category": "AI Image",
+      "price_monthly": 10,
+      "rating": 5.0,
+      "affiliateLink": "https://midjourney.com",
+      "visitUrl": "https://midjourney.com",
+      "competitor": "leonardo-ai",
+      "pros": [
+        "Best image quality of any AI generator",
+        "Unmatched artistic style and composition",
+        "Excellent prompt understanding",
+        "Active community and regular updates"
+      ],
+      "cons": [
+        "No free plan, paid only",
+        "Requires Discord to use",
+        "No API access",
+        "Less flexible for photorealistic corporate images"
+      ],
+      "description": "Midjourney is the gold standard for AI-generated art with unbeatable image quality and artistic style.",
+      "datePublished": "2026-06-25",
+      "status": "published",
+      "official_url": "https://midjourney.com"
+    },
+    {
+      "slug": "leonardo-ai",
+      "name": "Leonardo AI",
+      "category": "AI Image",
+      "price_monthly": 10,
+      "rating": 4.0,
+      "affiliateLink": "https://leonardo.ai/?fpr=partner",
+      "visitUrl": "https://leonardo.ai",
+      "competitor": "midjourney",
+      "pros": [
+        "Generous free tier with daily tokens",
+        "Built-in game asset generator",
+        "Multiple model support (SDXL, custom)",
+        "Web-based, no Discord needed"
+      ],
+      "cons": [
+        "Quality still below Midjourney",
+        "Token system limits heavy usage",
+        "Interface can be overwhelming",
+        "Some features locked behind paid plans"
+      ],
+      "description": "Leonardo AI is the best free AI image generator for game assets and concept art.",
+      "datePublished": "2026-06-25",
+      "status": "published",
+      "official_url": "https://leonardo.ai"
+    },
+    {
+      "slug": "runway-ml",
+      "name": "Runway ML",
+      "category": "AI Video",
+      "price_monthly": 15,
+      "rating": 4.5,
+      "affiliateLink": "https://runwayml.com/?fpr=partner",
+      "visitUrl": "https://runwayml.com",
+      "competitor": "pika-labs",
+      "pros": [
+        "Best AI video quality with Gen-3 Alpha",
+        "Motion Brush for precise control",
+        "Wide range of creative tools",
+        "Good for professional video editors"
+      ],
+      "cons": [
+        "Rendering can be slow",
+        "Free plan has watermarked exports",
+        "Steep learning curve for beginners",
+        "More expensive at higher tiers"
+      ],
+      "description": "Runway ML is the leading AI video generation platform for professional filmmakers and creators.",
+      "datePublished": "2026-06-25",
+      "status": "published",
+      "official_url": "https://runwayml.com"
+    },
+    {
+      "slug": "synthesia",
+      "name": "Synthesia",
+      "category": "AI Video",
+      "price_monthly": 29,
+      "rating": 4.0,
+      "affiliateLink": "https://synthesia.io/?fpr=partner",
+      "visitUrl": "https://synthesia.io",
+      "competitor": "heygen",
+      "pros": [
+        "150+ AI avatars",
+        "Multi-language voiceovers",
+        "Good for corporate training",
+        "Templates for common video types"
+      ],
+      "cons": [
+        "Avatars less realistic than HeyGen",
+        "No free plan",
+        "Limited creative flexibility",
+        "Annual contract required for best price"
+      ],
+      "description": "Synthesia is a popular AI video platform for corporate training and business presentations.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://synthesia.io"
+    },
+    {
+      "slug": "cursor",
+      "name": "Cursor",
+      "category": "AI Coding",
+      "price_monthly": 20,
+      "rating": 4.5,
+      "affiliateLink": "https://cursor.sh/?fpr=partner",
+      "visitUrl": "https://cursor.sh",
+      "competitor": "github-copilot",
+      "pros": [
+        "Best in-class code understanding",
+        "Superior IDE integration",
+        "Excellent context awareness",
+        "Good for large codebases"
+      ],
+      "cons": [
+        "Requires VS Code migration",
+        "Pro $20/mo is pricier than Copilot",
+        "Still maturing as an IDE"
+      ],
+      "description": "Cursor is an AI-first code editor with deep codebase understanding and autocomplete.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://cursor.sh"
+    },
+    {
+      "slug": "notion-ai",
+      "name": "Notion AI",
+      "category": "AI Productivity",
+      "price_monthly": 10,
+      "rating": 4.0,
+      "affiliateLink": "https://notion.so/?fpr=partner",
+      "visitUrl": "https://notion.so",
+      "competitor": "mem-ai",
+      "pros": [
+        "Integrated into best-in-class note-taking",
+        "AI writing, summarization, and Q&A",
+        "Good value at $10/mo add-on",
+        "Team collaboration features"
+      ],
+      "cons": [
+        "AI is an add-on, not core product",
+        "Limited compared to specialized AI tools",
+        "Occasional hallucinations in Q&A"
+      ],
+      "description": "Notion AI adds AI-powered writing, summarization, and Q&A to the popular all-in-one workspace.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://notion.so"
+    },
+    {
+      "slug": "perplexity-pro",
+      "name": "Perplexity Pro",
+      "category": "AI Search",
+      "price_monthly": 20,
+      "rating": 4.5,
+      "affiliateLink": "https://perplexity.ai/?fpr=partner",
+      "visitUrl": "https://perplexity.ai",
+      "competitor": "poe",
+      "pros": [
+        "Most accurate AI search engine",
+        "Real-time web sources with citations",
+        "Pro model access (GPT-4, Claude)",
+        "Best for research and fact-checking"
+      ],
+      "cons": [
+        "Free tier is limited",
+        "$20/mo for Pro",
+        "Not a content creation tool"
+      ],
+      "description": "Perplexity Pro is an AI-powered search engine with real-time citations and advanced model access.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://perplexity.ai"
+    },
+    {
+      "slug": "suno-ai",
+      "name": "Suno AI",
+      "category": "AI Music",
+      "price_monthly": 10,
+      "rating": 4.0,
+      "affiliateLink": "https://suno.ai/?fpr=partner",
+      "visitUrl": "https://suno.ai",
+      "competitor": "udio",
+      "pros": [
+        "Best AI music generation quality",
+        "Lyrics + music generation",
+        "Good genre variety",
+        "Free tier available"
+      ],
+      "cons": [
+        "Output quality varies by genre",
+        "Copyright gray area",
+        "Generation can be slow"
+      ],
+      "description": "Suno AI is the leading AI music generation platform for creating original songs from text prompts.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://suno.ai"
+    },
+    {
+      "slug": "gamma-ai",
+      "name": "Gamma AI",
+      "category": "AI Presentation",
+      "price_monthly": 10,
+      "rating": 4.0,
+      "affiliateLink": "https://gamma.app/?fpr=partner",
+      "visitUrl": "https://gamma.app",
+      "competitor": "canva-ai",
+      "pros": [
+        "Creates full presentations from text",
+        "Beautiful templates",
+        "Fast generation",
+        "Good starting point for decks"
+      ],
+      "cons": [
+        "Limited customization",
+        "AI often gets layout wrong",
+        "Small team behind it"
+      ],
+      "description": "Gamma AI generates complete presentations from a text prompt with beautiful templates.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://gamma.app"
+    },
+    {
+      "slug": "nordvpn",
+      "name": "NordVPN",
+      "category": "Security",
+      "price_monthly": 3.09,
+      "rating": 4.5,
+      "affiliateLink": "https://nordvpn.com/?fpr=partner",
+      "visitUrl": "https://nordvpn.com",
+      "competitor": "surfshark",
+      "pros": [
+        "Industry-leading security features",
+        "6000+ servers worldwide",
+        "Double VPN + threat protection",
+        "Excellent speed"
+      ],
+      "cons": [
+        "More expensive than Surfshark long-term",
+        "No live chat on basic plan",
+        "Apps can be bloated"
+      ],
+      "description": "NordVPN is a premium VPN service with advanced security features and a massive server network.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://nordvpn.com"
+    },
+    {
+      "slug": "bluehost",
+      "name": "Bluehost",
+      "category": "Web Hosting",
+      "price_monthly": 2.95,
+      "rating": 3.5,
+      "affiliateLink": "https://bluehost.com/?fpr=partner",
+      "visitUrl": "https://bluehost.com",
+      "competitor": "hostinger",
+      "pros": [
+        "Officially recommended by WordPress.org",
+        "Free domain for 1 year",
+        "Good beginner-friendly interface",
+        "24/7 support"
+      ],
+      "cons": [
+        "Renewal prices much higher ($8.99+)",
+        "Slower than LiteSpeed hosts",
+        "Upsells during checkout",
+        "Basic plan limited"
+      ],
+      "description": "Bluehost is a WordPress-recommended hosting provider for beginners and small websites.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://bluehost.com"
+    },
+    {
+      "slug": "surfshark",
+      "name": "Surfshark",
+      "category": "Security",
+      "price_monthly": 2.49,
+      "rating": 4.0,
+      "affiliateLink": "https://surfshark.com/?fpr=partner",
+      "visitUrl": "https://surfshark.com",
+      "competitor": "nordvpn",
+      "pros": [
+        "Unlimited simultaneous devices",
+        "Very affordable long-term ($2.49/mo)",
+        "CleanWeb ad blocker",
+        "Good streaming unblocking"
+      ],
+      "cons": [
+        "Slower than NordVPN on distant servers",
+        "Smaller server network",
+        "No dedicated IP on basic plan"
+      ],
+      "description": "Surfshark is an affordable VPN with unlimited device connections and solid privacy features.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://surfshark.com"
+    },
+    {
+      "slug": "fiverr",
+      "name": "Fiverr",
+      "category": "Freelance",
+      "price_monthly": 0,
+      "rating": 4.0,
+      "affiliateLink": "https://fiverr.com/?fpr=partner",
+      "visitUrl": "https://fiverr.com",
+      "competitor": "upwork",
+      "pros": [
+        "Free to join and browse",
+        "Huge variety of services",
+        "Built-in payment protection",
+        "Good for one-off projects"
+      ],
+      "cons": [
+        "20% service fee on earnings",
+        "Quality varies wildly",
+        "High competition",
+        "Returns policy favors buyers"
+      ],
+      "description": "Fiverr is the largest freelance marketplace for digital services starting at $5.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://fiverr.com"
+    },
+    {
+      "slug": "otter-ai",
+      "name": "Otter.ai",
+      "category": "AI Productivity",
+      "price_monthly": 17,
+      "rating": 4.0,
+      "affiliateLink": "https://otter.ai/?fpr=partner",
+      "visitUrl": "https://otter.ai",
+      "competitor": "notion-ai",
+      "pros": [
+        "Best AI meeting transcription",
+        "Real-time captioning",
+        "Action item extraction",
+        "Integrates with Zoom/Teams/Google Meet"
+      ],
+      "cons": [
+        "Free plan limited to 300 min/mo",
+        "Accuracy drops with accents",
+        "Meeting bot can be awkward"
+      ],
+      "description": "Otter.ai provides AI-powered meeting transcription, note-taking, and action item extraction.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://otter.ai"
+    },
+    {
+      "slug": "poe",
+      "name": "Poe by Quora",
+      "category": "AI Chat",
+      "price_monthly": 20,
+      "rating": 4.0,
+      "affiliateLink": "https://poe.com/?fpr=partner",
+      "visitUrl": "https://poe.com",
+      "competitor": "perplexity-pro",
+      "pros": [
+        "Access to multiple AI models in one place",
+        "GPT-4, Claude, Gemini all available",
+        "Custom bots and prompts",
+        "Clean, fast interface"
+      ],
+      "cons": [
+        "Daily message limits on free plan",
+        "$20/mo for full access",
+        "Not for content creation",
+        "No API access"
+      ],
+      "description": "Poe is a multi-model AI chat platform giving access to GPT-4, Claude, Gemini and more in one app.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://poe.com"
+    },
+    {
+      "slug": "canva-ai",
+      "name": "Canva AI",
+      "category": "AI Design",
+      "price_monthly": 13,
+      "rating": 4.5,
+      "affiliateLink": "https://canva.com/?fpr=partner",
+      "visitUrl": "https://canva.com",
+      "competitor": "gamma-ai",
+      "pros": [
+        "Magic Studio AI tools are fantastic",
+        "Huge template library",
+        "Best for non-designers",
+        "Magic Eraser, Expand, and Text-to-Image"
+      ],
+      "cons": [
+        "Free tier has limited AI uses",
+        "Some AI features still beta",
+        "Expensive with all add-ons"
+      ],
+      "description": "Canva AI is the most accessible AI design platform with Magic Studio AI tools for everyone.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://canva.com"
+    },
+    {
+      "slug": "pika-labs",
+      "name": "Pika Labs",
+      "category": "AI Video",
+      "price_monthly": 10,
+      "rating": 3.5,
+      "affiliateLink": "https://pika.art/?fpr=partner",
+      "visitUrl": "https://pika.art",
+      "competitor": "runway-ml",
+      "pros": [
+        "Free tier available",
+        "Fun and experimental features",
+        "Active Discord community",
+        "Fast iteration cycle"
+      ],
+      "cons": [
+        "Quality below Runway Gen-3",
+        "Short clip length",
+        "Inconsistent results",
+        "Not production-ready yet"
+      ],
+      "description": "Pika Labs is an experimental AI video generation platform with a focus on creative exploration.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://pika.art"
+    },
+    {
+      "slug": "udio",
+      "name": "Udio",
+      "category": "AI Music",
+      "price_monthly": 10,
+      "rating": 3.5,
+      "affiliateLink": "https://udio.com/?fpr=partner",
+      "visitUrl": "https://udio.com",
+      "competitor": "suno-ai",
+      "pros": [
+        "High-quality music generation",
+        "Good vocal clarity",
+        "Free tier available",
+        "Genre variety"
+      ],
+      "cons": [
+        "Less known than Suno",
+        "Shorter generations",
+        "Smaller community",
+        "Limited controls"
+      ],
+      "description": "Udio is an AI music generator with strong vocal quality and genre variety.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://udio.com"
+    },
+    {
+      "slug": "warp",
+      "name": "Warp",
+      "category": "AI Coding",
+      "price_monthly": 0,
+      "rating": 4.0,
+      "affiliateLink": "https://warp.dev/?fpr=partner",
+      "visitUrl": "https://warp.dev",
+      "competitor": "cursor",
+      "pros": [
+        "AI-powered terminal with smart suggestions",
+        "Clean, modern UI",
+        "Workflows for common commands",
+        "Free for individual use"
+      ],
+      "cons": [
+        "Mac-only (no Windows/Linux yet)",
+        "Learning curve for terminal newbies",
+        "Privacy concerns with cloud features"
+      ],
+      "description": "Warp is a modern AI-powered terminal with smart suggestions and workflow automation.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://warp.dev"
+    },
+    {
+      "slug": "mem-ai",
+      "name": "Mem.ai",
+      "category": "AI Notes",
+      "price_monthly": 15,
+      "rating": 3.5,
+      "affiliateLink": "https://mem.ai/?fpr=partner",
+      "visitUrl": "https://mem.ai",
+      "competitor": "notion-ai",
+      "pros": [
+        "Auto-organizes notes with AI",
+        "Smart collections and tags",
+        "Good for personal knowledge base",
+        "Clean interface"
+      ],
+      "cons": [
+        "Small user base",
+        "Less feature-rich than Notion",
+        "No offline mode",
+        "Expensive at $15/mo"
+      ],
+      "description": "Mem.ai is an AI-powered note-taking app that automatically organizes your knowledge base.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://mem.ai"
+    },
+    {
+      "slug": "anyword",
+      "name": "Anyword",
+      "category": "AI Marketing",
+      "price_monthly": 49,
+      "rating": 4.0,
+      "affiliateLink": "https://anyword.com/?fpr=partner",
+      "visitUrl": "https://anyword.com",
+      "competitor": "copy-ai",
+      "pros": [
+        "Predictive performance scoring",
+        "Data-driven copywriting",
+        "Good for ad copy",
+        "Conversion optimization"
+      ],
+      "cons": [
+        "Expensive at $49/mo",
+        "Overkill for simple content",
+        "Learning curve",
+        "Smaller template library"
+      ],
+      "description": "Anyword is a data-driven AI copywriting platform with predictive performance scoring.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://anyword.com"
+    },
+    {
+      "slug": "github-copilot",
+      "name": "GitHub Copilot",
+      "category": "AI Coding",
+      "price_monthly": 10,
+      "rating": 4.5,
+      "affiliateLink": "https://github.com/features/copilot/?fpr=partner",
+      "visitUrl": "https://github.com/features/copilot",
+      "competitor": "cursor",
+      "pros": [
+        "Best IDE integration (VS Code, JetBrains)",
+        "$10/mo is great value",
+        "Improving rapidly with GPT-4",
+        "Massive user community"
+      ],
+      "cons": [
+        "Can suggest insecure code occasionally",
+        "Free tier very limited",
+        "No chat on basic plan",
+        "Privacy concerns for enterprises"
+      ],
+      "description": "GitHub Copilot is the most popular AI coding assistant with deep IDE integration.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://github.com/features/copilot"
+    },
+    {
+      "slug": "stable-diffusion",
+      "name": "Stable Diffusion",
+      "category": "AI Image",
+      "price_monthly": 0,
+      "rating": 4.0,
+      "affiliateLink": "https://stability.ai/?fpr=partner",
+      "visitUrl": "https://stability.ai",
+      "competitor": "midjourney",
+      "pros": [
+        "Free and open source",
+        "Runs locally on your GPU",
+        "Huge community of fine-tuned models",
+        "Complete control over generation"
+      ],
+      "cons": [
+        "Requires technical setup",
+        "Needs good GPU",
+        "Quality below Midjourney by default",
+        "Prompt engineering skill needed"
+      ],
+      "description": "Stable Diffusion is a free, open-source AI image generator that runs locally on your hardware.",
+      "datePublished": "2026-06-25",
+      "status": "pending",
+      "official_url": "https://stability.ai"
+    }
+  ],
+  "categories": [
+    {
+      "name": "AI Writing",
+      "tools": [
+        "jasper-ai",
+        "writesonic",
+        "copy-ai",
+        "rytr",
+        "anyword"
+      ]
+    },
+    {
+      "name": "AI Image",
+      "tools": [
+        "midjourney",
+        "leonardo-ai",
+        "stable-diffusion"
+      ],
+      "extra": [
+        "dall-e-3",
+        "adobe-firefly"
+      ]
+    },
+    {
+      "name": "AI Video",
+      "tools": [
+        "runway-ml",
+        "synthesia",
+        "heygen",
+        "pika-labs"
+      ]
+    },
+    {
+      "name": "AI Voice",
+      "tools": [
+        "elevenlabs"
+      ]
+    },
+    {
+      "name": "AI Coding",
+      "tools": [
+        "cursor",
+        "github-copilot",
+        "warp"
+      ]
+    },
+    {
+      "name": "AI Productivity",
+      "tools": [
+        "notion-ai",
+        "otter-ai",
+        "mem-ai"
+      ]
+    },
+    {
+      "name": "AI Marketing",
+      "tools": [
+        "anyword",
+        "copy-ai"
+      ]
+    },
+    {
+      "name": "AI Chat",
+      "tools": [
+        "poe",
+        "perplexity-pro"
+      ]
+    },
+    {
+      "name": "AI Music",
+      "tools": [
+        "suno-ai",
+        "udio"
+      ]
+    },
+    {
+      "name": "AI Design",
+      "tools": [
+        "canva-ai",
+        "gamma-ai"
+      ]
+    },
+    {
+      "name": "Security",
+      "tools": [
+        "nordvpn",
+        "surfshark"
+      ]
+    },
+    {
+      "name": "Web Hosting",
+      "tools": [
+        "hostinger",
+        "bluehost"
+      ]
+    },
+    {
+      "name": "Freelance",
+      "tools": [
+        "fiverr"
+      ]
+    }
+  ]
+}

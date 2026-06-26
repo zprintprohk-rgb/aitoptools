@@ -3,7 +3,9 @@ import './globals.css'
 export const metadata = {
   title: { default: 'AI Tool Reviews 2026 - Honest & In-Depth Reviews', template: '%s | AI Tool Reviews' },
   description: 'Honest and in-depth reviews of the best AI tools in 2026. Find the perfect AI writing, video, voice, and productivity tools for your needs.',
-  openGraph: { title: 'AI Tool Reviews 2026', description: 'Honest reviews of the best AI tools.' },
+  metadataBase: new URL('https://aitoptools.net'),
+  alternates: { canonical: '/' },
+  openGraph: { title: 'AI Tool Reviews 2026', description: 'Honest reviews of the best AI tools.', url: 'https://aitoptools.net', siteName: 'AI Tool Reviews' },
 }
 
 export default function RootLayout({ children }) {
