@@ -15,10 +15,10 @@ export function generateMetadata({ params }) {
   const review = reviews.find(r => r.slug === params.slug)
   if (!review) return { title: 'Not Found' }
   return {
-    title: review.title,
+    title: `${review.title} | Print AI Tools`,
     description: review.metaDesc,
     alternates: {
-      canonical: `https://aitoptools.net/${params.slug}`,
+      canonical: `https://aitoptools.net/${params.slug}/`,
     },
   }
 }
@@ -42,8 +42,8 @@ function generateReviewJsonLd(review) {
       {
         '@type': 'Review',
         name: review.title,
-        author: { '@type': 'Organization', name: 'AI Tool Reviews' },
-        datePublished: '2026-06-25',
+        author: { '@type': 'Organization', name: 'Print AI Tools' },
+        datePublished: review.datePublished || '2026-06-25',
         reviewRating: {
           '@type': 'Rating',
           ratingValue: String(review.rating),
@@ -89,15 +89,29 @@ function generateReviewJsonLd(review) {
 }
 
 function generateBreadcrumbJsonLd(review, slug) {
+  const catSlug = getCategorySlug(review)
   return JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://aitoptools.net/' },
-      { '@type': 'ListItem', position: 2, name: review.category || 'AI Tools', item: 'https://aitoptools.net/' },
-      { '@type': 'ListItem', position: 3, name: review.title, item: `https://aitoptools.net/${slug}` },
+      { '@type': 'ListItem', position: 2, name: review.category || 'AI Tools', item: `https://aitoptools.net/${catSlug}/` },
+      { '@type': 'ListItem', position: 3, name: review.title, item: `https://aitoptools.net/${slug}/` },
     ],
   })
+}
+
+function getCategorySlug(review) {
+  if (review.slug.includes('print') || review.slug.includes('packag')) return 'category/ai-print-design'
+  if (review.slug.includes('ecom') || review.slug.includes('shopify')) return 'category/ai-ecommerce'
+  const cat = (review.category || '').toLowerCase().replace(/\s+/g, '-')
+  const map = {
+    'ai-writing': 'category/ai-writing',
+    'ai-image': 'category/ai-image',
+    'ai-video': 'category/ai-video',
+    'ai-voice': 'category/ai-voice',
+  }
+  return map[cat] || '/'
 }
 
 function generateFaqJsonLd(review) {
@@ -107,19 +121,19 @@ function generateFaqJsonLd(review) {
   const faqs = [
     {
       question: `Is ${toolName} worth it?`,
-      answer: `${toolName} is one of the top tools in its category. With a rating of ${review.rating}/5 and starting at ${price}, it's a ${review.rating >= 4 ? 'solid choice' : 'decent option'} for users who need its specific capabilities.`,
+      answer: `${toolName} is a top tool in the ${review.category} category. With a rating of ${review.rating}/5 and pricing starting at ${price}, it's a ${review.rating >= 4 ? 'strong choice' : 'decent option'} for print shop owners and independent store operators looking to streamline their workflows.`,
     },
     {
       question: `How much does ${toolName} cost?`,
-      answer: `${toolName} starts at ${price}. Check their official website for the latest pricing, plans, and any available discounts or promotions.`,
+      answer: `${toolName} starts at ${price}. Visit their official website for the latest pricing, plans, and any available discounts — especially for print and e-commerce business users.`,
     },
     {
       question: `Does ${toolName} have a free trial?`,
-      answer: `Most AI tools offer either a free tier or a free trial. Visit ${toolName}'s website to check their current trial offer and see if it meets your needs.`,
+      answer: `Most AI tools offer either a free tier or a free trial. Check ${toolName}'s website for current trial offers to see if it meets your print shop or e-commerce needs before committing.`,
     },
     {
       question: `What is ${toolName} best for?`,
-      answer: `${toolName} is designed for ${review.category || 'AI tool'} use cases. It's particularly well-suited for users who need professional-grade features and reliable performance.`,
+      answer: `${toolName} is designed for ${review.category} use cases. It's particularly useful for independent store owners and print businesses that need reliable, professional-grade AI tools.`,
     },
   ]
 
@@ -138,13 +152,16 @@ export default function ReviewPage({ params }) {
   const review = reviews.find(r => r.slug === params.slug)
   if (!review) notFound()
 
+  const toolName = review.title.split(' Review')[0] || getToolName(review.slug)
+  const isVertical = review.slug.includes('print') || review.slug.includes('packag') || 
+    review.slug.includes('ecom') || review.slug.includes('shopify')
+
   const reviewJsonLd = generateReviewJsonLd(review)
   const breadcrumbJsonLd = generateBreadcrumbJsonLd(review, params.slug)
   const faqJsonLd = generateFaqJsonLd(review)
 
   return (
     <>
-      {/* JSON-LD Structured Data for Google Rich Results */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: reviewJsonLd }}
@@ -158,35 +175,67 @@ export default function ReviewPage({ params }) {
         dangerouslySetInnerHTML={{ __html: faqJsonLd }}
       />
 
-      <div className="review-page">
-        <Link href="/" style={{ color: '#64748b', fontSize: '0.9rem' }}>← Back to all reviews</Link>
+      <div className="review-page container">
+        <Link href="/" className="back-link">← Back to all tools</Link>
         
         <h1>{review.title}</h1>
         <div className="meta-bar">
-          <span className="cat" style={{ background: '#dbeafe', color: '#1d4ed8', padding: '2px 10px', borderRadius: '12px', fontSize: '0.85rem' }}>{review.category}</span>
-          <span className="rating" style={{ color: '#f59e0b' }}>{starRating(review.rating)} {review.rating}</span>
-          <span style={{ color: '#64748b' }}>Starting at {review.price}</span>
-          <a href={review.visitUrl} target="_blank" rel="nofollow sponsored" style={{ color: '#2563eb' }}>Visit →</a>
+          <span className="card-cat">{review.category}</span>
+          <span className="card-rating">{starRating(review.rating)} {review.rating}</span>
+          <span className="card-price">From {review.price}</span>
+          {isVertical && <span className="vertical-badge">🖨️ Print & E-Commerce</span>}
+          <a href={review.visitUrl} target="_blank" rel="nofollow sponsored" style={{ color: '#0d9488', fontWeight: 500 }}>
+            Visit Official Site →
+          </a>
         </div>
 
         <div className="pros-cons">
-          <div className="pros">
-            <h3>Pros</h3>
+          <div className="pros-box">
+            <h3>✓ Pros</h3>
             <ul>{review.pros.map((p, i) => <li key={i}>{p}</li>)}</ul>
           </div>
-          <div className="cons">
-            <h3>Cons</h3>
+          <div className="cons-box">
+            <h3>✗ Cons</h3>
             <ul>{review.cons.map((c, i) => <li key={i}>{c}</li>)}</ul>
           </div>
         </div>
 
         <div className="review-content" dangerouslySetInnerHTML={{ __html: review.content }} />
 
+        {/* Affiliate CTA */}
         <div className="cta-box">
-          <p style={{ marginBottom: '12px', fontSize: '1.1rem' }}>Ready to try {review.title.split(' Review')[0]}?</p>
+          <p>Ready to try <strong>{toolName}</strong> for your business?</p>
+          <p style={{ fontSize: '0.9rem', color: '#78716c', marginBottom: 14 }}>
+            Click below to start your free trial or explore plans. If you purchase through our link, we may earn a commission at no extra cost to you.
+          </p>
           <a href={review.affiliateUrl} target="_blank" rel="nofollow sponsored" className="cta-button">
-            Get Started with {review.title.split(' Review')[0]} →
+            Try {toolName} Free →
           </a>
+        </div>
+
+        {/* Similar tools */}
+        <div className="section-header" style={{ marginTop: 40 }}>
+          <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#1c1917' }}>Compare Similar Tools</h2>
+        </div>
+        <div className="review-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+          {reviews
+            .filter(r => r.slug !== review.slug && r.category === review.category)
+            .slice(0, 2)
+            .map(r => (
+              <article key={r.slug} className="review-card">
+                <div className="card-meta">
+                  <span className="card-cat">{r.category}</span>
+                  <span className="card-rating">{starRating(r.rating)} {r.rating}</span>
+                </div>
+                <h3><Link href={`/${r.slug}/`}>{r.title}</Link></h3>
+                <p className="card-desc">{r.metaDesc}</p>
+                <Link href={`/${r.slug}/`} className="card-cta">Read Review →</Link>
+              </article>
+            ))}
+        </div>
+
+        <div className="aff-disc">
+          <strong>Affiliate Disclosure:</strong> Some links on this page are affiliate links. We may earn a commission if you make a purchase through these links, at no additional cost to you. All reviews are based on honest, independent testing. See our <Link href="/affiliate-disclosure/">full disclosure</Link>.
         </div>
       </div>
     </>
