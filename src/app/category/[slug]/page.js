@@ -19,7 +19,7 @@ export function generateMetadata({ params }) {
   const cat = CATEGORY_MAP[params.slug]
   if (!cat) return { title: 'Not Found' }
   return {
-    title: `${cat.title} 2026 | Print AI Tools`,
+    title: `${cat.title}`,
     description: cat.desc,
     alternates: { canonical: `https://aitoptools.net/category/${params.slug}/` },
   }
