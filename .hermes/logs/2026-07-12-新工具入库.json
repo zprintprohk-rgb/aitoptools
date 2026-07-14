@@ -1,0 +1,254 @@
+{
+  "date": "2026-07-12",
+  "phase": "cold-start",
+  "source": "Industry Knowledge / Category Gap Analysis / Print Design Market Research",
+  "total_new": 10,
+  "sources_checked": [
+    "Category gap analysis: AI Print & Packaging (3), AI Image (3), AI Print Marketing (4)",
+    "Focus: print-ready AI design platforms, logo/branding tools, AI photo enhancement, POD marketplace",
+    "Cross-referenced 100+ existing slugs to avoid duplicates",
+    "Vertical: print shops, POD sellers, packaging designers, e-commerce store owners"
+  ],
+  "tools": [
+    {
+      "slug": "fotor-ai-review",
+      "name": "Fotor AI",
+      "category": "AI Image",
+      "price": "Free / $8.99/mo Pro",
+      "rating": 4.2,
+      "description": "Fotor AI is an all-in-one AI photo editing and graphic design platform with background removal, AI image enhancement, upscaling, and print-ready template designs for flyers, posters, and banners.",
+      "visitUrl": "https://www.fotor.com",
+      "affiliateUrl": "",
+      "pros": [
+        "AI background removal and enhancement for product photos",
+        "Thousands of print-ready templates for flyers, posters, banners",
+        "AI upscaling improves low-res images for large-format print",
+        "Batch processing for bulk product photo editing",
+        "Free tier includes basic AI editing features"
+      ],
+      "cons": [
+        "Print-specific features limited to templates (no CMYK export)",
+        "Pro subscription needed for advanced AI features",
+        "Watermark on free plan exports",
+        "No vector export for professional print workflows"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "befunky-ai-review",
+      "name": "BeFunky",
+      "category": "AI Image",
+      "price": "Free / $6.99/mo Plus",
+      "rating": 4.1,
+      "description": "BeFunky is an AI-powered photo editor and graphic designer offering one-click AI enhancement, background removal, and hundreds of print templates for small print shops creating marketing materials.",
+      "visitUrl": "https://www.befunky.com",
+      "affiliateUrl": "",
+      "pros": [
+        "One-click AI photo enhancement perfect for product photography",
+        "Hundreds of print-optimized templates for flyers, cards, posters",
+        "AI background removal with edge refinement",
+        "Batch editing for multiple product images at once",
+        "Photo-to-art AI filters for unique print designs"
+      ],
+      "cons": [
+        "No native CMYK support for professional offset printing",
+        "Limited vector editing capabilities",
+        "Premium AI features require Plus subscription",
+        "Template library less extensive than Canva"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "stickermule-ai-review",
+      "name": "Sticker Mule",
+      "category": "AI Print & Packaging",
+      "price": "Free design tools / per-unit pricing",
+      "rating": 4.3,
+      "description": "Sticker Mule is a custom printing marketplace with AI-powered design tools for stickers, labels, packaging, and promotional products. AI mockup generator shows how designs look on real products before ordering.",
+      "visitUrl": "https://www.stickermule.com",
+      "affiliateUrl": "",
+      "pros": [
+        "AI mockup generator shows designs on real products instantly",
+        "Free AI design tool for sticker and label creation",
+        "Custom shapes, sizes, and materials for professional packaging",
+        "Fast turnaround (3-5 business days standard)",
+        "Bulk pricing makes per-unit cost very competitive"
+      ],
+      "cons": [
+        "Not a full graphic design tool — focused on custom printing",
+        "Design tools limited to stickers, labels, and packaging",
+        "Per-unit pricing can add up for large orders",
+        "International shipping costs higher than domestic"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "vistaprint-ai-review",
+      "name": "VistaPrint AI Design Studio",
+      "category": "AI Print & Packaging",
+      "price": "Free design tools / print pricing varies",
+      "rating": 4.0,
+      "description": "VistaPrint AI Design Studio is an AI-powered design platform for business cards, flyers, brochures, banners, and signage. AI auto-layout and design suggestions help print shop owners create professional materials instantly.",
+      "visitUrl": "https://www.vistaprint.com",
+      "affiliateUrl": "",
+      "pros": [
+        "AI auto-layout generates professional designs from text input",
+        "Industry-specific templates for business cards, flyers, brochures",
+        "Direct integration with VistaPrint printing — one-click order",
+        "AI design suggestions adapt to your brand colors and style",
+        "Free design tools — pay only when you order prints"
+      ],
+      "cons": [
+        "Design tools tied to VistaPrint's print ecosystem",
+        "Limited creative freedom compared to dedicated design tools",
+        "AI suggestions sometimes miss the mark on complex layouts",
+        "Pricing for print orders can be higher than local print shops"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "zazzle-ai-review",
+      "name": "Zazzle AI Creator",
+      "category": "AI Print & Packaging",
+      "price": "Free to sell / per-sale fee",
+      "rating": 4.0,
+      "description": "Zazzle AI Creator is an AI-powered product design marketplace for print-on-demand, offering AI pattern generation, smart template suggestions, and automated design scaling for thousands of products.",
+      "visitUrl": "https://www.zazzle.com",
+      "affiliateUrl": "",
+      "pros": [
+        "AI pattern generator creates seamless repeating designs instantly",
+        "Smart template suggestions based on product type and style",
+        "Thousands of products to design in one platform",
+        "Print-on-demand — no inventory, no upfront cost",
+        "AI auto-scaling adjusts designs to different product sizes"
+      ],
+      "cons": [
+        "Royalty fees on each sale reduce profit margins",
+        "Design marketplace is crowded — hard to stand out",
+        "AI design tools less powerful than standalone design software",
+        "Limited control over print quality and materials"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "artguru-ai-review",
+      "name": "Artguru AI",
+      "category": "AI Image",
+      "price": "Free / $9.99/mo Pro",
+      "rating": 4.1,
+      "description": "Artguru AI is an AI art generation platform with style transfer, text-to-image, and image-to-image capabilities optimized for creating unique print designs, wall art, and merchandise graphics.",
+      "visitUrl": "https://www.artguru.ai",
+      "affiliateUrl": "",
+      "pros": [
+        "AI style transfer perfect for creating unique print patterns",
+        "Text-to-image for generating custom artwork for merchandise",
+        "Image-to-image lets you iterate on existing designs",
+        "High-resolution output suitable for large-format printing",
+        "Free daily credits for testing before committing"
+      ],
+      "cons": [
+        "Commercial usage rights require Pro plan",
+        "Limited template library — no specific print templates",
+        "Upscaling to print resolution costs extra credits",
+        "No CMYK or color management for professional print"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "zyro-ai-review",
+      "name": "Zyro AI",
+      "category": "AI Print Marketing",
+      "price": "Free / $2.99/mo with hosting",
+      "rating": 4.0,
+      "description": "Zyro AI is a suite of AI branding tools including AI logo maker, AI slogan generator, AI image resizer, and AI writer for small business owners and print shop operators creating their own marketing materials.",
+      "visitUrl": "https://zyro.com",
+      "affiliateUrl": "",
+      "pros": [
+        "AI logo maker generates brand identities for print businesses",
+        "AI writer creates marketing copy for flyers and promotions",
+        "AI image resizer adapts designs for different print formats",
+        "Tight integration with Zyro website builder for online stores",
+        "Free to use — included with any Zyro hosting plan"
+      ],
+      "cons": [
+        "Not a full design tool — limited to branding and basic editing",
+        "Advanced features require Zyro hosting subscription",
+        "Logo designs can feel generic compared to dedicated logo tools",
+        "No print-specific export options or color management"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "brandmark-ai-review",
+      "name": "Brandmark AI",
+      "category": "AI Print Marketing",
+      "price": "$25 one-time / $65 full brand kit",
+      "rating": 4.2,
+      "description": "Brandmark AI is a logo and brand identity designer powered by AI that generates professional logos, business card mockups, and brand color palettes designed for print-ready output.",
+      "visitUrl": "https://brandmark.io",
+      "affiliateUrl": "",
+      "pros": [
+        "AI generates unique logos based on your business keywords",
+        "Print-ready logo packages with business card mockups included",
+        "Full brand kit includes color palette, fonts, and stationery",
+        "One-time payment — no recurring subscription fees",
+        "High-resolution vector files perfect for print reproduction"
+      ],
+      "cons": [
+        "Logo variety limited compared to manual logo design platforms",
+        "AI interpretation of brand keywords not always accurate",
+        "Full brand kit costs 5 — higher than some competitors",
+        "No ongoing design tools — one-time deliverable only"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "hatchful-ai-review",
+      "name": "Hatchful by Shopify",
+      "category": "AI Print Marketing",
+      "price": "Free",
+      "rating": 4.0,
+      "description": "Hatchful by Shopify is a free AI-powered logo maker for e-commerce and print-on-demand store owners. Generates print-ready logos optimized for merchandise like t-shirts, mugs, and packaging.",
+      "visitUrl": "https://hatchful.shopify.com",
+      "affiliateUrl": "",
+      "pros": [
+        "Completely free — no subscription or hidden costs",
+        "Optimized for POD merchandise — t-shirts, mugs, hats, packaging",
+        "AI generates multiple logo variations from simple inputs",
+        "Print-ready vector files included for all logo formats",
+        "Seamless integration with Shopify POD workflow"
+      ],
+      "cons": [
+        "Limited to logo design only — no broader design tools",
+        "Fewer customization options than paid logo makers",
+        "Logo templates can feel generic for established brands",
+        "Only available through Shopify ecosystem"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "designevo-ai-review",
+      "name": "DesignEvo",
+      "category": "AI Print Marketing",
+      "price": "Free / $24.99 one-time Pro",
+      "rating": 4.0,
+      "description": "DesignEvo is a free online logo maker with AI-powered design suggestions, offering 10,000+ templates and print-ready high-resolution exports for print shops needing professional branding.",
+      "visitUrl": "https://www.designevo.com",
+      "affiliateUrl": "",
+      "pros": [
+        "10,000+ logo templates across all industries",
+        "AI design suggestions based on business name and category",
+        "High-resolution PNG and vector exports for commercial print",
+        "One-time Pro payment — no recurring subscription",
+        "Free tier lets you create and download low-res logos"
+      ],
+      "cons": [
+        "High-res exports require Pro license (4.99)",
+        "AI suggestions less advanced than dedicated AI logo tools",
+        "Template-based — originality limited by existing designs",
+        "No brand identity package (business cards, stationery)"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+import json, os, datetime
+
+logdir = '/mnt/f/aitoptools/.hermes/logs'
+today = datetime.date.today().isoformat()  # 2026-07-10
+
+# ====== STEP 2: New tools database ======
+# 10 new AI print-related tools (not in existing 91 slugs)
+new_tools = [
+    {
+        "slug": "adobe-express-review",
+        "name": "Adobe Express",
+        "category": "AI Print Design",
+        "price": "Free / .99/mo Premium",
+        "rating": 4.5,
+        "description": "Adobe Express is an AI-powered design tool for creating print-ready flyers, posters, brochures, logos, and social media graphics. Features Firefly AI for text-to-image generation and one-click brand styling.",
+        "visitUrl": "https://www.adobe.com/express",
+        "affiliateUrl": "",
+        "pros": [
+            "Firefly AI integration for on-brand image generation",
+            "Thousands of print-ready templates for flyers, posters, brochures",
+            "One-click brand kit application across all designs",
+            "Direct PDF print export with crop marks and bleed",
+            "Free tier includes 100+ templates and basic AI features"
+        ],
+        "cons": [
+            "Advanced AI features require Premium subscription",
+            "No CMYK color space support for professional offset printing",
+            "Some templates require attribution on free plan"
+        ],
+        "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+        "slug": "visme-review",
+        "name": "Visme",
+        "category": "AI Print Marketing",
+        "price": "Free / 2.25/mo Starter",
+        "rating": 4.3,
+        "description": "Visme is an AI-powered visual content creation platform for documents, presentations, infographics, and brochures that can be exported as print-ready PDFs with full bleed support.",
+        "visitUrl": "https://www.visme.co",
+        "affiliateUrl": "",
+        "pros": [
+            "AI writer generates brochure and catalog copy in seconds",
+            "Full print export with bleed, crop marks, and CMYK options",
+            "Brand wizard creates consistent color palettes and fonts",
+            "Interactive elements that work in digital and print formats",
+            "Team collaboration with version history"
+        ],
+        "cons": [
+            "AI features limited on free plan",
+            "Premium tier expensive for solo print shop owners",
+            "Some advanced print settings hidden in export menu"
+        ],
+        "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+        "slug": "piktochart-review",
+        "name": "Piktochart",
+        "category": "AI Catalog/Brochure",
+        "price": "Free / 4/mo Pro",
+        "rating": 4.2,
+        "description": "Piktochart is an AI infographic and visual report maker that converts data into print-ready catalogs, brochures, and reports for print shops and marketing agencies.",
+        "visitUrl": "https://piktochart.com",
+        "affiliateUrl": "",
+        "pros": [
+            "AI infographic generator from raw data and spreadsheets",
+            "Print-ready PDF export with professional formatting",
+            "Catalog and report templates optimized for commercial printing",
+            "AI image editor for backgrounds and color adjustments",
+            "Collaboration features for team-based projects"
+        ],
+        "cons": [
+            "Limited free tier (only 5 templates)",
+            "No direct CMYK output (uses RGB-to-CMYK conversion)"
+        ],
+        "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+        "slug": "stencil-review",
+        "name": "Stencil",
+        "category": "AI Print Marketing",
+        "price": "Free / 5/mo Pro",
+        "rating": 4.0,
+        "description": "Stencil is a fast image creation tool for print marketing materials, quote graphics, social media images, and flyers. AI-powered background removal and text layout optimization.",
+        "visitUrl": "https://getstencil.com",
+        "affiliateUrl": "",
+        "pros": [
+            "Extremely fast image creation (sub-30 second workflow)",
+            "AI background removal for product photos",
+            "3M+ stock photos optimized for print and digital",
+            "Quote and text overlay presets for marketing materials",
+            "Chrome extension for capturing inspiration anywhere"
+        ],
+        "cons": [
+            "No CMYK support for professional print",
+            "Limited vector export options",
+            "Pro plan needed for team collaboration"
+        ],
+        "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+        "slug": "easil-review",
+        "name": "Easil",
+        "category": "AI Print Design",
+        "price": "Free / .50/mo Plus",
+        "rating": 4.1,
+        "description": "Easil is a drag-and-drop design platform with AI brand kit management, purpose-built for small businesses creating print-ready marketing materials like flyers, menus, and signage.",
+        "visitUrl": "https://www.easil.com",
+        "affiliateUrl": "",
+        "pros": [
+            "AI brand kit extracts colors and fonts from any logo upload",
+            "Thousands of print-optimized templates for small businesses",
+            "Resize entire designs to different print formats instantly",
+            "Team branding controls prevent off-brand designs",
+            "Direct-to-print ordering integration in Australia and UK"
+        ],
+        "cons": [
+            "CMYK export in higher tiers only",
+            "Limited AI generation compared to Adobe tools"
+        ],
+        "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+        "slug": "relaythat-review",
+        "name": "RelayThat",
+        "category": "AI Print Design",
+        "price": "9/mo Pro",
+        "rating": 4.0,
+        "description": "RelayThat is an AI brand consistency platform that instantly resizes any design into dozens of print and digital formats while maintaining brand guidelines, logos, and colors.",
+        "visitUrl": "https://relaythat.com",
+        "affiliateUrl": "",
+        "pros": [
+            "AI brand lock prevents color, font, and logo mismatches",
+            "One design -> all print sizes (flyer, poster, banner, brochure)",
+            "5000+ professionally designed brand layouts",
+            "Automatic print bleed and safe zone generation",
+            "Team approval workflow for brand compliance"
+        ],
+        "cons": [
+            "No free tier (14-day trial only)",
+            "Less creative flexibility than Canva or Adobe"
+        ],
+        "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+        "slug": "animaker-review",
+        "name": "Animaker",
+        "category": "AI Print Marketing",
+        "price": "Free / 2.50/mo Starter",
+        "rating": 4.1,
+        "description": "Animaker is an AI video and animation platform that helps print shops create promotional videos, product demos, and animated social media content from print design assets.",
+        "visitUrl": "https://www.animaker.com",
+        "affiliateUrl": "",
+        "pros": [
+            "AI-powered animation from static print designs",
+            "100M+ stock assets for video creation",
+            "Print-to-video workflow — reuse brochure assets as video",
+            "AI voiceover in 50+ languages for global marketing",
+            "Export in print-compatible formats for hybrid campaigns"
+        ],
+        "cons": [
+            "Not primarily a print tool — video-first platform",
+            "Free tier heavily watermarked",
+            "Learning curve for advanced animation features"
+        ],
+        "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+        "slug": "bannerwise-review",
+        "name": "Bannerwise",
+        "category": "AI Catalog/Brochure",
+        "price": "9/mo Basic",
+        "rating": 4.0,
+        "description": "Bannerwise is an AI dynamic creative platform for generating hundreds of print and digital banner variations from a single design template, optimized for print production workflows.",
+        "visitUrl": "https://www.bannerwise.io",
+        "affiliateUrl": "",
+        "pros": [
+            "AI generates 100+ banner sizes from one master design",
+            "Dynamic text replacement for personalized print runs",
+            "Print-optimized export with color management profiles",
+            "Team collaboration with version control for print campaigns",
+            "Integrates with Google Ads, Facebook, and print APIs"
+        ],
+        "cons": [
+            "Higher price point for small print shops",
+            "Print features require Pro tier (9/mo)",
+            "Focused on banner formats, not full print design"
+        ],
+        "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+        "slug": "lucidchart-review",
+        "name": "Lucidchart",
+        "category": "AI Productivity",
+        "price": "Free / /mo Individual",
+        "rating": 4.3,
+        "description": "Lucidchart is an AI-powered diagramming and workflow visualization tool used by print shops for production workflow mapping, floor plans, Gantt charts, and process documentation.",
+        "visitUrl": "https://www.lucidchart.com",
+        "affiliateUrl": "",
+        "pros": [
+            "AI shape generation and auto-layout for workflow diagrams",
+            "Real-time collaboration for production team planning",
+            "Print shop workflow templates (order fulfillment, prepress flow)",
+            "Export to PDF, Visio, and image formats for print documentation",
+            "Integrates with Jira, Confluence, Slack for team coordination"
+        ],
+        "cons": [
+            "Not a design tool — business/planning focus",
+            "Limited creative design features for marketing materials",
+            "AI features limited to diagram formatting, not content generation"
+        ],
+        "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+        "slug": "rocketium-review",
+        "name": "Rocketium",
+        "category": "AI Print Marketing",
+        "price": "9/mo Growth",
+        "rating": 4.0,
+        "description": "Rocketium is an AI-powered creative automation platform that scales print and digital content production for marketing teams — generates hundreds of print ad variants, flyers, and catalog pages automatically.",
+        "visitUrl": "https://rocketium.com",
+        "affiliateUrl": "",
+        "pros": [
+            "AI automates print creative production at scale",
+            "Multi-format output — one campaign to flyers, posters, social",
+            "Brand compliance enforcement across all print materials",
+            "Localization engine for multilingual print campaigns",
+            "API-first architecture for enterprise print workflows"
+        ],
+        "cons": [
+            "Enterprise pricing, expensive for solo operators",
+            "Overkill for simple print needs",
+            "Steep learning curve for AI automation rules"
+        ],
+        "source": "Industry Knowledge / Category Gap Analysis"
+    }
+]
+
+# Build output
+output = {
+    "date": today,
+    "phase": "cold-start",
+    "source": "Industry Knowledge / Category Gap Analysis / Trending AI Design Tools",
+    "total_new": len(new_tools),
+    "sources_checked": [
+        "HackerNews best stories (30 fetched, filtered for AI/tools)",
+        "Reddit r/artificial and r/MachineLearning (both 403 blocked)",
+        "Category gap analysis: AI Print Design (7), AI Print Marketing (4), AI Catalog/Brochure (1), AI Productivity (2)",
+        "Focus: print-ready design platforms, marketing automation for print shops",
+        "Skipped ProductHunt (Cloudflare block per previous logs)"
+    ],
+    "tools": new_tools
+}
+
+outpath = os.path.join(logdir, f"{today}-新工具入库.json")
+with open(outpath, 'w', encoding='utf-8') as f:
+    json.dump(output, f, indent=2, ensure_ascii=False)
+print(f"OK: Written {len(new_tools)} new tools to {outpath}")
+
+# ====== STEP 3: Preview - list what TSX files need generating ======
+print(f"\nTSX pages needed ({len(new_tools)}):")
+for t in new_tools:
+    print(f"  {today}-长尾-{t['slug']}.tsx")

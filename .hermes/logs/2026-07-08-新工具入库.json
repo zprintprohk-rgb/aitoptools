@@ -1,0 +1,234 @@
+{
+  "date": "2026-07-08",
+  "phase": "cold-start",
+  "source": "Industry Knowledge / Market Analysis / AI Print Design Tools",
+  "total_new": 10,
+  "sources_checked": [
+    "Industry knowledge - AI image generation and upscaling tools for print",
+    "Category gap analysis: AI Print Design (4), AI Product Photography (3), AI Print Marketing (2)",
+    "Focus: e-commerce AI tools for print-on-demand sellers",
+    "Skipped ProductHunt (Cloudflare block) / Reddit (403)"
+  ],
+  "tools": [
+    {
+      "slug": "krea-ai-review",
+      "name": "Krea AI",
+      "category": "AI Image",
+      "price": "Free / 0/month Pro",
+      "rating": 4.0,
+      "description": "Krea AI is a real-time AI image and video generation platform for rapid print design prototyping.",
+      "visitUrl": "https://www.krea.ai",
+      "affiliateUrl": "",
+      "pros": [
+        "Real-time generation for immediate design iteration",
+        "Supports upscaling and variation creation",
+        "Excellent for prototyping print and packaging designs",
+        "Active community with thousands of design prompts"
+      ],
+      "cons": [
+        "Web-resolution output needs external upscaling",
+        "No CMYK color space support natively",
+        "Free plan has watermark and limited credits"
+      ],
+      "source": "Industry Knowledge"
+    },
+    {
+      "slug": "magnific-ai-review",
+      "name": "Magnific AI",
+      "category": "AI Image",
+      "price": "9/month",
+      "rating": 4.5,
+      "description": "Specialist AI upscaling tool that transforms images to 4K/8K/16K for large-format print production.",
+      "visitUrl": "https://magnific.ai",
+      "affiliateUrl": "",
+      "pros": [
+        "Upscales to 16K resolution for large-format print",
+        "AI adds realistic texture detail",
+        "Batch processing for high-volume workflows",
+        "Maintains coherence at extreme magnification"
+      ],
+      "cons": [
+        "Expensive at 9/month for small shops",
+        "No offline mode",
+        "AI enhancement can alter design details"
+      ],
+      "source": "Industry Knowledge"
+    },
+    {
+      "slug": "clipdrop-review",
+      "name": "ClipDrop by Stability AI",
+      "category": "AI Product Photography",
+      "price": "Free / /month Pro",
+      "rating": 4.5,
+      "description": "AI image editing suite with background removal, relighting, cleanup, and text-to-image generation.",
+      "visitUrl": "https://clipdrop.co",
+      "affiliateUrl": "",
+      "pros": [
+        "AI relighting without studio equipment",
+        "One-click background removal with excellent edge detection",
+        "Cleanup tool removes unwanted objects",
+        "Integrated with Stability AI ecosystem"
+      ],
+      "cons": [
+        "Some tools use credits-based system",
+        "Free tier severely limits daily operations",
+        "No native CMYK export"
+      ],
+      "source": "Industry Knowledge"
+    },
+    {
+      "slug": "evoto-ai-review",
+      "name": "Evoto AI",
+      "category": "AI Product Photography",
+      "price": ".99/month",
+      "rating": 4.0,
+      "description": "Bulk AI photo editor for e-commerce product photography with batch background removal and color correction.",
+      "visitUrl": "https://www.evoto.ai",
+      "affiliateUrl": "",
+      "pros": [
+        "Batch process hundreds of product photos at once",
+        "Consistent style across entire catalogs",
+        "AI-generated studio backdrop replacement",
+        "E-commerce specific color grading tools"
+      ],
+      "cons": [
+        "No vector or print design tools",
+        "Some AI backgrounds look artificial",
+        "Requires good initial photos"
+      ],
+      "source": "Industry Knowledge"
+    },
+    {
+      "slug": "shopify-magic-review",
+      "name": "Shopify Magic",
+      "category": "AI E-Commerce",
+      "price": "Included with Shopify (9/month+)",
+      "rating": 4.0,
+      "description": "Native AI tool suite in Shopify for product descriptions, image editing, customer segmentation, and email marketing.",
+      "visitUrl": "https://www.shopify.com/magic",
+      "affiliateUrl": "",
+      "pros": [
+        "Native Shopify integration - no extra setup",
+        "AI product descriptions matching brand voice",
+        "Built-in AI background removal",
+        "Automated customer segmentation"
+      ],
+      "cons": [
+        "Requires Shopify subscription (9/month+)",
+        "AI features limited vs specialized tools",
+        "Basic image editing only"
+      ],
+      "source": "Industry Knowledge"
+    },
+    {
+      "slug": "vecteezy-ai-review",
+      "name": "Vecteezy AI Vector Generator",
+      "category": "AI Print Design",
+      "price": "Free / .50/month Pro",
+      "rating": 4.0,
+      "description": "AI-powered vector (SVG) graphics generator from text prompts, infinitely scalable for any print size.",
+      "visitUrl": "https://www.vecteezy.com",
+      "affiliateUrl": "",
+      "pros": [
+        "Native SVG output - infinitely scalable",
+        "Affordable Pro at .50/month",
+        "Large library of vector assets",
+        "Editable in Illustrator/Inkscape"
+      ],
+      "cons": [
+        "Vector quality inconsistent on complex prompts",
+        "Limited style control vs raster generators",
+        "Free version requires attribution"
+      ],
+      "source": "Industry Knowledge"
+    },
+    {
+      "slug": "tailor-brands-review",
+      "name": "Tailor Brands AI Logo & Branding",
+      "category": "AI Print Design",
+      "price": ".99/month (basic)",
+      "rating": 3.5,
+      "description": "AI branding platform generating complete identities with logos, color palettes, fonts, and brand guidelines.",
+      "visitUrl": "https://www.tailorbrands.com",
+      "affiliateUrl": "",
+      "pros": [
+        "Quick logo generation in minutes",
+        "Complete brand kit with guidelines",
+        "Business card templates ready for print",
+        "Social media kit included"
+      ],
+      "cons": [
+        "Logos can feel generic",
+        "Limited post-generation customization",
+        "Vector downloads require higher tier"
+      ],
+      "source": "Industry Knowledge"
+    },
+    {
+      "slug": "designeve-review",
+      "name": "DesignEvo Logo Maker",
+      "category": "AI Print Design",
+      "price": "Free / 4.99 one-time",
+      "rating": 3.5,
+      "description": "Online logo maker with 10,000+ templates and AI customization for print-ready logo exports.",
+      "visitUrl": "https://www.designeve.com",
+      "affiliateUrl": "",
+      "pros": [
+        "10,000+ logo templates to start from",
+        "One-time 4.99 payment (no recurring)",
+        "SVG and PDF export for print",
+        "Beginner-friendly drag-and-drop"
+      ],
+      "cons": [
+        "Template-driven, not generative AI",
+        "Free exports have watermarks",
+        "Logo only, no brand identity tools"
+      ],
+      "source": "Industry Knowledge"
+    },
+    {
+      "slug": "renderforest-review",
+      "name": "Renderforest AI",
+      "category": "AI Print Marketing",
+      "price": "Free / .99/month Pro",
+      "rating": 4.0,
+      "description": "All-in-one AI content platform for videos, mockups, logos and websites for print marketing.",
+      "visitUrl": "https://www.renderforest.com",
+      "affiliateUrl": "",
+      "pros": [
+        "Multi-format output in one platform",
+        "AI product mockups for POD/packaging",
+        "Animated social media ad creator",
+        "White-label option for agencies"
+      ],
+      "cons": [
+        "Free exports have watermarks",
+        "Output quality varies by template",
+        "Best for digital-first, not print-specific"
+      ],
+      "source": "Industry Knowledge"
+    },
+    {
+      "slug": "fotojet-review",
+      "name": "FotoJet",
+      "category": "AI Print Marketing",
+      "price": "Free / .99/month Pro",
+      "rating": 3.5,
+      "description": "Online graphic design tool with 800+ print-specific templates and AI photo enhancement features.",
+      "visitUrl": "https://www.fotojet.com",
+      "affiliateUrl": "",
+      "pros": [
+        "800+ print-ready templates",
+        "AI background removal and enhancement",
+        "Affordable at .99/month",
+        "Collage maker for portfolios"
+      ],
+      "cons": [
+        "AI features basic vs dedicated tools",
+        "Limited fonts and elements vs Canva",
+        "No team collaboration"
+      ],
+      "source": "Industry Knowledge"
+    }
+  ]
+}

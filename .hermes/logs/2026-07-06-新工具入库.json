@@ -1,0 +1,250 @@
+{
+  "date": "2026-07-06",
+  "phase": "cold-start",
+  "source": "Industry Knowledge / Category Gap Analysis / Vertical Focus",
+  "total_new": 10,
+  "sources_checked": [
+    "ProductHunt - blocked by Cloudflare (cron env without proxy)",
+    "HackerNews - no new AI tool launches relevant to print today",
+    "Reddit r/artificial - 403 blocked",
+    "Category gap analysis: AI print design, AI image upscaling, AI stock photos missing",
+    "Gap: No background removal tool, no vector logo maker, no AI video for print marketing"
+  ],
+  "tools": [
+    {
+      "slug": "looka-review",
+      "name": "Looka (formerly Logojoy)",
+      "category": "AI Print Design",
+      "price": "0 one-time (logo files) / 5 Brand Kit",
+      "rating": 4.0,
+      "description": "AI-powered logo maker that generates print-ready vector files (SVG, EPS, PDF). Includes full brand identity kit with business cards, letterheads, and social media assets — essential for print shops offering branding services.",
+      "visitUrl": "https://www.looka.com",
+      "affiliateUrl": "",
+      "pros": [
+        "Vector SVG export — unlimited scaling for any print size",
+        "Full brand kit included (business cards, letterheads, social)",
+        "AI suggests logo styles based on industry keywords",
+        "One-time payment, no subscription needed"
+      ],
+      "cons": [
+        "Logo quality depends on input keywords — can look generic",
+        "Limited customization beyond AI suggestions",
+        "Free preview only (watermarked), must pay for files"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-06"
+    },
+    {
+      "slug": "snappa-review",
+      "name": "Snappa",
+      "category": "AI Print Design",
+      "price": "Free / 0/mo Pro / 0/mo Team",
+      "rating": 4.0,
+      "description": "Drag-and-drop graphic design tool with 200K+ print-ready templates optimized for flyers, posters, social media, and marketing collateral. AI-powered smart resize and background removal built-in.",
+      "visitUrl": "https://snappa.com",
+      "affiliateUrl": "",
+      "pros": [
+        "200K+ print-ready design templates",
+        "AI smart resize — one design fits all formats",
+        "Free plan with 5 downloads/month is generous",
+        "No design experience needed"
+      ],
+      "cons": [
+        "AI features are basic (no text-to-image generation)",
+        "Export resolution limited on free plan",
+        "Less advanced than Canva for complex layouts"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-06"
+    },
+    {
+      "slug": "dreamstudio-review",
+      "name": "DreamStudio (Stability AI)",
+      "category": "AI Image",
+      "price": "Free trial credits / 0 per 1000 credits",
+      "rating": 4.0,
+      "description": "Official web interface for Stable Diffusion 3 — the leading open-source AI image generation model. Offers text-to-image, image-to-image, inpainting, and outpainting with full control over resolution, seed, and guidance scale.",
+      "visitUrl": "https://dreamstudio.ai",
+      "affiliateUrl": "",
+      "pros": [
+        "Stable Diffusion 3 — industry-leading open-source AI",
+        "Full parameter control (resolution, CFG, seed, steps)",
+        "API available for batch print design generation",
+        "Commercially safe with a Pro subscription"
+      ],
+      "cons": [
+        "Credit-based pricing (0/1000 credits) can add up",
+        "Quality inconsistent — requires prompt engineering skill",
+        "Web UI can be slow during peak hours"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-06"
+    },
+    {
+      "slug": "lets-enhance-review",
+      "name": "Let's Enhance",
+      "category": "AI Image",
+      "price": "Free 10 images / /mo 100 images / 4/mo 500 images",
+      "rating": 4.5,
+      "description": "Professional AI image upscaling and enhancement tool that outputs up to 16K resolution — critical for print shops that need to convert low-res customer artwork into print-ready high-resolution files.",
+      "visitUrl": "https://letsenhance.io",
+      "affiliateUrl": "",
+      "pros": [
+        "Upscales to 16K resolution (oversized prints)",
+        "Batch processing API for high-volume workflows",
+        "AI preserves fine details like text and faces",
+        "Adobe Photoshop plugin available"
+      ],
+      "cons": [
+        "Free tier only 10 images",
+        "/mo for 100 images may limit production-scale use",
+        "Processing time increases significantly above 4K"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-06"
+    },
+    {
+      "slug": "removebg-review",
+      "name": "Remove.bg",
+      "category": "AI E-Commerce",
+      "price": "Free preview / /bin/bash.20 per image (pay-as-you-go) / /mo 200 images",
+      "rating": 4.5,
+      "description": "Industry-leading AI background removal tool with sub-second processing. Supports batch API, Photoshop plugin, and e-commerce platform integrations. Essential workflow tool for print shops and product photography.",
+      "visitUrl": "https://www.remove.bg",
+      "affiliateUrl": "",
+      "pros": [
+        "Sub-second background removal — fastest in the industry",
+        "Hair and fur edge detection is best-in-class",
+        "Batch API up to 500 images/hour for production",
+        "Photoshop, Shopify, WooCommerce plugins"
+      ],
+      "cons": [
+        "Pay-per-image can get expensive at scale",
+        "Free output is preview resolution only",
+        "No AI generation features (removal only)"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-06"
+    },
+    {
+      "slug": "stockimg-ai-review",
+      "name": "Stockimg AI",
+      "category": "AI Image",
+      "price": "Free 10 credits/month / 9/mo 100 credits / 9/mo Unlimited",
+      "rating": 3.5,
+      "description": "AI-powered stock image generator that creates royalty-free photos, illustrations, and icons for marketing materials, websites, and print collateral. Designed as an alternative to traditional stock photo subscriptions.",
+      "visitUrl": "https://stockimg.ai",
+      "affiliateUrl": "",
+      "pros": [
+        "Unlimited commercial use on paid plans",
+        "Generate specific images instead of searching stock libraries",
+        "Covers photos, illustrations, icons, and templates",
+        "Resolves stock photo licensing issues permanently"
+      ],
+      "cons": [
+        "Image quality varies widely by prompt",
+        "Limited resolution (typically 1024x1024)",
+        "9/mo is pricey compared to stock photo subscriptions",
+        "AI artifacts on complex scenes (hands, text)"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-06"
+    },
+    {
+      "slug": "deep-dream-generator-review",
+      "name": "Deep Dream Generator",
+      "category": "AI Image",
+      "price": "Free 15 generations/month / 9/mo Basic / 9/mo Advanced",
+      "rating": 3.5,
+      "description": "AI art generation platform specializing in surreal, artistic, and highly stylized image creation. Useful for creating unique textile patterns, abstract art prints, posters, and packaging designs that stand out.",
+      "visitUrl": "https://deepdreamgenerator.com",
+      "affiliateUrl": "",
+      "pros": [
+        "Unique artistic styles not found in Midjourney or DALL-E",
+        "Good for textile and pattern design inspiration",
+        "Community gallery with millions of style examples",
+        "Style transfer feature for brand-consistent art"
+      ],
+      "cons": [
+        "Not suitable for photorealistic product images",
+        "Free tier very limited (15/month)",
+        "Output resolution limited even on paid plans",
+        "No vector or print-ready export"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-06"
+    },
+    {
+      "slug": "craiyon-review",
+      "name": "Craiyon (formerly DALL-E Mini)",
+      "category": "AI Image",
+      "price": "Free / /mo Supporter / 0/mo Professional",
+      "rating": 3.0,
+      "description": "Free AI image generator that runs in-browser with no account needed. While image quality is lower than paid alternatives, it serves as an excellent rapid prototyping tool for print design concepts and mockups.",
+      "visitUrl": "https://www.craiyon.com",
+      "affiliateUrl": "",
+      "pros": [
+        "Completely free tier — no credit card required",
+        "No account needed for basic use",
+        "Fast generation (10-30 seconds)",
+        "Good for rapid design concept exploration"
+      ],
+      "cons": [
+        "Image quality significantly lower than Midjourney/DALL-E 3",
+        "Resolution capped at low output (not print-ready)",
+        "Watermarked on free plan",
+        "Commercial use rights unclear"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-06"
+    },
+    {
+      "slug": "krikey-ai-review",
+      "name": "Krikey AI",
+      "category": "AI Video",
+      "price": "Free / 9/mo Creator / 9/mo Pro",
+      "rating": 3.5,
+      "description": "AI-powered 3D animation and video generation platform — creates marketing videos, product demos, and animated social media content from text prompts. Useful for print shops to create promotional videos without hiring animators.",
+      "visitUrl": "https://www.krikey.ai",
+      "affiliateUrl": "",
+      "pros": [
+        "Text-to-3D animation — no 3D skills needed",
+        "Product demo animations for e-commerce listings",
+        "Social media video templates for print marketing",
+        "Customizable 3D avatars for brand mascots"
+      ],
+      "cons": [
+        "Animation quality not yet Hollywood-grade",
+        "Limited to 30-second clips on free plan",
+        "9/mo for watermark-free output",
+        "No integration with print-specific templates"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-06"
+    },
+    {
+      "slug": "vidnami-review",
+      "name": "Vidnami (formerly Content Samurai)",
+      "category": "AI Video",
+      "price": "9/mo Pro (before GoDaddy acquisition pricing)",
+      "rating": 3.5,
+      "description": "AI video creation platform (now by GoDaddy) that transforms blog posts, product descriptions, or scripts into marketing videos with AI voiceover, stock footage, and text overlays. Practical for print shops producing video ads and product showcases.",
+      "visitUrl": "https://www.vidnami.com",
+      "affiliateUrl": "",
+      "pros": [
+        "Turns written product descriptions into videos instantly",
+        "AI voiceover with natural-sounding voices",
+        "Massive stock footage library included",
+        "Fast export for social media and YouTube"
+      ],
+      "cons": [
+        "Pricing unclear since GoDaddy acquisition",
+        "AI voice still sounds robotic on long scripts",
+        "Template-based — limited creative freedom",
+        "Expensive at 9/mo for small print shops"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-06"
+    }
+  ]
+}

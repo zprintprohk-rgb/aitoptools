@@ -1,0 +1,254 @@
+{
+  "date": "2026-07-11",
+  "phase": "cold-start",
+  "source": "Industry Knowledge / HN trends 2026-07-11 / Category Gap Analysis",
+  "total_new": 10,
+  "sources_checked": [
+    "HackerNews best stories (30 fetched, filtered for AI/tools)",
+    "Category gap analysis: AI E-Commerce (0), AI POD Platforms (0), AI Packaging Design (0), AI Catalog/Brochure (0), AI Print Marketing (0) in reviews.json",
+    "Focus: print/e-commerce vertical tools, AI image for print, marketing automation",
+    "Note: Reddit r/artificial and ProductHunt persistently blocked (403/Cloudflare)"
+  ],
+  "tools": [
+    {
+      "slug": "dall-e-3-review",
+      "name": "DALL-E 3",
+      "category": "AI Image",
+      "price": "0/month (ChatGPT Plus)",
+      "rating": 4.5,
+      "description": "DALL-E 3 is OpenAI's state-of-the-art text-to-image generation model, integrated into ChatGPT Plus. Delivers photorealistic images with superior prompt adherence for print shop mockups, product visualization, and marketing materials.",
+      "visitUrl": "https://openai.com/dall-e-3",
+      "affiliateUrl": "",
+      "pros": [
+        "Best prompt adherence of any AI image generator",
+        "Seamlessly integrated into ChatGPT Plus at 0/mo",
+        "Photorealistic output perfect for product mockups",
+        "Politan style guidelines safe for commercial print use",
+        "Generate variations with natural language refinement"
+      ],
+      "cons": [
+        "Requires ChatGPT Plus subscription (0/mo)",
+        "No standalone API for bulk production workflows",
+        "Less artistic/creative style compared to Midjourney",
+        "Resolution limitations for large-format print output"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "ideogram-ai-review",
+      "name": "Ideogram AI",
+      "category": "AI Image",
+      "price": "Free / 0/month Plus",
+      "rating": 4.3,
+      "description": "Ideogram AI specializes in generating images with accurate text rendering for print designs like logos, posters, banners, and signage where readable text must appear within the image.",
+      "visitUrl": "https://ideogram.ai",
+      "affiliateUrl": "",
+      "pros": [
+        "Industry-best text rendering within AI-generated images",
+        "Free tier with daily credits for testing",
+        "Logo and typography generation for print branding",
+        "Consistent style across multiple image generations",
+        "Upscale and remix features for print-ready output"
+      ],
+      "cons": [
+        "Less flexible style control compared to Midjourney",
+        "Limited commercial usage rights on free tier",
+        "Occasional text artifacts in complex layouts",
+        "No dedicated print export settings (CMYK/bleed)"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "spocket-review",
+      "name": "Spocket",
+      "category": "AI E-Commerce",
+      "price": "Free / 9.99/month Pro",
+      "rating": 4.0,
+      "description": "Spocket is a dropshipping platform connecting e-commerce sellers with global suppliers including POD vendors. AI-powered product recommendations and automated order fulfillment for print shop owners.",
+      "visitUrl": "https://www.spocket.co",
+      "affiliateUrl": "",
+      "pros": [
+        "Curated POD and print supplier network from US/EU",
+        "AI product recommendation engine for trending print items",
+        "One-click product import to Shopify, WooCommerce, Wix",
+        "Automated order routing and tracking updates",
+        "Sample ordering to verify print quality before listing"
+      ],
+      "cons": [
+        "Premium suppliers require Pro plan (9.99/mo)",
+        "Less supplier selection than AliExpress-based competitors",
+        "POD customization limited compared to dedicated POD platforms",
+        "Some suppliers have minimum order quantities"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "gist-review",
+      "name": "Gist",
+      "category": "AI Print Marketing",
+      "price": "Free / 5/month Pro",
+      "rating": 4.0,
+      "description": "Gist is an all-in-one AI marketing platform combining email marketing, live chat, knowledge base, and push notifications for print shops managing customer communications.",
+      "visitUrl": "https://www.gist.com",
+      "affiliateUrl": "",
+      "pros": [
+        "All-in-one marketing suite for print shop customer management",
+        "AI-powered email campaign optimization and segmentation",
+        "Live chat with print order tracking integration",
+        "Knowledge base builder for print service FAQs and guides",
+        "Free tier supports up to 1,000 contacts"
+      ],
+      "cons": [
+        "Less specialized for print industry than dedicated print marketing tools",
+        "Advanced automation requires higher-tier plans",
+        "Limited print-specific templates out of the box",
+        "Setup requires time investment for full automation"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "brevo-review",
+      "name": "Brevo (formerly Sendinblue)",
+      "category": "AI Print Marketing",
+      "price": "Free / 5/month Starter",
+      "rating": 4.2,
+      "description": "Brevo is an AI-powered digital and print marketing automation platform with email campaigns, SMS, Facebook ads, and transactional emails for print shop marketers.",
+      "visitUrl": "https://www.brevo.com",
+      "affiliateUrl": "",
+      "pros": [
+        "AI content generator for marketing copy (emails, flyers, ads)",
+        "Multi-channel: email + SMS + chat + social + print integration",
+        "Transactional emails for print order confirmations and updates",
+        "A/B testing engine to optimize print marketing campaigns",
+        "Free tier sends 300 emails/day to unlimited contacts"
+      ],
+      "cons": [
+        "SMS credits separate from email (additional cost)",
+        "Advanced automation features require paid plans",
+        "Print marketing features less developed than dedicated print tools",
+        "Template editor can feel limiting for print designers"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "podcastle-review",
+      "name": "Podcastle",
+      "category": "AI Voice",
+      "price": "Free / 1.99/month Creator",
+      "rating": 4.2,
+      "description": "Podcastle is an AI-powered podcast creation platform with audio recording, editing, AI voice cloning, and noise removal for print shops building content marketing through podcasts.",
+      "visitUrl": "https://podcastle.ai",
+      "affiliateUrl": "",
+      "pros": [
+        "AI voice cloning from just 2 minutes of audio",
+        "Studio-quality noise removal and audio enhancement",
+        "Multi-track recording with remote guest support",
+        "AI-powered transcription and show notes generation",
+        "Perfect for print shop owners to build industry authority"
+      ],
+      "cons": [
+        "Free tier limited to 1 hour of recording",
+        "AI voice cloning quality varies with input audio quality",
+        "Video features less polished than dedicated video editors",
+        "Podcast-specific not a general audio editor"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "opus-clip-review",
+      "name": "Opus Clip",
+      "category": "AI Video",
+      "price": "9/month Pro",
+      "rating": 4.3,
+      "description": "Opus Clip is an AI-powered video repurposing tool that transforms long-form videos into short, viral-ready clips for social media marketing by print shops.",
+      "visitUrl": "https://www.opus.pro",
+      "affiliateUrl": "",
+      "pros": [
+        "AI identifies and extracts the most engaging moments automatically",
+        "Generates 10+ short clips from one long-form video",
+        "Auto-captions emoji overlays and social-friendly formatting",
+        "Perfect for print shops repurposing product demo videos",
+        "Supports TikTok Reels Shorts aspect ratios automatically"
+      ],
+      "cons": [
+        "Watermark on free tier exports",
+        "AI clip selection sometimes misses important context",
+        "Editing capabilities limited after clip extraction",
+        "Best results require good quality source video"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "veed-io-review",
+      "name": "Veed.io",
+      "category": "AI Video",
+      "price": "Free / 8/month Pro",
+      "rating": 4.3,
+      "description": "Veed.io is a browser-based AI video editor with automatic subtitles, text-to-speech, background removal, and screen recording for print shop marketing videos.",
+      "visitUrl": "https://www.veed.io",
+      "affiliateUrl": "",
+      "pros": [
+        "Browser-based no software installation needed",
+        "Auto-subtitles with 98%+ accuracy in 100+ languages",
+        "AI background removal for product demonstration videos",
+        "Text-to-speech with natural-sounding AI voices",
+        "Collaboration features for team video projects"
+      ],
+      "cons": [
+        "Export resolution limited on free tier (720p)",
+        "Advanced features like branded templates on higher plans",
+        "Processing can be slow for longer videos",
+        "Not suitable for complex multi-track professional editing"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "beautiful-ai-review",
+      "name": "Beautiful.ai",
+      "category": "AI Presentation",
+      "price": "2/month Pro",
+      "rating": 4.0,
+      "description": "Beautiful.ai is an AI presentation tool that auto-designs professional slides. Print shop owners can create investor decks, client proposals, and service catalogs with brand-consistent design.",
+      "visitUrl": "https://www.beautiful.ai",
+      "affiliateUrl": "",
+      "pros": [
+        "AI auto-designs slides so content always looks professional",
+        "Smart templates adapt to content automatically",
+        "Brand kit ensures consistent colors and fonts across decks",
+        "Export to PPTX for print shop client presentations",
+        "Team collaboration with shared slide libraries"
+      ],
+      "cons": [
+        "Less creative control than manual slide design",
+        "AI layout choices sometimes don't suit the content",
+        "Limited animation and transition options",
+        "PPTX export requires Pro plan (2/mo)"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    },
+    {
+      "slug": "tome-review",
+      "name": "Tome (Tome.app)",
+      "category": "AI Presentation",
+      "price": "Free / 6/month Pro",
+      "rating": 4.1,
+      "description": "Tome is an AI-powered storytelling and presentation platform creating immersive narratives combining slides, video, and 3D content for print shop lookbooks and client proposals.",
+      "visitUrl": "https://tome.app",
+      "affiliateUrl": "",
+      "pros": [
+        "Multi-format storytelling with slides video and 3D in one canvas",
+        "AI generates complete narratives from a single prompt",
+        "Embed live product catalogs and video demonstrations",
+        "Beautiful modern design templates for print shop branding",
+        "Shareable via link with no software download needed"
+      ],
+      "cons": [
+        "No direct print export (digital-first platform)",
+        "Advanced embedding requires Pro plan (6/mo)",
+        "Learning curve for interactive content creation",
+        "Less suitable for traditional slide-based presentations"
+      ],
+      "source": "Industry Knowledge / Category Gap Analysis"
+    }
+  ]
+}

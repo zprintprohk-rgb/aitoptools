@@ -165,7 +165,13 @@ export default function ReviewPage({ params }) {
         </div>
 
         {/* Review Content */}
-        <div className="review-content" dangerouslySetInnerHTML={{ __html: review.content }} />
+        {review.content ? (
+          <div className="review-content" dangerouslySetInnerHTML={{ __html: review.content }} />
+        ) : (
+          <div className="review-content review-placeholder">
+            <p>Full review coming soon. In the meantime, check out the pros/cons summary above.</p>
+          </div>
+        )}
 
         {/* FAQ Section (visible) */}
         <div className="faq-section">

@@ -148,5 +148,122 @@
     "category": "AI Video",
     "has_screenshots": false,
     "verified": false
+  },
+  {
+    "slug": "claid-ai-review",
+    "title": "Claid AI Review 2026: Ultra-Realistic AI Product Photography",
+    "timestamp": "2026-06-27T13:30:00Z",
+    "model": "deepseek-v4-flash",
+    "template_type": "single-review",
+    "category": "AI Product Photography",
+    "verified": false
+  },
+  {
+    "slug": "synthesia-review",
+    "title": "Synthesia Review 2026: Best AI Video Avatar for Corporate Training?",
+    "timestamp": "2026-06-27T13:30:00Z",
+    "model": "deepseek-v4-flash",
+    "template_type": "single-review",
+    "category": "AI Video",
+    "verified": false
+  },
+  {
+    "slug": "cursor-review",
+    "title": "Cursor Review 2026: Best AI Code Editor for Developers?",
+    "timestamp": "2026-06-27T13:30:00Z",
+    "model": "deepseek-v4-flash",
+    "template_type": "single-review",
+    "category": "AI Coding",
+    "verified": false
+  },
+  {
+    "slug": "notion-ai-review",
+    "title": "Notion AI Review 2026: Is the $10/mo Add-On Worth It?",
+    "timestamp": "2026-06-27T13:30:00Z",
+    "model": "deepseek-v4-flash",
+    "template_type": "single-review",
+    "category": "AI Productivity",
+    "verified": false
+  },
+  {
+    "slug": "perplexity-pro-review",
+    "title": "Perplexity Pro Review 2026: The Best AI Search Engine for Research?",
+    "timestamp": "2026-06-27T13:30:00Z",
+    "model": "deepseek-v4-flash",
+    "template_type": "single-review",
+    "category": "AI Search",
+    "verified": false
+  },
+  {
+    "slug": "suno-ai-review",
+    "title": "Suno AI Review 2026: Best AI Music Generator for Content Creators?",
+    "timestamp": "2026-06-27T13:30:00Z",
+    "model": "deepseek-v4-flash",
+    "template_type": "single-review",
+    "category": "AI Music",
+    "verified": false
+  },
+  {
+    "slug": "gamma-ai-review",
+    "title": "Gamma AI Review 2026: Best AI Presentation Generator for Business?",
+    "timestamp": "2026-06-27T13:30:00Z",
+    "model": "deepseek-v4-flash",
+    "template_type": "single-review",
+    "category": "AI Presentation",
+    "verified": false
+  },
+  {
+    "slug": "canva-ai-review",
+    "title": "Canva AI Review 2026: Best AI Design Tool for Print Shops?",
+    "timestamp": "2026-06-27T13:30:00Z",
+    "model": "deepseek-v4-flash",
+    "template_type": "single-review",
+    "category": "AI Image",
+    "verified": false
+  },
+  {
+    "slug": "descript-review",
+    "title": "Descript Review 2026: Best AI Video & Podcast Editor for Creators?",
+    "timestamp": "2026-06-27T13:30:00Z",
+    "model": "deepseek-v4-flash",
+    "template_type": "single-review",
+    "category": "AI Video",
+    "verified": false
+  },
+  {
+    "slug": "pika-labs-review",
+    "title": "Pika Labs Review 2026: Best Free AI Video Generator for Social Media?",
+    "timestamp": "2026-06-27T13:30:00Z",
+    "model": "deepseek-v4-flash",
+    "template_type": "single-review",
+    "category": "AI Video",
+    "verified": false
+  },
+  {
+    "slug": "chatgpt-review",
+    "title": "ChatGPT Review 2026: The Ultimate AI Assistant for Business?",
+    "timestamp": "2026-06-27T13:30:00Z",
+    "model": "deepseek-v4-flash",
+    "template_type": "single-review",
+    "category": "AI Writing",
+    "verified": false
+  },
+  {
+    "slug": "best-ai-writing-tools-comparison",
+    "title": "Best AI Writing Tools for Print Shops & E-Commerce Sellers (2026 Comparison)",
+    "timestamp": "2026-06-27T13:30:00Z",
+    "model": "deepseek-v4-flash",
+    "template_type": "single-review",
+    "category": "AI Writing",
+    "verified": false
+  },
+  {
+    "slug": "nordvpn-review",
+    "title": "NordVPN Review 2026: Is the Best Premium VPN Still Worth It?",
+    "timestamp": "2026-06-28T13:30:00Z",
+    "model": "deepseek-v4-flash",
+    "template_type": "single-review",
+    "category": "Security",
+    "verified": false
   }
 ]

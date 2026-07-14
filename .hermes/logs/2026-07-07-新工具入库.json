@@ -1,0 +1,244 @@
+{
+  "date": "2026-07-07",
+  "phase": "cold-start",
+  "source": "Industry Knowledge / HackerNews / Category Gap Analysis",
+  "total_new": 10,
+  "sources_checked": [
+    "HackerNews API - queried 6 topical searches (AI print design, AI packaging, AI ecommerce, AI POD)",
+    "Category gap analysis: AI Packaging Design (0), AI Catalog/Brochure (0), AI POD Platforms (0), AI Print Marketing (1)",
+    "Industry knowledge - AI tools for print shops and e-commerce sellers",
+    "Skipped ProductHunt (Cloudflare block) / Reddit (403)"
+  ],
+  "tools": [
+    {
+      "slug": "gelato-ai-design-review",
+      "name": "Gelato - AI Print Platform",
+      "category": "AI POD Platforms",
+      "price": "Free to start",
+      "rating": 4.5,
+      "description": "Gelato is a global print-on-demand platform with built-in AI design tools. It connects creators with a network of 100+ print providers across 32 countries, enabling local printing and shipping. The AI design feature helps create product mockups, apply designs to multiple products, and optimize artwork for different print formats.",
+      "visitUrl": "https://www.gelato.com",
+      "affiliateUrl": "",
+      "pros": [
+        "Global print network — products print locally, reducing shipping time and costs",
+        "AI product mockup generator for instant visualization on 100+ products",
+        "Built-in AI design tools for t-shirt, poster, and merchandise creation",
+        "Integrates with Shopify, Etsy, WooCommerce, and custom API"
+      ],
+      "cons": [
+        "Design tools are basic compared to dedicated AI design platforms like Kittl",
+        "Product base prices are higher than Printful for some categories",
+        "Free plan has limited features and branding power"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-07"
+    },
+    {
+      "slug": "packhelp-review",
+      "name": "Packhelp",
+      "category": "AI Packaging Design",
+      "price": "Starting from €0.50/unit",
+      "rating": 4.0,
+      "description": "Packhelp is an AI-powered custom packaging platform that lets businesses design and order branded packaging. Their AI design tool suggests box sizes, materials, and print finishes based on product dimensions and brand aesthetic. Ideal for e-commerce brands that want professional custom packaging without minimum order quantities.",
+      "visitUrl": "https://www.packhelp.com",
+      "affiliateUrl": "",
+      "pros": [
+        "AI-powered packaging design suggestions based on product specs",
+        "No minimum order quantities — perfect for small print shops",
+        "Eco-friendly and sustainable material options",
+        "Quick turnaround — most orders ship within 5-10 business days"
+      ],
+      "cons": [
+        "Pricing per unit can be high for small runs",
+        "Design tool is browser-based with limited vector editing capabilities",
+        "Not suitable for high-volume industrial packaging needs"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-07"
+    },
+    {
+      "slug": "bannerbear-review",
+      "name": "Bannerbear",
+      "category": "AI Print Marketing",
+      "price": "9/month",
+      "rating": 4.0,
+      "description": "Bannerbear is an AI-powered image and video automation API. For print shops and e-commerce businesses, it can auto-generate product mockups, social media promotions, catalog images, and marketing materials at scale. Its template-based system with AI smart cropping makes it ideal for generating hundreds of branded assets from a single design.",
+      "visitUrl": "https://www.bannerbear.com",
+      "affiliateUrl": "",
+      "pros": [
+        "API-first — integrates with any e-commerce workflow for batch image generation",
+        "AI smart crop and background removal built-in",
+        "Video generation for social media marketing and product promos",
+        "Template-based — one design produces hundreds of variations"
+      ],
+      "cons": [
+        "API-focused — requires some technical setup for non-developers",
+        "Pro plan at 9/month is expensive for small print shops",
+        "Not a design tool — works with already-created templates"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-07"
+    },
+    {
+      "slug": "flipsnack-review",
+      "name": "Flipsnack",
+      "category": "AI Catalog/Brochure",
+      "price": "4/month",
+      "rating": 4.0,
+      "description": "Flipsnack is an AI-powered digital catalog and brochure maker that transforms PDFs into interactive flipbooks. For print shops and e-commerce brands, it offers automated design suggestions, AI layout optimization, and seamless print-to-digital workflow. AI features include automatic text formatting, image enhancement, and layout suggestions.",
+      "visitUrl": "https://www.flipsnack.com",
+      "affiliateUrl": "",
+      "pros": [
+        "AI layout suggestions automatically optimize document designs",
+        "PDF to interactive flipbook conversion in seconds",
+        "Built-in AI image enhancement for low-res product photos",
+        "Track reader analytics — see who viewed which pages"
+      ],
+      "cons": [
+        "AI design features are basic — not a full graphic design tool",
+        "Best for digital catalogs, not print-ready brochure exports",
+        "Free plan includes Flipsnack branding on published catalogs"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-07"
+    },
+    {
+      "slug": "lucidpress-review",
+      "name": "Lucidpress (Lucid Software)",
+      "category": "AI Print Marketing",
+      "price": "/month",
+      "rating": 4.0,
+      "description": "Lucidpress is an AI-enhanced brand templating platform for creating print marketing materials. It combines a drag-and-drop editor with AI-powered design suggestions, brand compliance enforcement, and multi-format export. Ideal for print shops managing brand collateral for multiple clients.",
+      "visitUrl": "https://www.lucidpress.com",
+      "affiliateUrl": "",
+      "pros": [
+        "AI brand compliance — automatically enforces brand colors, fonts, and logos",
+        "Team collaboration with role-based access for client projects",
+        "Export to print-ready PDF, PNG, or SVG at high resolution",
+        "Affordable at /month for the Pro plan"
+      ],
+      "cons": [
+        "AI features are limited to brand enforcement and basic layout suggestions",
+        "No AI image generation — relies on uploaded assets",
+        "Less creative freedom compared to Canva or Kittl"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-07"
+    },
+    {
+      "slug": "smart-palette-review",
+      "name": "Smart Palette",
+      "category": "AI Print Design",
+      "price": "Free trial / subscription",
+      "rating": 3.5,
+      "description": "Smart Palette is an AI art generation platform with print-on-demand integration. It guides users through a streamlined creative process — select interior design style, room type, art style, theme, and color palette — and generates wall-ready artwork that can be printed and shipped via integrated POD fulfillment. The AI translation layer optimizes prompts for the best results.",
+      "visitUrl": "https://www.smartpalette.io",
+      "affiliateUrl": "",
+      "pros": [
+        "Streamlined AI art creation — no prompt engineering needed",
+        "Built-in print-on-demand integration for wall art fulfillment",
+        "UHD print quality for gallery-ready art prints",
+        "Art preview feature shows how designs look in real rooms"
+      ],
+      "cons": [
+        "Early-stage product with limited art style variety",
+        "Pricing unclear — free trial then subscription model",
+        "Output resolution for POD may not match professional print standards"
+      ],
+      "source": "HackerNews (Show HN, June 2025)",
+      "datePublished": "2026-07-07"
+    },
+    {
+      "slug": "lasi-ai-review",
+      "name": "Lasi AI",
+      "category": "AI Print Design",
+      "price": "Freemium / Custom plans",
+      "rating": 3.5,
+      "description": "Lasi AI is an AI-powered print design platform for small apparel brands and print-on-demand users. It analyzes a brand's website to extract identity, suggests design directions, and generates unique print-ready designs. Features 3D preview using Three.js for realistic product visualization before production.",
+      "visitUrl": "https://lasi.ai",
+      "affiliateUrl": "",
+      "pros": [
+        "Brand-specific AI design — analyzes website for tailored output",
+        "3D preview with Three.js for realistic product mockups",
+        "Automates tedious design process for non-designers",
+        "Freemium model makes it accessible for small POD sellers"
+      ],
+      "cons": [
+        "Design quality limited by current AI model capabilities",
+        "Relatively new — limited user base and reviews",
+        "Custom plans needed for higher volume users"
+      ],
+      "source": "HackerNews (Show HN, August 2024)",
+      "datePublished": "2026-07-07"
+    },
+    {
+      "slug": "merchbanao-review",
+      "name": "MerchBanao",
+      "category": "AI Print Design",
+      "price": "Freemium / Early access",
+      "rating": 3.5,
+      "description": "MerchBanao is an AI-powered tool for creating print-on-demand merchandise designs. Unlike generic AI image generators, it focuses on the entire merch workflow: generate a design from a prompt, edit layout and typography, refine backgrounds and composition, and export 300 DPI print-ready files. Designed for Etsy, Redbubble, and Shopify sellers.",
+      "visitUrl": "https://merchbanao.com",
+      "affiliateUrl": "",
+      "pros": [
+        "Complete merch workflow — from concept to print-ready export",
+        "300 DPI export for professional print production",
+        "Built-in layout and typography editing — no separate design tool needed",
+        "Focused on POD seller needs (Etsy, Redbubble, Shopify)"
+      ],
+      "cons": [
+        "Very early stage (Feb 2026 launch) — limited features",
+        "AI design quality still improving",
+        "No integration with major POD platforms yet"
+      ],
+      "source": "HackerNews (Show HN, February 2026)",
+      "datePublished": "2026-07-07"
+    },
+    {
+      "slug": "greenonion-review",
+      "name": "GreenOnion",
+      "category": "AI E-Commerce",
+      "price": "49/33 A+ Content pieces",
+      "rating": 4.0,
+      "description": "GreenOnion is an AI tool that generates Amazon A+ Content and listing images from a single product photo in 30 seconds. It uses layered prompts across multiple AI models to produce production-ready outputs (95%+ usable rate). For print-on-demand sellers on Amazon, it eliminates the need for expensive product photography sessions.",
+      "visitUrl": "https://greenonion.ai",
+      "affiliateUrl": "",
+      "pros": [
+        "30-second turnaround from product photo to complete A+ Content listing",
+        "95%+ output usable rate — minimal editing needed",
+        "Eliminates 00-500 per product photography costs",
+        "Consistent brand identity across all product listings"
+      ],
+      "cons": [
+        "49 pricing is for ~33 listings — expensive for small catalogs",
+        "Amazon-focused — limited value for other e-commerce platforms",
+        "Output quality depends on source photo quality"
+      ],
+      "source": "HackerNews (Show HN, February 2026)",
+      "datePublished": "2026-07-07"
+    },
+    {
+      "slug": "snapsell-review",
+      "name": "Snapsell AI",
+      "category": "AI E-Commerce",
+      "price": "Freemium",
+      "rating": 3.5,
+      "description": "Snapsell is an AI-driven infrastructure for e-commerce optimization built on Google Gemini 2.0. It automates product listing management — generating optimized titles, descriptions, keywords, and images from raw product data. Uses multimodal AI analysis for comprehensive product listing enhancement across major e-commerce platforms.",
+      "visitUrl": "https://snapsell.website",
+      "affiliateUrl": "",
+      "pros": [
+        "End-to-end listing optimization — titles, descriptions, keywords and images",
+        "Google Gemini 2.0 multimodal analysis for comprehensive product understanding",
+        "Designed for bulk catalog optimization (50-200+ products)",
+        "Works with Amazon, Etsy, Shopify, and WooCommerce"
+      ],
+      "cons": [
+        "Early stage product with limited track record",
+        "Pricing unclear — freemium model with unknown paid tiers",
+        "Depends on Google Gemini API which may have rate limits"
+      ],
+      "source": "HackerNews (Show HN, February 2026)",
+      "datePublished": "2026-07-07"
+    }
+  ]
+}

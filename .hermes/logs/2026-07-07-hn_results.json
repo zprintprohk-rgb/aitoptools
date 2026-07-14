@@ -1,0 +1,149 @@
+{
+  "hn_results": [
+    {
+      "title": "Launch HN: Revery.AI (YC S21) Scalable deep learning-based virtual dressing room",
+      "url": "",
+      "points": 103,
+      "created_at": "2021-06-14T15:59:13Z"
+    },
+    {
+      "title": "Launch HN: Tamarind Bio (YC W24) – AI Inference Provider for Drug Discovery",
+      "url": "",
+      "points": 85,
+      "created_at": "2026-01-06T17:49:56Z"
+    },
+    {
+      "title": "Ask HN: When do we expose \"Humans as Tools\" so LLM agents can call us on demand?",
+      "url": "",
+      "points": 48,
+      "created_at": "2026-01-01T18:09:31Z"
+    },
+    {
+      "title": "We got a $60k tax penalty for a zero-revenue side project",
+      "url": "",
+      "points": 28,
+      "created_at": "2025-11-10T13:25:00Z"
+    },
+    {
+      "title": "Show HN: Memori – Open-Source Memory Engine for AI Agents",
+      "url": "https://github.com/GibsonAI/memori",
+      "points": 17,
+      "created_at": "2025-08-18T14:29:32Z"
+    },
+    {
+      "title": "Ask HN: Any product inventors or creators here?",
+      "url": "",
+      "points": 9,
+      "created_at": "2024-08-11T17:59:25Z"
+    },
+    {
+      "title": "Show HN: PrintReadyBook",
+      "url": "https://printreadybook.com/",
+      "points": 9,
+      "created_at": "2026-01-11T03:56:19Z"
+    },
+    {
+      "title": "Show HN: Securing the Ralph Wiggum Loop – DevSecOps for Autonomous Coding Agents",
+      "url": "https://github.com/agairola/securing-ralph-loop",
+      "points": 4,
+      "created_at": "2026-02-01T06:23:26Z"
+    },
+    {
+      "title": "Show HN: I love ChatGPT Memory, so I built one",
+      "url": "https://github.com/memodb-io/memobase",
+      "points": 4,
+      "created_at": "2025-08-15T14:21:17Z"
+    },
+    {
+      "title": "Show HN: Talk-to-design tool for total beginners. 10k users in 90 days",
+      "url": "https://seede.ai/",
+      "points": 3,
+      "created_at": "2025-07-30T07:13:53Z"
+    },
+    {
+      "title": "Show HN: Hubcap – A single Go binary to automate Chrome via CDP",
+      "url": "https://tomyandell.dev/blog/introducing-hubcap",
+      "points": 3,
+      "created_at": "2026-03-17T15:17:33Z"
+    },
+    {
+      "title": "Show HN: Kybera – Agentic Smart Wallet with AI Osint and Reputation Tracking",
+      "url": "https://kybera.xyz",
+      "points": 3,
+      "created_at": "2026-02-10T11:46:00Z"
+    },
+    {
+      "title": "Show HN: What are your thoughts on automated data labeling?",
+      "url": "https://www.gethorizon.ai/use-cases/data-labeling",
+      "points": 3,
+      "created_at": "2023-06-05T00:40:04Z"
+    },
+    {
+      "title": "AI coding tools have broad filesystem and network access",
+      "url": "",
+      "points": 2,
+      "created_at": "2026-03-24T03:16:03Z"
+    },
+    {
+      "title": "Seedream 5.0 Lite API Pricing Breakdown",
+      "url": "",
+      "points": 2,
+      "created_at": "2026-02-25T01:39:18Z"
+    },
+    {
+      "title": "Show HN: I built an AI fashion photographer to help small e-commerce businesses",
+      "url": "https://www.vestiai.com.br/en",
+      "points": 2,
+      "created_at": "2025-12-28T21:04:04Z"
+    },
+    {
+      "title": "AI's Phase Transition Noise",
+      "url": "",
+      "points": 2,
+      "created_at": "2026-01-24T14:22:40Z"
+    },
+    {
+      "title": "Show HN: Dumped Wix, my AEC consultancy's storefront is now an AI Edge",
+      "url": "https://axoworks.com/",
+      "points": 1,
+      "created_at": "2026-03-15T13:53:52Z"
+    },
+    {
+      "title": "Show HN: Yak – Voice typing tool in Tauri/Rust that auto-presses Enter for you",
+      "url": "https://getyak.app",
+      "points": 1,
+      "created_at": "2026-03-15T13:49:26Z"
+    },
+    {
+      "title": "Show HN: Neuron – Independent Rust crates for building AI agents",
+      "url": "https://secbear.github.io/neuron/",
+      "points": 1,
+      "created_at": "2026-02-24T15:49:56Z"
+    },
+    {
+      "title": "Show HN: A simple tool for product photos",
+      "url": "https://ai-photogenerator.org",
+      "points": 1,
+      "created_at": "2026-01-15T02:51:55Z"
+    },
+    {
+      "title": "Nano Banana 2 Is Really Coming! Here's How to Access It Early",
+      "url": "",
+      "points": 1,
+      "created_at": "2026-02-27T08:29:40Z"
+    },
+    {
+      "title": "Show HN: Lasi AI – AI-powered print design for small apparel brands",
+      "url": "",
+      "points": 1,
+      "created_at": "2024-08-15T14:36:49Z"
+    },
+    {
+      "title": "Show HN: Free AI tool to generate SVG icons instantly",
+      "url": "https://aisvg.im",
+      "points": 1,
+      "created_at": "2025-06-26T08:08:41Z"
+    }
+  ],
+  "total_found": 24
+}

@@ -1,0 +1,56 @@
+# AITopTools 项目元数据 (Hermes 实例配置)
+
+project:
+  id: aitoptools
+  name: AI Tools 导航站 (联盟变现)
+  category: operations  # 内容运营类,无部署权限
+  root: F:\aitoptools
+
+  toolsets:
+    enabled:
+      - file          # 读写 .hermes/logs/
+      - terminal      # 跑 npm scripts
+      - skills        # seo, content
+      - web           # 爬 ProductHunt / HN
+      - memory        # 读 .hermes/memory/
+    disabled:
+      - cronjob
+      - delegation
+
+  # 部署权限
+  deployment:
+    can_deploy: false
+    deploy_commands_forbidden:
+      - "wrangler deploy"
+      - "npm run deploy"
+      - "npm run build"  # 不自动 build,等 user 确认
+      - "git push"
+    required_approval: user
+
+  # 合规
+  compliance:
+    forbidden_categories:
+      - gambling
+      - adult_content
+      - weapon_making
+      - privacy_violation
+    review_required_for:
+      - affiliate_link_replacement
+      - new_paid_category
+      - high_traffic_cta_change
+
+  cron:
+    job_id: aitoptools-daily-content
+    schedule: "30 13 * * *"  # 每天 13:30
+    duration_max_minutes: 120
+    ttl_days: 14
+
+  output:
+    logs_dir: F:\aitoptools\.hermes\logs
+    backup_dir: F:\aitoptools\.hermes\backup
+    naming_pattern: "YYYY-MM-DD-{任务名}.md|json|tsx"
+
+  models:
+    default: deepseek-v4-flash
+    advance: deepseek-v4-pro
+    hard: glm-5.2-coding

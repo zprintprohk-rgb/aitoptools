@@ -1,0 +1,243 @@
+{
+  "date": "2026-07-03",
+  "phase": "cold-start",
+  "source": "Industry Knowledge / Category Gap Analysis",
+  "total_new": 10,
+  "sources_checked": [
+    "HackerNews Best Stories (top 30) - no AI tool launches today",
+    "ProductHunt - blocked by Cloudflare",
+    "Reddit r/artificial - 403 blocked",
+    "Industry Knowledge - 10 trending AI tools for print/e-commerce"
+  ],
+  "tools": [
+    {
+      "slug": "recraft-ai-review",
+      "name": "Recraft AI",
+      "category": "AI Print Design",
+      "price": "$20/mo Pro",
+      "rating": 4.5,
+      "description": "AI vector design tool generating SVG graphics for print-ready use.",
+      "visitUrl": "https://recraft.ai",
+      "affiliateUrl": "https://recraft.ai/?fpr=partner",
+      "pros": [
+        "SVG vector output",
+        "AI icons from text",
+        "Commercial license"
+      ],
+      "cons": [
+        "Free limit 50 gens",
+        "Thin lines need fix",
+        "Few templates than Kittl"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-03"
+    },
+    {
+      "slug": "looka-review",
+      "name": "Looka",
+      "category": "AI Print Design",
+      "price": "$20 one-time / $96/yr",
+      "rating": 4,
+      "description": "AI logo maker with print-ready vector exports for brands.",
+      "visitUrl": "https://looka.com",
+      "affiliateUrl": "https://looka.com/?fpr=partner",
+      "pros": [
+        "Hundreds of AI logos",
+        "Vector EPS/SVG/PDF",
+        "Brand kit included",
+        "One-time payment"
+      ],
+      "cons": [
+        "Download costs $20+",
+        "Can look generic",
+        "Less flexible than designer"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-03"
+    },
+    {
+      "slug": "removebg-review",
+      "name": "Remove.bg",
+      "category": "AI Product Photography",
+      "price": "Free / $9.99/mo 50img",
+      "rating": 4.5,
+      "description": "Industry-leading AI background removal for product photos.",
+      "visitUrl": "https://www.remove.bg",
+      "affiliateUrl": "https://www.remove.bg/?fpr=partner",
+      "pros": [
+        "Best edge detection",
+        "API for batch",
+        "Shopify plugin",
+        "Free preview"
+      ],
+      "cons": [
+        "Only 50 full-res/mo",
+        "No mockup templates",
+        "API pricing adds up"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-03"
+    },
+    {
+      "slug": "printful-design-review",
+      "name": "Printful Design Maker",
+      "category": "AI Print Design",
+      "price": "Free (pay per product)",
+      "rating": 4.5,
+      "description": "Integrated POD design + fulfillment platform with AI mockups.",
+      "visitUrl": "https://www.printful.com",
+      "affiliateUrl": "https://www.printful.com/?fpr=partner",
+      "pros": [
+        "Design + fulfillment",
+        "AI product mockups",
+        "300+ products",
+        "No monthly fee"
+      ],
+      "cons": [
+        "Higher base costs",
+        "Simpler design tool",
+        "Variable shipping"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-03"
+    },
+    {
+      "slug": "ideogram-ai-review",
+      "name": "Ideogram AI",
+      "category": "AI Image",
+      "price": "Free / $20/mo Pro",
+      "rating": 4.5,
+      "description": "Best AI image generator with accurate text rendering for designs.",
+      "visitUrl": "https://ideogram.ai",
+      "affiliateUrl": "https://ideogram.ai/?fpr=partner",
+      "pros": [
+        "Best text rendering",
+        "Perfect for t-shirts",
+        "Generous free tier",
+        "Magic Prompt feature"
+      ],
+      "cons": [
+        "$20/mo pricier than Leonardo",
+        "Raster only",
+        "Content restrictions"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-03"
+    },
+    {
+      "slug": "beautiful-ai-review",
+      "name": "Beautiful.ai",
+      "category": "AI Presentation",
+      "price": "$12/mo Pro",
+      "rating": 4,
+      "description": "AI presentation tool with auto-formatting and brand kits.",
+      "visitUrl": "https://www.beautiful.ai",
+      "affiliateUrl": "https://www.beautiful.ai/?fpr=partner",
+      "pros": [
+        "Auto-formats slides",
+        "Brand kit",
+        "Smart templates",
+        "Good for agencies"
+      ],
+      "cons": [
+        "Less creative freedom",
+        "No offline mode",
+        "AI wastes space"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-03"
+    },
+    {
+      "slug": "otter-ai-review",
+      "name": "Otter AI",
+      "category": "AI Productivity",
+      "price": "Free / $16.99/mo Pro",
+      "rating": 4,
+      "description": "AI meeting assistant with real-time transcription and summaries.",
+      "visitUrl": "https://otter.ai",
+      "affiliateUrl": "https://otter.ai/?fpr=partner",
+      "pros": [
+        "Real-time transcription",
+        "Auto summaries",
+        "Zoom/Meet/Teams",
+        "300 min free"
+      ],
+      "cons": [
+        "$16.99/mo pricey for occasional use",
+        "Misses nuance",
+        "Bot joins meetings"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-03"
+    },
+    {
+      "slug": "speechify-review",
+      "name": "Speechify",
+      "category": "AI Voice",
+      "price": "Free / $11.58/mo Premium",
+      "rating": 4,
+      "description": "AI text-to-speech with natural voices and OCR reading.",
+      "visitUrl": "https://speechify.com",
+      "affiliateUrl": "https://speechify.com/?fpr=partner",
+      "pros": [
+        "Natural AI voices",
+        "OCR book scanner",
+        "Cross-platform",
+        "Up to 4.5x speed"
+      ],
+      "cons": [
+        "Expensive vs built-in TTS",
+        "Lacks emotion",
+        "OCR needs good light"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-03"
+    },
+    {
+      "slug": "replicate-ai-review",
+      "name": "Replicate",
+      "category": "AI Development",
+      "price": "Pay-as-you-go",
+      "rating": 4,
+      "description": "AI model hosting with 1000+ open-source models via API.",
+      "visitUrl": "https://replicate.com",
+      "affiliateUrl": "https://replicate.com/?fpr=partner",
+      "pros": [
+        "1000+ models",
+        "Serverless pricing",
+        "Easy deployment",
+        "Great docs"
+      ],
+      "cons": [
+        "Cost can spiral",
+        "Model availability",
+        "Less control than self-host"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-03"
+    },
+    {
+      "slug": "dalle3-review",
+      "name": "DALL-E 3",
+      "category": "AI Image",
+      "price": "$20/mo via ChatGPT Plus",
+      "rating": 4.5,
+      "description": "OpenAI image generator with exceptional prompt adherence.",
+      "visitUrl": "https://chatgpt.com",
+      "affiliateUrl": "https://chatgpt.com/?fpr=partner",
+      "pros": [
+        "Best prompt adherence",
+        "ChatGPT integration",
+        "Commercial use",
+        "Photorealistic"
+      ],
+      "cons": [
+        "Requires ChatGPT Plus",
+        "Raster only",
+        "Content policy limits"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-03"
+    }
+  ]
+}

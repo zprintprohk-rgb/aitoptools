@@ -1,0 +1,243 @@
+{
+  "date": "2026-07-04",
+  "phase": "cold-start",
+  "source": "Industry Knowledge / Category Gap Analysis / Vertical Focus",
+  "total_new": 10,
+  "sources_checked": [
+    "Category gap analysis: AI Print Design (1 review) vs AI Writing (7 reviews)",
+    "Vertical gap: AI E-Commerce category missing entirely",
+    "Comparison articles: zero existing comparison pages",
+    "Industry Knowledge: 10 trending AI tools for print/e-commerce/POD",
+    "Note: ProductHunt/HN/Reddit API unavailable from cron environment"
+  ],
+  "tools": [
+    {
+      "slug": "printify-mockup-generator-review",
+      "name": "Printify Mockup Generator",
+      "category": "AI Print Design",
+      "price": "Free (pay per product fulfilled)",
+      "rating": 4.5,
+      "description": "AI-powered mockup generator for print-on-demand products with photorealistic previews.",
+      "visitUrl": "https://printify.com/mockup-generator",
+      "affiliateUrl": "https://printify.com/?fpr=partner",
+      "pros": [
+        "800+ products",
+        "Photorealistic AI mockups",
+        "No monthly fee",
+        "Shopify integration"
+      ],
+      "cons": [
+        "Fulfillment costs add up",
+        "Design tool is basic",
+        "Shipping varies by region"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-04"
+    },
+    {
+      "slug": "pixelcut-review",
+      "name": "Pixelcut",
+      "category": "AI Product Photography",
+      "price": "Free / .99/mo Pro",
+      "rating": 4.5,
+      "description": "AI product photography tool for e-commerce sellers with background removal and mockup generation.",
+      "visitUrl": "https://www.pixelcut.app",
+      "affiliateUrl": "https://www.pixelcut.app/?fpr=partner",
+      "pros": [
+        "AI background removal",
+        "Product mockups",
+        "Batch editing",
+        "Free tier generous"
+      ],
+      "cons": [
+        "Pro .99/mo",
+        "Web only",
+        "Limited resolution free"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-04"
+    },
+    {
+      "slug": "vestra-ai-review",
+      "name": "Vestra AI",
+      "category": "AI E-Commerce",
+      "price": "9/mo Starter",
+      "rating": 4,
+      "description": "AI product description generator and store optimizer for Shopify sellers.",
+      "visitUrl": "https://vestra.ai",
+      "affiliateUrl": "https://vestra.ai/?fpr=partner",
+      "pros": [
+        "Product descriptions",
+        "SEO optimization",
+        "Shopify sync",
+        "Multi-language"
+      ],
+      "cons": [
+        "9/mo starting",
+        "Only Shopify",
+        "No free tier"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-04"
+    },
+    {
+      "slug": "zmo-ai-review",
+      "name": "ZMO AI",
+      "category": "AI Product Photography",
+      "price": "Free / 9/mo Pro",
+      "rating": 4,
+      "description": "AI fashion model and product photography generator for e-commerce catalogs.",
+      "visitUrl": "https://www.zmo.ai",
+      "affiliateUrl": "https://www.zmo.ai/?fpr=partner",
+      "pros": [
+        "AI fashion models",
+        "Product backgrounds",
+        "Bulk generation",
+        "API available"
+      ],
+      "cons": [
+        "9/mo Pro",
+        "Focuses on fashion",
+        "Some results look AI"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-04"
+    },
+    {
+      "slug": "gelato-ai-design-review",
+      "name": "Gelato Design Platform",
+      "category": "AI Print Design",
+      "price": "Free / from 4.99/mo",
+      "rating": 4,
+      "description": "Global print-on-demand platform with AI design tools for t-shirts, wall art, and more.",
+      "visitUrl": "https://www.gelato.com",
+      "affiliateUrl": "https://www.gelato.com/?fpr=partner",
+      "pros": [
+        "Global print network",
+        "AI design suggestions",
+        "No minimum orders",
+        "Eco-friendly"
+      ],
+      "cons": [
+        "Platform fee on free plan",
+        "Niche product range",
+        "AI tool limited vs Kittl"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-04"
+    },
+    {
+      "slug": "flair-ai-review",
+      "name": "Flair AI",
+      "category": "AI Product Photography",
+      "price": "0/mo Starter / 0/mo Pro",
+      "rating": 4.5,
+      "description": "AI product photography studio for branded content with 3D scenes and smart backgrounds.",
+      "visitUrl": "https://flair.ai",
+      "affiliateUrl": "https://flair.ai/?fpr=partner",
+      "pros": [
+        "3D scene builder",
+        "Brand kits",
+        "Bulk backgrounds",
+        "Marketing focus"
+      ],
+      "cons": [
+        "No free tier",
+        "0 for Pro features",
+        "Learning curve"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-04"
+    },
+    {
+      "slug": "tidio-ai-review",
+      "name": "Tidio AI",
+      "category": "AI E-Commerce",
+      "price": "Free / 9/mo Pro",
+      "rating": 4,
+      "description": "AI chatbot and customer service automation for e-commerce stores with Shopify integration.",
+      "visitUrl": "https://www.tidio.com",
+      "affiliateUrl": "https://www.tidio.com/?fpr=partner",
+      "pros": [
+        "Free forever plan",
+        "Shopify integrated",
+        "AI auto-replies",
+        "Easy setup"
+      ],
+      "cons": [
+        "Free limited features",
+        "Pro 9/mo",
+        "Complex queries need human"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-04"
+    },
+    {
+      "slug": "stablediffusion-webui-review",
+      "name": "Stable Diffusion WebUI",
+      "category": "AI Image",
+      "price": "Free (open source, GPU needed)",
+      "rating": 4.5,
+      "description": "Open-source AI image generation UI with local control over models and parameters for print design.",
+      "visitUrl": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+      "affiliateUrl": "",
+      "pros": [
+        "Completely free",
+        "Full model control",
+        "Extensions ecosystem",
+        "Print resolution possible"
+      ],
+      "cons": [
+        "GPU required (VRAM 8GB+)",
+        "Complex setup",
+        "No official support"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-04"
+    },
+    {
+      "slug": "ai-product-photography-tools-comparison",
+      "name": "Best AI Product Photography Tools for Print-on-Demand 2026",
+      "category": "AI Product Photography",
+      "price": "Varies (Free-0/mo)",
+      "rating": 0,
+      "description": "Comparison of top 5 AI product photography tools for POD sellers: Pixelcut, Remove.bg, ZMO AI, Flair AI, Photoroom.",
+      "visitUrl": "",
+      "affiliateUrl": "",
+      "pros": [
+        "Side-by-side comparison",
+        "Pricing included",
+        "Focus on POD use"
+      ],
+      "cons": [
+        "No single winner",
+        "Features vary widely",
+        "Trial recommended"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-04"
+    },
+    {
+      "slug": "printful-vs-printify-review",
+      "name": "Printful vs Printify: Which POD Platform is Right for You?",
+      "category": "AI Print Design",
+      "price": "Varies",
+      "rating": 0,
+      "description": "In-depth comparison of Printful and Printify for print-on-demand entrepreneurs focusing on AI tools, pricing, and product quality.",
+      "visitUrl": "",
+      "affiliateUrl": "",
+      "pros": [
+        "Full feature comparison",
+        "Pricing breakdown",
+        "Print quality analysis"
+      ],
+      "cons": [
+        "Platforms change pricing",
+        "Regional differences",
+        "No clear winner"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-04"
+    }
+  ]
+}

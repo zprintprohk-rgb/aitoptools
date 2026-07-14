@@ -1,0 +1,247 @@
+{
+  "date": "2026-07-05",
+  "phase": "cold-start",
+  "source": "Industry Knowledge / Category Gap Analysis / Vertical Focus",
+  "total_new": 10,
+  "sources_checked": [
+    "ProductHunt - blocked by Cloudflare (cron env without proxy)",
+    "HackerNews - no new AI tool launches relevant to print today",
+    "Reddit r/artificial - 403 blocked",
+    "Category gap analysis: Midjourney missing from all reviews (critical SEO gap)",
+    "Industry Knowledge: 10 trending AI tools for print/e-commerce/POD"
+  ],
+  "tools": [
+    {
+      "slug": "midjourney-review",
+      "name": "Midjourney",
+      "category": "AI Image",
+      "price": "$10/mo Basic / $30/mo Standard / $60/mo Pro",
+      "rating": 4.5,
+      "description": "Premium AI image generator widely considered best for print-quality visual design — t-shirt graphics, poster art, packaging mockups, and brand imagery.",
+      "visitUrl": "https://www.midjourney.com",
+      "affiliateUrl": "",
+      "pros": [
+        "Highest aesthetic quality among all AI image generators",
+        "Print-resolution output (upscalable to 4K+)",
+        "Best for t-shirt graphics and poster art",
+        "Active community with millions of style references"
+      ],
+      "cons": [
+        "Discord-only interface (learning curve for non-tech users)",
+        "No free tier beyond trial",
+        "Raster-only output (no SVG/vector export)"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-05"
+    },
+    {
+      "slug": "pebblely-review",
+      "name": "Pebblely",
+      "category": "AI E-Commerce",
+      "price": "Free / $19/mo Basic / $39/mo Pro",
+      "rating": 4.5,
+      "description": "AI product photography platform purpose-built for e-commerce — generates photorealistic product scenes from a single flat product photo.",
+      "visitUrl": "https://pebblely.com",
+      "affiliateUrl": "https://pebblely.com/?fpr=partner",
+      "pros": [
+        "Stunning photorealistic backgrounds from single product photo",
+        "Works with any product type (clothing, electronics, books)",
+        "AI auto-crops and centers product perfectly",
+        "Batch processing for catalog-scale output"
+      ],
+      "cons": [
+        "$19/mo for only 40 generations",
+        "Backgrounds can look AI-generated on close inspection",
+        "No physical mockup templates (e.g. t-shirt display)"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-05"
+    },
+    {
+      "slug": "claid-ai-review",
+      "name": "Claid AI",
+      "category": "AI E-Commerce",
+      "price": "Free trial / $29/mo Starter / $99/mo Business",
+      "rating": 4,
+      "description": "AI product photo enhancement API and web tool — background removal, upscaling, color correction, and retouching optimized for e-commerce catalogs.",
+      "visitUrl": "https://claid.ai",
+      "affiliateUrl": "https://claid.ai/?fpr=partner",
+      "pros": [
+        "All-in-one enhancement: bg removal + upscale + color fix",
+        "API-first design for high-volume catalog processing",
+        "Batch retouching saves hours per week",
+        "Shopify plugin available"
+      ],
+      "cons": [
+        "$29/mo is expensive for small sellers",
+        "Web tool UI is functional but basic",
+        "Free trial only 10 images"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-05"
+    },
+    {
+      "slug": "topaz-photo-ai-review",
+      "name": "Topaz Photo AI",
+      "category": "AI Print Design",
+      "price": "$199 one-time (license)",
+      "rating": 4.5,
+      "description": "Professional AI image quality enhancement suite — upscaling, denoising, and sharpening for print-ready output. Essential tool for print shops processing customer artwork.",
+      "visitUrl": "https://www.topazlabs.com/topaz-photo-ai",
+      "affiliateUrl": "https://www.topazlabs.com/?fpr=partner",
+      "pros": [
+        "Best-in-class upscaling to 16K for large-format printing",
+        "One-time payment, no subscription",
+        "Denoise + sharpen + upscale in one workflow",
+        "Batch processing for production workflows"
+      ],
+      "cons": [
+        "$199 high upfront cost for casual users",
+        "Requires good GPU for fast processing",
+        "Overkill for digital-only content"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-05"
+    },
+    {
+      "slug": "vistacreate-review",
+      "name": "VistaCreate (formerly Crello)",
+      "category": "AI Print Design",
+      "price": "Free / $13/mo Pro",
+      "rating": 4,
+      "description": "AI-powered graphic design platform with 100K+ print-ready templates — flyers, posters, business cards, social media graphics, and packaging mockups.",
+      "visitUrl": "https://create.vista.com",
+      "affiliateUrl": "https://create.vista.com/?fpr=partner",
+      "pros": [
+        "70K+ print-ready templates available",
+        "AI background removal and smart resize included",
+        "Free version with generous template access",
+        "Brand kits for consistent print materials"
+      ],
+      "cons": [
+        "Pro $13/mo needed for premium templates",
+        "Export resolution limited on free plan",
+        "Less advanced than Canva for complex designs"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-05"
+    },
+    {
+      "slug": "logoai-review",
+      "name": "LogoAI",
+      "category": "AI Print Design",
+      "price": "Free preview / $49 one-time (HD files + brand kit)",
+      "rating": 4,
+      "description": "AI logo maker generating print-ready logo files in SVG, EPS, PDF, and PNG — with full brand kit (business cards, letterheads, social media).",
+      "visitUrl": "https://www.logoai.com",
+      "affiliateUrl": "https://www.logoai.com/?fpr=partner",
+      "pros": [
+        "SVG/Vector export for print (unlimited scaling)",
+        "Full brand kit included in one payment",
+        "AI suggests styles based on industry + keywords",
+        "Cheaper than hiring a designer"
+      ],
+      "cons": [
+        "Logo quality depends on input keywords",
+        "Some results look generic or template-like",
+        "No free vector download (preview only)"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-05"
+    },
+    {
+      "slug": "postermywall-review",
+      "name": "PosterMyWall",
+      "category": "AI Print Design",
+      "price": "Free / $9.95/mo Premium",
+      "rating": 3.5,
+      "description": "AI-powered poster and flyer design platform with print-ready templates optimized for local print shops, events, and retail promotions.",
+      "visitUrl": "https://www.postermywall.com",
+      "affiliateUrl": "https://www.postermywall.com/?fpr=partner",
+      "pros": [
+        "Massive library of 100K+ poster templates",
+        "Print-ready PDF export (CMYK + bleed)",
+        "Affordable $9.95/mo premium",
+        "Great for small print shop marketing"
+      ],
+      "cons": [
+        "AI features are basic compared to Canva/Kittl",
+        "UI feels dated",
+        "Good for templates, weak for original design"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-05"
+    },
+    {
+      "slug": "custom-ink-design-lab-review",
+      "name": "Custom Ink Design Lab",
+      "category": "AI Print Design",
+      "price": "Free (design tool) / pay per t-shirt shipped",
+      "rating": 4,
+      "description": "AI-powered t-shirt design tool with clip art library, text effects, and print-ready export — built into the Custom Ink POD platform.",
+      "visitUrl": "https://www.customink.com",
+      "affiliateUrl": "https://www.customink.com/?fpr=partner",
+      "pros": [
+        "T-shirt-specific AI design features",
+        "Huge clip art and font library",
+        "Print-ready output with color separation",
+        "All-in-one design + fulfillment"
+      ],
+      "cons": [
+        "POD pricing not the cheapest",
+        "Design tool limited to apparel only",
+        "No standalone AI generation (no text-to-image)"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-05"
+    },
+    {
+      "slug": "bing-image-creator-review",
+      "name": "Bing Image Creator (DALL-E Powered)",
+      "category": "AI Image",
+      "price": "Free (with Microsoft account)",
+      "rating": 4,
+      "description": "Free AI image generator powered by DALL-E — integrated with Bing Chat and Microsoft Designer. Useful for print design inspiration and rapid prototyping.",
+      "visitUrl": "https://www.bing.com/create",
+      "affiliateUrl": "",
+      "pros": [
+        "Completely free with Microsoft account",
+        "Powered by DALL-E — good prompt adherence",
+        "Generates 4 images per prompt",
+        "No usage cap on free plan"
+      ],
+      "cons": [
+        "Resolution limited (typically 1024×1024)",
+        "No direct commercial license clarity",
+        "Requires upscaling for print use",
+        "Less aesthetic quality than Midjourney"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-05"
+    },
+    {
+      "slug": "autodraw-review",
+      "name": "AutoDraw by Google",
+      "category": "AI Print Design",
+      "price": "Free",
+      "rating": 3.5,
+      "description": "Google's free AI drawing tool — turns rough sketches into clean vector clip art. Great for quick print design elements when you have no design skills.",
+      "visitUrl": "https://www.autodraw.com",
+      "affiliateUrl": "",
+      "pros": [
+        "Completely free, no account needed",
+        "Works on any device with a browser",
+        "Vector output (SVG-compatible)",
+        "Perfect for quick design elements"
+      ],
+      "cons": [
+        "Limited to simple clip art (no complex designs)",
+        "AI recognition accuracy varies",
+        "No advanced editing features",
+        "Not suitable for final product design"
+      ],
+      "source": "Industry Knowledge",
+      "datePublished": "2026-07-05"
+    }
+  ]
+}
