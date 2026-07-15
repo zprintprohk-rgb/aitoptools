@@ -1,0 +1,126 @@
+{
+  "description": "Affiliate program application tracker for aitoptools.net (Print AI Tools)",
+  "payment_account": {
+    "provider": "Airwallex (USD)",
+    "beneficiary_name": "SHEN ZHEN SHI CAI LONG YIN SHUA BAO ZHUANG YOU XIAN GONG SI",
+    "account_number": "7949835442",
+    "routing_aba": "016",
+    "bank": "DBS Bank (Hong Kong) Limited",
+    "swift": "DHBKHKHH",
+    "bank_address": "Ground Floor, The Center, 99 Queen's Road Central, Central, Hong Kong SAR",
+    "status": "ready"
+  },
+  "target": {
+    "total": 3000,
+    "deadline": "2027-01-15",
+    "current": 0
+  },
+  "programs": [
+    {
+      "name": "Hostinger Affiliate Program",
+      "network": "CJ / ShareASale",
+      "commission": "$60-100/sale",
+      "status": "not-applied",
+      "signup_url": "https://www.hostinger.com/affiliates",
+      "notes": "High priority — $60-100 per sale, 30-50 sales = target met"
+    },
+    {
+      "name": "NordVPN Affiliate Program",
+      "network": "CJ / ShareASale",
+      "commission": "40%+ recurring",
+      "status": "not-applied",
+      "signup_url": "https://nordvpn.com/affiliate/",
+      "notes": "Strong recurring revenue, $100+ AOV"
+    },
+    {
+      "name": "Jasper AI Affiliate Program",
+      "network": "Impact",
+      "commission": "20-30% recurring",
+      "status": "not-applied",
+      "signup_url": "https://jasper.ai/affiliates",
+      "notes": "Premium tool, high monthly subscription"
+    },
+    {
+      "name": "Writesonic Affiliate Program",
+      "network": "PartnerStack",
+      "commission": "20-30% recurring",
+      "status": "not-applied",
+      "signup_url": "https://writesonic.com/affiliates",
+      "notes": "Best value AI writing tool"
+    },
+    {
+      "name": "Copy.ai Affiliate Program",
+      "network": "Impact",
+      "commission": "20-30% recurring",
+      "status": "not-applied",
+      "signup_url": "https://copy.ai/affiliates",
+      "notes": ""
+    },
+    {
+      "name": "Canva Affiliate Program",
+      "network": "Impact",
+      "commission": "~$12/sale one-time",
+      "status": "not-applied",
+      "signup_url": "https://www.canva.com/affiliates/",
+      "notes": "High volume potential, lower per-sale"
+    },
+    {
+      "name": "Shopify Affiliate Program",
+      "network": "Impact",
+      "commission": "Up to $150/sale",
+      "status": "not-applied",
+      "signup_url": "https://www.shopify.com/affiliates",
+      "notes": "Highest per-sale value, competitive niche"
+    },
+    {
+      "name": "Printful Affiliate Program",
+      "network": "Impact",
+      "commission": "$150+/sale",
+      "status": "not-applied",
+      "signup_url": "https://www.printful.com/affiliates",
+      "notes": "Print-on-demand, perfect vertical fit"
+    },
+    {
+      "name": "Photoroom Affiliate Program",
+      "network": "PartnerStack / Referral",
+      "commission": "20-30% recurring",
+      "status": "not-applied",
+      "signup_url": "https://www.photoroom.com/affiliates",
+      "notes": "AI product photography for POD sellers"
+    },
+    {
+      "name": "Claid AI Affiliate Program",
+      "network": "PartnerStack",
+      "commission": "20-30% recurring",
+      "status": "not-applied",
+      "signup_url": "https://claid.ai/affiliates",
+      "notes": "AI product photography, $49/mo AOV"
+    },
+    {
+      "name": "Kittl Affiliate Program",
+      "network": "Impact",
+      "commission": "20-30% recurring",
+      "status": "not-applied",
+      "signup_url": "https://kittl.com/affiliates",
+      "notes": "AI print design tool, perfect vertical"
+    },
+    {
+      "name": "Surfer SEO Affiliate Program",
+      "network": "Impact",
+      "commission": "20-30% recurring",
+      "status": "not-applied",
+      "signup_url": "https://surferseo.com/affiliates/",
+      "notes": "Phase 2 — high commission on SEO tool"
+    },
+    {
+      "name": "Bluehost Affiliate Program",
+      "network": "CJ",
+      "commission": "$65-100/sale",
+      "status": "not-applied",
+      "signup_url": "https://www.bluehost.com/affiliates",
+      "notes": "High volume web hosting"
+    }
+  ],
+  "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
+  "last_updated": "2026-07-15"
+}
