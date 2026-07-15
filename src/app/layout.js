@@ -13,14 +13,14 @@ export const metadata = {
     url: `https://${config.domain}`,
     siteName: config.ogSiteName,
   },
+  other: {
+    'impact-site-verification': 'a6e51cad-9e2c-472d-8743-47da5b391774',
+  },
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta name='impact-site-verification' value='a6e51cad-9e2c-472d-8743-47da5b391774' />
-      </head>
       <body>
         <header className="site-header">
           <div className="container header-inner">
