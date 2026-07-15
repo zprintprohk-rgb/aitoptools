@@ -18,6 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta name='impact-site-verification' value='a6e51cad-9e2c-472d-8743-47da5b391774' />
+      </head>
       <body>
         <header className="site-header">
           <div className="container header-inner">
@@ -39,17 +42,19 @@ export default function RootLayout({ children }) {
               <Link href="/submit-tool/" className="nav-link">Submit</Link>
               <Link href="/sponsorships/" className="nav-link">Ads</Link>
             </nav>
-            <button className="mobile-menu-btn" aria-label="Menu">☰</button>
           </div>
         </header>
 
-        <main>{children}</main>
+        <main className="main-content container">
+          {children}
+        </main>
 
         <footer className="site-footer">
-          <div className="container footer-grid">
+          <div className="container footer-inner">
             <div className="footer-brand">
-              <span className="footer-logo">🖨️ {config.brand}</span>
-              <p className="footer-tagline">{config.footerTagline}</p>
+              <span className="logo-icon">🖨️</span>
+              <span className="logo-text">{config.brand}</span>
+              <p className="footer-tagline">{config.tagline}</p>
             </div>
             <div className="footer-nav">
               <h4>Categories</h4>
