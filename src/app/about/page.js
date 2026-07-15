@@ -12,6 +12,10 @@ export default function AboutPage() {
       <h1 style={{ fontSize: '2rem', fontWeight: 700, color: '#1c1917', marginBottom: 24 }}>About Print AI Tools</h1>
 
       <div className="highlight-box">
+        <p><strong>Parent Company:</strong> Print AI Tools is a digital project of <strong>Shenzhen Cai Long Printing &amp; Packaging Co., Ltd.</strong>, a China-based printing and packaging manufacturer with over a decade of industry experience. Our parent company supports digital innovation projects globally, bringing real print-industry expertise to every review.</p>
+      </div>
+
+      <div className="highlight-box">
         <p><strong>Independent Operation:</strong> Print AI Tools (aitoptools.net) is independently operated and is not affiliated with, partnered with, or authorized by aitoptools.com. Our content focuses exclusively on AI tools for print shops, packaging, cross-border e-commerce, and independent store operations.</p>
       </div>
 
