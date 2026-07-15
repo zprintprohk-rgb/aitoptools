@@ -1,0 +1,13 @@
+{
+  "target": 3000,
+  "deadline": "2027-01-15",
+  "currency": "USD",
+  "months": {},
+  "total_earned": 0,
+  "last_updated": "2026-07-15",
+  "status": "active",
+  "termination_actions": [
+    "cronjob remove aitoptools-daily-content (ID: 44de539eb277)",
+    "archive project or notify user for final disposition"
+  ]
+}

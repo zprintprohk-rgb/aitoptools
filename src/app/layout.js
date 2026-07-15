@@ -72,6 +72,12 @@ export default function RootLayout({ children }) {
               <Link href="/disclaimer/">Disclaimer</Link>
               <Link href="/affiliate-disclosure/">Affiliate Disclosure</Link>
               <Link href="/privacy/">Privacy Policy</Link>
+              <Link href="/terms/">Terms of Service</Link>
+            </div>
+            <div className="footer-nav">
+              <h4>Support</h4>
+              <Link href="/contact/">Contact</Link>
+              <Link href="/about/">About</Link>
             </div>
           </div>
           <div className="footer-bottom container">
