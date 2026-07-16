@@ -26,11 +26,19 @@
     },
     {
       "name": "NordVPN Affiliate Program",
-      "network": "CJ / ShareASale",
+      "network": "Nord Affiliates (Direct)",
       "commission": "40%+ recurring",
-      "status": "not-applied",
-      "signup_url": "https://nordvpn.com/affiliate/",
-      "notes": "Strong recurring revenue, $100+ AOV"
+      "status": "approved",
+      "approved_date": "2026-07-16",
+      "manager": "颜 (Yan)",
+      "affiliate_id": 152693,
+      "offer_id": 15,
+      "url_id": 902,
+      "my_link_nordvpn": "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=152693&url_id=902",
+      "my_link_nordpass": "https://go.nordpass.io/aff_c?offer_id=488&aff_id=152693&url_id=9356",
+      "login_url": "https://affiliates.nordvpn.com/users/login",
+      "ppc_restriction": "No NordVPN/NordPass/Nord brand keywords on Google/Bing Ads",
+      "notes": "✅ APPROVED 2026-07-16. Account manager: 颜 (Yan). Also covers NordPass. Site pages: /nordvpn-review/ and /nordpass-review/"
     },
     {
       "name": "Jasper AI Affiliate Program",
@@ -122,5 +130,8 @@
     }
   ],
   "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
-  "last_updated": "2026-07-15"
+  "last_updated": "2026-07-16",
+  "milestones": {
+    "2026-07-16_nord_approved": "✅ Nord Security affiliate program approved. Manager: Yan. Links: NordVPN + NordPass. Site pages live at /nordvpn-review/ and /nordpass-review/"
+  }
 }

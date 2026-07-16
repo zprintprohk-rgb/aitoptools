@@ -1,4 +1,11 @@
-# Force UTF-8 encoding for all pages
+# Cloudflare Pages headers
+# Ref: https://developers.cloudflare.com/pages/configuration/headers/
+
+# CSS and JS static assets - let Cloudflare auto-detect MIME type
+/_next/static/*
+  X-Content-Type-Options: nosniff
+
+# All other pages
 /*
   Content-Type: text/html; charset=utf-8
   X-Content-Type-Options: nosniff
