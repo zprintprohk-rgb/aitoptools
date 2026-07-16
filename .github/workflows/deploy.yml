@@ -23,4 +23,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: 32c174efaa22353f357c0fdff9d61b86
-          command: pages deploy .next --project-name aitoptools --branch main
+          command: pages deploy out --project-name aitoptools --branch main
