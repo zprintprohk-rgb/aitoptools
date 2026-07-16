@@ -1,11 +1,10 @@
 # Cloudflare Pages headers
 # Ref: https://developers.cloudflare.com/pages/configuration/headers/
 
-# CSS and JS static assets - let Cloudflare auto-detect MIME type
+# CSS and JS static assets - correct Content-Type auto-detected
 /_next/static/*
   X-Content-Type-Options: nosniff
 
-# All other pages
+# All HTML pages - let CF Pages auto-detect Content-Type
 /*
-  Content-Type: text/html; charset=utf-8
   X-Content-Type-Options: nosniff
