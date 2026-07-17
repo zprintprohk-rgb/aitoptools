@@ -235,6 +235,41 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
   padding: 6px;
   border-radius: var(--radius-sm);
 }
+
+/* Mobile collapsible menu (pure CSS, details/summary) */
+.mobile-nav { display: none; }
+.mobile-nav summary::-webkit-details-marker { display: none; }
+.mobile-nav summary { list-style: none; }
+.mobile-nav-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--k-deep);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.3);
+  padding: 8px 0;
+  z-index: 99;
+}
+.mobile-nav-panel a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 24px;
+  color: rgba(255,255,255,0.88) !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: background var(--transition), color var(--transition);
+}
+.mobile-nav-panel a:hover { background: rgba(13,148,136,0.25); color: #fff !important; }
+.mobile-nav-panel a.mobile-nav-cta {
+  color: var(--a-light) !important;
+  font-weight: 700;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  margin-top: 4px;
+}
+.mobile-nav[open] .mobile-menu-btn { background: rgba(255,255,255,0.18); }
 .mobile-menu-btn:hover { background: rgba(255,255,255,0.12); }
 
 /* --- Hero --- */
@@ -950,6 +985,7 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .main-nav { display: none; }
+  .mobile-nav { display: block; margin-left: auto; }
   .mobile-menu-btn { display: block; }
   .hero { padding: 40px 0 36px; }
   .hero h1 { font-size: clamp(2rem, 8vw, 2.4rem); }

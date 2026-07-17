@@ -65,6 +65,20 @@ export default function RootLayout({ children }) {
               <Link href="/#search" className="nav-search-icon" aria-label="Search tools">🔍</Link>
               <Link href="/submit-tool/" className="nav-cta">Submit</Link>
             </nav>
+            <details className="mobile-nav">
+              <summary className="mobile-menu-btn" aria-label="Open menu">☰</summary>
+              <nav className="mobile-nav-panel" aria-label="Mobile">
+                <Link href="/category/ai-print-design/">🖨️ Print &amp; Packaging</Link>
+                <Link href="/category/ai-ecommerce/">🛒 E-Commerce &amp; Shopify</Link>
+                <Link href="/category/ai-writing/">✍️ AI Writing</Link>
+                <Link href="/category/ai-image/">🎨 AI Image</Link>
+                <Link href="/category/ai-video/">🎬 AI Video</Link>
+                <Link href="/category/ai-voice/">🎙️ AI Voice</Link>
+                <Link href="/compare/">⚖️ Comparisons</Link>
+                <Link href="/best/">🏆 Best Of</Link>
+                <Link href="/submit-tool/" className="mobile-nav-cta">Submit Your Tool</Link>
+              </nav>
+            </details>
           </div>
           <div className="trust-bar">
             <div className="container trust-bar-inner">
