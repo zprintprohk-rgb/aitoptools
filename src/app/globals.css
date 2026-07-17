@@ -158,6 +158,54 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 }
 .nav-secondary { opacity: 0.7; font-size: 0.78rem; }
 
+/* Nav search + CTA */
+.nav-search input {
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 100px;
+  color: white;
+  font-size: 0.78rem;
+  padding: 5px 12px;
+  width: 130px;
+  transition: width var(--transition), background var(--transition);
+}
+.nav-search input::placeholder { color: rgba(255,255,255,0.55); }
+.nav-search input:focus { outline: none; background: rgba(255,255,255,0.22); width: 170px; }
+.nav-cta {
+  background: #fff;
+  color: var(--c-primary) !important;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 100px;
+  text-decoration: none !important;
+  white-space: nowrap;
+  transition: background var(--transition), transform var(--transition);
+}
+.nav-cta:hover { background: var(--y-bg, #fff3d6); transform: translateY(-1px); }
+
+/* Trust bar */
+.trust-bar {
+  background: rgba(0,0,0,0.18);
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+.trust-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 6px 24px;
+  flex-wrap: wrap;
+}
+.trust-bar-inner span {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+.trust-dot { opacity: 0.5; }
+
 .mobile-menu-btn {
   display: none;
   background: none;
@@ -790,13 +838,20 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 32px;
+  gap: 36px;
   padding-bottom: 28px;
   border-bottom: 1px solid #44403c;
 }
-.footer-logo { font-size: 1.05rem; font-weight: 700; color: white; }
-.footer-tagline { font-size: 0.82rem; margin-top: 6px; max-width: 260px; line-height: 1.5; color: var(--k-muted); }
-.footer-nav h4 { color: white; font-size: 0.8rem; font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+.footer-logo { font-size: 1.05rem; font-weight: 700; color: white; display: flex; align-items: center; gap: 8px; }
+.footer-tagline { font-size: 0.82rem; margin-top: 10px; max-width: 300px; line-height: 1.6; color: var(--k-muted); }
+.footer-badges { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 14px; }
+.footer-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #d6d3d1;
+  letter-spacing: 0.3px;
+}
+.footer-nav h4 { color: white; font-size: 0.72rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1.2px; }
 .footer-nav a {
   display: block;
   color: var(--k-muted) !important;
@@ -804,9 +859,23 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
   padding: 3px 0;
   transition: color var(--transition);
 }
-.footer-nav a:hover { color: #d6d3d1 !important; }
-.footer-bottom { padding-top: 20px; }
-.footer-bottom p { font-size: 0.78rem; color: var(--k-tertiary); margin-bottom: 6px; }
+.footer-nav a:hover { color: var(--c-primary) !important; text-decoration: underline !important; text-underline-offset: 3px; }
+.footer-legal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+}
+.footer-copy { font-size: 0.76rem; color: var(--k-tertiary); margin: 0; }
+.footer-legal-links { display: flex; gap: 18px; flex-wrap: wrap; }
+.footer-legal-links a {
+  font-size: 0.76rem;
+  color: var(--k-muted) !important;
+  transition: color var(--transition);
+}
+.footer-legal-links a:hover { color: var(--c-primary) !important; }
 .footer-disclaimer {
   background: #292524;
   padding: 10px 14px;
@@ -837,6 +906,8 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
   .review-grid { grid-template-columns: 1fr; }
   .pros-cons { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-legal { flex-direction: column; align-items: flex-start; gap: 8px; }
   .pricing-grid { grid-template-columns: 1fr; }
   .review-content { padding: 20px; }
   .section-header h2 { font-size: 1.15rem; }

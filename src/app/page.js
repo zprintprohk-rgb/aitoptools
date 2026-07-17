@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import reviews from '@/data/reviews'
 import comparisons from '@/data/comparisons.json'
@@ -28,6 +28,12 @@ function starRating(rating) {
 
 export default function Home() {
   const [search, setSearch] = useState('')
+
+  // Pick up ?q= from the nav search box (GET form → /?q=...)
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get('q')
+    if (q) setSearch(q)
+  }, [])
 
   const filtered = search.trim()
     ? reviews.filter(r =>

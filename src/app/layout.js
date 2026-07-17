@@ -59,12 +59,25 @@ export default function RootLayout({ children }) {
               <Link href="/category/ai-image/" className="nav-link nav-secondary">Image</Link>
               <Link href="/category/ai-video/" className="nav-link nav-secondary">Video</Link>
               <Link href="/category/ai-voice/" className="nav-link nav-secondary">Voice</Link>
+              <span className="nav-divider" aria-hidden="true" />
               <Link href="/compare/" className="nav-link">⚖️ Comparisons</Link>
               <Link href="/best/" className="nav-link">🏆 Best Of</Link>
-              <span className="nav-divider" aria-hidden="true" />
-              <Link href="/submit-tool/" className="nav-link">Submit</Link>
-              <Link href="/sponsorships/" className="nav-link">Ads</Link>
+              <form action="/" method="get" className="nav-search" role="search">
+                <input type="search" name="q" placeholder="Search tools…" aria-label="Search tools" />
+              </form>
+              <Link href="/submit-tool/" className="nav-cta">Submit</Link>
             </nav>
+          </div>
+          <div className="trust-bar">
+            <div className="container trust-bar-inner">
+              <span>✓ Hands-On Tested</span>
+              <span className="trust-dot" aria-hidden="true">·</span>
+              <span>✓ 74+ Tools Reviewed</span>
+              <span className="trust-dot" aria-hidden="true">·</span>
+              <span>✓ Independent Reviews</span>
+              <span className="trust-dot" aria-hidden="true">·</span>
+              <span>✓ Updated July 2026</span>
+            </div>
           </div>
         </header>
 
@@ -73,52 +86,53 @@ export default function RootLayout({ children }) {
         </main>
 
         <footer className="site-footer">
-          <div className="container footer-inner">
-            <div className="footer-brand">
-              <span className="logo-icon">🖨️</span>
-              <span className="logo-text">{config.brand}</span>
-              <p className="footer-tagline">{config.tagline}</p>
+          <div className="container">
+            <div className="footer-grid">
+              <div className="footer-brand">
+                <span className="footer-logo"><span className="logo-icon">🖨️</span> {config.brand}</span>
+                <p className="footer-tagline">Hands-on AI tool reviews for print shops and independent store owners — tested, compared, and ranked by industry professionals.</p>
+                <div className="footer-badges">
+                  <span className="footer-badge">✓ Hands-On Tested</span>
+                  <span className="footer-badge">✓ 74+ Tools Reviewed</span>
+                  <span className="footer-badge">✓ Independent &amp; Unbiased</span>
+                </div>
+              </div>
+              <div className="footer-nav">
+                <h4>Categories</h4>
+                <Link href="/category/ai-print-design/">Print &amp; Packaging</Link>
+                <Link href="/category/ai-ecommerce/">E-Commerce &amp; Shopify</Link>
+                <Link href="/category/ai-writing/">AI Writing</Link>
+                <Link href="/category/ai-image/">AI Image</Link>
+                <Link href="/category/ai-video/">AI Video</Link>
+                <Link href="/category/ai-voice/">AI Voice</Link>
+              </div>
+              <div className="footer-nav">
+                <h4>Content</h4>
+                <Link href="/compare/">Comparisons</Link>
+                <Link href="/best/">Best Of</Link>
+                <Link href="/best-ai-tools/">All Reviews</Link>
+                <Link href="/submit-tool/">Submit Your Tool</Link>
+              </div>
+              <div className="footer-nav">
+                <h4>Resources</h4>
+                <Link href="/about/">About</Link>
+                <Link href="/contact/">Contact</Link>
+                <Link href="/sponsorships/">Advertise</Link>
+                <Link href="/sponsorships/">Sponsorships</Link>
+              </div>
             </div>
-            <div className="footer-nav">
-              <h4>Categories</h4>
-              <Link href="/category/ai-print-design/">🖨️ Print &amp; Packaging</Link>
-              <Link href="/category/ai-ecommerce/">🛒 E-Commerce &amp; Shopify</Link>
-              <Link href="/category/ai-writing/">✍️ AI Writing</Link>
-              <Link href="/category/ai-image/">🎨 AI Image</Link>
-              <Link href="/category/ai-video/">🎬 AI Video</Link>
-              <Link href="/category/ai-voice/">🎙️ AI Voice</Link>
-            </div>
-            <div className="footer-nav">
-              <h4>Resources</h4>
-              <Link href="/about/">About</Link>
-              <Link href="/best-ai-tools/">Best AI Tools</Link>
-              <Link href="/compare/">Comparisons</Link>
-              <Link href="/best/">Best Of</Link>
-              <Link href="/submit-tool/">Submit Your Tool</Link>
-              <Link href="/sponsorships/">Sponsorships</Link>
-            </div>
-            <div className="footer-nav">
-              <h4>Legal</h4>
-              <Link href="/disclaimer/">Disclaimer</Link>
-              <Link href="/affiliate-disclosure/">Affiliate Disclosure</Link>
-              <Link href="/privacy/">Privacy Policy</Link>
-              <Link href="/terms/">Terms of Service</Link>
-            </div>
-            <div className="footer-nav">
-              <h4>Support</h4>
-              <Link href="/contact/">Contact</Link>
-              <Link href="/about/">About</Link>
-            </div>
-          </div>
-          <div className="footer-bottom container">
             <p className="footer-disclaimer">
               <strong>Independent Operation:</strong> {config.brand} (aitoptools.net) is <strong>independently operated</strong> and is <strong>not affiliated with, partnered with, or authorized by</strong> aitoptools.com. All content is original and focused on AI tools for print shops, packaging, cross-border e-commerce, and independent store operations.
             </p>
-            <p className="footer-disclosure">
-              Some links on this site are affiliate links. We may earn a commission if you purchase through these links,
-              at no additional cost to you. See our <Link href="/affiliate-disclosure/">Affiliate Disclosure</Link> for details.
-            </p>
-            <p>© {new Date().getFullYear()} {config.brand} ({config.domain}). All rights reserved.</p>
+            <div className="footer-legal">
+              <p className="footer-copy">© {new Date().getFullYear()} {config.brand} ({config.domain}). All rights reserved. We may earn commissions from links on this site.</p>
+              <nav className="footer-legal-links" aria-label="Legal">
+                <Link href="/disclaimer/">Disclaimer</Link>
+                <Link href="/affiliate-disclosure/">Affiliate Disclosure</Link>
+                <Link href="/privacy/">Privacy Policy</Link>
+                <Link href="/terms/">Terms of Service</Link>
+              </nav>
+            </div>
           </div>
         </footer>
       </body>
