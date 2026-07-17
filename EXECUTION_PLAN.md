@@ -80,7 +80,7 @@ NordPass 保留为组合中的一个页面级 offer，**不作为战略支柱**�
 - 每周 git 提交即备份；联盟账号凭证存本地密码管理器，不进仓库
 - 单日流量波动 >50% → 检查 GSC 收录与技术状态（部署、Content-Type 头）
 - **禁止在 Cloudflare 域名级（zone）创建任何规则**；所有配置只能走仓库文件
-- 域名/品牌风险：aitoptools.net 与 aitoptools.com 混淆性相似，改名决策在 M2 前完成（见 RESEARCH 任务）
+- 域名/品牌风险：✅ 已决策（2026-07-17）——保留 aitoptools.net 不改名；品牌名统一 "Print AI Tools"，与 aitoptools.com 保持区隔；每季度复查一次对方商标注册动态
 
 ## 7. 参数占位符汇总（有数据后逐项替换）
 
@@ -88,6 +88,6 @@ NordPass 保留为组合中的一个页面级 offer，**不作为战略支柱**�
 
 ## 8. 待办 RESEARCH（阻塞性决策）
 
-1. aitoptools 商标注册检索（USPTO/EUIPO）→ 决定改名与否（M2 前）
+1. ~~aitoptools 商标注册检索（USPTO/EUIPO）→ 决定改名与否~~ ✅ 已完成（2026-07-17）：USPTO/WIPO/EUIPO 均无注册记录，无 UDRP 历史，风险评级中等偏低。**业主决策：不改名，继续以 aitoptools.net 运营，不再为此投入**。缓释措施：站点品牌名统一用 "Print AI Tools"（不用 "AITopTools"），视觉与定位与对方保持明显区隔，见 research/trademark-ip-risk-aitoptools-2026-07-17.md
 2. ~~主力层 8–10 个 offer 的真实佣金率、cookie 天数、起付额~~ ✅ 已完成（2026-07-17），见 [AFFILIATE_PROGRAMS.md](AFFILIATE_PROGRAMS.md)
 3. 确认现有 ?fpr= 等联盟参数是否为真实已注册账号（M1 第一周）——**已初步确认 Photoroom 的 fpr= 链接疑似失效**，需走 Awin 重签替换，见 AFFILIATE_PROGRAMS.md 行动项
