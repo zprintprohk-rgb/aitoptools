@@ -123,32 +123,34 @@ export default function Home() {
       {/* TOP COMPARISONS — duel-style cards, visually distinct from tool cards */}
       <div className="section section-alt">
         <div className="container">
-          <div className="section-header">
-            <h2>⚖️ Top Comparisons</h2>
-            <Link href="/compare/" className="view-all">View All →</Link>
-          </div>
-          <p style={{ color: 'var(--k-muted)', fontSize: '0.85rem', marginBottom: 20 }}>
-            Head-to-head showdowns with clear winners — verified 2026 pricing, real cost math, no fence-sitting.
-          </p>
-          <div className="vs-grid">
-            {comparisons.map(c => (
-              <article key={c.slug} className="vs-card">
-                <div className="vs-card-battle">
-                  <div className="vs-side">
-                    <span className="vs-name">{c.toolA.name}</span>
-                    <span className="vs-rating">★ {c.toolA.rating}</span>
+          <div className="featured-panel">
+            <div className="section-header">
+              <h2>⚖️ Top Comparisons</h2>
+              <Link href="/compare/" className="view-all">View All →</Link>
+            </div>
+            <p style={{ color: 'var(--k-muted)', fontSize: '0.85rem', marginBottom: 20 }}>
+              Head-to-head showdowns with clear winners — verified 2026 pricing, real cost math, no fence-sitting.
+            </p>
+            <div className="vs-grid">
+              {comparisons.map(c => (
+                <article key={c.slug} className="vs-card">
+                  <div className="vs-card-battle">
+                    <div className="vs-side">
+                      <span className="vs-name">{c.toolA.name}</span>
+                      <span className="vs-rating">★ {c.toolA.rating}</span>
+                    </div>
+                    <span className="vs-badge">VS</span>
+                    <div className="vs-side">
+                      <span className="vs-name">{c.toolB.name}</span>
+                      <span className="vs-rating">★ {c.toolB.rating}</span>
+                    </div>
                   </div>
-                  <span className="vs-badge">VS</span>
-                  <div className="vs-side">
-                    <span className="vs-name">{c.toolB.name}</span>
-                    <span className="vs-rating">★ {c.toolB.rating}</span>
-                  </div>
-                </div>
-                <h3 className="vs-title"><Link href={`/compare/${c.slug}/`}>{c.title}</Link></h3>
-                <p className="vs-verdict">{c.quickVerdict.split('.')[0]}.</p>
-                <Link href={`/compare/${c.slug}/`} className="card-cta">Read Comparison →</Link>
-              </article>
-            ))}
+                  <h3 className="vs-title"><Link href={`/compare/${c.slug}/`}>{c.title}</Link></h3>
+                  <p className="vs-verdict">{c.quickVerdict.split('.')[0]}.</p>
+                  <Link href={`/compare/${c.slug}/`} className="card-cta">Read Comparison →</Link>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </div>
