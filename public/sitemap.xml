@@ -10,6 +10,7 @@
   <url><loc>https://aitoptools.net/submit-tool/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/sponsorships/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/best-ai-tools/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/compare/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://aitoptools.net/compare/printful-vs-printify/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://aitoptools.net/compare/printify-vs-gelato/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://aitoptools.net/compare/printful-vs-gelato/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>

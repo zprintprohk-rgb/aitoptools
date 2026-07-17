@@ -59,6 +59,7 @@ export default function RootLayout({ children }) {
               <Link href="/category/ai-image/" className="nav-link nav-secondary">Image</Link>
               <Link href="/category/ai-video/" className="nav-link nav-secondary">Video</Link>
               <Link href="/category/ai-voice/" className="nav-link nav-secondary">Voice</Link>
+              <Link href="/compare/" className="nav-link">⚖️ Comparisons</Link>
               <span className="nav-divider" aria-hidden="true" />
               <Link href="/submit-tool/" className="nav-link">Submit</Link>
               <Link href="/sponsorships/" className="nav-link">Ads</Link>
@@ -90,6 +91,7 @@ export default function RootLayout({ children }) {
               <h4>Resources</h4>
               <Link href="/about/">About</Link>
               <Link href="/best-ai-tools/">Best AI Tools</Link>
+              <Link href="/compare/">Comparisons</Link>
               <Link href="/submit-tool/">Submit Your Tool</Link>
               <Link href="/sponsorships/">Sponsorships</Link>
             </div>
