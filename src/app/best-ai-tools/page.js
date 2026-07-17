@@ -19,12 +19,9 @@ function starRating(rating) {
   return '★'.repeat(full) + '☆'.repeat(5 - full)
 }
 
-// Same matching rules as the category pages
+// Explicit per-tool categorySlug field (replaces legacy slug/category fuzzy matching)
 function matchesCategory(r, catSlug) {
-  if (catSlug === 'ai-print-design') return r.slug.includes('print') || r.slug.includes('packag')
-  if (catSlug === 'ai-ecommerce') return r.slug.includes('ecom') || r.slug.includes('shopify')
-  return r.category.toLowerCase().replace(/\s+/g, '-') === catSlug ||
-         r.slug.startsWith(catSlug.replace('ai-', ''))
+  return r.categorySlug === catSlug
 }
 
 export default function BestAiToolsPage() {

@@ -34,13 +34,7 @@ export default function CategoryPage({ params }) {
   const cat = CATEGORY_MAP[params.slug]
   if (!cat) notFound()
 
-  const categoryReviews = reviews.filter(r => {
-    const catSlug = params.slug
-    if (catSlug === 'ai-print-design') return r.slug.includes('print') || r.slug.includes('packag')
-    if (catSlug === 'ai-ecommerce') return r.slug.includes('ecom') || r.slug.includes('shopify')
-    return r.category.toLowerCase().replace(/\s+/g, '-') === catSlug || 
-           r.slug.startsWith(catSlug.replace('ai-', ''))
-  })
+  const categoryReviews = reviews.filter(r => r.categorySlug === params.slug)
 
   const itemListJsonLd = JSON.stringify({
     '@context': 'https://schema.org',

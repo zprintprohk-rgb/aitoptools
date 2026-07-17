@@ -42,14 +42,17 @@ function getToolName(slug) {
     .join(' ')
 }
 
+const CATEGORY_DISPLAY = {
+  'ai-print-design': '🖨️ Print & Packaging',
+  'ai-ecommerce': '🛒 E-Commerce & Shopify',
+  'ai-writing': 'AI Writing',
+  'ai-image': 'AI Image',
+  'ai-video': 'AI Video',
+  'ai-voice': 'AI Voice',
+}
+
 function getCatSlug(review) {
-  if (review.slug.includes('print') || review.slug.includes('packag') || review.slug.includes('kittl') || review.slug.includes('placeit') || review.slug.includes('looka') || review.slug.includes('claid'))
-    return '/category/ai-print-design/'
-  if (review.slug.includes('ecom') || review.slug.includes('shopify') || review.slug.includes('photoroom'))
-    return '/category/ai-ecommerce/'
-  const cat = (review.category || '').toLowerCase().replace(/\s+/g, '-')
-  const map = { 'ai-writing': '/category/ai-writing/', 'ai-image': '/category/ai-image/', 'ai-video': '/category/ai-video/', 'ai-voice': '/category/ai-voice/' }
-  return map[cat] || '/'
+  return review.categorySlug ? `/category/${review.categorySlug}/` : '/'
 }
 
 function generateReviewJsonLd(review) {
@@ -92,24 +95,15 @@ function generateBreadcrumbJsonLd(review, slug) {
 }
 
 function generateFaqJsonLd(review) {
-  const toolName = review.title.split(' Review')[0] || getToolName(review.slug)
-  const price = review.price || '$0'
-  const faqs = [
-    { question: `Is ${toolName} worth it?`, answer: `${toolName} is a top tool in the ${review.category} category. With a rating of ${review.rating}/5 and pricing starting at ${price}, it's a ${review.rating >= 4 ? 'strong choice' : 'decent option'} for print shop owners and independent store operators.` },
-    { question: `How much does ${toolName} cost?`, answer: `${toolName} starts at ${price}. Visit their official website for the latest pricing and plans — especially for print and e-commerce business users.` },
-    { question: `Does ${toolName} have a free trial?`, answer: `Most AI tools offer either a free tier or a free trial. Check ${toolName}'s website for current trial offers.` },
-    { question: `What is ${toolName} best for?`, answer: `${toolName} is designed for ${review.category} use cases. It's particularly useful for independent store owners and print businesses.` },
-  ]
+  if (!review.faqs?.length) return null
   return JSON.stringify({
     '@context': 'https://schema.org', '@type': 'FAQPage',
-    mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+    mainEntity: review.faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   })
 }
 
 function getCategoryDisplay(review) {
-  if (review.slug.includes('print') || review.slug.includes('packag') || review.slug.includes('kittl') || review.slug.includes('placeit') || review.slug.includes('looka')) return '🖨️ Print & Packaging'
-  if (review.slug.includes('ecom') || review.slug.includes('shopify') || review.slug.includes('claid') || review.slug.includes('photoroom')) return '🛒 E-Commerce & Shopify'
-  return review.category || 'AI Tools'
+  return CATEGORY_DISPLAY[review.categorySlug] || review.category || 'AI Tools'
 }
 
 export default function ReviewPage({ params }) {
@@ -117,10 +111,7 @@ export default function ReviewPage({ params }) {
   if (!review) notFound()
 
   const toolName = review.title.split(' Review')[0] || getToolName(review.slug)
-  const isVertical = review.slug.includes('print') || review.slug.includes('packag') || 
-    review.slug.includes('kittl') || review.slug.includes('placeit') || review.slug.includes('looka') ||
-    review.slug.includes('claid') || review.slug.includes('photoroom') ||
-    review.slug.includes('ecom') || review.slug.includes('shopify')
+  const isVertical = review.categorySlug === 'ai-print-design' || review.categorySlug === 'ai-ecommerce'
   const catSlug = getCatSlug(review)
   const catDisplay = getCategoryDisplay(review)
 
@@ -128,18 +119,13 @@ export default function ReviewPage({ params }) {
   const breadcrumbJsonLd = generateBreadcrumbJsonLd(review, params.slug)
   const faqJsonLd = generateFaqJsonLd(review)
 
-  const faqs = [
-    { q: `Is ${toolName} worth it?`, a: `${toolName} is a top ${review.category} tool with a ${review.rating}/5 rating starting at ${review.price}. For print shop owners and e-commerce sellers, it's ${review.rating >= 4 ? 'a solid investment' : 'worth considering'} — especially if ${isVertical ? 'you need print-specific features like CMYK export or packaging templates' : 'your workflow aligns with its strengths'}.` },
-    { q: `How much does ${toolName} cost?`, a: `${toolName} starts at ${review.price}. Business and team plans typically offer more value for print shops and e-commerce stores. Check their website for current pricing and any available discounts.` },
-    { q: `Does ${toolName} have a free trial?`, a: `Most tools in this category offer a free trial or freemium tier. Visit ${toolName}'s website to check their current trial offer and test if it works for your specific use case.` },
-    { q: `What is ${toolName} best for?`, a: `${toolName} excels at ${review.category} tasks. It's particularly valuable for ${isVertical ? 'print shop owners, POD sellers, and e-commerce operators who need practical, business-focused AI tools' : 'business users who need reliable performance in their workflow'}.` },
-  ]
+  const faqs = review.faqs || []
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: reviewJsonLd }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />
+      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqJsonLd }} />}
 
       <div className="review-page container">
         {/* Breadcrumb */}
@@ -216,7 +202,7 @@ export default function ReviewPage({ params }) {
         </div>
         <div className="review-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
           {reviews
-            .filter(r => r.slug !== review.slug && r.category === review.category)
+            .filter(r => r.slug !== review.slug && r.categorySlug === review.categorySlug)
             .slice(0, 2)
             .map(r => (
               <article key={r.slug} className="review-card">
