@@ -158,14 +158,15 @@ export default function Home() {
       {/* BEST OF LISTS — ranked roundups, third content type */}
       <div className="section">
         <div className="container">
-          <div className="section-header">
-            <h2>🏆 Best Of Lists</h2>
-            <Link href="/best/" className="view-all">View All →</Link>
-          </div>
-          <p style={{ color: 'var(--k-muted)', fontSize: '0.85rem', marginBottom: 20 }}>
-            Ranked roundups with clear winners — no pay-to-rank placements.
-          </p>
-          <div className="best-grid">
+          <div className="featured-panel green">
+            <div className="section-header">
+              <h2>🏆 Best Of Lists</h2>
+              <Link href="/best/" className="view-all">View All →</Link>
+            </div>
+            <p style={{ color: 'var(--k-muted)', fontSize: '0.85rem', marginBottom: 20 }}>
+              Ranked roundups with clear winners — no pay-to-rank placements.
+            </p>
+            <div className="best-grid">
             {listicles.map(l => (
               <article key={l.slug} className="best-card">
                 <span className="best-card-count">{l.items.length} ranked</span>
@@ -179,6 +180,7 @@ export default function Home() {
                 <Link href={`/best/${l.slug}/`} className="card-cta">See the Rankings →</Link>
               </article>
             ))}
+            </div>
           </div>
         </div>
       </div>

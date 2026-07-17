@@ -1029,7 +1029,10 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 
 /* --- VS Comparison Cards --- */
 .featured-panel {
-  background: linear-gradient(to right, var(--bg-card), var(--a-bg));
+  background: #fdfaf2;
+}
+.featured-panel.green {
+  background: #f0f9f6;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 28px;
@@ -1041,7 +1044,7 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 }
 .vs-card {
   position: relative;
-  background: linear-gradient(135deg, var(--bg-alt) 0%, var(--bg-page) 100%);
+  background: #ffffff;
   border: 1px solid var(--border);
   border-top: 3px solid var(--a-primary);
   border-radius: var(--radius-md);
@@ -1055,8 +1058,8 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 .vs-card:hover {
   transform: translateY(-3px);
   border-color: var(--a-primary);
-  box-shadow: 0 12px 28px rgba(180,83,9,0.14);
-  background: linear-gradient(135deg, #f7f1e6 0%, #fbf8f1 100%);
+  box-shadow: 0 12px 28px rgba(180,83,9,0.12);
+  background: #fffdf8;
 }
 .vs-card-battle {
   display: flex;
@@ -1112,8 +1115,8 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 /* --- Best Of List Cards --- */
 .best-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
 }
 .best-card {
   position: relative;
