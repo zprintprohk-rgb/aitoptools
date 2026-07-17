@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import reviews from '@/data/reviews'
 import comparisons from '@/data/comparisons.json'
+import listicles from '@/data/listicles.json'
 
 const VERTICAL_CATEGORIES = [
   { name: '🖨️ Print & Packaging', slug: 'ai-print-design', desc: 'AI for print-on-demand, packaging design, label making', featured: true },
@@ -132,6 +133,34 @@ export default function Home() {
                 <h3 className="vs-title"><Link href={`/compare/${c.slug}/`}>{c.title}</Link></h3>
                 <p className="vs-verdict">{c.quickVerdict.split('.')[0]}.</p>
                 <Link href={`/compare/${c.slug}/`} className="card-cta">Read Comparison →</Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* BEST OF LISTS — ranked roundups, third content type */}
+      <div className="section">
+        <div className="container">
+          <div className="section-header">
+            <h2>🏆 Best Of Lists</h2>
+            <Link href="/best/" className="view-all">View All →</Link>
+          </div>
+          <p style={{ color: 'var(--k-muted)', fontSize: '0.85rem', marginBottom: 20 }}>
+            Ranked roundups with clear winners — no pay-to-rank placements.
+          </p>
+          <div className="best-grid">
+            {listicles.map(l => (
+              <article key={l.slug} className="best-card">
+                <span className="best-card-count">{l.items.length} ranked</span>
+                <h3 className="best-card-title"><Link href={`/best/${l.slug}/`}>{l.title}</Link></h3>
+                <div className="best-card-names">
+                  {l.items.slice(0, 4).map((it, i) => (
+                    <span key={i} className="best-card-name">#{i + 1} {it.name}</span>
+                  ))}
+                  {l.items.length > 4 && <span className="best-card-name more">+{l.items.length - 4} more</span>}
+                </div>
+                <Link href={`/best/${l.slug}/`} className="card-cta">See the Rankings →</Link>
               </article>
             ))}
           </div>

@@ -922,6 +922,50 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
   flex: 1;
 }
 
+/* --- Best Of List Cards --- */
+.best-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.best-card {
+  background: var(--bg-page);
+  border: 1px dashed var(--border-hover);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.best-card:hover { border-color: var(--c-primary); box-shadow: var(--shadow-md); }
+.best-card-count {
+  align-self: flex-start;
+  background: var(--y-bg, #fff8e6);
+  color: var(--y-text, #8a6d00);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.best-card-title { font-size: 1.02rem; font-weight: 700; line-height: 1.4; }
+.best-card-title a { color: var(--k-deep); }
+.best-card-title a:hover { color: var(--c-primary); }
+.best-card-desc { font-size: 0.84rem; color: var(--k-secondary); line-height: 1.55; flex: 1; }
+.best-card-names { display: flex; flex-wrap: wrap; gap: 6px; }
+.best-card-name {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--k-secondary);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+.best-card-name.more { color: var(--c-primary); border-color: var(--c-primary); }
+
 @media (min-width: 769px) and (max-width: 1024px) {
   .review-grid { grid-template-columns: repeat(2, 1fr); }
   .pricing-grid { grid-template-columns: repeat(2, 1fr); }
