@@ -21,16 +21,28 @@ def main():
         reviews = json.load(f)
 
     slugs = [r['slug'] for r in reviews]
-    cats = set(r['category'] for r in reviews)
-    cat_slugs = sorted(cat.lower().replace(' ', '-').replace('&', 'and') for cat in cats)
+
+    # Canonical categories — MUST match CATEGORY_MAP in src/app/category/[slug]/page.js.
+    # Do NOT derive from reviews.json: its category labels are messy (21 variants)
+    # and produce category URLs that don't exist (404), poisoning the sitemap.
+    cat_slugs = [
+        'ai-print-design',
+        'ai-ecommerce',
+        'ai-writing',
+        'ai-image',
+        'ai-video',
+        'ai-voice',
+    ]
 
     # Build page list
     pages = [
         '',                          # homepage
         'about',
+        'contact',
         'disclaimer',
         'affiliate-disclosure',
         'privacy',
+        'terms',
         'submit-tool',
         'sponsorships',
     ]

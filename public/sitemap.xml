@@ -2,22 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://aitoptools.net/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/about/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/contact/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/disclaimer/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/affiliate-disclosure/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/privacy/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/terms/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/submit-tool/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/sponsorships/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://aitoptools.net/category/ai-coding/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/category/ai-print-design/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/category/ai-ecommerce/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/category/ai-writing/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/category/ai-image/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://aitoptools.net/category/ai-music/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://aitoptools.net/category/ai-presentation/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://aitoptools.net/category/ai-productivity/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://aitoptools.net/category/ai-search/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/category/ai-video/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/category/ai-voice/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://aitoptools.net/category/ai-writing/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://aitoptools.net/category/security/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://aitoptools.net/category/web-hosting/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/jasper-ai-review/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/writesonic-review/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/heygen-review/</loc><changefreq>weekly</changefreq></url>
@@ -29,6 +26,8 @@
   <url><loc>https://aitoptools.net/leonardo-ai-review/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/runway-ml-review/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/claid-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/synthesia-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/cursor-review/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/notion-ai-review/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/perplexity-pro-review/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/suno-ai-review/</loc><changefreq>weekly</changefreq></url>
@@ -39,4 +38,55 @@
   <url><loc>https://aitoptools.net/chatgpt-review/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/best-ai-writing-tools-comparison/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://aitoptools.net/nordvpn-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/photoroom-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/placeit-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/kittl-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/pixlr-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/adobe-firefly-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/upscale-media-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/murf-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/claude-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/gemini-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/ai-image-upscaler-comparison/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/redbubble-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/society6-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/teepublic-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/designpickle-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/fiverr-logo-maker-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/b12-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/durable-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/predis-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/munch-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/capcut-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/gelato-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/printful-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/printify-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/looka-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/logoai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/vistacreate-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/postermywall-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/removebg-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/zmo-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/shopify-magic-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/veed-io-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/pictory-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/spocket-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/gempages-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/klaviyo-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/stickermule-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/zyro-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/befunky-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/lucidchart-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/adcreative-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/nordpass-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/tidio-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/manychat-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/omnisend-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/sellerpic-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/revery-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/depikt-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/algomo-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/viralcraft-ai-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/printreadybook-review/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://aitoptools.net/persify-review/</loc><changefreq>weekly</changefreq></url>
 </urlset>
