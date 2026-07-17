@@ -62,9 +62,7 @@ export default function RootLayout({ children }) {
               <span className="nav-divider" aria-hidden="true" />
               <Link href="/compare/" className="nav-link">⚖️ Comparisons</Link>
               <Link href="/best/" className="nav-link">🏆 Best Of</Link>
-              <form action="/" method="get" className="nav-search" role="search">
-                <input type="search" name="q" placeholder="Search tools…" aria-label="Search tools" />
-              </form>
+              <Link href="/#search" className="nav-search-icon" aria-label="Search tools">🔍</Link>
               <Link href="/submit-tool/" className="nav-cta">Submit</Link>
             </nav>
           </div>

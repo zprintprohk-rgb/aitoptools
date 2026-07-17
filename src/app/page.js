@@ -4,6 +4,7 @@ import Link from 'next/link'
 import reviews from '@/data/reviews'
 import comparisons from '@/data/comparisons.json'
 import listicles from '@/data/listicles.json'
+import HeroArt from '@/components/HeroArt'
 
 const VERTICAL_CATEGORIES = [
   { name: '🖨️ Print & Packaging', slug: 'ai-print-design', desc: 'AI for print-on-demand, packaging design, label making', featured: true },
@@ -71,25 +72,32 @@ export default function Home() {
       />
       {/* HERO */}
       <div className="hero">
-        <h1>AI Tools for <em>Print Shops</em> &amp; Independent Store Owners</h1>
-        <p>Hands-on reviews, real screenshots, and honest comparisons — tested by print industry professionals.</p>
-        <p className="trust-line">✓ Tested by print &amp; e-commerce industry professionals with hands-on experience</p>
+        <div className="container hero-inner">
+          <div className="hero-text">
+            <h1>AI Tools for <em>Print Shops</em> &amp; Independent Store Owners</h1>
+            <p>Hands-on reviews, real screenshots, and honest comparisons — tested by print industry professionals.</p>
+            <p className="trust-line">✓ Tested by print &amp; e-commerce industry professionals with hands-on experience</p>
 
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Search AI tools... (e.g. packaging design, Shopify)"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-          />
-          <button type="button">Search</button>
-        </div>
+            <div className="search-bar" id="search">
+              <input
+                type="text"
+                placeholder="Search AI tools... (e.g. packaging design, Shopify)"
+                value={search}
+                onChange={e => setSearch(e.target.value)}
+              />
+              <button type="button">Search</button>
+            </div>
 
-        {/* Scenario tags — replaces duplicate category nav */}
-        <div className="scenario-tags">
-          {SCENARIO_TAGS.map(tag => (
-            <Link key={tag.label} href={tag.href} className="scenario-tag">{tag.label}</Link>
-          ))}
+            {/* Scenario tags — replaces duplicate category nav */}
+            <div className="scenario-tags">
+              {SCENARIO_TAGS.map(tag => (
+                <Link key={tag.label} href={tag.href} className="scenario-tag">{tag.label}</Link>
+              ))}
+            </div>
+          </div>
+          <div className="hero-art" aria-hidden="true">
+            <HeroArt />
+          </div>
         </div>
       </div>
 
