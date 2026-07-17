@@ -1000,7 +1000,7 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 }
 .vs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
 }
 .vs-card {
