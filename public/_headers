@@ -1,17 +1,8 @@
-﻿# Cloudflare Pages headers
-# Explicit Content-Type to prevent MIME-blocking with nosniff enabled
-
-/_next/static/chunks/*.js
-  Content-Type: application/javascript; charset=utf-8
-  X-Content-Type-Options: nosniff
-
-/_next/static/css/*.css
-  Content-Type: text/css; charset=utf-8
-  X-Content-Type-Options: nosniff
-
-/_next/static/*
-  X-Content-Type-Options: nosniff
-
-# All HTML pages
+# Cloudflare Pages headers
+# Cloudflare Pages auto-detects Content-Type from file extension.
+# NEVER set Content-Type here — a broad rule (e.g. /* with text/html) overrides
+# CSS/JS MIME types, and browsers then block them under nosniff. That bug made
+# the site render as unstyled plain HTML.
 /*
   X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
