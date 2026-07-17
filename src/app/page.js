@@ -50,6 +50,17 @@ export default function Home() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Print AI Tools',
+            url: 'https://aitoptools.net/',
+          }),
+        }}
+      />
       {/* HERO */}
       <div className="hero">
         <h1>AI Tools for <em>Print Shops</em> &amp; Independent Store Owners</h1>

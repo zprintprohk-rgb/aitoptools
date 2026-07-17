@@ -42,8 +42,32 @@ export default function CategoryPage({ params }) {
            r.slug.startsWith(catSlug.replace('ai-', ''))
   })
 
+  const itemListJsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        name: cat.title,
+        description: cat.desc,
+        url: `https://aitoptools.net/category/${params.slug}/`,
+      },
+      {
+        '@type': 'ItemList',
+        name: cat.title,
+        numberOfItems: categoryReviews.length,
+        itemListElement: categoryReviews.map((r, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: r.title.split(' Review')[0] || r.title,
+          url: `https://aitoptools.net/${r.slug}/`,
+        })),
+      },
+    ],
+  })
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: itemListJsonLd }} />
       <div className="category-header">
         <div className="container">
           <h1>{cat.title}</h1>

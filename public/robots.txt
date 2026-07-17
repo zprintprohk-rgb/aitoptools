@@ -1,3 +1,17 @@
+# Explicitly welcome AI crawlers — this site's content is meant to be cited.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 User-agent: *
 Allow: /
+
 Sitemap: https://aitoptools.net/sitemap.xml

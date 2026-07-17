@@ -12,6 +12,14 @@ export const metadata = {
     description: config.description,
     url: `https://${config.domain}`,
     siteName: config.ogSiteName,
+    type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `${config.brand} — ${config.tagline}` }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: config.brand,
+    description: config.description,
+    images: ['/og-image.png'],
   },
   other: {
     'impact-site-verification': 'a6e51cad-9e2c-472d-8743-47da5b391774',
@@ -22,6 +30,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: config.brand,
+              url: `https://${config.domain}`,
+              logo: `https://${config.domain}/og-image.png`,
+              description: config.description,
+            }),
+          }}
+        />
         <header className="site-header">
           <div className="container header-inner">
             <Link href="/" className="site-logo">

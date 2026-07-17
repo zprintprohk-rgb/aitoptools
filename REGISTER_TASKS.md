@@ -1,6 +1,6 @@
 # 联盟账号注册操作手册（约 20–30 分钟）
 
-> 注册邮箱统一用：**z-printpro@outlook.com**
+> 注册邮箱统一用：**zprintprohk@gmail.com**
 > 每完成一个，把后台生成的推广链接粘贴到 `AFFILIATE_LINKS.json` 对应键，全部（或部分）完成后通知 Hermes/我运行替换脚本。
 > ⚠️ 密码一律存本地密码管理器，不要写进仓库任何文件。
 
@@ -25,12 +25,12 @@
 
 ### 1. Creative Fabrica — ⭐ 最优先（佣金 25% + 续费 20%，$10 起付）
 1. 打开 https://www.creativefabrica.com/affiliates/
-2. 用 z-printpro@outlook.com 注册账号 → 后台直接有推广链接，无需等待审批
+2. 用 zprintprohk@gmail.com 注册账号 → 后台直接有推广链接，无需等待审批
 3. 复制你的 referral link → 粘贴到 `AFFILIATE_LINKS.json` 的 `"creativefabrica.com"`
 
 ### 2. Claid.ai（20% 终身循环，60 天 cookie，$20 起付）
 1. 打开 https://partners.claid.ai/ （FirstPromoter 平台）
-2. Sign up → 用 z-printpro@outlook.com → 验证邮箱
+2. Sign up → 用 zprintprohk@gmail.com → 验证邮箱
 3. Dashboard → Links → 复制默认推广链接（形如 `https://claid.ai/?fpr=你的ID`）→ 粘贴到 `"claid.ai"`
 
 ### 3. Printify（销售额 5%×12 月，90 天 cookie）

@@ -15,10 +15,21 @@ export function generateMetadata({ params }) {
   const review = reviews.find(r => r.slug === params.slug)
   if (!review) return { title: 'Not Found' }
   return {
-    title: `${review.title} | Print AI Tools`,
+    title: review.title,
     description: review.metaDesc,
     alternates: {
       canonical: `https://aitoptools.net/${params.slug}/`,
+    },
+    openGraph: {
+      title: review.title,
+      description: review.metaDesc,
+      url: `https://aitoptools.net/${params.slug}/`,
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: review.title,
+      description: review.metaDesc,
     },
   }
 }
@@ -190,9 +201,13 @@ export default function ReviewPage({ params }) {
           <p style={{ fontSize: '0.85rem', color: 'var(--k-tertiary)', marginBottom: 12 }}>
             Click below to start your free trial or explore plans. If you purchase through our link, we may earn a commission at no extra cost to you.
           </p>
-          <a href={review.affiliateUrl} target="_blank" rel="nofollow sponsored" className="cta-button">
-            Try {toolName} Free →
-          </a>
+          {(review.affiliateUrl || review.visitUrl) ? (
+            <a href={review.affiliateUrl || review.visitUrl} target="_blank" rel="nofollow sponsored" className="cta-button">
+              Try {toolName} Free →
+            </a>
+          ) : (
+            <p style={{ fontSize: '0.9rem', color: 'var(--k-tertiary)' }}>Review coming soon — check back for a hands-on link.</p>
+          )}
         </div>
 
         {/* Similar tools */}

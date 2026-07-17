@@ -1,8 +1,8 @@
 {
   "_说明": "各商家的真实联盟链接。注册完成后把后台生成的推广链接粘贴到对应值，然后运行 python scripts/replace_affiliate_links.py --apply",
-  "_注册邮箱": "z-printpro@outlook.com",
+  "_注册邮箱": "zprintprohk@gmail.com（Jerome Tang）",
   "_注册指南": "见 REGISTER_TASKS.md",
-  "creativefabrica.com": "",
+  "creativefabrica.com": "https://www.creativefabrica.com/ref/27832838/",
   "claid.ai": "",
   "looka.com": "",
   "kittl.com": "",
