@@ -86,16 +86,6 @@ export default function Home() {
             <p>Hands-on reviews, real screenshots, and honest comparisons — tested by print industry professionals.</p>
             <p className="trust-line">✓ Tested by print &amp; e-commerce industry professionals with hands-on experience</p>
 
-            <div className="search-bar" id="search">
-              <input
-                type="text"
-                placeholder="Search AI tools... (e.g. packaging design, Shopify)"
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-              />
-              <button type="button">Search</button>
-            </div>
-
             {/* Scenario tags — replaces duplicate category nav */}
             <div className="scenario-tags">
               {SCENARIO_TAGS.map(tag => (
@@ -103,8 +93,21 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="hero-photo">
-            <img src="/images/hero.jpg" alt="T-shirts hanging on wooden hangers — print-on-demand products" loading="eager" />
+          <div className="hero-scene">
+            <img src="/images/hero.jpg" alt="Designer holding a printed photo in front of a monitor — from digital design to physical product" loading="eager" />
+            <div className="float-card fc-1"><strong>★ 4.8</strong> avg tool rating</div>
+            <div className="float-card fc-2"><strong>74+</strong> tools hands-on tested</div>
+          </div>
+        </div>
+        <div className="container search-dock">
+          <div className="search-bar" id="search">
+            <input
+              type="text"
+              placeholder="Search AI tools... (e.g. packaging design, Shopify)"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+            />
+            <button type="button">Search</button>
           </div>
         </div>
       </div>
