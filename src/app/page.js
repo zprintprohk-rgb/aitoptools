@@ -22,12 +22,12 @@ const SCENARIO_TAGS = [
 ]
 
 const CAT_CARDS = [
-  { name: 'Print & Packaging', slug: 'ai-print-design', desc: 'AI for print-on-demand, packaging design, label making', img: '/images/cat-packaging.jpg' },
-  { name: 'E-Commerce & Shopify', slug: 'ai-ecommerce', desc: 'AI for product descriptions, store optimization, cross-border', img: '/images/cat-ecommerce.jpg' },
-  { name: 'AI Writing', slug: 'ai-writing', desc: 'Copywriting, content creation, multilingual writing', img: '/images/cat-writing.jpg' },
-  { name: 'AI Image', slug: 'ai-image', desc: 'Image generation, editing, product photography', img: '/images/cat-image.jpg' },
-  { name: 'AI Video', slug: 'ai-video', desc: 'Video generation, avatars, editing', img: '/images/cat-video.jpg' },
-  { name: 'AI Voice', slug: 'ai-voice', desc: 'Voice synthesis, dubbing, podcasting', img: '/images/cat-voice.jpg' },
+  { name: 'Print & Packaging', slug: 'ai-print-design', desc: 'AI for print-on-demand, packaging design, label making' },
+  { name: 'E-Commerce & Shopify', slug: 'ai-ecommerce', desc: 'AI for product descriptions, store optimization, cross-border' },
+  { name: 'AI Writing', slug: 'ai-writing', desc: 'Copywriting, content creation, multilingual writing' },
+  { name: 'AI Image', slug: 'ai-image', desc: 'Image generation, editing, product photography' },
+  { name: 'AI Video', slug: 'ai-video', desc: 'Video generation, avatars, editing' },
+  { name: 'AI Voice', slug: 'ai-voice', desc: 'Voice synthesis, dubbing, podcasting' },
 ]
 
 function starRating(rating) {
@@ -86,6 +86,16 @@ export default function Home() {
             <p>Hands-on reviews, real screenshots, and honest comparisons — tested by print industry professionals.</p>
             <p className="trust-line">✓ Tested by print &amp; e-commerce industry professionals with hands-on experience</p>
 
+            <div className="search-bar" id="search">
+              <input
+                type="text"
+                placeholder="Search AI tools... (e.g. packaging design, Shopify)"
+                value={search}
+                onChange={e => setSearch(e.target.value)}
+              />
+              <button type="button">Search</button>
+            </div>
+
             {/* Scenario tags — replaces duplicate category nav */}
             <div className="scenario-tags">
               {SCENARIO_TAGS.map(tag => (
@@ -93,21 +103,19 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="hero-scene">
-            <img src="/images/hero.jpg" alt="Designer holding a printed photo in front of a monitor — from digital design to physical product" loading="eager" />
-            <div className="float-card fc-1"><strong>★ 4.8</strong> avg tool rating</div>
-            <div className="float-card fc-2"><strong>74+</strong> tools hands-on tested</div>
-          </div>
-        </div>
-        <div className="container search-dock">
-          <div className="search-bar" id="search">
-            <input
-              type="text"
-              placeholder="Search AI tools... (e.g. packaging design, Shopify)"
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-            />
-            <button type="button">Search</button>
+
+          {/* Product-as-proof: the site's own content, rendered — not a photo */}
+          <div className="hero-proof" aria-hidden="true">
+            <div className="mini-vs">
+              <div className="mini-vs-battle">
+                <span className="mini-side"><b>Printful</b><i>★ 4.5</i></span>
+                <span className="mini-badge">VS</span>
+                <span className="mini-side"><b>Printify</b><i>★ 4.3</i></span>
+              </div>
+              <p className="mini-verdict">Printify wins on margin &amp; catalog. Printful wins on quality &amp; branding.</p>
+              <span className="mini-link">Read Comparison →</span>
+            </div>
+            <div className="mini-stat"><strong>★ 4.8</strong> avg rating · 74+ tools tested</div>
           </div>
         </div>
       </div>
@@ -121,9 +129,9 @@ export default function Home() {
           <div className="cat-grid">
             {CAT_CARDS.map(c => (
               <article key={c.slug} className="cat-card">
-                <img src={c.img} alt={c.name} loading="lazy" />
                 <h3><Link href={`/category/${c.slug}/`}>{c.name}</Link></h3>
                 <p>{c.desc}</p>
+                <span className="cat-meta">{reviews.filter(r => r.categorySlug === c.slug).length} tools <i>→</i></span>
               </article>
             ))}
           </div>

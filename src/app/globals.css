@@ -201,7 +201,7 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
   white-space: nowrap;
   transition: background var(--transition), transform var(--transition);
 }
-.nav-cta:hover { background: var(--y-bg, #fff3d6); transform: translateY(-1px); }
+.nav-cta:hover { background: var(--a-bg); transform: translateY(-1px); }
 
 /* Trust bar */
 .trust-bar {
@@ -469,8 +469,8 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 }
 .card-badge.tested::before { content: "✓"; font-size: 0.65rem; }
 .card-badge.vertical {
-  background: var(--y-bg);
-  color: var(--y-text);
+  background: var(--a-bg);
+  color: var(--a-text);
 }
 
 /* Card meta (category + rating + price) */
@@ -552,7 +552,7 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
   font-size: 0.78rem;
   padding: 5px 10px;
 }
-.card-cta.affiliate:hover { background: var(--y-bg); }
+.card-cta.affiliate:hover { background: var(--a-bg); }
 
 /* Vertical score bars */
 .vertical-score {
@@ -868,13 +868,13 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 .legal-page ul { margin: 8px 0 12px 22px; }
 .legal-page li { margin-bottom: 5px; }
 .legal-page .highlight-box {
-  background: var(--y-bg);
+  background: var(--a-bg);
   border: 1px solid #fde68a;
   border-radius: var(--radius-sm);
   padding: 18px;
   margin: 18px 0;
 }
-.legal-page .highlight-box p { color: var(--y-text); margin-bottom: 0; }
+.legal-page .highlight-box p { color: var(--a-text); margin-bottom: 0; }
 
 /* --- About Page --- */
 .about-page { max-width: 780px; margin: 36px auto; padding: 0 24px 56px; }
@@ -1004,7 +1004,7 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 
 /* --- Comparison Pages (/compare/) --- */
 .verdict-box {
-  background: var(--y-bg, #fff8e6);
+  background: var(--a-bg);
   border: 1px solid var(--border);
   border-left: 4px solid var(--c-primary);
   border-radius: var(--radius-sm);
@@ -1138,8 +1138,8 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 }
 .best-card-count {
   align-self: flex-start;
-  background: var(--y-bg, #fff8e6);
-  color: var(--y-text, #8a6d00);
+  background: var(--a-bg);
+  color: var(--a-text);
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1416,4 +1416,104 @@ html, body { overflow-x: hidden; }
   .float-card { padding: 7px 10px; font-size: 0.68rem; }
   .float-card strong { font-size: 0.95rem; }
   .search-dock { margin-top: 28px; margin-bottom: -26px; }
+}
+
+/* ============================================
+   Restraint pass: unified rhythm, shadows, radii
+   ============================================ */
+:root {
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
+  --shadow-lift: 0 2px 4px rgba(0,0,0,0.05), 0 12px 32px rgba(0,0,0,0.09);
+}
+
+/* One rhythm: 96px sections */
+.section { padding: 96px 0; }
+.section:first-of-type { padding-top: 64px; }
+
+/* One shadow + two radii across card types */
+.review-card, .vs-card, .best-card, .cat-card, .featured-panel, .vertical-featured {
+  box-shadow: var(--shadow-card);
+}
+.review-card, .vs-card, .best-card, .featured-panel, .vertical-featured { border-radius: 16px; }
+
+/* Hero: product-as-proof (rendered mini cards, no photo) */
+.hero { padding: 80px 0; }
+.hero-proof {
+  flex: 0.9;
+  min-width: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 40px;
+}
+.mini-vs {
+  width: 300px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--a-primary);
+  border-radius: 16px;
+  box-shadow: var(--shadow-lift);
+  padding: 18px;
+  transform: rotate(-2deg);
+}
+.mini-vs-battle { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+.mini-side { display: flex; flex-direction: column; gap: 2px; }
+.mini-side:last-child { text-align: right; }
+.mini-side b { font-size: 0.98rem; font-weight: 700; color: var(--k-deep); }
+.mini-side i { font-style: normal; font-size: 0.75rem; font-weight: 700; color: var(--a-deep); }
+.mini-badge {
+  display: flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px;
+  background: var(--a-primary); color: #fff;
+  font-size: 0.62rem; font-weight: 800; letter-spacing: 0.5px;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+.mini-verdict { font-size: 0.76rem; color: var(--k-secondary); line-height: 1.5; margin-bottom: 8px; }
+.mini-link { font-size: 0.78rem; font-weight: 700; color: var(--c-primary); }
+.mini-stat {
+  position: absolute;
+  right: 6%;
+  bottom: 0;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lift);
+  padding: 10px 16px;
+  font-size: 0.72rem;
+  color: var(--k-tertiary);
+  transform: rotate(1.5deg);
+}
+.mini-stat strong { color: var(--a-primary); font-size: 0.95rem; }
+
+/* Category cards: typography-only */
+.cat-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+.cat-card:hover { transform: translateY(-2px); border-color: var(--c-primary); box-shadow: var(--shadow-lift); }
+.cat-card h3 { font-size: 1.2rem; font-weight: 700; }
+.cat-card p { font-size: 0.84rem; color: var(--k-tertiary); flex: 1; }
+.cat-meta { font-size: 0.78rem; font-weight: 700; color: var(--c-primary); }
+.cat-meta i { font-style: normal; }
+
+/* Search bar: hairline + green focus */
+.search-bar { border: 1px solid var(--border); box-shadow: var(--shadow-card); }
+.search-bar:focus-within { border-color: var(--c-primary); box-shadow: var(--shadow-lift); }
+
+@media (max-width: 900px) {
+  .hero-proof { width: 100%; max-width: 400px; padding: 8px 0 36px; }
+  .mini-vs { width: 280px; }
+}
+@media (max-width: 640px) {
+  .section { padding: 48px 0; }
+  .cat-card { padding: 14px 16px; }
+  .cat-card h3 { font-size: 0.95rem; }
+  .cat-card p { display: none; }
 }
