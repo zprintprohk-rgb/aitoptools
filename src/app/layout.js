@@ -145,6 +145,7 @@ export default function RootLayout({ children }) {
                 <Link href="/terms/">Terms of Service</Link>
               </nav>
             </div>
+            <p className="footer-copy" style={{ marginTop: 8, opacity: 0.6 }}>Photos: Openverse (CC0 / public domain).</p>
           </div>
         </footer>
       </body>

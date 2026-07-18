@@ -4,7 +4,6 @@ import Link from 'next/link'
 import reviews from '@/data/reviews'
 import comparisons from '@/data/comparisons.json'
 import listicles from '@/data/listicles.json'
-import HeroArt from '@/components/HeroArt'
 
 const VERTICAL_CATEGORIES = [
   { name: '🖨️ Print & Packaging', slug: 'ai-print-design', desc: 'AI for print-on-demand, packaging design, label making', featured: true },
@@ -20,6 +19,15 @@ const SCENARIO_TAGS = [
   { label: '🛍️ Shopify', href: '/category/ai-ecommerce/' },
   { label: '👕 Print-on-Demand', href: '/category/ai-print-design/' },
   { label: '📸 Product Photos', href: '/category/ai-ecommerce/' },
+]
+
+const CAT_CARDS = [
+  { name: 'Print & Packaging', slug: 'ai-print-design', desc: 'AI for print-on-demand, packaging design, label making', img: '/images/cat-packaging.jpg' },
+  { name: 'E-Commerce & Shopify', slug: 'ai-ecommerce', desc: 'AI for product descriptions, store optimization, cross-border', img: '/images/cat-ecommerce.jpg' },
+  { name: 'AI Writing', slug: 'ai-writing', desc: 'Copywriting, content creation, multilingual writing', img: '/images/cat-writing.jpg' },
+  { name: 'AI Image', slug: 'ai-image', desc: 'Image generation, editing, product photography', img: '/images/cat-image.jpg' },
+  { name: 'AI Video', slug: 'ai-video', desc: 'Video generation, avatars, editing', img: '/images/cat-video.jpg' },
+  { name: 'AI Voice', slug: 'ai-voice', desc: 'Voice synthesis, dubbing, podcasting', img: '/images/cat-voice.jpg' },
 ]
 
 function starRating(rating) {
@@ -95,8 +103,26 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="hero-art" aria-hidden="true">
-            <HeroArt />
+          <div className="hero-photo">
+            <img src="/images/hero.jpg" alt="T-shirts hanging on wooden hangers — print-on-demand products" loading="eager" />
+          </div>
+        </div>
+      </div>
+
+      {/* CATEGORY PHOTO CARDS */}
+      <div className="section">
+        <div className="container">
+          <div className="section-header">
+            <h2>Browse by Category</h2>
+          </div>
+          <div className="cat-grid">
+            {CAT_CARDS.map(c => (
+              <article key={c.slug} className="cat-card">
+                <img src={c.img} alt={c.name} loading="lazy" />
+                <h3><Link href={`/category/${c.slug}/`}>{c.name}</Link></h3>
+                <p>{c.desc}</p>
+              </article>
+            ))}
           </div>
         </div>
       </div>
