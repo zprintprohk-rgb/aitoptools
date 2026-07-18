@@ -1168,3 +1168,80 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
   .review-grid { grid-template-columns: repeat(2, 1fr); }
   .pricing-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ============================================
+   Mobile UX fixes (≤768 / ≤640)
+   ============================================ */
+html, body { overflow-x: hidden; }
+.search-bar input { min-width: 0; }
+
+@media (max-width: 768px) {
+  .container { padding: 0 16px; }
+  .featured-panel { padding: 16px 14px; }
+  .vertical-featured { padding: 16px 14px; }
+  .hero h1 { font-size: clamp(1.7rem, 7.5vw, 2.2rem); letter-spacing: -0.5px; }
+  .hero p { font-size: 1rem; }
+  .hero .search-bar { width: 100%; }
+  .search-bar button { padding: 13px 16px; }
+  .section { padding-left: 0; padding-right: 0; }
+}
+
+@media (max-width: 640px) {
+  /* Two-column compact cards everywhere */
+  .vs-grid, .best-grid, .review-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* Compact VS card */
+  .vs-card { padding: 14px; min-height: 0; gap: 8px; border-radius: var(--radius-sm); }
+  .vs-card-battle { gap: 6px; }
+  .vs-badge { width: 32px; height: 32px; font-size: 0.62rem; }
+  .vs-name { font-size: 0.85rem; }
+  .vs-rating { font-size: 0.78rem; font-weight: 700; color: var(--a-deep); }
+  .vs-title { font-size: 0.95rem; font-weight: 600; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .vs-verdict { display: none; }
+  .vs-card .card-cta,
+  .best-card .card-cta {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 8px 12px;
+    border: 1px solid var(--c-primary);
+    border-radius: var(--radius-sm);
+    justify-content: center;
+    min-height: 36px;
+    text-align: center;
+  }
+
+  /* Compact Best Of card */
+  .best-card { padding: 14px; min-height: 0; gap: 8px; border-radius: var(--radius-sm); }
+  .best-card-count { font-size: 0.62rem; padding: 3px 8px; }
+  .best-card-title { font-size: 0.95rem; font-weight: 600; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .best-card-names .best-card-name:nth-of-type(n+3) { display: none; }
+  .best-card-names .best-card-name.more { display: inline; }
+  .best-card-name { font-size: 0.66rem; padding: 2px 6px; }
+
+  /* Compact tool card */
+  .review-card { padding: 14px; border-radius: var(--radius-sm); }
+  .review-card h3 { font-size: 0.95rem; font-weight: 600; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-badges .card-badge.vertical { display: none; }
+  .card-badge { font-size: 0.6rem; }
+  .card-meta { flex-wrap: wrap; gap: 4px 8px; }
+  .card-cat { font-size: 0.68rem; }
+  .card-rating { font-size: 0.78rem; font-weight: 700; color: var(--a-deep); }
+  .card-price { font-size: 0.72rem; }
+  .card-desc { display: none; }
+  .vertical-score { display: none; }
+  .card-cta-group .card-cta.affiliate { display: none; }
+  .card-cta-group .card-cta {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 8px 12px;
+    border: 1px solid var(--c-primary);
+    border-radius: var(--radius-sm);
+    justify-content: center;
+    min-height: 36px;
+    flex: 1;
+    text-align: center;
+  }
+}
