@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import reviews from '@/data/reviews'
+import RatingBar from '@/components/RatingBar'
+import ProsCons from '@/components/ProsCons'
 
 function starRating(rating) {
   const full = Math.floor(rating)
@@ -140,7 +142,7 @@ export default function ReviewPage({ params }) {
         <h1>{review.title}</h1>
         <div className="meta-bar">
           <span className="card-cat">{review.category}</span>
-          <span className="card-rating">{starRating(review.rating)} {review.rating}</span>
+          <span className="meta-rating"><RatingBar rating={review.rating} /></span>
           <span className="card-price">From {review.price}</span>
           {isVertical && <span className="card-badge vertical" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: 'var(--y-bg)', color: 'var(--y-text)', fontSize: '0.7rem', fontWeight: 600, padding: '2px 8px', borderRadius: '100px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>🖨️ Print & E-Com</span>}
           <span className="card-badge tested" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: 'var(--c-bg)', color: 'var(--c-text)', fontSize: '0.68rem', fontWeight: 600, padding: '2px 8px', borderRadius: '100px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>✓ Hands-on Tested</span>
@@ -150,16 +152,7 @@ export default function ReviewPage({ params }) {
         </div>
 
         {/* Pros & Cons */}
-        <div className="pros-cons">
-          <div className="pros-box">
-            <h3>✓ Pros</h3>
-            <ul>{review.pros.map((p, i) => <li key={i}>{p}</li>)}</ul>
-          </div>
-          <div className="cons-box">
-            <h3>✗ Cons</h3>
-            <ul>{review.cons.map((c, i) => <li key={i}>{c}</li>)}</ul>
-          </div>
-        </div>
+        <ProsCons pros={review.pros} cons={review.cons} />
 
         {/* Review Content */}
         {review.content ? (

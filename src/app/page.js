@@ -4,6 +4,7 @@ import Link from 'next/link'
 import reviews from '@/data/reviews'
 import comparisons from '@/data/comparisons.json'
 import listicles from '@/data/listicles.json'
+import RatingBar from '@/components/RatingBar'
 
 const VERTICAL_CATEGORIES = [
   { name: '🖨️ Print & Packaging', slug: 'ai-print-design', desc: 'AI for print-on-demand, packaging design, label making', featured: true },
@@ -86,7 +87,8 @@ export default function Home() {
             <p>Hands-on reviews, real screenshots, and honest comparisons — tested by print industry professionals.</p>
             <p className="trust-line">✓ Tested by print &amp; e-commerce industry professionals with hands-on experience</p>
 
-            <div className="search-bar" id="search">
+            <div className="search-bar cmdk" id="search">
+              <kbd className="cmdk-badge" aria-hidden="true">⌘K</kbd>
               <input
                 type="text"
                 placeholder="Search AI tools... (e.g. packaging design, Shopify)"
@@ -306,7 +308,7 @@ function ReviewCard({ review }) {
       </div>
       <div className="card-meta">
         <span className={isGenericCat ? "card-cat generic" : "card-cat"}>{review.category}</span>
-        <span className="card-rating">{starRating(review.rating)} {review.rating}</span>
+        <RatingBar rating={review.rating} />
         <span className="card-price">{review.price}</span>
       </div>
       <h3><Link href={`/${review.slug}/`}>{review.title}</Link></h3>

@@ -2,6 +2,11 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import comparisons from '@/data/comparisons.json'
 import reviews from '@/data/reviews'
+import RatingBar from '@/components/RatingBar'
+import PicksCards from '@/components/PicksCards'
+import WhyTrustUs from '@/components/WhyTrustUs'
+import FeatureMatrix from '@/components/FeatureMatrix'
+import PricingTable from '@/components/PricingTable'
 
 function starRating(rating) {
   const full = Math.floor(rating)
@@ -103,8 +108,8 @@ export default function ComparisonPage({ params }) {
         <h1>{comp.title}</h1>
         <div className="meta-bar">
           <span className="card-cat">POD Platform Comparison</span>
-          <span className="card-rating">{toolA.name} {starRating(toolA.rating)} {toolA.rating}</span>
-          <span className="card-rating">{toolB.name} {starRating(toolB.rating)} {toolB.rating}</span>
+          <span className="meta-rating">{toolA.name} <RatingBar rating={toolA.rating} /></span>
+          <span className="meta-rating">{toolB.name} <RatingBar rating={toolB.rating} /></span>
           <span className="card-badge tested" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: 'var(--c-bg)', color: 'var(--c-text)', fontSize: '0.68rem', fontWeight: 600, padding: '2px 8px', borderRadius: '100px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>✓ 2026 Data Verified</span>
         </div>
 
@@ -122,8 +127,11 @@ export default function ComparisonPage({ params }) {
           </div>
         </div>
 
+        {/* Wirecutter-style three-tier picks */}
+        <PicksCards picks={comp.picks} />
+
         {/* Side-by-side comparison table */}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, margin: '32px 0 16px', color: 'var(--k-deep)' }}>{toolA.name} vs {toolB.name} at a Glance</h2>
+        <h2 id="at-a-glance" style={{ fontSize: '1.75rem', fontWeight: 700, margin: '40px 0 16px', color: 'var(--k-deep)' }}>{toolA.name} vs {toolB.name} at a Glance</h2>
         <div className="review-content compare-table-wrap">
           <table className="compare-table">
             <thead>
@@ -145,12 +153,28 @@ export default function ComparisonPage({ params }) {
           </table>
         </div>
 
+        {/* Feature matrix */}
+        {comp.features?.length > 0 && (
+          <>
+            <h2 style={{ fontSize: '1.75rem', fontWeight: 700, margin: '40px 0 16px', color: 'var(--k-deep)' }}>Feature by Feature</h2>
+            <FeatureMatrix features={comp.features} names={[toolA.name, toolB.name]} />
+          </>
+        )}
+
+        {/* Pricing table with better-value highlight */}
+        {comp.pricing?.rows?.length > 0 && (
+          <>
+            <h2 id="pricing" style={{ fontSize: '1.75rem', fontWeight: 700, margin: '40px 0 16px', color: 'var(--k-deep)' }}>Pricing Compared</h2>
+            <PricingTable pricing={comp.pricing} nameA={toolA.name} nameB={toolB.name} />
+          </>
+        )}
+
         {/* Main content */}
         <div className="review-content" dangerouslySetInnerHTML={{ __html: comp.content }} />
 
         {/* Related single reviews */}
-        <div className="section-header" style={{ marginTop: 36 }}>
-          <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--k-deep)' }}>Read the Full Reviews</h2>
+        <div className="section-header" style={{ marginTop: 40 }}>
+          <h2 id="full-reviews" style={{ fontSize: '1.75rem', fontWeight: 700, color: 'var(--k-deep)' }}>Read the Full Reviews</h2>
         </div>
         <div className="review-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
           {[reviewA, reviewB].filter(Boolean).map(r => (
@@ -166,6 +190,9 @@ export default function ComparisonPage({ params }) {
             </article>
           ))}
         </div>
+
+        {/* Why trust us — shared editorial module */}
+        <WhyTrustUs />
 
         {/* FAQ */}
         <div className="faq-section">

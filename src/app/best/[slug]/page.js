@@ -2,6 +2,10 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import listicles from '@/data/listicles.json'
 import reviews from '@/data/reviews'
+import RatingBar from '@/components/RatingBar'
+import PicksCards from '@/components/PicksCards'
+import WhyTrustUs from '@/components/WhyTrustUs'
+import FeatureMatrix from '@/components/FeatureMatrix'
 
 function starRating(rating) {
   const full = Math.floor(rating)
@@ -110,13 +114,24 @@ export default function ListiclePage({ params }) {
           <p>{l.quickVerdict}</p>
         </div>
 
+        {/* Wirecutter-style three-tier picks */}
+        <PicksCards picks={
+          l.items
+            .map((it, i) => ({ it, i }))
+            .filter(({ it }) => it.pickType)
+            .map(({ it, i }) => {
+              const rev = it.reviewSlug ? reviews.find(r => r.slug === it.reviewSlug) : null
+              return { type: it.pickType, name: it.name, tagline: it.tagline, rating: rev ? rev.rating : undefined, anchor: `#pick-${i + 1}` }
+            })
+        } />
+
         {/* Intro */}
         {l.introContent && (
           <div className="review-content" dangerouslySetInnerHTML={{ __html: l.introContent }} />
         )}
 
         {/* Summary table */}
-        <h2 style={{ fontSize: '1.4rem', fontWeight: 700, margin: '32px 0 16px', color: 'var(--k-deep)' }}>The 7 at a Glance</h2>
+        <h2 id="at-a-glance" style={{ fontSize: '1.75rem', fontWeight: 700, margin: '40px 0 16px', color: 'var(--k-deep)' }}>The {l.items.length} at a Glance</h2>
         <div className="review-content compare-table-wrap">
           <table className="compare-table">
             <thead>
@@ -132,7 +147,7 @@ export default function ListiclePage({ params }) {
               {l.items.map((it, i) => (
                 <tr key={i}>
                   <td>{i + 1}</td>
-                  <td><strong>{it.name}</strong></td>
+                  <td><strong>{it.name}</strong>{it.pickType === 'top' && <span className="pick-inline-tag">Our Pick</span>}</td>
                   <td>{it.bestFor}</td>
                   <td>{it.pricingShort}</td>
                   <td>{it.catalogShort}</td>
@@ -142,15 +157,24 @@ export default function ListiclePage({ params }) {
           </table>
         </div>
 
+        {/* Feature matrix — top contenders side by side */}
+        {l.features?.length > 0 && l.featureCols?.length > 0 && (
+          <>
+            <h2 style={{ fontSize: '1.75rem', fontWeight: 700, margin: '40px 0 16px', color: 'var(--k-deep)' }}>Top Contenders, Feature by Feature</h2>
+            <FeatureMatrix features={l.features} names={l.featureCols} />
+          </>
+        )}
+
         {/* Per-tool sections */}
         {l.items.map((it, i) => {
           const review = it.reviewSlug ? reviews.find(r => r.slug === it.reviewSlug) : null
           return (
-            <section key={i} className="listicle-item">
+            <section key={i} id={`pick-${i + 1}`} className={`listicle-item${i === 0 ? ' top-pick' : ''}`}>
+              {i === 0 && <span className="pick-badge top-pick-badge">#1 Our Pick</span>}
               <h2>{i + 1}. {it.name} — {it.tagline}</h2>
               {review && (
                 <p style={{ fontSize: '0.85rem', color: 'var(--k-tertiary)', marginBottom: 10 }}>
-                  Our rating: <span className="card-rating">{starRating(review.rating)} {review.rating}</span>
+                  Our rating: <RatingBar rating={review.rating} />
                   {' · '}<Link href={`/${review.slug}/`} style={{ color: 'var(--c-primary)' }}>Read the full {it.name} review →</Link>
                 </p>
               )}
@@ -166,6 +190,9 @@ export default function ListiclePage({ params }) {
 
         {/* How to choose + closing */}
         <div className="review-content" dangerouslySetInnerHTML={{ __html: l.closingContent }} />
+
+        {/* Why trust us — shared editorial module */}
+        <WhyTrustUs />
 
         {/* FAQ */}
         <div className="faq-section">
