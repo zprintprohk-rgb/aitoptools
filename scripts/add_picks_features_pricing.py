@@ -171,3 +171,11 @@ for x in ld:
     x['features'] = add['features']
 json.dump(ld, open(lp, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
 print('listicles updated:', [(x['slug'], [ (i['name'], i.get('pickType')) for i in x['items'] if i.get('pickType')]) for x in ld])
+
+# 落盘后立刻校验 — 数据不合格不允许构建 (与 CI/本地共用同一脚本)
+import os, subprocess, sys as _sys
+r = subprocess.run([_sys.executable, os.path.join(os.path.dirname(__file__), 'validate_content_data.py')], capture_output=True, text=True)
+print(r.stdout)
+if r.returncode != 0:
+    print(r.stderr, file=_sys.stderr)
+    raise SystemExit(r.returncode)

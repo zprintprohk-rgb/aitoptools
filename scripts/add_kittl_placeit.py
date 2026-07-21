@@ -1,4 +1,5 @@
 import json, re
+import os
 
 content = """<p>If you sell print-on-demand, you need two different jobs done every single day: creating original designs, and showing those designs on realistic products. Kittl and Placeit are the two browser-based tools POD sellers shortlist for those jobs — but they are not really the same kind of tool. Kittl is a design creation platform: professional typography, vector editing, and AI generation built for making T-shirt graphics. Placeit is a mockup and template machine: 40,000+ ready scenes where you drop in a design and download a product photo. Choosing between them is often the wrong frame — but if your budget only covers one subscription, this comparison will tell you which job to solve first. All pricing and library figures below are verified against 2026 sources.</p>
 
@@ -78,7 +79,32 @@ entry = {
     {"q": "Is Kittl free for commercial use?", "a": "No — Kittl's Free plan is licensed for personal use only. To sell products made with Kittl designs (print-on-demand, merchandise, client work), you need at least the Pro plan at $15/month, which includes a full commercial licence and vector/high-resolution exports."},
     {"q": "Can Kittl make mockups like Placeit?", "a": "Kittl has added mockup features, but its library is small compared to Placeit's 40,000+ scenes, 10,000+ of them apparel. Kittl's mockups work for quick previews; for volume listing photography — model poses, lifestyle settings, video mockups — Placeit remains the dedicated tool and the industry default."},
     {"q": "Do I need both Kittl and Placeit?", "a": "Not at first — buy the one matching your bottleneck: Kittl if you lack designs, Placeit if you have designs but weak listing photos. Established sellers typically carry both, since combined annual cost (~$22–37/month) is less than outsourcing a single design per month, and the two tools cover the full POD workflow from artwork to listing."}
-  ]
+  ],
+  # ---- 标准模板: 三级推荐卡 (PicksCards) ----
+  "picks": [
+    {"type": "top",    "name": "Kittl",          "tagline": "Design creation: typography, vectors, AI generation",       "rating": 4.5, "anchor": "#at-a-glance"},
+    {"type": "also",   "name": "Placeit",        "tagline": "40,000+ mockups for product presentation",                "rating": 4.0, "anchor": "#full-reviews"},
+    {"type": "budget", "name": "Placeit Annual", "tagline": "~$7.47/mo billed annually — unlimited downloads",        "rating": 4.0, "anchor": "#pricing"},
+  ],
+  # ---- 标准模板: 功能对照矩阵 (FeatureMatrix) ----
+  "features": [
+    {"feature": "Free plan",                    "a": "yes",     "b": "partial"},
+    {"feature": "Vector design editing",        "a": "yes",     "b": "no"},
+    {"feature": "Advanced typography effects",  "a": "yes",     "b": "no"},
+    {"feature": "AI design generation",         "a": "yes",     "b": "partial"},
+    {"feature": "Apparel mockup library (10,000+)","a": "no",   "b": "yes"},
+    {"feature": "Video mockups",                "a": "no",      "b": "yes"},
+    {"feature": "Print-ready file export",      "a": "yes",     "b": "partial"},
+  ],
+  # ---- 标准模板: 定价对比表 (PricingTable) ----
+  "pricing": {
+    "betterValue": "b",
+    "rows": [
+      {"label": "Free tier",        "a": "Yes — personal use only",                "b": "No full free plan (free assets available)"},
+      {"label": "Entry paid plan",  "a": "Pro $15/mo or $120/yr",                  "b": "$14.95/mo or ~$7.47/mo billed annually"},
+      {"label": "Top tier",         "a": "Expert $30/mo or $288/yr",               "b": "Same plan — everything included"},
+    ],
+  },
 }
 
 p = 'F:/aitoptools/src/data/comparisons.json'
@@ -91,3 +117,11 @@ def w(s): return len(re.sub(r'<[^>]+>', ' ', s).split())
 total = w(content) + w(entry['quickVerdict']) + sum(w(f['q'] + f['a']) for f in entry['faqs']) + sum(w(r['a'] + r['b'] + r['dimension']) for r in entry['comparisonTable'])
 print('comparisons:', [e['slug'] for e in d])
 print('page total words:', total)
+
+# 落盘后立刻校验 — 数据不合格不允许构建 (与 CI/本地共用同一脚本)
+import subprocess, sys as _sys
+r = subprocess.run([_sys.executable, os.path.join(os.path.dirname(__file__), 'validate_content_data.py')], capture_output=True, text=True)
+print(r.stdout)
+if r.returncode != 0:
+    print(r.stderr, file=_sys.stderr)
+    raise SystemExit(r.returncode)

@@ -1,4 +1,5 @@
 import json, re
+import os
 
 p = 'F:/aitoptools/src/data/comparisons.json'
 d = json.load(open(p, encoding='utf-8'))
@@ -90,7 +91,32 @@ entry = {
     {"q": "Can I use both Printify and Gelato at the same time?", "a": "Yes, and many global sellers do. A common setup routes US-bound niche products through Printify (bigger catalog, deeper discounts) while sending international orders and wall art through Gelato (local production, faster delivery). Both integrate with the same Shopify or Etsy store, so orders automatically flow to whichever platform hosts each product."},
     {"q": "Does Gelato integrate with Etsy and Shopify?", "a": "Yes — Gelato integrates natively with Shopify, Etsy, WooCommerce, Wix, Squarespace, and BigCommerce, plus an open API. Printify covers the same core platforms and adds TikTok Shop and eBay. Setup on both takes minutes: connect your store, publish products, and orders sync automatically with tracking pushed back to customers."},
     {"q": "Is Gelato+ worth it over the free plan?", "a": "Gelato+ is worth it once its up-to-25% product discount saves you more than $19.99/month (annual billing) — typically around 10–15 orders per month depending on your product mix. Below that volume, the free plan is fully functional: full catalog, all integrations, and unlimited stores. Paid plans also add premium mockups and branded inserts."}
-  ]
+  ],
+  # ---- 标准模板: 三级推荐卡 (PicksCards) ----
+  "picks": [
+    {"type": "top",    "name": "Printify",          "tagline": "Largest catalog, deepest discounts, provider control",       "rating": 4.3, "anchor": "#at-a-glance"},
+    {"type": "also",   "name": "Gelato",            "tagline": "Local production in 32 countries for international sales",  "rating": 4.4, "anchor": "#full-reviews"},
+    {"type": "budget", "name": "Printify Free plan","tagline": "Zero monthly cost — pay per order only",                    "rating": 4.3, "anchor": "#pricing"},
+  ],
+  # ---- 标准模板: 功能对照矩阵 (FeatureMatrix) ----
+  "features": [
+    {"feature": "Free plan with no monthly fee", "a": "yes",     "b": "yes"},
+    {"feature": "1,000+ product catalog",        "a": "yes",     "b": "no"},
+    {"feature": "Choice of print providers",     "a": "yes",     "b": "no"},
+    {"feature": "Local production in 30+ countries","a": "no",   "b": "yes"},
+    {"feature": "Membership discounts (paid plan)","a": "yes",   "b": "yes"},
+    {"feature": "Custom branding (labels, pack-ins)","a": "partial","b": "partial"},
+    {"feature": "Fast EU delivery options",      "a": "partial", "b": "yes"},
+  ],
+  # ---- 标准模板: 定价对比表 (PricingTable) ----
+  "pricing": {
+    "betterValue": "b",
+    "rows": [
+      {"label": "Free plan",     "a": "$0 — full platform access",   "b": "$0 — full platform access"},
+      {"label": "Paid plan",     "a": "Premium $39/mo or $24.99/mo billed yearly", "b": "Gelato+ $23.99/mo or $19.99/mo billed yearly"},
+      {"label": "Product discount","a": "Up to 33% off products",     "b": "Up to 25% off products"},
+    ],
+  },
 }
 
 d = [x for x in d if x['slug'] != 'printify-vs-gelato']
@@ -100,3 +126,11 @@ json.dump(d, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
 def w(s): return len(re.sub(r'<[^>]+>', ' ', s).split())
 total = w(content) + w(entry['quickVerdict']) + sum(w(f['q'] + f['a']) for f in entry['faqs']) + sum(w(r['a'] + r['b'] + r['dimension']) for r in entry['comparisonTable'])
 print('entries:', len(d), '| page total words:', total)
+
+# 落盘后立刻校验 — 数据不合格不允许构建 (与 CI/本地共用同一脚本)
+import subprocess, sys as _sys
+r = subprocess.run([_sys.executable, os.path.join(os.path.dirname(__file__), 'validate_content_data.py')], capture_output=True, text=True)
+print(r.stdout)
+if r.returncode != 0:
+    print(r.stderr, file=_sys.stderr)
+    raise SystemExit(r.returncode)

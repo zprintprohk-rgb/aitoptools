@@ -1,4 +1,5 @@
 import json, re
+import os
 
 content = """<p>Kittl and Canva both run in your browser, both start at $15/month, and both let you make graphics without a design degree — which is exactly why so many people compare them. But they answer different questions. Canva asks "what do you need to make today?" and offers everything from Instagram posts to pitch decks to wedding invitations. Kittl asks a narrower question — "what will this design look like printed on a shirt?" — and builds its entire editor around professional typography, vector control, and print-ready output. This comparison is written from the print-on-demand side of the table: if you sell on Etsy, run a print shop, or design merchandise, the right answer is different from the one a general marketing blog would give you. All pricing and figures below are verified against 2026 sources.</p>
 
@@ -80,7 +81,36 @@ entry = {
     {"q": "Can Canva make T-shirt designs?", "a": "It can, but with limits. Canva Pro exports transparent PNGs suitable for basic print-on-demand uploads, and its templates include T-shirt layouts. What it lacks is professional typography control, vector editing, and print-oriented sizing — so complex lettering designs, vintage effects, and true print-ready vector files are difficult or impossible. For occasional simple designs Canva works; for a merch business, Kittl is the purpose-built tool."},
     {"q": "Does Canva have vector tools like Kittl?", "a": "No. Canva works primarily with raster layouts — you can import and place SVG files, but you cannot edit vector paths or anchor points inside the editor. Kittl includes real vector editing plus an AI vectorizer that converts raster images into scalable vector artwork, which is a core requirement for high-quality print production and one of the clearest dividing lines between the two tools."},
     {"q": "Can I use both Kittl and Canva together?", "a": "Yes — and many established sellers do exactly that. The common workflow: create merchandise designs in Kittl (typography, vector effects, print-ready exports), then use Canva for everything around the product — social media posts, ads, email graphics, and presentations. Combined annual cost runs about $20–34/month depending on tiers, which is less than outsourcing a single design per month."}
-  ]
+  ],
+  # ---- 标准模板: 三级推荐卡 (PicksCards) ----
+  # 恰好 3 项, type 必须齐全 (top/also/budget) 且不重复
+  "picks": [
+    {"type": "top",    "name": "Kittl",      "tagline": "Purpose-built for merch: typography, vectors, print-ready exports", "rating": 4.5, "anchor": "#at-a-glance"},
+    {"type": "also",   "name": "Canva",      "tagline": "General-purpose design and marketing content",                    "rating": 4.5, "anchor": "#full-reviews"},
+    {"type": "budget", "name": "Canva Free", "tagline": "Genuinely usable free tier for most commercial work",            "rating": 4.5, "anchor": "#pricing"},
+  ],
+  # ---- 标准模板: 功能对照矩阵 (FeatureMatrix) ----
+  # 7~8 行, 每行 a/b 取值必须在 {yes, no, partial} 之内
+  "features": [
+    {"feature": "Free plan (commercial use)",        "a": "no",      "b": "yes"},
+    {"feature": "Vector editing",                    "a": "yes",     "b": "no"},
+    {"feature": "Advanced typography effects",       "a": "yes",     "b": "partial"},
+    {"feature": "AI image generation",               "a": "yes",     "b": "yes"},
+    {"feature": "AI raster-to-vector conversion",    "a": "yes",     "b": "no"},
+    {"feature": "Team collaboration & brand controls","a": "partial", "b": "yes"},
+    {"feature": "Print-ready POD export presets",    "a": "yes",     "b": "no"},
+    {"feature": "Presentation & document formats",   "a": "no",      "b": "yes"},
+  ],
+  # ---- 标准模板: 定价对比表 (PricingTable) ----
+  # betterValue 标 a/b 中哪一列更划算, 由 PricingTable.js 高亮该列
+  "pricing": {
+    "betterValue": "b",
+    "rows": [
+      {"label": "Free tier",  "a": "$0 — personal use only",      "b": "$0 — most commercial use OK"},
+      {"label": "Paid plan",  "a": "Pro $15/mo or $120/yr",       "b": "Pro $15/mo or $120/yr"},
+      {"label": "Higher tier","a": "Expert $30/mo or $288/yr",    "b": "Business $20/user/mo ($10 annual)"},
+    ],
+  },
 }
 
 p = 'F:/aitoptools/src/data/comparisons.json'
@@ -93,3 +123,11 @@ def w(s): return len(re.sub(r'<[^>]+>', ' ', s).split())
 total = w(content) + w(entry['quickVerdict']) + sum(w(f['q'] + f['a']) for f in entry['faqs']) + sum(w(r['a'] + r['b'] + r['dimension']) for r in entry['comparisonTable'])
 print('comparisons:', [e['slug'] for e in d])
 print('page total words:', total)
+
+# 落盘后立刻校验 — 数据不合格不允许构建 (与 CI/本地共用同一脚本)
+import subprocess, sys as _sys
+r = subprocess.run([_sys.executable, os.path.join(os.path.dirname(__file__), 'validate_content_data.py')], capture_output=True, text=True)
+print(r.stdout)
+if r.returncode != 0:
+    print(r.stderr, file=_sys.stderr)
+    raise SystemExit(r.returncode)

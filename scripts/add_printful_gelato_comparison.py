@@ -1,4 +1,5 @@
 import json, re
+import os
 
 p = 'F:/aitoptools/src/data/comparisons.json'
 d = json.load(open(p, encoding='utf-8'))
@@ -90,7 +91,32 @@ entry = {
     {"q": "Can I use both Printful and Gelato at the same time?", "a": "Yes, and many scaling brands do. A common hybrid keeps premium and embroidered products on Printful (branding, in-house quality) while routing international orders and wall art through Gelato (local production, lower cost). Both integrate with the same Shopify or Etsy store, so each order automatically routes to whichever platform hosts that product."},
     {"q": "Does Gelato have custom branding like Printful?", "a": "Only partially. Printful offers the deepest branding in POD: custom inside/outside labels, hang tags, pack-ins, branded packaging, and a branded tracking page. Gelato+ includes branded inserts and some packaging options on paid plans, but the depth doesn't match Printful. If premium unboxing is core to your brand, Printful is the clear choice."},
     {"q": "Is Printful Growth or Gelato+ worth it first?", "a": "Gelato+ pays back sooner for most small stores: at $19.99/month (annual) it needs only about 10–15 orders/month for its up-to-25% discount to break even. Printful Growth at $24.99/month needs slightly more volume to justify, but its up-to-33% discount is deeper, and it becomes free for a year once you pass $12K/year in sales — at which point it is strictly better value for scaling stores."}
-  ]
+  ],
+  # ---- 标准模板: 三级推荐卡 (PicksCards) ----
+  "picks": [
+    {"type": "top",    "name": "Printful",         "tagline": "Premium branding and print consistency for serious brands",  "rating": 4.5, "anchor": "#at-a-glance"},
+    {"type": "also",   "name": "Gelato",           "tagline": "Lower base costs and global local production",              "rating": 4.4, "anchor": "#full-reviews"},
+    {"type": "budget", "name": "Gelato Free plan", "tagline": "Free plan with lower base product costs",                   "rating": 4.4, "anchor": "#pricing"},
+  ],
+  # ---- 标准模板: 功能对照矩阵 (FeatureMatrix) ----
+  "features": [
+    {"feature": "Free plan with no monthly fee","a": "yes",     "b": "yes"},
+    {"feature": "In-house production facilities","a": "yes",    "b": "no"},
+    {"feature": "Custom labels & pack-ins",    "a": "yes",     "b": "partial"},
+    {"feature": "Local production in 30+ countries","a": "partial","b": "yes"},
+    {"feature": "Embroidery options",          "a": "yes",     "b": "partial"},
+    {"feature": "Lower base product costs",    "a": "no",      "b": "yes"},
+    {"feature": "Membership discounts (paid plan)","a": "yes",  "b": "yes"},
+  ],
+  # ---- 标准模板: 定价对比表 (PricingTable) ----
+  "pricing": {
+    "betterValue": "b",
+    "rows": [
+      {"label": "Free plan",         "a": "$0 — full platform access",   "b": "$0 — full platform access"},
+      {"label": "Paid plan",         "a": "Growth $24.99/mo (free after $12K/yr in sales)", "b": "Gelato+ $23.99/mo or $19.99/mo billed yearly"},
+      {"label": "Base product costs","a": "15–35% higher",                "b": "Lower"},
+    ],
+  },
 }
 
 d = [x for x in d if x['slug'] != 'printful-vs-gelato']
@@ -116,6 +142,14 @@ json.dump(d, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
 def w(s): return len(re.sub(r'<[^>]+>', ' ', s).split())
 total = w(content) + w(entry['quickVerdict']) + sum(w(f['q'] + f['a']) for f in entry['faqs']) + sum(w(r['a'] + r['b'] + r['dimension']) for r in entry['comparisonTable'])
 print('entries:', [e['slug'] for e in d])
+
+# 落盘后立刻校验 — 数据不合格不允许构建 (与 CI/本地共用同一脚本)
+import subprocess, sys as _sys
+r = subprocess.run([_sys.executable, os.path.join(os.path.dirname(__file__), 'validate_content_data.py')], capture_output=True, text=True)
+print(r.stdout)
+if r.returncode != 0:
+    print(r.stderr, file=_sys.stderr)
+    raise SystemExit(r.returncode)
 print('page total words:', total)
 print('ring check pvp:', '/compare/printful-vs-gelato/' in d[0]['content'])
 print('ring check pvg:', '/compare/printful-vs-gelato/' in d[1]['content'])

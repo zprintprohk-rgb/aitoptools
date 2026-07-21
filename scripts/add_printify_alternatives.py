@@ -1,4 +1,5 @@
 import json, re
+import os
 
 entry = {
   "slug": "printify-alternatives",
@@ -91,7 +92,93 @@ entry = {
     {"q": "Which Printify alternative has the most consistent quality?", "a": "Printful, because it owns its production facilities and enforces one QA standard across all 12 centers (published reshipment rate ~0.24%). Gelato is a close second — its partner network is centrally vetted and managed, unlike Printify's open marketplace where each of the 85+ providers sets its own quality bar."},
     {"q": "Can I use Printify and its alternatives at the same time?", "a": "Yes, and hybrid setups are common. A typical configuration keeps niche or long-tail products on Printify's huge catalog while moving hero products to Printful or Gelato for consistency, and routing US commodity apparel through CustomCat for cost. All of these integrate with the same Shopify or Etsy store, so orders route automatically by product."},
     {"q": "Is there a Printify alternative with no monthly fee?", "a": "Several. SPOD and Teelaunch have no paid tier at all — their competitive base prices are available free from day one. CustomCat, Gooten, Printful, and Gelato all offer fully functional free plans where you pay only product and shipping costs per order; paid tiers add discounts that only make sense above roughly 10–17 orders per month."}
-  ]
+  ],
+  # ---- 标准模板: 每篇榜单恰好 1 个 top / 1 个 also / 1 个 budget ----
+  "items": [
+    {
+      "name": "Printful",
+      "tagline": "Best Escape from the Provider Lottery",
+      "bestFor": "Quality-first sellers",
+      "pricingShort": "Free; Growth $24.99/mo (free after $12K/yr)",
+      "catalogShort": "300+ products",
+      "reviewSlug": "printful-review",
+      "ctaUrl": "https://www.printful.com",
+      "pickType": "top",  # 三级推荐: Our Pick
+      "content": "<p><strong>Printful is the best Printify alternative when inconsistent quality is your breaking point: in-house production at 12 fulfillment centers means one QA standard on every single order.</strong></p><p>Everything Printify leaves to chance, Printful controls. It prints the vast majority of orders in its own facilities, with published operations stats showing a reshipment rate around 0.24% — no provider vetting, no surprise quality drops, no mediating with third parties when a misprint arrives. Branding is the deepest in POD: custom inside/outside labels, hang tags, pack-ins, and branded packaging that Printify only offers piecemeal through select providers.</p><p>The cost: base prices run 15–35% above Printify's on comparable items, and the catalog (300+ products) is a quarter of Printify's. Printful Growth costs $24.99/month — notably cheaper than Printify Premium's new $39 monthly rate — with up to 33% off products, and it becomes free for a year once you pass $12K/year in sales. For stores past the testing phase, that math increasingly favors Printful.</p><p><strong>Best for:</strong> sellers with proven products who are tired of sampling providers and refunding misprints. <strong>Core difference vs Printify:</strong> owned factories vs open marketplace — consistency and branding in exchange for higher base costs. Full breakdown in <a href=\"/compare/printful-vs-printify/\">Printful vs Printify (2026)</a>.</p>"
+    },
+    {
+      "name": "Gelato",
+      "tagline": "Best for Consistent Quality + Global Reach",
+      "bestFor": "International stores",
+      "pricingShort": "Free; Gelato+ $19.99/mo (annual)",
+      "catalogShort": "~250 curated products",
+      "reviewSlug": "gelato-review",
+      "ctaUrl": "https://gelato.com/?fpr=partner",
+      "pickType": "also",  # 三级推荐: Also Great
+      "content": "<p><strong>Gelato is the best Printify alternative for sellers who want marketplace-like prices without marketplace-quality roulette — plus the best international fulfillment in POD.</strong></p><p>Gelato threads the needle Printify can't: it uses a partner network (140+ production hubs in 32 countries) but vets and manages partners centrally, so quality is uniform without in-house prices. Around 90% of orders are produced in the customer's own country via automatic routing — no manual provider selection, no customs delays, and a smaller carbon footprint. Its curated catalog is the industry's best for wall art and paper goods.</p><p>Crucially for post-hike refugees: Gelato+ costs $19.99/month billed annually ($23.99 monthly) — roughly half of Printify Premium's new $39 monthly rate — with up to 25% off products, premium mockups, and branded inserts on unlimited stores. The trade-offs: a ~250-product catalog (vs Printify's 1,300+), no TikTok Shop integration, and less control over exactly which facility prints your order.</p><p><strong>Best for:</strong> sellers with EU/UK/APAC customers, wall-art stores, and Premium subscribers re-evaluating after the price hike. <strong>Core difference vs Printify:</strong> managed network vs open marketplace — slightly less choice, far less quality risk. See <a href=\"/compare/printify-vs-gelato/\">Printify vs Gelato (2026)</a> and <a href=\"/compare/printful-vs-gelato/\">Printful vs Gelato</a> for the three-way picture.</p>"
+    },
+    {
+      "name": "CustomCat",
+      "tagline": "Cheapest Post-Hike Option for US Apparel",
+      "bestFor": "Budget US volume",
+      "pricingShort": "Free; Lite plan ~$30/mo",
+      "catalogShort": "550+ products",
+      "reviewSlug": None,
+      "ctaUrl": "https://customcat.com",
+      "content": "<p><strong>CustomCat is the answer to 'Printify got too expensive': ~$7 tees and ~$3.50 mugs on its Lite plan are among the lowest base prices in all of POD.</strong></p><p>CustomCat produces everything in its own Detroit facility, which means Printify-beating prices without the provider lottery — one factory, one quality standard, 2–3 business day production. The catalog of 550+ products covers apparel, drinkware, and accessories, and the ~$30/month Lite plan undercuts Printify Premium's new $39 monthly rate while delivering deeper per-unit savings at volume.</p><p>The trade-offs: a single US facility means international orders ship cross-border and slow, product blanks skew basic (heavy on Gildan), branding options are minimal, and the mockup tools feel a generation behind. It's a margin machine for domestic basics, nothing more.</p><p><strong>Best for:</strong> US-focused sellers moving commodity apparel at volume, where Printify Premium's new price broke the spreadsheet. <strong>Core difference vs Printify:</strong> one cheap in-house factory vs a marketplace — Printify-level prices with Printful-style consistency, minus both platforms' polish.</p>"
+    },
+    {
+      "name": "SPOD",
+      "tagline": "Best for Speed Without a Subscription",
+      "bestFor": "Fast-delivery stores",
+      "pricingShort": "Free (no paid plan)",
+      "catalogShort": "250+ products",
+      "reviewSlug": None,
+      "ctaUrl": "https://spod.com",
+      "content": "<p><strong>SPOD is the best Printify alternative when delivery speed is the pain point: most orders are produced within 48 hours — with no subscription fee at all.</strong></p><p>Backed by Spreadshirt's two decades of print infrastructure, SPOD runs US and EU facilities with a 250+ product catalog and a genuinely free model — there is no premium tier, so its competitive base prices are available to everyone from day one. For sellers watching Printify Premium climb to $39/month while their provider of choice still quotes 5-day production, SPOD's 48-hour turnaround at $0/month is a compelling reset.</p><p>The trade-offs: the catalog is a fraction of Printify's, design and mockup tools are basic, bulk-publishing workflow lags the bigger platforms, and branding options, while present (labels, inserts), are thin. Sellers also report fewer integration options beyond the core Shopify/Etsy/WooCommerce set.</p><p><strong>Best for:</strong> stores that advertise fast delivery — seasonal rushes, event merch, gift deadlines — and want out of subscription math entirely. <strong>Core difference vs Printify:</strong> trades catalog breadth and provider choice for guaranteed speed at zero monthly cost.</p>"
+    },
+    {
+      "name": "Gooten",
+      "tagline": "Best for Products Printify Doesn't Have",
+      "bestFor": "Home decor, unique SKUs",
+      "pricingShort": "Free (volume discounts)",
+      "catalogShort": "150+ products",
+      "reviewSlug": None,
+      "ctaUrl": "https://www.gooten.com",
+      "content": "<p><strong>Gooten is the best Printify alternative for differentiated catalogs: its algorithm routes orders across 30+ manufacturing partners to products — home decor, wall art, lifestyle goods — that mainstream catalogs skip.</strong></p><p>Gooten looks like Printify on paper (partner network, per-order pricing, no subscription) but works differently: you never choose a provider. Its routing algorithm picks the best partner per order by location, price, and availability — the vetting work Printify outsources to you is Gooten's core product. Partner competition keeps costs low, volume discounts reward scaling, and the API is mature enough for custom storefronts.</p><p>The honest caveat: a managed marketplace is still a marketplace. Quality varies between partners (order samples), mockup tools are basic, and the platform has a steeper learning curve than Printify's polished dashboard. Support is solid but the community and documentation are smaller.</p><p><strong>Best for:</strong> established sellers who've exhausted Printify's catalog and want differentiated products — blankets, pillows, canvas, kitchen goods — without doing provider QA themselves. <strong>Core difference vs Printify:</strong> algorithmic provider routing vs manual provider selection — same marketplace economics, less unpaid labor.</p>"
+    },
+    {
+      "name": "Teelaunch",
+      "tagline": "Simplest Budget Restart",
+      "bestFor": "Beginners, lean budgets",
+      "pricingShort": "Free",
+      "catalogShort": "100+ products",
+      "reviewSlug": None,
+      "ctaUrl": "https://teelaunch.com",
+      "pickType": "budget",  # 三级推荐: Budget Pick
+      "content": "<p><strong>Teelaunch is the best Printify alternative for sellers who want simpler and cheaper, not bigger: rock-bottom base prices, no subscription, and an interface a beginner can learn in an afternoon.</strong></p><p>Teelaunch strips POD to the essentials: a tight 100+ product catalog (apparel, mugs, wall art, plus oddities like Bluetooth speakers and cutting boards), some of the lowest no-subscription base prices available, and a Shopify app that just works. When Printify's 1,300-product catalog feels less like variety and more like decision fatigue — and Premium just got $10/month more expensive — Teelaunch's minimalism is the feature.</p><p>The trade-offs: fulfillment speed and consistency get mixed reviews versus the top tier, the Etsy integration is less polished, branding options don't exist, and it's a starting platform rather than a scaling one. Treat it as a low-cost proving ground; migrate winners elsewhere later.</p><p><strong>Best for:</strong> first-time sellers validating a niche, and side-hustlers who found Printify's provider management overkill for a 5-listing shop. <strong>Core difference vs Printify:</strong> radical simplicity — you surrender catalog breadth, speed guarantees, and scaling tools for the lowest friction entry in POD.</p>"
+    },
+    {
+      "name": "Zazzle",
+      "tagline": "Best Marketplace Exit (They Bring the Buyers)",
+      "bestFor": "Designers without a store",
+      "pricingShort": "Free; you set royalty %",
+      "catalogShort": "1,000+ product types",
+      "reviewSlug": None,
+      "ctaUrl": "https://www.zazzle.com",
+      "content": "<p><strong>Zazzle is the best Printify alternative if your real problem was never printing — it's a marketplace with millions of built-in shoppers where you upload designs and set your own royalty.</strong></p><p>Printify is only a fulfillment layer: the store, the traffic, the ads, and the customer service are all on you. Zazzle inverts that. Upload designs to 1,000+ product types, set a royalty rate (typically 5–15% on physical goods; Zazzle lets you choose), and its marketplace audience does the finding. Zazzle handles production through its own facilities and maker network, shipping, and support — quality is managed centrally, so there's no provider lottery either.</p><p>The trade-offs are the standard marketplace ones: you build no brand equity and own no customer relationship, competition on-platform is fierce, and royalties are thinner than a well-run Printify store's margins. Many designers run both: Zazzle for passive income, a self-hosted store for brand building.</p><p><strong>Best for:</strong> designers who want income without running a store, ads, or fulfillment decisions at all. <strong>Core difference vs Printify:</strong> marketplace demand vs bring-your-own-traffic fulfillment — a different business model, not just a different printer.</p>"
+    }
+  ],
+  # ---- 标准模板: 前三名的功能对照矩阵 ----
+  "featureCols": ["Printful", "Gelato", "CustomCat"],
+  "features": [
+    {"feature": "Free plan",                          "values": ["yes",     "yes",     "yes"]},
+    {"feature": "In-house production facilities",     "values": ["yes",     "no",      "yes"]},
+    {"feature": "Local production in 30+ countries",   "values": ["partial", "yes",     "no"]},
+    {"feature": "Custom labels & pack-ins",           "values": ["yes",     "partial", "no"]},
+    {"feature": "Embroidery options",                 "values": ["yes",     "partial", "no"]},
+    {"feature": "Paid plan optional (not required)",  "values": ["yes",     "yes",     "yes"]},
+  ],
 }
 
 p = 'F:/aitoptools/src/data/listicles.json'
@@ -112,3 +199,11 @@ total = w(entry['quickVerdict']) + w(entry['introContent']) + w(entry['closingCo
 print('listicles:', [x['slug'] for x in d])
 print('page total words:', total)
 print('compare links:', sum(it['content'].count('/compare/') for it in entry['items']))
+
+# 落盘后立刻校验 — 数据不合格不允许构建 (与 CI/本地共用同一脚本)
+import subprocess, sys as _sys
+r = subprocess.run([_sys.executable, os.path.join(os.path.dirname(__file__), 'validate_content_data.py')], capture_output=True, text=True)
+print(r.stdout)
+if r.returncode != 0:
+    print(r.stderr, file=_sys.stderr)
+    raise SystemExit(r.returncode)
