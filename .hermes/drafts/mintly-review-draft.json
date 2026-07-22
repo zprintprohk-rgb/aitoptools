@@ -1,0 +1,32 @@
+{
+  "slug": "mintly-review",
+  "name": "Mintly",
+  "category": "AI Product Photography",
+  "tagline": "Upload one product image, generate static + video ads in bulk, product text/logo 100% preserved (no drift)",
+  "metaDesc": "Mintly review (TBD): Bulk AI product photo + video ad generation, 100% product fidelity (no AI drift). Strong for jewelry/luxury. Best for sellers prioritizing product authenticity in AI ads.",
+  "rating": null,
+  "price": "TBD (待 M3 后续核实)",
+  "pros": [],
+  "cons": [],
+  "content_md": "<p>[草稿] Mintly — Upload one product image, generate static + video ads in bulk, product text/logo 100% preserved (no drift)</p><p>本条草稿 2026-07-22 由 Hermes 批量评测流水线生成, 优先级 low。事实链待 M3 后续 WebSearch 补充 (雷达源: 2024 年已存在 / 与 AdCreative.ai 选题重叠 / Microsoft Marketplace 列出 affiliate)。</p>",
+  "faqs": [
+    {
+      "q": "What is Mintly?",
+      "a": "[待 M3 核实] Upload one product image, generate static + video ads in bulk, product text/logo 100% preserved (no drift)"
+    }
+  ],
+  "affiliateUrl": "",
+  "visitUrl": "https://usemintly.com",
+  "sources": [
+    {
+      "url": "discovery/2026-07-21.md",
+      "date": "2026-07-21",
+      "claim": "雷达扫描发现 Mintly, 优先级 low"
+    }
+  ],
+  "draftedAt": "2026-07-22",
+  "draftedBy": "hermes",
+  "verifier": "M3 (待 user 拍板)",
+  "readyForPublish": false,
+  "verificationStatus": "partial"
+}

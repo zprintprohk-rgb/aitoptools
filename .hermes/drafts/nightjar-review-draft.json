@@ -1,0 +1,32 @@
+{
+  "slug": "nightjar-review",
+  "name": "Nightjar",
+  "category": "AI Product Photography",
+  "tagline": "Reusable 'photography styles' for AI product photos, Multi-Shot multi-angle generation, Shopify app",
+  "metaDesc": "Nightjar review (TBD): AI product photography with reusable style consistency, Multi-Shot multi-angle, Shopify app integration. Best for sellers with multi-SKU catalogs needing visual consistency.",
+  "rating": null,
+  "price": "TBD (待 M3 后续核实)",
+  "pros": [],
+  "cons": [],
+  "content_md": "<p>[草稿] Nightjar — Reusable 'photography styles' for AI product photos, Multi-Shot multi-angle generation, Shopify app</p><p>本条草稿 2026-07-22 由 Hermes 批量评测流水线生成, 优先级 medium。事实链待 M3 后续 WebSearch 补充 (雷达源: 7 月多篇电商摄影 roundup 列为'目录级一致性'首选)。</p>",
+  "faqs": [
+    {
+      "q": "What is Nightjar?",
+      "a": "[待 M3 核实] Reusable 'photography styles' for AI product photos, Multi-Shot multi-angle generation, Shopify app"
+    }
+  ],
+  "affiliateUrl": "",
+  "visitUrl": "https://nightjar.so",
+  "sources": [
+    {
+      "url": "discovery/2026-07-21.md",
+      "date": "2026-07-21",
+      "claim": "雷达扫描发现 Nightjar, 优先级 medium"
+    }
+  ],
+  "draftedAt": "2026-07-22",
+  "draftedBy": "hermes",
+  "verifier": "M3 (待 user 拍板)",
+  "readyForPublish": false,
+  "verificationStatus": "partial"
+}

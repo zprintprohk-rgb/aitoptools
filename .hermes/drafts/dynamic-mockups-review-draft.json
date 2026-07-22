@@ -1,0 +1,32 @@
+{
+  "slug": "dynamic-mockups-review",
+  "name": "Dynamic Mockups",
+  "category": "AI Product Photography",
+  "tagline": "Bulk mockup generation platform + API, 100 mockups in ~10 seconds, PSD upload + Etsy/Shopify/WooCommerce sync",
+  "metaDesc": "Dynamic Mockups review (TBD): Bulk mockup generation via API, 100 mockups in 10 seconds, direct store sync. Best for sellers doing volume mockup production or running print-shop workflow.",
+  "rating": null,
+  "price": "TBD (待 M3 后续核实)",
+  "pros": [],
+  "cons": [],
+  "content_md": "<p>[草稿] Dynamic Mockups — Bulk mockup generation platform + API, 100 mockups in ~10 seconds, PSD upload + Etsy/Shopify/WooCommerce sync</p><p>本条草稿 2026-07-22 由 Hermes 批量评测流水线生成, 优先级 medium。事实链待 M3 后续 WebSearch 补充 (雷达源: 7 月 getartdrop 对比文评为'规模化批量 mockup 首选')。</p>",
+  "faqs": [
+    {
+      "q": "What is Dynamic Mockups?",
+      "a": "[待 M3 核实] Bulk mockup generation platform + API, 100 mockups in ~10 seconds, PSD upload + Etsy/Shopify/WooCommerce sync"
+    }
+  ],
+  "affiliateUrl": "",
+  "visitUrl": "https://dynamicmockups.com",
+  "sources": [
+    {
+      "url": "discovery/2026-07-21.md",
+      "date": "2026-07-21",
+      "claim": "雷达扫描发现 Dynamic Mockups, 优先级 medium"
+    }
+  ],
+  "draftedAt": "2026-07-22",
+  "draftedBy": "hermes",
+  "verifier": "M3 (待 user 拍板)",
+  "readyForPublish": false,
+  "verificationStatus": "partial"
+}
