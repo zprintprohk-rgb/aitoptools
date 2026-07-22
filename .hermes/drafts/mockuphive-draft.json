@@ -1,0 +1,42 @@
+{
+  "slug": "mockuphive-review",
+  "name": "MockupHive",
+  "category": "AI Product Photography",
+  "tagline": "Create & Download Premium Mockup Templates — AI text-to-mockup + 2000+ PSD templates + Figma/Adobe Express plugins",
+  "metaDesc": "MockupHive Review 2026: 2000+ high-resolution PSD mockup templates across 9 categories with AI text-to-mockup generation. Free plan available, Pro from $9/mo. Ideal for POD sellers needing fast product mockups.",
+  "rating": 4.0,
+  "price": "Free / Pro $9/mo / Unlimited $15/mo / Lifetime $199",
+  "pros": [
+    "2000+ high-res mockups across 9 categories including 258 apparel templates for POD",
+    "AI text-to-mockup generator creates unique studio-quality mockups in under 15 seconds",
+    "Commercial license on all paid plans usable on Amazon Etsy Shopify",
+    "Native Figma plugin and Adobe Express add-on streamline designer workflows",
+    "Free plan with 1 download/day + 10 AI credits to test the platform",
+    "Lifetime plan at $199 one-time offers unlimited downloads + 500 AI credits"
+  ],
+  "cons": [
+    "Very new platform (founded 2025 launched June 2026) limited track record and third-party reviews",
+    "No dedicated POD/print-on-demand section garment mockups are general-purpose",
+    "No affiliate program found /affiliates returns 404 cannot earn commissions promoting it",
+    "Free tier very restrictive (1 download/day limited AI credits)",
+    "No G2 or Capterra ratings available as of July 2026"
+  ],
+  "content_md": "## What Is MockupHive?\n\nMockupHive is a mockup template marketplace launched in June 2026 offering 2000+ high-resolution PSD templates across 9 categories plus an AI text-to-mockup generator. It provides drag-and-drop online editing PSD smart object downloads and native plugins for Figma and Adobe Express.\n\n## Key Features for Print Shops and POD Sellers\n\n### 2000+ Templates in 9 Categories\nDevice (689) Apparel (258) Branding (280) Packaging (121) Print (170) Stationery (206) Social Media (134) Vehicle (9) Magazine (5)\n\n### AI Text-to-Mockup Generator\nPrompt-based generation with auto surface detection perspective wrapping lighting/shadow. Under 15 seconds generation time.\n\n### Figma Plugin and Adobe Express Add-on\nNative community plugin and add-on for seamless workflow integration.\n\n### Commercial License\nStandard license on Pro Extended on Unlimited/Lifetime. Usable for commercial POD listings.\n\n## Pricing\n\n| Plan | Price | Downloads/Day | AI Credits |\n|------|-------|---------------|------------|\n| Free | $0 | 1 | 10 (one-time) |\n| Pro Monthly | $9/mo | 30 | 100/mo |\n| Pro Annual | $24-29/yr | 30 | 100/yr |\n| Unlimited Monthly | $15/mo | Unlimited | 300/mo |\n| Unlimited Annual | $39-49/yr | Unlimited | 300/yr |\n| Lifetime | $199-299 one-time | Unlimited | 500 (one-time) |\n\n## Value for Print Shops / POD Sellers\n\n1. Upload your product design to MockupHive\n2. Browse 258 apparel templates for T-shirts hoodies jerseys\n3. Apply your design via online editor (no Photoshop needed)\n4. Use AI generator for unique perspectives in under 15 seconds\n5. Export high-resolution PNG or PSD with smart objects\n6. List directly on Shopify Etsy or Amazon\n\nEstimated time savings: Traditional mockup creation 2-3 hours per product. With MockupHive: 5-15 minutes.\n\n## Verdict\n\nUse it if: You need affordable fast mockup generation and don't mind a newer platform. The Lifetime plan is excellent value.\n\nSkip it if: You require established third-party validation need POD-specific templates or want to earn affiliate commissions promoting it.",
+  "faqs": [
+    {"q": "Is MockupHive free?", "a": "Yes MockupHive has a Free plan with 1 download/day and 10 AI credits (one-time). Paid plans start at $9/month."},
+    {"q": "Does MockupHive have an affiliate program?", "a": "No. MockupHive currently does not offer a public affiliate or referral program."},
+    {"q": "Can I use MockupHive mockups for POD products?", "a": "Yes. Paid plans include a commercial license that allows using mockups for product listings on POD platforms."}
+  ],
+  "affiliateUrl": "",
+  "visitUrl": "https://mockuphive.com",
+  "sources": [
+    {"url": "https://mockuphive.com", "date": "2026-07-22", "claim": "Official site homepage pricing AI generator blog"},
+    {"url": "https://mockuphive.com/pricing", "date": "2026-07-22", "claim": "Pricing plans Free Pro $9/mo Unlimited $15/mo Lifetime $199-299"},
+    {"url": "https://mockuphive.com/ai-mockup-generator", "date": "2026-07-22", "claim": "AI generation capabilities credit system top-up packs"}
+  ],
+  "draftedAt": "2026-07-22",
+  "draftedBy": "hermes",
+  "verificationStatus": "partial",
+  "verificationNotes": "Pricing and features verified from official site. G2/Capterra/ProductHunt reviews blocked by bot protection. No affiliate program confirmed (404 at /affiliates).",
+  "readyForPublish": false
+}

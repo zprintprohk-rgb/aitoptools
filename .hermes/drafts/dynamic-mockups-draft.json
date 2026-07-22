@@ -1,0 +1,42 @@
+{
+  "slug": "dynamic-mockups-review",
+  "name": "Dynamic Mockups",
+  "category": "AI Product Photography",
+  "tagline": "Photorealistic product mockups at scale 10000+ templates AI generator REST API PSD uploads",
+  "metaDesc": "Dynamic Mockups Review 2026: AI-powered mockup generation platform with 10000+ templates REST API and PSD upload. Free tier available Pro from $15/mo. Best for POD sellers needing bulk mockup generation.",
+  "rating": 4.3,
+  "price": "Free (50 credits) / Pro from $15/mo (annual billing)",
+  "pros": [
+    "Free tier with 50 credits + daily free AI generations (watermark-free exports)",
+    "10000+ mockup templates with custom PSD upload support",
+    "RESTful API with 4 SDKs (JS Python Laravel Rails) and MCP Server for AI agents",
+    "Bulk generation and embedding via iFrame editor",
+    "Shopify/Etsy/Make/Zapier integrations available",
+    "Pro plans from $15/mo billed annually affordable for most POD sellers"
+  ],
+  "cons": [
+    "No webhook support synchronous API only (<1s response but no async callbacks)",
+    "Image link expiry at 24 hours requires saving outputs locally",
+    "Credit system annual credit rollover but no monthly rollover",
+    "No affiliate program found /affiliates returns 404",
+    "Watermark on free API calls"
+  ],
+  "content_md": "## What Is Dynamic Mockups?\n\nDynamic Mockups is a mockup generation platform for POD sellers and e-commerce brands. Generate photorealistic product mockups from 10000+ templates or custom PSD files with AI-powered mockup and video generation. Includes a RESTful API for automated workflows.\n\n## Key Features for Print Shops and POD Sellers\n\n### 10000+ Templates\nIndustry's largest mockup template library covering apparel accessories packaging print devices.\n\n### REST API with SDKs\n10+ endpoint API with JavaScript Python Laravel and Rails SDKs. Rate limit 300 calls/min. Auth via x-api-key.\n\n### AI-Powered Generation\nAI mockup generator and AI video mockup generation for dynamic product presentations.\n\n### Integrations\nShopify Etsy Make.com Zapier and embeddable iFrame editor.\n\n## Pricing\n\n| Plan | Price | Credits | Details |\n|------|-------|---------|---------|\n| Free | $0 | 50 credits + daily free AI | Watermark-free exports |\n| Pro | $15/mo (annual) | 3600/yr ($0.051/credit) | Tiers up to 60000/yr |\n| Enterprise | Custom | 5000+/mo | White-label SLA |\n\n## Verdict\n\nUse it if: You need API-driven bulk mockup generation or have 100+ SKUs to mock up regularly.\n\nSkip it if: You need async webhook workflows or can't work within the credit system.",
+  "faqs": [
+    {"q": "Is Dynamic Mockups free?", "a": "Yes. Dynamic Mockups has a Free plan with 50 credits and daily free AI generations. Watermark-free on all exports."},
+    {"q": "Does Dynamic Mockups have an API?", "a": "Yes. A RESTful API with 10+ endpoints 4 SDKs and MCP Server for AI agents. Rate limit 300 calls/minute."},
+    {"q": "Does Dynamic Mockups have an affiliate program?", "a": "No. No public affiliate program was found. /affiliates returns 404."}
+  ],
+  "affiliateUrl": "",
+  "visitUrl": "https://dynamicmockups.com",
+  "sources": [
+    {"url": "https://dynamicmockups.com", "date": "2026-07-22", "claim": "Official site homepage features pricing"},
+    {"url": "https://dynamicmockups.com/pricing", "date": "2026-07-22", "claim": "Pricing Free Pro from $15/mo (annual) Enterprise custom"},
+    {"url": "https://docs.dynamicmockups.com", "date": "2026-07-22", "claim": "API documentation with endpoints SDKs rate limits"}
+  ],
+  "draftedAt": "2026-07-22",
+  "draftedBy": "hermes",
+  "verificationStatus": "verified",
+  "verificationNotes": "All pricing and features verified from official website and API docs. No affiliate program confirmed.",
+  "readyForPublish": false
+}

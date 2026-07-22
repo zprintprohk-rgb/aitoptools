@@ -1,0 +1,41 @@
+{
+  "slug": "nightjar-review",
+  "name": "Nightjar",
+  "category": "AI Product Photography",
+  "tagline": "AI product photography for e-commerce catalogs at scale consistent brand imagery across hundreds of SKUs",
+  "metaDesc": "Nightjar Review 2026: AI product photography for e-commerce catalogs with catalog-scale brand consistency. Studio $25/mo Studio+ $50/mo. Native Shopify app. Best for POD sellers with large SKU catalogs.",
+  "rating": 4.0,
+  "price": "Free (6 images) / Studio $25/mo / Studio+ $50/mo",
+  "pros": [
+    "Catalog-scale brand consistency image 100 matches image 1 in style lighting background",
+    "AI fashion models and Virtual Try-On reduces return rates for apparel POD",
+    "Own commercial rights to all AI-generated images",
+    "Native Shopify app for seamless e-commerce integration",
+    "No watermark on paid plans"
+  ],
+  "cons": [
+    "Only solves product photography not mockup generation or fulfillment",
+    "$25/mo minimum for serious use may be steep for solo POD sellers",
+    "400-image cap on top plan may be tight for large seasonal catalogs",
+    "Relatively new (Dec 2025 launch) limited reviews and track record",
+    "No public affiliate program found"
+  ],
+  "content_md": "## What Is Nightjar?\n\nNightjar (nightjar.so) is an AI product photography platform for e-commerce sellers. Upload product photos and Nightjar generates catalog-consistent brand imagery preserving logos text colors and materials. Key differentiator: catalog-wide consistency where image 100 matches image 1.\n\n## Key Features for Print Shops and POD Sellers\n\n### Catalog Consistency\nAI ensures every product image in your catalog matches in lighting background and style. Critical for professional-looking storefronts.\n\n### AI Fashion Models and Virtual Try-On\nAI-generated models wearing your garments. Reduces return rates by showing realistic fit.\n\n### Shopify Native App\nTight integration with Shopify for direct product image management.\n\n## Pricing\n\n| Plan | Price | Images/Month |\n|------|-------|--------------|\n| Free | $0 | 6 (trial) |\n| Studio | $25/mo | 150 |\n| Studio+ | $50/mo | 400 |\n\n## Verdict\n\nUse it if: You have 50+ SKUs and need consistent product photography. Strong fit for apparel POD sellers.\n\nSkip it if: You need mockup templates (not photography) or have fewer than 20 products.",
+  "faqs": [
+    {"q": "Is Nightjar free?", "a": "Nightjar offers a free trial with 6 images. Paid plans start at $25/month for the Studio plan."},
+    {"q": "Does Nightjar have a Shopify integration?", "a": "Yes. Nightjar has a native Shopify app for seamless product image management."},
+    {"q": "Does Nightjar have an affiliate program?", "a": "No public affiliate program was found during our research."}
+  ],
+  "affiliateUrl": "",
+  "visitUrl": "https://nightjar.so",
+  "sources": [
+    {"url": "https://nightjar.so", "date": "2026-07-22", "claim": "Official site homepage features blog"},
+    {"url": "https://nightjar.so/pricing", "date": "2026-07-22", "claim": "Pricing Free (6 images) Studio $25/mo (150 images) Studio+ $50/mo (400 images)"},
+    {"url": "https://apps.shopify.com/nightjar", "date": "2026-07-22", "claim": "Shopify App Store listing with pricing and feature details"}
+  ],
+  "draftedAt": "2026-07-22",
+  "draftedBy": "hermes",
+  "verificationStatus": "verified",
+  "verificationNotes": "Pricing and features verified from official site (nightjar.so) and Shopify App Store listing. No affiliate program publicly visible.",
+  "readyForPublish": false
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "mintly-ai-review",
+  "name": "Mintly",
+  "category": "AI Ad Creative",
+  "tagline": "AI ad generator for e-commerce/DTC brands static + video ads. 20% lifetime affiliate commissions.",
+  "metaDesc": "Mintly Review 2026: AI ad generator for e-commerce brands. Starter $19/mo Growth $49/mo. 20% lifetime affiliate commissions via Microsoft Marketplace. Best for POD sellers creating ad creative for social media marketing.",
+  "rating": 4.0,
+  "price": "Starter $19/mo / Growth $49/mo / Scale $199/mo",
+  "pros": [
+    "20% lifetime commission affiliate program with 90-day cookie one of the best in the AI tools space",
+    "AI generates both static and video ad creative from product links",
+    "Listed on Microsoft Marketplace for enterprise discoverability",
+    "Free tier available to test the platform",
+    "E-commerce/DTC focus aligns with POD seller audience"
+  ],
+  "cons": [
+    "NOT a mockup or print tool it is a social/digital ad creative generator only",
+    "Lacks POD-specific mockups print-ready files or platform integrations",
+    "May be tangential to the site core mockup/print vertical",
+    "$199/mo Scale plan is expensive for solo sellers",
+    "Relatively new platform limited long-term track record"
+  ],
+  "content_md": "## What Is Mintly?\n\nMintly (usemintly.com) by FLAME INDUSTRIES INC. is an AI ad generator for e-commerce and DTC brands. Create static and video ad creative from product links. Listed on Microsoft Marketplace. Offers a 20% lifetime commission affiliate program.\n\n## Key Features for Print Shops and POD Sellers\n\n### AI Ad Generation\nGenerate ad creative from your product URLs. Static image ads + video ads optimized for social media platforms.\n\n### E-Commerce Focus\nBuilt specifically for DTC/e-commerce brands. Product feeds dynamic creative optimization.\n\n### Microsoft Marketplace\nListed as a verified SaaS app adding enterprise credibility.\n\n## Pricing\n\n| Plan | Price | Features |\n|------|-------|----------|\n| Free | $0 | Basic ad generation limited exports |\n| Starter | $19/mo | Standard templates up to 50 ads/mo |\n| Growth | $49/mo | Advanced templates unlimited ads (Most Popular) |\n| Scale | $199/mo | Custom branding API access priority support |\n\n## Affiliate Program\n\n20% lifetime commission 90-day cookie window. Top affiliates earn ~$2980/mo average. Join via the Microsoft Marketplace listing or usemintly.com/affiliates.\n\n## Verdict\n\nUse it if: Your POD store needs ad creative for Facebook/Instagram/TikTok marketing and you want the best affiliate commissions.\n\nSkip it if: You need product mockups or print-specific tools this is ad creative only.",
+  "faqs": [
+    {"q": "Is Mintly free?", "a": "Mintly offers a Free tier. Paid plans start at $19/month for the Starter plan."},
+    {"q": "Does Mintly have an affiliate program?", "a": "Yes. 20% lifetime commission with 90-day cookie window. Average top affiliate earnings ~$2980/month."},
+    {"q": "Is Mintly a mockup generator?", "a": "No. Mintly is an AI ad creative generator for social media marketing not a product mockup tool."}
+  ],
+  "affiliateUrl": "https://usemintly.com/affiliates",
+  "visitUrl": "https://usemintly.com",
+  "sources": [
+    {"url": "https://usemintly.com", "date": "2026-07-22", "claim": "Official site homepage features pricing affiliate program"},
+    {"url": "https://usemintly.com/pricing", "date": "2026-07-22", "claim": "Pricing Free Starter $19/mo Growth $49/mo Scale $199/mo"},
+    {"url": "https://usemintly.com/affiliates", "date": "2026-07-22", "claim": "Affiliate program 20% lifetime commission 90-day cookie"}
+  ],
+  "draftedAt": "2026-07-22",
+  "draftedBy": "hermes",
+  "verificationStatus": "verified",
+  "verificationNotes": "All pricing and features verified from official website. Affiliate program confirmed active: 20% lifetime 90-day cookie. Note: Mintly is at usemintly.com not mintly.ai (which is parked).",
+  "readyForPublish": false
+}

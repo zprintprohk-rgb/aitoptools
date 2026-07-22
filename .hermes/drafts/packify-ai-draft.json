@@ -1,0 +1,43 @@
+{
+  "slug": "packify-ai-review",
+  "name": "Packify.ai",
+  "category": "AI Print & Packaging Design",
+  "tagline": "The First AI Packaging Design Agent text-to-3D packaging print-ready dielines AI photoshoot",
+  "metaDesc": "Packify.ai Review 2026: AI packaging design agent that converts text prompts to 3D packaging concepts with print-ready dielines. Basic $19.90/mo Pro $29.90/mo. Ideal for packaging print shops and POD sellers.",
+  "rating": 4.5,
+  "price": "Basic $19.90/mo / Pro $29.90/mo / Business $49.90/mo / Enterprise $129/mo",
+  "pros": [
+    "End-to-end pipeline AI concept print-ready dielines verified manufacturer network",
+    "No design skills needed text-to-packaging reduces reliance on expensive freelancers",
+    "3D mockups for e-commerce listings before committing to print runs",
+    "AI Photoshoot for fast product imagery (great for POD product listings)",
+    "Commercial license options (Personal on Pro Company on Business/Enterprise)",
+    "API access on Business plan for automating packaging generation in high-volume workflows",
+    "200000+ brands and designers using the platform"
+  ],
+  "cons": [
+    "No free tier beyond 100 one-time credits need paid plan for ongoing use",
+    "Credit-based system can be costly (10 credits per AI design 5 per photoshoot)",
+    "No dedicated print-on-demand integration listed (no direct Shopify/POD plugin)",
+    "Monthly pricing may be steep for solo POD sellers ($19.90/mo minimum for active use)",
+    "No public affiliate program found cannot earn commissions referring sellers"
+  ],
+  "content_md": "## What Is Packify.ai?\n\nPackify.ai is an AI-powered packaging design agent by PACDORA PTE. LTD. that converts text prompts into 3D packaging concepts with print-ready dielines. It offers AI Photoshoot label generator nutrition facts generator and API access for e-commerce workflows.\n\n## Key Features for Print Shops and POD Sellers\n\n### AI Packaging Design\nTransform text into 3D packaging concepts in seconds. Generate product visuals from natural language prompts.\n\n### Print-Ready Dielines\nQuick templates for packaging that go from mockup to manufacturable dielines box bag pouch label and more.\n\n### AI Photoshoot\nSwap backgrounds instantly for product-photography-style renders without a physical photoshoot.\n\n### Packify API\nIntegrate the generation engine into e-commerce workflows (Business and Enterprise plans).\n\n## Pricing\n\n| Plan | Monthly | Annual (per mo) | Credits/Mo |\n|------|---------|-----------------|------------|\n| Free | $0 | - | 100 one-time |\n| Basic | $19.90 | $14.90 | 1000 |\n| Pro | $29.90 | $19.90 | 2500 |\n| Business | $49.90 | $29.90 | 3500 |\n| Enterprise | $129.00 | $69.90 | 10000 |\n\n## Value for Print Shops / POD Sellers\n\n1. Describe your packaging need via text prompt\n2. AI generates 3D packaging concepts in seconds\n3. Refine with Smart Design Edit on dieline layers\n4. Generate AI Photoshoot images for product listings\n5. Export print-ready dielines for manufacturing\n\n## Verdict\n\nUse it if: You need AI-powered packaging design with print-ready output. Best for print shops adding packaging services.\n\nSkip it if: You only need basic product mockups (not packaging) or have a tight budget under $20/mo.",
+  "faqs": [
+    {"q": "Is Packify.ai free?", "a": "Packify.ai offers a Free tier with 100 one-time credits to explore features. Active use requires a paid plan starting at $19.90/month."},
+    {"q": "Does Packify.ai have an affiliate program?", "a": "No public affiliate program exists. A referral link is in the footer but has no published commission structure."},
+    {"q": "Can Packify.ai generate print-ready files?", "a": "Yes. Packify.ai generates print-ready dielines compatible with standard packaging manufacturing."}
+  ],
+  "affiliateUrl": "",
+  "visitUrl": "https://www.packify.ai",
+  "sources": [
+    {"url": "https://www.packify.ai", "date": "2026-07-22", "claim": "Official site homepage AI packaging design agent overview"},
+    {"url": "https://www.packify.ai/pricing", "date": "2026-07-22", "claim": "Pricing plans Free Basic $19.90 Pro $29.90 Business $49.90 Enterprise $129/mo"},
+    {"url": "https://www.packify.ai/features", "date": "2026-07-22", "claim": "AI Design AI Photoshoot Smart Edit API access dieline export"}
+  ],
+  "draftedAt": "2026-07-22",
+  "draftedBy": "hermes",
+  "verificationStatus": "verified",
+  "verificationNotes": "All pricing and features verified from official website. No affiliate program publicly visible. Rating 4.9 from 101 reviews per site JSON-LD.",
+  "readyForPublish": false
+}
