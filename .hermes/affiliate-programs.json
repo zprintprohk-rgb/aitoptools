@@ -98,19 +98,27 @@
     },
     {
       "name": "Claid AI Affiliate Program",
-      "network": "PartnerStack",
-      "commission": "20-30% recurring",
-      "status": "not-applied",
-      "signup_url": "https://claid.ai/affiliates",
-      "notes": "AI product photography, $49/mo AOV"
+      "network": "PartnerStack / FirstPromoter",
+      "commission": "20% lifetime recurring",
+      "status": "registered",
+      "signup_url": "https://partners.claid.ai",
+      "notes": "AI product photography, $49/mo AOV. Account registered, link not yet live on site."
     },
     {
       "name": "Kittl Affiliate Program",
       "network": "Impact",
-      "commission": "20-30% recurring",
-      "status": "not-applied",
+      "commission": "20% first 12 months",
+      "status": "pending",
       "signup_url": "https://kittl.com/affiliates",
-      "notes": "AI print design tool, perfect vertical"
+      "notes": "AI print design tool. Impact account Jerome88 registered, pending Impact Marketplace upgrade. User said 'not approved yet'."
+    },
+    {
+      "name": "Placeit Affiliate Program",
+      "network": "Impact",
+      "commission": "$50/year or $20/month new sub",
+      "status": "pending",
+      "signup_url": "https://placeit.net/affiliates",
+      "notes": "Mockup generator. Impact account exists, pending Marketplace upgrade to apply."
     },
     {
       "name": "Surfer SEO Affiliate Program",
@@ -130,8 +138,26 @@
     }
   ],
   "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
-  "last_updated": "2026-07-16",
+  "last_updated": "2026-07-23",
+  "monitoring": {
+    "gmail_api_status": "UNAVAILABLE — 凭证文件 credentials.affiliate.local.json 仅有平台账号 (Claid/PartnerStack/Impact/Looka/Printful/Mockey),无 Gmail OAuth / App Password / IMAP 凭证。2026-07-22 启动 cron 以来,Gmail 检查无法真实执行,日更靠 state file + user 手动告知。",
+    "check_method": "state-file-only (no live email read)",
+    "next_action": "user 提供 Gmail API OAuth token 或 App Password → 写入 .hermes/secrets/gmail_credentials.json (gitignore) → 改 cron 通道",
+    "last_live_check": "never (cron 启动即无通道)"
+  },
+  "pending_applications_aging": {
+    "as_of": "2026-07-23",
+    "items": [
+      {"name": "Claid AI", "applied": "2026-07-17", "days": 6, "network": "FirstPromoter (partners.claid.ai)", "next_action": "7/24 达 7 天阈值,user 拍板 follow-up 还是降级"},
+      {"name": "Printify", "applied": "2026-07-17", "days": 6, "network": "PartnerStack", "next_action": "7/24 达 7 天阈值"},
+      {"name": "Looka", "applied": "2026-07-17", "days": 6, "network": "in-house (looka.com/affiliates)", "next_action": "7/24 达 7 天阈值;账号已建但推广链接未生成"},
+      {"name": "Printful", "applied": "2026-07-17", "days": 6, "network": "in-house", "next_action": "7/24 达 7 天阈值;等邮箱确认+人工审批 (2-5 工作日)"},
+      {"name": "Impact Marketplace Upgrade", "applied": "2026-07-18", "days": 5, "network": "Impact", "next_action": "7/25 达 7 天阈值;获批后才能在市场申请 Kittl/Placeit"},
+      {"name": "Kittl (re-apply post Marketplace upgrade)", "applied": null, "days": null, "network": "Impact", "next_action": "等 Impact Marketplace 通过后重提"}
+    ]
+  },
   "milestones": {
-    "2026-07-16_nord_approved": "✅ Nord Security affiliate program approved. Manager: Yan. Links: NordVPN + NordPass. Site pages live at /nordvpn-review/ and /nordpass-review/"
+    "2026-07-16_nord_approved": "✅ Nord Security affiliate program approved. Manager: Yan. Links: NordVPN + NordPass. Site pages live at /nordvpn-review/ and /nordpass-review/",
+    "2026-07-22_mockey_approved": "✅ Mockey AI (Endorsely) approved & active. Link: https://mockey.ai?via=jerome796. 30% recurring / 90-day cookie / PayPal monthly."
   }
 }
