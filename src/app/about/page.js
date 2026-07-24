@@ -19,6 +19,12 @@ export default function AboutPage() {
         <p><strong>Independent Operation:</strong> Print AI Tools (aitoptools.net) is independently operated and is not affiliated with, partnered with, or authorized by aitoptools.com. Our content focuses exclusively on AI tools for print shops, packaging, cross-border e-commerce, and independent store operations.</p>
       </div>
 
+      <h2 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '28px 0 10px', color: '#292524' }}>Who Runs This Site</h2>
+      <div className="highlight-box">
+        <p><strong>Founder &amp; Editor:</strong> Print AI Tools (aitoptools.net) is founded and written by <strong>Jerome Tang</strong>, operating under the trade name <strong>ZPrintPro</strong>. Jerome is also Sales &amp; Marketing Manager at Shenzhen Cai Long Printing &amp; Packaging Co., Ltd. — the same parent company behind this site — and has spent over a decade in the printing and packaging industry.</p>
+        <p>You can verify this identity on <a href="https://www.linkedin.com/in/jerome-tang-442ab8424" target="_blank" rel="noopener noreferrer">Jerome&apos;s LinkedIn profile</a>, or reach us directly at <a href="mailto:zprintprohk@gmail.com">zprintprohk@gmail.com</a>. &quot;Print AI Tools&quot;, &quot;aitoptools.net&quot; and &quot;ZPrintPro&quot; refer to the same project and operator.</p>
+      </div>
+
       <h2 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '28px 0 10px', color: '#292524' }}>Our Mission</h2>
       <p>Print AI Tools was created to fill a gap in the AI review space. Most AI tool directories review everything from chatbots to video generators — but nobody specializes in tools for <strong>print shops, packaging design, cross-border e-commerce, and independent store owners</strong>.</p>
       <p>We believe these industries have unique needs that general AI reviews don&apos;t address. A tool that&apos;s great for writing blog posts might be terrible at generating print-ready packaging designs. A video avatar platform might be perfect for social media but useless for product demonstrations in a print catalog.</p>

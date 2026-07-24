@@ -136,6 +136,9 @@ export default function RootLayout({ children }) {
             <p className="footer-disclaimer">
               <strong>Independent Operation:</strong> {config.brand} (aitoptools.net) is <strong>independently operated</strong> and is <strong>not affiliated with, partnered with, or authorized by</strong> aitoptools.com. All content is original and focused on AI tools for print shops, packaging, cross-border e-commerce, and independent store operations.
             </p>
+            <p className="footer-disclaimer">
+              <strong>Operated by:</strong> {config.brand} is published by Jerome Tang (trade name ZPrintPro), a digital project of Shenzhen Cai Long Printing &amp; Packaging Co., Ltd. — <a href="https://www.linkedin.com/in/jerome-tang-442ab8424" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>LinkedIn</a> · <a href="mailto:zprintprohk@gmail.com" style={{ color: 'inherit', textDecoration: 'underline' }}>zprintprohk@gmail.com</a>
+            </p>
             <div className="footer-legal">
               <p className="footer-copy">© {new Date().getFullYear()} {config.brand} ({config.domain}). All rights reserved. We may earn commissions from links on this site.</p>
               <nav className="footer-legal-links" aria-label="Legal">
