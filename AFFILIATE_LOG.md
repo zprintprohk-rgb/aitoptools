@@ -46,7 +46,7 @@
 
 ## 2026-07-24 下午
 - **Gelato 申请已提交**（PartnerStack，身份 Blogger or Review Site，网站 aitoptools.net，受众 1,001-10,000，国家 Hong Kong，电话 +86 18126380255）→ 状态：申请待处理。条款：最高 12% × 12 个月。
-- **Printify $150 挑战奖金到账** 🎉 PartnerStack 活动记录：「Publish a blog post about Printify」已赚取 $150.00 USD（2026-07-24），当前为待处理佣金，Printify 计划状态「已启用」。
+- **Printify $150 挑战赛报名占位**（非收入） PartnerStack 活动记录：「Publish a blog post about Printify」系统记录"已赚取"$150 实为活动候选占位，每月仅抽 5 人发放，选中才生效，未选中记录消失——不计入收入，Printify 计划状态「已启用」。
 - PartnerStack 收款+税务由用户本人完成：PayPal doolen@126.com，公司主体 SHENZHEN SHI CAILONG YINSHUA BAOZHUANG YOUXIAN GONGSI（深圳市彩龙印刷包装有限公司），地址深圳龙岗平湖华南城。
 - 待办：Deel 申请等用户注册 LinkedIn 后补链接提交；Gelato 获批后链接入 AFFILIATE_LINKS.json 并跑替换管线。
 
@@ -58,3 +58,8 @@
 - **Gelato 重申已提交**（Business name 改为 Print AI Tools (ZPrintPro)，websites 加 LinkedIn，why-join 字段直接解释身份链并指向 About 页）→ 待审批。
 - **Deel 申请已提交（搁置中）**：用户手动触碰字段解锁 PrimeVue 提交按钮后成功提交。状态：等待 PartnerStack 网络审批，批准后 Deel 申请自动发送。$1500/单，审核 >5 天。周五巡检盯。
 - **《Mockey vs Placeit》对比页上线并经独立验证**（/compare/mockey-vs-placeit/，112KB）：三级推荐卡（Our Pick Mockey 4.3 / Also Great Placeit 4.0 / Budget Pick Mockey Free）+ 功能矩阵 + Better Value 定价标注 + FAQ 齐；Mockey 真联盟链接 ×2 已嵌。Placeit 侧 ?fpr=partner 占位，待 Impact 升级获批后统一替换。
+
+## 2026-07-24 晚 · 账本更正（用户+外部复核确认）
+- $150 为 Printify 内容挑战赛**报名占位**（每月抽 5 人），非保底收入；点击 1 次无转化。
+- **当前真实佣金收入 = $0 / 目标 $3000**。辨别规则：PartnerStack 账单来源写活动名/challenge=碰运气奖励；写客户订单=真佣金。
+- 第一美元只能靠：SEO 流量→点链接→注册/下单。内容量产和 GSC 数据是核心。
