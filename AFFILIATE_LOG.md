@@ -43,3 +43,18 @@
 ## 2026-07-24 Looka ❌ 维持放弃（二次确认）
 - looka.com/affiliate-program/ 落地页仍在宣传，但点击「Become an affiliate」跳转到 looka.partnerstack.com 显示「Looka program page not found」——PartnerStack 侧计划确已关闭（与 7/17 api 返回 Company not found 互证）
 - 唯一遗留路径：发邮件至 partnerships@looka.com 询问直签，优先级低，等主力平台链接铺满后再说
+
+## 2026-07-24 下午
+- **Gelato 申请已提交**（PartnerStack，身份 Blogger or Review Site，网站 aitoptools.net，受众 1,001-10,000，国家 Hong Kong，电话 +86 18126380255）→ 状态：申请待处理。条款：最高 12% × 12 个月。
+- **Printify $150 挑战奖金到账** 🎉 PartnerStack 活动记录：「Publish a blog post about Printify」已赚取 $150.00 USD（2026-07-24），当前为待处理佣金，Printify 计划状态「已启用」。
+- PartnerStack 收款+税务由用户本人完成：PayPal doolen@126.com，公司主体 SHENZHEN SHI CAILONG YINSHUA BAOZHUANG YOUXIAN GONGSI（深圳市彩龙印刷包装有限公司），地址深圳龙岗平湖华南城。
+- 待办：Deel 申请等用户注册 LinkedIn 后补链接提交；Gelato 获批后链接入 AFFILIATE_LINKS.json 并跑替换管线。
+
+## 2026-07-24 傍晚
+- **Gelato 申请被拒**（Identity mismatch：Jerome Tang / ZPrintPro / aitoptools.net / "Print AI Tools" 身份链不一致）。根因：网站无运营者署名可交叉验证。
+- **修复**：About 页新增 "Who Runs This Site" 板块（Jerome Tang = ZPrintPro = Print AI Tools，LinkedIn + 邮箱），页脚全站加运营者署名。commit 2382561 已 push（当日第 2 次，紧急修复例外）。
+- **LinkedIn 已注册**：linkedin.com/in/jerome-tang-442ab8424（资料 5 项全齐，用户自行养号）。
+- Deel 申请待提交：用户网络节点 ERR_CONNECTION_CLOSED，等恢复。
+- **Gelato 重申已提交**（Business name 改为 Print AI Tools (ZPrintPro)，websites 加 LinkedIn，why-join 字段直接解释身份链并指向 About 页）→ 待审批。
+- **Deel 申请已提交（搁置中）**：用户手动触碰字段解锁 PrimeVue 提交按钮后成功提交。状态：等待 PartnerStack 网络审批，批准后 Deel 申请自动发送。$1500/单，审核 >5 天。周五巡检盯。
+- **《Mockey vs Placeit》对比页上线并经独立验证**（/compare/mockey-vs-placeit/，112KB）：三级推荐卡（Our Pick Mockey 4.3 / Also Great Placeit 4.0 / Budget Pick Mockey Free）+ 功能矩阵 + Better Value 定价标注 + FAQ 齐；Mockey 真联盟链接 ×2 已嵌。Placeit 侧 ?fpr=partner 占位，待 Impact 升级获批后统一替换。
