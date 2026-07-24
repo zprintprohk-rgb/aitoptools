@@ -101,3 +101,11 @@
 - `scripts/replace_affiliate_links.py` / `affiliate_link_audit.py` / `generate_faqs.js`
 - `discovery/`（雷达产出目录）
 - `AGENTS.md`（本文件）
+
+## 算力低谷执行窗口（2026-07-24 用户拍板，不可违反）
+
+- **Hermes Agent（DeepSeek V4 Flash）与 GLM 智谱模型**：一切批量/耗时任务只准在算力低谷运行：
+  - 夜间窗口：**18:00 — 次日 08:00**
+  - 午间窗口：**12:05 — 13:30**
+- K3（本 Agent）安排定时任务、给 Hermes 派活时，触发时间必须落在上述窗口内（避开整点/半点，用 7-23 或 37-53 分）。
+- 白天 08:00-12:05 / 13:30-18:00 只安排：K3 自己的轻量核查、用户手动操作、紧急修复。
