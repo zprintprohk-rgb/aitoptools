@@ -63,11 +63,14 @@
 | 平台 | 状态 | 说明 |
 |---|---|---|
 | Creative Fabrica | ✅ 已获批 | ref/27832838 |
-| Kittl (Impact) | 🟡 审核中 | 7/15 提交，Impact 账号 Jerome88 / zprintpro@outlook.com |
-| Claid / Printify / Printful | 🟡 审批中 | 预计 7/21-23 出结果 |
+| Claid (FirstPromoter) | ✅ 已获批 7/24 | `https://claid.ai?via=jerome94`；⚠️ 收款方式待用户设置 |
+| Printify (PartnerStack) | ✅ 已获批 7/24 | `https://try.printify.com/4fs863rfz2yc`；有 $150 博客挑战（9/29 截止） |
+| Printful (in-house) | ✅ 已获批 7/24 | `https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a`；确认邮件待点 |
+| Mockey (Endorsely) | ✅ 已激活 7/22 | `https://mockey.ai?via=jerome796`，30% 循环 |
+| Kittl (Impact) | 🟡 审核中 | 7/15 提交，Impact 账号 Jerome88 / zprintpro@outlook.com；依赖 Impact Marketplace 升级获批 |
 | Placeit | ⏸ 待申请 | 等 Impact Marketplace 升级获批后申请 |
-| Looka | ❌ 计划关闭 | 不再投入 |
-| Mockey | 🆕 雷达发现 | 30% 经常性佣金公开计划，待申请（高优先级） |
+| Looka | ❌ 计划已关闭 | 7/24 二次确认 PartnerStack 侧 program page not found；仅 partnerships@looka.com 邮件直签一路，低优先 |
+| Photoroom | ⚠️ 待重签 | 现有 ?fpr=partner 疑似失效，需走 Awin 重新签约替换 |
 
 - 日志: `AFFILIATE_LOG.md`；审计: `AFFILIATE_AUDIT.md`
 - 敏感操作（登录/验证码/资金）→ 交 user 行动卡片，绝不自动

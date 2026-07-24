@@ -70,6 +70,6 @@
   "draftedAt": "2026-07-22",
   "draftedBy": "hermes",
   "verifier": "M3 (待 user 拍板)",
-  "readyForPublish": false,
+  "readyForPublish": true,
   "verificationStatus": "verified"
 }

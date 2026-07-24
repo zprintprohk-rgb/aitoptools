@@ -8,14 +8,14 @@
     "toolA": {
       "name": "Printful",
       "reviewSlug": "printful-review",
-      "visitUrl": "https://www.printful.com",
+      "visitUrl": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
       "affiliateUrl": "",
       "rating": 4.5
     },
     "toolB": {
       "name": "Printify",
       "reviewSlug": "printify-review",
-      "visitUrl": "https://printify.com",
+      "visitUrl": "https://try.printify.com/4fs863rfz2yc",
       "affiliateUrl": "",
       "rating": 4.3
     },
@@ -185,7 +185,7 @@
     "toolA": {
       "name": "Printify",
       "reviewSlug": "printify-review",
-      "visitUrl": "https://printify.com",
+      "visitUrl": "https://try.printify.com/4fs863rfz2yc",
       "affiliateUrl": "",
       "rating": 4.3
     },
@@ -362,7 +362,7 @@
     "toolA": {
       "name": "Printful",
       "reviewSlug": "printful-review",
-      "visitUrl": "https://www.printful.com",
+      "visitUrl": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
       "affiliateUrl": "",
       "rating": 4.5
     },
@@ -894,7 +894,7 @@
     "toolA": {
       "name": "Mockey",
       "reviewSlug": "mockey-review",
-      "visitUrl": "https://mockey.ai",
+      "visitUrl": "https://mockey.ai?via=jerome796",
       "affiliateUrl": "https://mockey.ai?via=jerome796",
       "rating": 4.3
     },

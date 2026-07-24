@@ -25,3 +25,21 @@
 - **AFFILIATE_LINKS.json 真实覆盖**：仍 1/11 (Creative Fabrica)。其余 10 项空串 = 占位阶段。
 - **北极星指标**：6 个月目标 $3000，截至 7/23 $0。当前真实计佣入口 = CF (in-house) + NordVPN/NordPass (Impact) + Mockey (Endorsely)，3 个真实链接，需 1-3 个月才有第一笔成交。
 
+
+## 2026-07-24 Printify ✅ 获批（PartnerStack）
+- 登录 PartnerStack 后台发现 Printify 申请已获批，现场同意服务条款后取到默认链接：`https://try.printify.com/4fs863rfz2yc`
+- 彩蛋：Printify 每月挑战——发布 Printify 相关博客/视频赢 $150（截止 2026-09-29），我们已有 Printify 对比/榜单内容可提交
+- 下一步：链接入库走 replace_affiliate_links.py 管线替换全站 Printify CTA
+
+## 2026-07-24 Claid AI ✅ 获批（FirstPromoter）
+- 后台已激活，链接：`https://claid.ai?via=jerome94`（20% 终身循环 / 60 天 cookie / $20 起付 / 每月 15 日结算）
+- ⚠️ 待办：后台提示未设置收款方式（Select Payout Method），涉及收款账户需用户自行设置
+
+## 2026-07-24 Printful ✅ 获批（in-house）
+- 联盟后台已激活，链接：`https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a`
+- 佣金 10%×12 个月；奖励活动：$5000 销售奖 $50、5 个下单客户奖 $25
+- 待办：Printful 发了一封邮箱确认邮件到 zprintprohk@gmail.com，看到点一下确认即可
+
+## 2026-07-24 Looka ❌ 维持放弃（二次确认）
+- looka.com/affiliate-program/ 落地页仍在宣传，但点击「Become an affiliate」跳转到 looka.partnerstack.com 显示「Looka program page not found」——PartnerStack 侧计划确已关闭（与 7/17 api 返回 Company not found 互证）
+- 唯一遗留路径：发邮件至 partnerships@looka.com 询问直签，优先级低，等主力平台链接铺满后再说
