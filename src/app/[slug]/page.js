@@ -3,6 +3,7 @@ import Link from 'next/link'
 import reviews from '@/data/reviews'
 import RatingBar from '@/components/RatingBar'
 import ProsCons from '@/components/ProsCons'
+import { buildAffLinkAttrs } from '@/lib/affiliate'
 
 function starRating(rating) {
   const full = Math.floor(rating)
@@ -180,13 +181,33 @@ export default function ReviewPage({ params }) {
           <p style={{ fontSize: '0.85rem', color: 'var(--k-tertiary)', marginBottom: 12 }}>
             Click below to start your free trial or explore plans. If you purchase through our link, we may earn a commission at no extra cost to you.
           </p>
-          {(review.affiliateUrl || review.visitUrl) ? (
-            <a href={review.affiliateUrl || review.visitUrl} target="_blank" rel="nofollow sponsored" className="cta-button">
-              Try {toolName} Free →
-            </a>
-          ) : (
-            <p style={{ fontSize: '0.9rem', color: 'var(--k-tertiary)' }}>Review coming soon — check back for a hands-on link.</p>
-          )}
+          {(() => {
+            // W1-T1 度量埋点: aff-link class + data-merchant + data-link-id + UTM
+            const aff = buildAffLinkAttrs(review, 'detail-cta')
+            if (aff) {
+              return (
+                <a
+                  href={aff.href}
+                  className={`${aff.className} cta-button`}
+                  data-merchant={aff['data-merchant']}
+                  data-link-id={aff['data-link-id']}
+                  data-target={aff['data-target']}
+                  target="_blank"
+                  rel="nofollow sponsored"
+                >
+                  Try {toolName} Free →
+                </a>
+              )
+            }
+            if (review.visitUrl) {
+              return (
+                <a href={review.visitUrl} target="_blank" rel="nofollow sponsored" className="cta-button">
+                  Try {toolName} Free →
+                </a>
+              )
+            }
+            return <p style={{ fontSize: '0.9rem', color: 'var(--k-tertiary)' }}>Review coming soon — check back for a hands-on link.</p>
+          })()}
         </div>
 
         {/* Similar tools */}

@@ -30,6 +30,38 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* W1-T1 度量埋点: gtag 块② (按 M3_MONTH1_RUNBOOK §W1-T1 步骤 1, GA4 ID G-248QMCT2S3) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-248QMCT2S3" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-248QMCT2S3');`,
+          }}
+        />
+        {/* W1-T1 度量埋点: 块① click 委托 (按 M3_MONTH1_RUNBOOK §W1-T1 步骤 3)
+            - 委托 document, 抓任何 a.aff-link 点击 (SSG/CSR 通吃)
+            - beacon 传输, 外链立即跳转不丢点击
+            - 不 preventDefault, 联盟跳转必须真发生 = 佣金第一铁律 */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.addEventListener('click', function (e) {
+              var a = e.target.closest('a.aff-link');
+              if (!a) return;
+              if (typeof gtag !== 'function') return;
+              gtag('event', 'affiliate_click', {
+                link_id: a.getAttribute('data-link-id') || '',
+                merchant: a.getAttribute('data-merchant') || '',
+                link_url: a.href,
+                link_text: (a.textContent || '').trim().slice(0, 100),
+                transport_type: 'beacon'
+              });
+            }, true);`,
+          }}
+        />
+      </head>
       <body>
         <script
           type="application/ld+json"

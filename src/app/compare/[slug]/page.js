@@ -7,6 +7,7 @@ import PicksCards from '@/components/PicksCards'
 import WhyTrustUs from '@/components/WhyTrustUs'
 import FeatureMatrix from '@/components/FeatureMatrix'
 import PricingTable from '@/components/PricingTable'
+import { buildAffLinkAttrs } from '@/lib/affiliate'
 
 function starRating(rating) {
   const full = Math.floor(rating)
@@ -118,12 +119,47 @@ export default function ComparisonPage({ params }) {
           <h2 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: 8, color: 'var(--k-deep)' }}>⚡ Quick Verdict (30-Second Answer)</h2>
           <p>{comp.quickVerdict}</p>
           <div className="verdict-ctas">
-            <a href={toolA.affiliateUrl || toolA.visitUrl} target="_blank" rel="nofollow sponsored" className="cta-button">
-              Try {toolA.name} Free →
-            </a>
-            <a href={toolB.affiliateUrl || toolB.visitUrl} target="_blank" rel="nofollow sponsored" className="cta-button cta-secondary">
-              Try {toolB.name} Free →
-            </a>
+            {(() => {
+              // W1-T1 度量埋点: aff-link class + data-merchant + data-link-id + UTM
+              const affA = buildAffLinkAttrs(toolA, 'verdict-cta-a')
+              return affA ? (
+                <a
+                  href={affA.href}
+                  className={`${affA.className} cta-button`}
+                  data-merchant={affA['data-merchant']}
+                  data-link-id={affA['data-link-id']}
+                  data-target={affA['data-target']}
+                  target="_blank"
+                  rel="nofollow sponsored"
+                >
+                  Try {toolA.name} Free →
+                </a>
+              ) : (
+                <a href={toolA.visitUrl} target="_blank" rel="nofollow sponsored" className="cta-button">
+                  Try {toolA.name} Free →
+                </a>
+              )
+            })()}
+            {(() => {
+              const affB = buildAffLinkAttrs(toolB, 'verdict-cta-b')
+              return affB ? (
+                <a
+                  href={affB.href}
+                  className={`${affB.className} cta-button cta-secondary`}
+                  data-merchant={affB['data-merchant']}
+                  data-link-id={affB['data-link-id']}
+                  data-target={affB['data-target']}
+                  target="_blank"
+                  rel="nofollow sponsored"
+                >
+                  Try {toolB.name} Free →
+                </a>
+              ) : (
+                <a href={toolB.visitUrl} target="_blank" rel="nofollow sponsored" className="cta-button cta-secondary">
+                  Try {toolB.name} Free →
+                </a>
+              )
+            })()}
           </div>
         </div>
 

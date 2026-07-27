@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build && node scripts/inject-aff-link.mjs",
+    "start": "next start",
+    "aff-link-audit": "python scripts/aff-link-audit.py"
   },
   "dependencies": {
     "next": "^15.0.0",

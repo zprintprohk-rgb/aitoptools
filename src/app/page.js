@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import reviews from '@/data/reviews'
 import comparisons from '@/data/comparisons.json'
+import { buildAffLinkAttrs } from '@/lib/affiliate'
 import listicles from '@/data/listicles.json'
 import RatingBar from '@/components/RatingBar'
 import WinnerBadge from '@/components/WinnerBadge'
@@ -350,16 +351,24 @@ function ReviewCard({ review }) {
       <p className="card-desc">{review.metaDesc}</p>
       <div className="card-cta-group">
         <Link href={`/${review.slug}/`} className="card-cta card-cta-read">Read Full Review →</Link>
-        {review.affiliateUrl && (
-          <a
-            href={review.affiliateUrl}
-            target="_blank"
-            rel="nofollow sponsored"
-            className="card-cta card-cta-deal"
-          >
-            Check Deal ↗
-          </a>
-        )}
+        {(() => {
+          // W1-T1 度量埋点: aff-link class + data-merchant + data-link-id + UTM
+          const aff = buildAffLinkAttrs(review, 'card-cta')
+          if (!aff) return null
+          return (
+            <a
+              href={aff.href}
+              className={`${aff.className} card-cta card-cta-deal`}
+              data-merchant={aff['data-merchant']}
+              data-link-id={aff['data-link-id']}
+              data-target={aff['data-target']}
+              target="_blank"
+              rel="nofollow sponsored"
+            >
+              Check Deal ↗
+            </a>
+          )
+        })()}
       </div>
       {/* hotfix 7/27 P1-1: 进度条删除（107 篇 reviews 全无 printCompatibility/ecommerceFit 字段，硬编 8.8/8.2 是凭空捏造）
           待 reviews.json 真实数据补齐 + verify-cron 加"进度条全雷同"断言 后再绑字段。CSS 保留在 globals.css 备用。 */}
