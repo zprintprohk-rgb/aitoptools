@@ -1783,11 +1783,22 @@ p, li { line-height: 1.7; }
   border-radius: 100px;
   letter-spacing: 0.5px;
 }
+/* F1 [P1] 千问 UI-PATCH-01: 深绿卡 vs 文字对比度加固 (UI-PATCH-01 工单 7/28)
+   0.82 alpha 在不同底色上叠出不同结果，不稳。改 CSS 变量 + 0.94 实色 (千问精确值) + 品牌名亮橙强调。 */
+.evidence-card {
+  --verdict-fg: rgba(245, 241, 232, 0.94); /* 近白暖色，对比度 ≥ 7:1 */
+  --verdict-brand: #f4a93c; /* 亮橙强调 (与卡内其它橙标一致) */
+}
 .evidence-verdict {
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.82); /* hotfix 7/27: 0.85 alpha → 0.82 实色（千问精确值，深绿底 narrative 段可读性） */
-  line-height: 1.5; /* hotfix 7/27: narrative 段加行高，verdict 是段落不是标题，不是标题（不是单行） */
+  color: var(--verdict-fg); /* F1: 0.82 alpha → 0.94 实色 (千问值) */
+  line-height: 1.5; /* hotfix 7/27: narrative 段加行高 */
   margin: 14px 0 10px;
+}
+.evidence-verdict strong,
+.evidence-verdict b {
+  color: var(--verdict-brand); /* F1: 品牌名 (Printful/Printify) 深底亮橙 */
+  font-weight: 700;
 }
 .evidence-link {
   display: inline-block;
@@ -1904,10 +1915,26 @@ p, li { line-height: 1.7; }
 .review-card { position: relative; }
 
 /* hotfix 7/27 P1-3: cta 行 cta 不折行 + Check Deal 占满 */
-.card-cta-group { flex-wrap: nowrap; align-items: center; }
+/* F4 [P1] 千问 UI-PATCH-01: Check Deal 按钮加固 (UI-PATCH-01 工单 7/28)
+   复制即用 4 项：min-width:max-content 防裁切 / overflow:visible / flex-shrink:0 / box-sizing:border-box
+   移动端 360px 走 flex-wrap 兜底，绝不允许裁切。 */
+.card-cta-group { flex-wrap: wrap; align-items: center; gap: 0.6rem 0.8rem; }
 .card-cta { white-space: nowrap; }
 .card-cta-read { flex: 0 0 auto; }
-.card-cta-deal { flex: 1 1 auto; min-width: 0; white-space: nowrap; }
+.card-cta-deal {
+  flex: 1 1 auto;
+  min-width: max-content; /* F4: 至少容纳完整 "Check Deal ↗" */
+  overflow: visible; /* F4: 不裁切 */
+  text-overflow: clip; /* F4: 不要 ellipsis, 要全显示 */
+  white-space: nowrap;
+  display: inline-flex; /* F4: 文字 + 箭头对齐 */
+  align-items: center;
+  gap: 0.4em;
+  flex-shrink: 0; /* F4: flex 行里不被兄弟元素挤压 */
+  box-sizing: border-box; /* F4: padding 不撑破 */
+  padding-inline: 1em; /* F4: 左右内边距给足, 防贴边切字 */
+}
+.card-cta-deal svg { flex-shrink: 0; } /* F4: 箭头图标不被切 */
 
 /* A6: 顶栏 More 下拉 */
 .nav-more { position: relative; }
