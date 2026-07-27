@@ -104,10 +104,15 @@ export default function Home() {
               Stop guessing which AI tool{' '}
               <em>actually prints well.</em>
             </h1>
+            {/* hotfix 7/27 路 B 收尾 (千问诊断): 删 "the two numbers / print compatibility / e-commerce fit"。
+                旧副标承诺了全站 107 篇 reviews 都不存在的两个维度 (printCompatibility/ecommerceFit 字段空)，
+                右边 EvidenceCard 已删假进度条改 3 真 stat，左边副标还在承诺 = 首屏左右互搏 / 空头支票。
+                新副标只承诺兑现得了的 (output quality + margin math 来自 reviews.json rating/price 字段)。
+                改前画 SSoT: 旧钩子被哪些用户记忆点接? 现有 trust-bar "Updated July 2026" + EvidenceCard
+                3 stat 块 + 4 FAQ 答案 + methodology 页 → 维度承诺足够,删掉空头不削弱。 */}
             <p>
-              <b>{reviews.length} tools</b> tested on real print jobs and live stores — scored on the two
-              numbers that decide your margin: <b>print compatibility</b> and <b>e-commerce fit</b>.
-              Verified 2026 pricing, no pay-to-rank.
+              <b>{reviews.length} tools</b> tested on real print jobs and live stores — graded on output
+              quality and margin math, not vendor demos. Verified 2026 pricing, no pay-to-rank.
             </p>
             <p className="trust-line">✓ Independent reviews from print &amp; e-commerce professionals — <Link href="/methodology/">see our methodology</Link></p>
 

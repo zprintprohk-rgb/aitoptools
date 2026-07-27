@@ -411,7 +411,7 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 /* --- Review Grid --- */
 .review-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* hotfix 7/27: minmax(0,1fr) 防 3 列 grid 溢出 (千问 P0 修，第三方卡 protrude 出 panel) */
   gap: 20px;
 }
 
@@ -421,6 +421,7 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 24px;
+  min-width: 0; /* hotfix 7/27: 允许 grid 子项收缩，配合 minmax(0,1fr) 防卡片内容撑爆 (千问 P0 grid 溢出修) */
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
   position: relative;
 }
@@ -942,7 +943,7 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
   .hero { padding: 40px 0 36px; }
   .hero h1 { font-size: clamp(2rem, 8vw, 2.4rem); }
   .hero p { font-size: 1rem; }
-  .review-grid { grid-template-columns: 1fr; }
+  .review-grid { grid-template-columns: minmax(0, 1fr); }
   .pros-cons { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
@@ -1117,7 +1118,7 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 .best-card-name.more { color: var(--c-primary); border-color: var(--c-primary); }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .review-grid { grid-template-columns: repeat(2, 1fr); }
+  .review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pricing-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -1482,20 +1483,9 @@ p, li { line-height: 1.7; }
 }
 .rating-bar .rating-stars { letter-spacing: 1px; }
 .rating-bar .rating-value { font-weight: 700; color: var(--k-primary); font-size: 0.8rem; }
-.rating-bar .rating-track {
-  display: inline-block;
-  width: 64px;
-  height: 4px;
-  background: var(--bg-alt);
-  border-radius: 4px;
-  overflow: hidden;
-}
-.rating-bar .rating-fill {
-  display: block;
-  height: 100%;
-  background: var(--a-primary);
-  border-radius: 4px;
-}
+/* hotfix 7/27: 删 .rating-bar .rating-track + .rating-fill 装饰进度条 (千问 P1-1 尾巴清理)
+   原因：进度条和 ★ + 4.0 文字 100% 冗余，纯装饰无刻度无数字，纯噪音。
+   同步在 RatingBar.js 删了对应渲染，CSS 也删掉避免无用样式累积。 */
 .meta-rating { display: inline-flex; align-items: center; gap: 6px; }
 
 /* --- PicksCards (Wirecutter three-tier) --- */
@@ -1795,9 +1785,9 @@ p, li { line-height: 1.7; }
 }
 .evidence-verdict {
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.85);
-  margin: 12px 0 10px;
-  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82); /* hotfix 7/27: 0.85 alpha → 0.82 实色（千问精确值，深绿底 narrative 段可读性） */
+  line-height: 1.5; /* hotfix 7/27: narrative 段加行高，verdict 是段落不是标题，不是标题（不是单行） */
+  margin: 14px 0 10px;
 }
 .evidence-link {
   display: inline-block;
