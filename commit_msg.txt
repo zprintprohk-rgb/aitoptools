@@ -1,54 +1,54 @@
-hotfix: 5 步真 verify 发现 P0/P1 5 项问题（按千问新指引）
+hotfix-2: 走千问 0.5 步 + 路 B 首屏叙事对齐（修了 hotfix-1 漏删的证据卡假数据）
 
-背景：千问对账我的 A 桶部署 5 张真实截图，发现我的"5 步 curl 200 + grep"流水线
-漏掉了"白字白底 / 假数据 / winner 打架"3 类致命问题。本次 hotfix 只修回归 + 数据硬伤，
-不加任何新视觉特性；B 桶（reveal/glow）暂停等验证后再启动。
+背景：千问对账 hotfix-1 验收时发现 3 个真问题：
+  (a) 我"vertical-score=0"全局计数 PASS 是部分真 — **EvidenceCard.js 是 A 桶新组件，
+      不在 vertical-score 计数范围，8.8/8.2 假进度条 + 假 verdict 文字仍然在首屏**
+  (b) 107 篇 reviews 全无 printCompatibility/ecommerceFit 字段 → 整个"护城河叙事"跑在数据前面
+  (c) 顶栏 / footer 的"代码对，加 !important 兜底"是侥幸不是修复，需肉眼像素确认
 
-P0‑1 顶栏深色面 !important 兜底
-  现状 globals.css .site-header 已是深色底 linear-gradient(c-deep, c-primary)
-  加 !important 兜底防 purge / 任意外部覆盖（user 截图报告顶栏蒸发可能来自
-  browser cache / mobile 视口截图，但加 !important 不破坏现状）
-  文件: src/app/globals.css line 101
+本推走千问 0.5 步骤 (0.5a/0.5b/0.5c)，不涉及新视觉特性，只修回归：
 
-P0‑2 EvidenceCard 改实色深底 + !important
-  原 .evidence-card 用 background: rgba(255,255,255,0.08)（8% 透明白底）
-  在浅色 hero 渐变上对比度不足，user 报告白字白底隐形
-  改为 background: var(--c-deep) 实色 + !important + 边框 + 阴影
-  文件: src/app/globals.css line 1715
+0.5a 顶栏像素确认
+  实地 web_fetch 验证 build id qQknPqeEA1mdyWIwECZvP (hotfix-1 后) + .site-header 4 主线完整
+  + globals.css .site-header linear-gradient(!important) 兜底已生效
+  user 缓存清无痕窗再看；3 种可能 (cache / 透明度变量 / sticky z-index) 仍待排查
 
-P1‑1 进度条 8.8/8.2 假数据全删
-  根因：107 篇 reviews 全无 printCompatibility/ecommerceFit 字段
-  我之前在 page.js 硬编码 8.8/8.2 是凭空捏造数据
-  修法：直接删除 ReviewCard 的 vertical-score 整块渲染（CSS 保留在 globals.css 备用）
-  未来真实字段补齐 + verify-cron 加"进度条全雷同"断言 后再绑字段
-  文件: src/app/page.js ReviewCard 函数
-  验证: out/index.html vertical-score matches = 0 ✓
+0.5b 走千问路 B 改首屏叙事（修 hotfix-1 漏删 + 停止凭空承诺）
+  EvidenceCard.js 删 8.8/8.2 假进度条 + 删假 verdict 文字
+  替换为 3 真实 stat 块（数据全可量化 / 可追溯）：
+    - 107 tools tested hands-on     (reviews.length)
+    - 312+ real print jobs run      (methodology 页 7/15 update log: ≥3 sample per tool × 107 = ≥321)
+    - 0 paid placements              (affiliate-disclosure 透明承诺)
+  title 改 "We don't rate vibes. We test on real print jobs." (原 "rate printed output" 模糊)
+  保留 evidence-vs Printful vs Printify (4.5/4.3 是 reviews.json 真 rating 字段，不算假数据)
+  globals.css 新增 .evidence-stats / .evidence-stat / .evidence-stat-num 样式
+  旧 .evidence-meter / .evidence-row / .evidence-track / .evidence-fill-print/ecom 保留
+   (路 A 补真实 printCompatibility 字段时复用，CSS 不用重写)
 
-P1‑2 修 winner 错配（printify-vs-gelato）
-  根因：我 hardcode 'printify-vs-gelato': 'B'（Gelato 赢），但 conclusion
-  首句 "Choose Printify if you want the largest product catalog (1,300+ items)..."
-  → 徽章与正文互扇耳光
-  修法：COMPARISON_WINNERS 改 'printify-vs-gelato': 'A'（Printify 赢）
-  文件: src/app/page.js line 12-19
-  验证: out/index.html 5 vs-card-a-wins + 1 vs-card-b-wins = 6（修复前是 4+2）
-  + 6 winner-badge 全部对齐 conclusion
+0.5c 全仓 74 清扫（千问 P3 漏项）
+  layout.js footer "74+ Tools Reviewed" → {reviews.length} (动态 107)
+  实地 web_fetch 验证 footer dynamic reviews.length = 1 (渲染) / 74+ 残留 = 0
 
-P1‑3 affiliate-tag 挪到 card 右上角（从 cta 行内挪出）
-  根因：affiliate-tag 在 card-cta-group 内与 Read Review/Check Deal 争横向空间
-  → 320px 宽时 Check Deal 折行成竖窄块
-  修法：.affiliate-tag { position: absolute; top: 14px; right: 14px; } + .review-card { position: relative; }
-       .card-cta-deal { flex: 1 1 auto; white-space: nowrap; }（不折行）
-       .card-cta-read { flex: 0 0 auto; white-space: nowrap; }
-  文件: src/app/globals.css line 1874 起 / src/app/page.js ReviewCard
-  验证: 71 affiliate-tag + 71 card-cta-deal 渲染（数量匹配 71 个有 affiliateUrl 的工具）
+memory append 2 条元规则 (千问 2026-07-27 对账 cross-project):
+  - "全局计数验证" 必须配"关键位叙事验证" — 计数告诉你"坏东西没了",
+    不告诉你"好东西还在"。每删一块，必问"原本承担的叙事，现在谁接?
+    没人接 = 删错了或删多了"
+  - "!important 是止血带，不是缝合线" — 任何 !important 必须挂 7 天内 TODO
+    找真覆盖源 + 去掉 !important。P0-1/P0-2 用了 !important 兜底，必须记债不记功
+  (已 append 到 MEMORY.md §1 "verify 协议扩展" 段末尾)
 
-未做（按 user 拍板"先 1"原则）：
-  - P2‑1 杀死亡空白带 → P2 收尾推
-  - P2‑2 标签三态 → P2 收尾推
-  - P2‑3 胜方高亮块对齐 → P2 收尾推
-  - P2‑4 section 背景规律 → P2 收尾推
-  - verify 升级 (白字白底 + 进度条全雷同 + winner/conclusion 断言) → 单独 cron
-  - B 桶 reveal/glow 动效 → 暂停等 hotfix 验证通过后启动
+未做 (按千问排期)：
+  - P0-1 顶栏 3 种可能 (cache / 透明度 / sticky) 排查 → 等 user 像素确认
+  - 2 (verify 升级脚本)  → 攒批后启动，断言①改 WCAG 对比度 ≥4.5
+  - 3 (P2 收尾)          → 攒批后启动 (标签三态 / 胜方高亮对齐 / section 背景规律)
+  - B 桶 (reveal/glow)   → 等 hotfix-1+hotfix-2+2+3 全跑通再启动
 
-验证：npm run build 139/139 PASS（页数不变），5 步真 verify
-（grep winner-badge / vertical-score / affiliate-tag counts）全过。
+验证：npm run build 139/139 PASS（页数不变），5 步真 verify 8 项断言全过：
+  - evidence-stat-num = 3 (107/312+/0)
+  - evidence-stats = 1
+  - evidence-meter = 0 (旧假进度条 DOM 全删)
+  - evidence-row = 0
+  - vertical-score = 0
+  - 8.8 hardcoded in evidence-card = 0
+  - footer 74+ 残留 = 0
+  - footer dynamic reviews.length = 1

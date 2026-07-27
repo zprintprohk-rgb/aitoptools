@@ -116,7 +116,7 @@ export default function RootLayout({ children }) {
                 <p className="footer-tagline">Hands-on AI tool reviews for print shops and independent store owners — tested, compared, and ranked by industry professionals.</p>
                 <div className="footer-badges">
                   <span className="footer-badge">✓ Hands-On Tested</span>
-                  <span className="footer-badge">✓ 74+ Tools Reviewed</span>
+                  <span className="footer-badge">✓ {reviews.length} Tools Reviewed</span>
                   <span className="footer-badge">✓ Independent &amp; Unbiased</span>
                 </div>
               </div>

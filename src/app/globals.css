@@ -1712,8 +1712,11 @@ p, li { line-height: 1.7; }
   flex-shrink: 0;
 }
 
-/* A2-2: EvidenceCard — 替换 mini-vs，把双维度评分顶到首屏右侧 */
+/* A2-2: EvidenceCard — 替换 mini-vs，把真实评测数据顶到首屏右侧 */
 /* hotfix 7/27 P0-2: 改实色深底 + !important，原 8% 透明白底在浅色 hero 渐变上对比度不足 */
+/* hotfix 7/27 路 B (千问对账): 删 8.8/8.2 假进度条（107 篇 reviews 全无 printCompatibility 字段，凭空捏造），
+   改 3 真实 stat 块 (107 tools tested / 312+ print jobs / 0 paid placements — 全部来自 reviews.length + methodology 页)
+   .evidence-meter / .evidence-row / .evidence-track / .evidence-fill 系列 CSS 保留作未来路 A 补数据时复用 */
 .evidence-card {
   position: relative;
   background: var(--c-deep) !important;
@@ -1740,23 +1743,39 @@ p, li { line-height: 1.7; }
   margin: 0 0 18px !important;
   letter-spacing: -0.2px !important;
 }
-.evidence-meter { margin-bottom: 14px; }
-.evidence-row {
-  display: flex; justify-content: space-between;
-  font-size: 0.82rem; font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 6px;
+
+/* 路 B: 3 真实 stat 块 (107 / 312+ / 0) — 替代旧 2 假进度条 */
+.evidence-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin: 18px 0;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
-.evidence-row .evidence-val { color: var(--a-light); font-variant-numeric: tabular-nums; }
-.evidence-track {
-  height: 8px;
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 100px;
-  overflow: hidden;
+.evidence-stat { text-align: center; }
+.evidence-stat-num {
+  display: block;
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: var(--a-light);
+  line-height: 1;
+  margin-bottom: 4px;
+  font-variant-numeric: tabular-nums;
 }
-.evidence-fill { height: 100%; border-radius: 100px; }
-.evidence-fill-print { background: linear-gradient(90deg, var(--c-light), var(--c-primary)); }
-.evidence-fill-ecom { background: linear-gradient(90deg, #fbbf24, var(--a-primary)); }
+.evidence-stat-label {
+  display: block;
+  font-size: 0.66rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  line-height: 1.3;
+}
+@media (max-width: 480px) {
+  .evidence-stats { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .evidence-stats .evidence-stat:last-child { grid-column: 1 / -1; }
+}
 
 .evidence-vs {
   display: flex; align-items: center; justify-content: space-between; gap: 8px;
