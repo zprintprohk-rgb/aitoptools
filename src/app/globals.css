@@ -99,8 +99,9 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
 
 /* --- Header --- */
 .site-header {
-  background: linear-gradient(135deg, var(--c-deep), var(--c-primary));
-  color: white;
+  /* hotfix 7/27 P0-1: !important 兜底防 purge / 任意外部覆盖（保持深色底） */
+  background: linear-gradient(135deg, var(--c-deep), var(--c-primary)) !important;
+  color: #fff !important;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -1712,15 +1713,16 @@ p, li { line-height: 1.7; }
 }
 
 /* A2-2: EvidenceCard — 替换 mini-vs，把双维度评分顶到首屏右侧 */
+/* hotfix 7/27 P0-2: 改实色深底 + !important，原 8% 透明白底在浅色 hero 渐变上对比度不足 */
 .evidence-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--c-deep) !important;
+  border: 1px solid var(--c-primary) !important;
   border-radius: var(--radius-lg);
   padding: 24px;
-  color: #fff;
+  color: #fff !important;
   max-width: 440px;
-  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 32px -16px rgba(0, 0, 0, 0.5);
 }
 .evidence-eyebrow {
   font-size: 0.7rem;
@@ -1870,7 +1872,11 @@ p, li { line-height: 1.7; }
 .card-cta-deal:active { transform: translateY(1px); }
 
 /* A8: review-card 右上 Affiliate 灰标 */
+/* hotfix 7/27 P1-3: 从 cta 行内挪到 card 右上角（position: absolute），避免折行 */
 .affiliate-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
   display: inline-block;
   font-size: 0.6rem;
   font-weight: 700;
@@ -1881,8 +1887,18 @@ p, li { line-height: 1.7; }
   border: 1px solid var(--border);
   padding: 1px 7px;
   border-radius: 4px;
-  margin-right: auto;
+  z-index: 2;
+  pointer-events: none;
 }
+
+/* hotfix 7/27 P1-3: review-card 加 position:relative 让 absolute affiliate-tag 相对卡定位 */
+.review-card { position: relative; }
+
+/* hotfix 7/27 P1-3: cta 行 cta 不折行 + Check Deal 占满 */
+.card-cta-group { flex-wrap: nowrap; align-items: center; }
+.card-cta { white-space: nowrap; }
+.card-cta-read { flex: 0 0 auto; }
+.card-cta-deal { flex: 1 1 auto; min-width: 0; white-space: nowrap; }
 
 /* A6: 顶栏 More 下拉 */
 .nav-more { position: relative; }

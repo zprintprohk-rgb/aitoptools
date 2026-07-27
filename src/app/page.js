@@ -9,9 +9,10 @@ import WinnerBadge from '@/components/WinnerBadge'
 import EvidenceCard from '@/components/EvidenceCard'
 
 // A4 胜方映射 — 6 篇首页可见的对比。详情页 /compare/[slug]/ 由 B 桶统一接入
+// hotfix 7/27: printify-vs-gelato 'B'→'A' 修 winner/conclusion 打架（结论首句 Choose Printify）
 const COMPARISON_WINNERS = {
   'printful-vs-printify': 'B',
-  'printify-vs-gelato': 'B',
+  'printify-vs-gelato': 'A',
   'printful-vs-gelato': 'A',
   'kittl-vs-placeit': 'A',
   'kittl-vs-canva': 'A',
@@ -317,16 +318,20 @@ export default function Home() {
 }
 
 function ReviewCard({ review }) {
-  const isVertical = review.slug.includes('print') || review.slug.includes('packag') || 
+  const isVertical = review.slug.includes('print') || review.slug.includes('packag') ||
     review.slug.includes('kittl') || review.slug.includes('placeit') || review.slug.includes('looka') ||
-    review.slug.includes('claid') || review.slug.includes('photoroom') || 
+    review.slug.includes('claid') || review.slug.includes('photoroom') ||
     review.slug.includes('ecom') || review.slug.includes('shopify')
 
-  const isGenericCat = review.category === 'AI Writing' || review.category === 'AI Video' || 
+  const isGenericCat = review.category === 'AI Writing' || review.category === 'AI Video' ||
     review.category === 'AI Voice' || review.category === 'AI Image'
 
   return (
     <article className="review-card">
+      {/* hotfix 7/27 P1-3: affiliate-tag 挪到 card 右上角（不在 cta 行内，避免折行） */}
+      {review.affiliateUrl && (
+        <span className="affiliate-tag" aria-label="Affiliate link">Affiliate</span>
+      )}
       <div className="card-badges">
         <span className="card-badge tested">Hands-on Tested</span>
         {isVertical && <span className="card-badge vertical">Print &amp; E-Com</span>}
@@ -339,10 +344,7 @@ function ReviewCard({ review }) {
       <h3><Link href={`/${review.slug}/`}>{review.title}</Link></h3>
       <p className="card-desc">{review.metaDesc}</p>
       <div className="card-cta-group">
-        {review.affiliateUrl && (
-          <span className="affiliate-tag" aria-label="Affiliate link">Affiliate</span>
-        )}
-        <Link href={`/${review.slug}/`} className="card-cta">Read Full Review →</Link>
+        <Link href={`/${review.slug}/`} className="card-cta card-cta-read">Read Full Review →</Link>
         {review.affiliateUrl && (
           <a
             href={review.affiliateUrl}
@@ -354,24 +356,8 @@ function ReviewCard({ review }) {
           </a>
         )}
       </div>
-      {isVertical && (
-        <div className="vertical-score">
-          <div className="score-row">
-            <span className="score-label">Print Compatibility</span>
-            <div className="score-bar">
-              <div className="score-fill print" style={{width: '88%'}}></div>
-            </div>
-            <span className="score-val">8.8</span>
-          </div>
-          <div className="score-row">
-            <span className="score-label">E-Commerce Fit</span>
-            <div className="score-bar">
-              <div className="score-fill ecom" style={{width: '82%'}}></div>
-            </div>
-            <span className="score-val">8.2</span>
-          </div>
-        </div>
-      )}
+      {/* hotfix 7/27 P1-1: 进度条删除（107 篇 reviews 全无 printCompatibility/ecommerceFit 字段，硬编 8.8/8.2 是凭空捏造）
+          待 reviews.json 真实数据补齐 + verify-cron 加"进度条全雷同"断言 后再绑字段。CSS 保留在 globals.css 备用。 */}
     </article>
   )
 }
