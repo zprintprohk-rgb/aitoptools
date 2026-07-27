@@ -1,6 +1,7 @@
 import './globals.css'
 import Link from 'next/link'
 import config from '@/config'
+import reviews from '@/data/reviews'
 
 export const metadata = {
   title: { default: `${config.brand} — ${config.tagline}`, template: `%s | ${config.brand}` },
@@ -50,32 +51,41 @@ export default function RootLayout({ children }) {
               <span className="logo-text">{config.brand}</span>
             </Link>
             <nav className="main-nav">
-              {/* Core vertical — always first */}
+              {/* A6 顶栏精简 — 4 主线 + More 下拉（藏 4 个 general 分类 + Submit） */}
               <Link href="/category/ai-print-design/" className="nav-link">🖨️ Print &amp; Packaging</Link>
               <Link href="/category/ai-ecommerce/" className="nav-link">🛒 E-Commerce</Link>
-              <span className="nav-divider" aria-hidden="true" />
-              {/* General categories — visually de-emphasized */}
-              <Link href="/category/ai-writing/" className="nav-link nav-secondary">Writing</Link>
-              <Link href="/category/ai-image/" className="nav-link nav-secondary">Image</Link>
-              <Link href="/category/ai-video/" className="nav-link nav-secondary">Video</Link>
-              <Link href="/category/ai-voice/" className="nav-link nav-secondary">Voice</Link>
-              <span className="nav-divider" aria-hidden="true" />
               <Link href="/compare/" className="nav-link">⚖️ Comparisons</Link>
               <Link href="/best/" className="nav-link">🏆 Best Of</Link>
               <Link href="/#search" className="nav-search-icon" aria-label="Search tools">🔍</Link>
-              <Link href="/submit-tool/" className="nav-cta">Submit</Link>
+              <details className="nav-more">
+                <summary className="nav-link nav-more-trigger">More ▾</summary>
+                <div className="nav-more-panel">
+                  <Link href="/category/ai-writing/">✍️ AI Writing</Link>
+                  <Link href="/category/ai-image/">🎨 AI Image</Link>
+                  <Link href="/category/ai-video/">🎬 AI Video</Link>
+                  <Link href="/category/ai-voice/">🎙️ AI Voice</Link>
+                  <span className="nav-more-divider" aria-hidden="true" />
+                  <Link href="/methodology/">📐 Methodology</Link>
+                  <Link href="/about/">ℹ️ About</Link>
+                  <Link href="/submit-tool/" className="nav-more-cta">Submit a Tool</Link>
+                </div>
+              </details>
             </nav>
             <details className="mobile-nav">
               <summary className="mobile-menu-btn" aria-label="Open menu">☰</summary>
               <nav className="mobile-nav-panel" aria-label="Mobile">
                 <Link href="/category/ai-print-design/">🖨️ Print &amp; Packaging</Link>
                 <Link href="/category/ai-ecommerce/">🛒 E-Commerce &amp; Shopify</Link>
+                <Link href="/compare/">⚖️ Comparisons</Link>
+                <Link href="/best/">🏆 Best Of</Link>
+                <span className="nav-more-divider" aria-hidden="true" />
                 <Link href="/category/ai-writing/">✍️ AI Writing</Link>
                 <Link href="/category/ai-image/">🎨 AI Image</Link>
                 <Link href="/category/ai-video/">🎬 AI Video</Link>
                 <Link href="/category/ai-voice/">🎙️ AI Voice</Link>
-                <Link href="/compare/">⚖️ Comparisons</Link>
-                <Link href="/best/">🏆 Best Of</Link>
+                <span className="nav-more-divider" aria-hidden="true" />
+                <Link href="/methodology/">📐 Methodology</Link>
+                <Link href="/about/">ℹ️ About</Link>
                 <Link href="/submit-tool/" className="mobile-nav-cta">Submit Your Tool</Link>
               </nav>
             </details>
@@ -84,11 +94,12 @@ export default function RootLayout({ children }) {
             <div className="container trust-bar-inner">
               <span>✓ Hands-On Tested</span>
               <span className="trust-dot" aria-hidden="true">·</span>
-              <span>✓ 74+ Tools Reviewed</span>
+              <span>✓ {reviews.length} Tools Reviewed</span>
               <span className="trust-dot" aria-hidden="true">·</span>
               <span>✓ Independent Reviews</span>
               <span className="trust-dot" aria-hidden="true">·</span>
-              <span>✓ Updated July 2026</span>
+              {/* A7 trust-bar 可点 — Updated 日期跳到 /methodology#updates */}
+              <Link href="/methodology/#updates" className="trust-link">✓ Updated July 2026</Link>
             </div>
           </div>
         </header>

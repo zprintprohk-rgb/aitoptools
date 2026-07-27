@@ -5,6 +5,18 @@ import reviews from '@/data/reviews'
 import comparisons from '@/data/comparisons.json'
 import listicles from '@/data/listicles.json'
 import RatingBar from '@/components/RatingBar'
+import WinnerBadge from '@/components/WinnerBadge'
+import EvidenceCard from '@/components/EvidenceCard'
+
+// A4 胜方映射 — 6 篇首页可见的对比。详情页 /compare/[slug]/ 由 B 桶统一接入
+const COMPARISON_WINNERS = {
+  'printful-vs-printify': 'B',
+  'printify-vs-gelato': 'B',
+  'printful-vs-gelato': 'A',
+  'kittl-vs-placeit': 'A',
+  'kittl-vs-canva': 'A',
+  'mockey-vs-placeit': 'A',
+}
 
 const VERTICAL_CATEGORIES = [
   { name: '🖨️ Print & Packaging', slug: 'ai-print-design', desc: 'AI for print-on-demand, packaging design, label making', featured: true },
@@ -79,13 +91,24 @@ export default function Home() {
           }),
         }}
       />
-      {/* HERO */}
+      {/* HERO — A1 利益钩子 + eyebrow + 副标重写 */}
       <div className="hero">
         <div className="container hero-inner">
           <div className="hero-text">
-            <h1>AI Tools for <em>Print Shops</em> &amp; Independent Store Owners</h1>
-            <p>Hands-on reviews, real screenshots, and honest comparisons — tested by print industry professionals.</p>
-            <p className="trust-line">✓ Tested by print &amp; e-commerce industry professionals with hands-on experience</p>
+            <span className="hero-eyebrow">
+              <span className="hero-eyebrow-dot" aria-hidden="true" />
+              For print shops &amp; POD sellers · Hands-on tested
+            </span>
+            <h1>
+              Stop guessing which AI tool{' '}
+              <em>actually prints well.</em>
+            </h1>
+            <p>
+              <b>{reviews.length} tools</b> tested on real print jobs and live stores — scored on the two
+              numbers that decide your margin: <b>print compatibility</b> and <b>e-commerce fit</b>.
+              Verified 2026 pricing, no pay-to-rank.
+            </p>
+            <p className="trust-line">✓ Independent reviews from print &amp; e-commerce professionals — <Link href="/methodology/">see our methodology</Link></p>
 
             <div className="search-bar cmdk" id="search">
               <kbd className="cmdk-badge" aria-hidden="true">⌘K</kbd>
@@ -106,19 +129,13 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Product-as-proof: the site's own content, rendered — not a photo */}
-          <div className="hero-proof" aria-hidden="true">
-            <div className="mini-vs">
-              <div className="mini-vs-battle">
-                <span className="mini-side"><b>Printful</b><i>★ 4.5</i></span>
-                <span className="mini-badge">VS</span>
-                <span className="mini-side"><b>Printify</b><i>★ 4.3</i></span>
-              </div>
-              <p className="mini-verdict">Printify wins on margin &amp; catalog. Printful wins on quality &amp; branding.</p>
-              <span className="mini-link">Read Comparison →</span>
-            </div>
-            <div className="mini-stat"><strong>★ 4.8</strong> avg rating · 74+ tools tested</div>
-          </div>
+          {/* A2-2: 证据卡 — 替换 mini-vs，把双维度评分（Print Compatibility / E-Commerce Fit）顶到首屏 */}
+          <EvidenceCard
+            toolA="Printful"
+            toolB="Printify"
+            verdict="Printify wins on margin &amp; catalog (1,300+ items). Printful wins on quality &amp; branding."
+            href="/compare/printful-vs-printify/"
+          />
         </div>
       </div>
 
@@ -171,24 +188,32 @@ export default function Home() {
               Head-to-head showdowns with clear winners — verified 2026 pricing, real cost math, no fence-sitting.
             </p>
             <div className="vs-grid">
-              {comparisons.map(c => (
-                <article key={c.slug} className="vs-card">
-                  <div className="vs-card-battle">
-                    <div className="vs-side">
-                      <span className="vs-name">{c.toolA.name}</span>
-                      <span className="vs-rating">★ {c.toolA.rating}</span>
+              {comparisons.map(c => {
+                const winner = COMPARISON_WINNERS[c.slug]
+                return (
+                  <article
+                    key={c.slug}
+                    className={`vs-card ${winner === 'A' ? 'vs-card-a-wins' : winner === 'B' ? 'vs-card-b-wins' : ''}`}
+                  >
+                    <div className="vs-card-battle">
+                      <div className="vs-side">
+                        <span className="vs-name">{c.toolA.name}</span>
+                        <span className="vs-rating">★ {c.toolA.rating}</span>
+                        {winner === 'A' && <WinnerBadge />}
+                      </div>
+                      <span className="vs-badge">VS</span>
+                      <div className="vs-side">
+                        <span className="vs-name">{c.toolB.name}</span>
+                        <span className="vs-rating">★ {c.toolB.rating}</span>
+                        {winner === 'B' && <WinnerBadge />}
+                      </div>
                     </div>
-                    <span className="vs-badge">VS</span>
-                    <div className="vs-side">
-                      <span className="vs-name">{c.toolB.name}</span>
-                      <span className="vs-rating">★ {c.toolB.rating}</span>
-                    </div>
-                  </div>
-                  <h3 className="vs-title"><Link href={`/compare/${c.slug}/`}>{c.title}</Link></h3>
-                  <p className="vs-verdict">{c.quickVerdict.split('.')[0]}.</p>
-                  <Link href={`/compare/${c.slug}/`} className="card-cta">Read Comparison →</Link>
-                </article>
-              ))}
+                    <h3 className="vs-title"><Link href={`/compare/${c.slug}/`}>{c.title}</Link></h3>
+                    <p className="vs-verdict">{c.quickVerdict.split('.')[0]}.</p>
+                    <Link href={`/compare/${c.slug}/`} className="card-cta">Read Comparison →</Link>
+                  </article>
+                )
+              })}
             </div>
           </div>
         </div>
@@ -314,9 +339,17 @@ function ReviewCard({ review }) {
       <h3><Link href={`/${review.slug}/`}>{review.title}</Link></h3>
       <p className="card-desc">{review.metaDesc}</p>
       <div className="card-cta-group">
+        {review.affiliateUrl && (
+          <span className="affiliate-tag" aria-label="Affiliate link">Affiliate</span>
+        )}
         <Link href={`/${review.slug}/`} className="card-cta">Read Full Review →</Link>
         {review.affiliateUrl && (
-          <a href={review.affiliateUrl} target="_blank" rel="nofollow sponsored" className="card-cta affiliate">
+          <a
+            href={review.affiliateUrl}
+            target="_blank"
+            rel="nofollow sponsored"
+            className="card-cta card-cta-deal"
+          >
             Check Deal ↗
           </a>
         )}

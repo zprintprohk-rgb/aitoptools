@@ -1684,3 +1684,329 @@ p, li { line-height: 1.7; }
 .cons-box li::before { color: var(--k-muted); }
 .pros-box, .cons-box { transition: border-color var(--transition); }
 .pros-box:hover, .cons-box:hover { border-color: var(--c-primary); }
+
+/* ============================================
+   A 桶 7/27 信任与 UX 改造 — 新增样式（不动现有）
+   ============================================ */
+
+/* A1: Hero eyebrow 标签 — For print shops & POD sellers */
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: var(--a-light);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+.hero-eyebrow-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--a-light);
+  flex-shrink: 0;
+}
+
+/* A2-2: EvidenceCard — 替换 mini-vs，把双维度评分顶到首屏右侧 */
+.evidence-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  color: #fff;
+  max-width: 440px;
+  backdrop-filter: blur(6px);
+}
+.evidence-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--a-light);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.evidence-title {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  line-height: 1.25 !important;
+  margin: 0 0 18px !important;
+  letter-spacing: -0.2px !important;
+}
+.evidence-meter { margin-bottom: 14px; }
+.evidence-row {
+  display: flex; justify-content: space-between;
+  font-size: 0.82rem; font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 6px;
+}
+.evidence-row .evidence-val { color: var(--a-light); font-variant-numeric: tabular-nums; }
+.evidence-track {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.evidence-fill { height: 100%; border-radius: 100px; }
+.evidence-fill-print { background: linear-gradient(90deg, var(--c-light), var(--c-primary)); }
+.evidence-fill-ecom { background: linear-gradient(90deg, #fbbf24, var(--a-primary)); }
+
+.evidence-vs {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  margin-top: 18px; padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+.evidence-vs-badge {
+  background: var(--a-primary);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 100px;
+  letter-spacing: 0.5px;
+}
+.evidence-verdict {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 12px 0 10px;
+  line-height: 1.5;
+}
+.evidence-link {
+  display: inline-block;
+  color: var(--a-light) !important;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none !important;
+}
+.evidence-link:hover { color: #fff !important; text-decoration: underline !important; }
+
+/* A2-1: WinnerBadge — 胜方徽章（实心琥珀） */
+.winner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: var(--a-primary);
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 100px;
+  margin-top: 4px;
+  align-self: flex-start;
+}
+.winner-star { color: #fff; }
+
+/* A4: 胜方 vs-card 高亮 */
+.vs-card-a-wins .vs-side:first-child .vs-name { color: var(--c-primary); }
+.vs-card-b-wins .vs-side:last-child .vs-name { color: var(--c-primary); }
+.vs-card-a-wins .vs-side:first-child,
+.vs-card-b-wins .vs-side:last-child {
+  background: linear-gradient(180deg, transparent, rgba(13, 148, 136, 0.06));
+  border-radius: var(--radius-sm);
+  padding: 4px 6px;
+  margin: -4px -6px;
+}
+
+/* A2-3: DecisionBox — Who it's for / NOT for / Best deal */
+.decision-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  margin: 24px 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 22px;
+}
+.decision-col { padding: 0 6px; }
+.decision-col + .decision-col { border-left: 1px solid var(--border); padding-left: 18px; }
+.decision-h {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--k-deep);
+  margin: 0 0 8px;
+}
+.decision-good .decision-h { color: var(--c-primary); }
+.decision-bad .decision-h { color: var(--error); }
+.decision-deal .decision-h { color: var(--a-primary); }
+.decision-col ul { list-style: none; padding: 0; margin: 0; }
+.decision-col li {
+  font-size: 0.86rem;
+  color: var(--k-secondary);
+  padding: 3px 0 3px 18px;
+  position: relative;
+  line-height: 1.5;
+}
+.decision-good li::before { content: "✓"; color: var(--c-primary); font-weight: 700; position: absolute; left: 0; }
+.decision-bad li::before { content: "✗"; color: var(--error); font-weight: 700; position: absolute; left: 0; }
+.decision-deal p { font-size: 0.88rem; color: var(--k-secondary); line-height: 1.55; margin: 0; }
+
+@media (max-width: 768px) {
+  .decision-box { grid-template-columns: 1fr; gap: 16px; padding: 18px; }
+  .decision-col + .decision-col { border-left: none; border-top: 1px solid var(--border); padding-left: 6px; padding-top: 16px; }
+}
+
+/* A3: 实心琥珀橙 Check Deal 主按钮 */
+.card-cta-deal {
+  background: var(--a-primary) !important;
+  color: #fff !important;
+  padding: 8px 14px !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  border-radius: var(--radius-sm);
+  text-decoration: none !important;
+  transition: background var(--transition);
+}
+.card-cta-deal:hover { background: var(--a-deep) !important; color: #fff !important; }
+.card-cta-deal:active { transform: translateY(1px); }
+
+/* A8: review-card 右上 Affiliate 灰标 */
+.affiliate-tag {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--k-tertiary);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 1px 7px;
+  border-radius: 4px;
+  margin-right: auto;
+}
+
+/* A6: 顶栏 More 下拉 */
+.nav-more { position: relative; }
+.nav-more-trigger { cursor: pointer; user-select: none; }
+.nav-more[open] .nav-more-trigger { background: rgba(255, 255, 255, 0.18); color: #fff !important; }
+.nav-more-panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+}
+.nav-more-panel a {
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 18px;
+  color: var(--k-primary) !important;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: background var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+.nav-more-panel a:hover { background: var(--c-bg); color: var(--c-primary) !important; }
+.nav-more-divider { height: 1px; background: var(--border); margin: 6px 0; }
+.nav-more-cta { color: var(--a-primary) !important; font-weight: 700 !important; }
+
+/* A7: trust-bar 可点链接 */
+.trust-link {
+  color: rgba(255, 255, 255, 0.75) !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+.trust-link:hover { color: var(--a-light) !important; text-decoration: underline !important; }
+
+/* A5: /methodology 页面样式 */
+.methodology-page { max-width: 880px; margin: 36px auto; padding: 0 24px 56px; }
+.methodology-page h1 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--k-deep);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+.methodology-lede {
+  font-size: 1.1rem;
+  color: var(--k-secondary);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 720px;
+}
+.methodology-section { margin: 36px 0; }
+.methodology-section h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--k-deep);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--a-bg);
+}
+.methodology-section h2 em { color: var(--a-primary); font-style: normal; }
+.methodology-section p, .methodology-section li {
+  font-size: 0.96rem;
+  color: var(--k-secondary);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.methodology-section ul { list-style: disc; padding-left: 22px; }
+.methodology-section li strong { color: var(--k-deep); }
+.methodology-scores { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 18px 0; }
+.methodology-score-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--a-primary);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+}
+.methodology-score-card h3 { font-size: 1.05rem; color: var(--k-deep); margin-bottom: 6px; font-weight: 700; }
+.methodology-score-card p { font-size: 0.88rem; color: var(--k-secondary); line-height: 1.6; margin: 0; }
+.methodology-note { font-size: 0.9rem; color: var(--k-tertiary); font-style: italic; margin-top: 8px; }
+.methodology-updates { display: flex; flex-direction: column; gap: 14px; }
+.methodology-update {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--c-primary);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+}
+.methodology-update-date {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--c-primary);
+  background: var(--c-bg);
+  padding: 2px 9px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-variant-numeric: tabular-nums;
+}
+.methodology-update p { font-size: 0.9rem; color: var(--k-secondary); margin: 0; line-height: 1.6; }
+.methodology-update code {
+  font-size: 0.82rem;
+  background: var(--bg-alt);
+  padding: 1px 6px;
+  border-radius: 3px;
+  color: var(--k-primary);
+}
+
+@media (max-width: 768px) {
+  .methodology-scores { grid-template-columns: 1fr; }
+  .methodology-page h1 { font-size: 1.7rem; }
+}
+
+/* 修正 EvidenceCard 移动端：跟随 hero 折叠（在 @media max-width 900px 段已对 .hero-text 做处理） */
+@media (max-width: 900px) {
+  .evidence-card { max-width: 100%; margin-top: 18px; }
+}
