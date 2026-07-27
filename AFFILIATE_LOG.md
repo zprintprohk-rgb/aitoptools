@@ -308,3 +308,10 @@ M1 复盘 — aitoptools
 - 来源×坑位 CTR 最高组合：____
 - 据此已落地的 ≥3 处改动：① ____ ② ____ ③ ____
 - M2 双引擎输入：____
+
+## 2026-07-28 · W1-T1 DONE（K3 线上验收通过）
+- gtag G-248QMCT2S3 全站唯一注入 ✅；53/53 联盟链接 aff-link+UTM ✅；affiliate_click 事件 5 参 ✅（curl 抽查 mockey-review / printful-vs-printify 两页核实）。
+- 事件名为 `affiliate_click`（非 runbook 原文 outbound_click）→ 用户 GA4 关键事件标记请用此名。
+- 采纳新规：utm_campaign={merchant} 替代 m1（更利于分析），runbook 附录 A 待改注。
+- 遗留小疵：post-build 注入链接 link_id=global-injected-{hash} 不可读 → 排 W1-T2 顺手修为 {slug}-{位置}。
+- 待用户 GA4 后台：① affiliate_click 标为关键事件 ② 建链接点击探索报表。
