@@ -62,3 +62,46 @@
 1. 首月 KPI = **管道三件套 + 破冰 $20–50**，不是 $500
 2. 3D 桥接只 **1 篇 + 5 内链**，多 1 篇即违规
 3. **W1-T1 度量是 P0**，不许跳过去先写内容
+
+## 八、双引擎字段填充（W2-T4 / W3-T2 照单执行，2026-07-28 增补）
+
+> 头部 16 页预置"主关键词 + 结论首句模板 + JSON-LD 类型 + FAQ 三问"，执行直接套，禁止现场自由发挥。结论首句的 {winner} 必须 = 该页 vs-card 的 winner 字段（附录 D 同源）。
+
+### 8.1 六对比页（主关键词 / 结论首句模板 / schema / FAQ 三问）
+
+| 页 | 主关键词 | 结论首句模板 | JSON-LD | FAQ 三问 |
+|---|---|---|---|---|
+| printful-vs-printify | printful vs printify | {winner} is the best POD fulfillment for {audience} in 2026 because {margin/UX 理由}. | ItemList+2×Product | which is cheaper for beginners / which integrates with Etsy / which has faster shipping |
+| printify-vs-gelato | printify vs gelato | {winner} is the best POD fulfillment for {audience} in 2026 because {理由}. | ItemList+2×Product | global coverage vs price / print quality difference / best for EU sellers |
+| printful-vs-gelato | printful vs gelato | {winner} …（同上模板） | ItemList+2×Product | branding options / per-item cost / eco-friendly options |
+| kittl-vs-placeit | kittl vs placeit | {winner} is the best design tool for {audience} in 2026 because {理由}. | ItemList+2×SoftwareApplication | template library size / learning curve / best for merch sellers |
+| kittl-vs-canva | kittl vs canva | {winner} …（同上模板） | ItemList+2×SoftwareApplication | free plan limits / merch/POD workflow / team features |
+| mockey-vs-placeit | mockey vs placeit | {winner} is the best mockup generator for {audience} in 2026 because {理由}. | ItemList+2×SoftwareApplication | 3D vs 2D mockups / bulk generation / free tier |
+
+### 8.2 十评测页（主关键词 / 结论首句模板 / schema / FAQ 三问）
+
+| 页 | 主关键词 | 结论首句模板 | JSON-LD | FAQ 三问 |
+|---|---|---|---|---|
+| mockey-review | mockey review / mockey ai | Mockey is the best mockup tool for {audience} in 2026 because {理由}. | SoftwareApplication+Review | is mockey free / mockey vs placeit / does it do 3D mockups |
+| creative-fabrica-review | creative fabrica review | Creative Fabrica is the best asset marketplace for {audience} in 2026 because {理由}. | SoftwareApplication+Review | commercial license included / subscription vs credits / best for POD sellers |
+| claid-ai-review | claid ai review | Claid.ai is the best AI product photo tool for {audience} in 2026 because {理由}. | SoftwareApplication+Review | claid vs photoroom / api access / free tier limits |
+| printful-review | printful review | Printful is the best POD fulfillment for {audience} in 2026 because {理由}. | SoftwareApplication+Review | printful pricing / printful vs printify / integrations list |
+| printify-review | printify review | Printify is the best POD fulfillment for {audience} in 2026 because {理由}. | SoftwareApplication+Review | printify premium worth it / print providers rating / global shipping |
+| placeit-review | placeit review | Placeit is the best mockup/logo tool for {audience} in 2026 because {理由}. | SoftwareApplication+Review | placeit free mockups / placeit vs mockey / video mockups |
+| kittl-review | kittl review | Kittl is the best design tool for {audience} in 2026 because {理由}. | SoftwareApplication+Review | kittl free plan / kittl for t-shirts / kittl vs canva |
+| gelato-review | gelato review | Gelato is the best local POD for {audience} in 2026 because {理由}. | SoftwareApplication+Review | gelato countries / gelato vs printful / paper products |
+| mockuphive-review | mockup hive review | MockupHive is the best mockup resource for {audience} in 2026 because {理由}. | SoftwareApplication+Review | free vs paid / file formats / best for Etsy listings |
+| photoroom-review | photoroom review | Photoroom is the best product photo tool for {audience} in 2026 because {理由}. | SoftwareApplication+Review | photoroom free / batch editing / photoroom vs claid |
+
+### 8.3 meta 模板（SEO 4 线，≤60/≤155 字符）
+
+- title：{主关键词} (2026): {Winner} Wins for {Audience} | aitoptools
+- description：We tested {N} {category}. {Winner} wins on {1 个可量化理由}. See the comparison table, pricing, and best deal inside.
+
+### 8.4 内链网（每页 ≥3 条，预置映射）
+
+- 每个对比页 → 链到两个品牌评测页 + 1 个同品类对比页
+- 每个评测页 → 链到该品牌出现的对比页 + 2 个同品类评测页
+- 锚文本 = 对方页主关键词自然变体，禁止全站统一锚文本
+
+⚠️ 双引擎澄清（防 M3 被带偏）：本方案 GEO = **Generative Engine Optimization**（被 AI 答案引用），不是多语言/多地区（Geographic，本方案不做）。首月不为 GEO 新建 hub 页/不写新文，只改 16 页结构（W2-T4）+ 3 篇新文自带结构（W3-T2）。

@@ -1,0 +1,332 @@
+# M3 首月执行手册（Month 1 Runbook）— aitoptools.net 联盟佣金破冰
+
+> **文件用途**：M3 及执行团队**逐条照做**的操作手册。每个任务含步骤、命令/代码、验收线、负责人占位、依赖。**不需要读任何上游对话**即可执行。
+> **版本**：v1.0 ｜ **窗口**：M3 第 1–30 天 ｜ **站点**：aitoptools.net
+> **上游指针**（只读引用，不在本文件复述）：`AGENTS.md`、`AFFILIATE_PROGRAMS.md`（费率/EPC 表）、`TRAFFIC_STRATEGY.md`、`AFFILIATE_LOG.md`、`CONTENT_PLAN.md`。本文件与它们冲突时，**变现动作以本文件为准**，设计/合规动作以上游为准。
+
+---
+
+## 0. 阅读约定（M3 开工前必读，3 分钟）
+
+- 任务编号 `W{n}-T{m}` = 第 n 周第 m 个任务。`[P0]` = 阻塞型，不做后面全停。
+- 每个任务卡字段：`负责人`（填人名/角色）、`耗时`、`前置`（依赖的任务 ID）、`撬动环`（见 §2）、`步骤`、`DoD`（完成定义，**必须可判定**）、`产出物`、`风险/回滚`。
+- **checkbox 用法**：`- [ ]` 未做 / `- [x]` 完成。M3 每完成一步打勾，**DoD 全勾才算该任务完成**，不许"差不多"。
+- **阻塞规则**：单任务卡住 **> 4 小时**无进展 → 在 `AFFILIATE_LOG.md` 记一行 `[BLOCKED W{n}-T{m}] 原因 / 已尝试 / 需谁` 并升级给决策人，**不要静默停摆**。
+- **范围护栏（红线，违反即停）**：
+  0. **双引擎护栏（SEO+GEO，与下方红线同级，违反即停）**：
+     - 首月 SEO/GEO 动作只允许"改现有 16 页 + 3 篇新文的结构"，禁止为 SEO/GEO 新建栏目/分类页/枢纽页（hub 排 M2）。
+     - 禁止给自然搜索链接加 UTM（会把 organic 打成 referral）；GEO 标记参数 `geo=1` 仅用于主动投放到 AI 引擎的入口，不得污染 organic。
+     - 禁止为冲 AI 引用编造对比结论/评分/价格（与"产不出的维度不显示"同罪）；GEO 可摘引句必须与 winner 三一致（附录 D）同源。
+     - GEO 首月不考核"被引用次数"，只考核"GEO 结构 4 线达标率"（附录 E），引用次数 M2 起观测。
+  1. 首月**新内容只允许 3 篇 + 1 篇 3D 桥接文**（见 W3-T2 / W2-T3）。**禁止**自建新垂直、新支柱、新 IA 分支。3D 仅限 W2-T3 定义的范围，**多写 1 篇 3D = 违规**。
+  2. 首月**禁止**做"立规则/画 IA/重构设计系统"类 0 佣金动作占用本手册排期。设计修复（深底文本/grid 溢出/section 节奏）**并行另开线**，不占 W1–W4 任何工时。
+  3. 首月**禁止**接任何"付费上位/paid placement"，违反即破坏中立人设（见 `AGENTS.md`）。
+
+---
+
+## 1. 首月北极星 & 预期管理（KPI 写错，执行必歪——必读）
+
+- **首月北极星 ≠ 收入金额。** 首月北极星 = **"变现管道三件套跑通"**：① 度量能看见每个链接的点击；② 带佣按钮是主 CTA；③ 至少有 1 个非搜索流量渠道带来非零点击。
+- **首月收入目标 = 破冰 $20–50，不是 $3000÷6=$500。** 用 $500 考核 M1 会导致动作变形（去追短期低质流量）。**M1 看到 $30 且三件套跑通 = 成功**；看到 $0 但三件套跑通 = 部分成功（管道对，灌水从 M2 起）；看到 $500 但三件套没跑通 = **失败**（不可持续，M2 会归零）。
+- **6 个月总目标**：累计 $3,000，M6 单月 ≥ $800。首月只负责"建管道"，**爬坡在 M2–M4，冲量在 M5–M6**。
+
+---
+
+## 2. 佣金公式 & 四环诊断（每个任务在撬哪一环）
+
+`佣金 = 访客 × 看到链接率 × 点击率(CTR) × 转化率(CVR) × EPC`
+
+| 环 | 现状 | 首月负责撬动的任务 |
+|---|---|---|
+| 度量（地基） | GA4/点击事件**未装** → 0 元第一因 | **W1-T1 [P0]** |
+| 看到链接率 | 带佣按钮 `Check Deal` 与阅读按钮平权/更弱 | **W1-T2** |
+| 访客（拆三源） | 自然≈0；GEO 未布；社媒缺快钱腿 | **W2-T1 / W2-T2**（社媒）· **W2-T4[新·GEO 结构]**（GEO）· **W3-T2** 自带 SEO 意图词（SEO） |
+| 转化率 × EPC | 链接多指商户首页，非深链；高佣商户未优先 | **W3-T1** |
+| 闭环优化 | 无链接级 CTR 榜，不知砍/加 | **W4-T1** |
+
+> **优先级铁律**：W1-T1 > W1-T2 > W2-T1 > W3-T1 > 其余。**度量与提权不做，后面灌的流量全是浪费。**
+> **双引擎铁律**：SEO/GEO 结构改造（W2-T4）与社媒分发（W2-T1）同级可并行，但都晚于 W1-T1/W1-T2——没埋点+没提权，双引擎引来的人也不点带钱按钮。
+
+---
+
+## 3. 关键路径（依赖图）
+
+```
+W1-T1[度量,P0] ──┬──> W1-T2[提权] ──> W2-T1[社媒分发] ──> W4-T1[看数据砍/加]
+                 ├──> W2-T2[社群分发]
+                 ├──> W2-T3[3D桥接,仅此1篇]
+                 ├──> W2-T4[GEO结构+SEO技术,双引擎] ──> W4-T1
+                 ├──> W3-T1[深链+高佣] ──> W4-T1
+                 └──> W3-T2[3篇高意图新文,自带GEO/SEO结构]
+
+```
+- **串行硬依赖**：W1-T1 必须先于一切（没埋点，W4 无从判定）。W1-T2 先于 W2 分发（灌流量前先确保带钱按钮突出）。W3-T1/W2 先于 W4-T1。
+- **可并行**：W2-T1 / W2-T2 / W2-T3 / W2-T4 四者互不依赖；W3-T1 与 W3-T2 可并行。
+
+---
+
+## 4. 周任务卡
+
+### WEEK 1 — 度量 + 提权（管道第一节）
+
+#### W1-T1 [P0] 装度量：GA4 + 联盟链接点击事件 + UTM
+- **负责人**：______ ｜ **耗时**：0.5–1 天 ｜ **前置**：无 ｜ **撬动环**：地基
+- **目标**：后台能看见"每个联盟链接被点几次、来自哪篇、点去哪个商户"。
+- **步骤**：
+  1. 在 GA4 创建媒体资源，取 `G-XXXXXXXXXX`，全站注入 gtag（`<head>` 或 tag manager 二选一，**全站唯一**，禁止重复注入）。
+  2. 给所有联盟链接统一加 class `aff-link` 与 data 属性（命名规范见附录 A）：
+     ```html
+     <a class="aff-link"
+        data-link-id="printful-review-cta1"
+        data-merchant="printful"
+        data-target="product"
+        href="https://...?utm_source=aitoptools&utm_medium=review&utm_campaign=m1&utm_content=printful-review-cta1">…</a>
+
+     ```
+  3. 注入出站点击事件脚本（**复制即用**）：
+     ```html
+     <script>
+     document.addEventListener('click', function(e){
+       var a = e.target.closest('a.aff-link');
+       if(!a) return;
+       gtag('event','outbound_click',{
+         link_id:   a.dataset.linkId   || 'unknown',
+         merchant:  a.dataset.merchant || 'unknown',
+         target_type: a.dataset.target || 'unknown',
+         page_path: location.pathname,
+         link_url:  a.href
+       });
+     }, true);
+     </script>
+
+     ```
+  4. GA4 后台把 `outbound_click` 标记为**转化事件**；建自定义维度 `link_id / merchant / target_type`。
+  5. 用 GA4 **DebugView** 实时点 3 个不同链接，确认事件带齐 4 个参数。
+- **DoD**：
+  - [ ] 全站 gtag 唯一注入，无重复。
+  - [ ] 71 个联盟链接**100%** 带 `aff-link` + 3 个 data 属性 + UTM（用脚本扫：`document.querySelectorAll('a[href*="affiliate-or-known-domain"]').length` 应等于带 `aff-link` 的数量；不等则补漏）。
+  - [ ] DebugView 看到 `outbound_click` 且参数齐全。
+  - [ ] 在 GA4 建好"链接点击"探索报表模板（维度 `link_id`，指标 `event_count`）。
+- **产出物**：埋点上线 + 报表模板 + 一份"71 链接埋点核对表"（link_id ↔ 商户 ↔ 所在页）。
+- **风险/回滚**：gtag 注入冲突 → 回滚到注入前 commit；事件丢失 → 检查是否被 CSP/广告拦截，改用 `navigator.sendBeacon` 兜底。
+
+#### W1-T2 带钱按钮提权：`Check Deal` 升为主 CTA
+- **负责人**：______ ｜ **耗时**：0.5 天 ｜ **前置**：无（但建议 W1-T1 后做，便于 W4 测 CTR）｜ **撬动环**：看到链接率 × CTR
+- **目标**：卡片+详情页里，带佣按钮视觉权重 > 阅读按钮；并加价格锚点微文案。
+- **步骤**：
+  1. 卡片结构改为：主 CTA = `Check Deal`（联盟链，class `cta-primary aff-link`），次 CTA = `Read Full Review`（class `cta-secondary`）。**DOM 顺序主在前**。
+  2. 套用样式（**复制即用**，可按设计 token 调色，但**对比关系不可反**）：
+     ```css
+     .cta-primary{ /* 带佣 */
+       background:var(--c-accent,#e07b00); color:#fff;
+       font-weight:700; padding:.7em 1.1em; border-radius:10px;
+       font-size:1rem; box-shadow:0 2px 8px rgba(224,123,0,.25);
+     }
+     .cta-secondary{ /* 阅读 */
+       background:transparent; color:var(--c-accent,#e07b00);
+       font-weight:600; padding:.6em .9em; border:1px solid currentColor;
+       font-size:.92rem;
+     }
+     .cta-primary .price-anchor{ font-size:.8em; opacity:.92; display:block; }
+
+     ```
+  3. 给主 CTA 加**价格锚点微文案**（模板见附录 C），例：`Check Deal` 下挂一行 `$49/mo · 14-day trial`。**价格必须取自 `AFFILIATE_PROGRAMS.md`/商户页真实值，禁止编造**；取不到则只显示 `See current deal ↗`，不写数字。
+  4. 详情页正文结论段后**再放一次**主 CTA（深链，见 W3-T1）。
+- **DoD**：
+  - [ ] 主 CTA computed `font-size` ≥ 次 CTA × 1.05，且主为实心填充、次为描边（肉眼+DevTools 双确认）。
+  - [ ] 主 CTA 与背景对比度 ≥ 3:1（大文本 UI 组件线）。
+  - [ ] 71 链接所在卡片**100%** 完成主次排序；价格锚点要么真实要么不显示数字。
+  - [ ] 移动端（360px）主 CTA 不折行、不溢出。
+- **产出物**：提权上线 + 前后截图对比 + 一份"无价格锚点的链接清单"（交 W3-T1 补深链时一并处理）。
+- **风险/回滚**：若提权后 `Read Full Review` 点击暴跌而 `Check Deal` 未涨 → 说明文案/锚点问题，回滚文案不改结构，A/B 一轮。
+
+---
+
+### WEEK 2 — 灌第一批流量（社媒快钱腿 + 3D 侧链）
+
+#### W2-T1 Pinterest 视觉分发
+- **负责人**：______ ｜ **耗时**：2–3 小时/周（持续）｜ **前置**：W1-T2 ｜ **撬动环**：访客
+- **步骤**：
+  1. 建商业号 + 认领站点；建 3 个板：`POD Tools`、`AI Product Photography`、`Print-on-Demand Comparisons`。
+  2. 把现有 6 对比 + 头部 10 review 各做 **1 张竖版 pin（1000×1500）**：标题=对比/榜单标题，主体=胜方徽章+一句结论，底=站点 URL。**用 Canva/Placeit 模板批产**。
+  3. 每 pin 描述含 1 个目标关键字 + 链回对应页（带 UTM `utm_medium=pinterest`）。
+  4. 节奏：**首周发 16 张**（6 对比+10 头部），之后每周 +5 张。
+- **DoD**：[ ] 16 张 pin 上线且链回带 UTM；[ ] W2 末 GA4 出现 `source=pinterest` 非零会话。
+- **产出物**：pin 模板源文件 + 发布排期表。
+
+#### W2-T2 Reddit / Quora / 社群 价值分发
+- **负责人**：______ ｜ **耗时**：2–3 小时/周 ｜ **前置**：W1-T2 ｜ **撬动环**：访客
+- **步骤**：
+  1. 选 5 个版/空间：`r/printondemand`、`r/Shopify`、`r/Etsy`、`r/3Dprinting`、Quora "best POD platform" 类问题。
+  2. **先给价值后放链**：每条回答 ≥150 字真实建议，**链接只在末尾自然出现 1 次**，且链到"对比/榜单"页而非首页。每周 5–8 条，**禁止刷量/复制粘贴**（防删+防封）。
+  3. 记录每条的 URL 与带来点击（靠 UTM `utm_medium=reddit|quora`）。
+- **DoD**：[ ] 首周 ≥5 条存活回答；[ ] 无被删/被封；[ ] GA4 出现对应 source 非零（允许为 0 点击但必须有会话或印象记录）。
+- **风险**：被判定 spam → 立即停该渠道 2 周，转 W2-T1 加倍。**绝不买量顶帖**。
+
+#### W2-T3 3D 桥接（**范围护栏：仅此 1 篇 + 5 内链，禁止扩**）
+- **负责人**：______ ｜ **耗时**：0.5–1 天 ｜ **前置**：W1-T1 ｜ **撬动环**：长尾访客 + SEO 多样性
+- **步骤**：
+  1. 写 **1 篇** `POD vs 3D-Print-on-Demand: Which Margins Win in 2026?`，套用现有 vs-card 模板，挂 ≥2 深链。
+  2. 给头部 5 篇 review 各加 **1 个** 3D 应用场景内链（锚文本自然，如 "also works for 3D-printed product mockups"）。
+  3. **停。** 不写第 2 篇 3D，不建 3D 分类页，不加顶栏入口。
+- **DoD**：[ ] 1 篇上线 + 5 内链通 + 链接带 UTM；[ ] **3D 相关新增页面数 = 1**（用 `git`/sitemap 核对，>1 即违规回滚）。
+- **风险**：执行中"顺手"想加 3D 榜单 → **停，记入 backlog 交 M2 决策**，不在 M1 做。
+
+#### W2-T4 双引擎结构改造：让现有 16 页"既上蓝链、又被 AI 摘"（SEO+GEO，0 新增内容配额）
+- **负责人**：______ ｜ **耗时**：1–1.5 天 ｜ **前置**：W1-T1 ｜ **撬动环**：SEO 访客 + GEO 访客
+- **目标**：不写新文，只给头部 16 页补"两种引擎都能吃"的结构层；接通 GSC 让 SEO 可量。
+- **步骤**：
+  1. **GEO 结构 4 线**（对头部 16 页逐页打勾，验收见附录 E）：
+     - 结论首句 = 独立可摘引句：`{Winner} is the best {category} for {audience} in 2026 because {1 个可量化理由}.` standalone 成立。
+     - 对比表 = 真 HTML `<table>`（`<th>` 表头 + 每行工具名），禁止 div 假表格/截图表格。
+     - 实体锚定：每页 ≥1 处 JSON-LD，类型 `ItemList` 或 `Product`/`SoftwareApplication`，含 `name`/`url`；有真实值才填 `offers.price`；winner 加 `Review`+`ratingValue`（值与页面评分同源，禁编造）。
+     - FAQ 3 条：`FAQPage` schema，问句 = 真实长尾问法（GSC 查询或 AlsoAsked），答句 ≤2 句、含数字/结论。
+  2. **SEO 技术 4 线**（逐页打勾）：
+     - `<title>` 唯一含主关键词 ≤60 字符；meta description 含主关键词+钩子 ≤155 字符（模板见 DATA §8.3）。
+     - 每页 ≥1 个 H1 含主关键词；H2 覆盖 2–3 个语义子问句。
+     - 内链：每页 ≥3 条指向其它头部页的上下文内链（锚文本=对方主关键词自然变体），16 页互链网（映射见 DATA §8.4）。
+     - 性能/可索引：LCP ≤2.5s（移动端）、无 `noindex` 误伤、robots.txt 放行、sitemap.xml 含 16 页且 200。
+  3. **接通 Google Search Console**：验证 aitoptools.net（DNS 或 HTML 文件）；提交 sitemap；建 2 个查询筛选组 `brand` vs `non-brand`，每周看 non-brand 印象与点击。
+  4. **GEO 入口埋点**：主动投到 AI 引擎/可被 AI 抓取且能带参的入口统一加 `?geo=1&utm_source={ai_engine}&utm_medium=gen_search`；自然搜索入口一律不加。兜底识别用附录 F 白名单。
+- **DoD**：
+  - [ ] 头部 16 页 GEO 4 线达标率 ≥ 80%（≥13 页全 4 线过；其余至少过"结论首句+真表格"2 线）。
+  - [ ] 头部 16 页 SEO 技术 4 线达标率 = 100%（构建期 lint 可查）。
+  - [ ] GSC 已验证 + sitemap 已提交 + 2 个查询筛选组建好。
+  - [ ] 富媒体结果测试/Schema 校验器：16 页 JSON-LD 0 error（warning 可接受）。
+  - [ ] 抽 3 页"结论首句"丢进 Perplexity/ChatGPT 搜索 spot check（不计硬 KPI）。
+- **产出物**：16 页"双引擎达标核对表" + GSC 接入截图 + 内链网拓扑图。
+- **风险/回滚**：JSON-LD 报错 → 该页回退无 schema 版本不阻塞上线；GSC 验证失败 → 不阻塞其余动作，记 [BLOCKED] 单列跟进。
+
+---
+
+### WEEK 3 — 深链 + 高佣 + 3 篇高意图新文
+
+#### W3-T1 高佣深链改造（**同样流量下佣金 2–3× 的关键**）
+- **负责人**：______ ｜ **耗时**：1 天 ｜ **前置**：W1-T1 ｜ **撬动环**：CVR × EPC
+- **步骤**：
+  1. 打开 `AFFILIATE_PROGRAMS.md`，按 **佣金率/EPC 降序**排出 Top 10 商户（**用文件内真实值，本手册不预设名次**）。
+  2. 审查 71 链接：凡 `data-target="home"` 或指向商户首页的 → 改为**具体产品/定价页深链**（深链拼接规则见附录 B）。
+  3. 把 Top 10 高佣商户的链接**优先塞进头部 10 篇 review + 6 对比**的结论段与主 CTA（每篇至少 1 个高佣深链）。
+  4. 更新 W1-T2 留下的"无价格锚点清单"：能取真实价格的补锚点。
+- **DoD**：
+  - [ ] 头部 16 篇内容**100%** 含 ≥1 深链；首页链占比从现状降到 **< 20%**。
+  - [ ] 头部 16 篇**100%** 含 ≥1 个 Top10 高佣商户链接。
+  - [ ] 所有深链点击在 GA4 可按 `target_type=product` 过滤验证。
+- **产出物**：深链改造清单（link_id ↔ 旧 URL ↔ 新深链 ↔ 商户 ↔ 佣金率）+ 高佣商户×头部内容映射表。
+
+#### W3-T2 写 3 篇高意图新文（**只 3 篇，只商业意图词**）
+- **负责人**：______ ｜ **耗时**：2–3 天 ｜ **前置**：W1-T1 ｜ **撬动环**：高意图访客
+- **步骤**：
+  1. 选题**固定 3 个**（不许换成长尾/信息型）：
+     - `Best AI Product Photography Tools for POD (2026)`
+     - `Printful vs Printify 2026`（若已有则**优化**而非重写：补深链+提权+结论首句对齐 winner）
+     - `Best Mockup Generator for Etsy Sellers (2026)`
+  2. 每篇结构（强制套用附录 E 的 GEO 4 线 + 附录 D winner 三一致，同源不另造）：① 结论首句=独立可摘引句 → ② 真 HTML 对比表（`<table>`+`<th>`，胜方行高亮）→ ③ JSON-LD `ItemList`+winner 的 `Review` → ④ FAQPage 3 条 → ⑤ 每工具卡挂 ≥2 深链 + 主 CTA 提权。
+  3. **每篇承诺的评分维度必须真能产出**（红线，见 §0）；产不出的维度**不显示**，宁可空。
+- **DoD**：[ ] 3 篇上线；[ ] 每篇 ≥2 深链 + 主 CTA 提权；[ ] winner 徽章 = 结论首句 = 对比表胜方（三者一致，机器校验见附录 D）；[ ] 无空头维度。
+- **风险**：写不完 3 篇 → **保 2 篇高意图，砍第 3 篇**，不许用 1 篇信息型长尾凑数。
+
+---
+
+### WEEK 4 — 看数据砍/加（第一次闭环）
+
+#### W4-T1 链接级 CTR 榜 + 据此 10 处改动
+- **负责人**：______ ｜ **耗时**：1 天 ｜ **前置**：W1-T1, W2-*, W3-* ｜ **撬动环**：CTR × EPC
+- **步骤**：
+  1. 从 GA4 导出 `link_id` 级 `outbound_click` 与所在页 `page_view`，算 **CTR = click / page_view**（按 link_id 聚合）。
+  2. 排出 **Top10 / Bottom10** 链接。
+  3. **Top10**：提炼共性（锚文本？位置？锚点文案？商户？），**复制模式**到同页其它链接。
+  4. **Bottom10**：按判定线（附录 D）二选一——改锚文本/换位置/补锚点，或**换商户**（换 `AFFILIATE_PROGRAMS.md` 里同品类更高 EPC 的）。
+  5. 把 W2 各渠道按"带来点击"排序：**有点击的加倍，0 点击且 0 会话的停**。
+  6. **双引擎交叉榜**（GA4 探索：行=来源三分[SEO/GEO/社媒]，列=merchant，值=outbound_click 数；再切 行=来源三分，列=link_id 位置，值=CTR）。回答：① 哪种引擎来的人 CTR 最高？② 该引擎的人最爱点哪个商家/坑位？
+  7. 据此 10 处改动里 **≥3 处必须来自双引擎交叉榜结论**（例："GEO 来的人 table-row 点击是 cta1 的 2 倍 → 深链前置进表格行"）。
+- **DoD**：
+  - [ ] 产出"链接级 CTR 榜 v1"；[ ] 完成 ≥10 处改动并记录 before/after；[ ] 停掉 ≥1 个 0 产出渠道或动作。
+  - [ ] 产出"来源×商家"与"来源×坑位"两张交叉榜 v1；[ ] ≥3 处改动可追溯到双引擎交叉榜结论。
+- **产出物**：CTR 榜 v1 + 改动日志 + **M2 输入**（哪些模式有效→M2 复制扩量）。
+
+---
+
+## 5. 数据看板 & 判定线（M3 每周看这些，阈值写死）
+
+每周日跑一次，填入 `AFFILIATE_LOG.md`：
+
+| 指标 | 取数 | M1 健康线 | 不达标动作 |
+|---|---|---|---|
+| 联盟点击/天 | `outbound_click` 日均 | W2 末 > 0；W4 末 ≥ 5/天 | =0 查埋点+提权是否生效 |
+| 带佣按钮 CTR | 主 CTA click / 卡片 impression | ≥ 1.5% | <1% 改文案/锚点 |
+| 深链占比 | `target_type=product` / 全部 | W3 末 ≥ 80% | 补 W3-T1 |
+| **SEO 会话** | GA4 `session_medium=organic` | W3 末 > 0；W4 末周环比 ≥ +10% | =0 查 GSC 索引/可索引性 |
+| **GEO 会话** | GA4：`session_source ∈ AI白名单(附录F)` 或落地页带 `geo=1` | W4 末 ≥ 1（首月只要求"能看见"） | =0 且 W2-T4 已做 → 查白名单漏域名/`geo=1` 被剥离 |
+| **社媒会话** | GA4 `session_medium ∈ {social, referral非AI白名单}` 且带社媒 UTM | W2 末 > 0 | 加 W2-T1 产量 |
+| **GSC non-brand 印象** | GSC 效果·non-brand 筛选组 impression | W4 末 > 0 且周环比上升 | =0 查 title/H1/内链（SEO 4 线） |
+| 收入 | 联盟后台 | 破冰 $20–50 | 见 §1 预期管理，**不用 $500 判失败** |
+
+**判定线（附录 D 摘要）**：链接 CTR **≥2% = 高**（复制模式）；**<0.5% = 低**（改或换）；0.5–2% = 观察 1 周。
+**双引擎判定线（附录 E/F 摘要）**：GEO 4 线达标率 <80% → 回 W2-T4 补；SEO 4 线 <100% → 当周修；GEO 会话连续 2 周 =0 但 SEO 在涨 → 内容"上得了蓝链、喂不进 AI"，M2 优先重写结论首句+真表格。
+
+---
+
+## 6. 升级 / 阻塞规则
+
+- 卡 **>4h** → 记 `[BLOCKED]` 并升级（见 §0）。
+- **数据异常**（点击突降 >50%）→ 先查埋点是否掉线，**24h 内**定位，未定位前不回滚内容。
+- **合规红线触发**（误接 paid placement / 编造价格 / 3D 超范围）→ **立即停 + 回滚 + 记事故**，不议价。
+
+---
+
+## 7. 首月结束复盘模板（M1 收尾必交）
+
+```
+M1 复盘 — aitoptools
+- 管道三件套：度量[✓/✗] 提权[✓/✗] 非搜索流量[✓/✗]
+- 收入： $ __（破冰线 $20–50 是否达到：是/否；未达是否管道已通：是/否）
+- 联盟点击/天（W4 末）：__
+- 链接级 CTR 榜 v1：Top3 = __；Bottom3 = __
+- 有效模式（M2 复制）：__
+- 停止的渠道/动作：__
+- 3D 范围核对：新增 3D 页 = 1？是/否
+- M2 建议优先级（≤3 条）：__
+- 双引擎结构：GEO 4 线达标率 __% ；SEO 4 线达标率 __% ；GSC 已接[✓/✗]
+- 来源三分会话（W4 末周）：SEO __ / GEO __ / 社媒 __
+- 双引擎交叉榜 v1 结论（哪引擎×哪商家/坑位 CTR 最高）：__
+- M2 双引擎建议（≤2 条）：__
+
+```
+
+---
+
+## 附录 A — 命名规范
+- `link_id` = `{slug}-{位置}`，例 `printful-review-cta1`、`printful-vs-printify-table-row1`。**全站唯一**。
+- `merchant` = 小写品牌名，与 `AFFILIATE_PROGRAMS.md` 一致。
+- `target_type` ∈ {`product`,`pricing`,`home`,`signup`}。
+
+## 附录 B — 深链 URL 拼接规则
+- 优先用联盟后台提供的 **deeplink generator** 生成（保留追踪参数）。
+- 无生成器时：商户产品页 URL + 联盟参数 + UTM。**禁止**只链首页。
+- 每个深链上线前**人工点开验证 200 且落到目标页**（非 404/非跳首页）。
+
+## 附录 C — 价格锚点微文案模板
+- 有真实价：`{price}/mo · {trial}` 例 `$9.99/mo · free plan`。
+- 有折扣：`{off}% off · {code?}` 仅当商户公开活动时用。
+- 无可靠数字：`See current deal ↗`（**不写数字**）。
+
+## 附录 D — 一致性 & 判定校验（可脚本化）
+- **winner 三一致**：vs-card 的 `winner` 字段 == 结论首句主语 == 对比表高亮行。任一不等 = fail（构建期 lint）。
+- **空头维度**：卡片显示的评分维度名 ∈ 数据 schema 已填充字段集合；否则 fail。
+- **CTR 判定线**：≥2% 高 / <0.5% 低 / 中间观察。
+
+## 附录 E — GEO 可判定 4 线（构建期 lint + 人工 spot check）
+- **E1 结论首句**：页面正文第一个 `<p>` 匹配 `^(.+) is the best (.+) for (.+) in 2026`；该句主语 == winner 字段 == 对比表高亮行（与附录 D 同源）。fail = 不可摘引。
+- **E2 真表格**：DOM 查询 `article table th` ≥ 2 且 `table tr` ≥ 3；禁止 `div[role=grid]`/截图替代。
+- **E3 实体 schema**：含 `<script type="application/ld+json">`，`@type ∈ {ItemList, Product, SoftwareApplication}` 且含 `name`+`url`；`offers.price`/`ratingValue` 若出现必须 ∈ 页面已填充数据（复用附录 D 空头维度校验）。
+- **E4 FAQ**：`FAQPage` schema，`mainEntity` = 3，每条 `acceptedAnswer.text` 40–280 字符且含 ≥1 数字或结论词。
+- 达标率 = 4 线全过页数 / 16。首月硬线 ≥ 80%。
+
+## 附录 F — AI 引擎 referral 白名单（GEO 会话识别兜底，每月复核 1 次）
+perplexity.ai · chat.openai.com · chatgpt.com · gemini.google.com · copilot.microsoft.com · you.com · phind.com · claude.ai · search.brave.com
+注意：**google.com 默认归 SEO（organic）**；仅当确认是 AI Overview 引流（带 `geo=1` 或特定 referrer 片段）才计入 GEO，宁可少算 GEO 也不错抢 organic。
+
+---
+
+> **M3 开工第一步**：先做 **W1-T1**，做完打勾、在 `AFFILIATE_LOG.md` 记 `W1-T1 DONE @ {date}`，再开 W1-T2。**不要跳过 T1 去写内容或做分发。** 管道第一节没接上，后面灌的水都漏光。
