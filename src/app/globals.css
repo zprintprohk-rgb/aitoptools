@@ -1177,9 +1177,13 @@ html, body { overflow-x: hidden; }
   /* Compact tool card */
   .review-card { padding: 14px; border-radius: var(--radius-sm); }
   .review-card h3 { font-size: 0.95rem; font-weight: 600; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  /* hotfix-mobile 7/28: 标签不换行, "✓ HAND-TESTED" + "AFFILIATE TESTED" 不再 wrap 成 2 行 (360px 列宽不够) */
+  .card-badges { flex-wrap: nowrap; overflow: hidden; }
   .card-badges .card-badge.vertical { display: none; }
-  .card-badge { font-size: 0.6rem; }
+  .card-badge { font-size: 0.55rem; padding: 2px 6px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; max-width: 100%; }
   .card-meta { flex-wrap: wrap; gap: 4px 8px; }
+  /* hotfix-mobile 7/28: section header 移动端改 column 布局, 标题独占一行 + View All 单独一行 (避免 emoji+title+View All 三件套窄屏挤一起) */
+  .section-header { flex-direction: column; align-items: flex-start; gap: 8px; }
   .card-cat { font-size: 0.68rem; }
   .card-rating { font-size: 0.78rem; font-weight: 700; color: var(--a-deep); }
   .card-price { font-size: 0.72rem; }
@@ -1197,6 +1201,17 @@ html, body { overflow-x: hidden; }
     flex: 1;
     text-align: center;
   }
+}
+
+/* hotfix-mobile 7/28: ≤480px (360px 宽屏) 2 列 grid 列宽 ~150px 不够, 改 1 列布局彻底解决文字/标题/按钮被右截断 (图 3 BEST OF LISTS 第 2 卡 + 图 4 TOP COMPARISONS 第 2 卡) */
+@media (max-width: 480px) {
+  .vs-grid, .best-grid, .review-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .cat-grid { grid-template-columns: 1fr; }
+  /* section header 标题字号再缩, 防 wrap 难看 */
+  .section-header h2 { font-size: 1.2rem; }
 }
 
 /* ============================================
