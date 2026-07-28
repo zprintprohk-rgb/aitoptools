@@ -27,15 +27,35 @@ const DOMAIN_MAP = [
   [/printful\.com/i, 'printful'],
   [/mockey\.ai/i, 'mockey'],
   [/claid\.ai/i, 'claid'],
-  [/kittl\.com/i, 'kittl'],
+  [/kittl\.com|kittl\.pxf\.io/i, 'kittl'],
   [/placeit\.net/i, 'placeit'],
   [/canva\.com/i, 'canva'],
   [/[?&]via=jerome[\d]+/i, 'unknown'],
 ];
 
+// 联盟域名 → canonical 联盟 URL 重写 (扫到 raw 商家域名时改成 deep link)
+// merchant 推断仍走 DOMAIN_MAP, 不变; link_id 基于 rewrite 后 URL 算
+// 上线日志: 2026-07-28 W1-T3 user 拍板 kittl.pxf.io/qWNvPn 立刻上线 (10 push 破例)
+const REWRITE_URL_MAP = {
+  'kittl.com': 'https://kittl.pxf.io/qWNvPn',
+};
+const REWRITE_DOMAINS = Object.keys(REWRITE_URL_MAP);
+
 function inferMerchant(href) {
   for (const [pat, m] of DOMAIN_MAP) if (pat.test(href)) return m;
   return null;
+}
+
+function rewriteAffUrl(href) {
+  try {
+    const u = new URL(href);
+    for (const dom of REWRITE_DOMAINS) {
+      if (u.hostname === dom || u.hostname.endsWith('.' + dom)) {
+        return REWRITE_URL_MAP[dom];
+      }
+    }
+  } catch (e) { /* 非法 URL 不动 */ }
+  return href;
 }
 
 function injectUtm(href, merchant, linkId) {
@@ -59,7 +79,9 @@ function injectHtml(html) {
     if (!merchant && !isPlaceholder) return match; // 非联盟, 跳过
 
     const m = merchant || 'placeholder';
-    const h = crypto.createHash('sha1').update(href).digest('hex').slice(0, 8);
+    // URL 重写 (kittl.com → pxf.io 等, merchant 推断不变, link_id 用 rewrite 后 URL 算)
+    const finalHref = rewriteAffUrl(href);
+    const h = crypto.createHash('sha1').update(finalHref).digest('hex').slice(0, 8);
     const linkId = `global-injected-${h}`;
 
     // 注入 class
@@ -72,7 +94,7 @@ function injectHtml(html) {
     // 注入 data-*
     newAttrs += ` data-merchant="${m}" data-link-id="${linkId}" data-target="product"`;
     // href 替换 (注入 UTM)
-    const newHref = injectUtm(href, m, linkId);
+    const newHref = injectUtm(finalHref, m, linkId);
     newAttrs = newAttrs.replace(/href=["'][^"']+["']/, `href="${newHref}"`);
 
     return `<a${newAttrs}>`;

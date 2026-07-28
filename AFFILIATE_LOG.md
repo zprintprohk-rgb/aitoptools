@@ -315,3 +315,39 @@ M1 复盘 — aitoptools
 - 采纳新规：utm_campaign={merchant} 替代 m1（更利于分析），runbook 附录 A 待改注。
 - 遗留小疵：post-build 注入链接 link_id=global-injected-{hash} 不可读 → 排 W1-T2 顺手修为 {slug}-{位置}。
 - 待用户 GA4 后台：① affiliate_click 标为关键事件 ② 建链接点击探索报表。
+
+---
+
+## 2026-07-28 · affiliate-monitor cron 5 天回填 (Gmail 通道仍缺失 D6)
+- **Gmail 通道**: 6 天空转,凭证未补,日更仍靠 state file + user 手动告知 (与 7/22 启动现状一致,本 cron 不自报"完成")
+- **5 天 (7/24-7/28) 状态变更 (来源 AGENTS.md §5 + credentials.affiliate.local.json)**:
+  - ✅ **approved (4 个, 7/24 同日 batch)**: Claid AI (FirstPromoter, 20% lifetime) / Printify (PartnerStack) / Printful (in-house, 10%×12) / (Looka 7/24 二次确认 declined-program-closed)
+  - ❌ **declined-closed (1 个)**: Looka — partner program 已关闭,仅留 partnerships@looka.com 直邮,优先级低
+  - 📤 **新增 3 申请 (7/24)**: Gelato (PartnerStack 重申, identity mismatch 已修复) / PartnerStack Network membership / Deel (挂网络下,批准后自动激活)
+- **aging 风险 (D6)**:
+  - 🔴 **Kittl 13 天** (7/15 首次,超阈值 6 天,卡 Impact 升级依赖) — user 拍板: 等升级 vs 走 in-house kittl.com/affiliates 绕道
+  - 🔴 **Impact Marketplace Upgrade 10 天** (7/18 提交,超阈值 3 天,卡 Kittl/Placeit/Copy.ai/Canva/Shopify/Surfer/Bluehost 全部 Impact 系) — user 登录 app.impact.com 查看
+  - 🟢 Gelato 重申 / PartnerStack Network / Deel = 4 天,正常窗口
+- **建议立即动作 (user)**:
+  1. **P0 解决 Gmail 通道**: 16-char App Password → F:\aitoptools\.hermes\secrets\gmail_credentials.json → 改 cron 通道 (per k3 memory 7/23 拍板)
+  2. **P0 解决 Impact 卡**: user 浏览器登录 app.impact.com 查看 Marketplace 申请,或发邮件 follow-up 至 partner-support@impact.com
+  3. **P1 Claid PayPal + Printful 邮箱确认**: user 浏览器手动,本 cron 不自动 (per AGENTS.md §7)
+  4. **P1 3 链接激活**: Claid/Printify/Printful 走 python scripts/replace_affiliate_links.py --apply,需 user 拍板激活顺序 (建议 Printful 先, /printful-vs-printify/ 已有对比页,收益最快)
+- **5 个 M3 评测候选 (7/22 入队)**: MockupHive/Packify.ai/Nightjar/Dynamic Mockups/Mintly 仍在 M3 gate review 队列,本 cron 不动
+- **北极星指标**: $0/3000 (5 个月倒计时,剩 171 天) — 5 天来 0 收入,3 链接未上线 = 现金转化路径未启动
+
+---
+
+## 2026-07-28 20:32 · Kittl Impact 链接 user 主动提供 (待拍板)
+
+- user 给链接: **https://kittl.pxf.io/qWNvPn** (Impact 标准 pxf.io 短链, 含义 = Kittl 已经在 Impact 侧拿到联盟 deep link)
+- 现状: K3 7/28 5 天回填仍标 "Kittl 🔴 13 天卡 Impact 升级依赖" — 此 pxf.io 链接可能为以下 3 种:
+  - (a) **已获批活链接** (Marketplace 升级已悄悄过, 链接提前可用) — **优先级最高**, 攒批时可立刻上
+  - (b) **临时 shortlink** (Impact 自动给申请中的账户生成的 tracking 占位, 获批后会自动绑定) — 可先用, 但 commission 状态待确认
+  - (c) **其他渠道直签** (如 in-house kittl.com/affiliates 申请已通过) — 与 Marketplace 升级解耦
+- 本 cron 不动 reviews.json / inject-aff-link.mjs (今天 8 push + partnerships 紧急修复 1 push = 9 破例, 攒批等明天 reset)
+- **建议**:
+  1. user 浏览器打开 https://kittl.pxf.io/qWNvPn 跳到 Kittl 哪个页面 (pricing? signup? home?) — 记下来
+  2. user 登录 app.impact.com 看 "Partnerships / Campaigns" 里 Kittl 状态 (Approved? Pending? Inactive?) — 决定是 (a)/(b)/(c) 哪种
+  3. 拍板后: W1-T2 攒批时一起替换 Kittl 的 7 处 Check Deal (3 详情页 + 2 卡片 + 2 内链) + inject-aff-link.mjs 加 impact 短链 pattern + affiliateUrl 字段从 reviews.json 66 条里找 Kittl 工具 (3 条: kittl / kittl-vs-* / 等)
+- **预估激活收益**: Kittl 是高佣 SaaS 设计工具 (30% 循环 假设), 跟 Mockey 同档, 替换 7 处 → 跟 Mockey 当前 5 处量级一致 → 长期 CTR 收益可类比 Mockey (10-15 clicks/周 baseline)

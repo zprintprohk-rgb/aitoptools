@@ -38,7 +38,7 @@ AFFILIATE_PATTERNS = [
     re.compile(r'printful\.com/a/', re.I),  # Printful 联盟
     re.compile(r'mockey\.ai', re.I),  # Mockey
     re.compile(r'claid\.ai', re.I),  # Claid
-    re.compile(r'(?:kittl|placeit)\.(?:com|net)', re.I),  # Kittl/Placeit (未来获批时启用)
+    re.compile(r'(?:kittl|placeit)\.(?:com|net|pxf\.io)', re.I),  # Kittl/Placeit (Kittl Impact pxf.io 2026-07-28 上线)
     re.compile(r'canva\.com', re.I),  # Canva (未来获批时启用)
 ]
 
