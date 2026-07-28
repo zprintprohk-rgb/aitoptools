@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build && node scripts/inject-aff-link.mjs",
     "start": "next start",
-    "aff-link-audit": "python scripts/aff-link-audit.py"
+    "aff-link-audit": "python scripts/aff-link-audit.py",
+    "test:rewrite-url": "node scripts/test-inject-aff-link.mjs"
   },
   "dependencies": {
     "next": "^15.0.0",

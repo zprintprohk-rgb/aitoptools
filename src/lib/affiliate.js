@@ -22,8 +22,10 @@
  */
 export function buildAffLinkAttrs(item, position) {
   if (!item || !item.affiliateUrl) return null
-  const merchant = String(item.merchant || (item.slug ? item.slug.split('-')[0] : 'unknown')).toLowerCase()
-  const linkId = `${item.slug}-${position}`
+  // K3 7/28 修复 (compare 页 toolA/toolB 用 reviewSlug 不是 slug, 原代码 'undefined-verdict-cta-a'): slug 兜底 reviewSlug
+  const slug = item.slug || item.reviewSlug || 'unknown'
+  const merchant = String(item.merchant || (slug !== 'unknown' ? slug.split('-')[0] : 'unknown')).toLowerCase()
+  const linkId = `${slug}-${position}`
   let url
   try {
     url = new URL(item.affiliateUrl)

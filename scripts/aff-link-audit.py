@@ -63,6 +63,11 @@ class AnchorParser(HTMLParser):
             return
         if href.startswith('/'):
             return
+        # K3 7/28 护栏对齐 inject-aff-link.mjs: rel 不含 sponsored 视为 organic, 不计入 affiliate 链接
+        # (即使 href 命中联盟域名, rel='nofollow' 是 organic 出口, K3 拍板不打 aff-link 标)
+        rel = (d.get('rel') or '').lower()
+        if rel and 'sponsored' not in rel:
+            return
         self.anchors.append({
             'href': href,
             'class': d.get('class', ''),

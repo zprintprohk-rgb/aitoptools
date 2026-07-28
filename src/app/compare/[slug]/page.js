@@ -161,6 +161,17 @@ export default function ComparisonPage({ params }) {
               )
             })()}
           </div>
+          {/* K3 7/28 护栏对齐 (与详情页 [slug]/page.js L150-152 一致): verdict-ctas 旁加 organic Visit Official 出口, 不加 aff-link 标 + 不加 UTM + rel="nofollow", 让用户能直接去官网, 避免全 CTA 都是 affiliate 强行压转化 */}
+          <p style={{ marginTop: 10, fontSize: '0.85rem', color: 'var(--k-tertiary)', textAlign: 'center' }}>
+            Just looking?{' '}
+            <a href={toolA.visitUrl} target="_blank" rel="nofollow" style={{ color: 'var(--c-primary)', fontWeight: 500 }}>
+              Visit {toolA.name} official ↗
+            </a>
+            {' · '}
+            <a href={toolB.visitUrl} target="_blank" rel="nofollow" style={{ color: 'var(--c-primary)', fontWeight: 500 }}>
+              Visit {toolB.name} official ↗
+            </a>
+          </p>
         </div>
 
         {/* Wirecutter-style three-tier picks */}

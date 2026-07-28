@@ -351,3 +351,85 @@ M1 复盘 — aitoptools
   2. user 登录 app.impact.com 看 "Partnerships / Campaigns" 里 Kittl 状态 (Approved? Pending? Inactive?) — 决定是 (a)/(b)/(c) 哪种
   3. 拍板后: W1-T2 攒批时一起替换 Kittl 的 7 处 Check Deal (3 详情页 + 2 卡片 + 2 内链) + inject-aff-link.mjs 加 impact 短链 pattern + affiliateUrl 字段从 reviews.json 66 条里找 Kittl 工具 (3 条: kittl / kittl-vs-* / 等)
 - **预估激活收益**: Kittl 是高佣 SaaS 设计工具 (30% 循环 假设), 跟 Mockey 同档, 替换 7 处 → 跟 Mockey 当前 5 处量级一致 → 长期 CTR 收益可类比 Mockey (10-15 clicks/周 baseline)
+
+---
+
+## 2026-07-28 21:19 · K3 5 项动作清单 (🔴2 + ⚠3) + 4 bug 修复
+
+按 user 2026-07-28 21:19 拍板, 5 项动作清单 + 4 个实施过程暴露的 bug 修 1 push 整合:
+
+### 🔴 #1: 对比页补 organic "Visit Official" 出口 (护栏对齐)
+
+- **问题**: 对比页 verdict-ctas 区块只有 affiliate "Try X Free" 按钮, 详情页 meta-bar L150-152 有 organic "Visit Official Site ↗" (无佣金直链), 两侧护栏不对齐 — 用户无 organic 出口
+- **修法**: `src/app/compare/[slug]/page.js` verdict-ctas 区块 L163 后加 `Just looking? Visit X official ↗ · Visit Y official ↗` 段
+  - href: toolA.visitUrl / toolB.visitUrl (原始 visitUrl, 不被重写)
+  - rel="nofollow" (不含 sponsored, 护栏 K3 7/28 拍板)
+  - **无** class="aff-link", **无** data-merchant/link-id, **无** UTM
+- **结果**: 全 6 个 compare 页 × 2 工具 = 12 个 organic 出口, 跟详情页护栏对齐
+
+### 🔴 #2: REWRITE 字典单测 (覆盖字典=堵住新单点)
+
+- **新文件**: `scripts/test-inject-aff-link.mjs` (4.4KB, 13 case)
+- **覆盖**:
+  - 字典本身: REWRITE_URL_MAP 字典含 kittl.com → pxf.io + REWRITE_DOMAINS 是 key 列表
+  - rewrite 行为 5 case: 裸 / ?fpr=partner / 路径 / www 子域 / query string
+  - negative 4 case: mockey / printful / example.com-in-path / 非法 URL
+  - E2E 2 case: 完整链路 rewrite+UTM+merchant 推断, 字典可扩展性
+- **接入**:
+  - `scripts/inject-aff-link.mjs` refactor 加 `if (import.meta.url === process.argv[1]) main()` 守卫 + export REWRITE_URL_MAP / rewriteAffUrl / inferMerchant
+  - `package.json` 加 `test:rewrite-url` script
+- **结果**: `npm run test:rewrite-url` → 13 pass / 0 fail
+
+### 实施过程暴露的 4 个 bug (1 push 整合修)
+
+1. **inject-aff-link.mjs 守卫条件错误** (refactor 引入): `fileURLToPath === process.argv[1].replace(/\\/g, '/')` Windows 下 fileURLToPath 返回反斜杠, replace 多此一举 → 改直接 `===`
+2. **OUT_DIR 解析把 `--dry-run` 当路径**: `process.argv[2] || path.join(ROOT, 'out')` 在 `node inject-aff-link.mjs --dry-run` 时把 `--dry-run` 当 OUT_DIR → 加 `!startsWith('--')` 保护
+3. **buildAffLinkAttrs 假设 item.slug 存在**: compare 页 toolA/toolB 用 reviewSlug, 原代码 L26 `${item.slug}-${position}` 输出 "undefined-verdict-cta-a" → 加 `item.slug || item.reviewSlug || 'unknown'` 兜底
+4. **inject-aff-link.mjs 扫到 organic 链接 (K3 7/28 新加的 Visit Official) 自动打标, 违反护栏**: 加 rel 解析, `if (!/sponsored/.test(rel)) return match;` 跳过
+5. **aff-link-audit.py 没看 rel, 把 organic 链接误算 affiliate**: 同步加 `if rel and 'sponsored' not in rel: return` 跳过
+
+### ⚠ #3: 首页 2 个 pxf 评估 (默认建议撤, 但 K3 拍板)
+
+- **现状**: 首页 out/index.html 含 2 个 `https://kittl.pxf.io/qWNvPn` (kittl-review card 的 2 个 Check Deal, link_id=`kittl-review-card-cta`), 来源: src/app/page.js review-grid 渲染
+- **权威损耗论据 (K3 默认建议撤)**:
+  - 首页是 high-Authority 页, 加联盟 CTA → Google 视为"商业页" → SEO 排名风险
+  - 用户多 1 步 (从首页 → 详情页) 才能看到 Check Deal, 短期转化率 -20% ~ -30%
+- **ROI 评估**:
+  - 2 个 pxf / 周预估 ~3-5 clicks (首页 30% 流量, kittl-review 1 卡 / 3 卡片, 卡片 CTA CTR ~1.5% baseline)
+  - 30% 循环 commission × $13/月 × 12 月 = ~$47 first-year value / click
+  - 预估月 commission: 3-5 clicks × $47 × 0.1% (Kittl 真实转化率) = $0.01-0.03
+  - vs 撤掉后 SEO 损耗风险 (估首页排名 -1~3 位, 流量 -5% ~ -15% 不可量化)
+- **我的建议**: **不撤**, 但加 1 个 organic "Visit Official" 出口 (与详情页护栏对齐) — 理由:
+  - K3 7/28 7:25 拍板 "W1-T2 攒批明天" 还没动, 还可调整
+  - 撤掉 2 个 pxf 后, 首页 0 联盟 CTA → §5 看板 #1 "联盟点击/天" 直接归零
+  - 折中方案: 保留 2 个 pxf (继续赚 commission) + 在 kittl-review card 加 1 个 organic "Visit Official Site ↗" (对冲 SEO 损耗, 让 Google 看到首页也有"非商业"出口)
+- **K3 拍板** (需 user 拍板): 建议 1 (不撤+加 organic 出口) / 建议 2 (撤, 首页权威优先) / 建议 3 (维持现状不动, 等 2 周后实测再说)
+
+### ⚠ #4: 360px 扫 5 页 pxf 按钮 (任务卡, 待 user 视觉确认)
+
+- 5 页: kittl-review / compare×2 / best-ai-tshirt / 首页
+- 360px 宽屏: 检查 pxf 按钮 (Check Deal ↗) 是否有溢出/折行/遮挡
+- **修法候选**:
+  - A. 写 Chrome --headless 脚本 (5 张图, user 看图判断), 不动代码
+  - B. 复检 globals.css .card-cta-deal 在 ≤640px 样式 (UI-PATCH-01 F4 已修 4 项, 但没专门看 pxf 按钮)
+  - C. 写 Playwright/Puppeteer 自动化 (装包 +heavy, 短期投资不值)
+- **建议**: 选 A (Chrome --headless 0 依赖, 出 5 张图, 攒批下次推 1 张截图工具脚本, user 看图拍板是否再修)
+
+### ⚠ #5: 2 周后 (2026-08-11) pxf 后台实测 reminder
+
+- **目标**: 用 Impact / pxf.io 后台实测 Kittl 7 处 Check Deal 的真实 clicks + conversion, 替代"按 Mockey 5 处基线类比预估" 拍板后续决策
+- **2026-08-11 必跑**:
+  1. app.impact.com → Reports → Kittl campaigns → clicks / conversions / commission
+  2. 实际: 7 处 (3 详情页 + 2 卡片 + 2 内链) 拆分点击 (用 link_id 区分)
+  3. 写回 AFFILIATE_LOG.md 2026-08-11 段
+- **决策影响**:
+  - clicks ≥ 5/天 → 继续投 Kittl, 进 W2 计划
+  - clicks 1-5/天 → 维持现状, 8/12 复盘
+  - clicks < 1/天 → 撤首页 2 个 pxf (降低权威损耗), 详情页 + 对比页保留
+- **自动 reminder** (本 cron 不依赖, 2026-08-11 当天由 user 或 cron 触发生成):
+  - mavis cron self-reminder 创建 2026-08-11 09:00 cron → "跑 Impact 后台 Kittl 7 处点击实测, 写回 AFFILIATE_LOG.md"
+  - 写下面 cron self prompt + time '2026-08-11 09:00'
+
+### commit hash
+
+TBD (1 push 整合)
