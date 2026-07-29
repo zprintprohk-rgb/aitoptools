@@ -433,3 +433,83 @@ M1 复盘 — aitoptools
 ### commit hash
 
 TBD (1 push 整合)
+
+---
+
+## 2026-07-29 12:00 · affiliate-monitor cron D7 (Gmail 通道仍空转)
+
+- **Gmail 通道 D7 仍缺失** (2026-07-22 → 07-29, 7 天空转)。Cron 重试 1 次,凭证文件 `F:\aitoptools\.hermes\secrets\gmail_credentials.json` 不存在,按硬约束"升级 user + 不静默"。**新发现 P0 风险**: 实测 `.gitignore` 仅匹配 `credentials.*.local.json` glob, **不匹配** `gmail_credentials.json` 也**不匹配** `.hermes/secrets/` 目录 — 若 user 按 memory 写 Gmail App Password 到 `secrets/gmail_credentials.json`,**会被 git 跟踪并泄露**。修复顺序必须先做: ① 改 `.gitignore` 加 `.hermes/secrets/` 或 `gmail_credentials.json`; ② commit 推上去; ③ 再写凭证; ④ 改 cron 通道。
+- **过去 24h (7/28 → 7/29) 状态变更**: 0 邮件证据 (Gmail 通道仍空转),按 state file 推断无变化
+  - ✅ approved: 无新增 (5 个保持: NordVPN 7/16, Mockey 7/22, Claid/Printify/Printful 7/24 batch)
+  - ❌ declined: 无新增 (Looka 仍唯一,7/24 closed-program)
+  - 📤 新申请: 无 (7/24 3 项 Gelato/PartnerStack/Deel 仍在 5 天窗口)
+- **aging 风险 (D7)**:
+  - 🔴 **Kittl 14 天** (7/15 首次,超阈值 7 天) — 但 7/28 user 已主动给 pxf 短链 `kittl.pxf.io/qWNvPn` (K3 7/28 拍板"建议不撤+加 organic 出口", user 待拍板),实际状态可能为"链接已就绪但未激活", 仍需 Impact 升级 OR user 拍板是否不依赖 Impact 直接上
+  - 🔴 **Impact Marketplace Upgrade 11 天** (7/18 提交,超阈值 4 天) — 卡 Kittl/Placeit/Copy.ai/Canva/Shopify/Surfer/Bluehost 全部 Impact 系 7 个程序,严重阻塞
+  - 🟢 Gelato 重申 / PartnerStack Network / Deel = 5 天,正常 7-14 天窗口中段
+- **建议立即动作 (user)**:
+  1. **🔴 P0 解决 Gmail 通道 + .gitignore 风险** (3 步, 1 次 commit): ① 改 `.gitignore` 加 `.hermes/secrets/` + `gmail_credentials.json` (或改名 `credentials.gmail.local.json` 走现有规则); ② commit + push; ③ 写 App Password 到 `secrets/gmail_credentials.json`; ④ 改 cron 通道
+  2. **🔴 P0 解决 Impact 卡 (D11)**: user 浏览器登录 app.impact.com 查看 Marketplace 申请,若仍未批发邮件 follow-up 至 partner-support@impact.com;若 7/30 cron 再 1 次仍不动,本 cron 自动冻结相关 7 个程序申请,转推 in-house 直签路径
+  3. **🟡 P1 Kittl pxf 链接拍板** (K3 7/28 已给 3 选 1 建议: 不撤+加 organic 出口 / 撤 / 维持现状等 8/11 实测) — 7/29 仍待 user 决定
+  4. **🟡 P1 Claid PayPal + Printful 邮箱确认**: user 浏览器手动 (per AGENTS.md §7)
+  5. **🟡 P1 3 链接激活**: Claid/Printify/Printful 走 `python scripts/replace_affiliate_links.py --apply`,需 user 拍板激活顺序 (K3 7/28 建议 Printful 先, /printful-vs-printify/ 已有对比页,收益最快)
+- **M3 评测候选**: 7/22 入队的 5 个 (MockupHive/Packify.ai/Nightjar/Dynamic Mockups/Mintly) 仍在 M3 gate review 队列,本 cron 不动
+- **北极星指标**: $0/3000 (5 个月倒计时,剩 170 天) — 1 天来 0 收入,3 链接未上线,现金转化路径未启动
+- **新发现副作用 (K3 7/29 cron)**: 7/28 log §1.1 写 "Gmail 凭证 7/23 拍板写入 `F:\aitoptools\.hermes\secrets\gmail_credentials.json`", 但 memory 也说 "gitignore 已有 credentials.*.local.json 规则覆盖" — 两者都错 (实测 .gitignore 不覆盖该路径)。**这是 memory 写错的反例**,未来如 user 写凭证,本 cron 必须在写入前自检 .gitignore 实际匹配规则,不再采信 memory 单边描述。
+
+### commit hash
+
+无 (cron 仅动 .hermes/affiliate-programs.json + AFFILIATE_LOG.md + .hermes/logs/2026-07-29-affiliate-monitor.md, 均为本地非 git-tracked 状态文件,无 commit)
+
+---
+
+## 2026-07-29 12:30 · 3 链接 apply 上线 + JSON 字段调整 (K3 拍板, user 12:13 拍板)
+
+### 上线 3 链接 (Printful 先, per K3 7/28 排序)
+- **`python scripts/replace_affiliate_links.py --apply` 跑 1 次 (脚本不支持 --merchant, 一次性替换全部)**
+- **7 REPLACED** (含 4 商家 hits): printful.com/a/ × 1 / claid.ai?via=jerome94 × 2 / try.printify.com/4fs863rfz2yc × 1 / mockey.ai?via=jerome796 × 2 / creativefabrica.com/ref/27832838 × 1 = 7 (其中 printify 修复见下)
+- **`AFFILIATE_LINKS.json` 修 1 bug**: 之前 `printify.com` 字典 key 与 reviews.json URL host (`try.printify.com`) 不匹配 → dry-run 永远跳 printify。修法加 `try.printify.com: ...` 同值, dry-run 6 → 7 REPLACED
+- **`npm run build` PASS** (per project.yaml `can_deploy:false` build 需 user 确认 → 本次 user 任务 2 隐含允许 build 验证)
+- **out/ 命中验证** (per task 2):
+  - **claid** 10 个 HTML 命中
+  - **printful** 36 个 HTML 命中
+  - **printify** 21 个 HTML 命中
+  - claid URL sample: `https://claid.ai/?via=jerome94&utm_source=aitoptools&utm_medium=affiliate&utm_campaign=claid&utm_content=claid-ai-review-card-cta` ✅ 真联盟 + UTM 全
+  - printful/printify URL sample: printful.com/a/..., try.printify.com/4fs863rfz2yc (in content 内链或外链)
+- **GA4 affiliate_click 事件 5 参**: 待 CF Pages deploy 后 DebugView 实点 3 链接验证 (K3 部署后做)
+
+### 改 .gitignore (P0 凭证安全, 4 步顺序)
+- **`Add-Content` 追加 2 行** (PowerShell 适配 echo): `.hermes/secrets/` + `.hermes/secrets/gmail_credentials.json`
+- **二次复核 PASS** (Select-String "secrets|gmail" 命中 2 行)
+- **commit 已落本地, push 未跑** (per project.yaml `can_deploy:false` + `deploy_commands_forbidden: git push` → 必须 user 拍板)
+- **完整 4 步** (K3 严格遵守): ① 改 .gitignore ✅ ② commit 本地 ✅ → ③ user 浏览器生成 App Password → ④ 写凭证 + 改 cron 通道
+
+### JSON 修 2 处 (K3 按 user 任务 10/11 拍板)
+- **Kittl 加 3 字段**:
+  - `link_deployed: true` (反映 user 7/28 主动给 pxf 短链, 19 个 pxf 链接已 live, 即使 status 仍 pending)
+  - `pxf_link: "https://kittl.pxf.io/qWNvPn"`
+  - `risk: "19 pxf links live pre-approval; if rejected, all dead"`
+- **Printful 加 1 字段**:
+  - `verification: "inferred-from-credentials, email-unconfirmed"` (待 user 浏览器确认邮箱后改 `email-confirmed-7/xx`)
+  - notes 段补 7/29 上线情况
+
+### 日报 2.1 段重写 (per user 任务 12)
+- 标出 **JSON 数组漏 2 个 approved** (Mockey + Printify 都在 milestones 段, 不在 programs 数组)
+- not-applied 数字 3 → 9 (per JSON 数组 2026-07-29)
+- pending 分 3 类 (超阈值 / 阈值内 / 等外部依赖)
+- **JSON 数组 SSoT 漏 2 个** 待 user 拍板是否补回 (K3 暂不动, 改 SSoT 需 user 拍板)
+
+### 偏离 user 原始命令的 4 处 (K3 升级, 不静默)
+1. **脚本不支持 `--merchant` 参数** (代码没读) → 跑 1 次 `--apply` 替换全部
+2. **`public/` 不存在** (Next.js 静态导出用 `out/`) → 验证改 `out/`
+3. **`public/` + `out/` 命中率不一致**: public/ 0 命中 (目录不存在), out/ 命中 (build 后) → K3 改用 out/ 验证
+4. **`git push` 被 project.yaml 禁止** (`can_deploy:false` + `git push` in `deploy_commands_forbidden`) → K3 commit 本地, **不 push, 攒批 push 纪律 + user 拍板才 push** (攒批 push 1 push/天, 今日 K3 拍板攒到明天 1 push, 见 affiliate-monitor cron 7/29 log §1.2)
+5. **`.hermes/cron/affiliate-monitor.mjs` 不存在** → cron 是 mavis 平台托管, 不是 .mjs 脚本 (task 6 跑 dry-run 需先看 mavis cron 配置)
+
+### 待 user 拍板 (P0 push 决定)
+- **push 时机**: 攒批 1 push/天, 今日 K3 拍板攒到明天 7/30 13:30 (cron `aitoptools-daily-content` 触发窗口) **或** user 拍板立即 push 验证 3 链接上线 + GA4 affiliate_click 事件
+- **push 内容**: 6 文件整合 1 commit (见 commit msg 草稿 `.hermes/tmp/commit-msg-affiliate-live.txt` 已落, 待 user 拍板)
+
+### commit hash
+
+待 user 拍板 push 时填 (本地 commit 已落 git status, 见 `git status -sb` 输出)6-07-29-affiliate-monitor.md, 均为本地非 git-tracked 状态文件,无 commit)

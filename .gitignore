@@ -6,3 +6,5 @@ out/
 .claude/
 credentials.*.local.json
 .wb/
+.hermes/secrets/
+.hermes/secrets/gmail_credentials.json
