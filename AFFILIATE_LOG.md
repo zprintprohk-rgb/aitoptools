@@ -513,3 +513,108 @@ TBD (1 push 整合)
 ### commit hash
 
 待 user 拍板 push 时填 (本地 commit 已落 git status, 见 `git status -sb` 输出)6-07-29-affiliate-monitor.md, 均为本地非 git-tracked 状态文件,无 commit)
+
+## 2026-07-30 03:33 · Impact 后台实测 + 北极星转移流量 (K3 7/30 03:43 战略调整)
+
+按 user 7/30 03:33 截 Impact 后台 (app.impact.com) 状态 + 7/30 03:43 战略调整指令:
+
+### 1. Impact 后台实测 (K3 截图 03:33)
+- **Kittl 已获批** (非 pending) — Brand dropdown 有 Kittl + Contract Terms 显示 20% paid subscription + 30-day referral + Sign up $0
+- **Marketplace 升级已悄悄通过** (7/30 推断) — 能看到完整 Snapshot/Brand dropdown dashboard = Marketplace-only feature
+- **14 天实测 (7/14-7/28)**:
+  - Clicks: 1 (Action Earnings 0 / Conversion Rate 0% / EPC $0)
+  - Today's Earnings / Total Pending / Balance: $0.00
+  - Auto withdraw threshold: $10.00
+- 之前 7/15 申请的 Kittl (13 天) + 7/18 申请的 Impact Marketplace Upgrade (11 天) 阻塞**全部解除**
+
+### 2. 🟡⑤ 决策反转 (K3 7/30 03:43)
+- 7/29 13:35 commit 2131e76 拍板 "加 organic 出口 + 不撤首页 pxf" 维持
+- 7/30 03:40 user 临时拍板 选 B "撤首页 pxf" → agent 改 working tree 准备 push
+- **7/30 03:43 user 反转**: 选 A 维持现状 (pxf Check Deal + organic Visit Official Site 都在)
+  - 理由: **14 天 1 click 不可怕** (网站根本没流量, 数据是 baseline 不是问题). 撤按钮是过度优化
+  - 应聚焦流量基础建设 (北极星指标从转化率转移流量)
+- agent 撤回: src/app/page.js L354-371 Check Deal IIFE 恢复 (working tree 状态 = 7/29 13:35 commit 2131e76 状态)
+- 现状: 首页 pxf Check Deal ✓ 保留 + organic Visit Official Site ↗ ✓ 保留 (3 个 CTA 都在)
+
+### 3. 6 个 Impact 系品牌申请 暂缓 (K3 7/30 03:43)
+- K3 7/30 03:40 派: 去 Impact Discover 菜单全点 Canva/Shopify/Bluehost/Surfer/Copy.ai/Placeit 6 品牌
+- **7/30 03:43 撤回**: 6 个 Impact 品牌先缓缓, 等 Kittl 跑通再说
+- 理由: Kittl 14 天 0 转化说明 Impact 联盟 ROI 不在 "申请更多品牌" 这条路上, 应先验证现有 Kittl 流量基础
+
+### 4. 基建继续 (user 责任, K3 今天必须搞定)
+- 🔴 **Gmail App Password** (P0 D7+ 阻塞): 浏览器 Google Account → Security → 2FA → App Passwords → 名称 aitoptools-monitor → 生成 16-char → 写 .hermes/secrets/gmail_credentials.json (gitignore 已加 .hermes/secrets/ 目录级 ✓)
+- 🟡 **邮箱验证**: Claid / PayPal / Printful 验证链接全点一遍 (授权打通后自动化流水线才能跑)
+- 🟡 **Impact 后台 Payout (收款方式)**: 右上角头像 → Settings → Payout (选 PayPal / ACH / Wire / Payoneer; 不设 $10 余额提不出来)
+- 🟡 **Impact 后台 Tax Profile / W-8BEN-E**: 跨境收款必备, 智印云是深圳公司必须 W-8BEN-E (企业版), 不填 Impact 不打款
+
+### 5. 北极星指标转移 (核心战略调整)
+- **之前**: 北极星 = $3000 commission / 5 个月 (focus 转化率)
+- **现在**: 北极星 = **日均 UV/PV** (focus 流量)
+- 理由: 14 天 1 click 实测 → 0 流量基础, 优化 CTA 是 0 effect (没流量可优化). 必须先把流量搞到 100+ UV/天, 再谈转化
+- 转化率优化 (W1-T2 CTA 主次反转 + 价格锚点等) 暂缓, 等流量进 100+ UV 后再启动
+- K3 盘点引流手段 + 给 "日均 100+ UV" 30 天执行计划 (见下)
+
+### 6. K3 引流手段盘点 (7/30 现状, 几乎 0 基建)
+| 渠道 | 状态 | 7/30 评估 |
+|---|---|---|
+| **SEO 文章** | **0 篇** | §0 攒批约束 "首月 3 篇新文 + 1 篇 3D" — 当前零. ROI 最高, 1 篇长尾词 = 10-30 UV/周 |
+| **GSC 索引** | **未接入** | K3 W2-T4 待执行. 没 GSC 看不到 query 数据, 关键词决策瞎 |
+| **IndexNow 提交** | **未启动** | 99 URLs 一次性提交 Bing + Yandex. 0 基建, 1 小时可建 |
+| **Reddit 社媒** | **0 active** | K3 W2-T2 待执行. 5 帖/周 × 5-20 UV/帖 = 25-100 UV/周 |
+| **Pinterest 钉** | **0 active** | K3 W2-T1 已发工单. 1 钉 = 5-15 UV/月, 10 钉/月 = 50-150 UV/月 |
+| **3D 桥接** | **0 active** | K3 W2-T3 待执行. 评测类 3D 渲染内容 (Kittl/Canva/Mockey 真实 mockup 截图) |
+| **外链建设** | **0 active** | IndieHackers / Hacker News / 评测类 guest post. 1-2 月滞后 |
+| **评测类平台** | **0 主动** | G2 / Capterra / Product Hunt 写 review, link back. 1-2 月滞后 |
+| **sitemap 提交 GSC** | **未提交** | sitemap.xml 99 URLs, 主动提交 GSC = 加速索引 |
+| **Schema.org markup** | **部分** | methodology 页有 WebSite, product/FAQ 没全. 影响 Rich Results |
+
+### 7. K3 "30 天日均 100+ UV" 执行计划 (北极星 = 流量, 4 周路线)
+- **Week 1 (8/3-8/9): 基建 + 第 1 篇文章**
+  - Day 1 (7/30 攒批): P0 = GSC 接入 (W2-T4) + IndexNow 提交 99 URLs + sitemap 提交 GSC
+  - Day 2-3: 第 1 篇 SEO 长文 ("best AI t-shirt design generators 2026" 长尾词) 800-1200 字, 含 3 真 stat, FAQ schema
+  - Day 4-5: Reddit 5 帖 (r/printondemand / r/Etsy / r/Shopify / r/sidehustle / r/Entrepreneur), 每帖 1 链接回 article
+  - Day 6-7: 3 个评测类平台 (G2 / Capterra / Product Hunt) 写 Kittl / Mockey / Printify review, link back
+  - **目标 UV**: 20-30 / 天 (主要 GSC 索引 + Reddit 帖)
+- **Week 2 (8/10-8/16): 第 2-3 篇文章 + 评测 deep dive**
+  - 第 2 篇: "Printful vs Printify 2026" 长尾词 (已经 1 篇内容, 但要重写优化 + FAQ + schema)
+  - 第 3 篇: "how to use AI for print design" 教程类
+  - Pinterest 5 钉 (评测类图片, link back)
+  - **目标 UV**: 40-60 / 天 (SEO 文章索引生效 + Reddit 持续)
+- **Week 3 (8/17-8/23): 评测类外链 + 1 篇评测**
+  - 5 个评测类平台 (G2 / Capterra / TrustPilot / Product Hunt / AlternativeTo) 写 review
+  - 第 4 篇: "best mockup generators 2026" 长尾词 (Mockey 主推)
+  - **目标 UV**: 70-100 / 天 (评测外链生效 + Pinterest 持续)
+- **Week 4 (8/24-8/30): 巩固 + 扩 1 篇**
+  - 第 5 篇: "AI packaging design tools 2026" 长尾词
+  - Pinterest 10 钉累计
+  - 外链第 2 波 (Hacker News "Show HN" 1 个 / Indie Hackers 1 个)
+  - **目标 UV**: 100-150 / 天 (巩固 + 长尾)
+- **不做的 (7/30 03:43 战略)**:
+  - 撤按钮 / CTA 顺序 / 价格锚点 (W1-T2 暂缓)
+  - 6 个 Impact 品牌申请 (等 Kittl 跑通)
+  - 评测类新工具 (3 个评测候选队列等 M3 接力)
+  - paid placement (违反 §0 护栏)
+
+### 8. 推后 / 等 user 拍板项
+- W1-T2 (CTA 主次反转 + 价格锚点 + 详情页补主 CTA + link_id 可读化): 暂缓到 UV > 100/天 再启动
+- W2-T4 (双引擎结构改造 GEO 4 线 + SEO 4 线 + GSC 接入): 推进 (GSC 接入是流量基建, 7/30 攒批可一起)
+- W2-T1 Pinterest / W2-T2 Reddit / W2-T3 3D: 7/30 立即启动 (Week 1 内容)
+- W3-T1 高佣深链 / W3-T2 3 篇新文 / W4-T1 交叉榜: 排 8 月中下旬
+
+### 9. 北极星指标 (7/30 03:43 重置)
+- **北极星 #1 (新)**: 日均 UV (Google Analytics 4, G-248QMCT2S3)
+  - 当前: 0 (GSC 接入后 7 天才有 baseline)
+  - 7/30 目标: 5-10 / 天
+  - 8/6 目标: 30-50 / 天
+  - 8/13 目标: 70-100 / 天
+  - 8/30 目标: 100-150 / 天
+- **北极星 #2 (旧, 暂缓)**: $3000 commission / 5 个月
+  - 当前: $0/3000
+  - 修正: 等北极星 #1 达到 100+ UV/天 后, 再激活
+- **北极星 #3 (永久)**: 决策质量 (撤回率 / 拍板响应时间 / 过度优化零容忍)
+
+### 10. 关键反思 (K3 内部)
+- **过度优化陷阱**: 14 天 1 click 数据被解读为 "pxf 按钮无效" 是典型 premature optimization. 实际: 没流量基础, 优化按钮是 0 effect
+- **北极星对齐**: 之前聚焦 conversion → 0 effect. 真实瓶颈在 funnel 上游 (流量)
+- **数据 → 决策的延迟**: 14 天实测 baseline 不是 "问题信号", 是 "没数据信号" — 区分 baseline noise 和 real signal
+- **战略迭代速度**: 7/30 03:40 拍板选 B, 03:43 反转选 A. 3 分钟反转 = agent 太快接受 B 没质疑. 教训: 拍板前先 review 流量基础, 不先 review 转化漏斗

@@ -373,7 +373,7 @@ function ReviewCard({ review }) {
             理由: 护栏意图 = "organic 链接不打 aff-link 标, 不加 UTM, 保护 organic SEO"
             rel="nofollow" (不含 sponsored) → inject-aff-link.mjs 守卫自动跳过, 不会被 rewrite
             href=review.visitUrl (原始商家直链, 不加 UTM) → §0 攒批不破, §0 护栏 organic 清洁
-            用户决策路径: 多 1 个 organic 出口 → Google 看到首页不全是商业页, 降低"权威损耗"风险 (K3 ⚠#3 拍板建议 1: 不撤 pxf + 加 organic 出口) */}
+            7/30 03:43 user 推翻 7/30 03:40 撤首页 pxf 决定 (选 A 维持现状), pxf Check Deal 保留 + organic 出口保留 (两侧都生效) */}
         {review.visitUrl && (
           <a
             href={review.visitUrl}
