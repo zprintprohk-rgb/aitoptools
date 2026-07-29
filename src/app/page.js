@@ -369,6 +369,22 @@ function ReviewCard({ review }) {
             </a>
           )
         })()}
+        {/* K3 7/29 拍板 🟡⑤: 首页 review-card 加 organic "Visit Official Site ↗" 出口, 与详情页 [slug]/page.js L150-152 护栏对齐
+            理由: 护栏意图 = "organic 链接不打 aff-link 标, 不加 UTM, 保护 organic SEO"
+            rel="nofollow" (不含 sponsored) → inject-aff-link.mjs 守卫自动跳过, 不会被 rewrite
+            href=review.visitUrl (原始商家直链, 不加 UTM) → §0 攒批不破, §0 护栏 organic 清洁
+            用户决策路径: 多 1 个 organic 出口 → Google 看到首页不全是商业页, 降低"权威损耗"风险 (K3 ⚠#3 拍板建议 1: 不撤 pxf + 加 organic 出口) */}
+        {review.visitUrl && (
+          <a
+            href={review.visitUrl}
+            target="_blank"
+            rel="nofollow"
+            className="card-cta card-cta-visit"
+            style={{ fontSize: '0.78rem', fontWeight: 500, color: 'var(--c-primary)' }}
+          >
+            Visit Official Site ↗
+          </a>
+        )}
       </div>
       {/* hotfix 7/27 P1-1: 进度条删除（107 篇 reviews 全无 printCompatibility/ecommerceFit 字段，硬编 8.8/8.2 是凭空捏造）
           待 reviews.json 真实数据补齐 + verify-cron 加"进度条全雷同"断言 后再绑字段。CSS 保留在 globals.css 备用。 */}

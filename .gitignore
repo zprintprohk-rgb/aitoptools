@@ -8,3 +8,13 @@ credentials.*.local.json
 .wb/
 .hermes/secrets/
 .hermes/secrets/gmail_credentials.json
+
+# 7/29 K3 拍板 batch exception
+commit_msg.txt
+.hermes/tmp/
+
+
+# 根目录散 HTML (K3 7/29 batch exception, 体积大不入仓)
+/*.html
+
+/*.html  (根目录散文件, 体积大不入仓)
