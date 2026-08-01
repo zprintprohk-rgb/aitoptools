@@ -29,6 +29,7 @@ const DOMAIN_MAP = [
   [/kittl\.com|kittl\.pxf\.io/i, 'kittl'],
   [/placeit\.net/i, 'placeit'],
   [/canva\.com/i, 'canva'],
+  [/try\.gelato\.com/i, 'gelato'], // K3 8/1 批准, GA4 埋点 + UTM 注入
   [/[?&]via=jerome[\d]+/i, 'unknown'],
 ];
 
