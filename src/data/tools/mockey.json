@@ -1,0 +1,31 @@
+{
+  "slug": "mockey",
+  "name": "Mockey",
+  "category": "Mockup",
+  "applicationCategory": "DesignApplication",
+  "best_for": "5,000+ free mockups, AI background remover",
+  "commission": "30% recurring, 90-day cookie",
+  "free_trial": "Free tier available",
+  "rating_letter": "A",
+  "rating": 4.5,
+  "price": "$9.99/month",
+  "affiliate_url": "https://mockey.ai?via=jerome796",
+  "visit_url": "https://mockey.ai",
+  "affiliate_pending": false,
+  "pros": [
+    "30% recurring commission on all referrals",
+    "AI-powered one-click mockup generation",
+    "500+ customizable templates for print products",
+    "Bulk mockup creation saves hours per product line",
+    "Direct integration with Printful and Printify",
+    "No design skills needed - upload artwork and auto-generate"
+  ],
+  "cons": [
+    "No free plan beyond 14-day trial",
+    "Limited to product mockups only - not a full design suite",
+    "Some template customizations require Canva-level design skills",
+    "Customer support response times can be slow on free tier"
+  ],
+  "review_slug": "mockey-review",
+  "has_review": true
+}

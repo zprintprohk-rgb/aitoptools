@@ -1,0 +1,34 @@
+[
+  {
+    "tool": "gelato",
+    "position": "card-cta",
+    "url": "https://try.gelato.com/upftmv48rtcl",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=gelato&utm_content=gelato-vs-printful-for-etsy-card-cta",
+    "label": "Try Gelato ↗"
+  },
+  {
+    "tool": "printful",
+    "position": "verdict-cta",
+    "url": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=printful&utm_content=gelato-vs-printful-for-etsy-card-cta",
+    "label": "Try Printful ↗"
+  },
+  {
+    "tool": "gelato",
+    "position": "visit-organic",
+    "url": "https://try.gelato.com/upftmv48rtcl",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Gelato (Read Review)"
+  },
+  {
+    "tool": "printful",
+    "position": "visit-organic",
+    "url": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Printful (Read Review)"
+  }
+]

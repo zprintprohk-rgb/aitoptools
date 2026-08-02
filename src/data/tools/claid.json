@@ -1,0 +1,28 @@
+{
+  "slug": "claid",
+  "name": "Claid",
+  "category": "Photo",
+  "applicationCategory": "ImageApplication",
+  "best_for": "AI product photo enhancement, background removal",
+  "commission": "20% lifetime recurring, $20 minimum",
+  "free_trial": "50 free credits",
+  "rating_letter": "A",
+  "rating": 4,
+  "price": "$49/month",
+  "affiliate_url": "https://claid.ai?via=jerome94",
+  "visit_url": "https://claid.ai",
+  "affiliate_pending": false,
+  "pros": [
+    "Most photorealistic AI-generated product scenes",
+    "Batch processing up to 10,000 images",
+    "REST API for custom integrations",
+    "Color-accurate rendering for print products"
+  ],
+  "cons": [
+    "5x more expensive than Photoroom at $49/mo",
+    "Generated scenes not 100% photorealistic on close inspection",
+    "Struggles with non-standard product shapes"
+  ],
+  "review_slug": "claid-ai-review",
+  "has_review": true
+}

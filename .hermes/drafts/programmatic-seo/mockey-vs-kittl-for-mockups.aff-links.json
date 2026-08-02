@@ -1,0 +1,34 @@
+[
+  {
+    "tool": "mockey",
+    "position": "card-cta",
+    "url": "https://mockey.ai?via=jerome796",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=mockey&utm_content=mockey-vs-kittl-for-mockups-card-cta",
+    "label": "Try Mockey ↗"
+  },
+  {
+    "tool": "kittl",
+    "position": "verdict-cta",
+    "url": "https://kittl.pxf.io/qWNvPn",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=kittl&utm_content=mockey-vs-kittl-for-mockups-card-cta",
+    "label": "Try Kittl ↗"
+  },
+  {
+    "tool": "mockey",
+    "position": "visit-organic",
+    "url": "https://mockey.ai",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Mockey (Read Review)"
+  },
+  {
+    "tool": "kittl",
+    "position": "visit-organic",
+    "url": "https://kittl.pxf.io/qWNvPn",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Kittl (Read Review)"
+  }
+]

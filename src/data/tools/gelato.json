@@ -1,0 +1,29 @@
+{
+  "slug": "gelato",
+  "name": "Gelato",
+  "category": "POD",
+  "applicationCategory": "BusinessApplication",
+  "best_for": "International shipping (140+ hubs in 32 countries)",
+  "commission": "TBD (est. 15-20% sales cycle)",
+  "free_trial": "Free to sign up",
+  "rating_letter": "A-",
+  "rating": 4.4,
+  "price": "Free to join",
+  "affiliate_url": "https://try.gelato.com/upftmv48rtcl",
+  "visit_url": "https://gelato.com",
+  "affiliate_pending": false,
+  "pros": [
+    "35+ local production centers",
+    "No upfront fees",
+    "AI product recommendations",
+    "Carbon-neutral shipping",
+    "Shopify/Etsy/WooCommerce integration"
+  ],
+  "cons": [
+    "Smaller catalog than Printful",
+    "Quality varies by region",
+    "Limited custom packaging"
+  ],
+  "review_slug": "gelato-review",
+  "has_review": true
+}

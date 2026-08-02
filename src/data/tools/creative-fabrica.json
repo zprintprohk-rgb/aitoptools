@@ -1,0 +1,31 @@
+{
+  "slug": "creative-fabrica",
+  "name": "Creative Fabrica",
+  "category": "Design",
+  "applicationCategory": "DesignApplication",
+  "best_for": "Templates library, fonts, design assets",
+  "commission": "25% + 20% subscription renewal (cycle)",
+  "free_trial": "Free tier available",
+  "rating_letter": "A",
+  "rating": 4.3,
+  "price": "Free + $4.99/month (Craft Club)",
+  "affiliate_url": "https://www.creativefabrica.com/ref/27832838/",
+  "visit_url": "https://www.creativefabrica.com",
+  "affiliate_pending": false,
+  "pros": [
+    "7M+ design assets",
+    "Commercial license on paid plans",
+    "Printful direct integration",
+    "CF Spark AI built in",
+    "No attribution needed"
+  ],
+  "cons": [
+    "Free tier no commercial use",
+    "Craft Club annual auto-renew",
+    "AI quality behind Kittl",
+    "Search overwhelming with 7M+",
+    "Premium assets cost extra"
+  ],
+  "review_slug": "creative-fabrica-review",
+  "has_review": true
+}

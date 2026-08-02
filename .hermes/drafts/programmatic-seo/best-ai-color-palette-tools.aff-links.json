@@ -1,0 +1,50 @@
+[
+  {
+    "tool": "creative-fabrica",
+    "position": "card-cta",
+    "url": "https://creativefabrica.com/?ref=27832838",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=creative-fabrica&utm_content=best-ai-color-palette-tools-card-cta",
+    "label": "Try Creative Fabrica ↗"
+  },
+  {
+    "tool": "kittl",
+    "position": "verdict-cta",
+    "url": "https://kittl.pxf.io/qWNvPn",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=kittl&utm_content=best-ai-color-palette-tools-card-cta",
+    "label": "Try Kittl ↗"
+  },
+  {
+    "tool": "claid",
+    "position": "verdict-cta",
+    "url": "https://claid.ai?via=jerome94",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=claid&utm_content=best-ai-color-palette-tools-card-cta",
+    "label": "Try Claid ↗"
+  },
+  {
+    "tool": "creative-fabrica",
+    "position": "visit-organic",
+    "url": "https://creativefabrica.com/",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Creative Fabrica (Read Review)"
+  },
+  {
+    "tool": "kittl",
+    "position": "visit-organic",
+    "url": "https://kittl.pxf.io/qWNvPn",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Kittl (Read Review)"
+  },
+  {
+    "tool": "claid",
+    "position": "visit-organic",
+    "url": "https://claid.ai",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Claid (Read Review)"
+  }
+]

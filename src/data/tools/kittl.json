@@ -1,0 +1,28 @@
+{
+  "slug": "kittl",
+  "name": "Kittl",
+  "category": "Design",
+  "applicationCategory": "DesignApplication",
+  "best_for": "Print-ready vector AI designs, SVG output",
+  "commission": "20% paid subscription × 30-day referral",
+  "free_trial": "Free tier available",
+  "rating_letter": "A",
+  "rating": 4.5,
+  "price": "$13/month",
+  "affiliate_url": "https://kittl.pxf.io/qWNvPn",
+  "visit_url": "https://kittl.com",
+  "affiliate_pending": false,
+  "pros": [
+    "AI-powered text effects and design generation tailored for print products",
+    "Print-ready SVG, PNG, and PDF exports with proper bleed and crop marks",
+    "Vector-based — designs scale infinitely without quality loss",
+    "Excellent for t-shirt graphics, sticker designs, and merchandise art"
+  ],
+  "cons": [
+    "Smaller template library than Canva (but more print-focused)",
+    "AI text effects sometimes need manual adjustment for legibility",
+    "No direct marketplace integration with Printful or Printify"
+  ],
+  "review_slug": "kittl-review",
+  "has_review": true
+}

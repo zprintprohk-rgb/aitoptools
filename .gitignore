@@ -1,6 +1,7 @@
 node_modules/
 .next/
 out/
+dist/
 *.log
 .env
 .claude/
@@ -9,12 +10,12 @@ credentials.*.local.json
 .hermes/secrets/
 .hermes/secrets/gmail_credentials.json
 
-# 7/29 K3 ÅÄ°å batch exception
+# 7/29 K3 ï¿½Ä°ï¿½ batch exception
 commit_msg.txt
 .hermes/tmp/
 
 
-# ¸ùÄ¿Â¼É¢ HTML (K3 7/29 batch exception, Ìå»ý´ó²»Èë²Ö)
+# ï¿½ï¿½Ä¿Â¼É¢ HTML (K3 7/29 batch exception, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 /*.html
 
-/*.html  (¸ùÄ¿Â¼É¢ÎÄ¼þ, Ìå»ý´ó²»Èë²Ö)
+/*.html  (ï¿½ï¿½Ä¿Â¼É¢ï¿½Ä¼ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)

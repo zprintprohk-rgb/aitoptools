@@ -1,0 +1,29 @@
+{
+  "slug": "printify",
+  "name": "Printify",
+  "category": "POD",
+  "applicationCategory": "BusinessApplication",
+  "best_for": "Catalog size (1,300+ items) + low prices",
+  "commission": "5% × 12 months",
+  "free_trial": "Free to sign up",
+  "rating_letter": "A-",
+  "rating": 4.3,
+  "price": "Free to join",
+  "affiliate_url": "https://try.printify.com/4fs863rfz2yc",
+  "visit_url": "https://printify.com",
+  "affiliate_pending": false,
+  "pros": [
+    "850+ products — largest catalog",
+    "85+ providers for competitive pricing",
+    "AI product recommendations",
+    "Free mockup generator",
+    "Margin calculator"
+  ],
+  "cons": [
+    "Quality varies by provider",
+    "No warehousing",
+    "Overwhelming catalog for new sellers"
+  ],
+  "review_slug": "printify-review",
+  "has_review": true
+}

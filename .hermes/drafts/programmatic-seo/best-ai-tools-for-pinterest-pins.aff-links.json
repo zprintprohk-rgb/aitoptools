@@ -1,0 +1,50 @@
+[
+  {
+    "tool": "picjam",
+    "position": "card-cta",
+    "url": "[PENDING-Picjam-affiliate-link-BD-email]",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=picjam&utm_content=best-ai-tools-for-pinterest-pins-card-cta",
+    "label": "Try Picjam ↗"
+  },
+  {
+    "tool": "claid",
+    "position": "verdict-cta",
+    "url": "https://claid.ai?via=jerome94",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=claid&utm_content=best-ai-tools-for-pinterest-pins-card-cta",
+    "label": "Try Claid ↗"
+  },
+  {
+    "tool": "greenonion",
+    "position": "verdict-cta",
+    "url": "[PENDING-GreenOnion-affiliate-link-BD-email]",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=greenonion&utm_content=best-ai-tools-for-pinterest-pins-card-cta",
+    "label": "Try GreenOnion ↗"
+  },
+  {
+    "tool": "picjam",
+    "position": "visit-organic",
+    "url": "[PENDING-Picjam-affiliate-link-BD-email]",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Picjam (Read Review)"
+  },
+  {
+    "tool": "claid",
+    "position": "visit-organic",
+    "url": "https://claid.ai",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Claid (Read Review)"
+  },
+  {
+    "tool": "greenonion",
+    "position": "visit-organic",
+    "url": "[PENDING-GreenOnion-affiliate-link-BD-email]",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit GreenOnion (Read Review)"
+  }
+]

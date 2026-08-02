@@ -1,0 +1,34 @@
+[
+  {
+    "tool": "claid",
+    "position": "card-cta",
+    "url": "https://claid.ai?via=jerome94",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=claid&utm_content=best-ai-tools-for-fashion-photography-card-cta",
+    "label": "Try Claid ↗"
+  },
+  {
+    "tool": "mockey",
+    "position": "verdict-cta",
+    "url": "https://mockey.ai?via=jerome796",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=mockey&utm_content=best-ai-tools-for-fashion-photography-card-cta",
+    "label": "Try Mockey ↗"
+  },
+  {
+    "tool": "claid",
+    "position": "visit-organic",
+    "url": "https://claid.ai",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Claid (Read Review)"
+  },
+  {
+    "tool": "mockey",
+    "position": "visit-organic",
+    "url": "https://mockey.ai",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Mockey (Read Review)"
+  }
+]

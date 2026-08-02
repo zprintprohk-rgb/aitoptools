@@ -1,0 +1,101 @@
+{
+  "printify": {
+    "tool": "printify",
+    "name": "Printify",
+    "affiliate_url": "https://try.printify.com/4fs863rfz2yc",
+    "visit_url": "https://printify.com",
+    "pending": false,
+    "rel": "nofollow sponsored",
+    "utm_source": "aitoptools",
+    "utm_medium": "affiliate",
+    "utm_campaign": "printify"
+  },
+  "printful": {
+    "tool": "printful",
+    "name": "Printful",
+    "affiliate_url": "https://www.printful.com/a/15297661:***",
+    "visit_url": "https://printful.com",
+    "pending": false,
+    "rel": "nofollow sponsored",
+    "utm_source": "aitoptools",
+    "utm_medium": "affiliate",
+    "utm_campaign": "printful"
+  },
+  "gelato": {
+    "tool": "gelato",
+    "name": "Gelato",
+    "affiliate_url": "https://try.gelato.com/upftmv48rtcl",
+    "visit_url": "https://gelato.com",
+    "pending": false,
+    "rel": "nofollow sponsored",
+    "utm_source": "aitoptools",
+    "utm_medium": "affiliate",
+    "utm_campaign": "gelato"
+  },
+  "kittl": {
+    "tool": "kittl",
+    "name": "Kittl",
+    "affiliate_url": "https://kittl.pxf.io/qWNvPn",
+    "visit_url": "https://kittl.com",
+    "pending": false,
+    "rel": "nofollow sponsored",
+    "utm_source": "aitoptools",
+    "utm_medium": "affiliate",
+    "utm_campaign": "kittl"
+  },
+  "creative-fabrica": {
+    "tool": "creative-fabrica",
+    "name": "Creative Fabrica",
+    "affiliate_url": "https://www.creativefabrica.com/ref/27832838/",
+    "visit_url": "https://www.creativefabrica.com",
+    "pending": false,
+    "rel": "nofollow sponsored",
+    "utm_source": "aitoptools",
+    "utm_medium": "affiliate",
+    "utm_campaign": "creative-fabrica"
+  },
+  "claid": {
+    "tool": "claid",
+    "name": "Claid",
+    "affiliate_url": "https://claid.ai?via=jerome94",
+    "visit_url": "https://claid.ai",
+    "pending": false,
+    "rel": "nofollow sponsored",
+    "utm_source": "aitoptools",
+    "utm_medium": "affiliate",
+    "utm_campaign": "claid"
+  },
+  "mockey": {
+    "tool": "mockey",
+    "name": "Mockey",
+    "affiliate_url": "https://mockey.ai?via=jerome796",
+    "visit_url": "https://mockey.ai",
+    "pending": false,
+    "rel": "nofollow sponsored",
+    "utm_source": "aitoptools",
+    "utm_medium": "affiliate",
+    "utm_campaign": "mockey"
+  },
+  "picjam": {
+    "tool": "picjam",
+    "name": "Picjam",
+    "affiliate_url": "",
+    "visit_url": "https://picjam.ai",
+    "pending": true,
+    "rel": "nofollow sponsored",
+    "utm_source": "aitoptools",
+    "utm_medium": "affiliate",
+    "utm_campaign": "picjam"
+  },
+  "greenonion": {
+    "tool": "greenonion",
+    "name": "GreenOnion",
+    "affiliate_url": "",
+    "visit_url": "https://greenonion.ai",
+    "pending": true,
+    "rel": "nofollow sponsored",
+    "utm_source": "aitoptools",
+    "utm_medium": "affiliate",
+    "utm_campaign": "greenonion"
+  }
+}

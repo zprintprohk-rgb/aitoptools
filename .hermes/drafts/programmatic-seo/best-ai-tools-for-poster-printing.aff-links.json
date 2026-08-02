@@ -1,0 +1,50 @@
+[
+  {
+    "tool": "gelato",
+    "position": "card-cta",
+    "url": "https://try.gelato.com/upftmv48rtcl",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=gelato&utm_content=best-ai-tools-for-poster-printing-card-cta",
+    "label": "Try Gelato ↗"
+  },
+  {
+    "tool": "printify",
+    "position": "verdict-cta",
+    "url": "https://try.printify.com/4fs863rfz2yc",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=printify&utm_content=best-ai-tools-for-poster-printing-card-cta",
+    "label": "Try Printify ↗"
+  },
+  {
+    "tool": "mockey",
+    "position": "verdict-cta",
+    "url": "https://mockey.ai?via=jerome796",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=mockey&utm_content=best-ai-tools-for-poster-printing-card-cta",
+    "label": "Try Mockey ↗"
+  },
+  {
+    "tool": "gelato",
+    "position": "visit-organic",
+    "url": "https://try.gelato.com/upftmv48rtcl",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Gelato (Read Review)"
+  },
+  {
+    "tool": "printify",
+    "position": "visit-organic",
+    "url": "https://try.printify.com/4fs863rfz2yc",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Printify (Read Review)"
+  },
+  {
+    "tool": "mockey",
+    "position": "visit-organic",
+    "url": "https://mockey.ai",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Mockey (Read Review)"
+  }
+]

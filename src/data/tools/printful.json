@@ -1,0 +1,29 @@
+{
+  "slug": "printful",
+  "name": "Printful",
+  "category": "POD",
+  "applicationCategory": "BusinessApplication",
+  "best_for": "Quality, branding, embroidery depth",
+  "commission": "10% × 12 months + $25 bonus",
+  "free_trial": "Free to sign up",
+  "rating_letter": "A",
+  "rating": 4.5,
+  "price": "Free to join",
+  "affiliate_url": "https://www.printful.com/a/15297661:***",
+  "visit_url": "https://printful.com",
+  "affiliate_pending": false,
+  "pros": [
+    "300+ products, 25+ categories",
+    "Best-in-class print quality",
+    "Warehousing + fulfillment",
+    "AI mockup generator",
+    "No minimum orders"
+  ],
+  "cons": [
+    "15-25% higher costs than Printify",
+    "Only 10+ global centers",
+    "AI mockups on Basic plan (/mo)"
+  ],
+  "review_slug": "printful-review",
+  "has_review": true
+}

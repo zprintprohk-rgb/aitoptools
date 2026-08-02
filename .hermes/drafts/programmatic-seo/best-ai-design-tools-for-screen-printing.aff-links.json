@@ -1,0 +1,50 @@
+[
+  {
+    "tool": "kittl",
+    "position": "card-cta",
+    "url": "https://kittl.pxf.io/qWNvPn",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=kittl&utm_content=best-ai-design-tools-for-screen-printing-card-cta",
+    "label": "Try Kittl ↗"
+  },
+  {
+    "tool": "printful",
+    "position": "verdict-cta",
+    "url": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=printful&utm_content=best-ai-design-tools-for-screen-printing-card-cta",
+    "label": "Try Printful ↗"
+  },
+  {
+    "tool": "creative-fabrica",
+    "position": "verdict-cta",
+    "url": "https://creativefabrica.com/?ref=27832838",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=creative-fabrica&utm_content=best-ai-design-tools-for-screen-printing-card-cta",
+    "label": "Try Creative Fabrica ↗"
+  },
+  {
+    "tool": "kittl",
+    "position": "visit-organic",
+    "url": "https://kittl.pxf.io/qWNvPn",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Kittl (Read Review)"
+  },
+  {
+    "tool": "printful",
+    "position": "visit-organic",
+    "url": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Printful (Read Review)"
+  },
+  {
+    "tool": "creative-fabrica",
+    "position": "visit-organic",
+    "url": "https://creativefabrica.com/",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Creative Fabrica (Read Review)"
+  }
+]

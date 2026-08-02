@@ -1,0 +1,236 @@
+{#-
+  aitoptools.net — Programmatic page master template (Nunjucks)
+  Design tokens (AGENTS.md §2): paper #FAF7F2 / ink #17201c / brand green #0b5f59 / amber CTA
+  Structure (SEO_ARCHITECTURE.md §1.3): 6 sections + related articles
+  Schema (task Step 3): WebPage + ItemList(SoftwareApplication) + FAQPage
+  Affiliate links: injected from src/data/affiliates.json via generator (never hardcoded here)
+-#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.metaDescription }}" />
+  <link rel="canonical" href="{{ page.url }}" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:description" content="{{ page.metaDescription }}" />
+  <meta property="og:url" content="{{ page.url }}" />
+  <meta property="og:image" content="{{ page.ogImage }}" />
+  <meta property="og:site_name" content="Print AI Tools" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ page.title }}" />
+  <meta name="twitter:description" content="{{ page.metaDescription }}" />
+  <meta name="twitter:image" content="{{ page.ogImage }}" />
+{% for schema in page.jsonLd %}
+  <script type="application/ld+json">{{ schema | safe }}</script>
+{% endfor %}
+  <style>
+    :root{
+      --paper:#FAF7F2; --ink:#17201c; --green:#0b5f59; --amber:#e07b39;
+      --line:rgba(23,32,28,0.10); --muted:#5a645e;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--paper);color:var(--ink);font:16px/1.7 -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+    header.site{border-bottom:1px solid var(--line);padding:20px 0;margin-bottom:48px}
+    header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .logo{font-size:1.15rem;font-weight:700;color:var(--green);text-decoration:none;letter-spacing:.2px}
+    .logo b{color:var(--ink)}
+    nav.site a{color:var(--green);text-decoration:none;font-size:.92rem;margin-left:20px}
+    nav.site a:hover{text-decoration:underline}
+    .breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:16px}
+    .breadcrumb a{color:var(--green);text-decoration:none}
+    .breadcrumb .sep{margin:0 8px;color:var(--muted)}
+    h1{font-size:2.05rem;line-height:1.25;letter-spacing:-.01em;margin-bottom:12px}
+    .dek{color:var(--muted);font-size:1.05rem;max-width:720px;margin-bottom:32px}
+    section{margin-bottom:64px}
+    h2{font-size:1.45rem;line-height:1.3;margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+    h3{font-size:1.1rem;margin:24px 0 10px}
+    p{margin-bottom:14px}
+    ul,ol{margin:0 0 16px 22px}
+    li{margin-bottom:6px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{border:1px solid var(--line);background:#fff;padding:28px;display:flex;flex-direction:column}
+    .card .rank{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+    .card .rank.ourpick{color:var(--amber);font-weight:700}
+    .card h3{margin:0 0 6px}
+    .card .tagline{color:var(--muted);font-size:.92rem;margin-bottom:14px;flex:1}
+    .card .meta{font-size:.85rem;color:var(--muted);margin-bottom:14px}
+    .card .meta b{color:var(--ink)}
+    .cta{display:inline-block;background:var(--amber);color:#fff;text-decoration:none;font-weight:600;font-size:.92rem;padding:10px 18px;border-radius:4px;text-align:center;transition:background .15s}
+    .cta:hover{background:#c96a2c}
+    .visit{display:inline-block;color:var(--green);text-decoration:none;font-size:.9rem;margin-top:8px;font-weight:500}
+    .visit:hover{text-decoration:underline}
+    table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:.9rem;background:#fff}
+    th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+    th{background:var(--green);color:#fff;font-weight:600}
+    td:first-child{font-weight:600;background:rgba(11,95,89,.04)}
+    .proscons{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .proscons .box{border:1px solid var(--line);background:#fff;padding:20px 24px}
+    .proscons h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+    .proscons .pros h4{color:var(--green)}
+    .proscons .cons h4{color:var(--amber)}
+    .proscons ul{margin-left:18px}
+    .faq-item{border:1px solid var(--line);background:#fff;padding:20px 24px;margin-bottom:12px}
+    .faq-item h3{margin:0 0 8px;font-size:1.02rem}
+    .faq-item p{margin:0;color:#2a322d}
+    .related{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .related a{border:1px solid var(--line);background:#fff;padding:16px 20px;color:var(--green);text-decoration:none;font-weight:600;transition:border-color .15s}
+    .related a:hover{border-color:var(--green)}
+    .note{font-size:.85rem;color:var(--muted);background:rgba(11,95,89,.05);border-left:3px solid var(--green);padding:10px 16px;margin:16px 0}
+    footer.site{border-top:1px solid var(--line);padding:32px 0 48px;margin-top:32px;font-size:.85rem;color:var(--muted)}
+    footer.site a{color:var(--green);text-decoration:none}
+    @media (max-width:640px){
+      h1{font-size:1.6rem}.proscons{grid-template-columns:1fr}
+      header.site .wrap{flex-direction:column;align-items:flex-start}
+      nav.site a{margin:0 16px 0 0}
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="logo" href="/">Print <b>AI</b> Tools</a>
+      <nav class="site">
+        <a href="/best-ai-tools/">Best AI Tools</a>
+        <a href="/best/">Best Of</a>
+        <a href="/compare/">Comparisons</a>
+        <a href="/methodology/">Methodology</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep">›</span>
+      <a href="/best/">Best Of</a><span class="sep">›</span>
+      <span class="current">{{ page.h1 }}</span>
+    </nav>
+
+    <h1>{{ page.h1 }}</h1>
+    <p class="dek">{{ page.dek }}</p>
+
+    {#--- Section ① Quick Pick (Top 3) ---#}
+    <section id="quick-pick">
+      <h2>Quick Verdict: Top 3 Picks</h2>
+      <div class="grid">
+        {% for t in tools %}
+        <article class="card">
+          <span class="rank{% if loop.first %} ourpick{% endif %}">{% if loop.first %}Our Pick{% else %}#{{ loop.index }}{% endif %}</span>
+          <h3>{{ t.name }}</h3>
+          <p class="tagline">{{ t.bestFor }}</p>
+          <p class="meta"><b>Best for:</b> {{ t.bestFor }}<br/><b>Pricing:</b> {{ t.price or t.freeTrial }}<br/><b>Free trial:</b> {{ t.freeTrial }}</p>
+          {% if t.affiliateUrl and not t.pending %}
+          <a class="cta" href="{{ t.affiliateUrl }}" rel="{{ t.rel }}">Check Deal ↗</a>
+          {% endif %}
+          <a class="visit" href="{{ t.visitUrl }}" rel="nofollow">Visit {{ t.name }} — Read Review</a>
+        </article>
+        {% endfor %}
+      </div>
+      <p class="note">{{ page.quickPickNote }}</p>
+      <p>See our full <a href="{{ page.related[0].url }}" style="color:var(--green)">{{ page.related[0].title }}</a> guide for deeper comparison.</p>
+    </section>
+
+    {#--- Section ② What is ---#}
+    <section id="what-is">
+      <h2>What is {{ page.whatIsTitle }}?</h2>
+      <p>{{ page.whatIs1 }}</p>
+      <p>{{ page.whatIs2 }}</p>
+      <p>{{ page.whatIs3 }}</p>
+    </section>
+
+    {#--- Section ③ Full Reviews ---#}
+    <section id="reviews">
+      <h2>Full Reviews: {{ tools | length }} Best {{ page.categoryShort }} Tools in 2026</h2>
+      {% for t in tools %}
+      <article class="card" style="margin-bottom:20px">
+        <h3>{{ loop.index }}. {{ t.name }} — {{ t.bestFor }}</h3>
+        <p class="meta">
+          <b>Best for:</b> {{ t.bestFor }}<br/>
+          <b>Pricing:</b> {{ t.price or t.freeTrial }}<br/>
+          <b>Free trial:</b> {{ t.freeTrial }}<br/>
+          {% if t.rating %}<b>Our rating:</b> {{ t.rating }}/5{% endif %}
+        </p>
+        <p>{{ t.overview }}</p>
+        <div class="proscons">
+          <div class="box pros">
+            <h4>Pros</h4>
+            <ul>{% for p in t.pros %}<li>{{ p }}</li>{% endfor %}</ul>
+          </div>
+          <div class="box cons">
+            <h4>Cons</h4>
+            <ul>{% for c in t.cons %}<li>{{ c }}</li>{% endfor %}</ul>
+          </div>
+        </div>
+        {% if t.affiliateUrl and not t.pending %}
+        <p style="margin-top:14px"><a class="cta" href="{{ t.affiliateUrl }}" rel="{{ t.rel }}">Check Deal ↗</a></p>
+        {% endif %}
+        {% if t.reviewUrl %}
+        <p style="margin-top:8px">Read our full <a class="visit" href="{{ t.reviewUrl }}">{{ t.name }} review</a> for in-depth testing.</p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </section>
+
+    {#--- Section ④ Comparison Table (auto-generated from tool JSON) ---#}
+    <section id="comparison">
+      <h2>{{ page.categoryShort }} Comparison: Feature Matrix</h2>
+      <table>
+        <thead>
+          <tr><th>Feature</th>{% for name in comparison.headers %}<th>{{ name }}</th>{% endfor %}</tr>
+        </thead>
+        <tbody>
+          {% for row in comparison.rows %}
+          <tr><td>{{ row.label }}</td>{% for v in row.values %}<td>{{ v }}</td>{% endfor %}</tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p><b>How to read this table:</b> {{ page.comparisonNote }}</p>
+      <p><b>Our recommendation:</b> {{ page.recommendation }}</p>
+    </section>
+
+    {#--- Section ⑤ How to Choose ---#}
+    <section id="how-to-choose">
+      <h2>How to Choose the Best {{ page.categoryShort }} AI Tool for Your Business</h2>
+      <p>{{ page.howToChooseIntro }}</p>
+      {% for f in page.factors %}
+      <h3>{{ loop.index }}. {{ f.title }}</h3>
+      <p>{{ f.text }}</p>
+      {% endfor %}
+      <h3>Our Decision Framework</h3>
+      <p>{{ page.decisionFramework }}</p>
+    </section>
+
+    {#--- Section ⑥ FAQ ---#}
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      {% for f in page.faqs %}
+      <div class="faq-item">
+        <h3>{{ f.q }}</h3>
+        <p>{{ f.a }}</p>
+      </div>
+      {% endfor %}
+    </section>
+
+    {#--- Related Articles (3 internal links from matrix) ---#}
+    <section id="related">
+      <h2>Related Articles</h2>
+      <div class="related">
+        {% for r in page.related %}
+        <a href="{{ r.url }}">{{ r.title }}</a>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p>Print AI Tools — independent reviews of AI tools for print shops, POD sellers, and e-commerce. We may earn a commission when you buy through our links, at no extra cost to you. <a href="/affiliate-disclosure/">Affiliate disclosure</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a></p>
+      <p style="margin-top:8px">© 2026 Print AI Tools (aitoptools.net). All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

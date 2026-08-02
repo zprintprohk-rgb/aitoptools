@@ -1,0 +1,50 @@
+[
+  {
+    "tool": "kittl",
+    "position": "card-cta",
+    "url": "https://kittl.pxf.io/qWNvPn",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=kittl&utm_content=best-pod-for-typography-design-card-cta",
+    "label": "Try Kittl ↗"
+  },
+  {
+    "tool": "printify",
+    "position": "verdict-cta",
+    "url": "https://try.printify.com/4fs863rfz2yc",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=printify&utm_content=best-pod-for-typography-design-card-cta",
+    "label": "Try Printify ↗"
+  },
+  {
+    "tool": "creative-fabrica",
+    "position": "verdict-cta",
+    "url": "https://creativefabrica.com/?ref=27832838",
+    "rel": "nofollow sponsored",
+    "utm": "?utm_source=aitoptools&utm_medium=affiliate&utm_campaign=creative-fabrica&utm_content=best-pod-for-typography-design-card-cta",
+    "label": "Try Creative Fabrica ↗"
+  },
+  {
+    "tool": "kittl",
+    "position": "visit-organic",
+    "url": "https://kittl.pxf.io/qWNvPn",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Kittl (Read Review)"
+  },
+  {
+    "tool": "printify",
+    "position": "visit-organic",
+    "url": "https://try.printify.com/4fs863rfz2yc",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Printify (Read Review)"
+  },
+  {
+    "tool": "creative-fabrica",
+    "position": "visit-organic",
+    "url": "https://creativefabrica.com/",
+    "rel": "nofollow",
+    "utm": null,
+    "label": "Visit Creative Fabrica (Read Review)"
+  }
+]
