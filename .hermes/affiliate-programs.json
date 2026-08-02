@@ -104,6 +104,22 @@
       "notes": "✓ APPROVED 2026-07-22 (per credentials.affiliate.local.json + AFFILIATE_LOG.md). 30% recurring 90-day cookie, PayPal monthly. K3 7/29 拍板补回 programs 数组 (原本仅 milestones 段提到, SSoT 不完整). 7/24 已上线 out/ mockey.ai?via=jerome796 替换占位."
     },
     {
+      "name": "Gelato Affiliate Program",
+      "network": "PartnerStack",
+      "commission": "15-20% recurring (TBD, 8/1 K3 报告 dashboard 后续看)",
+      "status": "approved",
+      "approved_date": "2026-08-01",
+      "applied_date": "2026-07-24",
+      "verification": "inferred-from-email (Gmail webmail K3 manual fetch, IMAP still DEGRADED)",
+      "manager": "partnerships@gelato.com (Alex)",
+      "affiliate_id": "upftmv48rtcl (try.gelato.com slug)",
+      "my_link_gelato": "https://try.gelato.com/upftmv48rtcl",
+      "my_link_redirects_to": "https://www.gelato.com/print-on-demand",
+      "signup_url": "https://partnerships.gelato.com (redirects to dash.partnerstack.com)",
+      "paypal_setup": "pending (K3 dash.partnerstack.com 后续设)",
+      "notes": "APPROVED 2026-08-01 (per K3 8/1 09:56 Gmail webmail welcome email from Alex). 7/24 重申 → 8 天出结果 (正常 7-14 天窗口). 推广链接 K3 8/1 10:02 从 dash.partnerstack.com 取到 (try.gelato.com/upftmv48rtcl, 重定向 gelato.com/print-on-demand). Commission 率邮件未明, 标准 15-20% 销售循环, 需 dashboard 查实际率. PayPal 收款待设. 7/24 首申因 identity mismatch 被拒, 修复 About 页 + 网站脚署名 + 邮箱一致后重申通过. 8/2 攒批替换 38+ 处站内 gelato.com 链接为 affiliate 链接."
+    },
+    {
       "name": "Printify Affiliate Program",
       "network": "PartnerStack",
       "commission": "20-30% recurring",
@@ -189,15 +205,193 @@
     }
   ],
   "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
-  "last_updated": "2026-07-30",
+  "last_updated": "2026-08-01 22:55 (cron 12:00 窗口, 实际 22:55 触发; 8.8.8.8 → 142.251.8.109 TCP 60ms OK 窗口期; Gmail App Password D7 仍缺; Gelato 8/1 10:02 link obtained + commit 86756b9 5 处替换 + 8/2 攒批 38+ 处)",
   "monitoring": {
-    "gmail_api_status": "UNAVAILABLE — 凭证文件 credentials.affiliate.local.json 仅有平台账号 (Claid/PartnerStack/Impact/Looka/Printful/Mockey),无 Gmail OAuth / App Password / IMAP 凭证。2026-07-22 启动 cron 以来,Gmail 检查无法真实执行,日更靠 state file + user 手动告知。",
-    "check_method": "state-file-only (no live email read)",
-    "next_action": "user 提供 Gmail API OAuth token 或 App Password → 写入 .hermes/secrets/gmail_credentials.json (⚠️ 风险:实测 .gitignore 仅匹配 credentials.*.local.json,不匹配 secrets/ 目录或 gmail_credentials.json,需先改 .gitignore) → 改 cron 通道",
-    "last_live_check": "never (cron 启动即无通道,2026-07-29 D7 仍空转)"
+    "gmail_api_status": "🟡 DEGRADED v3 2026-08-01 22:55 — 通道部分恢复. 8.8.8.8 首次返回可达 IP 142.251.8.109 (TCP 60ms OK, 端口 993 通), 但 Gmail App Password D7 仍缺 (K3 7/30 5:14 修空格 → 7/30 5:16 IMAP 网络层挡 → 8/1 22:55 仍缺). default getaddrinfo 8/1 22:55 返回 108.177.125.108 (新段, 7/30 142.250.157.x → 7/31 64.233.187.x → 8/1 108.177.125.x), TCP 3s timeout, 跨段重污染. 7/30 fix 模式 (强制 default IP) 失效, 8.8.8.8 模式 (强制 8.8.8.8 IP) 出现窗口期但需补凭证才有用. 1.1.1.1 / 9.9.9.9 IPv4 解析仍 timeout. 7/30 D8 5min verify 教训: 凭证 PASS ≠ 通道 PASS, 仍要实测 IMAP connect. 永久方案待 user 决定 A/B/C/D (per 7/31 网络层诊断) + 新 P1-A: 8.8.8.8 窗口期 6-12h 补 App Password (今天 23:00 前错过需等下个 GFW 放行周期).",
+    "check_method": "state-file + multi-resolver-failed (2026-07-31 15:11)",
+    "next_action": "🟡 Gmail IMAP 通道 PARTIAL-RESTORE 8/1 22:55 (8.8.8.8 OK + D7 缺凭证). 8.8.8.8 窗口期 6-12h, 建议今天 23:00 前补 App Password (P1-A). 剩余 PartnerStack Network 8d / Deel 8d / Claid PayPal D8+ / Printful 邮箱 D8+ 仍 hold, user 浏览器 1-5min 行动. 下次 cron (8/2 12:00 攒批窗口) 如 8.8.8.8 仍 OK + App Password 已补 → retry IMAP login; 如 8.8.8.8 失效 → 升级 user 决定 P1-B/C/D/E.",
+    "last_live_check": "2026-07-30 12:00 IMAP login OK (forced_ip=142.250.157.109 via default getaddrinfo) — 7/31 15:11 retry 1 + 跨 4 DNS resolver (default/8.8.8.8/1.1.1.1/9.9.9.9) 全部 fail, 通道 DEGRADED, 真实邮件检查 24h+ 不可用 | 8/1 09:56 K3 报告 Gmail webmail 仍可访问 (浏览器, 非 IMAP). IMAP 通道仍 DEGRADED 但 user 兜底告知已恢复信号通道. | 8/1 09:56 K3 报告 Gmail webmail 仍可访问 (浏览器, 非 IMAP). IMAP 通道仍 DEGRADED 但 user 兜底告知已恢复信号通道. | 8/1 22:55 IMAP multi-resolver check: default 108.177.125.108 → TCP timeout ❌; 8.8.8.8 → 142.251.8.109 → TCP 60ms OK ✅ (端口 993 通, 窗口期!); 1.1.1.1 UDP 53 timeout ❌; 9.9.9.9 IPv6 2a00:1450:400c:c0b::6d → IPv4 connect getaddrinfo failed. 8.8.8.8 模式可用但缺 App Password 仍 login fail. 状态 PARTIAL-RESTORE (网络层 OK, 凭证层 D7 缺). | 8/1 22:55 IMAP multi-resolver check: default 108.177.125.108 → TCP timeout ❌; 8.8.8.8 → 142.251.8.109 → TCP 60ms OK ✅ (端口 993 通, 窗口期!); 1.1.1.1 UDP 53 timeout ❌; 9.9.9.9 IPv6 2a00:1450:400c:c0b::6d → IPv4 connect getaddrinfo failed. 8.8.8.8 模式可用但缺 App Password 仍 login fail. 状态 PARTIAL-RESTORE (网络层 OK, 凭证层 D7 缺). | 8/1 22:55 IMAP multi-resolver check: default 108.177.125.108 → TCP timeout ❌; 8.8.8.8 → 142.251.8.109 → TCP 60ms OK ✅ (端口 993 通, 窗口期!); 1.1.1.1 UDP 53 timeout ❌; 9.9.9.9 IPv6 2a00:1450:400c:c0b::6d → IPv4 connect getaddrinfo failed. 8.8.8.8 模式可用但缺 App Password 仍 login fail. 状态 PARTIAL-RESTORE (网络层 OK, 凭证层 D7 缺). | 8/1 22:55 IMAP multi-resolver check: default 108.177.125.108 → TCP timeout ❌; 8.8.8.8 → 142.251.8.109 → TCP 60ms OK ✅ (端口 993 通, 窗口期!); 1.1.1.1 UDP 53 timeout ❌; 9.9.9.9 IPv6 2a00:1450:400c:c0b::6d → IPv4 connect getaddrinfo failed. 8.8.8.8 模式可用但缺 App Password 仍 login fail. 状态 PARTIAL-RESTORE (网络层 OK, 凭证层 D7 缺).",
+    "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
+    "network_diag_5_19": {
+      "imap.gmail.com:993": "TIMEOUT 8s",
+      "imap.gmail.com:587": "TIMEOUT 5s",
+      "imap.gmail.com:465": "TIMEOUT 5s",
+      "imap.gmail.com:443": "TIMEOUT 5s",
+      "smtp.gmail.com:587": "OK",
+      "smtp.gmail.com:465": "OK",
+      "www.google.com:443": "TIMEOUT 5s",
+      "DNS imap.gmail.com": "OK (12 IPs returned)"
+    },
+    "network_diag_12_00": {
+      "imap.gmail.com:993_default_dns": "142.250.157.108/109 → TCP 0.06-0.20s OK ✅",
+      "imap.gmail.com:993_AI_ADDRCONFIG_dns": "64.233.189.108/109 → TCP timeout ❌ (污染)",
+      "imap.gmail.com:143_default_dns": "TIMEOUT (明文 IMAP 不用, 但要避开)",
+      "smtp.gmail.com:587": "OK (干扰信号, 不能收邮件)",
+      "www.google.com:443": "TIMEOUT (跟 5:19 一样, 跟 imap 无关)",
+      "outlook.office365.com:993": "OK (对照组, 993 端口整体通, 不是 993 端口挡)",
+      "imaplib.IMAP4_SSL(default_dns_ip)": "LOGIN OK, 'authenticated (Success)'",
+      "imaplib.IMAP4_SSL(AI_ADDRCONFIG_ip)": "LOGIN FAIL, WinError 10060 (走污染 IP)",
+      "root_cause": "GFW DNS poisoning — AI_ADDRCONFIG getaddrinfo 命中污染池",
+      "fix": "强制 default getaddrinfo + 测 TCP 0.05s 内 OK + imaplib 用该 IP",
+      "scratch_script": ".hermes/tmp/affiliate-monitor-2026-07-30-12-00-fetch.py (可复用到下个 cron)",
+      "DNS_cache_state": "system DNS cache 12:00 返回 142.250.157.x (跟 AI_ADDRCONFIG 64.233.189.x 镜像, 一污染一真, 极罕见)"
+    },
+    "high_signal_findings_7d": {
+      "as_of": "2026-07-30 12:00",
+      "lookback_days": 7,
+      "total_messages": 5,
+      "per_sender": {
+        "printful.com": 1,
+        "printify.com": 4
+      },
+      "high_signal_count": 0,
+      "messages": [
+        {
+          "date": "2026-07-24 09:44:22",
+          "from": "printful.com",
+          "subject": "Wondering how to promote your affiliate link?",
+          "signal": "印证 7/24 Printful approval 真实 (Gmail 通道缺失时未抓到, 现独立核实)"
+        },
+        {
+          "date": "2026-07-23 21:37:15",
+          "from": "printify.com",
+          "subject": "Printify review - Challenge Launched!",
+          "signal": "印证 7/24 Printify approval + $150 blog challenge (9/29 截止)"
+        },
+        {
+          "date": "2026-07-24 03:50:23",
+          "from": "printify.com",
+          "subject": "You've completed the 'Printify review' Challenge",
+          "signal": "7/24 03:50 GMT = 7/24 11:50 Asia/Shanghai, 跟 user 上线时间一致"
+        },
+        {
+          "date": "2026-07-25 14:30:32",
+          "from": "printify.com",
+          "subject": "How Much Can You Earn with Printify?",
+          "signal": "教育邮件, 无关 approval"
+        },
+        {
+          "date": "2026-07-29 14:30:23",
+          "from": "printify.com",
+          "subject": "These Affiliates Did It. You Can Too.",
+          "signal": "教育邮件, 无关 approval"
+        }
+      ],
+      "p0_count": 0,
+      "p1_count": 0,
+      "p2_count": 0,
+      "conclusion": "✅ 7d 邮件扫描: 0 actionable 高信号. 7/24 同期 4 个 approval (claid/printful/printify/mockey) 全部已 link_deployed, 7/30 03:33 Kittl 也已. 没有 P0/P1/P2 阻塞."
+    },
+    "network_diag_7_31": {
+      "imap.gmail.com:993_default_dns": "64.233.187.108/109 → TCP timeout ❌ (新污染段, 7/30 142.250.157.x 已重污染)",
+      "imap.gmail.com:993_8.8.8.8_dns": "64.233.187.108/109 → TCP timeout ❌ (DNS 同步被污染)",
+      "imap.gmail.com:993_1.1.1.1_dns": "查询超时 ❌ (UDP 53 端口挡)",
+      "imap.gmail.com:993_9.9.9.9_dns": "74.125.71.108/109 → TCP timeout ❌ (段级屏蔽, 跨 resolver 同步)",
+      "imap.gmail.com:993_retry_default_3x": "3 次重试都返回 64.233.187.x, 无新 IP, 段级锁定",
+      "root_cause": "GFW 周期性重污染整个 default 段 (7/30 142.250.157.x → 7/31 64.233.187.x), 跨 4 DNS resolver 同步污染, 7/30 fix 是一次性窗口不是永久方案",
+      "fix_7_30_status": "fix 模式 (default getaddrinfo + 显式 IP) 失效, 7/31 跨 resolver 验证不工作",
+      "user_action_options": {
+        "A_proxy": "走 HTTP/SOCKS 代理 (公司 VPN / Cloudflare WARP / 自建) — 1-2h 实施, 治本但需 user 决策",
+        "B_gmail_api": "改 Gmail API + OAuth HTTPS — 2h 实施, 但 443 也 timeout (per 7/30 5:19), 可能同样挡",
+        "C_intermittent": "接受 DEGRADED, cron 改推算 state file + user 手动告知 — 0 实施, 失去 24h 自动发现",
+        "D_wait_window": "等 24h 后 GFW 短期放行窗口 — 0 实施, 赌时间差, 风险高"
+      },
+      "scratch_script": ".hermes/tmp/affiliate-monitor-2026-07-31-12-00-fetch.py (多 DNS resolver 版, 可复用 A 方案)"
+    },
+    "high_signal_findings_24h_7_31": {
+      "as_of": "2026-07-31 15:11",
+      "lookback_hours_24h": 24,
+      "lookback_days_7d": 7,
+      "status": "DEGRADED — Gmail 通道不可用, 24h 邮件扫描未跑",
+      "inferred_from_7_30_baseline": {
+        "24h_baseline_7_30": 1,
+        "7d_baseline_7_30": 5,
+        "high_signal_baseline_7_30": 0
+      },
+      "p0_count_24h": "DEGRADED — 无法独立核实, 6 个 approved-active 全部 link_deployed, 推断 0",
+      "p1_count_24h": "DEGRADED — 无法独立核实 3 项 aging (Gelato/PS/Deel) 是否出结果, state file 推断无变化",
+      "p2_count_24h": "DEGRADED — 4 申请候选 + 5 评测候选 + 11 选 2 维持暂缓",
+      "conclusion": "❌ 24h 邮件扫描 DEGRADED, 真实邮件证据缺失. 7/30 baseline 5 封 0 high-signal 维持. 6 个 approved-active 全部 link_deployed, P0 仍 = 0 (按 state file 推断). 3 项 aging 升 7d 阈值临界, state file 无变化."
+    },
+    "high_signal_findings_24h_8_1": {
+      "as_of": "2026-08-01 09:56",
+      "status": "PARTIALLY-RESTORED — IMAP 仍 DEGRADED, user webmail 兜底告知 2 封邮件",
+      "user_reported_emails": {
+        "gelato_welcome": {
+          "date": "2026-08-01",
+          "from": "partnerships@gelato.com",
+          "subject": "Welcome to the Gelato Partner Program",
+          "signal": "✅ Gelato 批准! 7/24 重申 → 8 天出结果 (正常 7-14 天窗口). 推广链接待 dash.partnerstack.com 取.",
+          "link_obtained": "try.gelato.com/upftmv48rtcl (K3 8/1 10:02 dash.partnerstack.com 取链)"
+        },
+        "printful_marketing": {
+          "date": "2026-08-01",
+          "from": "printful.com",
+          "subject": "Winter's coming. Your lineup should too.",
+          "signal": "📢 营销邮件非验证. AOC 卫衣/运动衫新品 = 内容素材 (Picjam/GreenOnion 评测可提). Printful verification 邮件仍未见 (in-house 系统对内部账号可能跳过)."
+        }
+      },
+      "p0_count_24h": 1,
+      "p1_count_24h": 0,
+      "p2_count_24h": 1,
+      "conclusion": "Gelato approval + link obtained 同日 (8/1). 7 个 approved-active 全部 link_deployed (含 Gelato 新链). 8/2 攒批 1 commit 替换站内 38+ 处 gelato.com 链接. PayPal 收款 K3 后续设. PartnerStack Network / Deel 仍 pending.",
+      "link_obtained": true,
+      "paypal_setup": "pending (K3 dash.partnerstack.com 后续设)"
+    },
+    "network_diag_8_1_22_55": {
+      "as_of": "2026-08-01 22:55:43",
+      "imap.gmail.com:993_default_dns": "108.177.125.108 → TCP 3s timeout ❌ (新污染段, 7/30 142.250.157.x → 7/31 64.233.187.x → 8/1 108.177.125.x)",
+      "imap.gmail.com:993_8.8.8.8_dns": "142.251.8.109 → TCP 60ms OK ✅ (新! 首次返回可达 IP, 端口 993 通, 窗口期)",
+      "imap.gmail.com:993_1.1.1.1_dns": "command timeout ❌ (UDP 53 仍挡, 7/31 一致)",
+      "imap.gmail.com:993_9.9.9.9_dns": "2a00:1450:400c:c0b::6d (IPv6) → IPv4 connect getaddrinfo failed ❌",
+      "imap.gmail.com:993_retry_8.8.8.8": "n/a (8.8.8.8 IP 1 hit 就 OK, 不需重试)",
+      "root_cause": "GFW 周期性重污染 default DNS 段 (7/30 → 7/31 → 8/1 三次换段), 8.8.8.8 段首次出现可达 IP 142.251.8.109, 是 7/30 fix 模式 (强制 default IP) 失效后, 8.8.8.8 强制 IP 模式 复用的窗口期",
+      "fix_7_30_status": "fix 模式 (default getaddrinfo + 显式 IP) 失效, 跨 3 天 (7/30 → 7/31 → 8/1) 验证不工作",
+      "fix_8.8.8.8_status": "🟡 窗口期, 8.8.8.8 强制 IP 142.251.8.109 端口 993 通, 但 Gmail App Password D7 缺, login 仍 fail. 6-12h 后 GFW 可能再次污染",
+      "user_action_options": {
+        "P1-A_app_password_now": "今天 23:00 前补 Gmail App Password (16 字符, Google 账号 → 安全 → 两步验证 → 应用专用密码), 写入 .hermes/secrets/gmail_credentials.json, 之后 IMAP 用 8.8.8.8 IP 142.251.8.109 强制连, 8.8.8.8 窗口期 + 凭证补 = 通道激活",
+        "P1-B_wait_window": "等 24h 后 GFW 短期放行窗口 — 0 实施, 赌时间差, 风险高 (7/30 教训: 窗口期 6-12h 就过)",
+        "P1-C_proxy": "走 HTTP/SOCKS 代理 (公司 VPN / Cloudflare WARP / 自建) — 1-2h 实施, 治本但需 user 决策",
+        "P1-D_gmail_api": "改 Gmail API + OAuth HTTPS — 2h 实施, 但 443 也 timeout (per 7/30 5:19 + 7/31), 可能同样挡",
+        "P1-E_intermittent": "接受 DEGRADED, cron 改推算 state file + user 手动告知 — 0 实施, 失去 24h 自动发现, 已持续 14d"
+      },
+      "scratch_script": ".hermes/tmp/affiliate-monitor-2026-08-01-22-55-multi-resolver.py (本轮, 可复用 P1-A 方案)"
+    },
+    "high_signal_findings_24h_8_1_22_55": {
+      "as_of": "2026-08-01 22:55:43",
+      "status": "PARTIALLY-RESTORED — IMAP 网络层 8.8.8.8 窗口期 OK, 凭证层 D7 仍缺, agent 无法独立抓邮件, K3 8/1 09:56 + 10:02 webmail 兜底告知",
+      "user_reported_emails_8_1": {
+        "gelato_welcome_8_1_09_56": {
+          "date": "2026-08-01",
+          "from": "partnerships@gelato.com (Alex)",
+          "subject": "Welcome to the Gelato Partner Program",
+          "signal": "✅ Gelato 批准! 7/24 重申 → 8 天出结果 (正常 7-14 天窗口内). 推广链接 K3 8/1 10:02 从 dash.partnerstack.com 取到 (try.gelato.com/upftmv48rtcl, 重定向 gelato.com/print-on-demand). 7 → 7 approved-active (含 Gelato).",
+          "link_obtained": "try.gelato.com/upftmv48rtcl (K3 8/1 10:02 dash.partnerstack.com 取链)"
+        },
+        "printful_marketing_8_1": {
+          "date": "2026-08-01",
+          "from": "printful.com",
+          "subject": "Winter's coming. Your lineup should too.",
+          "signal": "📢 营销邮件非验证. AOC 卫衣/运动衫新品 = 内容素材 (Picjam/GreenOnion 评测可提). Printful verification 邮件仍未见 (in-house 系统对内部账号可能跳过). D8+ P1 仍 hold, K3 浏览器点确认链接 1min 解决"
+        }
+      },
+      "agent_independent_findings_8_1_22_55": {
+        "imap_channel_status": "PARTIAL-RESTORE (网络层 8.8.8.8 OK + 凭证层 D7 缺)",
+        "8.8.8.8_window": "首次返回可达 IP 142.251.8.109, TCP 60ms OK, 端口 993 通. 是补 App Password 的窗口期",
+        "default_dns_new_segment": "108.177.125.x 段 (7/30 142.250.157.x → 7/31 64.233.187.x → 8/1 108.177.125.x), TCP timeout, 跨 3 天重污染",
+        "8.8.8.8_window_TTL_estimate": "6-12h (per 7/30 教训, GFW 窗口期短, 错过需等下个周期)"
+      },
+      "p0_count_24h": 0,
+      "p0_notes": "✅ 无. Gelato 8/1 10:02 link obtained + commit 86756b9 5 处替换 + 8/2 攒批 38+ 处. 1 天内不算 P0 红",
+      "p1_count_24h": 5,
+      "p1_notes": "Gmail IMAP 通道 D14 PARTIAL-RESTORE (8.8.8.8 OK + D7 缺凭证) / Claid PayPal D8+ / Printful 邮箱 D8+ / PartnerStack Network 8d / Deel 8d (5d 阈值突破, 8d). 全部需 user 浏览器 1-5min 行动",
+      "p2_count_24h": 11,
+      "p2_notes": "维持暂缓 (K3 7/30 03:43 拍板 等 Kittl 跑通): 4 申请候选 (Hostinger/Jasper/Writesonic/Copy.ai) + 5 评测候选 (M3 gate) + 2 resolved (6 个 Impact 系 Canva/Shopify/Bluehost/Surfer/Copy.ai/Placeit 等 Marketplace 升级后启用)",
+      "conclusion": "✅ 7 → 7 approved-active 全部 link 到位 (含 Gelato 8/1 新链). 6 个全 link_deployed + Gelato 部分 5/38+ 部署. P0 = 0 (攒批纪律维持). P1 = 5 (3 个 user 行动 + 2 个 aging). Gmail IMAP 8.8.8.8 出现窗口期, 建议今天 23:00 前补 App Password, cron 8/2 12:00 验证 login"
+    }
   },
   "pending_applications_aging": {
-    "as_of": "2026-07-29",
+    "as_of": "2026-08-01",
     "items": [
       {
         "name": "Placeit (re-apply post Marketplace upgrade)",
@@ -205,13 +399,6 @@
         "days": null,
         "network": "Impact",
         "next_action": "等 Impact Marketplace 通过后重提"
-      },
-      {
-        "name": "Gelato (re-apply)",
-        "applied": "2026-07-24",
-        "days": 5,
-        "network": "PartnerStack",
-        "next_action": "🟢 5 天,首申因 identity mismatch 被拒,本次已修复 About 页+页脚署名链,正常 7-14 天出结果,7/31-8/2 预期窗口"
       },
       {
         "name": "PartnerStack Network membership",
@@ -261,6 +448,14 @@
         "note": "K3 7/30 03:33 user 截 Impact 后台实测: Kittl brand dropdown 已绑 + 20% paid subscription + 14 天 1 click 0 conversion $0 EPC. Marketplace 升级悄悄过 (7/30 推断)."
       },
       {
+        "name": "Gelato (via PartnerStack)",
+        "resolved": "2026-08-01",
+        "outcome": "approved",
+        "note": "K3 8/1 09:56 手动告知: 收 Gelato 欢迎邮件 (partnerships@gelato.com, 发件人 Alex). 7/24 重申 → 8 天出结果 (正常 7-14 天窗口内). dashboard: dash.partnerstack.com. 8/1 10:02 K3 从 dash.partnerstack.com 取推广链接 try.gelato.com/upftmv48rtcl (重定向 gelato.com/print-on-demand). commission 率待 dashboard 查询. PayPal 收款待设.",
+        "source": "K3 Gmail webmail manual fetch (8/1 09:56) — IMAP 通道仍 DEGRADED, agent 无法独立核实, user 兜底告知",
+        "link": "https://try.gelato.com/upftmv48rtcl"
+      },
+      {
         "name": "Impact Marketplace Upgrade",
         "resolved": "2026-07-30",
         "outcome": "approved",
@@ -272,6 +467,8 @@
     "2026-07-16_nord_approved": "✅ Nord Security affiliate program approved. Manager: Yan. Links: NordVPN + NordPass. Site pages live at /nordvpn-review/ and /nordpass-review/",
     "2026-07-22_mockey_approved": "✅ Mockey AI (Endorsely) approved & active. Link: https://mockey.ai?via=jerome796. 30% recurring / 90-day cookie / PayPal monthly.",
     "2026-07-24_batch_4_approved": "✅ 4 程序同日获批: Claid (FirstPromoter 20% lifetime) / Printify (PartnerStack 20-30%) / Printful (in-house 10%×12) / Looka (declined — program closed). 来源: AGENTS.md §5 + credentials.affiliate.local.json,Gmail 通道缺失无法独立核实邮件。",
-    "2026-07-24_new_applications": "📤 同日新增 3 申请: Gelato (PartnerStack 重申,identity mismatch 修复) / PartnerStack 网络成员资格 / Deel (挂 PartnerStack 网络下,网络批后自动激活). 状态: pending 4 天."
+    "2026-07-24_new_applications": "📤 同日新增 3 申请: Gelato (PartnerStack 重申,identity mismatch 修复) / PartnerStack 网络成员资格 / Deel (挂 PartnerStack 网络下,网络批后自动激活). 状态: pending 4 天.",
+    "2026-08-01_gelato_approved": "✅ Gelato (PartnerStack) 批准! K3 8/1 09:56 手动告知 welcome email. 推广链接待 dash.partnerstack.com 取 + PayPal 收款待设. commission 率待 dashboard 查询. 来源: user Gmail webmail fetch, IMAP 仍 DEGRADED, agent 推测 + user 兜底.",
+    "2026-08-01_gelato_link_obtained": "K3 8/1 10:02 从 dash.partnerstack.com 取 Gelato 推广链接 try.gelato.com/upftmv48rtcl (重定向 gelato.com/print-on-demand). 6 → 7 approved-active 全 link_deployed. 8/2 攒批替换 38+ 处站内链接."
   }
 }

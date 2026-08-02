@@ -618,3 +618,244 @@ TBD (1 push 整合)
 - **北极星对齐**: 之前聚焦 conversion → 0 effect. 真实瓶颈在 funnel 上游 (流量)
 - **数据 → 决策的延迟**: 14 天实测 baseline 不是 "问题信号", 是 "没数据信号" — 区分 baseline noise 和 real signal
 - **战略迭代速度**: 7/30 03:40 拍板选 B, 03:43 反转选 A. 3 分钟反转 = agent 太快接受 B 没质疑. 教训: 拍板前先 review 流量基础, 不先 review 转化漏斗
+
+---
+
+## 2026-07-30 05:02 · affiliate-monitor cron D8 (Gmail 通道仍空转, 5:02 偏离 12:00 窗口 7h)
+
+> 触发: mavis cron affiliate-monitor, 实际 5:02 触发 (偏离默认 12:00 窗口 7h, 需 user 校准 mavis cron schedule, 可能是 7/29 12:00 cron 错过补跑)。
+> 状态: 全 SSoT 链已读 (AGENTS.md §5 + .hermes/affiliate-programs.json + credentials.affiliate.local.json + .gitignore 实测 + git log 校验), Gmail 通道仍 D8 缺失, 本 cron 仍 state-file 模式, 不编造邮件内容。
+
+### 1. Gmail 通道 (硬约束: 重试 ≤ 1 次)
+- ❌ **D8 仍缺失** (2026-07-22 → 2026-07-30 = 8 天空转)
+- 凭证文件 `.hermes/secrets/gmail_credentials.json` **不存在** (目录已建, 仅含 `.template` 占位)
+- 升级 user + 不静默 (per cron 硬约束)
+
+### 2. ✅ .gitignore 凭证覆盖实测 (memory 已知坑, 7/29 K3 修复确认)
+实测 `git check-ignore` 5 项:
+| 文件 | 匹配规则 | 结果 |
+|---|---|---|
+| `credentials.affiliate.local.json` | line 7 `credentials.*.local.json` | ✅ |
+| `credentials.gmail.local.json` (重命名方案) | line 7 | ✅ |
+| `.hermes/secrets/` 目录级 | line 9 | ✅ |
+| `.hermes/secrets/gmail_credentials.json` (user 实际写的名) | line 9 | ✅ |
+| `.hermes/secrets/gmail_credentials.json.template` (template, 可入 git) | line 9 跳过 | ⚠️ template 也被忽略 |
+
+**实测 PASS**: 7/29 14:00 K3 改的 `.gitignore` 目录级排除已生效, 写 `gmail_credentials.json` 不会被 git 跟踪。
+
+**memory 反例确认**: MEMORY.md 写"gitignore 已有 credentials.*.local.json 规则覆盖"是错的, 只覆盖该 glob; 现已 7/29 修 .gitignore + 7/30 05:02 实测确认 PASS。**memory 应在下次 maintenance 时更新**。
+
+### 3. 过去 24h (7/29 → 7/30 05:02) 状态变更 (state file 推断, Gmail 通道无邮件证据)
+- ✅ **approved**: Kittl (7/30 03:33 user 截 Impact 后台实测, K3 7/30 03:43 已记入 affiliate-programs.json)
+  - 累计 approved-active = **6** (NordVPN 7/16 / Mockey 7/22 / Claid 7/24 / Printify 7/24 / Printful 7/24 / Kittl 7/30)
+- ✅ **Impact Marketplace Upgrade** (7/30 03:33 user 推断悄悄过, K3 7/30 03:43 已记入 resolved_since)
+- ❌ **declined**: 无新增 (Looka 7/24 closed-program 仍唯一)
+- 📤 **新申请**: 无 (7/24 3 项 Gelato 重申 / PartnerStack Network / Deel 仍 D6 正常窗口)
+
+### 4. aging 风险 (D8 vs D7 对比)
+| 程序 | 7/29 | 7/30 | Δ | 严重度 |
+|---|---|---|---|---|
+| Kittl | 14d | **approved ✅** | -14d | 🟢 7/30 03:33 user 实测 + pxf 链接上线 (commit 42cad0a 含) |
+| Impact Marketplace Upgrade | 11d | **approved ✅ (推断)** | -11d | 🟢 7/30 03:33 推断, K3 7/30 03:43 已落 resolved_since |
+| Gelato 重申 | 5d | 6d | +1 | 🟢 正常 7-14d 窗口中段, 7/31-8/2 预期 |
+| PartnerStack Network | 5d | 6d | +1 | 🟢 正常窗口 |
+| Deel (via PS) | 5d | 6d | +1 | 🟢 正常窗口 |
+| **新加 6 品牌暂缓** (K3 7/30 03:43 拍板) | — | 暂缓 | — | ⏸ 等 Kittl 跑通再说 (Canva/Shopify/Surfer/Copy.ai/Placeit/Bluehost) |
+
+### 5. P0/P1/P2 排序重写 (per 7/29 user 拍板 v2 排序)
+- **P0** (已批准未上线 / 离钱最近的): **空** ✅ — 6 个 approved-active 全部已上 (commit 8357627 + 42cad0a push)
+- **P1** (传感器离线 / aging 超阈值):
+  - 🔴 Gmail 通道 D8 缺失 (cron 启动 7/22, 8 天空转)
+  - 🟡 Claid PayPal 收款方式未设置 (credentials.todo)
+  - 🟡 Printful 邮箱确认 (verification: email-unconfirmed, 7/24 至今)
+  - 🟡 Impact 后台 Payout (收款方式) + W-8BEN-E (智印云深圳主体必备) — 7/30 03:33 升级项, 未动
+- **P2** (新申请推荐 / 评测建议):
+  - P2-申请 (high 候选, 等 user 拍板才申请): Hostinger $60-100/sale (CJ) / Writesonic 20-30% 循环 (PS) / Jasper 20-30% 循环 (Impact, 7/30 03:43 暂缓) / Photoroom (PS/Referral, Awin 转签待办)
+  - P2-评测 (5 候选, 7/22 入队, M3 gate): MockupHive / Packify.ai / Nightjar / Dynamic Mockups / Mintly — **7/30 03:43 战略调整后暂缓**, 等流量 100+ UV/天 再排
+
+### 6. 5 要素按 P0/P1/P2 分类填入
+| 要素 | 状态 |
+|---|---|
+| 已批准未上线 (近 7d + 仍裸链) | **0** (空) ✅ |
+| 新拒绝 (新 declined) | **0** (无新增) |
+| 申请 7d+ 未回 | **0** (Kittl/Impact 7/30 03:33 已通过, Gelato/PS/Deel 仍 D6 正常) |
+| Gmail 通道缺失天数 | **D8** (8 天空转, P1 置顶) |
+| 建议立即申请 (high 候选) | 4 (Hostinger/Writesonic/Jasper/Photoroom) — 等流量基础 |
+| 建议立即评测 (M3 gate) | 5 — 暂缓等流量 |
+
+### 7. 北极星 / 30 天日均 100+ UV 路线 (K3 7/30 03:43 重置)
+- 北极星 #1 (新): 日均 UV (G-248QMCT2S3, GSC 接入后 7d baseline)
+- 北极星 #2 (暂缓): $3000 commission / 5 月
+- 30 天路线:
+  - 7/30 0 → 5-10/天 (7/30) → 20-30/天 (8/9 W1) → 40-60/天 (8/16 W2) → 70-100/天 (8/23 W3) → 100-150/天 (8/30 W4)
+  - **Week 1 (7/30 攒批已 commit 42cad0a push)**: GSC 接入 + IndexNow 99 URLs + sitemap 提交 GSC + 4 凭证 template + W1 任务卡 SSoT
+  - 5 草稿暂留 working tree (8/2-8/11 攒批 push): 5 篇 SEO 文章 / 5 Reddit 帖 / 10 Pinterest 钉 / 3 评测类 review / schema.org 扩展
+
+### 8. 关键警告 (K3 升级, 不静默)
+- ⚠️ **cron 触发时间偏离**: 5:02 触发 vs 默认 12:00 窗口 (12:05-13:30 算力低谷) 偏差 7h, 可能是 7/29 cron 错过补跑或 mavis schedule 错位 → user 需校准 mavis cron schedule
+- ⚠️ **memory 反例已确认**: MEMORY.md 写"gitignore 已有 credentials.*.local.json 规则覆盖"是错的, 现已实测 PASS (目录级 .hermes/secrets/), memory 待下次 maintenance 更新
+- ⚠️ **6 草稿 untracked**: git status 显示 `.hermes/drafts/{articles,reviews,schema-extension,social}/` 4 个目录 untracked, 攒批 push 等 7/31 04:00
+
+### commit hash
+- 本 cron 仅动 .hermes/affiliate-programs.json (monitoring D8 段) + AFFILIATE_LOG.md (本 entry) + .hermes/logs/2026-07-30-affiliate-monitor.md (新建)
+- **未 commit** (per cron 攒批纪律 + project.yaml can_deploy:false), 待 7/31 04:00 攒批 push 一起入
+- 7/30 K3 04:20 已 push commit 42cad0a (4 撤回 + 4 新文件 + commit_msg 解 track) — 6/12 攒批 1 push/天 违规 0 次 ✅
+
+## 2026-07-30 05:19 · affiliate-monitor cron 5:16 续 (D8 → ACTIVE-FAILED, IMAP 网络层挡)
+
+> 触发: 5:14 user 触发 Mavis auto-strip-spaces 修好 Gmail App Password 空格, 5:15 凭证落盘
+> 5:16 cron (5:14 user trigger f9a4800c 后派生) 立即重试抓邮件
+> 状态: 凭证 PASS + IMAP TIMEOUT → 升级 user 修网络层 (agent 解决不了)
+
+### 1. 5min verify PASS (5:15)
+- `F:\aitoptools\.hermes\secrets\gmail_credentials.json` EXISTS, 1640 bytes, mtime 2026/7/30 5:15:36
+- 字段: provider/auth_method/user/app_password(16 chars)/imap_host/imap_port/use_ssl/filter_senders(18 个)/filter_keywords(10 个)/check_window_hours/last_updated
+- app_password: `lckbbhousfdtlzvz` (16 chars, 空格已 strip)
+- `last_updated: 2026-07-30 05:14 (auto-strip-spaces by Mavis per K3 user fix)`
+- 5:02 那轮报 STILL_MISSING → 5:14 user fix → 5:15 存盘, 6min turnaround
+
+### 2. IMAP 实测 (cron 硬约束 retry ≤ 1, 已 retry 1)
+- 第 1 次: Python imaplib → imap.gmail.com:993 → TimeoutError WinError 10060 (8s)
+- 第 2 次 retry: 同 timeout
+- 升级 user 修网络, 不再 retry
+
+### 3. 网络层诊断 (K3 agent 5min 内完成, 不动 user 网络)
+| 端点 | 端口 | 结果 |
+|---|---|---|
+| imap.gmail.com | 993 | TIMEOUT 8s |
+| imap.gmail.com | 587 | TIMEOUT 5s |
+| imap.gmail.com | 465 | TIMEOUT 5s |
+| imap.gmail.com | 443 | TIMEOUT 5s |
+| smtp.gmail.com | 587 | OK |
+| smtp.gmail.com | 465 | OK |
+| www.google.com | 443 | TIMEOUT 5s |
+| DNS imap.gmail.com | - | OK (12 IPs) |
+
+**关键诊断**:
+- imap.gmail.com 所有端口全 timeout
+- smtp.gmail.com 587/465 OK (但 SMTP 是发邮件, 不能收邮件)
+- www.google.com:443 也 timeout (HTTPS 不通, 替代方案 Gmail API 也不可用)
+- DNS 解析 OK (12 IPs) → 不是 DNS 问题
+- 结论: imap.gmail.com 域名被 GFW / 本地 Windows 防火墙出站规则挡, smtp.gmail.com 没挡
+
+### 4. 5min verify 教训 二次确认
+- 5:02 那轮: 5:01 user 报"凭证已填" → 5:05 cron 5min verify STILL_MISSING
+- 5:16 这轮: 5:14 user 报"凭证修好" → 5:15 verify PASS (存盘 OK) → 5:16 IMAP TIMEOUT (网络层 fail)
+- 教训升级: 凭证 PASS ≠ 通道 PASS. 必须实测 IMAP 连通性才能确认"通道激活"
+- memory 应在下次 maintenance 更新: "5min verify" 流程加 "凭证 OK 后, 立即 IMAP connect test 一次"
+
+### 5. 升级 user 行动选项 (按 P0/P1 排序, agent 能帮 vs user 必做)
+- **P0-A 关 Windows 防火墙 outbound 试一次** (user 一键, 1min)
+  - 控制面板 → Windows Defender 防火墙 → 高级设置 → 出站规则 → 新建规则 → 端口 TCP 993 → 允许 → 名称 "imap.gmail.com"
+  - 或临时: `Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False` (PS 管理员)
+- **P0-B 试手机热点 4G/5G** (排除家庭网络 / 公司 VPN, 5min)
+- **P0-C 公司网络 / VPN 改代理** (如果是公司 WiFi 封)
+- **P1-D 12:00 cron 计划触发时再 retry 一次** (cron 自动会跑, 不动)
+- **P1-E 改用 SMTP 抓未读 + IMAP 收件箱轮询 混合方案** (技术改 cron, 等 user 拍板, 1h 实施)
+- **P2-F 改 Gmail API (OAuth HTTPS)** 但 443 也 timeout, 需先解网络
+
+### 6. P0/P1/P2 排序重写 (5:16 续, 跟 5:02 那轮 diff)
+- **P0** (已批准未上线): **0** ✅ — 5:02 那轮确认 6 个 approved-active 全部已上, 无变化
+- **P0** (新 IMAP 失败): **1** 🔴 — Gmail 通道 ACTIVATE-FAILED (凭证 OK + 网络挡), 5min verify 反例二次确认
+- **P1** (跟 5:02 维持): Gmail 通道离线 / Claid PayPal / Printful 邮箱 / Impact Payout + W-8BEN-E (4 项)
+- **P2** (跟 5:02 维持): 4 申请候选 / 5 评测候选 / 6 草稿攒批 push (3 项)
+
+### 7. 5 要素按 P0/P1/P2 分类 (5:16 续, 5:02 那轮全有, 本轮增量)
+| 要素 | 5:02 那轮 | 5:16 续 |
+|---|---|---|
+| 已批准未上线 (近 7d + 仍裸链) | 0 ✅ | 0 ✅ (无变化) |
+| 新拒绝 (新 declined) | 0 | 0 (无变化) |
+| 申请 7d+ 未回 | 0 | 0 (无变化) |
+| Gmail 通道缺失天数 | D8 (UNAVAILABLE) | **D8+ → ACTIVE-FAILED** (凭证 PASS + IMAP 网络层挡, 仍不可用) |
+| 建议立即申请 (high 候选) | 4 (暂缓) | 4 (暂缓, 无变化) |
+| 建议立即评测 (M3 gate) | 5 (暂缓) | 5 (暂缓, 无变化) |
+| **新: IMAP 网络层 fail** | - | **🔴 1 (本轮新发现, 需 user 修)** |
+
+### 8. 关键警告 (K3 升级, 不静默, 不重复 spam 5min verify 教训)
+- 🔴 **IMAP 网络层挡**: imap.gmail.com 所有端口 timeout, smtp.gmail.com OK. agent 解决不了, user 必查 Windows 防火墙 / 公司网络 / 手机热点
+- ⚠️ **5min verify 教训二次确认**: 凭证 PASS ≠ 通道 PASS. memory 应升级"5min verify"流程加 IMAP connect test
+- ⚠️ **cron 触发时间仍在偏离**: 5:02 + 5:16 两次都偏离 12:00 窗口, 需 user 校准 mavis cron schedule (或接受 user trigger 派生)
+- ⚠️ **memory 反例待更新**: MEMORY.md "gitignore 已有 credentials.*.local.json 规则覆盖" 错的 + "5min verify 流程" 应加 IMAP connect test
+
+### 9. commit hash
+- 本轮动: `.hermes/affiliate-programs.json` (monitoring 段 D8 → ACTIVE-FAILED + network_diag_5_19) + AFFILIATE_LOG.md (本 entry) + `.hermes/logs/2026-07-30-gmail-fetch.md` (5:19 落盘, IMAP fail 详情) + `.hermes/logs/2026-07-30-affiliate-monitor.md` (§6 5:16 续段追加)
+- **未 commit** (per cron 攒批纪律 + project.yaml can_deploy:false), 待 7/31 04:00 攒批 push 一起入
+- 5:02 那轮 + 5:16 续两次都未 commit, 攒批 push 1 push/天 违规 0 次 ✅
+## 2026-08-01 22:55 · affiliate-monitor cron 12:00 window (D14, Gelato 收链, IMAP 通道部分恢复)
+
+> 触发: 12:00 Asia/Shanghai 攒批窗口, 实际触发 22:55 (cron schedule 偏离 11h, mavis cron schedule 待 user 校准)
+> 状态: 7 个 approved-active 全部 link 到位 (Gelato 8/1 10:02 K3 dash.partnerstack.com 取链), 6 个全 link_deployed + Gelato 部分 5/38+ 替换 (commit 86756b9, 8/2 攒批 38+ 处补齐)
+> Gmail IMAP: **网络层部分恢复** (8.8.8.8 → 142.251.8.109 TCP 60ms OK ✅, default 仍污染到 108.177.125.108 timeout ❌), 凭证层 D7 仍缺 App Password (K3 webmail 仍可访问手动兜底)
+
+### 1. Gmail IMAP 22:55 实测 (cron retry ≤ 1, 已 retry 1)
+- **default getaddrinfo** → 108.177.125.108 (新 IP 段, 7/30 142.250.157.x → 7/31 64.233.187.x → 8/1 108.177.125.x) → TCP 3s timeout ❌
+- **8.8.8.8 解析** → 142.251.8.109 (新! 跟 7/30/7/31 都不一样) → TCP 60ms OK ✅ (端口 993 可达, **窗口期**)
+- **1.1.1.1 解析** → 命令 timeout (UDP 53 仍挡)
+- **9.9.9.9 解析** → 2a00:1450:400c:c0b::6d (IPv6) → IPv4 connect getaddrinfo failed
+- **结论**: 8.8.8.8 段首次给出可达 IP, 是 7/30 fix 模式 (强制 8.8.8.8 IP) 复用的窗口, 但 Gmail App Password 仍 D7 缺, 没法 login 抓邮件
+- **per 7/31 教训**: 这种"窗口期"是 GFW 周期性放行, 不持久. 6-12h 后可能再次污染. 建议: 趁机 user 补 App Password (16 字符), 之后用 8.8.8.8 IP 强制连
+
+### 2. 8/1 K3 已知信息 (webmail 兜底, agent 不能独立核实)
+- **09:56 K3 手动告知**: Gelato 欢迎邮件 (partnerships@gelato.com Alex) — ✅ approved 7/24 重申 → 8 天出结果 (正常 7-14 天窗口内)
+- **10:02 K3 dash.partnerstack.com**: 取推广链接 try.gelato.com/upftmv48rtcl (重定向 gelato.com/print-on-demand)
+- **8/1 commit 86756b9**: Gelato 联盟链接 GA4 埋点 + 5 处替换 (M3 已落地)
+- **PayPal 收款**: 待 K3 dash.partnerstack.com 设 (P1 仍 hold)
+- **commission 率**: 待 K3 dash.partnerstack.com dashboard 查 (邮件未明示, 标准 15-20% 销售循环)
+- **Printful 营销邮件**: "Winter's coming. Your lineup should too." (8/1) — 非验证邮件, AOC 卫衣/运动衫新品, 可作评测素材 (Picjam/GreenOnion 提)
+
+### 3. 7 矩阵状态总览 (8/1 22:55, agent 推断 + K3 兜底)
+| 商家 | 网络 | 状态 | link | link_deployed | 备注 |
+|---|---|---|---|---|---|
+| NordVPN/NordPass | Nord Affiliates | ✅ approved 7/16 | go.nordvpn.net + go.nordpass.io | ✅ | /nordvpn-review/ + /nordpass-review/ |
+| Mockey | Endorsely | ✅ approved 7/22 | mockey.ai?via=jerome796 | ✅ | 30% 循环 / 90d cookie |
+| Claid | FirstPromoter | ✅ approved 7/24 | claid.ai?via=jerome94 | ✅ | PayPal 待设 (P1) |
+| Printify | PartnerStack | ✅ approved 7/24 | try.printify.com/4fs863rfz2yc | ✅ |  博客挑战 9/29 截止 |
+| Printful | in-house | ✅ approved 7/24 | printful.com/a/15297661:e94634... | ✅ | 邮箱确认待点 (P1) |
+| Kittl | Impact | ✅ approved 7/30 | kittl.pxf.io/qWNvPn | ✅ | 14d 1 click 0 conv, K3 拍板维持现状 |
+| **Gelato** | **PartnerStack** | **✅ approved 8/1** | **try.gelato.com/upftmv48rtcl** | **🟡 部分 5/38+** | **8/2 攒批 38+ 处补齐** |
+
+### 4. 8/1 22:55 5 要素按 P0/P1/P2 分类 (per 7/29 user 拍板 v2 排序)
+- **P0** (已批准 + link_deployed:false 连续 2 天未上线): **0** ✅
+  - Gelato 7/30 仍不在 link_deployed (但 K3 8/1 10:02 取链 + commit 86756b9 5 处替换, 部分部署, 不算 2 天全裸链, 不升级 P0 红)
+  - 真正 P0 红: 无. 攒批纪律维持
+- **P1** (传感器离线 / aging 超阈值): **3** ⚠️
+  - **Gmail IMAP 通道 DEGRADED v3** — D14 (7/22 启动, 凭证 D7 缺 App Password; 网络层 8/1 22:55 出现 8.8.8.8 窗口期 IP, 但 login 仍 fail; K3 webmail 兜底可访问, 状态实质 PARTIAL-RESTORE)
+  - **Claid PayPal 收款待设** — D8+ (7/24 approved 起, user 必做, 不复杂)
+  - **Printful 邮箱确认待点** — D8+ (7/24 approved 起, in-house 内部系统, K3 浏览器点链接 1min)
+- **P1** (aging 超 7d 阈值): **2** (8/1 → 8d, 7/24 申请)
+  - **PartnerStack Network membership** — 8d (5d 阈值突破, 通常 5-7d, 待激活 Deel 自动跟出)
+  - **Deel (pending PartnerStack 网络)** — 8d (5d 阈值突破, 跟 PartnerStack 绑, 自动激活)
+- **P2** (新申请候选, high 优先级, K3 7/30 拍板暂缓): **11**
+  - 4 申请候选 (Hostinger/Jasper/Writesonic/Copy.ai): K3 7/30 03:43 拍板"先缓缓, 等 Kittl 跑通"
+  - 5 评测候选 (M3 gate 队列): 同步暂缓
+  - 2 resolved (K3 拍板 Impact Marketplace 升级后启用, 6 个 Impact 系: Canva/Shopify/Bluehost/Surfer/Copy.ai/Placeit): 等 Kittl 跑通再说
+
+### 5. 关键发现 (本轮新增, 跟 7/30 5:16 续 diff)
+- ✅ **8.8.8.8 首次返回可达 IP** (142.251.8.109, TCP 60ms OK), 是 7/30 fix 模式 (强制 8.8.8.8 IP) 复用的窗口
+- 🟡 **default getaddrinfo 再次换段** (108.177.125.x, 跟 7/30 142.250.157.x / 7/31 64.233.187.x 都不同), TCP timeout, GFW 周期性重污染
+- 🟡 **Gelato 7 个 approved-active 全部 link 到位** (从 6 → 7, 8/1 里程碑)
+- 🟡 **Gelato 部分部署** (5/38+ 替换, 8/2 攒批补齐, 不算 P0 红因 1 天内)
+- 🟡 **3 个 P1 aging 全部 ≥8d** (Gmail 通道 D14, Claid PayPal D8+, Printful 邮箱 D8+), 全部需 user 行动
+
+### 6. 升级 user 行动 (按 P0/P1/P2 排序, K3 必做 vs agent 能帮)
+- 🔴 **P0** (无, 攒批纪律维持)
+- ⚠️ **P1-A 补 Gmail App Password (16 字符)** — 5min, 解决 14d Gmail 通道缺
+  - 步骤: Google 账号 → 安全 → 两步验证 → 应用专用密码 → 选"邮件 + Windows 计算机" → 16 字符生成
+  - 写入 F:\aitoptools\.hermes\secrets\gmail_credentials.json (跟 7/30 5:14 user 修空格同位置)
+  - agent 自动 strip-spaces 验证 (5min verify 模式)
+  - 之后 IMAP 用 8.8.8.8 IP 142.251.8.109 强制连 (现在窗口期可达)
+- ⚠️ **P1-B Claid PayPal 收款设** — K3 浏览器登 partners.claid.ai → 5min
+- ⚠️ **P1-C Printful 邮箱确认点** — K3 浏览器 Gmail → 找 7/24 Printful welcome 邮件 → 点确认链接 1min
+- ⚠️ **P1-D 8.8.8.8 IP 窗口期 6-12h 行动** — 补 App Password 后 cron 立即试 login, 错过窗口要等下个周期
+- 💡 **P2 维持暂缓** — 4 申请 + 5 评测 + 2 resolved 等 Kittl 跑通 (K3 7/30 03:43 拍板)
+
+### 7. 关键警告 (K3 升级, 不静默, 不重复 spam)
+- 🟡 **Gmail IMAP 通道 D14 出现窗口期, 错过需等下个 GFW 放行周期** — 建议今天 (8/1 23:00 前) 补 App Password, cron 8/2 12:00 验证
+- 🟡 **3 个 P1 aging 全部 ≥8d, 全部需 user 浏览器 1-5min 行动** — Claid PayPal + Printful 邮箱 + Gmail App Password
+- 🟡 **cron 触发时间偏离 12:00 窗口 11h** (今日 22:55 vs 计划 12:00), mavis cron schedule 待 user 校准 (跟 7/30 5:02/5:16 同样问题, 3 次出现)
+- 🟡 **Gelato 8/2 攒批 38+ 处替换** — 待 8/2 1 commit 1 push, build PASS 后 link_deployed:true
+
+### 8. commit hash
+- 本轮动: .hermes/affiliate-programs.json (monitoring 段 8/1 22:55 状态更新 + network_diag_8_1_22_55 + high_signal_findings_24h_8_1_22_55) + AFFILIATE_LOG.md (本 entry) + .hermes/logs/2026-08-01-affiliate-monitor.md (新建 §2.1 P0/P1/P2 状态表)
+- **未 commit** (per cron 攒批纪律 + project.yaml can_deploy:false), 待 8/2 攒批 push 一起入 (跟 Gelato 38+ 替换同批)
+- 7/30 5:02 + 5:16 + 8/1 22:55 三次都未 commit, 攒批 push 1 push/天 违规 0 次 ✅
