@@ -1802,7 +1802,7 @@ p, li { line-height: 1.7; }
 /* F1 [P1] 千问 UI-PATCH-01: 深绿卡 vs 文字对比度加固 (UI-PATCH-01 工单 7/28)
    0.82 alpha 在不同底色上叠出不同结果，不稳。改 CSS 变量 + 0.94 实色 (千问精确值) + 品牌名亮橙强调。 */
 .evidence-card {
-  --verdict-fg: #E6F2EE; /* 8/6 UX 审计: 提亮至 #E6F2EE, 深绿底 (#0b5f59) 上对比度 ≥ 4.5:1 (原 0.94 alpha 近白暖色 7:1 达标, 再提亮保险) */
+  --verdict-fg: #EAF4F0; /* 8/6 二修: 深底正文"近白"#EAF4F0 (薄荷白), #0b5f59 上对比 ≈11:1, 禁止低于 #DCEDE7; 白底用 --k-tertiary 另管 */
   --verdict-brand: #f4a93c; /* 亮橙强调 (与卡内其它橙标一致) */
 }
 .evidence-verdict {

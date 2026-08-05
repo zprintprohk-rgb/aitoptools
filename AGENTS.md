@@ -158,3 +158,11 @@
   2. 任何 cron 失败先查 executions.db / output 目录的 Error 段，402 与 Timeout 区分上报（402=钱的问题，Timeout=高峰/网络）
   3. 402 持续 2 天 → 升级 user 二选一：充值 DeepSeek 或 config 接 MINIMAX fallback
 - **触发线**: 任意 cron 报 402 即告警，不等待
+
+## 对比度双变量铁律（2026-08-06 K3 拍板 — hero 深底灰字二修教训）
+- **深底（#0f5d4e / #0b5f59 / --c-deep 级）上的正文**: 必须"近白"——≥ #DCEDE7（当前用 #EAF4F0, 对比 ≈11:1）。**禁止**用白底灰变量（--k-tertiary / --k-secondary / #4a5568 之类），深底上用它们对比度只有 2-3:1。
+- **白底正文**: ≤ #4a5568（--k-tertiary 已从 #727d77 提暗, 对比 7:1）。**禁止**在浅色容器里用近白/浅薄荷色。
+- **两套变量, 禁止混用**: 深底只吃"近白系", 白底只吃"深灰系"。判定容器底色后再选变量, 不要沿用上一处代码的变量。
+- **全站排查方法**: grep `background: var(--c-deep)` / `--k-deep` / `#0b5f59` / `#17201c` 找到深底容器, 检查容器内所有 `color:` 是否 ≥ #DCEDE7; 浅底容器检查是否 ≤ #4a5568。
+- 已排查点位 (8/6): evidence-card 正文 (#EAF4F0) / evidence-stat-label (0.75 白) / footer-copy+footer-disclosure (--k-muted) / mobile-nav-panel (0.88 白) / hero trust-line (--k-secondary, hero 实为浅底)。
+- 新组件上线前: 深底组件默认 `color: #EAF4F0 系`, 白底默认 `--k-tertiary`, 除非有明确理由。
