@@ -892,3 +892,9 @@ TBD (1 push 整合)
 ### 5. commit hash
 - 本轮动: .hermes/affiliate-programs.json (last_updated + monitoring RESTORED + high_signal_findings_24h_8_5 + pending_applications_aging 更新 + 3 新 milestones) + src/data/affiliates.json + src/data/tools/printful.json + AFFILIATE_LOG.md (本 entry) + .hermes/logs/2026-08-05-affiliate-monitor.md
 - **未 commit** (per cron 攒批纪律 + project.yaml can_deploy:false), 待 8/5 攒批 push 一起入
+
+## 2026-08-05 · Claid 后台收款+资料补全
+- PayPal 收款方式确认：doolen@126.com（SELECTED，7/24 已绑定，无需改动）。
+- Profile 补全：公司短名 Shenzhen Cailong Printing Packaging Co., Ltd.（全名超 50 字符限制）、Company Number = 信用代码、Country=China、电话、英文地址、LinkedIn 已填。VAT ID 留空（中国信用代码不过其格式校验，可选字段）。
+- 遗留可选：profile 页有 W8/W9 表单上传入口（FirstPromoter 格式），如需 W-8BEN-E 上传，待法人拼音姓名确定后处理。
+- 同日早前：Impact 中国 VAT 税号已保存（914403000561993977）。
