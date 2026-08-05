@@ -151,7 +151,15 @@
       "affiliate_id": "jerome94 (via=jerome94)",
       "my_link_claid": "https://claid.ai?via=jerome94",
       "signup_url": "https://partners.claid.ai",
-      "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json claid.ai). 20% recurring lifetime, 60-day cookie, min $20 payout. Payout method not yet selected — user action required (PayPal setup). 8/4 08:02 收到 Reset password instructions 邮件 (FirstPromoter 8/3 手动触发, per Gabriela 8/4 10:57 跟进确认) — P1 登录问题解决路径已就绪: 需 user 浏览器点重置链接设新密码 + 更新本地凭证文件 claid.ai password 字段."
+      "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5). 20% recurring lifetime, 60-day cookie, min $20 payout. 8/5 user completed backend setup: PayPal doolen@126.com bound (Net-15, auto-pay $20+), company info saved (Shenzhen Cailong Printing Packaging Co., Ltd. / 914403000561993977), VAT left blank (optional). Claid = first affiliate with full payout chain — commissions land directly in PayPal. Link live: https://claid.ai?via=jerome94",
+      "payout_ready": true,
+      "payout_method": "PayPal",
+      "paypal_email": "doolen@126.com",
+      "payout_terms": "Net-15 monthly, auto-pay at $20+",
+      "company_name": "Shenzhen Cailong Printing Packaging Co., Ltd.",
+      "company_number": "914403000561993977",
+      "vat_id": "left-blank (CN credit code fails format check; optional field)",
+      "verification": "account-fully-configured-2026-08-05"
     },
     {
       "name": "Kittl Affiliate Program",
