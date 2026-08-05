@@ -859,3 +859,36 @@ TBD (1 push 整合)
 - 本轮动: .hermes/affiliate-programs.json (monitoring 段 8/1 22:55 状态更新 + network_diag_8_1_22_55 + high_signal_findings_24h_8_1_22_55) + AFFILIATE_LOG.md (本 entry) + .hermes/logs/2026-08-01-affiliate-monitor.md (新建 §2.1 P0/P1/P2 状态表)
 - **未 commit** (per cron 攒批纪律 + project.yaml can_deploy:false), 待 8/2 攒批 push 一起入 (跟 Gelato 38+ 替换同批)
 - 7/30 5:02 + 5:16 + 8/1 22:55 三次都未 commit, 攒批 push 1 push/天 违规 0 次 ✅
+
+
+---
+
+## 2026-08-05 联盟监控更新 (cron 12:05 窗口, 实际 10:28 触发)
+
+### 1. Gmail IMAP 通道彻底恢复 (7/30 DEGRADED 起 D6+ 后闭环)
+- 经 SOCKS5 127.0.0.1:7892 直连成功, fetch 57 封 (SINCE 30-Jul), 不再依赖 8.8.8.8 窗口期
+- 凭证: hermes .env IMAP_PASSWORD (8/3 03:11 重新生成 "Hermes IMAP", 已实测可用)
+
+### 2. 高信号邮件 (新发现 4 条)
+- **Claid "Reset password instructions"** (8/4 08:02, partners@claid.ai): FirstPromoter 手动触发的重置链接已到收件箱 — P1 登录问题解决路径就绪, 需 user 浏览器点击设新密码 + 更新本地凭证 (credentials.affiliate.local.json claid.ai password)
+- **LetsEnhance Gabriela 8/4 10:57 跟进**: 确认 FirstPromoter 已手动触发重置邮件 (8/2 升级 -> 8/3 建议 -> 8/4 邮件到达, 线索闭环)
+- **Google 安全提醒 8/3 20:43**: 已授权 "Microsoft apps and services" 访问 Google 数据 — 非 user 自主动作需检查账号活动; 8/3 03:11 两条为已知 App Password 轮换
+- **Printify 8/4 14:30**: "Ready-to-Use Banners, Logos and Your Promo Guide" — 营销物料, 可作 $150 blog challenge (9/29 截止) 推广素材
+
+### 3. 状态变更
+- **PartnerStack Network membership**: declined (8/1 邮件, IMAP 独立核实原文 "Your profile is not a great fit, but may be in the future") — 已有合作 (Printify/Gelato) 不受影响; 可重新申请需 user 拍板
+- **Deel**: blocked-by-network-decline (激活依赖 PartnerStack Network, 自动路径失效, 需 user 拍板直签或放弃)
+- **Gelato**: link_deployed → true (8/2 攒批 38+ 处替换 + 8/3 push b0b3d2b 上线)
+- **Printful**: my_link_printful 修复 (15297661:*** 脱敏泄漏 → 真链, 数据层已修, 待部署)
+
+### 4. 🔴 数据修复: Printful 联盟链接脱敏泄漏 (新 P0)
+- 根因: HEAD 1fac19e (8/3 程序化 SEO push) 时 affiliates.json + tools/printful.json 中已是字面 15297661:*** (历史脱敏误写入数据文件)
+- 影响: 线上 out/ 55 文件 110+ 坏链 (Printful 点击零归因 + 坏 UX), 8/3 上线
+- 修复: 8/5 手术式替换 2 文件 2 行 (affiliates.json + tools/printful.json → 真链 e946341e...), Python 权威验证 5 数据文件全真链
+- 上线: 待下次 build+push (死链属紧急修复范畴, 建议随 8/5 攒批或单独 push)
+- ✅ 8/5 10:45 补充验证: 根因确认 = 程序化页 public/best/*.html (199 页, 已提交) 烤入旧 *** 链接, 非仅数据文件问题 → 已重跑 node scripts/generate-pages.js (199/199) → public/best 0 坏链/110 真链 → npm run build EXIT_CODE=0 (145 页) → out/ 130/130 真链 0 坏链 ✅ 本地全链路验证完成, 仅剩 push 上线
+- 教训: **Hermes 终端输出对疑似密钥的 32 位 hex 串自动脱敏显示为 ***, grep/sed 显示不可信** — 判定文件内容用 od -c / Python 计数 / git diff
+
+### 5. commit hash
+- 本轮动: .hermes/affiliate-programs.json (last_updated + monitoring RESTORED + high_signal_findings_24h_8_5 + pending_applications_aging 更新 + 3 新 milestones) + src/data/affiliates.json + src/data/tools/printful.json + AFFILIATE_LOG.md (本 entry) + .hermes/logs/2026-08-05-affiliate-monitor.md
+- **未 commit** (per cron 攒批纪律 + project.yaml can_deploy:false), 待 8/5 攒批 push 一起入

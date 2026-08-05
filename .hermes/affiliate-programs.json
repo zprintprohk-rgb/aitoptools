@@ -89,7 +89,8 @@
       "verification": "inferred-from-credentials, email-unconfirmed",
       "my_link_printful": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
       "signup_url": "https://www.printful.com/affiliates",
-      "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json printful.com). 10% x 12 months + bonus campaigns ($50 at $5000 sales, $25 for 5 ordering customers). Confirmation email still in Gmail — unconfirmed (Gmail channel offline). 7/29 12:30 replace_affiliate_links.py --apply 上线 (claid 10 / printful 36 / printify 21 HTML 命中,build PASS),verification 待 user 浏览器确认邮箱后改 email-confirmed-7/xx"
+      "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json printful.com). 10% x 12 months + bonus campaigns ($50 at $5000 sales, $25 for 5 ordering customers). Confirmation email still in Gmail — unconfirmed (Gmail channel offline). 7/29 12:30 replace_affiliate_links.py --apply 上线 (claid 10 / printful 36 / printify 21 HTML 命中,build PASS),verification 待 user 浏览器确认邮箱后改 email-confirmed-7/xx 8/5 修复: affiliates.json + tools/printful.json 中 15297661:*** 脱敏泄漏 (线上 out/ 55 文件 110+ 坏链), 已改回真链, 待下次 build+push 生效.",
+      "link_deployed": true
     },
     {
       "name": "Mockey AI Affiliate Program",
@@ -117,7 +118,8 @@
       "my_link_redirects_to": "https://www.gelato.com/print-on-demand",
       "signup_url": "https://partnerships.gelato.com (redirects to dash.partnerstack.com)",
       "paypal_setup": "pending (K3 dash.partnerstack.com 后续设)",
-      "notes": "APPROVED 2026-08-01 (per K3 8/1 09:56 Gmail webmail welcome email from Alex). 7/24 重申 → 8 天出结果 (正常 7-14 天窗口). 推广链接 K3 8/1 10:02 从 dash.partnerstack.com 取到 (try.gelato.com/upftmv48rtcl, 重定向 gelato.com/print-on-demand). Commission 率邮件未明, 标准 15-20% 销售循环, 需 dashboard 查实际率. PayPal 收款待设. 7/24 首申因 identity mismatch 被拒, 修复 About 页 + 网站脚署名 + 邮箱一致后重申通过. 8/2 攒批替换 38+ 处站内 gelato.com 链接为 affiliate 链接."
+      "notes": "APPROVED 2026-08-01 (per K3 8/1 09:56 Gmail webmail welcome email from Alex). 7/24 重申 → 8 天出结果 (正常 7-14 天窗口). 推广链接 K3 8/1 10:02 从 dash.partnerstack.com 取到 (try.gelato.com/upftmv48rtcl, 重定向 gelato.com/print-on-demand). Commission 率邮件未明, 标准 15-20% 销售循环, 需 dashboard 查实际率. PayPal 收款待设. 7/24 首申因 identity mismatch 被拒, 修复 About 页 + 网站脚署名 + 邮箱一致后重申通过. 8/2 攒批替换 38+ 处站内 gelato.com 链接为 affiliate 链接. 8/5 确认 link_deployed:true (8/2 攒批 38+ 处替换 + 8/3 push b0b3d2b 上线).",
+      "link_deployed": true
     },
     {
       "name": "Printify Affiliate Program",
@@ -149,7 +151,7 @@
       "affiliate_id": "jerome94 (via=jerome94)",
       "my_link_claid": "https://claid.ai?via=jerome94",
       "signup_url": "https://partners.claid.ai",
-      "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json claid.ai). 20% recurring lifetime, 60-day cookie, min $20 payout. Payout method not yet selected — user action required (PayPal setup)."
+      "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json claid.ai). 20% recurring lifetime, 60-day cookie, min $20 payout. Payout method not yet selected — user action required (PayPal setup). 8/4 08:02 收到 Reset password instructions 邮件 (FirstPromoter 8/3 手动触发, per Gabriela 8/4 10:57 跟进确认) — P1 登录问题解决路径已就绪: 需 user 浏览器点重置链接设新密码 + 更新本地凭证文件 claid.ai password 字段."
     },
     {
       "name": "Kittl Affiliate Program",
@@ -205,12 +207,12 @@
     }
   ],
   "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
-  "last_updated": "2026-08-01 22:55 (cron 12:00 窗口, 实际 22:55 触发; 8.8.8.8 → 142.251.8.109 TCP 60ms OK 窗口期; Gmail App Password D7 仍缺; Gelato 8/1 10:02 link obtained + commit 86756b9 5 处替换 + 8/2 攒批 38+ 处)",
+  "last_updated": "2026-08-05 10:40 (cron 12:05 窗口实际 10:28 触发; Gmail IMAP 经 SOCKS5 127.0.0.1:7892 恢复, 57 封邮件拉取 OK)",
   "monitoring": {
-    "gmail_api_status": "🟡 DEGRADED v3 2026-08-01 22:55 — 通道部分恢复. 8.8.8.8 首次返回可达 IP 142.251.8.109 (TCP 60ms OK, 端口 993 通), 但 Gmail App Password D7 仍缺 (K3 7/30 5:14 修空格 → 7/30 5:16 IMAP 网络层挡 → 8/1 22:55 仍缺). default getaddrinfo 8/1 22:55 返回 108.177.125.108 (新段, 7/30 142.250.157.x → 7/31 64.233.187.x → 8/1 108.177.125.x), TCP 3s timeout, 跨段重污染. 7/30 fix 模式 (强制 default IP) 失效, 8.8.8.8 模式 (强制 8.8.8.8 IP) 出现窗口期但需补凭证才有用. 1.1.1.1 / 9.9.9.9 IPv4 解析仍 timeout. 7/30 D8 5min verify 教训: 凭证 PASS ≠ 通道 PASS, 仍要实测 IMAP connect. 永久方案待 user 决定 A/B/C/D (per 7/31 网络层诊断) + 新 P1-A: 8.8.8.8 窗口期 6-12h 补 App Password (今天 23:00 前错过需等下个 GFW 放行周期).",
-    "check_method": "state-file + multi-resolver-failed (2026-07-31 15:11)",
-    "next_action": "🟡 Gmail IMAP 通道 PARTIAL-RESTORE 8/1 22:55 (8.8.8.8 OK + D7 缺凭证). 8.8.8.8 窗口期 6-12h, 建议今天 23:00 前补 App Password (P1-A). 剩余 PartnerStack Network 8d / Deel 8d / Claid PayPal D8+ / Printful 邮箱 D8+ 仍 hold, user 浏览器 1-5min 行动. 下次 cron (8/2 12:00 攒批窗口) 如 8.8.8.8 仍 OK + App Password 已补 → retry IMAP login; 如 8.8.8.8 失效 → 升级 user 决定 P1-B/C/D/E.",
-    "last_live_check": "2026-07-30 12:00 IMAP login OK (forced_ip=142.250.157.109 via default getaddrinfo) — 7/31 15:11 retry 1 + 跨 4 DNS resolver (default/8.8.8.8/1.1.1.1/9.9.9.9) 全部 fail, 通道 DEGRADED, 真实邮件检查 24h+ 不可用 | 8/1 09:56 K3 报告 Gmail webmail 仍可访问 (浏览器, 非 IMAP). IMAP 通道仍 DEGRADED 但 user 兜底告知已恢复信号通道. | 8/1 09:56 K3 报告 Gmail webmail 仍可访问 (浏览器, 非 IMAP). IMAP 通道仍 DEGRADED 但 user 兜底告知已恢复信号通道. | 8/1 22:55 IMAP multi-resolver check: default 108.177.125.108 → TCP timeout ❌; 8.8.8.8 → 142.251.8.109 → TCP 60ms OK ✅ (端口 993 通, 窗口期!); 1.1.1.1 UDP 53 timeout ❌; 9.9.9.9 IPv6 2a00:1450:400c:c0b::6d → IPv4 connect getaddrinfo failed. 8.8.8.8 模式可用但缺 App Password 仍 login fail. 状态 PARTIAL-RESTORE (网络层 OK, 凭证层 D7 缺). | 8/1 22:55 IMAP multi-resolver check: default 108.177.125.108 → TCP timeout ❌; 8.8.8.8 → 142.251.8.109 → TCP 60ms OK ✅ (端口 993 通, 窗口期!); 1.1.1.1 UDP 53 timeout ❌; 9.9.9.9 IPv6 2a00:1450:400c:c0b::6d → IPv4 connect getaddrinfo failed. 8.8.8.8 模式可用但缺 App Password 仍 login fail. 状态 PARTIAL-RESTORE (网络层 OK, 凭证层 D7 缺). | 8/1 22:55 IMAP multi-resolver check: default 108.177.125.108 → TCP timeout ❌; 8.8.8.8 → 142.251.8.109 → TCP 60ms OK ✅ (端口 993 通, 窗口期!); 1.1.1.1 UDP 53 timeout ❌; 9.9.9.9 IPv6 2a00:1450:400c:c0b::6d → IPv4 connect getaddrinfo failed. 8.8.8.8 模式可用但缺 App Password 仍 login fail. 状态 PARTIAL-RESTORE (网络层 OK, 凭证层 D7 缺). | 8/1 22:55 IMAP multi-resolver check: default 108.177.125.108 → TCP timeout ❌; 8.8.8.8 → 142.251.8.109 → TCP 60ms OK ✅ (端口 993 通, 窗口期!); 1.1.1.1 UDP 53 timeout ❌; 9.9.9.9 IPv6 2a00:1450:400c:c0b::6d → IPv4 connect getaddrinfo failed. 8.8.8.8 模式可用但缺 App Password 仍 login fail. 状态 PARTIAL-RESTORE (网络层 OK, 凭证层 D7 缺).",
+    "gmail_api_status": "RESTORED 2026-08-05 10:40 — IMAP 经 SOCKS5 127.0.0.1:7892 连接成功 (fetch_affiliate_mails.py 实测 57 封). 不再依赖 8.8.8.8 窗口期. 凭证 = hermes .env IMAP_PASSWORD (8/3 03:11 重新生成 \"Hermes IMAP\", 8/3 20:43 额外一条 Microsoft apps and services 授权提醒待 user 确认).",
+    "check_method": "SOCKS5-proxy-IMAP (2026-08-05 10:40, fetch_affiliate_mails.py + read_affiliate_mails.py 实测)",
+    "next_action": "Claid 重置密码链接已到收件箱 (8/4 08:02), user 浏览器点链接设新密码后更新本地凭证; Printful 邮箱确认待点; Printful *** 坏链修复待下次 build+push 上线.",
+    "last_live_check": "2026-08-05 10:40 IMAP login OK via SOCKS5 127.0.0.1:7892 (57 mails since 30-Jul) — 通道彻底恢复 (7/30 DEGRADED 起 D6+ 后首日全恢复)",
     "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
     "network_diag_5_19": {
       "imap.gmail.com:993": "TIMEOUT 8s",
@@ -388,10 +390,52 @@
       "p2_count_24h": 11,
       "p2_notes": "维持暂缓 (K3 7/30 03:43 拍板 等 Kittl 跑通): 4 申请候选 (Hostinger/Jasper/Writesonic/Copy.ai) + 5 评测候选 (M3 gate) + 2 resolved (6 个 Impact 系 Canva/Shopify/Bluehost/Surfer/Copy.ai/Placeit 等 Marketplace 升级后启用)",
       "conclusion": "✅ 7 → 7 approved-active 全部 link 到位 (含 Gelato 8/1 新链). 6 个全 link_deployed + Gelato 部分 5/38+ 部署. P0 = 0 (攒批纪律维持). P1 = 5 (3 个 user 行动 + 2 个 aging). Gmail IMAP 8.8.8.8 出现窗口期, 建议今天 23:00 前补 App Password, cron 8/2 12:00 验证 login"
+    },
+    "high_signal_findings_24h_8_5": {
+      "as_of": "2026-08-05 10:40",
+      "status": "RESTORED — IMAP 独立扫描 57 封 (SINCE 30-Jul), 高价值 4 条",
+      "new_findings": {
+        "claid_reset_password_8_4": {
+          "date": "2026-08-04 08:02",
+          "from": "partners@claid.ai",
+          "subject": "Reset password instructions",
+          "signal": "FirstPromoter 支持 8/3 手动触发的重置邮件已到收件箱 (Gabriela 8/3 12:22 转述 FirstPromoter 建议 forgot-password; 8/4 10:57 确认已手动触发). P1 Claid 登录问题解决路径完整就绪, 需 user 浏览器点击 (严禁 agent 自动点)."
+        },
+        "letsenhance_followup_8_4": {
+          "date": "2026-08-04 10:57",
+          "from": "gabriela.d@letsenhance.io",
+          "subject": "Re: Your Monthly Performance Update",
+          "signal": "Gabriela 确认 FirstPromoter 已手动触发重置邮件, 建议查收件箱/垃圾箱. 线索闭环: 8/2 升级 -> 8/3 FirstPromoter 建议 -> 8/4 邮件到达."
+        },
+        "google_security_8_3_20_43": {
+          "date": "2026-08-03 20:43",
+          "from": "accounts.google.com",
+          "subject": "安全提醒",
+          "signal": "已授权 \"Microsoft apps and services\" 访问 Google 账号数据 — 若 user 未主动操作需检查账号活动; 8/3 03:11 两条为已知 App Password 轮换 (移除旧 Hermes 密码 + 新建 Hermes IMAP)."
+        },
+        "printify_promo_8_4": {
+          "date": "2026-08-04 14:30",
+          "from": "printify.com",
+          "subject": "Ready-to-Use Banners, Logos and Your Promo Guide",
+          "signal": "营销物料 (banner/logo 素材), 可用于 $150 blog challenge (9/29 截止) 推广素材, 非审批邮件."
+        }
+      },
+      "confirmed_baseline": {
+        "partnerstack_network_declined": "8/1 邮件 (networkquality@partnerstack.com) 确认拒绝: \"Your profile is not a great fit, but may be in the future\". 已有合作 (Printify/Gelato) 不受影响. 与 8/3 基线一致, 本次 IMAP 独立核实原文.",
+        "claid_monthly_8_1": "Clicks 0 / Referrals 0 / Customers 0 / Earnings $0 (7 月, 已知基线)",
+        "gelato_welcome_7_31": "welcome 邮件 (alexandra.drewnicki@gelato.com) 在收件箱, 已知基线"
+      },
+      "p0_count_24h": 1,
+      "p0_notes": "Printful 联盟链接 15297661:*** 脱敏泄漏已上线 (out/ 55 文件 110+ 坏链, 8/3 程序化 push 带入) — 数据文件已修 (affiliates.json + tools/printful.json), 待下次 build+push 生效. 死链属紧急修复范畴, 建议随 8/5 攒批或单独 push.",
+      "p1_count_24h": 3,
+      "p1_notes": "Claid 重置密码 (链接已到, 待 user 点击+更新凭证) / Claid PayPal 收款待设 (D12+) / Printful 邮箱确认待点 (D12+)",
+      "p2_count_24h": 11,
+      "p2_notes": "维持暂缓 (K3 7/30 拍板等 Kittl 跑通): 4 申请候选 + 5 评测候选 + 2 resolved",
+      "conclusion": "Gmail IMAP 通道彻底恢复 (SOCKS5). Claid 登录问题解决路径闭环 (重置邮件已到). 新 P0: Printful *** 坏链 (数据已修, 待部署). PartnerStack Network 拒绝已 IMAP 独立核实 (无新信息)."
     }
   },
   "pending_applications_aging": {
-    "as_of": "2026-08-01",
+    "as_of": "2026-08-05",
     "items": [
       {
         "name": "Placeit (re-apply post Marketplace upgrade)",
@@ -399,20 +443,6 @@
         "days": null,
         "network": "Impact",
         "next_action": "等 Impact Marketplace 通过后重提"
-      },
-      {
-        "name": "PartnerStack Network membership",
-        "applied": "2026-07-24",
-        "days": 5,
-        "network": "PartnerStack",
-        "next_action": "🟢 5 天,批准后 Deel 自动送出"
-      },
-      {
-        "name": "Deel (pending PartnerStack network)",
-        "applied": "2026-07-24",
-        "days": 5,
-        "network": "PartnerStack",
-        "next_action": "🟢 5 天,等网络批准后激活,无需单独 follow-up"
       }
     ],
     "resolved_since_2026-07-23": [
@@ -460,6 +490,20 @@
         "resolved": "2026-07-30",
         "outcome": "approved",
         "note": "Marketplace 升级悄悄过 (7/30 推断 — user 能看到完整 Snapshot/Brand dropdown dashboard, 这是 Marketplace-only feature). 之前 7/18 申请的 11 天阻塞解除. 6 个 Impact 系申请 (Canva/Shopify/Bluehost/Surfer/Copy.ai/Placeit) 现在可以 apply."
+      },
+      {
+        "name": "PartnerStack Network membership",
+        "resolved": "2026-08-01",
+        "outcome": "declined",
+        "note": "8/1 邮件确认拒绝: \"Your profile is not a great fit, but may be in the future\". 已有 PartnerStack 合作 (Printify/Gelato) 不受影响. 可重新申请 (需 user 拍板是否重试). 8/5 IMAP 独立核实原文.",
+        "source": "IMAP 独立核实 (2026-08-05)"
+      },
+      {
+        "name": "Deel (pending PartnerStack network)",
+        "resolved": "2026-08-01",
+        "outcome": "blocked-by-network-decline",
+        "note": "Deel 激活依赖 PartnerStack Network 批准, 网络 8/1 被拒 -> 自动激活路径失效. 需 user 拍板: 单独直签 Deel 或放弃.",
+        "source": "IMAP 独立核实 (2026-08-05)"
       }
     ]
   },
@@ -469,6 +513,9 @@
     "2026-07-24_batch_4_approved": "✅ 4 程序同日获批: Claid (FirstPromoter 20% lifetime) / Printify (PartnerStack 20-30%) / Printful (in-house 10%×12) / Looka (declined — program closed). 来源: AGENTS.md §5 + credentials.affiliate.local.json,Gmail 通道缺失无法独立核实邮件。",
     "2026-07-24_new_applications": "📤 同日新增 3 申请: Gelato (PartnerStack 重申,identity mismatch 修复) / PartnerStack 网络成员资格 / Deel (挂 PartnerStack 网络下,网络批后自动激活). 状态: pending 4 天.",
     "2026-08-01_gelato_approved": "✅ Gelato (PartnerStack) 批准! K3 8/1 09:56 手动告知 welcome email. 推广链接待 dash.partnerstack.com 取 + PayPal 收款待设. commission 率待 dashboard 查询. 来源: user Gmail webmail fetch, IMAP 仍 DEGRADED, agent 推测 + user 兜底.",
-    "2026-08-01_gelato_link_obtained": "K3 8/1 10:02 从 dash.partnerstack.com 取 Gelato 推广链接 try.gelato.com/upftmv48rtcl (重定向 gelato.com/print-on-demand). 6 → 7 approved-active 全 link_deployed. 8/2 攒批替换 38+ 处站内链接."
+    "2026-08-01_gelato_link_obtained": "K3 8/1 10:02 从 dash.partnerstack.com 取 Gelato 推广链接 try.gelato.com/upftmv48rtcl (重定向 gelato.com/print-on-demand). 6 → 7 approved-active 全 link_deployed. 8/2 攒批替换 38+ 处站内链接.",
+    "2026-08-05_gmail_imap_restored": "Gmail IMAP 通道彻底恢复 (SOCKS5 127.0.0.1:7892, 57 封拉取 OK). 7/30 DEGRADED 起持续 D6+ 的通道问题闭环.",
+    "2026-08-05_claid_reset_email": "Claid/FirstPromoter 登录问题解决路径闭环: 8/4 08:02 重置密码邮件到达收件箱 (FirstPromoter 手动触发). 待 user 浏览器点击设新密码 + 更新本地凭证.",
+    "2026-08-05_printful_link_fix": "修复 Printful 联盟链接脱敏泄漏 (15297661:*** -> 真链 e946341e..., affiliates.json + tools/printful.json, 数据层已修). 线上 out/ 55 文件坏链待下次 build+push 生效."
   }
 }

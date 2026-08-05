@@ -88,6 +88,7 @@ export default function RootLayout({ children }) {
               <Link href="/category/ai-ecommerce/" className="nav-link">🛒 E-Commerce</Link>
               <Link href="/compare/" className="nav-link">⚖️ Comparisons</Link>
               <Link href="/best/" className="nav-link">🏆 Best Of</Link>
+              <Link href="/blog/" className="nav-link">📝 Blog</Link>
               <Link href="/#search" className="nav-search-icon" aria-label="Search tools">🔍</Link>
               <details className="nav-more">
                 <summary className="nav-link nav-more-trigger">More ▾</summary>
@@ -110,6 +111,7 @@ export default function RootLayout({ children }) {
                 <Link href="/category/ai-ecommerce/">🛒 E-Commerce &amp; Shopify</Link>
                 <Link href="/compare/">⚖️ Comparisons</Link>
                 <Link href="/best/">🏆 Best Of</Link>
+                <Link href="/blog/">📝 Blog</Link>
                 <span className="nav-more-divider" aria-hidden="true" />
                 <Link href="/category/ai-writing/">✍️ AI Writing</Link>
                 <Link href="/category/ai-image/">🎨 AI Image</Link>

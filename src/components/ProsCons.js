@@ -7,11 +7,11 @@ export default function ProsCons({ pros = [], cons = [] }) {
     <div className="pros-cons">
       <div className="pros-box">
         <h3>✓ Pros</h3>
-        <ul>{pros.map((p, i) => <li key={i}>{p}</li>)}</ul>
+        <ul>{pros.map((p, i) => <li key={i} dangerouslySetInnerHTML={{ __html: p }} />)}</ul>
       </div>
       <div className="cons-box">
         <h3>✗ Cons</h3>
-        <ul>{cons.map((c, i) => <li key={i}>{c}</li>)}</ul>
+        <ul>{cons.map((c, i) => <li key={i} dangerouslySetInnerHTML={{ __html: c }} />)}</ul>
       </div>
     </div>
   )

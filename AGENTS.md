@@ -48,6 +48,33 @@
 - 评分一律走 RatingBar.js；Pros/Cons 走 ProsCons.js 双栏
 - 校验: `python scripts/validate_content_data.py` 全过才允许构建（M3 任务，2026-07-21 已派）
 
+### 3.1 Blog 内容军规（2026-08-04 K3 拍板 — Blog 是流量主力，非工具页附属）
+
+**为什么**: 工具页是商业意图（转化主力），Blog 打信息意图长尾（流量主力）。无 Blog 灌溉，工具页是死水。
+
+| 标准 | 要求 |
+|---|---|
+| 字数 | 单篇 **2,500–3,500 字**（英文正文，含表格/FAQ；不足 2500 禁止上线） |
+| 选题 | 信息意图长尾词（how-to / vs / best-for-beginners），禁与工具页抢商业词 |
+| 结构 | TL;DR 摘要框 → 目录 TOC → 第一人称实测正文 → 对比表格 → Pros/Cons → FAQ(4-5条) → Related |
+| 语气 | 第一人称实测（"I tested…" / "In my 6-week test…"），具体数据（速度/分辨率/成本），禁止空泛形容词 |
+| 截图 | 每篇 3-5 张独家截图，block type `screenshot`，路径 `/tool-screenshots/blog/{slug}-NN.webp`（先放 public/ 再引用） |
+| 背书 | 文末 byline 自动渲染 "Reviewed by Jerome Tang, Print Industry Expert"（模板内置，勿手写） |
+| Schema | Article + FAQPage + BreadcrumbList 由 `src/app/blog/[slug]/page.js` 构建期自动生成，**写作时零手写** |
+| 内链 | **直接写工具名即可** — `src/lib/blog-links.mjs` 构建时自动扫描 `src/data/tools/*.json` + `reviews.json`，首次出现自动链到详情页 `/review-slug/`（每工具每篇一次）。pending 工具（无 review 页）自动不链 |
+| 结构数据 | SSoT = `src/data/blog-posts.json`（数组）；模板 = `scripts/templates/blog-post.example.json`（复制填值） |
+
+**写入流程**（8/5 攒批第 2、3 篇文章走此流程）:
+1. 从 `.hermes/drafts/articles/*.md` 按军规扩写到 2500+ 字（含截图占位）
+2. 按 `blog-post.example.json` 结构写入 `src/data/blog-posts.json`
+3. 截图转 WebP 放 `public/tool-screenshots/blog/`
+4. `python scripts/generate-sitemap.py`（合并保底模式，勿手改 sitemap）
+5. `npm run build` → git 攒批 1 push
+
+> ⚠️ **build 硬约束**: `blog-posts.json` 为空数组 `[]` 时 `npm run build` 会失败（Next `output:'export'` 动态路由必须 ≥1 个静态参数，报错信息误导为 "missing generateStaticParams"）。**8/5 push 前必须先写入文章**。已用 example 验证: 有 ≥1 篇时 build 全绿（143 页）。
+
+**技术埋点**（指令二）: 工具页 SoftwareApplication + rating 已由 `src/app/[slug]/page.js` 的 Review schema 承载（reviewRating 比 aggregateRating 更合规，勿改成 aggregateRating）；`scripts/schema-generator.py` 有 `generate_article_schema()` 可独立调用。
+
 ## 4. 自动化管线（已建）
 
 | 任务 | 触发 | 作用 |

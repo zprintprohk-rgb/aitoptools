@@ -154,6 +154,50 @@ def generate_software_schema(tool: dict) -> str:
     return f'<script type="application/ld+json">\n{json.dumps(schema, indent=2)}\n</script>'
 
 
+def generate_article_schema(
+    headline: str,
+    date_published: str,
+    author_name: str = "Jerome Tang",
+    author_title: str = "Print Industry Expert",
+    description: str = "",
+    url: str = None,
+    date_modified: str = None,
+    word_count: int = None,
+    article_section: str = None,
+    image: str = None,
+) -> str:
+    """Generate Article Schema for Blog posts (指令二, 2026-08-04).
+
+    Google 规范: Article 不含 aggregateRating（那是 SoftwareApplication/Product 的字段）。
+    Blog 文章的结构化数据三件套: Article + FAQPage + BreadcrumbList,
+    由 src/app/blog/[slug]/page.js 在构建期自动生成; 本函数供独立工具/文档使用。
+    """
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": headline,
+        "description": description,
+        "image": image or "https://aitoptools.net/og-image.png",
+        "datePublished": date_published,
+        "dateModified": date_modified or date_published,
+        "author": {"@type": "Person", "name": author_name, "jobTitle": author_title},
+        "publisher": {
+            "@type": "Organization",
+            "name": "Print AI Tools",
+            "url": "https://aitoptools.net/",
+            "logo": {"@type": "ImageObject", "url": "https://aitoptools.net/og-image.png"},
+        },
+        "inLanguage": "en",
+    }
+    if url:
+        schema["mainEntityOfPage"] = url
+    if word_count:
+        schema["wordCount"] = word_count
+    if article_section:
+        schema["articleSection"] = article_section
+    return f'<script type="application/ld+json">\n{json.dumps(schema, indent=2, ensure_ascii=False)}\n</script>'
+
+
 def generate_page_schema(tool: dict) -> str:
     """Generate WebPage + BreadcrumbList Schema."""
     name = f"{tool['name']} Review 2026"
@@ -167,12 +211,12 @@ def generate_page_schema(tool: dict) -> str:
     "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoptools.pages.dev/"},
-            {"@type": "ListItem", "position": 2, "name": tool["category"], "item": "https://aitoptools.pages.dev/?category=" + tool["category"]},
-            {"@type": "ListItem", "position": 3, "name": name, "item": f"https://aitoptools.pages.dev/{slug}-review"}
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aitoptools.net/"},
+            {"@type": "ListItem", "position": 2, "name": tool["category"], "item": "https://aitoptools.net/?category=" + tool["category"]},
+            {"@type": "ListItem", "position": 3, "name": name, "item": f"https://aitoptools.net/{slug}-review"}
         ]
     }
-}, indent=2)}
+}, indent=2, ensure_ascii=False)}
 </script>'''
 
 
