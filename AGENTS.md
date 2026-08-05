@@ -175,3 +175,10 @@
 - **改了 CSS 变量但线上 CSS 文件 hash 没变 = 改动没上线**, 不要对用户说"已生效"
 - 传播窗口 1-10 分钟 (CF 边缘节点); 用户截图往往落在传播前的旧版本 — 判定"是否上线"以线上 hashed 文件内容为准, 不是用户截图
 - 实例 (8/6): hero 深底正文 #E6F2EE→#EAF4F0 二修, 用户说"还是糊"实为截图落在 8bf54a6 部署传播窗口; 核对线上 CSS 已含 #EAF4F0 即确认生效
+
+## 关键激活邮件全量搜索铁律（2026-08-06 K3 拍板 — Printful 17 天误判教训）
+- **关键激活类邮件（verify/activation/confirm/tax/W-8/payment/approved）必须全量搜索 ≥90 天**（SINCE 至少 90 天前, 推荐 6 个月）, 禁止用 7/14/30 天窗口
+- **"未搜到" ≠ "不存在"** — 脚本窗口太窄会冤枉发件人 (Printful 确认邮件在 7/20, fetch 脚本 SINCE=30-Jul 查不到, 误判"email-unconfirmed" 17 天)
+- **脚本结论与 user 记忆冲突时, 以 user 记忆为优先假设复核** — user 说"发过确认邮件"就按存在去找, 扩大窗口直到找到或穷尽
+- 搜索方法: IMAP 按发件人 domain + 主题关键词双过滤; 确认类邮件看正文提取链接; 链接过期(404) → 引导后台重发
+- 已纠正案例: Printful 7/20 "Confirm email address" (support@info.printful.com) 8/6 定位, 链接待 user 点击
