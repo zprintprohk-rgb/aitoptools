@@ -303,6 +303,16 @@ M1 复盘 — aitoptools
 | W2 | W2-T4 | __% (≥80%) | __% (=100%) | __/16 | [✓/✗] | __/3 |
 | W3 | W3-T2 | 3 篇全 4 线 | 100% | 3/3 | n/a | __/3 |
 
+### C2b IndexNow / GSC 推送计数（8/6 起, 点火日 = T0 = 730 URL 首次全量推送日）
+| 日期 | IndexNow 提交 | HTTP 200 | HTTP 4xx | GSC sitemap 状态 | 备注 |
+|---|---|---|---|---|---|
+| T0 (8/7 目标) | 730 URL | __/730 | __/730 | 待验证 | 点火日, "30天100UV"时钟起点 |
+| T+7 (8/14) | 增量 | __ | __ | __ | 首读数: GSC 展示 + IndexNow 计数 |
+| T+30 (9/5) | 增量 | __ | __ | __ | 路线决策点 |
+- 记录人: gsc-indexnow cron (12:40) 每次提交后填; 凭证缺失时填 "blocked_missing_credentials"
+- IndexNow key: .hermes/secrets/indexnow-key.txt (待 user 生成)
+- GSC OAuth: .hermes/secrets/gsc-oauth.json (待 user 配置)
+
 ### C3 双引擎交叉榜结论（W4-T1 记，喂 M2）
 - 来源×商家 CTR 最高组合：____
 - 来源×坑位 CTR 最高组合：____
@@ -898,3 +908,9 @@ TBD (1 push 整合)
 - Profile 补全：公司短名 Shenzhen Cailong Printing Packaging Co., Ltd.（全名超 50 字符限制）、Company Number = 信用代码、Country=China、电话、英文地址、LinkedIn 已填。VAT ID 留空（中国信用代码不过其格式校验，可选字段）。
 - 遗留可选：profile 页有 W8/W9 表单上传入口（FirstPromoter 格式），如需 W-8BEN-E 上传，待法人拼音姓名确定后处理。
 - 同日早前：Impact 中国 VAT 税号已保存（914403000561993977）。
+
+## 2026-08-06 · Printful 确认邮件定位（P0-2）
+- 结论修正: 确认邮件**存在** — 7/20 17:00:38Z support@info.printful.com "Confirm email address" (printful.com/verify/0/...?key=...)
+- 此前 "email-unconfirmed" 误判根因: fetch 脚本 SINCE_DATE='30-Jul-2026' 窗口太窄, 而 Printful 确认邮件在 7/20 发出
+- 待办: user 手动点击验证链接 (AGENTS.md §7 禁自动点击激活链接); 7/20 发出已 17 天, 若 404 需 Printful 后台重新触发
+- affiliate-programs.json 已更新: verification=confirm-link-located-2026-08-06, pending-user-click

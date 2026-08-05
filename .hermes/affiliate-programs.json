@@ -86,11 +86,17 @@
       "commission": "$150+/sale",
       "status": "approved",
       "approved_date": "2026-07-24",
-      "verification": "inferred-from-credentials, email-unconfirmed",
+      "verification": "confirm-link-located-2026-08-06, pending-user-click",
       "my_link_printful": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
       "signup_url": "https://www.printful.com/affiliates",
-      "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json printful.com). 10% x 12 months + bonus campaigns ($50 at $5000 sales, $25 for 5 ordering customers). Confirmation email still in Gmail — unconfirmed (Gmail channel offline). 7/29 12:30 replace_affiliate_links.py --apply 上线 (claid 10 / printful 36 / printify 21 HTML 命中,build PASS),verification 待 user 浏览器确认邮箱后改 email-confirmed-7/xx 8/5 修复: affiliates.json + tools/printful.json 中 15297661:*** 脱敏泄漏 (线上 out/ 55 文件 110+ 坏链), 已改回真链, 待下次 build+push 生效.",
-      "link_deployed": true
+      "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json printful.com). 10% x 12 months + bonus campaigns ($50 at $5000 sales, $25 for 5 ordering customers). Confirmation email still in Gmail — unconfirmed (Gmail channel offline). 7/29 12:30 replace_affiliate_links.py --apply 上线 (claid 10 / printful 36 / printify 21 HTML 命中,build PASS),verification 待 user 浏览器确认邮箱后改 email-confirmed-7/xx 8/5 修复: affiliates.json + tools/printful.json 中 15297661:*** 脱敏泄漏 (线上 out/ 55 文件 110+ 坏链), 已改回真链, 待下次 build+push 生效. 8/6 P0-2 修正: 确认邮件并非不存在 — 7/20 17:00 support@info.printful.com 'Confirm email address' 已在 Gmail 定位, 此前 'email-unconfirmed' 是脚本查询窗口 (SINCE 30-Jul) 太窄的误判。链接待 user 手动点击 (或已过期需重发)。",
+      "link_deployed": true,
+      "confirm_email_found": true,
+      "confirm_email_date": "2026-07-20T17:00:38Z",
+      "confirm_email_sender": "support@info.printful.com",
+      "confirm_email_subject": "Confirm email address",
+      "confirm_link_note": "Link is in Gmail 7/20 17:00 'Confirm email address' (printful.com/verify/0/...?key=...). Per AGENTS.md §7 user must click manually (Hermes 禁自动点击激活链接). 7/20 发出已 17 天 — 可能已过期, 若 404 则需 Printful 后台重新触发.",
+      "last_updated": "2026-08-06"
     },
     {
       "name": "Mockey AI Affiliate Program",

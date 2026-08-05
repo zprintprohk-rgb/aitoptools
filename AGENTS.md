@@ -166,3 +166,12 @@
 - **全站排查方法**: grep `background: var(--c-deep)` / `--k-deep` / `#0b5f59` / `#17201c` 找到深底容器, 检查容器内所有 `color:` 是否 ≥ #DCEDE7; 浅底容器检查是否 ≤ #4a5568。
 - 已排查点位 (8/6): evidence-card 正文 (#EAF4F0) / evidence-stat-label (0.75 白) / footer-copy+footer-disclosure (--k-muted) / mobile-nav-panel (0.88 白) / hero trust-line (--k-secondary, hero 实为浅底)。
 - 新组件上线前: 深底组件默认 `color: #EAF4F0 系`, 白底默认 `--k-tertiary`, 除非有明确理由。
+
+## CSS 部署核对铁律（2026-08-06 K3 拍板 — 线上 hashed 文件名核对）
+- **CSS/JS 改动 push 后, 必须核对线上 hashed 文件名**（Next.js 产物 CSS 文件名带 hash, 如 `/_next/static/css/41d6f17fd1783abd.css`）:
+  1. `LOCAL=$(ls out/_next/static/css/*.css | xargs -n1 basename | head -1)`
+  2. `ONLINE=$(curl -s https://aitoptools.net/ | grep -oP '/_next/static/css/[^"]+\.css' | head -1)`
+  3. 相同 = 新构建已上线; 不同 = 部署未生效/传播中/构建失败
+- **改了 CSS 变量但线上 CSS 文件 hash 没变 = 改动没上线**, 不要对用户说"已生效"
+- 传播窗口 1-10 分钟 (CF 边缘节点); 用户截图往往落在传播前的旧版本 — 判定"是否上线"以线上 hashed 文件内容为准, 不是用户截图
+- 实例 (8/6): hero 深底正文 #E6F2EE→#EAF4F0 二修, 用户说"还是糊"实为截图落在 8bf54a6 部署传播窗口; 核对线上 CSS 已含 #EAF4F0 即确认生效
