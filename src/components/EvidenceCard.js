@@ -39,7 +39,7 @@ export default function EvidenceCard({ toolA, toolB, verdict, href }) {
         </div>
       )}
 
-      {verdict && <p className="evidence-verdict">{verdict}</p>}
+      {verdict && <p className="evidence-verdict" dangerouslySetInnerHTML={{ __html: verdict }} />}
       {href && (
         <a className="evidence-link" href={href}>
           Read the full comparison →

@@ -121,7 +121,7 @@ export default function Home() {
               <kbd className="cmdk-badge" aria-hidden="true">⌘K</kbd>
               <input
                 type="text"
-                placeholder="Search AI tools... (e.g. packaging design, Shopify)"
+                placeholder="Try: printful vs printify"
                 value={search}
                 onChange={e => setSearch(e.target.value)}
               />
@@ -140,7 +140,7 @@ export default function Home() {
           <EvidenceCard
             toolA="Printful"
             toolB="Printify"
-            verdict="Printify wins on margin &amp; catalog (1,300+ items). Printful wins on quality &amp; branding."
+            verdict="<strong>Printify</strong> wins on margin &amp; catalog (1,300+ items). <strong>Printful</strong> wins on quality &amp; branding."
             href="/compare/printful-vs-printify/"
           />
         </div>

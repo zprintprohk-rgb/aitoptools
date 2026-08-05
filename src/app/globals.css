@@ -31,7 +31,7 @@
   --k-deep: #17201c;
   --k-primary: #262e2a;
   --k-secondary: #4f5a54;
-  --k-tertiary: #727d77;
+  --k-tertiary: #4a5568; /* 8/6 UX 审计: #727d77→#4a5568, 白底正文灰对比度 4.6:1→7:1 (WCAG AA) */
   --k-muted: #a3ada8;
 
   /* Backgrounds — warm paper */
@@ -907,7 +907,7 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
   flex-wrap: wrap;
   padding-top: 18px;
 }
-.footer-copy { font-size: 0.76rem; color: var(--k-tertiary); margin: 0; }
+.footer-copy { font-size: 0.76rem; color: var(--k-muted); margin: 0; } /* 8/6 UX: 深底(footer)用浅色 --k-muted, 勿用白底灰 --k-tertiary (对比度 2.2:1 过低) */
 .footer-legal-links { display: flex; gap: 18px; flex-wrap: wrap; }
 .footer-legal-links a {
   font-size: 0.76rem;
@@ -924,7 +924,7 @@ p, li { font-size: 0.95rem; font-weight: 400; color: var(--k-secondary); line-he
   line-height: 1.5;
   margin: 10px 0;
 }
-.footer-disclosure { font-size: 0.74rem; color: var(--k-tertiary); }
+.footer-disclosure { font-size: 0.74rem; color: var(--k-muted); } /* 8/6 UX: footer 深底用 --k-muted, 勿用白底灰 */
 .footer-disclosure a { color: var(--a-light) !important; }
 
 /* --- Not Found --- */
@@ -1241,7 +1241,7 @@ html, body { overflow-x: hidden; }
 }
 .hero h1 em { color: var(--c-primary); font-style: normal; }
 .hero p { font-size: 1.2rem; color: var(--k-secondary); max-width: 540px; line-height: 1.6; }
-.hero .trust-line { font-size: 0.82rem; color: var(--k-tertiary); margin-bottom: 28px; }
+.hero .trust-line { font-size: 0.82rem; color: var(--k-secondary); margin-bottom: 28px; } /* 8/6 UX 修正: hero 实际是浅底(1224 覆盖 273), 勿用近白, 用 --k-secondary 深灰绿保证 4.5:1 */
 .hero .scenario-tags { justify-content: flex-start; }
 .hero .scenario-tag {
   background: #ffffff;
@@ -1790,8 +1790,9 @@ p, li { line-height: 1.7; }
   color: rgba(255, 255, 255, 0.88);
 }
 .evidence-vs-badge {
-  background: var(--a-primary);
-  color: #fff;
+  background: transparent;
+  color: var(--c-primary);
+  border: 1.5px solid var(--c-primary);
   font-weight: 800;
   font-size: 0.7rem;
   padding: 3px 8px;
@@ -1801,13 +1802,13 @@ p, li { line-height: 1.7; }
 /* F1 [P1] 千问 UI-PATCH-01: 深绿卡 vs 文字对比度加固 (UI-PATCH-01 工单 7/28)
    0.82 alpha 在不同底色上叠出不同结果，不稳。改 CSS 变量 + 0.94 实色 (千问精确值) + 品牌名亮橙强调。 */
 .evidence-card {
-  --verdict-fg: rgba(245, 241, 232, 0.94); /* 近白暖色，对比度 ≥ 7:1 */
+  --verdict-fg: #E6F2EE; /* 8/6 UX 审计: 提亮至 #E6F2EE, 深绿底 (#0b5f59) 上对比度 ≥ 4.5:1 (原 0.94 alpha 近白暖色 7:1 达标, 再提亮保险) */
   --verdict-brand: #f4a93c; /* 亮橙强调 (与卡内其它橙标一致) */
 }
 .evidence-verdict {
-  font-size: 0.82rem;
-  color: var(--verdict-fg); /* F1: 0.82 alpha → 0.94 实色 (千问值) */
-  line-height: 1.5; /* hotfix 7/27: narrative 段加行高 */
+  font-size: 1rem; /* UX 审计 8/6: 0.82rem→1rem (15→16px), 结论句是卡片信息价值最高一句 */
+  color: var(--verdict-fg); /* F1: 0.82 alpha → 0.94 实色 (千问值) + 8/6 提亮 #E6F2EE */
+  line-height: 1.6; /* UX 审计 8/6: 1.5→1.6 */
   margin: 14px 0 10px;
 }
 .evidence-verdict strong,

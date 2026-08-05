@@ -3,6 +3,9 @@ import Link from 'next/link'
 import config from '@/config'
 import reviews from '@/data/reviews'
 
+// 8/6 UX 审计: Updated 日期自动化 — 构建时月份, 避免 "July" 在 8 月仍显示的维护活跃度质疑
+const UPDATED_MONTH = new Date().toLocaleString('en-US', { month: 'long', year: 'numeric' })
+
 export const metadata = {
   title: { default: `${config.brand} — ${config.tagline}`, template: `%s | ${config.brand}` },
   description: config.description,
@@ -133,7 +136,7 @@ export default function RootLayout({ children }) {
               <span>✓ Independent Reviews</span>
               <span className="trust-dot" aria-hidden="true">·</span>
               {/* A7 trust-bar 可点 — Updated 日期跳到 /methodology#updates */}
-              <Link href="/methodology/#updates" className="trust-link">✓ Updated July 2026</Link>
+              <Link href="/methodology/#updates" className="trust-link">✓ Updated {UPDATED_MONTH}</Link>
             </div>
           </div>
         </header>

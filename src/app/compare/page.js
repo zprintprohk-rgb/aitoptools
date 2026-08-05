@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import comparisons from '@/data/comparisons.json'
+import WinnerBadge from '@/components/WinnerBadge'
 
 export const metadata = {
   title: 'Tool Comparisons — Head-to-Head AI & POD Platform Showdowns',
@@ -57,7 +58,12 @@ export default function CompareIndex() {
                 <span className="vs-rating">★ {c.toolB.rating}</span>
               </div>
             </div>
-            <h2 className="vs-title"><Link href={`/compare/${c.slug}/`}>{c.title}</Link></h2>
+            <h2 className="vs-title">
+              <Link href={`/compare/${c.slug}/`}>{c.title}</Link>
+              {c.picks?.find(p => p.type === 'top') && (
+                <WinnerBadge label={c.picks.find(p => p.type === 'top').name} />
+              )}
+            </h2>
             <p className="vs-verdict">{c.quickVerdict.split('.')[0]}.</p>
             <Link href={`/compare/${c.slug}/`} className="card-cta">Read Comparison →</Link>
           </article>
