@@ -78,10 +78,31 @@
 - **草稿 JSON 已写 (5 个)**: mockup-hive / packify-ai / nightjar / dynamic-mockups / mintly (等 M3 复核)
 - **草稿 JSON 空 (2 个)**: genlook (死) / goose (找不到) — 维持观察, 草稿无效
 - **11 选 2 焦点 (2 个)**: picjam + greenonion (8/1 草稿写完, 等 user 真数据)
-- **观察名单 (22 个)**: 7/27 雷达 4 + 7/28 雷达 7 + 7/30 雷达 4 (Picjam focus 剩) + 7/31 雷达 5 (GreenOnion focus 剩) + 8/3 雷达 1 (Pacdora 排期)
-- **M3 已写 (1 个)**: Mockey (M3 写《Mockey vs Placeit》对比页, 7/24 已上线)
-- **N 天 ≥ 5 严重积压 = 16 个**: 7/21 (5 草稿) + 7/27 (4 候选) + 7/28 (7 候选)
-- **消化健康度**: 严重堵 (积压 31 个 vs 阈值 5 = 6.2x 超标)
+
+### 8/5 雷达更新 (M3 已消化 2 个草稿 JSON)
+
+- ✅ **mockuphive + packify-ai 已进 reviews.json** (107 工具, 8/5 前 M3 入库) — 草稿 JSON 积压 5 → 3 (剩 nightjar / dynamic-mockups / mintly, 15 天)
+- ✅ **Picjam 官网迁至 picjam.ai** (原 vidi.so), "Trusted by 1,200+ ecommerce brands" + softwareadvice 收录页 = 第三方印证 (焦点草稿补真数据用)
+- ✅ **GreenOnion 新增 YouTube 频道** (E-commerce Makeover 系列, 焦点草稿实测素材)
+
+### 8/5 雷达新观察 (7 个, medium/low)
+
+| # | 工具 | 主题 | 状态 | 备注 |
+|---|---|---|---|---|
+| 32 | **Igly.ai** (igly.ai) | AI Product Photography / listing 素材 | medium → 观察, 不独立评测 | Shopify 应用 6/2026 上线, 图+视频+无限画布 Seller Studio, Free plan, merchantpick 收录 |
+| 33 | **WearView** (wearview.co) | AI 时装模特 (on-model) | medium → 观察, 不独立评测 | G2 6 档 $29-$490, 免费试用, 与 Revery.AI/Outfit.fm 定位差异化 (品牌内容生产) |
+| 34 | **DYP.ai** (dyp.ai) | AI Packaging Design | low 观察 | AI dieline+artwork+print-ready 导出, 与 Packify 重复度 ~70%, 不单独评测 (并入 Cubit/Pacdora 横评素材) |
+| 35 | **dieline.ai** | AI Packaging (TikTok) | low 观察 | 仅 TikTok 账号有活跃证据, 无独立产品站, unverified |
+| 36 | **Printonator** (printonator.com) | 3D T-shirt 设计 | low 观察 | 免费在线 T-shirt 设计器 + 3D mockup 预览, 非 AI-first |
+| 37 | **AI Product Pro** | AI Product Photography | low 观察 | 仅 press release (3/27/2026), 无独立产品站证据, unverified |
+| 38 | **MockupBro / Mockup Maestro / PeaPrint / Fotor / Vexels** | Mockup / 通用设计 | low 观察 | 榜单提及, 无差异化证据或通用工具, 不跟进 |
+
+## 8/5 观察名单统计 (v2.3 反馈消化)
+
+- **总积压候选数**: 33 (3 草稿 JSON 待复核 + 2 焦点 + 25 观察 + 3 M3 队列 [Pacdora/Drop Studio/Cubit])
+- **8/5 新 high/medium**: 2 high (Drop Studio / Cubit Packaging) + 2 medium (Igly / WearView)
+- **积压 ≥5 天**: 14 个 (7/21 剩 3 草稿 + 7/27 4 + 7/28 7), 首次出现 M3 净消化
+- **SourceForge 源降级建议**: 连续 4 轮 0 命中 (8/5 第 4 轮)
 
 ## 升级条件
 
