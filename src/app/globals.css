@@ -1816,6 +1816,9 @@ p, li { line-height: 1.7; }
   color: var(--verdict-brand); /* F1: 品牌名 (Printful/Printify) 深底亮橙 */
   font-weight: 700;
 }
+/* 8/6 信任三件套: compare 页 The Verdict 三行框 */
+.verdict-3line p { margin: 6px 0; line-height: 1.6; }
+.verdict-3line .verdict-winner { color: var(--a-deep); font-size: 1.02rem; }
 .evidence-link {
   display: inline-block;
   color: var(--a-light) !important;

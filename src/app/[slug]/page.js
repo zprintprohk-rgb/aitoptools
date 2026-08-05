@@ -151,6 +151,10 @@ export default function ReviewPage({ params }) {
             Visit Official Site ↗
           </a>
         </div>
+        {/* 8/6 信任三件套: 作者署名 (人格背书) */}
+        <p className="byline" style={{ fontSize: '0.85rem', color: 'var(--k-secondary)', margin: '6px 0 0' }}>
+          By <strong>Jerome Tang</strong> — Print industry expert · hands-on tested on real print jobs
+        </p>
 
         {/* Pros & Cons */}
         <ProsCons pros={review.pros} cons={review.cons} />

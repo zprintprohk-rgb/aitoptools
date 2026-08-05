@@ -113,11 +113,26 @@ export default function ComparisonPage({ params }) {
           <span className="meta-rating">{toolB.name} <RatingBar rating={toolB.rating} /></span>
           <span className="card-badge tested" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: 'var(--c-bg)', color: 'var(--c-text)', fontSize: '0.68rem', fontWeight: 600, padding: '2px 8px', borderRadius: '100px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>✓ 2026 Data Verified</span>
         </div>
+        {/* 8/6 信任三件套: 作者署名 (人格背书) */}
+        <p className="byline" style={{ fontSize: '0.85rem', color: 'var(--k-secondary)', margin: '6px 0 0' }}>
+          By <strong>Jerome Tang</strong> — Print industry expert · hands-on tested on real print jobs
+        </p>
 
-        {/* Quick Verdict */}
+        {/* The Verdict — 8/6 信任三件套: 结论前置三行框 (谁赢/赢在哪/适合谁) */}
         <div className="verdict-box">
-          <h2 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: 8, color: 'var(--k-deep)' }}>⚡ Quick Verdict (30-Second Answer)</h2>
-          <p>{comp.quickVerdict}</p>
+          <h2 style={{ fontSize: '1.15rem', fontWeight: 700, marginBottom: 8, color: 'var(--k-deep)' }}>⚡ The Verdict</h2>
+          {(() => {
+            const top = comp.picks?.find(p => p.type === 'top')
+            const also = comp.picks?.find(p => p.type === 'also')
+            if (!top) return <p>{comp.quickVerdict}</p>
+            return (
+              <div className="verdict-3line">
+                <p><strong className="verdict-winner">🏆 Winner: {top.name}</strong> — {top.tagline}</p>
+                {also && <p><strong>Also great: </strong>{also.name} — {also.tagline}</p>}
+                <p><strong>Best for: </strong>{comp.quickVerdict}</p>
+              </div>
+            )
+          })()}
           <div className="verdict-ctas">
             {(() => {
               // W1-T1 度量埋点: aff-link class + data-merchant + data-link-id + UTM
