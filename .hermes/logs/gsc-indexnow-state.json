@@ -1,32 +1,36 @@
 {
-  "schema": 1,
-  "doc": "sitemap submission state for gsc/indexnow cron. last_submitted_* stays null until first successful submission.",
-  "last_submitted_mtime": null,
-  "last_submitted_hash": null,
-  "last_seen": {
-    "public/sitemap.xml": {
-      "mtime": "2026-08-05T10:44:41",
-      "bytes": 68832,
-      "sha256": "74c9c4a96b3fc79c0c29931a1fdf6e602cac4474842f93c87b991b9ade04c483"
-    },
-    "public/sitemap-programmatic.xml": {
-      "mtime": "2026-08-05T10:44:41",
-      "bytes": 27727,
-      "sha256": "dc9fb3558cc65b62b58318cbf56d6ced2b3b8d458a5eb86a10cc074d13371e98"
-    },
-    "out/sitemap.xml": {
-      "mtime": "2026-08-05T10:44:41",
-      "bytes": 68832,
-      "sha256": "74c9c4a96b3fc79c0c29931a1fdf6e602cac4474842f93c87b991b9ade04c483"
-    },
-    "out/sitemap-programmatic.xml": {
-      "mtime": "2026-08-05T10:44:41",
-      "bytes": 27727,
-      "sha256": "dc9fb3558cc65b62b58318cbf56d6ced2b3b8d458a5eb86a10cc074d13371e98"
-    }
+ "schema": 1,
+ "doc": "sitemap submission state for gsc/indexnow cron. last_submitted_* stays null until first successful submission.",
+ "last_submitted_mtime": null,
+ "last_submitted_hash": null,
+ "last_seen": {
+  "public/sitemap.xml": {
+   "mtime": "2026-08-05T10:44:41",
+   "bytes": 68832,
+   "sha256": "74c9c4a96b3fc79c0c29931a1fdf6e602cac4474842f93c87b991b9ade04c483"
   },
-  "last_run": "2026-08-05T10:52:14",
-  "last_run_status": "blocked_missing_credentials",
-  "indexnow_submitted": false,
-  "gsc_submitted": false
+  "public/sitemap-programmatic.xml": {
+   "mtime": "2026-08-05T10:44:41",
+   "bytes": 27727,
+   "sha256": "dc9fb3558cc65b62b58318cbf56d6ced2b3b8d458a5eb86a10cc074d13371e98"
+  },
+  "out/sitemap.xml": {
+   "mtime": "2026-08-05T10:44:41",
+   "bytes": 68832,
+   "sha256": "74c9c4a96b3fc79c0c29931a1fdf6e602cac4474842f93c87b991b9ade04c483"
+  },
+  "out/sitemap-programmatic.xml": {
+   "mtime": "2026-08-05T10:44:41",
+   "bytes": 27727,
+   "sha256": "dc9fb3558cc65b62b58318cbf56d6ced2b3b8d458a5eb86a10cc074d13371e98"
+  }
+ },
+ "last_run": "2026-08-05T10:52:14",
+ "last_run_status": "indexnow-verified-200, gsc-pending",
+ "indexnow_submitted": true,
+ "gsc_submitted": false,
+ "indexnow_first_full_push": "2026-08-06",
+ "indexnow_urls_pushed": 332,
+ "indexnow_status_200": 332,
+ "indexnow_key_file": ".hermes/secrets/indexnow-key.txt"
 }

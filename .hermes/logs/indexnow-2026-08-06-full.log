@@ -1,0 +1,17 @@
+{
+ "date": "2026-08-06",
+ "total_urls": 332,
+ "batches": [
+  {
+   "status": 200,
+   "url_count": 332
+  }
+ ],
+ "url_sample": [
+  "https://aitoptools.net/",
+  "https://aitoptools.net/about/",
+  "https://aitoptools.net/contact/",
+  "https://aitoptools.net/disclaimer/",
+  "https://aitoptools.net/affiliate-disclosure/"
+ ]
+}

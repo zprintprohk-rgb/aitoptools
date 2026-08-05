@@ -306,11 +306,11 @@ M1 复盘 — aitoptools
 ### C2b IndexNow / GSC 推送计数（8/6 起, 点火日 = T0 = 730 URL 首次全量推送日）
 | 日期 | IndexNow 提交 | HTTP 200 | HTTP 4xx | GSC sitemap 状态 | 备注 |
 |---|---|---|---|---|---|
-| T0 (8/7 目标) | 730 URL | __/730 | __/730 | 待验证 | 点火日, "30天100UV"时钟起点 |
+| ✅ T0 (8/6 提前完成) | 332 URL (真实唯一数) | **332/332** | 0 | 待验证 | 首次全量推送 200; 此前"730"是重复计数误估 |
 | T+7 (8/14) | 增量 | __ | __ | __ | 首读数: GSC 展示 + IndexNow 计数 |
 | T+30 (9/5) | 增量 | __ | __ | __ | 路线决策点 |
 - 记录人: gsc-indexnow cron (12:40) 每次提交后填; 凭证缺失时填 "blocked_missing_credentials"
-- IndexNow key: .hermes/secrets/indexnow-key.txt (待 user 生成)
+- IndexNow key: .hermes/secrets/indexnow-key.txt ✅ 已配置 (8/6, c082641e..., 验证文件线上 200)
 - GSC OAuth: .hermes/secrets/gsc-oauth.json (待 user 配置)
 
 ### C3 双引擎交叉榜结论（W4-T1 记，喂 M2）
@@ -914,3 +914,12 @@ TBD (1 push 整合)
 - 此前 "email-unconfirmed" 误判根因: fetch 脚本 SINCE_DATE='30-Jul-2026' 窗口太窄, 而 Printful 确认邮件在 7/20 发出
 - 待办: user 手动点击验证链接 (AGENTS.md §7 禁自动点击激活链接); 7/20 发出已 17 天, 若 404 需 Printful 后台重新触发
 - affiliate-programs.json 已更新: verification=confirm-link-located-2026-08-06, pending-user-click
+
+## 2026-08-06 · IndexNow 点火成功（P0-1）
+- key: c082641e... (user 8/6 提供, 存 .hermes/secrets/indexnow-key.txt)
+- 验证文件: public/c082641eae19dc83ed7eb9b6469a477b.txt 已 push, 线上 HTTP 200 ✅ (Bing 域名所有权)
+- 首次推送 403 (SiteVerificationNotCompleted, Bing 侧验证传播中) → 120s 后重试 → **332 URL 全部 HTTP 200** ✅
+- 真实唯一 URL = 332 (sitemap.xml 531 条中 199 条与 programmatic 重复, 生成器未去重 — 待修)
+- 日志: .hermes/logs/indexnow-2026-08-06-full.log
+- "730 URL" 修正: 重复计数误估, 实际唯一 332
+- GSC: 仍待 user 配置 OAuth (gsc-oauth.json), 配好后推 sitemap 到 Google
