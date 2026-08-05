@@ -260,6 +260,25 @@ export default function BlogPostPage({ params }) {
           })}
         </div>
 
+        {/* CTA (联盟转化, 8/5 补: Blog 必须有 CTA 才有收益) */}
+        {post.affiliateUrl && (
+          <div style={{ margin: '28px 0', padding: '20px 24px', background: 'rgba(11,95,89,0.06)', border: '1px solid rgba(11,95,89,0.25)', borderRadius: 6, textAlign: 'center' }}>
+            <p style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--k-deep)', margin: '0 0 12px' }}>
+              {post.ctaText || 'Try it Free'} →
+            </p>
+            <a href={post.affiliateUrl} target="_blank" rel="nofollow sponsored" style={{ display: 'inline-block', background: 'var(--c-primary)', color: '#fff', padding: '12px 28px', borderRadius: 4, fontWeight: 700, textDecoration: 'none' }}>
+              {post.ctaText || 'Check Deal'}
+            </a>
+            {post.secondaryAffiliateUrl && (
+              <p style={{ marginTop: 12, fontSize: '0.9rem' }}>
+                <a href={post.secondaryAffiliateUrl} target="_blank" rel="nofollow sponsored" style={{ color: 'var(--c-primary)', fontWeight: 600 }}>
+                  {post.secondaryCtaText || 'Try Alternative'} →
+                </a>
+              </p>
+            )}
+          </div>
+        )}
+
         {/* FAQ */}
         {post.faqs?.length > 0 && (
           <div className="faq-section">
