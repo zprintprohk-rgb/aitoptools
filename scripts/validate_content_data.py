@@ -34,6 +34,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 COMPARISONS = os.path.join(ROOT, 'src', 'data', 'comparisons.json')
 LISTICLES = os.path.join(ROOT, 'src', 'data', 'listicles.json')
+BLOGS = os.path.join(ROOT, 'src', 'data', 'blog-posts.json')
 
 # 合法的三态取值 (与 FeatureMatrix.js 的 SYMBOLS 保持一致)
 VALID_FEATURE_VALUES = {'yes', 'no', 'partial'}
@@ -222,18 +223,43 @@ def validate_listicles(data):
     return errors, rows
 
 
+def validate_blogs(data):
+    """校验 blog-posts.json 的联盟 CTA (指令3.3, 2026-08-05):
+    每篇必须 affiliateUrl + ctaText; 对比型 (-vs-) 还必须有 secondary。"""
+    errors = []
+    rows = []
+    for b in data:
+        slug = b.get('slug', '<no-slug>')
+        has_main = bool(b.get('affiliateUrl')) and bool(b.get('ctaText'))
+        has_secondary = bool(b.get('secondaryAffiliateUrl')) and bool(b.get('secondaryCtaText'))
+        is_vs = '-vs-' in slug
+        rows.append({
+            'slug': slug,
+            'main_cta': has_main,
+            'secondary_cta': has_secondary,
+        })
+        if not has_main:
+            errors.append(f"{slug}: Blog 缺主 CTA (affiliateUrl + ctaText 必填, 见 9fcb6ae 模板)")
+        if is_vs and not has_secondary:
+            errors.append(f"{slug}: 对比型 Blog 缺副 CTA (secondaryAffiliateUrl + secondaryCtaText)")
+    return errors, rows
+
+
 def main(argv):
     quiet = '--quiet' in argv
 
     comparisons = _load(COMPARISONS, 'comparisons.json')
     listicles = _load(LISTICLES, 'listicles.json')
+    blogs = _load(BLOGS, 'blog-posts.json')
 
     comp_errors, comp_rows = validate_comparisons(comparisons)
     list_errors, list_rows = validate_listicles(listicles)
+    blog_errors, blog_rows = validate_blogs(blogs)
 
     all_errors = []
     all_errors.extend([f'[comparison] {e}' for e in comp_errors])
     all_errors.extend([f'[listicle]   {e}' for e in list_errors])
+    all_errors.extend([f'[blog]       {e}' for e in blog_errors])
 
     if not quiet or all_errors:
         print('=' * 64)
@@ -250,6 +276,11 @@ def main(argv):
                 f'  - {r["slug"]:<28}  items={r["items"]}  pickTypes={r["pickTypes"]}  '
                 f'featureCols={r["featureCols"]}  features={r["features"]}'
             )
+        print(f'\n[blogs]       {len(blogs)} 篇 (CTA 校验):')
+        for r in blog_rows:
+            sec = '✓' if r['main_cta'] else '✗'
+            sec2 = ('✓' if r['secondary_cta'] else '✗') if '-vs-' in r['slug'] else '—'
+            print(f'  - {r["slug"]:<28}  主CTA={sec}  副CTA={sec2}')
 
     if all_errors:
         print('\n[FAIL] 数据结构校验未通过, 请补齐缺失字段后再构建:')
@@ -258,7 +289,7 @@ def main(argv):
         print(f'\n共 {len(all_errors)} 项错误。退出码 1。')
         return 1
 
-    print('\n[OK] 全部通过 (5 篇对比 + 2 篇榜单均符合标准模板)')
+    print('\n[OK] 全部通过 (对比 + 榜单 + Blog CTA 均符合标准模板)')
     return 0
 
 

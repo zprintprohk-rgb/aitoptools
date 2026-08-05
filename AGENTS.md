@@ -141,3 +141,20 @@
 - GA4 点击事件名统一 `affiliate_click`（非 outbound_click），关键事件标记用此名。
 - utm_campaign 用商户名（如 mockey），不用统一 m1。
 - link_id 命名 {slug}-{位置}，禁止 global-injected-{hash} 式不可读 ID（存量 27 条 W1-T2 修复）。
+
+## 终端脱敏判定规则（2026-08-05 K3 拍板 — Printful"坏链"误报教训）
+- **Hermes 终端会对 32 位 hex / affiliate hash 自动打码为 `***`**（如 printful.com/a/15297661:***）。grep/sed/cat 输出中的 `***` 不代表文件里真有星号。
+- **判定文件内容必须用字节级方法，不信终端显示**：
+  - `od -c file | head` 看原始字节
+  - Python `repr(open(f).read()[i-30:i+60])` 或 `[ord(c) for c in seg]` 看字符码
+  - `git diff` 对比真实改动
+- **上报"坏链/死链/泄漏"前必须先做上述字节级验证**；疑似坏链 0 成本先查，勿直接报 P0 让全队烧工时（8/5 Printful 排查消耗 20+ 分钟，实际 0 坏链，副产品是发现 3 篇 Blog 缺 CTA）。
+- 例外：字面 `***` 出现在文件里（非脱敏场景）才真有问题。
+
+## 模型余额监控规则（2026-08-05 K3 拍板 — 8/5 晚 402 事故）
+- **事实**: 8/5 20:30 daily-report 因 `HTTP 402: Insufficient Balance` 失败（DeepSeek 余额不足）。备用 MINIMAX key 存在（.env MINIMAX_CN_API_KEY）但 config 未接 fallback。
+- **规则**:
+  1. 所有 cron 首任务 = ping 模型（检查 gateway.log 是否有 402/insufficient balance），有则**置顶告警**并尝试继续，再遇 402 记录中断点
+  2. 任何 cron 失败先查 executions.db / output 目录的 Error 段，402 与 Timeout 区分上报（402=钱的问题，Timeout=高峰/网络）
+  3. 402 持续 2 天 → 升级 user 二选一：充值 DeepSeek 或 config 接 MINIMAX fallback
+- **触发线**: 任意 cron 报 402 即告警，不等待

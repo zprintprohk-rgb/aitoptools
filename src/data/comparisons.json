@@ -760,6 +760,12 @@
         "winner": "Kittl"
       },
       {
+        "dimension": "AI Video Generation",
+        "a": "Built-in (Veo 3.1 / Kling 2.5 / Runway Gen 4.5 / 7 models total)",
+        "b": "No native AI video; third-party integrations only",
+        "winner": "Kittl"
+      },
+      {
         "dimension": "Ease of use",
         "a": "Beginner-friendly for a design tool; an evening to learn",
         "b": "The easiest design tool ever made — productive in five minutes",
