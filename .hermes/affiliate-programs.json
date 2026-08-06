@@ -38,7 +38,10 @@
       "my_link_nordpass": "https://go.nordpass.io/aff_c?offer_id=488&aff_id=152693&url_id=9356",
       "login_url": "https://affiliates.nordvpn.com/users/login",
       "ppc_restriction": "No NordVPN/NordPass/Nord brand keywords on Google/Bing Ads",
-      "notes": "✅ APPROVED 2026-07-16. Account manager: 颜 (Yan). Also covers NordPass. Site pages: /nordvpn-review/ and /nordpass-review/"
+      "notes": "✅ APPROVED 2026-07-16. Account manager: 颜 (Yan). Also covers NordPass. Site pages: /nordvpn-review/ and /nordpass-review/ 8/6 P0-3: 裸链修复 (nordvpn.com -> go.nordvpn.net 跟踪链, data 已修, 待 push).",
+      "link_deployed": false,
+      "link_fix_date": "2026-08-06",
+      "link_fix_note": "8/6 发现: nordvpn-review 页 affiliateUrl + 2 CTA 均为裸链 nordvpn.com (approved 7/16 但跟踪链从未部署, 点击零归因). 已手术式修复 -> go.nordvpn.net/aff_c?offer_id=15&aff_id=152693&url_id=902 (reviews.json 2 行). 待 build+push 上线."
     },
     {
       "name": "Jasper AI Affiliate Program",
@@ -222,7 +225,7 @@
     }
   ],
   "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
-  "last_updated": "2026-08-05 10:40 (cron 12:05 窗口实际 10:28 触发; Gmail IMAP 经 SOCKS5 127.0.0.1:7892 恢复, 57 封邮件拉取 OK)",
+  "last_updated": "2026-08-06 12:xx (cron 12:05; IMAP 68 封扫描 OK; 新 P0: NordVPN 裸链已修待部署)",
   "monitoring": {
     "gmail_api_status": "RESTORED 2026-08-05 10:40 — IMAP 经 SOCKS5 127.0.0.1:7892 连接成功 (fetch_affiliate_mails.py 实测 57 封). 不再依赖 8.8.8.8 窗口期. 凭证 = hermes .env IMAP_PASSWORD (8/3 03:11 重新生成 \"Hermes IMAP\", 8/3 20:43 额外一条 Microsoft apps and services 授权提醒待 user 确认).",
     "check_method": "SOCKS5-proxy-IMAP (2026-08-05 10:40, fetch_affiliate_mails.py + read_affiliate_mails.py 实测)",
@@ -447,10 +450,47 @@
       "p2_count_24h": 11,
       "p2_notes": "维持暂缓 (K3 7/30 拍板等 Kittl 跑通): 4 申请候选 + 5 评测候选 + 2 resolved",
       "conclusion": "Gmail IMAP 通道彻底恢复 (SOCKS5). Claid 登录问题解决路径闭环 (重置邮件已到). 新 P0: Printful *** 坏链 (数据已修, 待部署). PartnerStack Network 拒绝已 IMAP 独立核实 (无新信息)."
+    },
+    "high_signal_findings_24h_8_6": {
+      "as_of": "2026-08-06 12:07",
+      "status": "RESTORED — IMAP 68 封 (SINCE 30-Jul), 0 新审批",
+      "new_findings": {
+        "claid_reset_2nd_8_5": {
+          "date": "2026-08-05 09:25+09:30",
+          "from": "partners@claid.ai",
+          "subject": "Reset password instructions (第二条)",
+          "signal": "8/5 09:25 + 09:30 两条重置邮件 (token HpS3ToZt5HfH5z9fBnQG). 8/5 11:28 Gabriela 确认首条 token 已过期. 按 v4 基线: user 8/5 已全部办妥 (account-fully-configured), 勿再提醒."
+        },
+        "letsenhance_8_5_11_28": {
+          "date": "2026-08-05 11:28",
+          "from": "gabriela.d@letsenhance.io",
+          "subject": "Re: Your Monthly Performance Update",
+          "signal": "FirstPromoter 确认首条 reset token 已过期, 建议 claid.firstpromoter.com/forgot-password 重发. 已由 user 8/5 处理 (v4 基线)."
+        },
+        "supabase_paused_8_5": {
+          "date": "2026-08-05 05:05",
+          "from": "supabase.com",
+          "subject": "Your Supabase Project zprintpro-production has been paused",
+          "signal": "⚠️ 非本域 (zprintpro 项目). 免费项目被暂停, 不阻塞 aitoptools 联盟. 提醒 K3 处理 zprintpro 侧."
+        },
+        "printful_halloween_8_6": {
+          "date": "2026-08-06 01:23",
+          "from": "newsletter.printful.com",
+          "subject": "Halloween products",
+          "signal": "营销邮件. 素材可作内容 (Halloween 旺季 POD 选题)."
+        }
+      },
+      "p0_count_24h": 1,
+      "p0_notes": "NordVPN 裸链 (approved 7/16 但 go.nordvpn.net 跟踪链从未部署, nordvpn-review 页 2 CTA 零归因) — 数据已修, 待 build+push.",
+      "p1_count_24h": 1,
+      "p1_notes": "Printful 邮箱确认邮件 (7/20 17:00, D17) 仍待 user 点击 — 唯一未激活项, 可能已过期需重发.",
+      "p2_count_24h": 11,
+      "p2_notes": "维持暂缓. Supabase zprintpro 暂停 (跨项目提醒). Google 8/3 20:43 Microsoft 授权 (非自主动作, 已 3 天无反馈, 降 P2).",
+      "conclusion": "0 新审批. Printful 坏链 P0 已随 8/6 攒批上线 (线上字节级验证真链). 新 P0: NordVPN 裸链 (数据已修待 push). Printful 邮箱确认 D17 仍唯一 user 行动项."
     }
   },
   "pending_applications_aging": {
-    "as_of": "2026-08-05",
+    "as_of": "2026-08-06",
     "items": [
       {
         "name": "Placeit (re-apply post Marketplace upgrade)",

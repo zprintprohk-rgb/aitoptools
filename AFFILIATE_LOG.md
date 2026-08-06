@@ -923,3 +923,13 @@ TBD (1 push 整合)
 - 日志: .hermes/logs/indexnow-2026-08-06-full.log
 - "730 URL" 修正: 重复计数误估, 实际唯一 332
 - GSC: 仍待 user 配置 OAuth (gsc-oauth.json), 配好后推 sitemap 到 Google
+
+
+## 2026-08-06 · 联盟监控 (cron 12:05)
+- 邮件: 68 封扫描, **0 新审批**; Claid 第二条重置邮件 (8/5 09:30) + Gabriela token 过期确认 — v4 基线已办妥, 不重复上报
+- **P0 新发现**: NordVPN 裸链 — nordvpn-review 页 affiliateUrl + 2 CTA 均为 nordvpn.com/ (approved 7/16 但 go.nordvpn.net 跟踪链从未部署, 点击零归因)
+- 修复: reviews.json 手术式 2 行 (→ go.nordvpn.net/aff_c?offer_id=15&aff_id=152693&url_id=902), JSON 有效, 待 build+push
+- 验证: Printful 坏链 P0 闭环 — 8/6 攒批已上线, 线上字节级确认 2 真链 0 星号
+- 链接部署核查: 9 工具池 + nordpass 全 200 真链; claid 正确 slug = claid-ai-review (claid-review 404 是猜错 slug, 非问题)
+- 待 user: Printful 邮箱确认 D17 (7/20 邮件, 可能过期需重发)
+- 跨项目提醒: Supabase zprintpro-production 8/5 被暂停 (免费额度)

@@ -25,12 +25,13 @@
    "sha256": "dc9fb3558cc65b62b58318cbf56d6ced2b3b8d458a5eb86a10cc074d13371e98"
   }
  },
- "last_run": "2026-08-05T10:52:14",
- "last_run_status": "indexnow-verified-200, gsc-pending",
+ "last_run": "2026-08-06T13:34:02",
+ "last_run_status": "no-change, indexnow-already-submitted(8/6, 332/200), gsc-pending",
  "indexnow_submitted": true,
  "gsc_submitted": false,
  "indexnow_first_full_push": "2026-08-06",
  "indexnow_urls_pushed": 332,
  "indexnow_status_200": 332,
- "indexnow_key_file": ".hermes/secrets/indexnow-key.txt"
+ "indexnow_key_file": ".hermes/secrets/indexnow-key.txt",
+ "last_check_hash_match": true
 }
