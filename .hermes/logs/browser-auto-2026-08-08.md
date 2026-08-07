@@ -56,3 +56,13 @@
 - **解释**: 7/17+7/20 两封 "Confirm email address" 邮件属于 **affiliate 系统** (in-house, printful.com/a/...) 而非主站; 链接过期 "does not exist" 不影响主站使用
 - **影响重估**: Printful 邮箱确认从"硬阻塞"降级为"待核查项" — 链接已上线 (8/6 全真链 200), 佣金归因不受影响; 真正待确认的是 affiliate 后台账户激活状态 (payout/tax info)
 - **下一步**: ① 浏览器访问 affiliate 系统确认账户状态 (https://www.printful.com/affiliate 或 affiliates.printful.com) ② 或发支持邮件确认 (support@printful.com)
+
+
+## #2c Printful Affiliate 账户状态实证 (8/8 02:32, 15 步)
+
+- **账户状态: ✅ Active 激活运行中** — 联盟后台完全可访问; 已产生点击 1,023 / 注册 1 / 销售 $0.00
+- **推广链接: ✅ 可用** — Affiliate ID 15297661e94634fe64188d00218db2fbabacc4a, deep link + SubID 支持
+- **支付方式: ✅ PayPal 已配置** (无提现记录, 因 0 销售)
+- **税务信息: ❌ W-8/W-9 未提交** — Tax & Legal 表单全空 (Country of residence=USA 已选, Name/Business/SSN/EIN/地址全空, Prepare form 灰); 页面说明: 美国居民首次佣金前必须提交
+- **结论**: 邮箱确认问题彻底解除 (账户已 Active); 剩余唯一阻塞 = 税务表单 (需 user 确认真实税务身份: 中国实体应填 W-8BEN, Country 改 China)
+- **下一步**: user 提供税务信息 → 浏览器自动填写提交 (敏感字段由 user 确认后执行)
