@@ -245,3 +245,15 @@
 | 日期 | page | 展示 | 排名 | 目标 | 动作 | 状态 |
 |------|------|------|------|------|------|------|
 | 2026-08-07 | /blog/print-price-ai-tools-2026/ | 23 | 70 | ≤30 | 内链+FAQ+2 pin | in-progress |
+
+
+---
+
+## Daily-Content 变更记录
+
+| 日期 | 文件 | 改动 | 来源 |
+|------|------|------|------|
+| 2026-08-08 | reviews.json | printify-review: 补 AI Mockup Generator 功能行 (pros + 新小节); kittl-review: 补 AI Workflows 小节 | discovery/2026-08-07.md 竞品动态段 |
+| 2026-08-08 | comparisons.json | kittl-vs-canva: AI Features 补 AI Workflows 段, dateModified → 2026-08-08 | 同上 |
+
+> 待办: 周更帖《本周 CF 最佳免费资产》素材已备 (cf-freebies 8/6-8/7, 含 🎃 Halloween 6 素材 → halloween-asset-chain.md); kittl 价格不一致 ($13 vs $15) 待核实统一; Mockuplabs 联盟网络 8/15 窗口前核实。

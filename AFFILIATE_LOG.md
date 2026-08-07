@@ -955,3 +955,12 @@ TBD (1 push 整合)
 - **安全与审计铁律**: AGENTS.md 已追加 (Hermes 8/7 指令 #6, 5 条) + .hermes/audit/ 已建
 - **定时任务注册 (OpenClaw cron)**: weekly-report 8/9 08:00 / halloween-chain 8/10 10:00 / gsc-mining 每日 13:00 / printful-verify watcher 每时 8-22 (cookie 就绪即执行)
 - **sitemap 补跑**: 8/8 00:2x 已完成 (338 URL, 6 blog 入图, IndexNow 6/6 200, C2b 已记)
+
+
+## 2026-08-08 · 联盟监控 (cron 01:49)
+- 邮件: IMAP 凭证修复后首跑 (01:46 自动回填 .env IMAP_PASSWORD, SOCKS5 代理登录双重验证 OK) — SINCE 90d 拉 445 封 / 过滤 61 封, 24h 无过滤扫描 15 封, **0 新审批, 0 新商户邮件** (新邮件均为 GitHub togthr CI / GSC / LinkedIn 噪音)
+- **P0 进展 (非监控侧, Hermes 00:27-00:50 已办)**: ① Printify promo code 回信已发出 (SMTP 465, subject "Promo Code Request - aitoptools", Message-ID <178612007459.38260.17414933324366495799@aitoptools.net>, 留证 .hermes/tmp/printify-sent.txt) — **P0-2 闭环**, 8/11 检查回复; ② Printful 7/20 确认链接已过期 (headless 实测 "Email confirmation request does not exist"), 后台重发被阻 = printful_session_cookie 缺失 (**唯一剩余 P0**)
+- SSoT: affiliate-programs.json 更新 — gmail_api_status=FIXED 2026-08-08, manual_checklist_2026_08_08 生成 (printful_cookie=BLOCKER / printify=RESOLVED / pinterest=P2 / gsc=optional)
+- 待 user: ① Printful cookie (A: 装 AutoGLM 扩展 2min → 自动提取; B: F12 手动复制 → .hermes/secrets/printful_session_cookie.txt) → watcher 每时 8-22 自动重发确认邮件
+- 观察项: Placeit 8/14 催办草稿就绪 (drafts/placeit-followup-email.md); CF freebie 今日尚未到 (常规 ~11:00 到, 素材池已覆盖 8/7)
+- 跨项目提醒: togthr Deploy to Workers 失败 x4 (8/6-8/8, 非本域) / GSC zprintpro 索引验证邮件 (非联盟)
