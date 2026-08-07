@@ -933,3 +933,13 @@ TBD (1 push 整合)
 - 链接部署核查: 9 工具池 + nordpass 全 200 真链; claid 正确 slug = claid-ai-review (claid-review 404 是猜错 slug, 非问题)
 - 待 user: Printful 邮箱确认 D17 (7/20 邮件, 可能过期需重发)
 - 跨项目提醒: Supabase zprintpro-production 8/5 被暂停 (免费额度)
+
+
+## 2026-08-07 · 联盟监控 (cron 12:05)
+- 邮件: SINCE 30-Jul 全量扫描, 24h 内 5 封 — **0 新审批**; 关键新信号: **Printify "Your Printify link is getting some activity!"** (8/7 00:18 UTC, PartnerStack 主动邮件 = Printify 联盟链接出现新点击, 首次活动信号, 归因链路开始工作)
+- CF freebies: 8/7 新邮件 "Gothic Skull Rose Bundle PNG & 19 more" (UID 621) — 解析 20 素材, **6 个 🎃 万圣节** (Gothic Skull Rose / Halloween Coffee / Hallowen Bundle / Coquette Halloween / Black Cat / Skeleton Hand) + 3 开学季 + 5 字体; 已落盘 .hermes/logs/cf-freebies/2026-08-07.md, 素材池够 Halloween 辐条① + 8/11 Kittl 实测日
+- **NordVPN P0 闭环**: 8/6 裸链修复随 commit db0bb02 上线, 线上 /nordvpn-review/ 字节级确认 3 处 go.nordvpn.net 跟踪链 (offer_id=15&aff_id=152693&url_id=902), link_deployed 置 true (8/7)
+- SSoT: affiliate-programs.json 更新 — Printify link_activity_8_7 + NordVPN link_deployed=true + Mockey/Printify/Claid link_deployed backfill true (8/6 已核查 9 工具池全真链)
+- 待 user: Printful 邮箱确认 D18 (7/20 邮件, 可能已过期需重发) + Printify promo code 回信 (草稿 drafts/printify-promo-code-reply.md 已就绪 8/7 03:18, 3 分钟动作)
+- 草稿就绪: Placeit 8/14 超期催促邮件 (drafts/placeit-followup-email.md, 8/14 当天触发发送)
+- 跨项目提醒: togthr GitHub Deploy 失败 x2 (8/6, 非本域) / Supabase zprintpro 暂停已报 (8/5)

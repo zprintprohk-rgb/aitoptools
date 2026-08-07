@@ -2,7 +2,7 @@
 
 > 规则: 每天 2 张（8/6 起）, 发布包在 ready-to-post-*.md, user 手工发布（Hermes 不自动登录）
 
-## 进度: 5/16
+## 进度: 7/16
 
 | # | 日期 | 目标页面 | 发布包 | 状态 |
 |---|------|---------|--------|------|
@@ -11,10 +11,11 @@
 | 3 | 2026-08-05 | /blog/best-ai-background-removers-2026/ | pin-suggestions-2026-08-05.md | 📝 待发布 |
 | 4 | 2026-08-06 | /compare/mockey-vs-placeit/ | ready-to-post-2026-08-06.md | 📝 待发布 |
 | 5 | 2026-08-06 | /compare/printify-vs-gelato/ | ready-to-post-2026-08-06.md | 📝 待发布 |
+| 6 | 2026-08-07 | /blog/print-price-ai-tools-2026/（推排名目标） | ready-to-post-2026-08-07.md | 📝 待发布 |
+| 7 | 2026-08-07 | /compare/kittl-vs-canva/ | ready-to-post-2026-08-07.md | 📝 待发布 |
 
-## 剩余 11 张（8/7-8/12 计划）
+## 剩余 9 张（8/8-8/12 计划）
 
-- [ ] kittl-vs-canva（/compare/kittl-vs-canva/）
 - [ ] printful-alternatives（/best/printful-alternatives/）
 - [ ] printify-alternatives（/best/printify-alternatives/）
 - [ ] best-ai-tshirt-design-generators（/best/ai-t-shirt-design-generators/）

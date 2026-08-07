@@ -25,8 +25,8 @@
    "sha256": "dc9fb3558cc65b62b58318cbf56d6ced2b3b8d458a5eb86a10cc074d13371e98"
   }
  },
- "last_run": "2026-08-06T13:34:02",
- "last_run_status": "no-change, indexnow-already-submitted(8/6, 332/200), gsc-pending",
+ "last_run": "2026-08-07T12:46:21",
+ "last_run_status": "no-change, indexnow-already-submitted(8/6, 332/200), gsc-pending, blog-sitemap-gap(5 blogs missing from sitemap)",
  "indexnow_submitted": true,
  "gsc_submitted": false,
  "indexnow_first_full_push": "2026-08-06",

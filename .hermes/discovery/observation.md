@@ -112,3 +112,19 @@
 2. **同位工具评测后用户主动询问同赛道工具横评** (如 Picjam 上线后, user 询问 vidi.so vs Mockey vs Placeit 横评, 触发 Plugger AI / Presti AI / Artboard 升级)
 3. **公开数据 (brands / ARR / 联盟) 出现重大变化** (如 GreenOnion 突然宣布 1000+ brands 公开, 触发 Designkit / Adject / iFoto 同步升级做 listing-set 横评)
 4. **用户实测 / 浏览器访问后追加正面反馈** (如 user 8/4-8/9 浏览器访问 Pacdora.com/pricing 后追加 Pacdora 排期, 触发 7/30 雷达 Packify / Artboard / Plugger 升级做 mockup generation 横评)
+
+
+### 8/7 雷达更新 (2 观察 + 2 候选出列)
+
+- ✅ **Mockuplabs** (mockuplabs.ai) 8/7 升 high 候选 (有联盟信号双源互证, M3 队列首位) — 30K+ 模板/AOP/视频 mockup, Free 30 credits, Shopify App Store 在架
+- ✅ **TWOFORM** (twoform.ai) 8/7 入 medium 候选 (包装横评第 5 行) — TWO Packaging 美国制造商, AI 图→生产级 dieline, 7/28 PR 首发
+- ➕ **Rawshot** (rawshot.ai) 观察 — fashion on-model click 驱动 150+ 风格, agency/品牌向, 非 POD 自服务
+- ➕ **Booth.ai** (booth.ai) 观察 — **覆盖缺口修正**: 7/24+7/28 雷达误记"已收录", reviews.json 实际无此条目 (产品摄影类仅 4 个), 入 M3 补位清单
+- 8/7 消化管道: 总积压 35 (33+2, 0 消化), 积压 ≥5 天 14, 本轮 1 high + 1 medium
+
+## 8/7 观察名单统计 (v2.3 反馈消化)
+
+- **总积压候选数**: 35 (3 草稿 JSON 待复核 + 2 焦点 + 27 观察 + 3 M3 队列 [Pacdora/Drop Studio/Cubit] + 2 新候选 [Mockuplabs/TWOFORM])
+- **8/7 新 high/medium**: 1 high (Mockuplabs — 首个联盟信号候选) + 1 medium (TWOFORM)
+- **积压 ≥5 天**: 14 个 (7/21 剩 3 草稿已 17 天 + 7/27 4 + 7/28 7)
+- **SourceForge 降级执行**: 连续 5 轮新收录流 0 命中, 10 源→9 源改季度检查
