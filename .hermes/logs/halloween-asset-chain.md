@@ -37,3 +37,8 @@
 ## 每日 brief 更新记录
 - 2026-08-08: 跟踪器创建; 6 素材均待下载 (CF 登录后下载)
 - 2026-08-10: (cron 提前触发, 实际运行 8/8 01:49 CST) 前置检查 → **BLOCKED**: ① assets/cf-halloween-2026-08-07/ 目录存在但 0 文件 (6 素材均需 user CF 登录下载, 跟踪链在 8/7 邮件); ② printful_session_cookie 缺失, Printify 联盟链可用 (try.printify.com/4fs863rfz2yc) 但无 merchant 会话无法实际下单; ③ test-address.json 缺失 (无收货地址)。design/order 未触发, 无支付操作。User 手工清单已发。
+
+## 8/8 增量动作: 素材前置确认
+- .hermes/assets/cf-halloween-2026-08-07/ = **0 文件** (user 尚未从 CF 下载)
+- 影响: 8/10 seasonal-exec 将 blocked (素材为 design 前置)
+- 动作: user 在 8/10 前从 CF 邮件下载 (清单 .hermes/logs/cf-freebies/2026-08-07.md, 建议 Gothic Skull Rose + Coquette Halloween)
