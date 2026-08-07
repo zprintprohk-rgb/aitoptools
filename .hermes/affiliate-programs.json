@@ -242,12 +242,12 @@
     }
   ],
   "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
-  "last_updated": "2026-08-07 12:2x (cron 12:05; IMAP 扫描; Printify 首次点击信号; NordVPN 已上线)",
+  "last_updated": "2026-08-08 (affiliate-monitor cron; IMAP 凭证修复后首跑; 0 新邮件)",
   "monitoring": {
-    "gmail_api_status": "RESTORED 2026-08-05 10:40 — IMAP 经 SOCKS5 127.0.0.1:7892 连接成功 (fetch_affiliate_mails.py 实测 57 封). 不再依赖 8.8.8.8 窗口期. 凭证 = hermes .env IMAP_PASSWORD (8/3 03:11 重新生成 \"Hermes IMAP\", 8/3 20:43 额外一条 Microsoft apps and services 授权提醒待 user 确认).",
-    "check_method": "SOCKS5-proxy-IMAP (2026-08-05 10:40, fetch_affiliate_mails.py + read_affiliate_mails.py 实测)",
-    "next_action": "Claid 重置密码链接已到收件箱 (8/4 08:02), user 浏览器点链接设新密码后更新本地凭证; Printful 邮箱确认待点; Printful *** 坏链修复待下次 build+push 上线.",
-    "last_live_check": "2026-08-05 10:40 IMAP login OK via SOCKS5 127.0.0.1:7892 (57 mails since 30-Jul) — 通道彻底恢复 (7/30 DEGRADED 起 D6+ 后首日全恢复)",
+    "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
+    "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
+    "next_action": "Printful 后台重发确认邮件需 printful_session_cookie (user 装 AutoGLM 扩展或 F12 手动复制); Printify promo code 回复 8/11 检查",
+    "last_live_check": "2026-08-08 01:49 IMAP login OK via SOCKS5; SINCE 90d 拉取 445 封, 过滤 61 封, 24h 无过滤扫描 15 封 — 0 新联盟邮件",
     "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
     "network_diag_5_19": {
       "imap.gmail.com:993": "TIMEOUT 8s",
@@ -596,5 +596,12 @@
     "2_printify_promo_code": "invite-received — 8/4 邮件含要码邀请 (Reply and let us know), 需 user 3分钟回信; 码到即建 promo 页",
     "3_pinterest_scheduler": "not-configured — scheduler.md 不存在, 积压 5/16 待发布; 配好 Metricool/Tailwind 后建 .hermes/drafts/pinterest/scheduler.md",
     "4_impact_w8ben": "not-applicable — 8/1 Mavis WebBridge 实测 Impact 平台不要求 W-8 (余额<$600 不触发), VAT 已保存; Claid W-8BEN-E 8/5 拍板挂起 (等法人拼音姓名, 不阻塞)"
+  },
+  "manual_checklist_2026_08_08": {
+    "generated_by": "aitoptools-affiliate-monitor cron 2026-08-08 01:49 (IMAP 实拉 + 文件核查)",
+    "1_printful_cookie": "BLOCKER — 7/20 确认链接已过期 (8/8 00:50 headless 实测 'Email confirmation request does not exist'), 后台重发被阻. 两条路: A) 装 AutoGLM Chrome 扩展 (2min) → AutoClaw 自动提取; B) 手动 F12 复制 cookie → .hermes/secrets/printful_session_cookie.txt. 落地后 printful-verify watcher (每时 8-22) 自动重发",
+    "2_printify_promo_code": "RESOLVED 2026-08-08 00:27 — 回信已发 (SMTP 465, Message-ID <178612007459.38260.17414933324366495799@aitoptools.net>), 8/11 检查回复",
+    "3_pinterest_scheduler": "not-configured (P2, 不影响佣金) — 同 cookie 方案可一并处理 .hermes/secrets/pinterest_session.txt",
+    "4_gsc_oauth": "optional — gsc-oauth.json 缺失 (数据管线降级为本地 csv, 不影响联盟佣金)"
   }
 }

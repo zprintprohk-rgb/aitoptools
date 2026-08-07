@@ -18,7 +18,7 @@
 | 日期 | 里程碑 | 状态 |
 |---|---|---|
 | 8/9 | weekly-report 首跑基线读数 | 待执行 |
-| 8/10 | 设计阶段: Kittl/Claid 用素材 [0:2] 做 2-3 个设计 → .hermes/designs/halloween-test-{date}.png | 待触发 (cron 8/10 10:00) |
+| 8/10 | 设计阶段: Kittl/Claid 用素材 [0:2] 做 2-3 个设计 → .hermes/designs/halloween-test-{date}.png | ⛔ BLOCKED (8/8 预检: 素材 0 文件 + 无 test-address.json); 正式触发时复查 |
 | 8/11 | 下单阶段: Printful (若已 verify) 否则 Printify; 预算硬限 $25/单 $50/日; 记录 order_id/eta/cost | 待触发 |
 | 8/11 | Kittl 实测日: CF 素材当源文件, 实测帖初稿 | - |
 | 8/12-13 | Halloween 支柱帖《Halloween POD ideas 2026》写作 | - |
@@ -36,3 +36,4 @@
 
 ## 每日 brief 更新记录
 - 2026-08-08: 跟踪器创建; 6 素材均待下载 (CF 登录后下载)
+- 2026-08-10: (cron 提前触发, 实际运行 8/8 01:49 CST) 前置检查 → **BLOCKED**: ① assets/cf-halloween-2026-08-07/ 目录存在但 0 文件 (6 素材均需 user CF 登录下载, 跟踪链在 8/7 邮件); ② printful_session_cookie 缺失, Printify 联盟链可用 (try.printify.com/4fs863rfz2yc) 但无 merchant 会话无法实际下单; ③ test-address.json 缺失 (无收货地址)。design/order 未触发, 无支付操作。User 手工清单已发。

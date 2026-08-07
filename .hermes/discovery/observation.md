@@ -128,3 +128,20 @@
 - **8/7 新 high/medium**: 1 high (Mockuplabs — 首个联盟信号候选) + 1 medium (TWOFORM)
 - **积压 ≥5 天**: 14 个 (7/21 剩 3 草稿已 17 天 + 7/27 4 + 7/28 7)
 - **SourceForge 降级执行**: 连续 5 轮新收录流 0 命中, 10 源→9 源改季度检查
+
+
+### 8/8 雷达更新 (2 medium + 4 观察, 0 high)
+
+- ? **Caspa AI** (caspa.ai) 8/8 入 **medium** (产品摄影 M3 补位) — Free trial, f6s Starter $39/月 500 credits / Scale $166/月; aitoolverify 4/17 实测 + f6s + revoyant + scalio + imagine.art 多源; "replace studio workflow" 可定制 workflow; **aefa 尾缀疑 affiliate 落地页 → 待核实, 若确认升 high**
+- ? **Omi** (omi.so) 8/8 入 **medium** (upmarket 数字孪生) — 3D Digital Twin→无限渲染 (图+视频), CPG 品牌向; Capterra/SoftwareAdvice/GetApp 三目录 Standard $35/月; claid 竞品博客点名; onboarding 3D 门槛待验证
+- ? **Fulfily** (apps.shopify.com/fulfily-image-generator) 观察 — AI 商品图 Shopify 应用, $9.99/月 30 credits, 5 星, 与 Photoroom/Claid 同质
+- ? **AvatarIQ** (skup.net 生态) 观察 — POD 全流程套件 (画像/产品/描述/广告/mockup), 跟 Plugger AI 同位, 无独立站
+- ? **Mockupify** (apps.shopify.com/mockupify) 观察 — Shopify POD 模板合并自动化, 非 AI-first, 差异化弱
+- ? **Vaybel** (vaybel.com) 观察 — POD 服装品牌平台级工具 (AI mockup/listing/社媒), 同 Printify/Gelato 层
+
+### 8/8 观察名单统计 (v2.3 反馈消化)
+
+- **总积压候选数**: 41 (3 草稿 JSON 待复核 + 2 焦点 + 27 观察 + 3 M3 队列 [Pacdora/Drop Studio/Cubit] + 2 新候选 [Mockuplabs/TWOFORM] + 6 新观察 [Caspa/Omi medium + Fulfily/AvatarIQ/Mockupify/Vaybel])
+- **8/8 新 high/medium**: 0 high + 2 medium (Caspa/Omi — 产品摄影类目补位, 均无公开联盟)
+- **积压 ≥5 天**: 14 个 (7/21 剩 3 草稿已 18 天 + 7/27 4 + 7/28 7) — 连续 4 轮无消化, 红线
+- **G2 源降级建议**: 连续 2 轮 0 新命中, 9 源→8 源改双周检查 (下轮评估)

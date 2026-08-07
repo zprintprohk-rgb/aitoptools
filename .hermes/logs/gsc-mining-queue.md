@@ -11,3 +11,16 @@
 | 日期 | page | 展示 | 排名 | 目标 | 动作 | 状态 |
 |------|------|------|------|------|------|------|
 | 2026-08-07 | /blog/print-price-ai-tools-2026/ | 23 | 70 | ≤30 | 内链+FAQ+2 pin | in-progress |
+---
+## 2026-08-09 weekly-report 更新 (cron 首跑基线)
+
+- GSC 凭证缺失 (gsc-oauth.json 不存在, 本地无 gsc_data.csv) → 本轮无新 query 入 Data-Driven Queue
+- print-price-ai-tools 推排名条目维持 (2026-08-07, rank 70 > 50, 已在 CONTENT_PLAN.md Boost Queue, in-progress)
+- Data-Driven Queue: 无追加; 待 user 配置 GSC OAuth 后恢复数据驱动
+
+## 2026-08-08 运行记录 (AUTOCLAW_PRIMARY)
+- Step 0 IndexNow: Hermes 00:21-00:23 已完成 (commit 75c4c88) — sitemap 338 URL 修复 + 6 blog 增量推送 6/6 HTTP 200; AFFILIATE_LOG.md C2b 8/8 行已记; 本次复查无新增 URL, 不重复推送; 状态文件已同步基线。
+- Step 1 mining: 数据源=③ keywords-200.csv 静态兜底 (gsc-oauth.json 缺失, gsc_data.csv 缺失); 静态表无 展示/CTR 指标 → 无 query 满足 展示≥10 且 CTR<0.05 → Data-Driven Queue 无新增。
+- Step 2 boosting: 无 GSC 排名数据; /blog/print-price-ai-tools-2026/ Boost Queue 行已存在 (2026-08-07, in-progress, 8/21 目标 ≤30), 无新增登记。
+- Daily brief: .hermes/logs/2026-08-08-cron.md 不存在 → 未写入 GSC Opportunities 段。
+- 凭证缺口: .hermes/secrets/gsc-oauth.json 缺失 (仅 template) — 补录后解锁真实 GSC mining。
