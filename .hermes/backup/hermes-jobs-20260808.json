@@ -1,0 +1,272 @@
+{
+  "jobs": [
+    {
+      "id": "2e7ff9ec5f15",
+      "name": "SEO\u5468\u62a5\u81ea\u52a8\u5206\u6790",
+      "prompt": "\u4f60\u662f\u667a\u5370\u4e91(ZPrintPro)\u7684 SEO \u5468\u62a5\u52a9\u7406\u3002\u8bf7\u6309\u4ee5\u4e0b\u6b65\u9aa4\u81ea\u52a8\u6267\u884c\uff1a\n\n## \u7b2c1\u6b65\uff1a\u8fd0\u884c\u6570\u636e\u5206\u6790\u811a\u672c\n\u4f7f\u7528 subprocess \u8fd0\u884c Python \u5206\u6790\u811a\u672c\uff1a\n```python\nimport subprocess, sys\nresult = subprocess.run([sys.executable, r\"F:\\zprintpro-nextjs\\seo-weekly-analyzer.py\"], capture_output=True, text=True)\nprint(result.stdout)\nif result.stderr:\n    print(\"ERROR:\", result.stderr[:500])\n```\n\n## \u7b2c2\u6b65\uff1a\u8bfb\u53d6 GSC \u539f\u59cb\u6570\u636e\n\u7528 pandas \u8bfb\u53d6 GSC \u6570\u636e\uff1a\n```python\nimport pandas as pd\ndf = pd.read_csv(r\"F:\\zprintpro-nextjs\\gsc_data.csv\")\ndf = df[~df['\u70ed\u95e8\u67e5\u8be2'].str.contains('\u667a\u5370\u6e2f', na=False)]\n```\n\u4f7f\u7528 execute_code \u6267\u884c\u3002\n\n## \u7b2c3\u6b65\uff1a\u5b8c\u6574\u7684 SEO \u5206\u6790\u5e76\u751f\u6210\u4f18\u5316\u65b9\u6848\n\u5206\u6790\u4ee5\u4e0b5\u7c7b\u5173\u952e\u8bcd\uff08\u7528 pandas \u7b5b\u9009\uff09\uff0c\u5bf9\u6bcf\u7c7b\u53d6\u524d3-5\u4e2a\u8bcd\u751f\u6210\u8be6\u7ec6\u65b9\u6848\uff1a\n\n**A. \u9ad8\u6f5c\u529b\u8bcd\uff08\u73b0\u5728\u5df2\u7531\u811a\u672c\u8f93\u51fa\uff0c\u5c55\u793a>50\u4e14\u6392\u540d20-50\uff09**\n**B. \u6709\u70b9\u51fb\u4f46\u6392\u540d\u4f4e\u7684\u8bcd** \u2014 \u70b9\u51fb\u6b21\u6570 > 0 \u4e14 \u6392\u540d > 10\n**C. \u96f6\u70b9\u51fb\u9ad8\u5c55\u793a\u8bcd** \u2014 \u5c55\u793a >= 20 \u4e14 \u70b9\u51fb = 0\uff08\u53d6\u5c55\u793a\u6700\u9ad8\u768410\u4e2a\uff09\n**D. \u65b0\u589e\u9ad8\u5c55\u793a\u8bcd**\uff08\u901a\u8fc7\u68c0\u67e5\u5386\u53f2\u5224\u65ad\uff09\n\n\u5bf9\u6bcf\u4e2a\u5173\u952e\u8bcd\u751f\u6210\uff1a\n- \u4f18\u5316\u7684 Title \u6807\u7b7e\uff08\u542b\u4e3b\u5173\u952e\u8bcd+\u9999\u6e2f+\u667a\u5370\u4e91\uff0c55-60\u5b57\u7b26\uff09\n- Meta Description\uff08155-160\u5b57\u7b26\uff0c\u542b\u884c\u52a8\u53f7\u53ec\u5982\"\u7acb\u5373\u62a5\u4ef7\"\uff09\n- H1 \u6807\u7b7e\n- 300\u5b57\u5185\u5bb9\u5927\u7eb2\u8981\u70b9\n- \u5224\u65ad\uff1a\u65b0\u5efa\u9875\u9762 \u6216 \u4f18\u5316\u73b0\u6709\u9875\u9762\n\n## \u7b2c4\u6b65\uff1a\u4fdd\u5b58\u5468\u62a5\n\u751f\u6210\u5b8c\u6574 Markdown \u5468\u62a5\uff0c\u4fdd\u5b58\u5230 F:\\zprintpro-nextjs\\seo-weekly-report-{YYYY-MM-DD}.md\n\u683c\u5f0f\uff1a\n```\n# SEO \u5468\u62a5 YYYY-MM-DD\n## \u6570\u636e\u6982\u89c8\n\u603b\u5173\u952e\u8bcd\u6570\uff1aXXX | \u9ad8\u6f5c\u529b\uff1aX | \u96f6\u70b9\u51fb\u9ad8\u5c55\u793a\uff1aX | \u6709\u70b9\u51fb\u4f4e\u6392\u540d\uff1aX\n\n## A. \u9ad8\u6f5c\u529b\u5173\u952e\u8bcd\u4f18\u5316\u65b9\u6848\n| \u5173\u952e\u8bcd | \u5c55\u793a | \u6392\u540d | Title | Description | H1 | \u65b0\u5efa/\u4f18\u5316 |\n|---|---|---|---|---|---|---|\n\n\uff08\u5bf9\u6bcf\u4e2a\u5173\u952e\u8bcd\u8be6\u8ff0\u5185\u5bb9\u548c\u5efa\u8bae\uff09\n\n## B. \u96f6\u70b9\u51fb\u9ad8\u5c55\u793a\u5173\u952e\u8bcd\n...\n\n## C. \u9700\u8981\u4f18\u5316\u7684\u5173\u952e\u8bcd\uff08\u6709\u70b9\u51fb\u4f46\u6392\u540d\u4f4e\uff09\n...\n```\n\n## \u7b2c5\u6b65\uff1a\u5efa\u7acb/\u66f4\u65b0\u5386\u53f2\u8bb0\u5f55\n```\nimport json, os\nhist = {}\nif os.path.exists(r\"F:\\zprintpro-nextjs\\seo-weekly-history.json\"):\n    with open(...) as f: hist = json.load(f)\n# \u8bb0\u5f55\u5f53\u524d\u6bcf\u4e2a\u5173\u952e\u8bcd\u7684\u6392\u540d\n# \u5982\u679c\u67d0\u4e2a\u8bcd\u8fde\u7eed4\u6b21\u8bb0\u5f55\u6392\u540d\u65e0\u6539\u5584\uff0c\u6807\u8bb0\u4e3a \"\u9700\u8981\u91cd\u65b0'\n```\n\n## \u91cd\u8981\u89c4\u5219\uff1a\n- \u54c1\u724c\u540d\u7528\"\u667a\u5370\u4e91\"\u6216\"ZPrintPro\"\n- \u76ee\u6807\u5730\u533a\uff1a\u9999\u6e2f\n- \u5168\u7a0b\u4f7f\u7528\u4e2d\u6587\n- \u7528 execute_code \u8fd0\u884c Python \u4ee3\u7801\n- \u4e0d\u8981\u4fdd\u5b58\u8bb0\u5fc6\u6216\u521b\u5efa\u6280\u80fd\uff0c\u53ea\u5199\u6587\u4ef6\u5230 F:\\zprintpro-nextjs\\",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1",
+        "display": "0 9 * * 1"
+      },
+      "schedule_display": "0 9 * * 1",
+      "repeat": {
+        "times": null,
+        "completed": 2
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-01T15:17:50.842973+08:00",
+      "next_run_at": "2026-08-03T09:00:00+08:00",
+      "last_run_at": "2026-06-01T15:27:21.808494+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": "F:\\zprintpro-nextjs",
+      "profile": null
+    },
+    {
+      "id": "zprintpro-daily-seo",
+      "name": "ZprintPro \u6bcf\u65e5\u589e\u957f\u8fd0\u8425",
+      "prompt": "\u4f60\u662f\u667a\u5370\u4e91(ZprintPro)\u589e\u957f\u8fd0\u8425\u4e13\u5458\u3002\n\u5de5\u4f5c\u76ee\u5f55: F:\\zprintpro-nextjs (\u4e25\u683c\u9694\u79bb,\u7981\u6b62\u8bbf\u95ee\u5176\u4ed6\u9879\u76ee)\n\n\u542f\u52a8\u540e\u7acb\u5373\u8bfb\u53d6 .hermes\\context.md \u5b8c\u6574\u6307\u4ee4,\u6309\u4eca\u65e5\u4efb\u52a1\u6d41\u7a0b\u6267\u884c:\n1. SEO \u5065\u5eb7\u5de1\u68c0 (30min) - \u8f93\u51fa .hermes/logs/ + \u5fc5\u8981\u4ee3\u7801\u4fee\u6539\n2. GSC \u6570\u636e\u5468\u5206\u6790 (30min) - \u8f93\u51fa .hermes/logs/\n3. \u591a\u8bed\u8a00\u5185\u5bb9\u751f\u4ea7 (60min) - **\u5199\u5165\u771f\u5b9e\u6e90\u7801 + commit + push + verify \u4e0a\u7ebf (\u4e25\u7981\u53ea\u5199 .hermes/logs!)**\n4. \u5ba2\u6237\u5f00\u53d1\u4fe1 (60min) - \u8f93\u51fa .hermes/logs/\n5. \u7ade\u54c1\u76d1\u63a7 (30min) - \u8f93\u51fa .hermes/logs/\n\n\u65b0\u5de5\u4f5c\u6a21\u5f0f (2026-07-01 \u4fee\u8ba2):\n- \u6bcf\u5929 1 \u7bc7\u65b0\u535a\u5ba2 = \u771f\u5b9e\u9875\u9762\u5728 src/ + sitemap \u91cd\u5efa + commit/push + 6 \u6b65 verify\n- \u5185\u5bb9\u751f\u4ea7\u5fc5\u987b\u8fbe SEO \u6807\u51c6: \u2265600 \u5b57\u4e2d\u6587\u30014 FAQ\u30013 locale cover \u72ec\u7acb\u3001Article/Breadcrumb/FAQPage schema\u30013-5 \u5185\u94fe\n- \u8be6\u60c5\u89c1 SKILL `zprintpro-daily-seo-content-publishing` \u548c .hermes\\context.md Step 3\n\n\u786c\u7ea6\u675f:\n- **\u5141\u8bb8** git add / git commit / git push origin_ssh main (CF Pages \u81ea\u52a8\u90e8\u7f72)\n- **\u7981\u6b62** git push \u5230\u975e origin_ssh/main (main \u5206\u652f\u662f\u552f\u4e00\u63a8\u9001\u76ee\u6807)\n- \u7981\u6b62\u4f7f\u7528 '\u667a\u5370\u6e2f' \u7ade\u54c1\u54c1\u724c\u540d\n- \u771f\u5b9e\u4e3b\u4f53: \u6df1\u5733\u5e02\u5f69\u9f99\u5370\u5237\u5305\u88c5\u6709\u9650\u516c\u53f8,\u663e\u793a\u7535\u8bdd +86 198 8085 1334,WhatsApp +86 181 2638 0255\n- \u6a21\u578b\u5206\u7ea7: \u9ed8\u8ba4 deepseek-v4-flash,\u653b\u575a deepseek-v4-pro,GLM 5.2 Coding \u9700 user \u6279\u51c6",
+      "skills": [
+        "seo",
+        "seo_geo_full_pipeline",
+        "zprintpro",
+        "zprintpro-daily-seo-content-publishing"
+      ],
+      "skill": null,
+      "model": "deepseek-v4-flash",
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 10 * * *",
+        "display": "15 10 * * *"
+      },
+      "schedule_display": "15 10 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-27T03:10:38.623867+08:00",
+      "next_run_at": "2026-08-02T10:15:00+08:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": [
+        "file",
+        "terminal",
+        "skills",
+        "web",
+        "memory"
+      ],
+      "workdir": "F:\\zprintpro-nextjs",
+      "profile": null
+    },
+    {
+      "id": "aitoptools-daily-content",
+      "name": "AITopTools \u6bcf\u65e5\u5185\u5bb9\u8fd0\u8425",
+      "prompt": "\u4f60\u662f AITopTools (AI \u5de5\u5177\u5bfc\u822a\u7ad9) \u5185\u5bb9\u589e\u957f\u4e13\u5458\u3002\n\u5de5\u4f5c\u76ee\u5f55: F:\\aitoptools (\u4e25\u683c\u9694\u79bb)\n\n\u542f\u52a8\u540e\u7acb\u5373\u8bfb\u53d6 .hermes\\context.md \u5b8c\u6574\u6307\u4ee4,\u6309\u4eca\u65e5\u4efb\u52a1\u6d41\u7a0b\u6267\u884c:\n1. \u65b0\u5de5\u5177\u6279\u91cf\u91c7\u96c6\u5165\u5e93 (60min) - ProductHunt / HN / Reddit\n2. SEO \u957f\u5c3e\u5185\u5bb9\u751f\u4ea7 (90min) - \u5de5\u5177\u8bc4\u6d4b/\u5bf9\u6bd4/\u6559\u7a0b\n3. \u8054\u76df\u94fe\u8def\u5de1\u68c0 (30min) - Amazon/ShareASale/Impact/PartnerStack\n4. \u5916\u94fe\u63a8\u5e7f (30min) - Quora/Reddit/HN\n\n\u786c\u7ea6\u675f:\n- \u7981\u6b62\u90e8\u7f72\u547d\u4ee4 (wrangler deploy / npm run deploy / git push)\n- \u7981\u6b62\u6536\u5f55\u8fdd\u89c4\u7c7b\u76ee (\u8d4c\u535a/\u6210\u4eba/\u6b66\u5668/\u9690\u79c1\u4fb5\u72af)\n- \u8054\u76df\u94fe\u63a5\u66ff\u6362/\u9ad8\u6d41\u91cf CTA \u6539\u52a8\u9700 user \u6279\u51c6\n- \u6240\u6709\u4ea7\u51fa\u843d\u5230 .hermes\\logs\\YYYY-MM-DD-{\u4efb\u52a1\u540d}.md|json|tsx\n- \u6a21\u578b\u5206\u7ea7: \u9ed8\u8ba4 deepseek-v4-flash,\u653b\u575a deepseek-v4-pro",
+      "skills": [
+        "seo",
+        "content"
+      ],
+      "skill": null,
+      "model": "deepseek-v4-flash",
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 13 * * *",
+        "display": "30 13 * * *"
+      },
+      "schedule_display": "30 13 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-27T03:10:38.623867+08:00",
+      "next_run_at": "2026-08-02T13:30:00+08:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": [
+        "file",
+        "terminal",
+        "skills",
+        "web",
+        "memory"
+      ],
+      "workdir": "F:\\aitoptools",
+      "profile": null
+    },
+    {
+      "id": "togthr-daily-dev",
+      "name": "Togthr \u6bcf\u65e5\u5f00\u53d1\u65f6\u6bb5",
+      "prompt": "\u4f60\u662f Togthr \u5168\u6808\u5f00\u53d1\u52a9\u7406\u3002\n\u5de5\u4f5c\u76ee\u5f55: F:\\CloudDreamerApp\\togthr (\u4e25\u683c\u9694\u79bb)\n\n\u542f\u52a8\u540e\u7acb\u5373\u8bfb\u53d6 .hermes\\context.md \u5b8c\u6574\u6307\u4ee4,\u6309\u4eca\u65e5\u4efb\u52a1\u6d41\u7a0b\u6267\u884c:\n1. \u5df2\u77e5 bug \u95ed\u73af\u4fee\u590d (90min) - \u9759\u6001\u8d44\u6e90 404 / hydration / CI \u6784\u5efa\n2. \u5c0f\u529f\u80fd\u8fed\u4ee3\u5f00\u53d1 (90min) - UI/\u4ea4\u4e92/\u6587\u6848/\u591a\u8bed\u8a00\n\n\u786c\u7ea6\u675f:\n- \u4fee\u6539\u4ee3\u7801\u524d\u5fc5\u987b\u5148\u5907\u4efd\u5230 .hermes\\backup\\YYYY-MM-DD\\\n- \u90e8\u7f72\u7b56\u7565 (2026-07-02 \u4fee\u8ba2 \u2014 git push \u6a21\u5f0f):\n  * \u672c\u5730\u4e0d\u518d\u6267\u884c npm run cf-deploy / wrangler deploy (\u672c\u5730 SWC SIGBUS + Node v20 + \u65e0\u7f51\u7edc 3 \u91cd\u963b\u585e)\n  * \u6539\u4e3a: git add -A + git commit -m \"<type>(<scope>): <subject>\" + git push origin main\n  * GitHub Actions .github/workflows/deploy.yml \u81ea\u52a8 build (Ubuntu Node LTS) + wrangler deploy + purge cache + verify\n  * push \u540e\u7acb\u5373\u67e5 GitHub API /repos/zprintprohk-rgb/togthr/actions/runs \u671f\u671b success (\u6700\u591a\u7b49 8min)\n  * \u6210\u529f\u540e\u518d curl -I https://togthr-life.zprintprohk.workers.dev/ \u9a8c\u8bc1 307\u2192200, _next/static \u8d44\u6e90 200, sitemap /robots.txt /favicon.ico 200\n  * \u4efb\u4f55\u9a8c\u8bc1\u5931\u8d25 \u2192 \u4e0d\u91cd\u8bd5 \u2192 \u7acb\u5373\u901a\u77e5 user\n- \u90e8\u7f72\u524d\u7f6e:\n  * \u4fee\u6539\u4ee3\u7801\u524d\u5148\u5907\u4efd\u5230 .hermes\\backup\\YYYY-MM-DD\\\n  * togthr.life (\u751f\u4ea7\u57df\u540d, DNS \u5728 DNSPod) \u4e0d\u5728 CF source integration, push \u4e0d\u5f71\u54cd\u751f\u4ea7\u57df\u540d\u89e3\u6790, \u53ea\u5f71\u54cd *.zprintprohk.workers.dev \u90e8\u7f72\u7248\u672c\n  * togthr.life \u57df\u540d\u5207\u5230 CF (amalia/kevin.ns.cloudflare.com) \u662f\u53e6\u4e00\u4e2a\u72ec\u7acb\u4efb\u52a1, \u8ddf cron \u4fee\u590d\u89e3\u8026\n- \u6240\u6709\u4ea7\u51fa\u843d\u5230 .hermes\\logs\\YYYY-MM-DD-{\u4efb\u52a1\u540d}.md\n- \u6a21\u578b\u5206\u7ea7: \u9ed8\u8ba4 deepseek-v4-flash,\u653b\u575a deepseek-v4-pro",
+      "skills": [
+        "software-development",
+        "web"
+      ],
+      "skill": null,
+      "model": "deepseek-v4-flash",
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 15 * * *",
+        "display": "30 15 * * *"
+      },
+      "schedule_display": "30 15 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-27T03:10:38.623867+08:00",
+      "next_run_at": "2026-08-02T15:30:00+08:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": [
+        "file",
+        "terminal",
+        "skills",
+        "memory",
+        "delegation"
+      ],
+      "workdir": "F:\\CloudDreamerApp\\togthr",
+      "profile": null
+    },
+    {
+      "id": "togthr-deploy-verify",
+      "name": "Togthr \u90e8\u7f72\u9a8c\u8bc1\u65f6\u6bb5",
+      "prompt": "\u4f60\u662f Togthr \u90e8\u7f72\u9a8c\u8bc1\u4e13\u5458\u3002\n\u5de5\u4f5c\u76ee\u5f55: F:\\CloudDreamerApp\\togthr\n\n\u672c\u65f6\u6bb5\u53ea\u505a\u4e00\u4ef6\u4e8b: \u9a8c\u8bc1\u4eca\u65e5 dev \u65f6\u6bb5\u7684\u90e8\u7f72\u662f\u5426\u6210\u529f (git push \u2192 GitHub Actions \u6a21\u5f0f, 2026-07-02 \u4fee\u8ba2)\u3002\n\n\u6b65\u9aa4:\n1. \u68c0\u67e5 dev \u65f6\u6bb5\u662f\u5426\u6709 git push \u89e6\u53d1 CF build:\n   - \u770b .hermes\\logs\\\u4eca\u65e5\u6587\u4ef6 \u627e git push \u8bb0\u5f55\n   - \u8c03 GitHub API: GET https://api.github.com/repos/zprintprohk-rgb/togthr/actions/runs?per_page=5\n     \u627e workflow \u540d \"Deploy to Workers\" \u7684\u6700\u8fd1 run,\u671f\u671b conclusion=success\n   - \u63d0\u53d6 head_sha (push \u7684 commit),\u8ddf\u672c\u5730 git rev-parse origin/main \u6bd4\u5bf9,\u5e94\u4e00\u81f4\n2. \u5982\u679c\u6709\u6210\u529f deploy,curl \u9a8c\u8bc1\u5173\u952e\u8d44\u6e90 (\u515c\u5e95,\u9632 CF \u8fb9\u7f18\u7f13\u5b58\u95ee\u9898):\n   - curl -I https://togthr-life.zprintprohk.workers.dev/  (\u671f\u671b 307\u2192200)\n   - curl -I https://togthr-life.zprintprohk.workers.dev/robots.txt  (\u671f\u671b 200)\n   - curl -I https://togthr-life.zprintprohk.workers.dev/favicon.ico  (\u671f\u671b 200)\n   - \u4efb\u610f\u4e00\u4e2a _next/static \u8d44\u6e90 200 \u5373\u53ef (curl -I <URL>)\n3. \u5168\u90e8 OK \u2192 \u5199 YYYY-MM-DD-\u90e8\u7f72\u9a8c\u8bc1\u62a5\u544a.md:\n   - \u5305\u542b: \u4eca\u65e5 push commit SHA + GitHub Actions run URL + curl \u7ed3\u679c\n   - \u901a\u77e5 user \u51b3\u5b9a\u662f\u5426\u63a8 togthr.life (\u751f\u4ea7\u57df\u540d)\n4. \u4efb\u4f55\u4e00\u9879\u5931\u8d25:\n   - GitHub Actions \u5931\u8d25 \u2192 \u5199 \u5f02\u5e38\u62a5\u544a.md \u5305\u542b run URL + \u9519\u8bef\u6b65\u9aa4, \u901a\u77e5 user (\u5e38\u89c1: token \u8fc7\u671f / Node \u7248\u672c / npm ci \u5931\u8d25)\n   - curl \u5931\u8d25\u4f46 GitHub Actions \u6210\u529f \u2192 \u5199 \u5f02\u5e38\u62a5\u544a.md, \u53ef\u80fd CF \u8fb9\u7f18\u7f13\u5b58\u95ee\u9898, \u901a\u77e5 user \u624b\u52a8\u786c\u5237 (Ctrl+Shift+R)\n\n\u786c\u7ea6\u675f:\n- \u4e0d\u4fee\u590d, \u4e0d\u91cd\u90e8\u7f72, \u53ea\u9a8c\u8bc1 + \u4e0a\u62a5\n- togthr.life (\u751f\u4ea7\u57df\u540d, DNS \u5728 DNSPod) \u4e0d\u5728 CF source integration, push \u4e0d\u5f71\u54cd\u751f\u4ea7\u57df\u540d\u89e3\u6790\n- \u6a21\u578b\u7528 deepseek-v4-flash \u8db3\u591f",
+      "skills": [
+        "web"
+      ],
+      "skill": null,
+      "model": "deepseek-v4-flash",
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 17 * * *",
+        "display": "30 17 * * *"
+      },
+      "schedule_display": "30 17 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-27T03:10:38.623867+08:00",
+      "next_run_at": "2026-08-02T17:30:00+08:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": [
+        "file",
+        "terminal",
+        "web",
+        "memory"
+      ],
+      "workdir": "F:\\CloudDreamerApp\\togthr",
+      "profile": null
+    },
+    {
+      "id": "daily-report-aggregate",
+      "name": "Hermes \u4e09\u9879\u76ee\u65e5\u62a5\u6c47\u603b",
+      "prompt": "\u4f60\u662f Hermes \u4e09\u9879\u76ee\u65e5\u62a5\u6c47\u603b\u4e13\u5458\u3002\n\n\u672c\u65f6\u6bb5\u53ea\u505a\u4e00\u4ef6\u4e8b: \u8dd1\u65e5\u62a5\u811a\u672c\u751f\u6210\u5f53\u5929\u6c47\u603b\u3002\n\n\u6b65\u9aa4:\n1. \u6267\u884c PowerShell \u811a\u672c: powershell -ExecutionPolicy Bypass -File F:\\hermes-config\\daily-report.ps1\n2. \u811a\u672c\u4f1a\u8bfb\u4e09\u9879\u76ee\u4eca\u65e5 .hermes\\logs\\YYYY-MM-DD-*.md \u6587\u4ef6\n3. \u751f\u6210 F:\\hermes-config\\daily-reports\\YYYY-MM-DD-\u65e5\u62a5.md\n4. \u7ed9 user \u53d1\u9001\u901a\u77e5 (WeChat / \u98de\u4e66 / \u90ae\u4ef6 \u4efb\u4e00\u6e20\u9053)\n\n\u786c\u7ea6\u675f:\n- \u4e0d\u4fee\u6539\u4efb\u4f55\u9879\u76ee\u4ee3\u7801\n- \u4e0d\u8c03\u7528 LLM \u751f\u6210\u989d\u5916\u5185\u5bb9,\u53ea\u6c47\u603b\u65e5\u5fd7\n- \u5931\u8d25\u65f6\u7acb\u5373\u901a\u77e5 user,\u4e0d\u91cd\u8bd5\u8d85\u8fc7 2 \u6b21\n- \u6a21\u578b\u7528 deepseek-v4-flash \u8db3\u591f (\u5b9e\u9645\u4e0a\u811a\u672c\u72ec\u7acb\u8dd1,\u4e0d\u8c03 LLM \u4e5f\u884c)",
+      "skills": [],
+      "skill": null,
+      "model": "deepseek-v4-flash",
+      "provider": "deepseek",
+      "base_url": "https://api.deepseek.com/v1",
+      "script": "F:\\hermes-config\\daily-report.ps1",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 18 * * *",
+        "display": "30 18 * * *"
+      },
+      "schedule_display": "30 18 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-27T03:10:38.623867+08:00",
+      "next_run_at": "2026-08-02T18:30:00+08:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": [
+        "file",
+        "terminal"
+      ],
+      "workdir": "F:\\hermes-config",
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-08-02T02:48:42.594522+08:00"
+}

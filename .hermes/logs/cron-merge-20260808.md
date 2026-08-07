@@ -45,3 +45,9 @@
 - 旧 commit: 75c4c88 / 18431a0(amend) / 0dffea9 / 38e2ba2 / f261049 / e88bf3f / b9aa1bd / 2ed579c / 860c90f（9 个，未 push）
 - 本次新增: 路径隔离 + cron 合并记录
 - 单次 push 触发 1 次 CF build
+
+## 六、清理记录 (2026-08-08 03:25 user 指令)
+- 删除 Hermes 侧 aitoptools-daily-content (13:30) — 职责已被 AutoClaw daily-search 完全覆盖, 合并后不需要
+- jobs.json 6->5; 备份: .hermes/backup/hermes-jobs-20260808.json
+- 保留: 2e7ff9ec5f15 (zprintpro) / zprintpro-daily-seo / togthr-daily-dev / togthr-deploy-verify / daily-report-aggregate (跨项目)
+- AutoClaw 侧无残留: 仅 4 个合并 cron
