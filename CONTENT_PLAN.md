@@ -232,28 +232,15 @@
 
 ---
 
-## Data-Driven Queue (GSC 数据驱动选题队列, 2026-08-08 v2 指令启用)
+## Data-Driven Queue (GSC 真实数据 2026-08-08: 展示>=10 无专页或排>70)
+| 日期 | query | 展示 | 排名 | 现状 | 排期 | 状态 |
+|------|-------|------|------|------|------|------|
+| 2026-08-08 | printful alternatives | 45 | 74.9 | 有 /best/printful-alternatives/ 但排深 | TBD | boost-existing |
+| 2026-08-08 | printify vs printful | 35 | 86.1 | 有 compare 页 排深 | TBD | boost-existing |
+| 2026-08-08 | midjourney review | 57 | 84.6 | 有页 排深 | TBD | boost-existing |
+| 2026-08-08 | jasper ai review | 52 | 91.5 | 有页 排深 | TBD | boost-existing |
+| 2026-08-08 | best ai background remover | 26 | 96.8 | 有 blog 排深 | TBD | boost-existing |
+| 2026-08-08 | printify alternatives | 21 | 82.6 | 有页 排深 | TBD | boost-existing |
+| 2026-08-08 | ai print estimator | 13 | 73.8 | 无专页 | TBD | queue-new |
 
-> 由 gsc-mining-daily (每日 13:00) 自动追加; weekly-report (周日) 补充; daily-content Step 0 消费。
-> 规则: 展示≥10 且无专页 query → 进队列; 排期优先级 = 矩阵 P0 > 本队列高意图词 > 推排名优化。
-
-| 日期 | query | 展示 | 点击 | CTR | 排名 | 现状 | 排期 | 状态 |
-|------|-------|------|------|-----|------|------|------|------|
-| (由 gsc-mining-daily 追加) | | | | | | | | |
-
-## Boost Queue (推排名清单: 有页, 排名 20-70, 内链/FAQ/pin 强化)
-| 日期 | page | 展示 | 排名 | 目标 | 动作 | 状态 |
-|------|------|------|------|------|------|------|
-| 2026-08-07 | /blog/print-price-ai-tools-2026/ | 23 | 70 | ≤30 | 内链+FAQ+2 pin | in-progress |
-
-
----
-
-## Daily-Content 变更记录
-
-| 日期 | 文件 | 改动 | 来源 |
-|------|------|------|------|
-| 2026-08-08 | reviews.json | printify-review: 补 AI Mockup Generator 功能行 (pros + 新小节); kittl-review: 补 AI Workflows 小节 | discovery/2026-08-07.md 竞品动态段 |
-| 2026-08-08 | comparisons.json | kittl-vs-canva: AI Features 补 AI Workflows 段, dateModified → 2026-08-08 | 同上 |
-
-> 待办: 周更帖《本周 CF 最佳免费资产》素材已备 (cf-freebies 8/6-8/7, 含 🎃 Halloween 6 素材 → halloween-asset-chain.md); kittl 价格不一致 ($13 vs $15) 待核实统一; Mockuplabs 联盟网络 8/15 窗口前核实。
+> 注: 多数为"有专页但排名深" — 优先内链/FAQ 强化而非新建页; ai print estimator 为唯一无专页新词
