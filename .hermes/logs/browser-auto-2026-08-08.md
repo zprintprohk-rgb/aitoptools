@@ -66,3 +66,11 @@
 - **税务信息: ❌ W-8/W-9 未提交** — Tax & Legal 表单全空 (Country of residence=USA 已选, Name/Business/SSN/EIN/地址全空, Prepare form 灰); 页面说明: 美国居民首次佣金前必须提交
 - **结论**: 邮箱确认问题彻底解除 (账户已 Active); 剩余唯一阻塞 = 税务表单 (需 user 确认真实税务身份: 中国实体应填 W-8BEN, Country 改 China)
 - **下一步**: user 提供税务信息 → 浏览器自动填写提交 (敏感字段由 user 确认后执行)
+
+
+## #2d Printful W-8BEN-E 提交成功 (8/8 02:50)
+
+- **表单生成**: W-8BEN-E (美国境外企业), 字段: Enterprise / SHENZHEN SHI CAILONG YINSHUA BAOZHUANG YOUXIAN GONGSI / China / Foreign TIN 914403000561993977 / 深圳地址 / 518111
+- **状态**: Not uploaded — 待: 打印 → 法人签字盖章 → 上传 signed form (Upload signed form)
+- **电话字段**: 表单无电话字段, 备用 18126380255 未使用
+- **下一步 (user)**: 打印 W-8BEN-E → 签字盖章 → 扫描/拍照上传; 完成后 Printful 收款链路全通 (Active + PayPal + Tax)
