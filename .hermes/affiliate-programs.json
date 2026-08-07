@@ -203,14 +203,14 @@
       "real_metrics_14d_7_14_to_7_28": {
         "clicks": 1,
         "actions": 0,
-        "action_earnings_usd": 0.0,
-        "sale_amount_usd": 0.0,
-        "conversion_rate": 0.0,
-        "epc_usd": 0.0,
-        "today_earnings_usd": 0.0,
-        "total_pending_usd": 0.0,
-        "balance_usd": 0.0,
-        "auto_withdraw_threshold_usd": 10.0
+        "action_earnings_usd": 0,
+        "sale_amount_usd": 0,
+        "conversion_rate": 0,
+        "epc_usd": 0,
+        "today_earnings_usd": 0,
+        "total_pending_usd": 0,
+        "balance_usd": 0,
+        "auto_withdraw_threshold_usd": 10
       },
       "homepage_pxf_decision_7_30_03_43_revert": "选 A 维持现状 (pxf Check Deal + organic Visit Official Site 都在). K3 7/30 03:43 user 推翻 03:40 选 B 撤首页决定, 理由: 14 天 1 click 不可怕 (网站根本没流量, baseline 建立), 现在做撤按钮是过度优化, 应聚焦流量基础建设 (北极星指标从转化率转移流量).",
       "signup_url": "https://kittl.com/affiliates",

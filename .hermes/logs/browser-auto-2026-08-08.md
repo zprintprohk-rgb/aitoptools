@@ -48,3 +48,11 @@
 2. 🔴 pinterest_session 缺失 → #3 (8/8 09:00) 无法 headless 发布; 且 pin 图片素材尚未生成 (ready-to-post 仅设计建议, 无 PNG 文件)
 3. 🔴 #4 (8/10) 前置: .hermes/assets/cf-halloween-2026-08-07/ 不存在 (CF freebies 在 .hermes/logs/cf-freebies/), Kittl 通道未配置, printful cookie 缺失
 4. ⚠️ gmail_credentials.json app_password 已失效 (AUTHENTICATIONFAILED) — affiliate-monitor cron 若读该项目文件会失败; 建议同步更新为 .env IMAP_PASSWORD
+
+
+## #2b Printful 验证流程实证 (8/8 02:28, AutoGLM 浏览器 15 步)
+
+- **结论: Printful 主站不存在邮箱验证流程** — 帮助中心 8 组关键词 (email verification / resend verification email / verify my email address / confirm email address / verification code email not received / resend email verification / change email verify / get verification code) 全部无关; Dashboard 全设置路径 (My account/Users/Security 密码+2FA+Sessions+Logs/Notifications/Affiliate/Preferences) 无验证选项; 直接 URL /dashboard/settings/email-verification → 重定向 (路径不存在)
+- **解释**: 7/17+7/20 两封 "Confirm email address" 邮件属于 **affiliate 系统** (in-house, printful.com/a/...) 而非主站; 链接过期 "does not exist" 不影响主站使用
+- **影响重估**: Printful 邮箱确认从"硬阻塞"降级为"待核查项" — 链接已上线 (8/6 全真链 200), 佣金归因不受影响; 真正待确认的是 affiliate 后台账户激活状态 (payout/tax info)
+- **下一步**: ① 浏览器访问 affiliate 系统确认账户状态 (https://www.printful.com/affiliate 或 affiliates.printful.com) ② 或发支持邮件确认 (support@printful.com)
