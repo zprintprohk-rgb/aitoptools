@@ -307,6 +307,7 @@ M1 复盘 — aitoptools
 | 日期 | IndexNow 提交 | HTTP 200 | HTTP 4xx | GSC sitemap 状态 | 备注 |
 |---|---|---|---|---|---|
 | ✅ T0 (8/6 提前完成) | 332 URL (真实唯一数) | **332/332** | 0 | 待验证 | 首次全量推送 200; 此前"730"是重复计数误估 |
+| 8/8 (D2) | 增量 6 URL (blog 补推) | **6/6** | 0 | sitemap 338 URL 已上线 | sitemap 补跑修复 6 篇 Blog 缺失 (332 旧唯一 + 6 blog, 顺带去重 199 重复) |
 | T+7 (8/14) | 增量 | __ | __ | __ | 首读数: GSC 展示 + IndexNow 计数 |
 | T+30 (9/5) | 增量 | __ | __ | __ | 路线决策点 |
 - 记录人: gsc-indexnow cron (12:40) 每次提交后填; 凭证缺失时填 "blocked_missing_credentials"

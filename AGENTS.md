@@ -182,3 +182,14 @@
 - **脚本结论与 user 记忆冲突时, 以 user 记忆为优先假设复核** — user 说"发过确认邮件"就按存在去找, 扩大窗口直到找到或穷尽
 - 搜索方法: IMAP 按发件人 domain + 主题关键词双过滤; 确认类邮件看正文提取链接; 链接过期(404) → 引导后台重发
 - 已纠正案例: Printful 7/20 "Confirm email address" (support@info.printful.com) 8/6 定位, 链接待 user 点击
+
+
+## sitemap 变更即推铁律 (2026-08-08 K3 拍板 — 8/8 6 篇 Blog 缺失 sitemap 交讯)
+- **每次新增 Blog/页面 (发布确认后), 当天内必须完成**: ① 重跑 `python scripts/generate-sitemap.py` (合并保底模式, 勿手改 sitemap) ② 验证新 URL 在 public/ 与 out/ 的 sitemap.xml 均存在 ③ git push ④ IndexNow 增量推送新 URL (参考 scripts/submit_indexnow_blog_20260808.py 模式) ⑤ 填写 AFFILIATE_LOG.md C2b 计数表
+- **不等攒批**: sitemap/推送缺失会直接延迟 GSC 收录 (T+7 读数失真), 属“紧急修复”级别, 可单独 push
+- 验收: 每次发布后 grep sitemap 含新 slug = 0 缺失
+
+## 季节内容启动条件 (2026-08-08 K3 拍板 — CF 万圣节素材累积启动)
+- **素材落盘 = 启动信号**: 季节集群设计主题的免费素材累积≥3 个 (如 CF freebies 记录) → 启动“素材→设计→下单→收货拍照→内容”闭环, 不等完整计划书
+- 跟踪器: .hermes/logs/halloween-asset-chain.md (每日 brief 更新进度: 设计→下单→收货→拍照)
+- 时间窗: 季节前 6-8 周启动最佳; 过时窗则评估是否下一季节。例: Halloween 集群目标 8/18 前上线

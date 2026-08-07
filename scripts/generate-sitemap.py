@@ -111,7 +111,14 @@ def main():
         print(f'  ✓ {sitemap_path} ({len(merged_blocks)} URLs, +{len(merged_blocks) - len(new_urls)} preserved)')
 
     # Write robots.txt
-    robots = f'User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n'
+    robots = (
+        '# Explicitly welcome AI crawlers — this site's content is meant to be cited.\n'
+        'User-agent: GPTBot\nAllow: /\n\n'
+        'User-agent: ClaudeBot\nAllow: /\n\n'
+        'User-agent: PerplexityBot\nAllow: /\n\n'
+        'User-agent: Google-Extended\nAllow: /\n\n'
+        f'User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n'
+    )
     for subdir in ('public', 'out'):
         robots_path = os.path.join(PROJECT_DIR, subdir, 'robots.txt')
         with open(robots_path, 'w', encoding='utf-8') as f:

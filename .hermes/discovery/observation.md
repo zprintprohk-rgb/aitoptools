@@ -117,7 +117,7 @@
 ### 8/7 雷达更新 (2 观察 + 2 候选出列)
 
 - ✅ **Mockuplabs** (mockuplabs.ai) 8/7 升 high 候选 (有联盟信号双源互证, M3 队列首位) — 30K+ 模板/AOP/视频 mockup, Free 30 credits, Shopify App Store 在架
-- ✅ **TWOFORM** (twoform.ai) 8/7 入 medium 候选 (包装横评第 5 行) — TWO Packaging 美国制造商, AI 图→生产级 dieline, 7/28 PR 首发
+- ✅ **TWOFORM** (twoform.ai) 8/7 入 medium 候选 (包装横评第 5 行) — **8/8 user 拍板: 暂存观察池, 不抢 Halloween 排期**, 包装横评第 5 行候选保留 (8/14 后评估) — TWO Packaging 美国制造商, AI 图→生产级 dieline, 7/28 PR 首发
 - ➕ **Rawshot** (rawshot.ai) 观察 — fashion on-model click 驱动 150+ 风格, agency/品牌向, 非 POD 自服务
 - ➕ **Booth.ai** (booth.ai) 观察 — **覆盖缺口修正**: 7/24+7/28 雷达误记"已收录", reviews.json 实际无此条目 (产品摄影类仅 4 个), 入 M3 补位清单
 - 8/7 消化管道: 总积压 35 (33+2, 0 消化), 积压 ≥5 天 14, 本轮 1 high + 1 medium
