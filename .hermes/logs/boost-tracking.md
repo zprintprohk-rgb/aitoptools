@@ -38,3 +38,53 @@
 - 展示持平 + 排名不动 → 查内链/Schema, 补外部信号 (Pinterest/社交)
 - 展示下降 <150 → 紧急排查 robots/sitemap/算法
 - 新 query 展示≥5 无页 → Data-Driven Queue, 建页节奏 ≤2 页/周
+
+
+## 升级 v2 (2026-08-08 首战复盘, 千问 3.8 策略)
+### 内链最低标准 (#3 起, 每页 4 条)
+1. Hub 页 (首页/工具分类页) → 目标页 (主锚文本)
+2. 同品类 spoke A → 目标页 (交叉引用)
+3. 同品类 spoke B → 目标页 (对比引用)
+4. 最新博文/评测 → 目标页 (新鲜度信号)
+锚文本: 变体锚, 禁完全匹配 (sticker mule alternatives / compared to X / vs X)
+
+### GEO 嵌入检查清单 (每页必做 8 项)
+□ BLUF 首段 (前 50 词直接回答)
+□ ≥1 数据表格 (AI 可摘引)
+□ FAQ ≥3 (信任型 ≥5)
+□ FAQPage JSON-LD
+□ Article Schema (author + dateModified 当天)
+□ 引用链 (≥1 外部权威来源 cite)
+□ llms.txt 包含该 URL
+□ robots.txt AI 爬虫段完好
+
+### 页面类型 × 补强重点
+| 类型 | 重点 | 示例 |
+|---|---|---|
+| 评测型 | 数据表 + verdict BLUF | sticker-mule / runway-ml (已完成) |
+| 信任型 | FAQ≥5 + 用户评价 + 退款政策 | is-magicdrop-legit (#3) |
+| 价格型 | 实时对比表 + 更新日期 + 计算逻辑 | print-price (#4) |
+| 替代型 | 对比矩阵 + 场景分流 | midjourney/jasper alternatives (#5/#6) |
+
+### 排期更新 (v2)
+| # | 页面 | 优化前排名 | 排期 | 动作 |
+|---|---|---|---|---|
+| 3 | /blog/is-magicdrop-legit/ | 64.6 | 8/11 | 信任 FAQ≥5 + 引用链 + 内链≥4 |
+| 4 | /blog/print-price-ai-tools-2026/ | 69.5 | 8/13 | 对比表 + 内链 + Schema (8/21 ≤30) |
+| 5 | /midjourney-review/ | 84.6 | 8/17 | 对比矩阵 (替代型) |
+| 6 | /jasper-ai-review/ | 91.5 | 8/17 | 对比矩阵 (替代型) |
+
+### 北极星指标 (T+14 目标加入)
+| 指标 | 基线 8/8 | T+7 (8/14) | T+14 (8/22) |
+|---|---|---|---|
+| 日均展示 | ~200 | ≥200 | ≥220 |
+| CTR | 0.15% | ≥0.2% | ≥0.3% |
+| 日均点击 | ~0.3 | ≥0.5 | ≥1 |
+| Boost 完成 | 2/25 | 4/25 | 6/25 |
+| 首批排名移动 | — | 可测量 | ≥5 位 = 策略有效 |
+
+### 8/22 验证分支 (提前规划)
+- Branch A 排名移动 ≥5 位 → 四杠杆有效 → 每天 1 页, 9/5 前清完 25 → 开始 10-20 区间 title/meta 精修
+- Branch B 移动 1-4 位 → 保持节奏 + 外部信号 (Pinterest/社交) + Guest Post/论坛外链 (POD 社区)
+- Branch C 无移动 → 排查: GSC URL Inspection 请求重爬 + SSR 确认锚文本 + 外部信号 (Reddit/Quora + pin)
+- Branch D 排名下降 → 疑似过度优化 → 减内链密度查堆砌 → 暂停 Boost 2 天
