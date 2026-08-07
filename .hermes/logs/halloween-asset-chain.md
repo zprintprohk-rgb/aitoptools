@@ -14,16 +14,25 @@
 | 5 | Minimal Line Art Mystic Black Cat Face | PNG | 待下载 | 候选 | - | - | - |
 | 6 | Halloween Skeleton Hand Stripes PNG | PNG | 待下载 | 候选 | - | - | - |
 
-## 时间线 (目标 8/18 前 Halloween 集群上线)
+## 时间线 (v2 指令集关键路径, 2026-08-08 对齐)
 | 日期 | 里程碑 | 状态 |
 |---|---|---|
 | 8/9 | weekly-report 首跑基线读数 | 待执行 |
-| 8/10-11 | 用素材做 2-3 个设计 + 下测试单 | - |
+| 8/10 | 设计阶段: Kittl/Claid 用素材 [0:2] 做 2-3 个设计 → .hermes/designs/halloween-test-{date}.png | 待触发 (cron 8/10 10:00) |
+| 8/11 | 下单阶段: Printful (若已 verify) 否则 Printify; 预算硬限 $25/单 $50/日; 记录 order_id/eta/cost | 待触发 |
 | 8/11 | Kittl 实测日: CF 素材当源文件, 实测帖初稿 | - |
 | 8/12-13 | Halloween 支柱帖《Halloween POD ideas 2026》写作 | - |
 | 8/14 | T+7 首读数 → 决定集群是否加速 | - |
+| 8/15 | 收货拍照: logistics.status=delivered 触发; user 拍照 OR fallback 官方 mockup → public/photos/wall/halloween-{order_id}.jpg | 待触发 |
 | 8/17 | Halloween 辖条① (CF 免费万圣节素材实测) 上线 | - |
-| 8/18 | 集群上线截止 | - |
+| 8/18 | 支柱帖上线 + 集群截止 (23:59) | - |
+
+## 执行参数 (v2 指令集, 2026-08-08)
+- 下单平台: Printful (if verified) else Printify
+- 预算: $25/order hard limit, $50/day hard limit, 超限暂停+告警
+- 收货地址: test-address.json (用户提供)
+- 照片: 优先 user 拍照; 用户不可用 → fallback 官方 mockup
+- 产出: 照片墙 6 图 + 支柱帖源文件 + 毛利数据
 
 ## 每日 brief 更新记录
 - 2026-08-08: 跟踪器创建; 6 素材均待下载 (CF 登录后下载)

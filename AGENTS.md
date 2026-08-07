@@ -193,3 +193,10 @@
 - **素材落盘 = 启动信号**: 季节集群设计主题的免费素材累积≥3 个 (如 CF freebies 记录) → 启动“素材→设计→下单→收货拍照→内容”闭环, 不等完整计划书
 - 跟踪器: .hermes/logs/halloween-asset-chain.md (每日 brief 更新进度: 设计→下单→收货→拍照)
 - 时间窗: 季节前 6-8 周启动最佳; 过时窗则评估是否下一季节。例: Halloween 集群目标 8/18 前上线
+
+## 🔐 安全与审计铁律 (2026-08-07 Hermes 全权执行指令 #6)
+- 所有浏览器 session cookie 仅存 `.hermes/secrets/` (gitignore 覆盖, 严禁 commit)
+- 支付操作必须二次确认字段 (test_mode=true OR amount <= hard_limit); 测试订单: 单笔 <= $25, 当日累计 <= $50, 超限即暂停并告警
+- 每次自动化执行生成 checksum (log + screenshot) 存入 `.hermes/audit/`
+- 异常 (403/captcha/balance) 立即停止 + 告警, 不重试超过 2 次
+- 浏览器操作 log 写 `.hermes/logs/browser-auto-{date}.md`, 含截图路径

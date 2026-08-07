@@ -91,7 +91,7 @@
       "commission": "$150+/sale",
       "status": "approved",
       "approved_date": "2026-07-20",
-      "verification": "confirm-link-located-2026-08-06, pending-user-click",
+      "verification": "verify-link-expired-2026-08-08 (headless browser 实测: printful.com/auth/login 页 alert \"Email confirmation request does not exist\"; 7/17+7/20 两封同 token 均已失效), resend-pending-cookie",
       "my_link_printful": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
       "signup_url": "https://www.printful.com/affiliates",
       "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json printful.com). 10% x 12 months + bonus campaigns ($50 at $5000 sales, $25 for 5 ordering customers). Confirmation email still in Gmail — unconfirmed (Gmail channel offline). 7/29 12:30 replace_affiliate_links.py --apply 上线 (claid 10 / printful 36 / printify 21 HTML 命中,build PASS),verification 待 user 浏览器确认邮箱后改 email-confirmed-7/xx 8/5 修复: affiliates.json + tools/printful.json 中 15297661:*** 脱敏泄漏 (线上 out/ 55 文件 110+ 坏链), 已改回真链, 待下次 build+push 生效. 8/6 P0-2 修正: 确认邮件并非不存在 — 7/20 17:00 support@info.printful.com 'Confirm email address' 已在 Gmail 定位, 此前 'email-unconfirmed' 是脚本查询窗口 (SINCE 30-Jul) 太窄的误判。链接待 user 手动点击 (或已过期需重发)。 8/6 IMAP 全量确认: 获批邮件 7/20 09:50 (非 7/24), 同日 17:00 确认邮件. Impact 系统邮件 Gmail 0 封 (可能走 Outlook 副邮箱).",
@@ -100,8 +100,8 @@
       "confirm_email_date": "2026-07-20T17:00:38Z",
       "confirm_email_sender": "support@info.printful.com",
       "confirm_email_subject": "Confirm email address",
-      "confirm_link_note": "Link is in Gmail 7/20 17:00 'Confirm email address' (printful.com/verify/0/...?key=...). Per AGENTS.md §7 user must click manually (Hermes 禁自动点击激活链接). 7/20 发出已 17 天 — 可能已过期, 若 404 则需 Printful 后台重新触发.",
-      "last_updated": "2026-08-06",
+      "confirm_link_note": "8/8 Hermes 全权指令 #1: IMAP 实拉两封 Confirm email address (7/17 15:25Z, 7/20 17:00Z, 同 token), headless GET verify 链接 -> 重定向 auth/login + \"Email confirmation request does not exist\" = 已过期。需 printful_session_cookie 登录后台 Resend verification -> 轮询新邮件(3 次/60s) -> 重试。",
+      "last_updated": "2026-08-08",
       "approval_email_found": "2026-07-20 09:50Z affiliate@info.printful.com Your affiliate application was approved!"
     },
     {
@@ -148,14 +148,15 @@
       "notes": "✓ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json). 20-30% recurring, $5 minimum payout. K3 7/29 拍板补回 programs 数组 (原本仅 resolved_since 段提到, SSoT 不完整). 7/29 12:30 replace_affiliate_links.py --apply 上线 (21 HTML 改, build PASS).",
       "promo_code_status": "invite-received",
       "promo_code_findings": "8/4 邮件 \"Ready-to-Use Banners, Logos & Your Promo Guide\" 含 custom promo code 邀请: \"Want a custom promo code? Request one made just for your followers. Just reply and let us know.\" (IMAP 8/7 核查) — 需回信要码, 拿到后建 /promo/printify-promo-code 页",
-      "last_updated": "2026-08-07",
+      "last_updated": "2026-08-08",
       "link_activity_8_7": {
         "signal": "8/7 00:18 UTC PartnerStack 主动邮件 \"Your Printify link is getting some activity!\" — 联盟链接出现新点击 (首次活动信号, 未提转化数)",
         "date": "2026-08-07",
         "note": "正面信号: 归因链路开始工作. 回复邮件的 promo code 请求仍待 user 发送 (drafts/printify-promo-code-reply.md 已就绪)."
       },
       "link_deployed": true,
-      "link_deploy_note": "8/6 核查 9 工具池全真链 (try.printify.com/4fs863rfz2yc 已上线 out/)"
+      "link_deploy_note": "8/6 核查 9 工具池全真链 (try.printify.com/4fs863rfz2yc 已上线 out/)",
+      "promo_request_sent": "2026-08-08 via SMTP 465 SSL (gmail_credentials 通道, 真密码 .env IMAP_PASSWORD), subject \"Promo Code Request - aitoptools\", Message-ID <178612007459.38260.17414933324366495799@aitoptools.net>, 留证 .hermes/tmp/printify-sent.txt; 72h 后检查回复 (monitor cron 已覆盖 mail.printify.com)"
     },
     {
       "name": "Photoroom Affiliate Program",

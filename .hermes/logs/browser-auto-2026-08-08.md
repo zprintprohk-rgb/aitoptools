@@ -1,0 +1,50 @@
+# Browser Auto Log — 2026-08-08
+
+> 来源: Hermes 全权执行指令 (2026-08-07 生效) P0 批次
+> 执行时间: 2026-08-08 00:20-00:35 (Asia/Shanghai)
+> 执行人: Hermes (default profile)
+
+## #0 前置检查结果
+
+| 检查项 | 结果 | 证据 |
+|---|---|---|
+| headless 浏览器可启动 | ✅ | example.com 加载成功 (stealth local) |
+| gmail_app_password | ✅ | .hermes/secrets/gmail_credentials.json (但 app_password 已失效! 实际用 hermes .env IMAP_PASSWORD, 见 #1) |
+| printful_session_cookie | ❌ 缺失 | .hermes/secrets/ 无此文件; affiliate-credentials.md 仅有邮箱+密码 (未使用, 指令指定 cookie 通道) |
+| pinterest_session | ❌ 缺失 | 全盘无 session 文件 |
+
+## #1 Printful 邮箱确认 — 结论: 链接已过期, 待重发
+
+1. IMAP 实拉 (direct, 有效凭证 = hermes .env IMAP_PASSWORD, 项目 gmail_credentials.json 的 app_password 返回 AUTHENTICATIONFAILED):
+   - printful.com 邮件 14 封 (SINCE 01-Jun-2026, 全量搜索铁律)
+   - 两封 "Confirm email address": [456] 7/17 15:25Z, [474] 7/20 17:00:38Z — 同一 verify token
+2. QP 解码提取完整链接: printful.com/verify/0/4zfeO8QfIs5IRHCguUTd97MyQEMlp8AmIXDc9LAKg4r2hqdINQuI40NHrVESvmNM?key=***
+3. headless GET (2 次, 首次连接超时):
+   - 结果: 302 → https://www.printful.com/auth/login
+   - 页面 alert: **"Email confirmation request does not exist."**
+   - 结论: 确认链接已过期 (发出 19-22 天) — SSoT 预判 "可能已过期" 实锤
+4. 截图留证: C:\Users\Administrator\AppData\Local\hermes\cache\screenshots\browser_screenshot_bca4cc6b4bcc4ec39dfc4ea35f108dd3.png (登录页 + 重定向证据; vision 分析因 API key 失效不可用, alert 文本以 snapshot 为准)
+5. 下一步 (受阻): 后台 Resend verification 需要 printful_session_cookie — **缺失, 已告警 user**
+6. SSoT 已更新: verification=verify-link-expired-2026-08-08, resend-pending-cookie
+
+## #2 Printify Promo Code 回信 — ✅ 已完成
+
+- SMTP 465 SSL (smtp.gmail.com), 发件 zprintprohk@gmail.com
+- 收件: affiliate@printify.com
+- Subject: Promo Code Request - aitoptools (指令模板, 未用旧 drafts/printify-promo-code-reply.md 回信草稿 — 指令模板优先)
+- Message-ID: <178612007459.38260.17414933324366495799@aitoptools.net>
+- 留证: .hermes/tmp/printify-sent.txt
+- SSoT: printify.promo_request_sent = 2026-08-08; 72h 后 (8/11) 检查回复, affiliate-monitor cron 已覆盖 mail.printify.com
+- 注意: 与 AGENTS.md §7 "Hermes 禁自动发信" 冲突 — 2026-08-07 全权指令为最新授权, 已覆盖 (主动说明冲突点)
+
+## #6 安全与审计铁律
+
+- 已追加至 AGENTS.md 尾部 (2026-08-07 指令 #6 全文 5 条)
+- .hermes/audit/ 已建, 本批次 checksum 已写入
+
+## 异常与告警 (需 user 介入)
+
+1. 🔴 printful_session_cookie 缺失 → #1 后台重发被阻 (指令要求 cookie 通道)
+2. 🔴 pinterest_session 缺失 → #3 (8/8 09:00) 无法 headless 发布; 且 pin 图片素材尚未生成 (ready-to-post 仅设计建议, 无 PNG 文件)
+3. 🔴 #4 (8/10) 前置: .hermes/assets/cf-halloween-2026-08-07/ 不存在 (CF freebies 在 .hermes/logs/cf-freebies/), Kittl 通道未配置, printful cookie 缺失
+4. ⚠️ gmail_credentials.json app_password 已失效 (AUTHENTICATIONFAILED) — affiliate-monitor cron 若读该项目文件会失败; 建议同步更新为 .env IMAP_PASSWORD

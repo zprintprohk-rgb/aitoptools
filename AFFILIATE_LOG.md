@@ -944,3 +944,14 @@ TBD (1 push 整合)
 - 待 user: Printful 邮箱确认 D18 (7/20 邮件, 可能已过期需重发) + Printify promo code 回信 (草稿 drafts/printify-promo-code-reply.md 已就绪 8/7 03:18, 3 分钟动作)
 - 草稿就绪: Placeit 8/14 超期催促邮件 (drafts/placeit-followup-email.md, 8/14 当天触发发送)
 - 跨项目提醒: togthr GitHub Deploy 失败 x2 (8/6, 非本域) / Supabase zprintpro 暂停已报 (8/5)
+
+
+---
+
+## 2026-08-08 00:50 · v2 指令集执行 (K3 orchestrator)
+- **Printify promo code 回信**: 已由 Hermes 发出 (SMTP 465, Message-ID <178612007459.38260.17414933324366495799@aitoptools.net>, 留证 .hermes/tmp/printify-sent.txt); 8/11 检查回复 (affiliate-monitor 覆盖 mail.printify.com)
+- **Printful 邮箱确认**: 7/20 verify 链接已确认过期 (IMAP 重跑 + headless GET → 302 login + "Email confirmation request does not exist", 截图留证); 后台重发被阻 = printful_session_cookie 缺失 (硬阻塞, 待 user 补录)
+- **硬阻塞清单**: ① printful_session_cookie ② pinterest_session ③ gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED, Hermes 改用 .env IMAP_PASSWORD)
+- **安全与审计铁律**: AGENTS.md 已追加 (Hermes 8/7 指令 #6, 5 条) + .hermes/audit/ 已建
+- **定时任务注册 (OpenClaw cron)**: weekly-report 8/9 08:00 / halloween-chain 8/10 10:00 / gsc-mining 每日 13:00 / printful-verify watcher 每时 8-22 (cookie 就绪即执行)
+- **sitemap 补跑**: 8/8 00:2x 已完成 (338 URL, 6 blog 入图, IndexNow 6/6 200, C2b 已记)

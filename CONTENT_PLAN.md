@@ -228,3 +228,20 @@
 
 启动条件 (8/14 后评估): 展示≥10 + CTR ≥ 基线 10% → 系列化 (e.g. is-printify-legit / is-printful-legit / is-mockey-legit);
 表现一般 → 保持单篇, 不扩展。
+
+
+---
+
+## Data-Driven Queue (GSC 数据驱动选题队列, 2026-08-08 v2 指令启用)
+
+> 由 gsc-mining-daily (每日 13:00) 自动追加; weekly-report (周日) 补充; daily-content Step 0 消费。
+> 规则: 展示≥10 且无专页 query → 进队列; 排期优先级 = 矩阵 P0 > 本队列高意图词 > 推排名优化。
+
+| 日期 | query | 展示 | 点击 | CTR | 排名 | 现状 | 排期 | 状态 |
+|------|-------|------|------|-----|------|------|------|------|
+| (由 gsc-mining-daily 追加) | | | | | | | | |
+
+## Boost Queue (推排名清单: 有页, 排名 20-70, 内链/FAQ/pin 强化)
+| 日期 | page | 展示 | 排名 | 目标 | 动作 | 状态 |
+|------|------|------|------|------|------|------|
+| 2026-08-07 | /blog/print-price-ai-tools-2026/ | 23 | 70 | ≤30 | 内链+FAQ+2 pin | in-progress |
