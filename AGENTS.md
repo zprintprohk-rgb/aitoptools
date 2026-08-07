@@ -200,3 +200,11 @@
 - 每次自动化执行生成 checksum (log + screenshot) 存入 `.hermes/audit/`
 - 异常 (403/captcha/balance) 立即停止 + 告警, 不重试超过 2 次
 - 浏览器操作 log 写 `.hermes/logs/browser-auto-{date}.md`, 含截图路径
+
+
+## 定时任务统一管理铁律 (2026-08-08 user 拍板, evo-2026-08-08-cron-unify-autoclaw)
+- **定时任务一律由 AutoClaw cron 统一管理**, 逐步取代 Hermes/mavis 的定时任务 (mavis CLI 已损坏, Hermes 侧黑盒)
+- **新建/合并 cron 前必须先查重**: 读取本文件 §自动化管线 + C:\Users\Administrator\.hermes\cron\jobs.json + AutoClaw cron list, 防双系统重复触发
+- **调度时间一律避开高峰期**: 批量任务落 18:00-08:00 夜间窗口或 12:05-13:30 午间窗口; 避开整点/半点, 用 7-23 或 37-53 分
+- **当前状态 (2026-08-08)**: AutoClaw 4 个合并 cron (daily-ops 12:17 / daily-search 19:23 / weekly-review 周日 07:47 / seasonal-exec 8/10+8/18 19:37), 旧 10 个已删; 详见 .hermes/logs/cron-merge-20260808.md
+- Hermes 侧 aitoptools-daily-content (13:30) 仍在 MiniMax app 内运行 → 并存期由 AutoClaw 幂等检查 (SKIPPED_HERMES_ALREADY_DONE) 兜底; 8/12 切换检查后建议停用
