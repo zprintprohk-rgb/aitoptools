@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aitoptools 8/8 执行报告 — sitemap 补裂缝 + 策略落地</title>
+<style>
+  :root { --ink:#17201c; --paper:#FAF7F2; --green:#0b5f59; --amber:#c97b2d; --muted:#4a5568; --line:rgba(23,32,28,.12); }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; background:var(--paper); color:var(--ink); line-height:1.7; padding:40px 20px; }
+  .wrap { max-width:920px; margin:0 auto; }
+  h1 { font-size:26px; margin-bottom:4px; }
+  .sub { color:var(--muted); font-size:14px; margin-bottom:28px; }
+  h2 { font-size:19px; margin:36px 0 14px; padding-left:12px; border-left:4px solid var(--green); }
+  h3 { font-size:15px; margin:20px 0 8px; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 6px; font-size:14px; background:#fff; }
+  th,td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:#f0ece4; font-weight:600; }
+  .ok { color:var(--green); font-weight:600; }
+  .warn { color:var(--amber); font-weight:600; }
+  .bad { color:#b3261e; font-weight:600; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin:12px 0; }
+  .metrics { display:flex; gap:12px; flex-wrap:wrap; margin:14px 0; }
+  .metric { flex:1; min-width:150px; background:#fff; border:1px solid var(--line); border-radius:8px; padding:14px 16px; text-align:center; }
+  .metric .num { font-size:26px; font-weight:700; color:var(--green); }
+  .metric .lbl { font-size:12px; color:var(--muted); }
+  code { background:#efece4; padding:1px 6px; border-radius:4px; font-size:13px; }
+  .tag { display:inline-block; background:#e8f0ee; color:var(--green); font-size:12px; padding:1px 8px; border-radius:10px; margin-right:6px; }
+  .foot { margin-top:40px; color:var(--muted); font-size:12px; }
+  ul { padding-left:22px; }
+  li { margin:4px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>aitoptools 8/8 执行报告</h1>
+  <div class="sub">P0 补裂缝（sitemap + 归因确认）· P1 策略落地（Halloween 素材链 / 周报模板 / M3 队列）· 验证记录</div>
+
+  <div class="metrics">
+    <div class="metric"><div class="num">338</div><div class="lbl">线上 sitemap URL（332 唯一 + 6 blog）</div></div>
+    <div class="metric"><div class="num">6/6</div><div class="lbl">IndexNow 增量推 HTTP 200</div></div>
+    <div class="metric"><div class="num">199</div><div class="lbl">sitemap 重复 URL 顺带清除</div></div>
+    <div class="metric"><div class="num">1</div><div class="lbl">隐藏回归 bug 发现并修复（robots.txt）</div></div>
+  </div>
+
+  <h2>一、P0 执行结果（自动化部分全部完成）</h2>
+  <table>
+    <tr><th>任务</th><th>动作</th><th>结果</th><th>验证</th></tr>
+    <tr><td>sitemap 补跑</td><td><code>python scripts/generate-sitemap.py</code>（合并保底模式）</td><td class="ok">338 URL：332 旧唯一 + 6 blog，0 丢失；顺带清除 199 条重复（programmatic 页双写）</td><td>本地 + 线上均 338，6 blog 全 OK</td></tr>
+    <tr><td>push</td><td>commit <code>75c4c88</code> → push main</td><td class="ok">紧急修复类别，已获授权不等攒批</td><td>线上 sitemap 3 分钟内生效</td></tr>
+    <tr><td>IndexNow 增量推</td><td><code>scripts/submit_indexnow_blog_20260808.py</code></td><td class="ok">6 篇 blog URL 全部 HTTP 200 接受</td><td>api.indexnow.org 200</td></tr>
+    <tr><td>C2b 计数更新</td><td>AFFILIATE_LOG.md 新增 8/8 行</td><td class="ok">增量 6 URL / 6-6 / 0 4xx</td><td>git diff 核对</td></tr>
+    <tr><td>本地构建</td><td><code>npm run build</code>（含 aff-link 注入）</td><td class="ok">exit 0；126 页面目录；197 文件 769 aff-link</td><td>out/sitemap.xml = 338</td></tr>
+  </table>
+
+  <h2>二、顺带发现并修复的隐藏回归（额外产出）</h2>
+  <div class="card">
+    <p><span class="tag">BUG</span><strong>generate-sitemap.py 第 114 行硬编码 robots.txt，覆盖丢失 AI 爬虫放行段</strong></p>
+    <p>脚本每次运行都把 robots.txt 写成 3 行最小版，抹掉 <code>GPTBot / ClaudeBot / PerplexityBot / Google-Extended</code> 放行 —— 与 AGENTS.md §6「robots 放行 AI 爬虫」冲突，等于在 GEO 侧自断 AI 引用通道。</p>
+    <ul>
+      <li>已修复脚本（robots 模板补回 4 个 AI 爬虫段，防再回归）</li>
+      <li>已恢复 public/ + out/ robots.txt</li>
+      <li class="ok">线上验证：4 个 AI 爬虫段 + sitemap 行全部 True</li>
+    </ul>
+  </div>
+
+  <h2>三、P1 策略落地（6 项指令）</h2>
+  <table>
+    <tr><th>#</th><th>指令</th><th>落点</th><th>状态</th></tr>
+    <tr><td>1</td><td>sitemap 补跑 + IndexNow + C2b</td><td>见第一节</td><td class="ok">完成</td></tr>
+    <tr><td>2</td><td>Halloween 素材链跟踪</td><td>新建 <code>.hermes/logs/halloween-asset-chain.md</code>：6 素材 × 4 阶段（设计→下单→收货→拍照）+ 8/9-8/18 时间线</td><td class="ok">完成</td></tr>
+    <tr><td>3</td><td>8/9 weekly-report 模板四块</td><td>新建 <code>.hermes/cron-prompts/aitoptools-weekly-report.md</code>：GSC top queries / CTR 榜 / 联盟状态 / user 手工清单（≤3 条）</td><td class="ok">完成</td></tr>
+    <tr><td>4</td><td>Mockuplabs 入 M3 队列首位；TWOFORM 入观察池</td><td>observation.md：Mockuplabs 已在 M3 首位（联盟信号）；TWOFORM 标注「8/8 user 拍板：暂存观察池，不抢 Halloween 排期」</td><td class="ok">完成</td></tr>
+    <tr><td>5</td><td>is-magicdrop-legit 信任锚点候选</td><td>CONTENT_PLAN.md 新增「六、信任锚点候选」：启动条件 = 展示≥10 + CTR≥10%，8/14 评估是否系列化</td><td class="ok">完成</td></tr>
+    <tr><td>6</td><td>AGENTS.md 两条铁律</td><td>① sitemap 变更即推铁律（发布当天补跑+推，不等攒批）② 季节内容启动条件（素材落盘≥3 = 启动信号）</td><td class="ok">完成</td></tr>
+  </table>
+
+  <h2>四、待 user 手工动作（系统不能代做）</h2>
+  <table>
+    <tr><th>时间</th><th>动作</th><th>时长</th><th>说明</th></tr>
+    <tr><td class="warn">今天</td><td>点 Printful 7/20「Confirm email address」链接</td><td>2 min</td><td>若 404 → Printful 后台重发（P0-1，D18 已到过期风险线，唯一硬阻塞）</td></tr>
+    <tr><td class="warn">今天</td><td>发 Printify promo code 回信</td><td>3 min</td><td>草稿已就绪：<code>.hermes/drafts/printify-promo-code-reply.md</code>；8/7 已有首次点击信号，码到即建 /promo/ 页</td></tr>
+    <tr><td>8/8</td><td>Pinterest 发 2 pin（ready-to-post-2026-08-07.md）</td><td>5 min</td><td>发布包已就绪</td></tr>
+    <tr><td>8/10-11</td><td>CF 万圣节素材做设计 + 下测试单</td><td>20 min</td><td>Gothic Skull Rose 首选（8/11 Kittl 实测源文件）</td></tr>
+    <tr><td>8/11 后</td><td>收货拍照上传照片墙</td><td>10 min</td><td>产出照片墙 6 图 + 支柱帖素材 + 毛利数据</td></tr>
+  </table>
+
+  <h2>五、验证记录</h2>
+  <ul>
+    <li><span class="ok">✔</span> 本地构建 exit 0；out/sitemap.xml 338 URL 含 6 blog</li>
+    <li><span class="ok">✔</span> IndexNow 推送 6/6 HTTP 200（当日 00:2x，日志落盘 indexnow-2026-08-08.log）</li>
+    <li><span class="ok">✔</span> push 75c4c88 → 线上 sitemap 3 分钟内从 531（含 199 重复）变为 338，6 blog 全 OK</li>
+    <li><span class="ok">✔</span> 线上 robots.txt：GPTBot/ClaudeBot/PerplexityBot/Google-Extended 全部放行</li>
+    <li><span class="ok">✔</span> git 工作区干净，无凭证/密钥入库（.hermes/secrets 仍 gitignore）</li>
+  </ul>
+
+  <div class="foot">生成时间：2026-08-08 00:35 (GMT+8) · 仓库：zprintprohk-rgb/aitoptools · 本报告为执行记录，数据均来自本次实测</div>
+</div>
+</body>
+</html>

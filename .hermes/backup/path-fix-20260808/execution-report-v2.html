@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aitoptools 8/8 执行报告 v2 — sitemap 补裂缝 + v2 指令集落地</title>
+<style>
+  :root { --ink:#17201c; --paper:#FAF7F2; --green:#0b5f59; --amber:#c97b2d; --muted:#4a5568; --line:rgba(23,32,28,.12); }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; background:var(--paper); color:var(--ink); line-height:1.7; padding:40px 20px; }
+  .wrap { max-width:920px; margin:0 auto; }
+  h1 { font-size:26px; margin-bottom:4px; }
+  .sub { color:var(--muted); font-size:14px; margin-bottom:28px; }
+  h2 { font-size:19px; margin:36px 0 14px; padding-left:12px; border-left:4px solid var(--green); }
+  h3 { font-size:15px; margin:20px 0 8px; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 6px; font-size:14px; background:#fff; }
+  th,td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:#f0ece4; font-weight:600; }
+  .ok { color:var(--green); font-weight:600; }
+  .warn { color:var(--amber); font-weight:600; }
+  .bad { color:#b3261e; font-weight:600; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin:12px 0; }
+  .metrics { display:flex; gap:12px; flex-wrap:wrap; margin:14px 0; }
+  .metric { flex:1; min-width:150px; background:#fff; border:1px solid var(--line); border-radius:8px; padding:14px 16px; text-align:center; }
+  .metric .num { font-size:26px; font-weight:700; color:var(--green); }
+  .metric .lbl { font-size:12px; color:var(--muted); }
+  code { background:#efece4; padding:1px 6px; border-radius:4px; font-size:13px; }
+  .tag { display:inline-block; background:#e8f0ee; color:var(--green); font-size:12px; padding:1px 8px; border-radius:10px; margin-right:6px; }
+  .foot { margin-top:40px; color:var(--muted); font-size:12px; }
+  ul { padding-left:22px; }
+  li { margin:4px 0; }
+  .divider { border:none; border-top:1px solid var(--line); margin:36px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>aitoptools 8/8 执行报告 v2</h1>
+  <div class="sub">v1: P0 补裂缝（sitemap）· v2: 指令集落地（定时任务 / 队列 / 素材链 / 安全铁律核查）</div>
+
+  <div class="metrics">
+    <div class="metric"><div class="num">338</div><div class="lbl">线上 sitemap URL（332 唯一 + 6 blog）</div></div>
+    <div class="metric"><div class="num">6/6</div><div class="lbl">IndexNow 增量推 HTTP 200</div></div>
+    <div class="metric"><div class="num">4</div><div class="lbl">定时任务已注册（OpenClaw cron）</div></div>
+    <div class="metric"><div class="num">3</div><div class="lbl">硬阻塞待 user 补录（2 cookie + 1 密码）</div></div>
+  </div>
+
+  <h2>一、v1 结果回顾（00:2x 已执行并验证）</h2>
+  <table>
+    <tr><th>任务</th><th>结果</th><th>验证</th></tr>
+    <tr><td>sitemap 补跑</td><td class="ok">338 URL = 332 旧唯一 + 6 blog，0 丢失；顺带清 199 重复</td><td>本地 + 线上均 338，6 blog 全 OK</td></tr>
+    <tr><td>IndexNow 增量推</td><td class="ok">6 篇 blog 全部 HTTP 200</td><td>api.indexnow.org 200，日志落盘</td></tr>
+    <tr><td>robots.txt 回归修复</td><td class="ok">AI 爬虫段恢复（脚本 bug 修复 + 线上验证 4 段 True）</td><td>GPTBot/ClaudeBot/PerplexityBot/Google-Extended</td></tr>
+    <tr><td>本地构建 + push</td><td class="ok">build exit 0（126 页）；commit 75c4c88 → 75c4c88 线上生效</td><td>线上 sitemap 3 分钟内更新</td></tr>
+  </table>
+
+  <h2>二、v2 指令集执行结果（00:45 批）</h2>
+
+  <h3>2.1 状态核查结论（Hermes browser-auto-2026-08-08.md 实证）</h3>
+  <table>
+    <tr><th>项</th><th>状态</th><th>证据</th></tr>
+    <tr><td>Printify promo 回信</td><td class="ok">已发出</td><td>Message-ID &lt;178612007459.38260.17414933324366495799@aitoptools.net&gt;，留证 .hermes/tmp/printify-sent.txt；8/11 检查回复</td></tr>
+    <tr><td>Printful verify 链接</td><td class="warn">已过期实锤</td><td>IMAP 重跑 2 封 confirm 邮件（7/17 + 7/20 同 token）；headless GET → 302 login + "Email confirmation request does not exist"</td></tr>
+    <tr><td>4 脚本编译</td><td class="ok">py_compile 全过</td><td>fetch/read_affiliate_mails + submit-gsc-sitemap + submit-indexnow，exit 0</td></tr>
+    <tr><td>安全铁律 + audit</td><td class="ok">已在 AGENTS.md + .hermes/audit/ 建</td><td>Hermes 8/7 追加 5 条（与 v2 规格一致，未重复追加）；checksum 文件 2026-08-08.sha256 在</td></tr>
+  </table>
+
+  <h3>2.2 定时任务注册（OpenClaw cron，保证调度）</h3>
+  <table>
+    <tr><th>任务</th><th>触发</th><th>职责</th><th>自清理</th></tr>
+    <tr><td>weekly-report-baseline</td><td>8/9 08:00</td><td>四块模板 → .hermes/reports/weekly-2026-08-09.md；后处理写 Data-Driven/Boost Queue</td><td>幂等检查（文件已存在即跳过）</td></tr>
+    <tr><td>halloween-chain</td><td>8/10 10:00</td><td>前置检查 → 设计（素材 [0:2]）→ 下单（$25/单 $50/日 硬限）</td><td>缺前置 → blocked + user 清单</td></tr>
+    <tr><td>gsc-mining-daily</td><td>每日 13:00</td><td>mining（展示≥10 无专页→队列）+ boosting（排名 20-70→内链/FAQ/pin）</td><td>幂等追加不重复</td></tr>
+    <tr><td>printful-verify-watcher</td><td>每时 8-22</td><td>cookie 就绪 → 自动重发 verify → 更新 SSoT → 换跟踪链；未就绪 → NOOP</td><td>email_verified=true 或 8/15 后 → 自删</td></tr>
+  </table>
+
+  <h3>2.3 文件落地</h3>
+  <ul>
+    <li><span class="ok">✔</span> CONTENT_PLAN.md：+Data-Driven Queue +Boost Queue 段（P3 消费/追加）</li>
+    <li><span class="ok">✔</span> halloween-asset-chain.md：时间线对齐 v2 关键路径（8/10 设计 → 8/11 下单 → 8/15 拍照 → 8/18 支柱帖）+ 预算/平台/照片 fallback 参数</li>
+    <li><span class="ok">✔</span> .hermes/cron-prompts/：3 张任务卡（printful-verify-resend / halloween-chain / gsc-mining-daily）</li>
+    <li><span class="ok">✔</span> 目录就位：.hermes/reports/（周报输出）、.hermes/assets/cf-halloween-2026-08-07/（素材输入）</li>
+    <li><span class="ok">✔</span> AFFILIATE_LOG.md：8/8 条目（Message-ID 留证、过期实锤、硬阻塞清单）</li>
+    <li><span class="ok">✔</span> 本地 commit 38e2ba2（攒批，未 push — 今日已用紧急推送额度）</li>
+  </ul>
+
+  <h2>三、硬阻塞与你的解锁清单（唯一卡点）</h2>
+  <table>
+    <tr><th>#</th><th>缺什么</th><th>放哪</th><th>解锁后</th></tr>
+    <tr><td class="warn">1</td><td>Printful Dashboard session cookie</td><td>.hermes/secrets/printful_session_cookie</td><td>watcher 每小时检测 → 自动重发 verify → 第 2 个 payout-ready 渠道</td></tr>
+    <tr><td class="warn">2</td><td>Pinterest session（发布 8/8 09:00 任务被阻）</td><td>.hermes/secrets/pinterest_session + pin 图片素材（当前 ready-to-post 仅设计建议无 PNG）</td><td>pin 自动化发布恢复</td></tr>
+    <tr><td class="warn">3</td><td>gmail_credentials.json app_password 已失效（AUTHENTICATIONFAILED）</td><td>重新生成 Google App Password 更新该文件</td><td>affiliate-monitor cron 恢复正常（Hermes 暂用 .env IMAP_PASSWORD 兜底）</td></tr>
+  </table>
+
+  <div class="card">
+    <p><span class="tag">边界说明</span><strong>Hermes 不代做登录/敏感操作 = 设计正确性</strong></p>
+    <p>cookie 由你补录后，重发验证、跟踪链替换、pin 发布等全部自动化；支付操作一律受安全铁律约束（二次确认 + 预算硬限）。补录 2 个 cookie + 1 个密码 ≈ 5-10 分钟。</p>
+  </div>
+
+  <h2>四、后续节奏（已排程，无需人工干预）</h2>
+  <ul>
+    <li>8/9 08:00 weekly-report 首份基线（四块模板）→ 数据驱动选题权重切换</li>
+    <li>8/10 10:00 Halloween 设计+下单触发（前置缺 → blocked 清单）</li>
+    <li>8/11 Kittl 实测日 + Printify 回复检查（72h）</li>
+    <li>8/14 T+7 首读数 → is-magicdrop-legit 信任锚点评估 + Placeit 催批</li>
+    <li>8/18 Halloween 集群上线截止</li>
+  </ul>
+
+  <hr class="divider">
+  <div class="foot">生成时间：2026-08-08 01:05 (GMT+8) · 仓库：zprintprohk-rgb/aitoptools · 数据均来自本次实测（browser-auto 日志 / 线上抓取 / 构建产物）</div>
+</div>
+</body>
+</html>
