@@ -1,0 +1,32 @@
+{
+  "task": "unlock_full_pipeline",
+  "executor": "AutoClaw (main session)",
+  "timestamp": "2026-08-08T01:52:00+08:00",
+  "results": {
+    "step_1_printful_cookie": {
+      "status": "BLOCKED_NEED_EXTENSION",
+      "detail": "AutoGLM browser extension not installed in Chrome 150 (checked all profiles). Browser automation unavailable. No password stored in affiliate-credentials.md (K3 1Password). User options: A) install AutoGLM extension (2min) then AutoClaw auto-extracts; B) manual F12 cookie copy to .hermes/secrets/printful_session_cookie.txt"
+    },
+    "step_2_pinterest_session": {
+      "status": "BLOCKED_NEED_EXTENSION",
+      "detail": "Same as step_1. No pinterest credentials found in affiliate-credentials.md. Output: .hermes/secrets/pinterest_session.txt"
+    },
+    "step_3_gmail_app_password": {
+      "status": "PASS",
+      "detail": "gmail_credentials.json auto-fixed: app_password sourced from AppData/Local/hermes/.env IMAP_PASSWORD (file password was AUTHENTICATIONFAILED), IMAP login verified OK via SOCKS5 proxy 127.0.0.1:7892, imap_requires_proxy=true added"
+    },
+    "step_4_gsc_oauth": {
+      "status": "BLOCKED_NO_GSC_OAUTH",
+      "detail": "No gsc-oauth.json, no GSC_SERVICE_ACCOUNT env, no Google Cloud project config found. Data pipeline degrades to local gsc_data.csv / keywords-200.csv. User optional action: create Service Account JSON -> .hermes/secrets/gsc-oauth.json"
+    },
+    "step_5_validation": {
+      "status": "RUN_LATER",
+      "detail": "validate_session_cookies.py re-run required after cookie files land; baseline (AWAITING-SUBMISSION x2) already recorded in .hermes/logs/session-validation-2026-08-08.md"
+    }
+  },
+  "summary": "1 PASS (Gmail) / 1 BLOCKED_NO_GSC_OAUTH (degradable) / 2 BLOCKED_NEED_EXTENSION (Printful+Pinterest, need AutoGLM extension install or manual cookie copy)",
+  "next_actions": [
+    "User: install AutoGLM Chrome extension (https://chromewebstore.google.com/detail/autoglm/jelniggicmclhfgnlapbkgfibmgelfnp) OR manually copy printful/pinterest cookies",
+    "AutoClaw: after cookies land, re-run validate_session_cookies.py then printful-verify-watcher fires automatically"
+  ]
+}
