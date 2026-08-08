@@ -3,3 +3,8 @@ www.aitoptools.net/* https://aitoptools.net/:splat 301
 
 # Redirect pages.dev to main domain
 *.pages.dev/* https://aitoptools.net/:splat 301
+
+# 8/8 404 修复: 外部错误引用重定向 (reviews 前缀 + 猜测分类)
+/reviews/* https://aitoptools.net/:splat 301
+/category/web-hosting/ https://aitoptools.net/category/ai-ecommerce/ 301
+/category/ai-product-photography/ https://aitoptools.net/category/ai-image/ 301
