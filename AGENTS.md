@@ -208,3 +208,7 @@
 - **调度时间一律避开高峰期**: 批量任务落 18:00-08:00 夜间窗口或 12:05-13:30 午间窗口; 避开整点/半点, 用 7-23 或 37-53 分
 - **当前状态 (2026-08-08)**: AutoClaw 4 个合并 cron (daily-ops 12:17 / daily-search 19:23 / weekly-review 周日 07:47 / seasonal-exec 8/10+8/18 19:37), 旧 10 个已删; 详见 .hermes/logs/cron-merge-20260808.md
 - Hermes 侧 aitoptools-daily-content (13:30) 仍在 MiniMax app 内运行 → 并存期由 AutoClaw 幂等检查 (SKIPPED_HERMES_ALREADY_DONE) 兜底; 8/12 切换检查后建议停用
+
+- **cron 名称一律中文命名** (作用+功能, 不用英文缩写/代号), 如: 每日联盟运营 / 每日搜索增长 / 每周复盘 / 季节集群执行
+- **合并 cron 后必须立即删除被替代的旧任务**, 不得遗留重复条目; 清理后向 user 汇报最终清单确认
+- **App 面板残留说明**: gateway 删除即生效, 面板旧条目为 UI 缓存, 刷新即消失 (无需重复删除)
