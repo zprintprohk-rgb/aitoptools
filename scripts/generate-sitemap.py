@@ -112,7 +112,7 @@ def main():
 
     # Write robots.txt
     robots = (
-        '# Explicitly welcome AI crawlers — this site's content is meant to be cited.\n'
+        "# Explicitly welcome AI crawlers — this site's content is meant to be cited.\n"
         'User-agent: GPTBot\nAllow: /\n\n'
         'User-agent: ClaudeBot\nAllow: /\n\n'
         'User-agent: PerplexityBot\nAllow: /\n\n'

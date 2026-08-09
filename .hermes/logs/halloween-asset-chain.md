@@ -42,3 +42,11 @@
 - .hermes/assets/cf-halloween-2026-08-07/ = **0 文件** (user 尚未从 CF 下载)
 - 影响: 8/10 seasonal-exec 将 blocked (素材为 design 前置)
 - 动作: user 在 8/10 前从 CF 邮件下载 (清单 .hermes/logs/cf-freebies/2026-08-07.md, 建议 Gothic Skull Rose + Coquette Halloween)
+## 8/9 每日 brief
+- 8/9 weekly-report 首跑基线读数: ✅ 完成 (cron 07:47, 产物 .hermes/reports/weekly-2026-08-09.md, commit 9505612 16:58)
+- 素材池新增 (8/9 CF 邮件, affiliate-monitor 16:3x 解析): +5 🎃 (Fall Halloween Sublimation Bundle / 32 Cute Halloween Ghost Pngs / Spooky Halloween Shop Clipart / Vintage Halloween Ghost Witch / Spooky Pumpkin Chase) → 4 天累计 19 🎃
+- 8/11 Kittl 实测首选更新: affiliate-monitor 建议 **Fall Halloween Sublimation Bundle** (8/9 主推) 并列 Gothic Skull Rose (8/7 主推); 实测日二选一或都用
+- 8/10 设计阶段前置复查: assets/cf-halloween-2026-08-07/ 仍 **0 文件** (user 未下载) + test-address.json 缺失 → 8/10 seasonal-exec 预期仍 BLOCKED, 已提醒 user
+## 8/9 晚间 (Hermes daily-content 19:45)
+- 🎃 支柱 blog《25 Halloween POD Ideas for 2026》**提前 6 天上线** (原排期 8/15): src/data/blog-posts.json + build 346 页 + IndexNow 200; 主 CTA Claid / 副 CTA Printful; 2790 字, 内含 8/9 免费素材表 (Fall Halloween Sublimation Bundle 等 5 项) — 8/11 Kittl 实测可直接引用该文素材链接
+- 素材下载仍是唯一阻塞点: .hermes/assets/cf-halloween-2026-08-07/ = 0 文件, 待 user 下载 → 8/10 seasonal-exec 状态维持 BLOCKED

@@ -89,20 +89,29 @@
       "name": "Printful Affiliate Program",
       "network": "Impact",
       "commission": "$150+/sale",
-      "status": "approved",
+      "status": "active",
       "approved_date": "2026-07-20",
-      "verification": "verify-link-expired-2026-08-08 (headless browser 实测: printful.com/auth/login 页 alert \"Email confirmation request does not exist\"; 7/17+7/20 两封同 token 均已失效), resend-pending-cookie",
+      "verification": "8/8 实证: 无验证流程 (in-house 系统 internal account 跳过邮箱验证), email_verified=true; 旧 verify-link-expired/resend-pending-cookie 表述作废 (2026-08-09 daily-ops 对齐 SSoT)",
       "my_link_printful": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
       "signup_url": "https://www.printful.com/affiliates",
-      "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json printful.com). 10% x 12 months + bonus campaigns ($50 at $5000 sales, $25 for 5 ordering customers). Confirmation email still in Gmail — unconfirmed (Gmail channel offline). 7/29 12:30 replace_affiliate_links.py --apply 上线 (claid 10 / printful 36 / printify 21 HTML 命中,build PASS),verification 待 user 浏览器确认邮箱后改 email-confirmed-7/xx 8/5 修复: affiliates.json + tools/printful.json 中 15297661:*** 脱敏泄漏 (线上 out/ 55 文件 110+ 坏链), 已改回真链, 待下次 build+push 生效. 8/6 P0-2 修正: 确认邮件并非不存在 — 7/20 17:00 support@info.printful.com 'Confirm email address' 已在 Gmail 定位, 此前 'email-unconfirmed' 是脚本查询窗口 (SINCE 30-Jul) 太窄的误判。链接待 user 手动点击 (或已过期需重发)。 8/6 IMAP 全量确认: 获批邮件 7/20 09:50 (非 7/24), 同日 17:00 确认邮件. Impact 系统邮件 Gmail 0 封 (可能走 Outlook 副邮箱).",
+      "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json printful.com). 10% x 12 months + bonus campaigns ($50 at $5000 sales, $25 for 5 ordering customers). Confirmation email still in Gmail — unconfirmed (Gmail channel offline). 7/29 12:30 replace_affiliate_links.py --apply 上线 (claid 10 / printful 36 / printify 21 HTML 命中,build PASS),verification 待 user 浏览器确认邮箱后改 email-confirmed-7/xx 8/5 修复: affiliates.json + tools/printful.json 中 15297661:*** 脱敏泄漏 (线上 out/ 55 文件 110+ 坏链), 已改回真链, 待下次 build+push 生效. 8/6 P0-2 修正: 确认邮件并非不存在 — 7/20 17:00 support@info.printful.com 'Confirm email address' 已在 Gmail 定位, 此前 'email-unconfirmed' 是脚本查询窗口 (SINCE 30-Jul) 太窄的误判。链接待 user 手动点击 (或已过期需重发)。 8/6 IMAP 全量确认: 获批邮件 7/20 09:50 (非 7/24), 同日 17:00 确认邮件. Impact 系统邮件 Gmail 0 封 (可能走 Outlook 副邮箱). 8/9 daily-ops: 按 8/8 实证对齐 SSoT (email_verified=true / status=active / tax_status=w8ben-e-generated-not-signed Pending), 解除旧 BLOCKER 表述; tax-audit 结果见 monitoring.",
       "link_deployed": true,
       "confirm_email_found": true,
       "confirm_email_date": "2026-07-20T17:00:38Z",
       "confirm_email_sender": "support@info.printful.com",
       "confirm_email_subject": "Confirm email address",
       "confirm_link_note": "8/8 Hermes 全权指令 #1: IMAP 实拉两封 Confirm email address (7/17 15:25Z, 7/20 17:00Z, 同 token), headless GET verify 链接 -> 重定向 auth/login + \"Email confirmation request does not exist\" = 已过期。需 printful_session_cookie 登录后台 Resend verification -> 轮询新邮件(3 次/60s) -> 重试。",
-      "last_updated": "2026-08-08",
-      "approval_email_found": "2026-07-20 09:50Z affiliate@info.printful.com Your affiliate application was approved!"
+      "last_updated": "2026-08-09",
+      "approval_email_found": "2026-07-20 09:50Z affiliate@info.printful.com Your affiliate application was approved!",
+      "email_verified": true,
+      "tax_status": "w8ben-e-generated-not-signed-pending (8/9 browser 实证: Pending 待审, <=3 工作日, Edit 可用)",
+      "tax_audit": {
+        "checked": "2026-08-09",
+        "method": "autoglm browser (AutoGLM 1.1.8, user Chrome 会话)",
+        "url": "https://www.printful.com/dashboard/affiliate/tax",
+        "result": "pending-review",
+        "detail": "Form W-8BEN-E (W-8BEN-E.pdf) 状态 Pending; 页面提示 documents reviewed in up to 3 business days; Edit/delete 可用; 黄框提示需填第4/5行后签名上传"
+      }
     },
     {
       "name": "Mockey AI Affiliate Program",
@@ -242,11 +251,11 @@
     }
   ],
   "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
-  "last_updated": "2026-08-08 (affiliate-monitor cron; IMAP 凭证修复后首跑; 0 新邮件)",
+  "last_updated": "2026-08-09 16:5x (daily-ops 合并 cron; 按 8/8 实证对齐 Printful SSoT)",
   "monitoring": {
     "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
     "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
-    "next_action": "Printful 后台重发确认邮件需 printful_session_cookie (user 装 AutoGLM 扩展或 F12 手动复制); Printify promo code 回复 8/11 检查",
+    "next_action": "tax-audit 复核 8/12 (W-8BEN-E Pending <=3 工作日); Printify promo 8/11 检查; Placeit 8/14 催办; (可选) user 登录 Impact 后续查 Kittl/Placeit tax",
     "last_live_check": "2026-08-08 01:49 IMAP login OK via SOCKS5; SINCE 90d 拉取 445 封, 过滤 61 封, 24h 无过滤扫描 15 封 — 0 新联盟邮件",
     "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
     "network_diag_5_19": {
@@ -504,6 +513,48 @@
       "p2_count_24h": 11,
       "p2_notes": "维持暂缓. Supabase zprintpro 暂停 (跨项目提醒). Google 8/3 20:43 Microsoft 授权 (非自主动作, 已 3 天无反馈, 降 P2).",
       "conclusion": "0 新审批. Printful 坏链 P0 已随 8/6 攒批上线 (线上字节级验证真链). 新 P0: NordVPN 裸链 (数据已修待 push). Printful 邮箱确认 D17 仍唯一 user 行动项."
+    },
+    "high_signal_findings_24h_8_8_14_2x": {
+      "as_of": "2026-08-08 14:20",
+      "status": "RESTORED — IMAP 独立扫描 92 封 (SINCE 29-Jul), 0 新审批",
+      "new_findings": {
+        "cf_free_picks_8_8": {
+          "date": "2026-08-08 05:54 CST",
+          "from": "hi@creativefabrica.com",
+          "subject": "Today's free picks: Wildlife Bear, Rustic Forest Bear Head & 19 more",
+          "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-08.md. 万圣节素材: Trending Halloween Dog / Spooky Treats / Skeletons Dancing / Sweet And Twisted (暗黑甜点系, 边缘归类). 素材池连续 3 天 (8/6-8/8) 积累 ≥10 个 🎃, 远超 Halloween 辐条①门槛."
+        }
+      },
+      "p0_count_24h": 1,
+      "p0_notes": "Printful 邮箱确认 — 唯一未激活项. 7/20 确认链接已过期 (8/8 00:50 headless 实测 'Email confirmation request does not exist'), 后台重发被阻 = printful_session_cookie 缺失. user 二选一: A) 装 AutoGLM Chrome 扩展 (2min) → AutoClaw 自动提取; B) 手动 F12 复制 cookie → .hermes/secrets/printful_session_cookie.txt → watcher (每时 8-22) 自动重发.",
+      "p1_count_24h": 2,
+      "p1_notes": "Printify promo code 回复检查 (8/11, 回信 8/8 00:27 已发, SMTP 465 留证) / Placeit Impact pending (8/14 超期催办草稿已就绪, 当天评估发送).",
+      "p2_count_24h": 7,
+      "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai, K3 7/30 拍板等 Kittl 跑通) / PartnerStack Network 重试待 user 拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目).",
+      "conclusion": "0 新审批 (SINCE 29-Jul 92 封全量核实). CF freebie 8/8 解析完成 (20 素材). 唯一 P0 = Printful cookie 阻塞不变. Printify promo 回信已发, 8/11 查回复. Placeit 8/14 触发催办."
+    },
+    "high_signal_findings_24h_8_9": {
+      "as_of": "2026-08-09 16:3x",
+      "status": "RESTORED — IMAP 独立扫描 23 封 (SINCE 08-Aug), 0 新审批 / 0 新商户邮件",
+      "new_findings": {
+        "cf_free_picks_8_9": {
+          "date": "2026-08-08 23:24 (提前到达, 常规 ~05:54 CST)",
+          "from": "hi@creativefabrica.com",
+          "subject": "Today's free picks: Fall Halloween Sublimation Bundle & 19 more",
+          "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). UID 640, 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-09.md. 万圣节素材 x5: Fall Halloween Sublimation Bundle / 32 Cute Halloween Ghost Pngs / Spooky Halloween Shop Clipart / Vintage Halloween Ghost Witch / Spooky Pumpkin Chase. 素材池 4 天累计 19 🎃, 远超 Halloween 辐条①门槛; 8/11 Kittl 实测建议用 Fall Halloween Sublimation Bundle (升华烫画 = Kittl 主要场景)."
+        }
+      },
+      "p0_count_24h": 1,
+      "p0_notes": "Printful 邮箱确认 — 唯一未激活项 (D20). 7/20 确认链接已过期 (8/8 headless 实测), 后台重发被阻 = printful_session_cookie 缺失. user 二选一: A) 装 AutoGLM Chrome 扩展 (2min) → AutoClaw 自动提取; B) 手动 F12 复制 cookie → .hermes/secrets/printful_session_cookie.txt → watcher (每时 8-22) 自动重发.",
+      "p1_count_24h": 2,
+      "p1_notes": "Printify promo code 回复检查 (8/11, 回信 8/8 00:27 已发; 今日无回复属正常 — 未到检查窗口) / Placeit Impact pending (8/14 超期催办, 草稿 drafts/placeit-followup-email.md 就绪, 8/14 当天评估).",
+      "p2_count_24h": 7,
+      "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai, K3 7/30 拍板等 Kittl 跑通) / PartnerStack Network 重试待 user 拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目). 今日 23 封噪音 = togthr CI 失败 x12 (跨项目) + GSC 通知 x7 (zprintpro/togthr, 跨项目) + LinkedIn 1.",
+      "conclusion": "0 新审批 (SINCE 08-Aug 23 封全量核实). CF freebie 8/9 解析完成 (20 素材, 5 🎃). 唯一 P0 = Printful cookie 阻塞不变 (D20). Printify promo 回复未到 (正常, 8/11 检查). Placeit 8/14 触发催办."
+    },
+    "tax_audit_8_9": {
+      "printful": "PENDING (browser 实证, NOOP per protocol)",
+      "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; W-8 不适用佐证 8/1, 余额<)"
     }
   },
   "pending_applications_aging": {
@@ -602,6 +653,16 @@
     "1_printful_cookie": "BLOCKER — 7/20 确认链接已过期 (8/8 00:50 headless 实测 'Email confirmation request does not exist'), 后台重发被阻. 两条路: A) 装 AutoGLM Chrome 扩展 (2min) → AutoClaw 自动提取; B) 手动 F12 复制 cookie → .hermes/secrets/printful_session_cookie.txt. 落地后 printful-verify watcher (每时 8-22) 自动重发",
     "2_printify_promo_code": "RESOLVED 2026-08-08 00:27 — 回信已发 (SMTP 465, Message-ID <178612007459.38260.17414933324366495799@aitoptools.net>), 8/11 检查回复",
     "3_pinterest_scheduler": "not-configured (P2, 不影响佣金) — 同 cookie 方案可一并处理 .hermes/secrets/pinterest_session.txt",
-    "4_gsc_oauth": "optional — gsc-oauth.json 缺失 (数据管线降级为本地 csv, 不影响联盟佣金)"
+    "4_gsc_oauth": "optional — gsc-oauth.json 缺失 (数据管线降级为本地 csv, 不影响联盟佣金)",
+    "_second_scan_14_2x": "CF freebie 8/8 解析落盘 (20 素材, 4 🎃 含边缘归类 Sweet And Twisted); 0 新审批; P0 仍 = Printful cookie"
+  },
+  "manual_checklist_2026_08_09": {
+    "generated_by": "aitoptools-affiliate-monitor cron 2026-08-09 16:3x (IMAP 实拉 + 文件核查)",
+    "1_printful_cookie": "RESOLVED-2026-08-09 (8/8 实证: email_verified=true, 无验证流程; 旧 BLOCKER 表述作废) — 税务项见 5_tax_audit",
+    "2_printify_promo_code": "AWAITING-REPLY — 回信 8/8 00:27 已发, 8/11 检查回复 (monitor cron 已覆盖 mail.printify.com)",
+    "3_pinterest_scheduler": "not-configured (P2, 不影响佣金) — 同 cookie 方案可一并处理 .hermes/secrets/pinterest_session.txt",
+    "4_gsc_oauth": "optional — gsc-oauth.json 缺失 (数据管线降级为本地 csv, 不影响联盟佣金)",
+    "_cf_freebie_8_9": "CF freebie 8/9 解析落盘 (20 素材, 5 🎃, 提前 23:24 到达); 0 新审批; P0 仍 = Printful cookie",
+    "5_tax_audit": "NOOP-pending (8/9 autoglm 实证: Printful W-8BEN-E Pending 待审, <=3 工作日; 复核窗口 8/12); Impact 需 user 登录后复查 (低优先)"
   }
 }

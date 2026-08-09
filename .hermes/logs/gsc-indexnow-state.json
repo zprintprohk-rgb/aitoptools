@@ -1,37 +1,37 @@
 {
- "schema": 1,
- "doc": "sitemap submission state for gsc/indexnow cron. last_submitted_* stays null until first successful submission.",
- "last_submitted_mtime": "2026-08-08T00:20:21",
- "last_submitted_hash": "15417654FDDF5A920908A98835F610EA2C2CB7AAD591B97335C0FDD9CCF8CE17",
- "last_seen": {
-  "public/sitemap.xml": {
-   "mtime": "2026-08-08T00:20:21",
-   "bytes": 41825,
-   "sha256": "15417654FDDF5A920908A98835F610EA2C2CB7AAD591B97335C0FDD9CCF8CE17"
+  "schema": 1,
+  "doc": "sitemap submission state for gsc/indexnow cron. last_submitted_* stays null until first successful submission.",
+  "last_submitted_mtime": "2026-08-08T20:21:04",
+  "last_submitted_hash": "1D71C11F973B6B56D51CD9637D4E43CED50FDD5C39B6BB6CACA82798225B91C8",
+  "last_seen": {
+    "public/sitemap.xml": {
+      "mtime": "2026-08-08T20:21:04",
+      "bytes": 41954,
+      "sha256": "1D71C11F973B6B56D51CD9637D4E43CED50FDD5C39B6BB6CACA82798225B91C8"
+    },
+    "public/sitemap-programmatic.xml": {
+      "mtime": "2026-08-05T10:44:41",
+      "bytes": 27727,
+      "sha256": "DC9FB3558CC65B62B58318CBF56D6CED2B3B8D458A5EB86A10CC074D13371E98"
+    },
+    "out/sitemap.xml": {
+      "mtime": "2026-08-08T20:21:04",
+      "bytes": 41954,
+      "sha256": "1D71C11F973B6B56D51CD9637D4E43CED50FDD5C39B6BB6CACA82798225B91C8"
+    },
+    "out/sitemap-programmatic.xml": {
+      "mtime": "2026-08-05T10:44:41",
+      "bytes": 27727,
+      "sha256": "DC9FB3558CC65B62B58318CBF56D6CED2B3B8D458A5EB86A10CC074D13371E98"
+    }
   },
-  "public/sitemap-programmatic.xml": {
-   "mtime": "2026-08-05T10:44:41",
-   "bytes": 27727,
-   "sha256": "dc9fb3558cc65b62b58318cbf56d6ced2b3b8d458a5eb86a10cc074d13371e98"
-  },
-  "out/sitemap.xml": {
-   "mtime": "2026-08-05T10:44:41",
-   "bytes": 68832,
-   "sha256": "74c9c4a96b3fc79c0c29931a1fdf6e602cac4474842f93c87b991b9ade04c483"
-  },
-  "out/sitemap-programmatic.xml": {
-   "mtime": "2026-08-05T10:44:41",
-   "bytes": 27727,
-   "sha256": "dc9fb3558cc65b62b58318cbf56d6ced2b3b8d458a5eb86a10cc074d13371e98"
-  }
- },
- "last_run": "2026-08-08T01:51:39",
- "last_run_status": "autoclaw 2026-08-08 复查: no-new-urls (Hermes 00:21 已推 6 blog 6/6 200, sitemap 338 URL), gsc-pending(oauth missing), mining=static-fallback no-qualifying, boost=existing-row-only",
- "indexnow_submitted": true,
- "gsc_submitted": false,
- "indexnow_first_full_push": "2026-08-06",
- "indexnow_urls_pushed": 332,
- "indexnow_status_200": 332,
- "indexnow_key_file": ".hermes/secrets/indexnow-key.txt",
- "last_check_hash_match": true
+  "last_run": "2026-08-09T16:33:39",
+  "last_run_status": "hermes 12:40 cron: sitemap changed (+1 blog URL best-free-creative-fabrica-assets-this-week), indexnow pushed 339 URLs HTTP 200; gsc-pending(oauth missing)",
+  "indexnow_submitted": true,
+  "gsc_submitted": false,
+  "indexnow_first_full_push": "2026-08-06",
+  "indexnow_urls_pushed": 339,
+  "indexnow_status_200": 339,
+  "indexnow_key_file": ".hermes/secrets/indexnow-key.txt",
+  "last_check_hash_match": false
 }

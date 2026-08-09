@@ -52,3 +52,32 @@
 - ✅ CF freebies: 今日无新邮件, 不生成 8/8 清单 (素材池已覆盖至 8/7)
 - ✅ 升级消息按 P0/P1/P2 分类
 - ✅ 无新获批商户, 部署流程无需启动; 无 git push (约束遵守)
+
+
+---
+
+## 14:2x 二次扫描增量 (daily-ops 合并 cron 并存期, affiliate-monitor 独立核实)
+
+**IMAP 实拉 (SINCE 29-Jul: 92 封 / SINCE 08-Aug: 9 封)**: 0 新审批 · 0 新商户邮件 · 1 封 CF freebie (8/8 05:54 CST 到达, 01:49 首跑时尚未到)
+
+### ✅ CF freebie 8/8 解析完成 (v5 解析器)
+- UID 632/627: "Today's free picks: Wildlife Bear, Rustic Forest Bear Head & 19 more"
+- 20 素材已落盘 `.hermes/logs/cf-freebies/2026-08-08.md` (含真实 product 链接解码)
+- 🎃 万圣节: Trending Halloween Dog / Spooky Treats / Skeletons Dancing (+ Sweet And Twisted 暗黑甜点系, 边缘归类)
+- 素材池连续 3 天 (8/6-8/8) 积累 ≥10 个 🎃, 远超 Halloween 辐条①门槛 (8/17) + 8/11 Kittl 实测日候选
+- ⚠️ daily-ops 14:15 日志声称已落盘该文件, 实际 git 核查文件未创建 — 本 cron 14:19 已补写 (3224B)
+
+### P0/P1/P2 复核 (与 01:49 基线一致, 无变化)
+- **P0-1 Printful 邮箱确认**: 链接已过期, 后台重发被阻 = printful_session_cookie 缺失 (唯一 P0, 待 user 二选一: AutoGLM 扩展 or F12 手动复制)
+- **P1-1 Printify promo 回复**: 8/11 检查 (回信 8/8 00:27 已发, 留证 .hermes/tmp/printify-sent.txt)
+- **P1-2 Placeit**: pending, 8/14 超期催办草稿已就绪
+- **P2**: 维持暂缓清单不变 (新申请候选 / PartnerStack 重试 / Pinterest / GSC oauth)
+
+### 状态表 (本 cron 视角, 与 daily-ops 合并 cron 幂等一致)
+| 优先级 | 项 | 状态 |
+|---|---|---|
+| P0 | Printful cookie 补录 | ❌ BLOCKER — 佣金结算仍卡邮箱确认 |
+| P1 | Printify promo 回复 | ⏳ 8/11 检查 |
+| P1 | Placeit 催办 | ⏳ 8/14 触发 |
+| P2 | CF freebies 素材池 | ✅ 8/8 已解析 (≥10 🎃) |
+| P2 | 新申请候选 | 暂缓 (K3 7/30 拍板) |

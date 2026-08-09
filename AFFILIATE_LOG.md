@@ -308,6 +308,9 @@ M1 复盘 — aitoptools
 |---|---|---|---|---|---|
 | ✅ T0 (8/6 提前完成) | 332 URL (真实唯一数) | **332/332** | 0 | 待验证 | 首次全量推送 200; 此前"730"是重复计数误估 |
 | 8/8 (D2) | 增量 6 URL (blog 补推) | **6/6** | 0 | sitemap 338 URL 已上线 | sitemap 补跑修复 6 篇 Blog 缺失 (332 旧唯一 + 6 blog, 顺带去重 199 重复) |
+| 8/8 (D2 晚) | 增量 1 URL (CF freebie 周更 blog) | **1/1** | 0 | sitemap 339 URL 已上线 | Hermes 19:45 产出 weekly CF freebie post (best-free-creative-fabrica-assets-this-week), sitemap 339 (+1), IndexNow 增量推送 200 |
+| 8/9 (D3) | 全量 339 URL (sitemap 变更后重推) | **339/339** | 0 | sitemap 339 URL 已上线 | 16:33 hermes 12:40 cron: +1 blog URL (best-free-creative-fabrica-assets-this-week) 已含; 本跑复查 hash 匹配 (1D71C1...) 无新增 URL, 不重复推送 |
+| 8/9 (D3 晚) | 增量 1 URL (Halloween 支柱 blog) | **1/1** | 0 | sitemap 340 URL (push 后上线) | Hermes 19:45 产出 halloween-pod-ideas-2026 (8/15 支柱提前 6 天, 去风险), sitemap 340 (+1), IndexNow 增量推送 200 |
 | T+7 (8/14) | 增量 | __ | __ | __ | 首读数: GSC 展示 + IndexNow 计数 |
 | T+30 (9/5) | 增量 | __ | __ | __ | 路线决策点 |
 - 记录人: gsc-indexnow cron (12:40) 每次提交后填; 凭证缺失时填 "blocked_missing_credentials"
@@ -964,3 +967,37 @@ TBD (1 push 整合)
 - 待 user: ① Printful cookie (A: 装 AutoGLM 扩展 2min → 自动提取; B: F12 手动复制 → .hermes/secrets/printful_session_cookie.txt) → watcher 每时 8-22 自动重发确认邮件
 - 观察项: Placeit 8/14 催办草稿就绪 (drafts/placeit-followup-email.md); CF freebie 今日尚未到 (常规 ~11:00 到, 素材池已覆盖 8/7)
 - 跨项目提醒: togthr Deploy to Workers 失败 x4 (8/6-8/8, 非本域) / GSC zprintpro 索引验证邮件 (非联盟)
+
+
+## 2026-08-08 14:15 · daily-ops 增量 (合并 cron 首日二次扫描)
+- 邮件: 今日增量 9 封 (SINCE 08-Aug, SOCKS5 实拉) — **0 新审批 / 0 新商户邮件** (均为 GitHub togthr CI x1 / GSC x7 / CF freebie x1 噪音)
+- **CF freebies 到货**: UID 632 "Today's free picks: Wildlife Bear, Rustic Forest Bear Head & 19 more" (8/8 05:54 CST 到达) — 解析 20 素材, **3 个 🎃 万圣节** (Halloween Dog / Spooky Treats / Skeletons Dancing) + 1 开学季 + 1 圣诞早鸟; 已落盘 .hermes/logs/cf-freebies/2026-08-08.md
+- Printful watcher: email_verified 字段缺省 + 状态异常 (verify-link-expired-2026-08-08) → 检查: printful_session_cookie.txt 仍缺失 → 重发继续阻塞 (唯一 P0, 待 user)
+- tax-audit: tax_status 字段缺省 (条件未触发) → NOOP; 佐证 8/1 Impact 审计 W-8 不适用 (佣金 <$600/年), VAT 已保存
+- ai-crawler-monitor: 无 CF 日志源 (无 API token) → 方法缺失记录, 不告警; robots.txt/llms.txt 放行配置健康
+
+## 2026-08-08 14:2x · 联盟监控二次扫描 (daily-ops 并存期核实)
+- 邮件: SINCE 29-Jul 92 封 / SINCE 08-Aug 9 封独立核实 — **0 新审批 / 0 新商户邮件**; 新到 1 封 CF freebie (8/8 05:54 CST "Wildlife Bear, Rustic Forest Bear Head & 19 more")
+- **CF freebie 8/8 解析落盘**: .hermes/logs/cf-freebies/2026-08-08.md (20 素材 + 真实 URL 解码; 4 🎃 含边缘归类 Sweet And Twisted). 注: daily-ops 14:15 声称落盘但 git 核查文件未创建, affiliate-monitor 14:19 补写
+- SSoT: affiliate-programs.json 更新 — monitoring.high_signal_findings_24h_8_8_14_2x + last_updated 2026-08-08 14:20
+- P0 不变: Printful cookie 阻塞 (唯一未激活项, 待 user 补录); P1: Printify promo 回复 8/11 / Placeit 8/14; P2 暂缓清单不变
+
+
+## 2026-08-09 · 联盟监控 (cron 16:3x)
+- 邮件: SINCE 08-Aug 23 封独立核实 — **0 新审批 / 0 新商户邮件** (togthr CI 失败 x12 + GSC 通知 x7 + LinkedIn x1 均为噪音)
+- **CF freebie 8/9 已解析**: UID 640 "Fall Halloween Sublimation Bundle & 19 more" (8/8 23:24 提前到达) — 20 素材, **5 🎃 万圣节** (Fall Halloween Sublimation Bundle / 32 Cute Halloween Ghost Pngs / Spooky Halloween Shop Clipart / Vintage Halloween Ghost Witch / Spooky Pumpkin Chase); 落盘 .hermes/logs/cf-freebies/2026-08-09.md; 素材池 4 天累计 19 🎃, 8/11 Kittl 实测建议用 Fall Halloween Sublimation Bundle
+- 链接部署核查: 7 approved-active 全部 link_deployed=true, 0 缺失
+- SSoT: affiliate-programs.json 更新 (last_updated + high_signal_findings_24h_8_9 + manual_checklist_2026_08_09)
+- 待 user: ① Printful cookie (唯一 P0, D20 — A: AutoGLM 扩展 2min / B: F12 手动 → .hermes/secrets/printful_session_cookie.txt) ② Printify promo 回复 8/11 检查 ③ Placeit 8/14 催办 (草稿就绪)
+- 跨项目提醒: togthr Deploy 失败 x12 (8/7-8/8, 非本域) / GSC zprintpro 索引通知 x7 / Supabase zprintpro 暂停 (8/5 已报)
+
+
+## 2026-08-09 16:5x · daily-ops 合并增量 (合并 cron 首日全流程)
+- 邮件: 本次增量扫描 SINCE 08-Aug 25 封 (16:28 已扫 23 封, 无新增) — **0 新批准 / 0 新商户邮件** (噪音: togthr CI 失败 x13 + GSC x7 + LinkedIn x1)
+- **printful-watcher SKIP**: 按 8/8 实证 email_verified=true (无验证流程), status=active; SSoT 对齐, 旧 BLOCKER 表述清除
+- **tax-audit 浏览器实证** (AutoGLM 1.1.8 只读): Printful dashboard/affiliate/tax → W-8BEN-E = **Pending 待审** (≤3 工作日, Edit 可用) → NOOP, 8/12 复核窗口; Impact app.impact.com LOGIN_REQUIRED (不自动登录)
+- **ai-crawler-monitor**: GEO_BLIND NODATA (无 CF Web Analytics/token/access log); robots.txt + llms.txt AI 放行健康
+- SSoT: affiliate-programs.json 更新 (Printful email_verified/status/tax_status + tax_audit 实证; manual_checklist_2026_08_09 项 1 转 RESOLVED, 新增 5_tax_audit)
+- 待 user: 无紧急; [可选] 登录 Impact 一次便于复查 Kittl/Placeit tax; 留意 W-8BEN-E 审核结果 + Printify promo 回信 (8/11)
+- 跨项目: togthr Deploy 失败 x13 (8/7-8/9) / GSC zprintpro+togthr 通知 x7 / Supabase zprintpro 暂停 (均非本域)
+- 无 push (监控任务)

@@ -212,3 +212,10 @@
 - **cron 名称一律中文命名** (作用+功能, 不用英文缩写/代号), 如: 每日联盟运营 / 每日搜索增长 / 每周复盘 / 季节集群执行
 - **合并 cron 后必须立即删除被替代的旧任务**, 不得遗留重复条目; 清理后向 user 汇报最终清单确认
 - **App 面板残留说明**: gateway 删除即生效, 面板旧条目为 UI 缓存, 刷新即消失 (无需重复删除)
+
+## 千问×AutoClaw 交接闭环铁律 (2026-08-09 user 拍板)
+- **角色**: 千问 3.8-Max = 策略大脑 (读结果→分析→写策略→维护 BOARD); AutoClaw = 执行层 (读策略→执行→回写结果); user 只拍板 BOARD、只看结果, 不做复制粘贴中转。
+- **交接目录**: `handoff/` — strategy/ (千问写, AutoClaw 只认日期最新一份) / results/ (AutoClaw 写, RESULT-YYYY-MM-DD.md 一天一文件多 cron 追加) / BOARD.md (user 拍板看板) / PROTOCOL.md (协议全文)。
+- **AutoClaw 义务**: 每个 cron 开跑第一步读 handoff/strategy/ 最新文件执行当日 TASKS; 跑完按 PROTOCOL §3 模板追加 results/RESULT-{日期}.md (含 NORTH-STAR-DATA 段); 无新策略按最近一份+原职责执行; 先查幂等键再动手。
+- **千问义务**: 每日 07:23 cron「每日策略复盘」读昨日 RESULT + .hermes/logs → 写当日 STRATEGY + 更新 BOARD; 仅在有新拍板项/执行缺口/402 告警时打扰 user。
+- **闭环不改变既有铁律**: 不自动登录/发信/付款; 攒批 1 push/天; 低谷窗口调度; 事实核实后才允许内容上线。
