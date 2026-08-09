@@ -14,6 +14,12 @@
 
 ## 执行进展速览（无需动作）
 
+- 8/9 ✅ 三 cron 全跑: 周报正式版 + daily-ops 补跑 (tax-audit W-8 Pending) + daily-search (IndexNow 339/339)
+- 8/9 ✅ 新 blog 上线: best-free-creative-fabrica-assets-this-week (CF 周更帖, sitemap 即推达标)
+- 8/9 ⚠️ RESULT-2026-08-09 漏写 → 已在新策略 T9 要求补写
+- 8/9 ✅ 402 余额事故闭环: 4 cron 全配 deepseek fallback
+## 执行进展速览（无需动作）
+
 - 8/10：高佣金联盟调研 + Halloween 设计启动 + M3 消化计划
 - 8/11：Boost #3（is-magicdrop-legit）+ Kittl 实测
 - 8/12：Printful W-8BEN-E 复核窗（≤3 工作日）
