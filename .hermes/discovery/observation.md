@@ -145,3 +145,12 @@
 - **8/8 新 high/medium**: 0 high + 2 medium (Caspa/Omi — 产品摄影类目补位, 均无公开联盟)
 - **积压 ≥5 天**: 14 个 (7/21 剩 3 草稿已 18 天 + 7/27 4 + 7/28 7) — 连续 4 轮无消化, 红线
 - **G2 源降级建议**: 连续 2 轮 0 新命中, 9 源→8 源改双周检查 (下轮评估)
+
+### 8/10 观察名单更新 (周一 regular 轮, v2.4)
+
+- **总积压**: 44 (41 旧 + 本期新增 3: Printway / StationeryHQ / AI Studio)
+- **积压 ≥5 天**: 17 (+3 vs 8/8) — 连续 5 轮无消化, 未达红线 (next: 8/11 weekly-review 分支出消化节奏)
+- **重要市场事件**: Printful+Printify 合并 = FYUL — aitoptools /compare/printful-vs-printify 页需重新定位 (合并后 2024/11, 全平台运营 2026)
+- **凤凰 (PH Sivi AI)**: low priority — 先观察, 若确认为 POD 垂直则升 medium
+- **G2 源**: 降级为月度检查 (连续 3 轮 0 命中, 此为最终决定)
+- **YouTube/TikTok 源**: 降级为双周检查 (上两轮 0 垂直命中)

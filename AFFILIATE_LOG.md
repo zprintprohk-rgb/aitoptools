@@ -311,6 +311,7 @@ M1 复盘 — aitoptools
 | 8/8 (D2 晚) | 增量 1 URL (CF freebie 周更 blog) | **1/1** | 0 | sitemap 339 URL 已上线 | Hermes 19:45 产出 weekly CF freebie post (best-free-creative-fabrica-assets-this-week), sitemap 339 (+1), IndexNow 增量推送 200 |
 | 8/9 (D3) | 全量 339 URL (sitemap 变更后重推) | **339/339** | 0 | sitemap 339 URL 已上线 | 16:33 hermes 12:40 cron: +1 blog URL (best-free-creative-fabrica-assets-this-week) 已含; 本跑复查 hash 匹配 (1D71C1...) 无新增 URL, 不重复推送 |
 | 8/9 (D3 晚) | 增量 1 URL (Halloween 支柱 blog) | **1/1** | 0 | sitemap 340 URL (push 后上线) | Hermes 19:45 产出 halloween-pod-ideas-2026 (8/15 支柱提前 6 天, 去风险), sitemap 340 (+1), IndexNow 增量推送 200 |
+| 8/10 (D4) | 增量 2 URL (FYUL 合并 blog + 对比页更新) | **2/2** | 0 | sitemap 341 URL (push 后上线) | Hermes 19:45 产出 printful-printify-merger-fyul-2026 (雷达信号 #1: Printful+Printify 合并=FYUL, 承接 printify vs printful 68 展示/排名 76), 对比页 FYUL 重定位, sitemap 341 (+1), IndexNow 增量推送 2/2 200 |
 | T+7 (8/14) | 增量 | __ | __ | __ | 首读数: GSC 展示 + IndexNow 计数 |
 | T+30 (9/5) | 增量 | __ | __ | __ | 路线决策点 |
 - 记录人: gsc-indexnow cron (12:40) 每次提交后填; 凭证缺失时填 "blocked_missing_credentials"
@@ -1000,4 +1001,16 @@ TBD (1 push 整合)
 - SSoT: affiliate-programs.json 更新 (Printful email_verified/status/tax_status + tax_audit 实证; manual_checklist_2026_08_09 项 1 转 RESOLVED, 新增 5_tax_audit)
 - 待 user: 无紧急; [可选] 登录 Impact 一次便于复查 Kittl/Placeit tax; 留意 W-8BEN-E 审核结果 + Printify promo 回信 (8/11)
 - 跨项目: togthr Deploy 失败 x13 (8/7-8/9) / GSC zprintpro+togthr 通知 x7 / Supabase zprintpro 暂停 (均非本域)
+- 无 push (监控任务)
+
+
+## 2026-08-10 · 联盟监控 (cron 12:1x)
+- 邮件: SINCE 09-Aug 28 封独立核实 — **0 新审批 / 0 新商户邮件** (togthr CI 失败 x10 + GSC zprintpro/togthr x8 + Google Business Profile zprintpro 月报 x1 + LinkedIn x1 均为噪音)
+- **CF freebie 8/10 已解析**: UID 662 "Handmade & 19 more" (8/10 04:05 UTC 到达) — 21 素材, **6 🎃 万圣节** (Halloween Black Cat Embroidery / Witch Cat Coven / Spooky Halloween Bundle / Camo Ghost Boo / Preppy Frames / Skeletons Dancing 8/8 重复); 落盘 .hermes/logs/cf-freebies/2026-08-10.md; 素材池 5 天累计 25 🎃 (去重 24), 8/11 Kittl 实测素材充足
+- **Printify 8/9 14:30 "What's Next? Let's Grow Together"** (上次扫描后新到): 通用成长营销邮件 (PartnerStack 代发), 非 promo code 回复; 佐证 12-month commission per referral
+- 链接部署核查: 7 approved-active 全部 link_deployed=true (affiliates.json 9 工具核查: 7 真链 / picjam+greenonion pending 空链 = 已知基线)
+- SSoT: affiliate-programs.json 更新 (last_updated + high_signal_findings_24h_8_10 + manual_checklist_2026_08_10)
+- **P0 = 0** (8/9 Printful cookie 解除后首次清空); P1: Printify promo 回复 8/11 检查 / Placeit 8/14 催办 (草稿就绪); P2 暂缓清单不变
+- 下个检查点: 8/11 Printify promo + 8/12 tax-audit 复核 (W-8BEN-E Pending) + 8/14 Placeit 催办
+- 跨项目提醒: togthr Deploy 失败 x10 (非本域) / GSC zprintpro+togthr 索引通知 x8 / Supabase zprintpro 暂停 (均非本域)
 - 无 push (监控任务)

@@ -1,6 +1,6 @@
 # 拍板看板（user 只看这里）
 
-> 更新：2026-08-09 · 千问 3.8-Max 维护。无待拍板项时本表为空，您无需做任何事。
+> 更新：2026-08-10 12:20 · 千问 3.8-Max 维护。无待拍板项时本表为空，您无需做任何事。
 
 ## 待拍板
 
@@ -14,14 +14,18 @@
 
 ## 执行进展速览（无需动作）
 
+- 8/10 ✅ 午间: affiliate-monitor + daily-ops 完成（0 新审批，P0 连续两天=0；CF freebies +21 素材，🎃 素材池累计 25/去重 24）
+- 8/10 ✅ T1 PARTIAL: Caspa 实证（aefa=品牌合作页，联盟计划确认存在）；其余 4 家待搜索凭证恢复后补全（T1b）
+- 8/10 ✅ T8 DONE: M3 消化计划产出（产品摄影横评 + 三合一评测，写作排 8/12-8/16）
 - 8/9 ✅ 三 cron 全跑: 周报正式版 + daily-ops 补跑 (tax-audit W-8 Pending) + daily-search (IndexNow 339/339)
 - 8/9 ✅ 新 blog 上线: best-free-creative-fabrica-assets-this-week (CF 周更帖, sitemap 即推达标)
-- 8/9 ⚠️ RESULT-2026-08-09 漏写 → 已在新策略 T9 要求补写
 - 8/9 ✅ 402 余额事故闭环: 4 cron 全配 deepseek fallback
-## 执行进展速览（无需动作）
+- 8/9 ✅ RESULT-2026-08-09 漏写已补写完成
 
-- 8/10：高佣金联盟调研 + Halloween 设计启动 + M3 消化计划
-- 8/11：Boost #3（is-magicdrop-legit）+ Kittl 实测
-- 8/12：Printful W-8BEN-E 复核窗（≤3 工作日）
-- 8/14：T+7 首读数（您 10 min 校准决策树）
-- 8/18：Halloween 上线判定
+## 近期日程（无需动作）
+
+- 8/10 晚 19:23: daily-search（周一雷达 + schema 覆盖率检查 + mining）
+- 8/11: Boost #3（is-magicdrop-legit）+ Kittl 实测 + Printify promo 回复检查
+- 8/12: Printful W-8BEN-E 复核窗（≤3 工作日）+ Hermes 切换检查（20:17）
+- 8/14: T+7 首读数（您 10 min 校准决策树）+ Placeit 催办评估（user 手动发，草稿就绪）
+- 8/18: Halloween 上线判定

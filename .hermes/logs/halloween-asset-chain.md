@@ -50,3 +50,12 @@
 ## 8/9 晚间 (Hermes daily-content 19:45)
 - 🎃 支柱 blog《25 Halloween POD Ideas for 2026》**提前 6 天上线** (原排期 8/15): src/data/blog-posts.json + build 346 页 + IndexNow 200; 主 CTA Claid / 副 CTA Printful; 2790 字, 内含 8/9 免费素材表 (Fall Halloween Sublimation Bundle 等 5 项) — 8/11 Kittl 实测可直接引用该文素材链接
 - 素材下载仍是唯一阻塞点: .hermes/assets/cf-halloween-2026-08-07/ = 0 文件, 待 user 下载 → 8/10 seasonal-exec 状态维持 BLOCKED
+
+## 8/10 每日 brief (2026-08-10 11:38, cron 63a4beaf 19:37 CST)
+- seasonal-exec 触发: 8/10 推进模式 → **BLOCKED** (3/3 前置失败)
+- ① assets/cf-halloween-2026-08-07/ = 0 文件 (user 未下载 CF 素材, 清单见 .hermes/logs/cf-freebies/2026-08-07.md 含 6 🎃)
+- ② printful_session_cookie 缺失 (无 Printful 会话, 无法下单; Printify 联盟链可用但无 merchant 会话)
+- ③ test-address.json 缺失 (无收货地址)
+- design/order/GEO 均未触发; 无支付操作
+- 阻塞解药: user (1) 登录 CF 下载至少 2 🎃 素材到 assets/cf-halloween-2026-08-07/ (建议 Gothic Skull Rose + Coquette Halloween) (2) 提供 test-address.json 收货地址 (3) 提供 Printful 登录 cookie 或确认 Printify 可用
+- 下一个触发窗口: 8/11 Kittl 实测日 (原排期), 如素材未就位则顺延

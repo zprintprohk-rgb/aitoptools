@@ -217,5 +217,5 @@
 - **角色**: 千问 3.8-Max = 策略大脑 (读结果→分析→写策略→维护 BOARD); AutoClaw = 执行层 (读策略→执行→回写结果); user 只拍板 BOARD、只看结果, 不做复制粘贴中转。
 - **交接目录**: `handoff/` — strategy/ (千问写, AutoClaw 只认日期最新一份) / results/ (AutoClaw 写, RESULT-YYYY-MM-DD.md 一天一文件多 cron 追加) / BOARD.md (user 拍板看板) / PROTOCOL.md (协议全文)。
 - **AutoClaw 义务**: 每个 cron 开跑第一步读 handoff/strategy/ 最新文件执行当日 TASKS; 跑完按 PROTOCOL §3 模板追加 results/RESULT-{日期}.md (含 NORTH-STAR-DATA 段); 无新策略按最近一份+原职责执行; 先查幂等键再动手。
-- **千问义务**: 每日 07:23 cron「每日策略复盘」读昨日 RESULT + .hermes/logs → 写当日 STRATEGY + 更新 BOARD; 仅在有新拍板项/执行缺口/402 告警时打扰 user。
+- **千问义务**: 每日 12:20 cron「每日策略复盘」(午间低谷窗口, user 电脑已开机) 读昨日 RESULT + .hermes/logs → 写当日 STRATEGY + 更新 BOARD; 当日 19:23 执行任务即可消费当日策略; 仅在有新拍板项/执行缺口/402 告警时打扰 user。
 - **闭环不改变既有铁律**: 不自动登录/发信/付款; 攒批 1 push/天; 低谷窗口调度; 事实核实后才允许内容上线。

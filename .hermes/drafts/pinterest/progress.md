@@ -2,7 +2,7 @@
 
 > 规则: 每天 2 张（8/6 起）, 发布包在 ready-to-post-*.md, user 手工发布（Hermes 不自动登录）
 
-## 进度: 11/16
+## 进度: 13/16
 
 | # | 日期 | 目标页面 | 发布包 | 状态 |
 |---|------|---------|--------|------|
@@ -17,7 +17,9 @@
 | 9 | 2026-08-08 | /best/printify-alternatives/（GSC 60 展示/排名 78） | ready-to-post-2026-08-08.md | 📝 待发布 |
 | 10 | 2026-08-09 | /best/best-ai-tshirt-design-generators/ | ready-to-post-2026-08-09.md | 📝 待发布 |
 | 11 | 2026-08-09 | /best/best-print-on-demand-companies/ | ready-to-post-2026-08-09.md | 📝 待发布 |
+| 12 | 2026-08-10 | /claid-ai-review/（变现权重 #1, 收款就绪） | ready-to-post-2026-08-10.md | 📝 待发布 |
+| 13 | 2026-08-10 | /kittl-review/（变现权重 #2） | ready-to-post-2026-08-10.md | 📝 待发布 |
 
-## 剩余 5 张（8/10-8/12 计划）
+## 剩余 3 张（8/11-8/12 计划）
 
-- [ ] 头部评测页 7 选 6: photoroom / kittl / claid / printify / printful / mockey / creative-fabrica（kittl + claid 优先 — 变现权重前二; 完成 6 张后剩 1 张机动）
+- [ ] 头部评测页 7 选 6（已完成 kittl + claid）: photoroom / printify / printful / mockey / creative-fabrica（剩 3 张 + 0 机动）
