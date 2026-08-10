@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aitoptools 系统健康度仪表盘 · 2026-08-10</title>
+<style>
+  /* Fathom Information Design — 科学期刊美学 */
+  :root {
+    --paper:#f7f7f5; --card:#ffffff; --ink:#1c2333; --navy:#22304f;
+    --gray:#5c6675; --line:#d8dbe0; --accent:#b5532a; --ok:#2e7d5b; --warn:#c07b2c; --bad:#b3261e;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Segoe UI","Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--paper); color:var(--ink); line-height:1.65; padding:48px 28px; }
+  .wrap { max-width:1080px; margin:0 auto; }
+  header { border-bottom:3px solid var(--navy); padding-bottom:20px; margin-bottom:32px; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:12px; }
+  h1 { font-size:26px; font-weight:600; letter-spacing:.5px; }
+  .meta { color:var(--gray); font-size:13px; text-align:right; }
+  h2 { font-size:15px; font-weight:600; text-transform:uppercase; letter-spacing:1.2px; color:var(--navy); margin:36px 0 14px; border-bottom:1px solid var(--line); padding-bottom:6px; }
+  .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:14px; }
+  .metric { background:var(--card); border:1px solid var(--line); padding:16px 18px; }
+  .metric .num { font-size:30px; font-weight:600; font-variant-numeric:tabular-nums; }
+  .metric .lbl { font-size:12px; color:var(--gray); margin-top:2px; }
+  .metric .note { font-size:11px; color:var(--gray); margin-top:6px; }
+  .okc{color:var(--ok)} .warnc{color:var(--warn)} .badc{color:var(--bad)} .navyc{color:var(--navy)}
+  table { width:100%; border-collapse:collapse; background:var(--card); font-size:13.5px; }
+  th { background:var(--navy); color:#fff; font-weight:500; text-align:left; padding:9px 12px; font-size:12px; letter-spacing:.4px; }
+  td { border-bottom:1px solid var(--line); padding:9px 12px; vertical-align:top; }
+  tr:nth-child(even) td { background:#fafaf8; }
+  .status { display:inline-block; padding:2px 10px; font-size:12px; border-radius:10px; font-weight:500; }
+  .s-ok { background:#e3f1ea; color:var(--ok); } .s-warn{ background:#f7ead6; color:var(--warn); } .s-bad{ background:#f6dedc; color:var(--bad); }
+  .blocker-card { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--bad); padding:14px 18px; margin-bottom:10px; }
+  .blocker-card.warn { border-left-color:var(--warn); }
+  .blocker-card .title { font-weight:600; font-size:14px; }
+  .blocker-card .detail { font-size:12.5px; color:var(--gray); margin-top:4px; }
+  .timeline { position:relative; padding-left:24px; }
+  .timeline::before { content:""; position:absolute; left:7px; top:6px; bottom:6px; width:2px; background:var(--line); }
+  .tl-item { position:relative; margin-bottom:16px; }
+  .tl-item::before { content:""; position:absolute; left:-21px; top:6px; width:10px; height:10px; border-radius:50%; background:var(--navy); }
+  .tl-item.ok::before{background:var(--ok)} .tl-item.warn::before{background:var(--warn)} .tl-item.bad::before{background:var(--bad)}
+  .tl-date { font-size:12px; color:var(--gray); font-weight:600; }
+  .tl-text { font-size:13.5px; margin-top:2px; }
+  .foot { margin-top:48px; border-top:1px solid var(--line); padding-top:14px; font-size:11.5px; color:var(--gray); }
+  .foot p { margin:3px 0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  @media (max-width:760px){ .grid2{grid-template-columns:1fr} }
+  .tag { font-size:11px; color:var(--gray); border:1px solid var(--line); padding:1px 7px; border-radius:8px; margin-right:4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>aitoptools 系统健康度仪表盘</h1>
+    <div class="meta">报告期：2026-08-10 · 生成：AutoClaw 策略执行层<br>数据源：.hermes/logs 当日产物 + handoff 交接文件</div>
+  </header>
+
+  <h2>北极星指标（基线 6/28–8/5 · 28 天）</h2>
+  <div class="metrics">
+    <div class="metric"><div class="num">2,044</div><div class="lbl">总展示（427 query / 103 页）</div><div class="note">7/29 起爬坡，8/1 峰值 241/日</div></div>
+    <div class="metric"><div class="num">3</div><div class="lbl">总点击</div><div class="note badc">CTR 0.15% — 排名 60-90 太深</div></div>
+    <div class="metric"><div class="num">$0</div><div class="lbl">佣金（目标 $3000/6月）</div><div class="note warnc">Printful W-8 审核中，8/12 复核窗</div></div>
+    <div class="metric"><div class="num">2/25</div><div class="lbl">Boost 完成（推排名）</div><div class="note okc">8/8 首批 2 页已上线，8/22 效果验证</div></div>
+    <div class="metric"><div class="num">25 🎃</div><div class="lbl">CF 万圣节素材池</div><div class="note okc">5 天累计，超额达门槛</div></div>
+  </div>
+
+  <h2>模块健康度矩阵</h2>
+  <table>
+    <tr><th>模块</th><th>状态</th><th>判定</th><th>证据</th></tr>
+    <tr><td>每周复盘（周报）</td><td><span class="status s-ok">正常</span></td><td>首跑 8/9 五块完整 + 数据质量门</td><td>weekly-2026-08-09.md 7902B</td></tr>
+    <tr><td>每日联盟运营</td><td><span class="status s-ok">正常</span></td><td>P0 清空连续第 2 天；IMAP 28 封核实 0 异常</td><td>daily-ops-2026-08-10.md 12:23</td></tr>
+    <tr><td>每日搜索增长</td><td><span class="status s-ok">正常</span></td><td>IndexNow 复查 + mining 幂等 + Boost 排期就绪</td><td>daily-search-2026-08-10.md 19:25</td></tr>
+    <tr><td>季节集群执行</td><td><span class="status s-bad">BLOCKED</span></td><td>第 3 天：素材 0 文件 + 无收货地址（user 侧）</td><td>halloween-asset-chain.md 8/10 行</td></tr>
+    <tr><td>IMAP / 邮件管道</td><td><span class="status s-ok">正常</span></td><td>RESTORED（SOCKS5 代理），0 新审批</td><td>affiliate-monitor 8/10 12:19</td></tr>
+    <tr><td>CF Freebies 素材流</td><td><span class="status s-ok">正常</span></td><td>8/10 解析 21 素材（6 🎃），池 25（去重 24）</td><td>cf-freebies 8/10 落盘</td></tr>
+    <tr><td>GEO 监控（AI 爬虫）</td><td><span class="status s-warn">盲区</span></td><td>无 CF Web Analytics / token / 日志源</td><td>GEO_BLIND NODATA（解锁：CF Web Analytics 2 分钟）</td></tr>
+    <tr><td>模型可用性</td><td><span class="status s-ok">正常</span></td><td>402 事故已闭环，4 cron 全部 deepseek fallback</td><td>8/9 补跑成功实证</td></tr>
+  </table>
+
+  <h2>用户侧阻塞仪表（唯一瓶颈）</h2>
+  <div class="blocker-card">
+    <div class="title">B1 · CF 万圣节素材下载 — <span class="badc">未完成（阻塞 3 天）</span></div>
+    <div class="detail">目标：下载 ≥2 素材至 <code>.hermes\assets\cf-halloween-2026-08-07\</code>（推荐 Gothic Skull Rose + Black Cat Embroidery，清单在 cf-freebies 8/7 邮件）。耗时 2 分钟。解锁后 8/11 Kittl 实测可启动。</div>
+  </div>
+  <div class="blocker-card">
+    <div class="title">B2 · 测试收货地址 — <span class="badc">未完成（阻塞 3 天）</span></div>
+    <div class="detail">目标：写入 <code>test-address.json</code>（name/street/city/state/zip/country）。耗时 1 分钟。解锁后下单环节可执行。</div>
+  </div>
+  <div class="blocker-card warn">
+    <div class="title">B3 · 下单平台确认 — <span class="warnc">待确认</span></div>
+    <div class="detail">二选一：① Printful session cookie 至 printful_session_cookie.txt；② 回复「用 Printify」（联盟链已就绪，零操作）。耗时 1 分钟。</div>
+  </div>
+  <div class="blocker-card warn">
+    <div class="title">B4 · W-8BEN-E 签字上传 — <span class="warnc">待处理（8/12 复核窗）</span></div>
+    <div class="detail">Printful 税表单已生成 Pending；下载 PDF → 打印签字 → 扫描上传。耗时 5 分钟。完成后佣金结算可启动。</div>
+  </div>
+
+  <h2>Halloween 8/18 Deadline 时间线（风险倒推）</h2>
+  <div class="timeline">
+    <div class="tl-item bad"><div class="tl-date">8/10 今天 — 素材前置（B1）</div><div class="tl-text"><b>BLOCKED 第 3 天</b>。今晚解锁 → 全链按时完成；8/11 解锁 → 压缩质量降级；8/13 → 纯内容降级 PARTIAL；8/15 → MISSED。</div></div>
+    <div class="tl-item"><div class="tl-date">8/11 — Kittl 实测 / Boost #3</div><div class="tl-text">素材就位则自动执行设计（Fall Halloween Sublimation Bundle）；is-magicdrop-legit Boost 自动。</div></div>
+    <div class="tl-item"><div class="tl-date">8/12 — W-8 复核 + 切换检查</div><div class="tl-text">Printful 税审 ≤3 工作日窗口；AutoClaw 切换检查里程碑。</div></div>
+    <div class="tl-item"><div class="tl-date">8/13 — Boost #4 print-price</div><div class="tl-text">8/21 目标 ≤30 前置优化。</div></div>
+    <div class="tl-item"><div class="tl-date">8/14 — T+7 首读数</div><div class="tl-text">Boost #1/#2 排名对比 → 决策树校准。</div></div>
+    <div class="tl-item"><div class="tl-date">8/18 — Deadline 判定</div><div class="tl-text">LAUNCHED / PARTIAL / MISSED（seasonal-exec 自动判定 + 自删）。</div></div>
+    <div class="tl-item"><div class="tl-date">8/22 — Boost 效果验证</div><div class="tl-text">Branch A/B/C/D 判定，决定 9/5 前节奏。</div></div>
+  </div>
+
+  <h2>四引擎结构（战略视图）</h2>
+  <table>
+    <tr><th>引擎</th><th>状态</th><th>预期</th><th>解锁条件</th></tr>
+    <tr><td>① Google SEO 推排名</td><td><span class="status s-ok">运转中</span></td><td>Boost 完成后 $30-50/月</td><td>无（自动执行）</td></tr>
+    <tr><td>② 高佣金 AI SaaS 联盟</td><td><span class="status s-warn">调研中</span></td><td>单笔 $50-200，月收入上限提升 3-5 倍</td><td>候选清单确认（8/15 前）</td></tr>
+    <tr><td>③ 季节性爆发</td><td><span class="status s-bad">BLOCKED</span></td><td>单月脉冲 $300-800</td><td>B1+B2+B3 解锁（4 分钟）</td></tr>
+    <tr><td>④ Pinterest 视觉引流</td><td><span class="status s-warn">未启动</span></td><td>$100-300/月（POD 视觉适配）</td><td>AutoGLM 扩展 / 用户拍板</td></tr>
+  </table>
+
+  <h2>8/11 – 8/22 执行日历</h2>
+  <table>
+    <tr><th>日期</th><th>系统自动</th><th>需用户</th></tr>
+    <tr><td>8/11</td><td>Boost #3 is-magicdrop-legit · Printify promo 回信检查 · Kittl 实测（素材就位时）</td><td>—</td></tr>
+    <tr><td>8/12</td><td>W-8BEN-E 复核（浏览器只读）· 切换检查里程碑</td><td>—</td></tr>
+    <tr><td>8/13</td><td>Boost #4 print-price · Impact/Claid W-8 核对</td><td>可选：Impact 登录</td></tr>
+    <tr><td>8/14</td><td>T+7 首读数 + 决策树 · Boost #1/#2 排名初检</td><td>10 分钟校准</td></tr>
+    <tr><td>8/15</td><td>高佣金联盟申请提交（候选确认后）</td><td>候选清单确认</td></tr>
+    <tr><td>8/16</td><td>每周复盘第 2 次（趋势对比）</td><td>—</td></tr>
+    <tr><td>8/17</td><td>Boost #5/#6（midjourney/jasper 替代型）</td><td>—</td></tr>
+    <tr><td>8/18</td><td>Halloween deadline 判定</td><td>5 分钟看判定</td></tr>
+    <tr><td>8/21</td><td>print-price ≤30 里程碑</td><td>—</td></tr>
+    <tr><td>8/22</td><td>Boost 效果验证（T+14）→ Branch A/B/C/D</td><td>10 分钟分支决策</td></tr>
+  </table>
+
+  <div class="foot">
+    <p>数据来源：.hermes/logs/daily-ops-2026-08-10.md · daily-search-2026-08-10.md · halloween-asset-chain.md · affiliate-programs.json · data/gsc_data.json（6/28-8/5 导出）</p>
+    <p>说明：所有金额为预期估算，非承诺；佣金数据以各联盟后台为准。仪表盘每日由「每日策略复盘」闭环刷新。</p>
+    <p>Fathom Information Design 风格 · 科学期刊严谨叙事 · 中性灰+海军蓝+单一强调色</p>
+  </div>
+</div>
+</body>
+</html>

@@ -59,3 +59,9 @@
 - design/order/GEO 均未触发; 无支付操作
 - 阻塞解药: user (1) 登录 CF 下载至少 2 🎃 素材到 assets/cf-halloween-2026-08-07/ (建议 Gothic Skull Rose + Coquette Halloween) (2) 提供 test-address.json 收货地址 (3) 提供 Printful 登录 cookie 或确认 Printify 可用
 - 下一个触发窗口: 8/11 Kittl 实测日 (原排期), 如素材未就位则顺延
+
+## 8/11 00:15 · 素材策略调整 (CF 付费墙实证)
+- **CF 自动化下载路径不存在** (浏览器 4 次尝试实证): 全部 Halloween 素材绑定 All Access 订阅 (免费试用需信用卡, 安全拒绝)
+- **设计源切换**: Kittl 内置 Halloween 模板 (Fall Halloween Sublimation Bundle 等) 为主源; CF 素材降级为可选加分项 (user 手动下载时使用)
+- **B1 解除硬阻塞**: 8/11 Kittl 实测照常执行 (模板源), 素材链 ①设计 不再依赖 CF 下载
+- 影响: Halloween 链 8/18 目标不受影响; 测试单/照片墙/支柱帖全链可正常推进

@@ -219,3 +219,13 @@
 - **AutoClaw 义务**: 每个 cron 开跑第一步读 handoff/strategy/ 最新文件执行当日 TASKS; 跑完按 PROTOCOL §3 模板追加 results/RESULT-{日期}.md (含 NORTH-STAR-DATA 段); 无新策略按最近一份+原职责执行; 先查幂等键再动手。
 - **千问义务**: 每日 12:20 cron「每日策略复盘」(午间低谷窗口, user 电脑已开机) 读昨日 RESULT + .hermes/logs → 写当日 STRATEGY + 更新 BOARD; 当日 19:23 执行任务即可消费当日策略; 仅在有新拍板项/执行缺口/402 告警时打扰 user。
 - **闭环不改变既有铁律**: 不自动登录/发信/付款; 攒批 1 push/天; 低谷窗口调度; 事实核实后才允许内容上线。
+
+## 项目根目录唯一铁律 (2026-08-10 user 拍板 — 防代码污染)
+- **F:\aitoptools 是唯一根目录**: 所有 aitoptools 相关文件 (脚本/草稿/报告/临时文件) 一律写入 F:\aitoptools 下 (.hermes/tmp/ 为临时区, .hermes/backup/ 为归档区)
+- **禁止经其他项目目录中转**: 不向 F:\zprintpro-nextjs 及其任何子目录写 aitoptools 文件; 沙盒 write 工具不可用时, 一律用 exec (node/python) 直接写 F:\aitoptools
+- **清理义务**: 若发现 aitoptools 文件出现在其他项目目录, 立即迁移至 .hermes/tmp/archived-{日期}/ 并记录
+- 已归档: 2026-08-10 从 F:\zprintpro-nextjs\.openclaw\tmp 迁移 27 个文件至 .hermes/tmp/archived-20260810/ (zprintpro 自身 6 文件保留)
+
+## 英文页面中文协助铁律 (2026-08-11 user 拍板, evo-2026-08-11-english-page-chinese-guidance)
+- 用户英文阅读能力有限 → 引导操作任何英文网站/页面时, 必须提供**中文逐步说明** + 翻译关键按钮/选项含义, 禁止只丢英文原文/截图
+- 素材站免费下载: 优先「Free download/下载」类免费按钮, 明确避开 All Access/试用/价格入口; 完成后向 user 确认文件已到手

@@ -162,10 +162,13 @@ export default function BlogPostPage({ params }) {
         <div className="meta-bar">
           <span className="card-cat">{post.category}</span>
           <span>{post.datePublished} · {readTime} min read · {wordCount.toLocaleString()} words</span>
+          {post.dateModified && (
+            <span style={{ color: 'var(--k-tertiary)', fontSize: '0.8rem' }}>· Last updated {post.dateModified}</span>
+          )}
           <span className="card-badge tested" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: 'var(--c-bg)', color: 'var(--c-text)', fontSize: '0.68rem', fontWeight: 600, padding: '2px 8px', borderRadius: '100px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>✓ Hands-on Tested</span>
         </div>
         <p style={{ fontSize: '0.85rem', color: 'var(--k-tertiary)', marginTop: -8, marginBottom: 24 }}>
-          Reviewed by <strong>{AUTHOR_NAME}, {AUTHOR_TITLE}</strong>
+          Reviewed by <strong><Link href="/author/jerome-tang/" style={{ color: 'inherit' }}>{AUTHOR_NAME}, {AUTHOR_TITLE}</Link></strong>
         </p>
 
         {/* TL;DR — 太长不看 */}
