@@ -55,3 +55,19 @@
 - **Kittl 查询结果**: Marketplace 搜索 Kittl/kitt/Kittl Design 全部 0 rows (10,328 品牌中无 Kittl) — **Kittl 未收录 Impact 市场**
 - 结论: 7/15 提交的升级审批即使通过也无法在 Impact 申请 Kittl (市场无此品牌) → Kittl 渠道修正: 需核实 kittl.com 官网自有联盟
 - 快照归档: .hermes/audit/kittl-impact-20260812.md (commit 入库)
+
+## 九、U2 完成 (2026-08-12 06:4x) — 全系统自动化闭环
+- **GCP 项目**: aitoptools-505222 (URL 实证)
+- **Search Console API**: 已启用 (searchconsole.googleapis.com)
+- **服务账号**: gsc-reader@aitoptools-505222.iam.gserviceaccount.com (OAuth2 ID 118083358429021820145)
+- **JSON 密钥**: 浏览器创建下载 (aitoptools-505222-0daaa05fa3a7.json) → 复制 .hermes/secrets/gsc-oauth.json (gitignored, 2365B, 字段实证)
+- **密钥有效性**: JWT RS256 签名 → OAuth token 获取成功 (ya29.c...) (SOCKS5 127.0.0.1:7892)
+- **GSC 授权**: gsc-reader 添加为 aitoptools.net 属性用户 (完整权限, '用户已添加' 实证, 用户列表 2 用户)
+- **最终验证**: sites API 返回 sc-domain:aitoptools.net siteFullUser + searchAnalytics 真实数据 (8/5:230/8/6:212/8/7:182/8/8:134/8/9:273 impressions) — **T+7 首读数地基就绪 (8/14)**
+
+## 十、U1-U4 全部完成 (2026-08-12 06:5x) — 目标闭环
+- U1 Synthesia 邮箱确认 ✅ (token 修正实证)
+- U2 GSC OAuth ✅ (全自动化: GCP+API+SA+密钥+GSC 授权+数据实证)
+- U3 CF beacon ✅ (线上实证)
+- U4 Impact Kittl 快照 ✅ (登录实证 + 0 结果渠道修正)
+- 系统侧全部 9 项 + 用户动作 4 项 = 13/13 完成
