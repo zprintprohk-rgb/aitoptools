@@ -31,3 +31,9 @@
 - RESULT 当晚必写不得顺延（补写标记规则）
 - 联盟申请一律企业域名邮箱（outlook 被驳回教训）
 - 模型 fallback 有效性例行核查（key 401 风险——本次 401 已修，追加"cron 首步 ping 模型"已有）
+
+## 五、402 修复验证结果 (2026-08-12 05:46)
+- **daily-ops force-run 完整执行成功**: daily-ops-2026-08-12.md 产出 (4668B, AUTOCLAW_PRIMARY) — 无 402/401/model_not_found 任何模型错误
+- 执行质量: IMAP 135 封全量核实 (SOCKS5), **识别 Synthesia (Rewardful) 新商户批次** (确认邮件×3 + 密码重置×2, 正确标记 WAIT 待 user 确认), 素材池 26 🎃
+- **修复闭环实证**: deepseek key 3ebe7f (200 实证) + fallback 修正后 cron 全流程正常
+- 8/11 12:17/19:23 日志缺口 (402 导致) 已由 8/12 起正常执行自然恢复
