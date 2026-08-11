@@ -1025,3 +1025,18 @@ TBD (1 push 整合)
 - 下个检查点: 8/12 tax-audit 复核 (W-8BEN-E Pending) + 8/13-14 Printify promo 二查 + 8/14 Placeit 催办
 - 跨项目提醒: togthr Deploy 失败 x6 (非本域) / GSC zprintpro+togthr 索引通知 x8 / Supabase zprintpro 暂停 (均非本域)
 - 无 push (监控任务)
+
+
+## 2026-08-12 · 联盟监控 (daily-ops 合并 cron 05:4x)
+- 邮件: SINCE 30-Jul 135 封全量核实 (SOCKS5 127.0.0.1:7892) — **新发现 1 批次: Synthesia (Rewardful)**
+- **🆕 Synthesia Affiliate Program - Personal Plan** (Rewardful 网络, 账户 jerome@aitoptools.net): 8/11 17:21/17:34/18:22 x3 "Please confirm your email address" (Conrad, affiliates@rewardful.com) + 8/11 17:51/17:59 x2 "Reset password instructions". 激活邮件仅 1 天 (<90d 约束) → 不自动点击; 已新增 affiliate-programs.json 条目 (status=applied-pending-email-confirm); 密码重置 x2 需 user 确认是否本人操作
+- **tax-audit 8/12 复核** (AutoGLM 1.1.8 只读): Printful dashboard/affiliate/tax → W-8BEN-E **仍 Pending** (8/9 提交后第 3 个工作日窗口内, "documents reviewed in up to 3 business days", Edit 可用, 未做任何操作) → NOOP, 下次复核 8/13; Impact LOGIN_REQUIRED (不自动登录)
+- **printful-watcher SKIP**: email_verified=true (8/8 实证), status=active, 无状态异常
+- **CF freebie 8/12**: 尚未到货 (常规 ~11:00 CST); 素材池 6 天累计 26 🎃 (去重 25) 充足
+- **ai-crawler-monitor**: GEO_BLIND NODATA (无 CF Web Analytics beacon / 无 API token / 无 access log; robots.txt + llms.txt 放行健康)
+- 链接部署核查: 7 approved-active 全部 link_deployed=true (无变化)
+- SSoT: affiliate-programs.json 更新 (Synthesia 新条目 + tax_audit 8/12 + high_signal_findings_24h_8_12 + manual_checklist_2026_08_12 + milestone + aging)
+- **P0 = 0 (连续第 4 天)**; P1: Synthesia 确认待 user / W-8BEN-E Pending (8/13 复核) / Printify promo (8/13-14 二查) / Placeit 8/14 催办; P2 暂缓清单不变
+- 下个检查点: 8/13 tax-audit 再复核 + Synthesia 确认检查; 8/13-14 Printify promo 二查; 8/14 Placeit 催办
+- 跨项目提醒: togthr Deploy 失败 (非本域) / GSC 索引通知 / Supabase zprintpro 暂停 (均非本域)
+- 无 push (监控任务)

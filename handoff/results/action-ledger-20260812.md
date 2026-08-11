@@ -49,3 +49,9 @@
 - **线上验证**: https://aitoptools.net/ 首页 beacon: True + token: True (部署传播后实证)
 - **GEO_BLIND 解锁**: daily-ops Step 3 将有数据源 (CF Web Analytics 实时测量)
 - 剩余: U2 GSC OAuth (用户 10min 今日截止) / U4 Impact 快照 (用户 2min 8/14 前)
+
+## 八、U4 完成 (2026-08-12 06:3x)
+- **Impact 登录成功** (邮箱+验证码链路, 账户 J · Jerome Tang): app.impact.com 实证
+- **Kittl 查询结果**: Marketplace 搜索 Kittl/kitt/Kittl Design 全部 0 rows (10,328 品牌中无 Kittl) — **Kittl 未收录 Impact 市场**
+- 结论: 7/15 提交的升级审批即使通过也无法在 Impact 申请 Kittl (市场无此品牌) → Kittl 渠道修正: 需核实 kittl.com 官网自有联盟
+- 快照归档: .hermes/audit/kittl-impact-20260812.md (commit 入库)
