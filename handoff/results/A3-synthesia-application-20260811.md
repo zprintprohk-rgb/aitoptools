@@ -38,3 +38,10 @@ Jerome / Tang / zprintpro@outlook.com / aitoptools.net / LinkedIn: jerome-tang-4
 
 - 成功截图: .hermes/audit/a3-synthesia-{ts}.png（提交后捕获）
 - 邮件回执: zprintpro@outlook.com（IMAP 验证）
+
+## 六、重大进展 (2026-08-12 01:16-01:20)
+- **HubSpot 申请提交成功** (用户手动/前次尝试): 浏览器实证 URL 含 submissionGuid=c1c5410a-de8a-442f-b695-177748c3c3f9 — 回执凭证
+- **流程已进入 Rewardful 注册环节**: synthesia.getrewardful.com/signup?submissionGuid=... 页面已预填 Jerome/Tang/jerome@aitoptools.net
+- Work Email 校验规则: outlook 免费邮箱被表单驳回 → 改用企业域名邮箱 **jerome@aitoptools.net**; Company name 用户拍板 = **AI Opt Tools**
+- 密码: 已生成强密码存 .hermes/secrets/rewardful-synthesia-password.txt (gitignored); 浏览器预填的 hunter2 演示密码需替换
+- 剩余: 替换密码 + reCAPTCHA + Sign up → 注册完成即申请全流程闭环
