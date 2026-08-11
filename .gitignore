@@ -27,3 +27,5 @@ commit_msg.txt
 # sensitive docs must not be pushed (2026-08-11 P0)
 docs/W-8BEN-E.pdf
 test-address.json
+# openclaw execution temp files, incl. JWT/token artifacts (2026-08-12 P0)
+.openclaw-tmp-*
