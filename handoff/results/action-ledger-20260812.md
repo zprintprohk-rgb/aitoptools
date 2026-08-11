@@ -71,3 +71,16 @@
 - U3 CF beacon ✅ (线上实证)
 - U4 Impact Kittl 快照 ✅ (登录实证 + 0 结果渠道修正)
 - 系统侧全部 9 项 + 用户动作 4 项 = 13/13 完成
+
+## 十一、行动卡 1: Kittl 直达申请 (2026-08-12 07:1x) — 已批准确认
+- **状态**: Impact 后台实证 Kittl = 已批准/活跃 (7/15 申请 -> 7/30 批准, SSoT 早已记录 approved)
+- **推荐链接**: https://kittl.pxf.io/qWNvPn (Impact 后台 Referral Link 实证)
+- **链接可用性**: DNS 34.149.133.51 + 302 -> ojrq.net 跟踪域 (Impact 标准短链行为, 代理实证)
+- **条款**: Paid Subscription Earn 20% (Referral Period 0) + Sign up Earn USD0.00 (30 DAY)
+- **站点配置**: affiliates.json/tools/kittl.json 等 6 文件 affiliate_url 与官方一致 (pending=false, link_deployed=true) — **无需修正** ("缺斜杠"为 agent 视觉误读)
+- **结论**: Kittl 全量激活条件已满足 (批准 + 链接可用 + 260 处 CTA 就位)
+
+## 十二、行动卡 2: Rewardful 收款邮箱核对 (2026-08-12 07:1x) — 确认无误
+- 实际页面预填值 = jerome@aitoptools.net ("jjerome@aitotools.net" 为误读, 页面一直正确)
+- Confirm email 保存 -> 跳转 Dashboard -> 重进持久化实证
+- **PayPal 收款邮箱 = jerome@aitoptools.net 确认** (CF Email Routing 可达 zprintprohk@gmail.com)
