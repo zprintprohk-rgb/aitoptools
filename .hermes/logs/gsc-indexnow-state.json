@@ -1,37 +1,37 @@
 {
   "schema": 1,
   "doc": "sitemap submission state for gsc/indexnow cron. last_submitted_* stays null until first successful submission.",
-  "last_submitted_mtime": "2026-08-09T19:51:00",
-  "last_submitted_hash": "2A6F2ED4138FDDCF7D3E49A0F00CECF879609C47E1EF6F004032088C4E46B284",
+  "last_submitted_mtime": "2026-08-10T11:52:06+00:00",
+  "last_submitted_hash": "DA67C5E3C73897C83ACCC12D9C5A7F059BC987E312BE7C95868AB861EA55248E",
   "last_seen": {
     "public/sitemap.xml": {
-      "mtime": "2026-08-09T19:51:00",
-      "bytes": 42064,
-      "sha256": "2A6F2ED4138FDDCF7D3E49A0F00CECF879609C47E1EF6F004032088C4E46B284"
+      "mtime": "2026-08-10T11:52:06+00:00",
+      "bytes": 42184,
+      "sha256": "DA67C5E3C73897C83ACCC12D9C5A7F059BC987E312BE7C95868AB861EA55248E"
     },
     "public/sitemap-programmatic.xml": {
-      "mtime": "2026-08-05T10:44:41",
+      "mtime": "2026-08-05T02:44:41+00:00",
       "bytes": 27727,
       "sha256": "DC9FB3558CC65B62B58318CBF56D6CED2B3B8D458A5EB86A10CC074D13371E98"
     },
     "out/sitemap.xml": {
-      "mtime": "2026-08-09T19:51:00",
-      "bytes": 42064,
-      "sha256": "2A6F2ED4138FDDCF7D3E49A0F00CECF879609C47E1EF6F004032088C4E46B284"
+      "mtime": "2026-08-10T11:52:06+00:00",
+      "bytes": 42184,
+      "sha256": "DA67C5E3C73897C83ACCC12D9C5A7F059BC987E312BE7C95868AB861EA55248E"
     },
     "out/sitemap-programmatic.xml": {
-      "mtime": "2026-08-05T10:44:41",
+      "mtime": "2026-08-05T02:44:41+00:00",
       "bytes": 27727,
       "sha256": "DC9FB3558CC65B62B58318CBF56D6CED2B3B8D458A5EB86A10CC074D13371E98"
     }
   },
-  "last_run": "2026-08-10T04:41:10",
-  "last_run_status": "hermes 12:40 cron: sitemap changed (+1 blog URL halloween-pod-ideas-2026, total 340), indexnow pushed 340 URLs HTTP 200 (dry-run + real); new URLs verified 200; gsc-pending(oauth missing)",
+  "last_run": "2026-08-11T06:19:51+00:00",
+  "last_run_status": "hermes 12:40 cron: sitemap changed (341 URLs, +1 vs 8/9 state), indexnow pushed 341 URLs HTTP 200 (dry-run + real); new URLs (fyul blog, compare/printful-vs-printify) verified 200; gsc-pending(oauth missing)",
   "indexnow_submitted": true,
   "gsc_submitted": false,
   "indexnow_first_full_push": "2026-08-06",
-  "indexnow_urls_pushed": 340,
-  "indexnow_status_200": 340,
+  "indexnow_urls_pushed": 341,
+  "indexnow_status_200": 341,
   "indexnow_key_file": ".hermes/secrets/indexnow-key.txt",
   "last_check_hash_match": true
 }

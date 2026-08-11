@@ -251,11 +251,11 @@
     }
   ],
   "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
-  "last_updated": "2026-08-10 12:1x (affiliate-monitor cron; CF freebie 8/10 解析 + Printify 8/9 营销邮件核实, P0=0)",
+  "last_updated": "2026-08-11 12:1x (affiliate-monitor cron; CF freebie 8/11 解析 + Printify promo 8/11 检查窗口: 回复仍未到, P0=0)",
   "monitoring": {
     "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
     "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
-    "next_action": "8/11 Printify promo 回复检查; 8/12 tax-audit 复核 (W-8BEN-E Pending <=3 工作日); 8/14 Placeit 催办; (可选) user 登录 Impact 后续查 Kittl/Placeit tax",
+    "next_action": "8/12 tax-audit 复核 (W-8BEN-E Pending <=3 工作日) + Printify promo 回复二次检查; 8/13-14 Printify promo 无回复则升级 user 走 PartnerStack 渠道催; 8/14 Placeit 催办; (可选) user 登录 Impact 后续查 Kittl/Placeit tax",
     "last_live_check": "2026-08-08 01:49 IMAP login OK via SOCKS5; SINCE 90d 拉取 445 封, 过滤 61 封, 24h 无过滤扫描 15 封 — 0 新联盟邮件",
     "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
     "network_diag_5_19": {
@@ -580,6 +580,25 @@
       "p2_count_24h": 7,
       "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai, K3 7/30 拍板等 Kittl 跑通) / PartnerStack Network 重试待 user 拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目). 今日 28 封噪音 = togthr CI 失败 x10 + GSC zprintpro/togthr x8 + Google Business Profile zprintpro 月报 x1 + LinkedIn x1.",
       "conclusion": "0 新审批 (SINCE 09-Aug 28 封全量核实). CF freebie 8/10 解析完成 (21 素材, 6 🎃). Printify 8/9 营销邮件非回复. P0 = 0 (自 8/9 Printful 解除后首次清空). 下个检查点: 8/11 Printify promo + 8/12 tax-audit 复核 + 8/14 Placeit 催办."
+    },
+    "high_signal_findings_24h_8_11": {
+      "as_of": "2026-08-11 12:1x",
+      "status": "RESTORED — IMAP 独立扫描 (SINCE 10-Aug 21 封全量核实), 0 新审批 / 0 新商户邮件",
+      "new_findings": {
+        "cf_free_picks_8_11": {
+          "date": "2026-08-11 03:30 UTC",
+          "from": "hi@creativefabrica.com",
+          "subject": "Today's free picks: Child & 19 more",
+          "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). UID 673, 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-11.md. 万圣节素材 x1: Halloween Fall Stripes Pattern Bundle; 升华烫画素材 x1: Grandparents Grandma Grandpa Sublimation (8/11 Kittl 实测日备选, 首选仍 8/9 Fall Halloween Sublimation Bundle). 素材池 6 天累计 26 🎃 (去重 25)."
+        }
+      },
+      "p0_count_24h": 0,
+      "p0_notes": "无. 7 approved-active 全 link_deployed.",
+      "p1_count_24h": 2,
+      "p1_notes": "Printify promo code 回复检查 (8/11 窗口到期: 回信 8/8 00:27 已发, 72h 无回复 — 8/13-14 二次检查, 无回复则升级 user 走 PartnerStack 站内渠道催) / Placeit Impact pending (8/14 超期催办, 草稿 drafts/placeit-followup-email.md 就绪, 8/14 当天评估).",
+      "p2_count_24h": 7,
+      "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai, K3 7/30 拍板等 Kittl 跑通) / PartnerStack Network 重试待 user 拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目). 今日噪音 16 封 = togthr CI 失败 x6 + GSC x8 (zprintpro/togthr) + LinkedIn/Dropbox/Supabase/GMC x4.",
+      "conclusion": "0 新审批 (SINCE 10-Aug 21 封全量核实). CF freebie 8/11 解析完成 (20 素材, 1 🎃 + 1 升华烫画). Printify promo 回复 72h 窗口到期仍未到 (下个检查点 8/13-14, 无回复则升级). P0 = 0 连续第 3 天. 下个检查点: 8/12 tax-audit 复核 + 8/14 Placeit 催办."
     }
   },
   "pending_applications_aging": {
@@ -697,5 +716,13 @@
     "3_placeit": "8/14 超期催办评估 (草稿 drafts/placeit-followup-email.md 已就绪, 当天检查 affiliate-programs.json status)",
     "4_pinterest_scheduler": "not-configured (P2, 不影响佣金)",
     "_cf_freebie_8_10": "CF freebie 8/10 解析落盘 (21 素材, 6 🎃, UID 662); 素材池 5 天累计 25 🎃; 0 新审批; P0 = 0 (Printful 解除后首次清空)"
+  },
+  "manual_checklist_2026_08_11": {
+    "generated_by": "aitoptools-affiliate-monitor cron 2026-08-11 12:1x (IMAP 实拉 + 文件核查)",
+    "1_printify_promo_code": "NO-REPLY-72H — 回信 8/8 00:27 已发 (SMTP 465 留证), 8/11 检查窗口: 收件箱 0 回复 (Printify 最后邮件仍为 8/9 14:30 营销 'What's Next? Let's Grow Together'). 8/13-14 二次检查, 无回复则升级 user 走 PartnerStack 站内渠道催",
+    "2_tax_audit": "复核窗口 8/12 (Printful W-8BEN-E Pending <=3 工作日, 8/9 提交); Impact 登录复查 (可选, 低优先)",
+    "3_placeit": "8/14 超期催办评估 (草稿 drafts/placeit-followup-email.md 已就绪, 当天检查 affiliate-programs.json status)",
+    "4_pinterest_scheduler": "not-configured (P2, 不影响佣金)",
+    "_cf_freebie_8_11": "CF freebie 8/11 解析落盘 (20 素材, 1 🎃 + 1 升华烫画, UID 673); 素材池 6 天累计 26 🎃 (去重 25); 0 新审批; P0 = 0 连续第 3 天"
   }
 }

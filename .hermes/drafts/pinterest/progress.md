@@ -2,7 +2,7 @@
 
 > 规则: 每天 2 张（8/6 起）, 发布包在 ready-to-post-*.md, user 手工发布（Hermes 不自动登录）
 
-## 进度: 13/16
+## 进度: 15/16
 
 | # | 日期 | 目标页面 | 发布包 | 状态 |
 |---|------|---------|--------|------|
@@ -19,7 +19,9 @@
 | 11 | 2026-08-09 | /best/best-print-on-demand-companies/ | ready-to-post-2026-08-09.md | 📝 待发布 |
 | 12 | 2026-08-10 | /claid-ai-review/（变现权重 #1, 收款就绪） | ready-to-post-2026-08-10.md | 📝 待发布 |
 | 13 | 2026-08-10 | /kittl-review/（变现权重 #2） | ready-to-post-2026-08-10.md | 📝 待发布 |
+| 14 | 2026-08-11 | /printify-review/（与今日 Halloween 辐条② Blog 联动） | ready-to-post-2026-08-11.md | 📝 待发布 |
+| 15 | 2026-08-11 | /printful-review/（与今日 Halloween 辐条② Blog 联动） | ready-to-post-2026-08-11.md | 📝 待发布 |
 
-## 剩余 3 张（8/11-8/12 计划）
+## 剩余 1 张（8/12 计划）
 
-- [ ] 头部评测页 7 选 6（已完成 kittl + claid）: photoroom / printify / printful / mockey / creative-fabrica（剩 3 张 + 0 机动）
+- [ ] mockey（变现权重 #3, 30% 循环）— 8/12 产出 ready-to-post-2026-08-12.md 即完成 16/16
