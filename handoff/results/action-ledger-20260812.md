@@ -43,3 +43,9 @@
 - **账号激活**: 导航栏显示 Jerome Tang (Dashboard/Commissions/Payouts/Referrals/Assets 全菜单可用)
 - 附带: 5 封确认/重置邮件在 gmail（#677/#679/#681 确认 + #676/#678 重置），CF 转发链路持续验证
 - 剩余: PayPal payout 邮箱设置（用户可选：后台 Confirm email 预填显示 jjerome@aitotools.net 疑似错值，建议用户核对改为正确 PayPal 邮箱；留空则用账号邮箱）
+
+## 七、U3 完成 (2026-08-12 06:0x)
+- **CF Web Analytics beacon 已上线**: token 00f3d76a19fc48238e780daae6627eb4, 植入 layout.js (<body> 后), build exit 0 (201 文件 777 aff-link), commit cd9ab95
+- **线上验证**: https://aitoptools.net/ 首页 beacon: True + token: True (部署传播后实证)
+- **GEO_BLIND 解锁**: daily-ops Step 3 将有数据源 (CF Web Analytics 实时测量)
+- 剩余: U2 GSC OAuth (用户 10min 今日截止) / U4 Impact 快照 (用户 2min 8/14 前)
