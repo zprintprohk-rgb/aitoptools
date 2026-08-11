@@ -1,35 +1,36 @@
 # 拍板看板（user 只看这里）
 
-> 更新：2026-08-12 03:55 · 千问 3.8-Max 维护。无待拍板项时本表为空，您无需做任何事。
+> 更新：2026-08-12 07:00 · 千问 3.8-Max 维护。无待拍板项时本表为空，您无需做任何事。
 
 ## 待拍板
 
 | # | 事项 | 为什么必须您来 | 耗时 | 状态 |
 |---|---|---|---|---|
 | D1 | 提供一个测试收货地址（写入 test-address.json） | Halloween 季节集群下单环节的唯一阻塞；地址属个人信息，执行层不得自造 | 2 min | ⏳ |
-| D2 | 配置 GSC OAuth（一次性） | T+7（8/14，后天）数据前提；**今日截止，未完成则首读数作废顺延** | 10 min | 🔴 今日截止 |
-| D3 | 安装 Cloudflare Web Analytics beacon | GEO 数据盲区唯一解锁手段；**今日截止，同 D2** | 5 min | 🔴 今日截止 |
-| D4 | Chrome 登录 Impact（app.impact.com）查 Kittl 8/1-11 数据 | Kittl 加投/撤位判定被数据卡住；登录态不自动化（查询指引见 .hermes/logs/2026-08-11-kittl-measure.md） | 5 min | ⏳ 建议 8/14 前 |
 | D5 | 回填 3 个经营数据：Printful 佣金比例 / 月运营成本 / Pinterest 做不做 | 决定盈亏平衡点计算与第二流量引擎是否启动 | 5 min | ⏳ |
 
-## 您的一键动作（30 秒）
+~~D2 GSC OAuth~~ / ~~D3 CF beacon~~ / ~~D4 Impact 登录~~ —— **已全部关闭**（8/12 凌晨执行层完成，线上实证齐全）
 
-- **Rewardful 邮箱确认**（Synthesia 账号激活）：8/12 01:30 发出的确认链接（#681）时效约 1 小时，大概率已过期——打开 synthesia.getrewardful.com 登录（邮箱 jerome@aitoptools.net，密码执行层已存）→ 点 Send confirmation email → gmail 秒收 → 点确认链接。不影响申请送达（HubSpot 侧已收到），只影响后台追踪链接获取。
+## 您的行动卡（2 项，均 5 分钟内）
+
+1. **Kittl 联盟直达申请**（最高优先级，3 min）：官方条款实证 20% × 12 个月循环、单个 Expert 订阅最高 $72——矩阵里 LTV 最高的程序。入口不在 Impact 市场浏览页（昨天搜 0 结果是入口找错），官方直达链接见下方，浏览器打开用企业邮箱 jerome@aitoptools.net 申请：
+   `https://app.impact.com/campaign-promo-signup/Kittl.brand?execution=e2s1`
+   全站 8+ 处 Kittl 推荐位已备好（评测/对比/榜单/Blog），获批即全量换链激活。
+2. **Rewardful 收款邮箱核对**（1 min）：Synthesia 后台 payout 邮箱预填显示 "jjerome@aitotools.net"（疑似多打一个 j），登录 synthesia.getrewardful.com 核对为正确 PayPal 邮箱，否则佣金打款会出问题。
 
 ## 执行进展速览（无需动作）
 
-- 8/12 ✅ A3 Synthesia 闭环：申请提交成功（submissionGuid 实证）+ Rewardful 账号 + 回执邮件到达；25% 首购/60 天 cookie 进入审批
-- 8/12 ✅ CF Email Routing 全链路打通（jerome@aitoptools.net→gmail，MX+SPF 实证）——项目首个企业邮箱通道，后续所有联盟申请统一用它
-- 8/12 ✅ 昨日 P0 敏感文件风险解除：git 全历史核查零记录、远端干净、gitignore 已覆盖，无需清理
-- 8/11 ✅ Halloween 辐条②提前 7 天产出（printful-vs-printify-halloween-2026，2574 词，全站首个双 CTA blog）+ Pinterest 15/16 + push 349 页
-- 8/11 ✅ Kittl 实测日完成（判定挂起等 D4 数据）；CF 素材池 26 🎃（去重 25）
-- 8/10 ✅ 联盟候选 5 项条款实证 + 周报/RESULT 补齐 + 402 闭环
+- 8/12 07:00 🎯 **GSC 数据通道打通 + 基线到手**：8/5-8/9 五天展示 230/212/182/134/273（约 1031），点击 0，均排名 60-71。站点处于"已收录未排名"阶段，8/14 T+7 读数大概率仍无点击——这是 6 周新域名正常位置，策略重心已转"排名速度"：两个变现页（printful-alternatives pos=73.5 / printify-alternatives pos=82.5）内链 Boost 已排入任务，这是离第一笔佣金最近的单点
+- 8/12 06:5x ✅ **13/13 全闭环核验通过**：RESULT-0811 补写合格 / 402 根因修复实证 / Jasper 复查维持关闭 / 攒批 push 上线（远端零敏感文件）/ U1 Rewardful 激活 / U2 GSC 全自动化 / U3 beacon 线上实证 / U4 Impact 登录实证
+- 8/12 ⚠️ **Kittl 渠道修正**：官方页实证 Kittl 联盟走 Impact Radius 直达 campaign（不在市场浏览页），"不在 Impact"结论作废，条款 20%×12mo/$72
+- 8/12 ✅ CF Email Routing 全链路打通（jerome@aitoptools.net→gmail，MX+SPF 实证）——后续所有联盟申请统一企业邮箱
+- 8/11 ✅ Halloween 辐条②提前 7 天产出 + Pinterest 15/16 + push 349 页；Kittl 实测日完成；CF 素材池 26 🎃
 
 ## 近期日程（无需动作）
 
-- 8/12（今日）: Printful W-8BEN-E 复核窗 + Hermes 切换正式检查 20:17 + Jasper 申请入口复查 + RESULT-0811 补写
-- 8/14: T+7 首读数（您 10 min 校准决策树）+ Placeit 催办评估（超期）
+- 8/12（今日）: Printful W-8BEN-E 复核窗 + Hermes 切换正式检查 20:17 + 变现页内链 Boost 启动
+- 8/14: T+7 首读数（GSC 数据已就绪，对比基线=8/5-8/9 五天 1031 展示/0 点击）+ Placeit 催办评估
 - 8/17: Halloween 辐条①实测产出（Kittl 设计素材联动）
 - 8/18: Halloween 上线判定
-- 9/13: T+30 全量校准（以 T+7 起算 30 天）
+- 9/13: T+30 全量校准
 - 9/29: Printify $150 博客挑战赛截止
