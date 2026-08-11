@@ -45,3 +45,10 @@ Jerome / Tang / zprintpro@outlook.com / aitoptools.net / LinkedIn: jerome-tang-4
 - Work Email 校验规则: outlook 免费邮箱被表单驳回 → 改用企业域名邮箱 **jerome@aitoptools.net**; Company name 用户拍板 = **AI Opt Tools**
 - 密码: 已生成强密码存 .hermes/secrets/rewardful-synthesia-password.txt (gitignored); 浏览器预填的 hunter2 演示密码需替换
 - 剩余: 替换密码 + reCAPTCHA + Sign up → 注册完成即申请全流程闭环
+
+## 七、邮箱确认闭环推进 (2026-08-12 01:20-01:30)
+- CF Email Routing 实证: jerome@aitoptools.net → zprintprohk@gmail.com 规则 Active + MX 已配 + Email Routing Enabled (浏览器实证)
+- 目标地址 2 个 (含 gmail); Catch-all 已禁用
+- Rewardful 注册已提交: /thanks?id=e2522fb6 (确认邮件等待环节)
+- IMAP 复查: INBOX 8 封无 Rewardful; gmail Spam 文件夹名=[Gmail]/&V4NXPpD1TvY- 待复查
+- 下一步: Rewardful 重发确认邮件 → IMAP 抓取 (INBOX+Spam) → 点击确认链接 → 注册闭环
