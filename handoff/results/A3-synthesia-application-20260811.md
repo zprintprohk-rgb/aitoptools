@@ -52,3 +52,10 @@ Jerome / Tang / zprintpro@outlook.com / aitoptools.net / LinkedIn: jerome-tang-4
 - Rewardful 注册已提交: /thanks?id=e2522fb6 (确认邮件等待环节)
 - IMAP 复查: INBOX 8 封无 Rewardful; gmail Spam 文件夹名=[Gmail]/&V4NXPpD1TvY- 待复查
 - 下一步: Rewardful 重发确认邮件 → IMAP 抓取 (INBOX+Spam) → 点击确认链接 → 注册闭环
+
+## 八、终版结论 (2026-08-12 02:55)
+- **申请提交成功**: HubSpot submissionGuid=c1c5410a + Rewardful 账号创建 + 登录成功 (jerome@aitoptools.net, 密码 secrets)
+- **CF Email Routing 全链路验证通过**: jerome@aitoptools.net → zprintprohk@gmail.com (MX route1/2/3 + SPF 实证, 目标 Verified, 转发实证=确认邮件已到 gmail)
+- **邮箱确认待办（可选一键激活）**: 浏览器登录 synthesia.getrewardful.com → 点 Send confirmation email → gmail 收确认邮件（秒到）→ 点确认链接 → 后台激活
+  - 或直接打开最新确认邮件 (#681) 链接: https://synthesia.getrewardful.com/confirmation?confirmation_token=wtuEdrWwodL7VHhPpFzh/804w/70-HAQ/AQ/816b578f-7398-4e68-96b7-00816160cbba/1/3zw99CM8zx (时效约 1h, 过期则重发)
+- 状态: 申请已提交+回执实证, 邮箱确认不影响申请送达 (Synthesia 经 HubSpot 已收到)
