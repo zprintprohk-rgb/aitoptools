@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aitoptools 今日闭环看板 · 2026-08-12</title>
+<style>
+  /* Fathom Information Design — 科研图表风 */
+  :root { --paper:#f7f7f5; --card:#ffffff; --ink:#1c2333; --navy:#22304f; --gray:#5c6675; --line:#d8dbe0; --ok:#2e7d5b; --warn:#c07b2c; --bad:#b3261e; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Segoe UI","Helvetica Neue",Arial,"PingFang SC",sans-serif; background:var(--paper); color:var(--ink); line-height:1.65; padding:44px 26px; }
+  .wrap { max-width:1000px; margin:0 auto; }
+  header { border-bottom:3px solid var(--navy); padding-bottom:18px; margin-bottom:28px; }
+  h1 { font-size:24px; font-weight:600; letter-spacing:.5px; }
+  .meta { color:var(--gray); font-size:12.5px; margin-top:4px; }
+  h2 { font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:1.1px; color:var(--navy); margin:30px 0 12px; border-bottom:1px solid var(--line); padding-bottom:5px; }
+  table { width:100%; border-collapse:collapse; background:var(--card); font-size:13px; }
+  th { background:var(--navy); color:#fff; font-weight:500; text-align:left; padding:8px 10px; font-size:11.5px; letter-spacing:.4px; }
+  td { border-bottom:1px solid var(--line); padding:8px 10px; vertical-align:top; }
+  .st { display:inline-block; padding:2px 9px; font-size:11px; border-radius:10px; font-weight:500; }
+  .s-ok{background:#e3f1ea;color:var(--ok)} .s-run{background:#e6ecf4;color:var(--navy)} .s-warn{background:#f7ead6;color:var(--warn)}
+  code { background:#efece4; padding:1px 5px; border-radius:3px; font-size:12px; }
+  .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:14px 0; }
+  .metric { background:var(--card); border:1px solid var(--line); padding:13px 15px; }
+  .metric .num { font-size:24px; font-weight:600; font-variant-numeric:tabular-nums; }
+  .metric .lbl { font-size:11.5px; color:var(--gray); margin-top:2px; }
+  .okc{color:var(--ok)} .warnc{color:var(--warn)} .badc{color:var(--bad)}
+  .foot { margin-top:36px; border-top:1px solid var(--line); padding-top:12px; font-size:11px; color:var(--gray); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>aitoptools 今日闭环看板 · 2026-08-12</h1>
+    <div class="meta">生成 05:40 GMT+8 · 交叉核对口径：台账 ↔ cron 日志 ↔ git 历史 ↔ 平台后台</div>
+  </header>
+
+  <div class="metrics">
+    <div class="metric"><div class="num okc">4</div><div class="lbl">系统侧动作（2 完成 + 1 验证中 + 1 完成）</div></div>
+    <div class="metric"><div class="num warnc">4</div><div class="lbl">用户动作卡（2 项今日截止）</div></div>
+    <div class="metric"><div class="num okc">0</div><div class="lbl">远端敏感文件记录</div></div>
+    <div class="metric"><div class="num">5</div><div class="lbl">攒批 push commit 已上线</div></div>
+  </div>
+
+  <h2>系统侧完成项</h2>
+  <table>
+    <tr><th>#</th><th>动作</th><th>状态</th><th>证据</th></tr>
+    <tr><td>1</td><td>RESULT-2026-08-11 补写（带补写标记 + 三分支日志引用）</td><td><span class="st s-ok">done</span></td><td>commit <code>d969450</code>；8/11 日志齐全实证（affiliate-monitor/kittl-measure/cron/indexnow）</td></tr>
+    <tr><td>2</td><td>cron 402 根因修复：key 更换 + fallback 修正 + gateway 重启</td><td><span class="st s-run">验证中</span></td><td>deepseek key 69c493→3ebe7f（<b>curl 实证 401→200</b>）；fallbacks b705d040→840d2872；daily-ops force-run 运行中</td></tr>
+    <tr><td>3</td><td>Jasper 官方入口复查</td><td><span class="st s-ok">无变化</span></td><td>无公开 Apply 入口（审核制，与 8/8 实证一致）；条款再确认 25%→30% 阶梯/12 个月循环；<b>未重开不出申请卡</b></td></tr>
+    <tr><td>4</td><td>攒批 push 窗口上线</td><td><span class="st s-ok">done</span></td><td><code>3496062..d969450</code>（5 commit）；远端敏感文件复核零记录（双文件 NOT IN REMOTE）</td></tr>
+  </table>
+
+  <h2>用户动作卡（今日截止标红）</h2>
+  <table>
+    <tr><th>#</th><th>动作</th><th>耗时</th><th>截止</th><th>解锁</th></tr>
+    <tr><td>U1</td><td>Synthesia Rewardful 邮箱确认（登录 → Send confirmation email → gmail 点新链接）</td><td>30s</td><td>随时</td><td>后台追踪链接（申请已送达不受影响）</td></tr>
+    <tr><td>U2</td><td><b>GSC OAuth</b>：Service Account JSON → <code>.hermes/secrets/gsc-oauth.json</code></td><td>10min</td><td class="badc"><b>今日</b></td><td>8/14 T+7 首读数（今天不配则读数作废顺延）</td></tr>
+    <tr><td>U3</td><td><b>CF beacon</b>：Web Analytics 脚本 → 告知 AutoClaw 植入 layout.js</td><td>5min</td><td class="badc"><b>今日</b></td><td>GEO 数据盲区解除（T+7 前提）</td></tr>
+    <tr><td>U4</td><td>D4 Impact 登录查 Kittl 数据快照（截图归档）</td><td>2min</td><td>8/14 前</td><td>Kittl 加投/撤位判定</td></tr>
+  </table>
+
+  <h2>固化规则（已入 STRATEGY-2026-08-12）</h2>
+  <table>
+    <tr><th>规则</th><th>来源教训</th></tr>
+    <tr><td>RESULT 当晚必写不得顺延（补写带标记）</td><td>8/11 漏写事件</td></tr>
+    <tr><td>联盟申请一律企业域名邮箱</td><td>outlook 被 Synthesia 表单驳回</td></tr>
+    <tr><td>模型 fallback 有效性例行核查（key 401 风险）</td><td>本次 deepseek 401 三连挂</td></tr>
+  </table>
+
+  <div class="foot">数据来源：cron runs / git log / curl 实证 / 浏览器实证（jasper.ai）· 台账: handoff/results/action-ledger-20260812.md（commit 在库）· Fathom Information Design</div>
+</div>
+</body>
+</html>
