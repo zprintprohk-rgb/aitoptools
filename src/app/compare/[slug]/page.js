@@ -176,6 +176,12 @@ export default function ComparisonPage({ params }) {
               )
             })()}
           </div>
+          {/* T11 Boost (8/12): relatedLinks 渲染 — 指向 /best/printful-alternatives/ 与 /best/printify-alternatives/ */}
+          {comp.relatedLinks && (
+            <div style={{ marginTop: 14, fontSize: '0.95rem', lineHeight: 1.7, color: 'var(--k-deep)' }}>
+              <span dangerouslySetInnerHTML={{ __html: comp.relatedLinks }} />
+            </div>
+          )}
           {/* K3 7/28 护栏对齐 (与详情页 [slug]/page.js L150-152 一致): verdict-ctas 旁加 organic Visit Official 出口, 不加 aff-link 标 + 不加 UTM + rel="nofollow", 让用户能直接去官网, 避免全 CTA 都是 affiliate 强行压转化 */}
           <p style={{ marginTop: 10, fontSize: '0.85rem', color: 'var(--k-tertiary)', textAlign: 'center' }}>
             Just looking?{' '}

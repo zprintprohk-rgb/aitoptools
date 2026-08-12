@@ -75,16 +75,39 @@ export function autoLinkTools(text, index, alreadyLinked = new Set()) {
   if (!text || !index || index.size === 0) return text
   // 长名优先匹配（"Creative Fabrica" 不会被 "Fabrica" 截胡；同名前缀场景更稳）
   const names = [...index.keys()].sort((a, b) => b.length - a.length)
+  // 8/12 v2 修复: <a>...</a> 整体不可入侵（href 属性值 + 锚文本都不动），
+  // 只在 anchor 之外的纯文本段匹配工具名 —— 避免 T11 Boost 链接被二次 autoLink 造成嵌套 <a>
+  const anchorBlock = /<a\b[^>]*>[\s\S]*?<\/a>/i
   let out = text
   for (const key of names) {
     const entry = index.get(key)
     if (alreadyLinked.has(key)) continue
     const re = new RegExp(`\\b${escapeRegExp(entry.name)}\\b`, 'i')
-    const m = re.exec(out)
-    if (!m) continue
-    alreadyLinked.add(key)
-    const link = `<a href="${entry.url}" class="blog-internal-link">${m[0]}</a>`
-    out = out.slice(0, m.index) + link + out.slice(m.index + m[0].length)
+    // 分段: anchor 整体为不可变段, 其余按普通标签切分
+    const segments = out.split(/(<a\b[^>]*>[\s\S]*?<\/a>)/i)
+    let done = false
+    for (let i = 0; i < segments.length; i++) {
+      const seg = segments[i]
+      if (anchorBlock.test(seg)) continue
+      // 段内再跳过普通标签（href 属性值等）, 只匹配纯文本
+      const inner = seg.split(/(<[^>]+>)/)
+      for (let j = 0; j < inner.length; j++) {
+        const piece = inner[j]
+        if (/^<[^>]+>$/.test(piece)) continue
+        const m = re.exec(piece)
+        if (!m) continue
+        alreadyLinked.add(key)
+        const link = `<a href="${entry.url}" class="blog-internal-link">${m[0]}</a>`
+        inner[j] = piece.slice(0, m.index) + link + piece.slice(m.index + m[0].length)
+        done = true
+        break
+      }
+      if (done) {
+        segments[i] = inner.join('')
+        break
+      }
+    }
+    out = segments.join('')
   }
   return out
 }
