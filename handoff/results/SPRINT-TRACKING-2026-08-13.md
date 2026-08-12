@@ -36,6 +36,15 @@
 - 每日搜索增长 19:23：连续 4 次 error 为模型凭证（deepseek ****c493 401 + zai 402 偶发）→ **需用户侧重新认证**
 - 每周复盘 OK / 季节集群 8/18 19:37 待触发
 
+
+## 8/14 T+7 cron 应急预案（2026-08-13 00:42 预置）
+**风险**: 一次性节点默认模型 zai_auto（8/12 曾 402 billing 偶发）+ fallbacks deepseek（8/13 凌晨两个 key 均报 401 ****c493 无效）→ 8/14 09:00 若模型全失败，任务 error，决策窗口可能错过。
+**恢复路径**（按序）:
+1. 8/14 09:00 cron 若 lastStatus=error → 立即手动 cron run 重试一次（zai 402 为偶发，原样重试多可恢复）
+2. 重试仍失败 → 主会话手动执行 T+7 决策（数据链路已验证：gsc_query.py + gsc-oauth.json + SOCKS5 代理 + PyJWT 2.13 + cryptography 已装；预读报告 t7-prelim-0813.md 在手）
+3. 仍失败 → 升级 user：在 OpenClaw 模型设置重新认证 deepseek provider（错误提示: openclaw models auth login --provider 'deepseek__840d2872-...' --force）
+**数据兜底**: T+7 决策所需数据已预拉（覆盖至 8/12），即使 cron 延迟 1-2 天执行，数据仍有效（GSC 覆盖窗口随拉取时间顺延，基线不变）。
+
 ## 未决事项（需用户或时间）
 1. cron 模型凭证: 每日搜索增长（980a27f6）连续 4 次 401（deepseek ****c493 无效）→ 用户侧重新认证
 2. C 级 10 页 affiliate URL: 无真实来源不编造 → 8/16 复查联盟后台，无则保持观察
