@@ -1,0 +1,150 @@
+{
+ "total_pages": 341,
+ "A": 187,
+ "B": 138,
+ "C": 16,
+ "by_type": {
+  "best": {
+   "A": 149,
+   "B": 50,
+   "C": 0,
+   "n": 199
+  },
+  "review": {
+   "A": 5,
+   "B": 88,
+   "C": 14,
+   "n": 107
+  },
+  "comparison": {
+   "A": 6,
+   "B": 0,
+   "C": 0,
+   "n": 6
+  },
+  "listicle": {
+   "A": 4,
+   "B": 0,
+   "C": 0,
+   "n": 4
+  },
+  "tool": {
+   "A": 7,
+   "B": 0,
+   "C": 2,
+   "n": 9
+  },
+  "blog": {
+   "A": 10,
+   "B": 0,
+   "C": 0,
+   "n": 10
+  },
+  "category": {
+   "A": 6,
+   "B": 0,
+   "C": 0,
+   "n": 6
+  }
+ },
+ "c_slugs": [
+  "bluehost-review-2026",
+  "dalle-review",
+  "fliki-ai-review-2026",
+  "gear-launch-review-2026",
+  "gorgias-ai-review-2026",
+  "grammarly-business-review-2026",
+  "greenonion",
+  "packify-ai-review",
+  "pebblely-review-2026",
+  "picjam",
+  "playht-review-2026",
+  "reconvert-upsell-review-2026",
+  "removebg-review",
+  "squarespace-ai-review-2026",
+  "topaz-photo-ai-review-2026",
+  "wix-ai-review-2026"
+ ],
+ "b_shortest20": [
+  {
+   "slug": "postermywall-review",
+   "wc": 75
+  },
+  {
+   "slug": "hostinger-review",
+   "wc": 78
+  },
+  {
+   "slug": "perplexity-pro-review",
+   "wc": 86
+  },
+  {
+   "slug": "notion-ai-review",
+   "wc": 89
+  },
+  {
+   "slug": "claid-ai-review",
+   "wc": 90
+  },
+  {
+   "slug": "midjourney-review",
+   "wc": 92
+  },
+  {
+   "slug": "logoai-review",
+   "wc": 93
+  },
+  {
+   "slug": "gamma-ai-review",
+   "wc": 95
+  },
+  {
+   "slug": "rytr-review",
+   "wc": 97
+  },
+  {
+   "slug": "elevenlabs-review",
+   "wc": 100
+  },
+  {
+   "slug": "suno-ai-review",
+   "wc": 101
+  },
+  {
+   "slug": "descript-review",
+   "wc": 102
+  },
+  {
+   "slug": "synthesia-review",
+   "wc": 104
+  },
+  {
+   "slug": "pika-labs-review",
+   "wc": 104
+  },
+  {
+   "slug": "looka-review",
+   "wc": 104
+  },
+  {
+   "slug": "vistacreate-review",
+   "wc": 104
+  },
+  {
+   "slug": "cursor-review",
+   "wc": 108
+  },
+  {
+   "slug": "zmo-ai-review",
+   "wc": 109
+  },
+  {
+   "slug": "leonardo-ai-review",
+   "wc": 110
+  },
+  {
+   "slug": "best-ai-writing-tools-comparison",
+   "wc": 114
+  }
+ ]
+}

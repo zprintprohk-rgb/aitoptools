@@ -26,11 +26,13 @@
 | 9/13 | W4-0913 T30全量校准 | 09:00 |
 - 既有 cron: 每日联盟运营 12:17（已加 Step 0 PHASE 消费 + Step 0b 排名哨兵）/ 每日搜索增长 19:23 / 每周复盘 周日 07:47 / 季节集群执行 8/18 19:37
 
-## 四、T13 记分卡 v0（8/12 预检版）
-- 台账: `.cluster/programmatic-audit-0813.json`（117 页 = reviews 107 + comparisons + listicles）
-- 分级: **A=10 / B=103 / C=4**
-- B 类主短板: 正文 <800 词（多数 100-400 词）+ 站内链接 =0 → 8/16 快修靶心（title/meta/schema/内链）
-- 局限: v0 未含 category/best/blog；8/13 晚 cron 出正式版（.cluster/programmatic-audit-0813.md）
+## 四、T13 记分卡正式版（8/12 全量，口径 v1.1 已核验）
+- 台账: `.cluster/programmatic-audit-0813.md` + .html（可视化报告）+ summary.json；抽样核验: scorecard-sample-audit-0812.md（页面清单: page-inventory-0812.json）
+- 口径: **333 programmatic 页** = best 199（keywords-200.csv → generate-pages.js）+ reviews 107 + comparisons 6 + listicles 4 + blog 10 + category 6（tools 9 无独立页仅喂 best；category 实为 6 类非 13）
+- 分级: **A=187 / B=138 / C=16**（best 149/50/0 · review 5/88/14 · comparison 6/0/0 · listicle 4/0/0 · blog 10/0/0 · category 6/0/0 · tool 7/0/2）
+- C 级 16 页: -2026 批 10 页 affiliateUrl="#" 占位符（无真实 CTA）+ dalle/removebg 标点变体 + gear-launch/packify + greenonion/picjam（pending 无 CTA）
+- B 类主短板: 正文 <800 词（postermywall 75 词最短）+ 站内链接=0 → 8/16 快修靶心（C 级 16 页优先 + B 类正文扩写队列 20 页）
+- 口径修正: v0→v1.1 依据抽样核验 5 根因（listicle 全文词数 / comparison toolA-toolB aff / "#" 假阳性 / 内链口径 / kw 标点宽容）
 
 ## 五、Printify 挑战规则核实（8/20 前置提前完成）
 - 报告: `.hermes/logs/printify-challenge-verification-0812.md`（邮件 #495 原文规则 + #497 已提交实证 + #651 8/9 邮件）
