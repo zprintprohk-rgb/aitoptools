@@ -38,6 +38,13 @@
 - 报告: `.hermes/logs/printify-challenge-verification-0812.md`（邮件 #495 原文规则 + #497 已提交实证 + #651 8/9 邮件）
 - 结论: **ALLOWED-WITH-CONDITIONS**（$150/月 5 名；7/24-9/28；博客需月访客≥1000 当前不满足；视频需≥500 观看；不可重复提交）
 
+## 七、W1-0813 T11/T14 内链 Boost（8/12 夜提前执行，commit 3a5f4ee）
+- **改动**: blog-posts.json 10/10 篇插入 Boost 内链块（指向 /best/printful-alternatives/ 与 /best/printify-alternatives/，GSC 37+22 展示 pos73.5/82.5 的变现双页）+ 2 篇 Kittl 互链；comparisons.json 6/6 加 relatedLinks + compare/[slug]/page.js 模板渲染；listicles.json 2/2（best-ai-tshirt-design-generators / best-print-on-demand-companies）closing 加 Boost 链接；reviews.json 5 页（printful/printify/gelato/stickermule + kittl-review Kittl 互链）
+- **附随修复**: src/lib/blog-links.mjs autoLinkTools v2 —— `<a>` 整体不可入侵（修复 href 值内工具名被二次 autoLink 造成嵌套 <a> 的 bug；T1/T2/T3 单测通过）
+- **验证**: npm run build exit 0（inject-aff-link 777 链接 / 201 文件）；产物扫描 compare 6/6、blog 10/10 含 Boost 内链、嵌套 <a> = 0、目标页 out/best/printful-alternatives/index.html (109KB) 与 printify-alternatives (108KB) 存在
+- **8/13 09:00 cron 已改幂等**: 查 commit 3a5f4ee 存在 → 验证产物后输出 ALREADY DONE，不重复改动
+- **C 级 16 页登记**: .cluster/cfix-registry-0813.md（10 页占位符待真实 URL 不编造 / 2 页内容短板 8/16 扩写 / 2 页标点误判 / 2 页 pending 保持）
+
 ## 六、启动准备验证清单
 - [x] 路线图入库（a5f4436）+ daily-ops Step 0 消费已配置
 - [x] 基线落台账（上表一）
