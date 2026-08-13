@@ -69,6 +69,7 @@ function generateReviewJsonLd(review) {
       name: review.title,
       author: { '@type': 'Organization', name: 'Print AI Tools' },
       datePublished: review.datePublished || '2026-06-25',
+      dateModified: review.dateModified || review.datePublished || '2026-06-25',
       reviewRating: { '@type': 'Rating', ratingValue: String(review.rating), bestRating: '5', worstRating: '1' },
       itemReviewed: {
         '@type': 'SoftwareApplication', name: toolName, applicationCategory: 'AIApplication',
@@ -145,6 +146,9 @@ export default function ReviewPage({ params }) {
           <span className="card-cat">{review.category}</span>
           <span className="meta-rating"><RatingBar rating={review.rating} /></span>
           <span className="card-price">From {review.price}</span>
+          {review.dateModified && (
+            <span style={{ color: 'var(--k-tertiary)', fontSize: '0.8rem' }}>· Last updated {review.dateModified}</span>
+          )}
           {isVertical && <span className="card-badge vertical" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: 'var(--y-bg)', color: 'var(--y-text)', fontSize: '0.7rem', fontWeight: 600, padding: '2px 8px', borderRadius: '100px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>🖨️ Print & E-Com</span>}
           <span className="card-badge tested" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: 'var(--c-bg)', color: 'var(--c-text)', fontSize: '0.68rem', fontWeight: 600, padding: '2px 8px', borderRadius: '100px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>✓ Hands-on Tested</span>
           <a href={review.visitUrl} target="_blank" rel="nofollow sponsored" style={{ color: 'var(--c-primary)', fontWeight: 500, fontSize: '0.85rem' }}>
@@ -155,6 +159,12 @@ export default function ReviewPage({ params }) {
         <p className="byline" style={{ fontSize: '0.85rem', color: 'var(--k-secondary)', margin: '6px 0 0' }}>
           By <strong>Jerome Tang</strong> — Print industry expert · hands-on tested on real print jobs
         </p>
+
+        {review.featureLine && (
+          <p style={{ fontSize: '0.85rem', color: 'var(--k-tertiary)', margin: '4px 0 0' }}>
+            <strong>Key features:</strong> {review.featureLine}
+          </p>
+        )}
 
         {/* Pros & Cons */}
         <ProsCons pros={review.pros} cons={review.cons} />

@@ -71,8 +71,8 @@
 |---|---|---|---|---|
 | 3 | /blog/is-magicdrop-legit/ | 64.6 | 8/11 | 信任 FAQ≥5 + 引用链 + 内链≥4 |
 | 4 | /blog/print-price-ai-tools-2026/ | 69.5 | 8/13 | 对比表 + 内链 + Schema (8/21 ≤30) |
-| 5 | /midjourney-review/ | 84.6 | 8/17 | 对比矩阵 (替代型) |
-| 6 | /jasper-ai-review/ | 91.5 | 8/17 | 对比矩阵 (替代型) |
+| 5 | /midjourney-review/ | 84.6 | 8/17 | 对比矩阵 (替代型) | DONE 8/17 (内容深度+引用链3+内链6+FAQ5+schema; IndexNow 2/2)
+| 6 | /jasper-ai-review/ | 91.5 | 8/17 | 对比矩阵 (替代型) | DONE 8/17 (内容深度+引用链3+内链6+FAQ5+schema; IndexNow 2/2)
 
 ### 北极星指标 (T+14 目标加入)
 | 指标 | 基线 8/8 | T+7 (8/14) | T+14 (8/22) |
