@@ -207,12 +207,15 @@ function buildSchemas({ slug, h1, meta, toolsList, faqs, keyword }) {
         url: `${DOMAIN}/${t.review_slug || t.slug + '-review'}/`,
       }
       // aggregateRating only with REAL rating from reviews.json (no fabrication)
+      // reviewCount=1: editorial review by aitoptools (single evaluation, not user aggregate)
+      // - required by Google rich results (ratingCount|reviewCount mandatory, GSC detected 2026-08-13)
       if (t.rating != null) {
         sw.aggregateRating = {
           '@type': 'AggregateRating',
           ratingValue: t.rating,
           bestRating: 5,
           worstRating: 1,
+          reviewCount: 1,
         }
       }
       if (t.price) {
