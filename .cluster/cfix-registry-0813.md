@@ -12,6 +12,13 @@
 | C. keyword 标点变体 | 2 | dalle-review（DALL-E 3）/ removebg-review（Remove.bg） | ℹ️ 记分卡口径误判为主（v1.1 已宽容匹配）；removebg wc=114 真实偏短 → 8/16 一并扩写 |
 | D. affiliate pending | 2 | greenonion / picjam | ⏸️ 保持（pending 是真实状态，文档已声明；无 CTA 不造假） |
 
+## 执行状态 (2026-08-14 W1 B类快修更新)
+
+- [DONE] 组 B (gear-launch wc 472->853 + FAQ5 / packify wc 754->837 + FAQ6) — 见 .hermes/logs/bfix-0816.md
+- [DONE] 组 C (removebg wc 110->820 + FAQ 修复 + price 字段修复)
+- [HOLD] 组 A: 复查无新来源 -> 保持观察不动
+- [WAIT] 组 D: 等待审批
+
 ## 行动项归属
 - 8/16 B 类快修 cron 追加：组 B（gear-launch + packify 扩写）+ 组 C（removebg 扩写）
 - 组 A 不编造 URL，8/16 复查联盟后台；无来源则记"观察不动"
