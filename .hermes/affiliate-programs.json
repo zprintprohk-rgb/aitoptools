@@ -101,16 +101,16 @@
    "confirm_email_sender": "support@info.printful.com",
    "confirm_email_subject": "Confirm email address",
    "confirm_link_note": "8/8 Hermes 全权指令 #1: IMAP 实拉两封 Confirm email address (7/17 15:25Z, 7/20 17:00Z, 同 token), headless GET verify 链接 -> 重定向 auth/login + \"Email confirmation request does not exist\" = 已过期。需 printful_session_cookie 登录后台 Resend verification -> 轮询新邮件(3 次/60s) -> 重试。",
-   "last_updated": "2026-08-12",
+   "last_updated": "2026-08-13",
    "approval_email_found": "2026-07-20 09:50Z affiliate@info.printful.com Your affiliate application was approved!",
    "email_verified": true,
    "tax_status": "w8ben-e-generated-not-signed-pending (8/9 browser 实证: Pending 待审, <=3 工作日, Edit 可用)",
    "tax_audit": {
-    "checked": "2026-08-12",
+    "checked": "2026-08-13",
     "method": "autoglm browser (AutoGLM 1.1.8, user Chrome 会话)",
     "url": "https://www.printful.com/dashboard/affiliate/tax",
     "result": "pending-review",
-    "detail": "8/12 05:44 复核 (8/9 提交后第 3 个工作日窗口内): 状态仍 Pending, 提示 \"Your documents will be reviewed in up to 3 business days\"; Edit/删除可用; 只读未操作 (未点提交/签署). 8/9 黄框提示: 需填第 4/5 行后签名上传. 下次复核 8/13."
+    "detail": "8/13 13:14 复核 (8/9 提交后第 4 个工作日): 状态仍 Pending, 页面提示 \"Your documents will be reviewed in up to 3 business days\" 已过窗口; Edit 按钮可用; 只读未做任何操作. 8/9 黄框提示需补第 4/5 行后签名上传 -> 升级 user 浏览器行动 (P1)."
    }
   },
   {
@@ -265,12 +265,12 @@
   }
  ],
  "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
- "last_updated": "2026-08-12",
+ "last_updated": "2026-08-13",
  "monitoring": {
   "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
   "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
-  "next_action": "8/13 tax-audit 再复核 (W-8BEN-E Pending D4) + 8/13-14 Printify promo 二次检查 (无回复则升级 user 走 PartnerStack); 8/14 Placeit 催办评估; Synthesia 确认链接待 user 手动点 (SINCE<90d 不自动)",
-  "last_live_check": "2026-08-12 05:4x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 30-Jul 135 封全量核实 — 新发现: Synthesia (Rewardful) 3x 确认邮件 + 2x 密码重置 (8/11)",
+  "next_action": "8/14: tax-audit 复核 (W-8BEN-E, 若 user 已补行则看是否 Approved) + Printify promo 二查收口 (无回复升级 user 走 PartnerStack 站内催) + Placeit 超期催办评估 + T+7 首读数 (GSC 覆盖至 8/12)",
+  "last_live_check": "2026-08-13 13:1x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 12-Aug 15 封全量核实 - 0 新审批; CF freebie 8/13 已抓取解析",
   "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
   "network_diag_5_19": {
    "imap.gmail.com:993": "TIMEOUT 8s",
@@ -635,11 +635,79 @@
   },
   "tax_audit_8_12": {
    "printful": "STILL-PENDING (browser 实证 8/12 05:44, 8/9 提交后第 3 个工作日; NOOP per protocol, 下次 8/13)",
-   "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 未自动登录, 低优先)"
+   "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 未自动登录, 低优先)",
+   "note_1223": "12:2x 轮未重复 browser 复核 (当日 05:44 已复核 Pending); 下次 8/13"
+  },
+  "high_signal_findings_24h_8_12_1223": {
+   "as_of": "2026-08-12 12:2x",
+   "status": "RESTORED — IMAP 增量扫描 (SINCE 11-Aug 15 封全量核实), 0 新审批 / 0 新商户邮件",
+   "new_findings": {
+    "cf_free_picks_8_12": {
+     "date": "2026-08-11 22:13 UTC (提前到达, 8/12 06:13 CST)",
+     "from": "hi@creativefabrica.com",
+     "subject": "Today's free picks: I choose you and I'll choose you. Over and over and over. & 19 more",
+     "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-12.md. 万圣节素材 x1: Coquette Patchwork Fall Pumpkin PNG (南瓜). 圣诞素材 x4 提前出现 (Q4 备选). 素材池 7 天累计 27 🎃 (去重 26)."
+    },
+    "printful_newsletter_8_11": {
+     "date": "2026-08-11 17:09",
+     "from": "newsletter.printful.com",
+     "subject": "5 winners. Free merch. You in?",
+     "signal": "营销邮件 (免费周边抽奖), 非审批/非验证. 素材可作内容."
+    },
+    "supabase_security_8_11": {
+     "date": "2026-08-11 18:18",
+     "from": "supabase.com",
+     "subject": "Action required: security vulnerabilities detected in your projects",
+     "signal": "⚠️ 跨项目 (zprintpro 域). 提醒 K3 处理 zprintpro 侧 Supabase 安全漏洞通知."
+    }
+   },
+   "p0_count_24h": 0,
+   "p0_notes": "无. 7 approved-active 全 link_deployed.",
+   "p1_count_24h": 3,
+   "p1_notes": "Printful W-8BEN-E Pending (8/13 复核) / Printify promo 回复 (8/13-14 二查, 今日增量扫描确认 0 回复) / Synthesia 邮箱确认待 user 手动点",
+   "p2_count_24h": 7,
+   "p2_notes": "维持暂缓清单不变. 今日噪音: togthr CI 失败 x4 + google.com GMC 通知 x2 (zprintpro 跨项目) + supabase 安全通知 (跨项目).",
+   "conclusion": "0 新审批 (SINCE 11-Aug 15 封全量核实). CF freebie 8/12 已到货并解析 (20 素材, 1 🎃, 早间轮未抓到现在补抓). Printify promo 回复仍 0 (8/13-14 二查窗口). P0 = 0 连续第 5 天."
+  },
+  "rank_sentinel_8_12": {
+   "status": "PIPELINE-OK (首拉 2026-08-12 12:2x)",
+   "window": "2026-08-05..2026-08-11 (同窗口比较, GSC T+1)",
+   "alerts": 0,
+   "note": "20/20 query 命中, 位置与 baseline 完全一致 (数据定稿无变动). 8/13 起正式每日拉取, 滚动窗口 8/6..8/12. 日志 .hermes/logs/rank-sentinel-2026-08-12.md"
+  },
+  "high_signal_findings_24h_8_13": {
+   "as_of": "2026-08-13 13:1x",
+   "status": "RESTORED - IMAP 增量扫描 (SINCE 12-Aug 15 封全量核实), 0 新审批 / 0 新商户邮件",
+   "new_findings": {
+    "cf_free_picks_8_13": {
+     "date": "2026-08-13 03:59 UTC",
+     "from": "hi@creativefabrica.com",
+     "subject": "Today's free picks: Whimsical Christmas Moose Clipart Bundle & 19 more",
+     "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-13.md. 万圣节素材 x2: Cute Ghost with Witch Hat / BOO Halloween Embroidery (刺绣=印刷垂直强相关). 圣诞素材 x6 提前出现 (含 headline + 刺绣 x1). 素材池 8 天累计 29 万圣节 (去重 28), 远超 Halloween 辐条①门槛."
+    }
+   },
+   "p0_count_24h": 0,
+   "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
+   "p1_count_24h": 4,
+   "p1_notes": "Printful W-8BEN-E Pending 超 3 工作日窗口 (8/13 复核, 需 user 补第 4/5 行 + 签名上传) / Printify promo 回复 (8/13-14 二查窗口开启, 今日仍 0 回复; 8/14 无回复则升级 user 走 PartnerStack 站内催) / Synthesia 邮箱确认待 user 手动点 / Placeit 8/14 超期催办评估.",
+   "p2_count_24h": 7,
+   "p2_notes": "暂缓清单不变: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai) / PartnerStack Network 重试 / Pinterest scheduler / Supabase zprintpro 暂停 (跨项目) / CF Web Analytics 无 API token (beacon 已上线, 8/19 GEO 首读数需 token 或 dashboard 人工导出).",
+   "conclusion": "0 新审批 (SINCE 12-Aug 15 封全量核实). CF freebie 8/13 到货解析完成 (20 素材, 万圣节 x2 + 圣诞 x6). Printify promo 0 回复 (二查窗口 8/13-14). W-8BEN-E 已过 3 工作日窗口仍 Pending -> 升级 user. P0 = 0 连续第 6 天."
+  },
+  "tax_audit_8_13": {
+   "printful": "STILL-PENDING (browser 实读 8/13 13:14, 8/9 提交后第 4 个工作日, 页面提示 3 business days 窗口已过; 需 user 补第 4/5 行 + 签名上传或联系 support; 下次复核 8/14)",
+   "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
+  },
+  "rank_sentinel_8_13": {
+   "status": "PIPELINE-OK (正式每日拉取第 1 天)",
+   "window": "2026-08-06..2026-08-12 (滚动窗口, 与 baseline 8/5..8/11 比较)",
+   "alerts": 1,
+   "alerts_detail": "kittl review 68.5->74.0 (下跌 5.5 位, imps 2->1) - Kittl 系变现目标词, 与今日 T14 Kittl 系内链 Boost 直接相关, 优先处理",
+   "note": "16/20 query 命中 (4 个零展示目标词无数据属正常). 日志 .hermes/logs/rank-sentinel-2026-08-13.md"
   }
  },
  "pending_applications_aging": {
-  "as_of": "2026-08-12",
+  "as_of": "2026-08-13",
   "items": [
    {
     "name": "Placeit (re-apply post Marketplace upgrade)",
@@ -651,9 +719,9 @@
    {
     "name": "Synthesia (Rewardful)",
     "applied": "2026-08-11",
-    "days": 1,
+    "days": 2,
     "network": "Rewardful",
-    "next_action": "user 手动点邮箱确认链接激活; 8/13 检查是否已确认"
+    "next_action": "user 手动点邮箱确认链接激活; 8/13 扫描确认无新确认邮件 (仍未激活)"
    }
   ],
   "resolved_since_2026-07-23": [
@@ -777,5 +845,14 @@
   "3_printify_promo": "8/13-14 二次检查窗口 (回信 8/8 00:27 已发 5 天, 0 回复); 无回复则升级 user 走 PartnerStack 站内渠道催",
   "4_placeit": "8/14 超期催办评估 (草稿 drafts/placeit-followup-email.md 已就绪, 当天检查 affiliate-programs.json status)",
   "_cf_freebie_8_12": "8/12 freebie 尚未到货 (常规 ~11:00 CST); 素材池 6 天累计 26 🎃 (去重 25) 充足"
+ },
+ "manual_checklist_2026_08_13": {
+  "generated_by": "aitoptools daily-ops cron 2026-08-13 13:1x (IMAP 实拉 + autoglm 只读复核)",
+  "1_tax_audit": "W-8BEN-E 8/13 复核 STILL PENDING (8/9 提交后第 4 个工作日, 页面 3 business days 窗口已过) - 需 user 浏览器补第 4/5 行 + 签名上传 (或联系 Printful support); 8/9 黄框提示同此",
+  "2_printify_promo": "二查窗口开启 (8/13-14): 今日扫描仍 0 回复 (回信 8/8 00:27 已发 5 天); 8/14 仍无回复则升级 user 走 PartnerStack 站内渠道催",
+  "3_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 3x 确认邮件, SINCE<90d 不自动); 密码重置 x2 请确认是否本人操作",
+  "4_placeit": "8/14 超期催办评估 (草稿 drafts/placeit-followup-email.md 就绪, user 手动发送)",
+  "5_kittl_rank_alert": "kittl review 排名 68.5->74.0 (哨兵告警) - 今日 T14 Kittl 系内链 Boost 需覆盖该页",
+  "_cf_freebie_8_13": "CF freebie 8/13 解析落盘 (20 素材, 万圣节 x2 + 圣诞 x6); 素材池 8 天累计 29 万圣节 (去重 28) 充足"
  }
 }

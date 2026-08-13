@@ -5,32 +5,17 @@
   "last_submitted_hash": "DA67C5E3C73897C83ACCC12D9C5A7F059BC987E312BE7C95868AB861EA55248E",
   "last_seen": {
     "public/sitemap.xml": {
-      "mtime": "2026-08-10T11:52:06+00:00",
-      "bytes": 42184,
-      "sha256": "DA67C5E3C73897C83ACCC12D9C5A7F059BC987E312BE7C95868AB861EA55248E"
-    },
-    "public/sitemap-programmatic.xml": {
-      "mtime": "2026-08-05T02:44:41+00:00",
-      "bytes": 27727,
-      "sha256": "DC9FB3558CC65B62B58318CBF56D6CED2B3B8D458A5EB86A10CC074D13371E98"
-    },
-    "out/sitemap.xml": {
-      "mtime": "2026-08-10T11:52:06+00:00",
-      "bytes": 42184,
-      "sha256": "DA67C5E3C73897C83ACCC12D9C5A7F059BC987E312BE7C95868AB861EA55248E"
-    },
-    "out/sitemap-programmatic.xml": {
-      "mtime": "2026-08-05T02:44:41+00:00",
-      "bytes": 27727,
-      "sha256": "DC9FB3558CC65B62B58318CBF56D6CED2B3B8D458A5EB86A10CC074D13371E98"
+      "mtime": "2026-08-11T11:51:18.375892+00:00",
+      "bytes": 42305,
+      "sha256": "58E31EB9B93538D4F919B0138BDA395EA140EEA4125312BAB156808D04DF613C"
     }
   },
-  "last_run": "2026-08-11T06:19:51+00:00",
-  "last_run_status": "hermes 12:40 cron: sitemap changed (341 URLs, +1 vs 8/9 state), indexnow pushed 341 URLs HTTP 200 (dry-run + real); new URLs (fyul blog, compare/printful-vs-printify) verified 200; gsc-pending(oauth missing)",
+  "last_run": "2026-08-13T11:46:34.030075+00:00",
+  "last_run_status": "daily-search 8/13: +1 new URL (halloween spoke) + 3 refreshed (T3/T6/weekly), pushed 4 URLs status 200",
   "indexnow_submitted": true,
   "gsc_submitted": false,
   "indexnow_first_full_push": "2026-08-06",
-  "indexnow_urls_pushed": 341,
+  "indexnow_urls_pushed": 345,
   "indexnow_status_200": 341,
   "indexnow_key_file": ".hermes/secrets/indexnow-key.txt",
   "last_check_hash_match": true

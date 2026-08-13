@@ -15,8 +15,8 @@
 |---|---|---|---|---|---|---|---|
 | 1 | /stickermule-review/ | 179 | 35.1 | ≤15 | ✅ DONE (BLUF+表+内链+FAQ6) | 8/8 | 待 8/15 对比 |
 | 2 | /runway-ml-review/ | 201 | 63.0 | ≤20 | ✅ DONE (BLUF+表+内链+FAQ6) | 8/8 | 待 8/15 对比 |
-| 3 | /blog/is-magicdrop-legit/ | 33 | 64.6 | ≤20 | ⏳ 排 8/13 (信任 FAQ≥5+引用链) | - | - |
-| 4 | /blog/print-price-ai-tools-2026/ | 26 | 69.5 | ≤30 | ⏳ 排 8/14 (8/21 里程碑) | - | - |
+| 3 | /blog/is-magicdrop-legit/ | 33 | 64.6 | ≤20 | ✅ DONE 8/13 (8/11 排期错过→补执行; FAQ5+引用链+内链4) | 8/13 | 待 8/21 对比 |
+| 4 | /blog/print-price-ai-tools-2026/ | 26 | 69.5 | ≤30 | ✅ DONE 8/13 (对比表+引用链3+内链4+Schema; 8/21 ≤30) | 8/13 | 待 8/21 对比 |
 | 5 | /kittl-review/ | 49 | 59.7 | ≤40 | 队列 | - | - |
 | 6 | /gempages-review/ | 80 | 47.8 | ≤35 | 队列 | - | - |
 | 7 | /bluehost-review-2026/ | 14 | 63.7 | ≤45 | 队列 | - | - |
@@ -88,3 +88,11 @@
 - Branch B 移动 1-4 位 → 保持节奏 + 外部信号 (Pinterest/社交) + Guest Post/论坛外链 (POD 社区)
 - Branch C 无移动 → 排查: GSC URL Inspection 请求重爬 + SSR 确认锚文本 + 外部信号 (Reddit/Quora + pin)
 - Branch D 排名下降 → 疑似过度优化 → 减内链密度查堆砌 → 暂停 Boost 2 天
+
+## 8/13 执行记录 (daily-search; T3 补执行 + T6)
+- **T3 is-magicdrop-legit (原排 8/11, cron 凭证故障错过 → 8/13 补执行)**: dateModified→8/13; 引用链 +1 (Afternic 官方 listing 验证链); 内链 +4 (printify-alternatives hub / printful-review / printify-review / fyul blog); FAQ 5 (达标); FAQPage+Article Schema 自动渲染核验 PASS (构建产物确认)
+- **T6 print-price-ai-tools-2026**: dateModified→8/13; 引用链 +3 (Printify/Printful/Gelato 官方 pricing 页); 内链 +4 (print-on-demand-companies hub / printful-vs-printify blog / printify-vs-gelato compare / claid review); 对比表已有 1; FAQ 5; 死链修复: related 中 /best/ai-tools-for-pod-pricing/ + /best/ai-tools-for-pricing-strategy/ (404) → 换成真实页面
+- 副产品修复: reviews.json 10 处 chr(8594) 字面量 bug (CTA 箭头显示为文本) → 替换为 →
+- 本地构建: npm run build PASS; out/ 产物 11/11 页含新链接/Schema 核验 PASS
+- IndexNow: 4 URL 推送 4/4 HTTP 200 (8/13 19:2x)
+- T+7 对比: #1/#2 → 8/15; #3/#4 → 8/21 (与 #4 8/21 里程碑合并读)

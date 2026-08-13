@@ -10,7 +10,7 @@
 ## 推排名清单 (有页, 排名 20-70, 做内链/FAQ/pin 强化)
 | 日期 | page | 展示 | 排名 | 目标 | 动作 | 状态 |
 |------|------|------|------|------|------|------|
-| 2026-08-07 | /blog/print-price-ai-tools-2026/ | 23 | 70 | ≤30 | 内链+FAQ+2 pin | in-progress |
+| 2026-08-07 | /blog/print-price-ai-tools-2026/ | 23 | 70 | ≤30 | 内链+FAQ+2 pin | **DONE 8/13** (T6: 对比表+引用链3+内链4+Schema; T+7 8/21) |
 
 | 2026-08-08 | ai print estimator | 13 | 73.8 | No dedicated page | TBD (weekly-review) | queue |
 ---
@@ -42,3 +42,12 @@
 | 2026-08-09 | /descript-review/ | 5 | 67.4 | ≤40 | links+FAQ+Schema | queue (TBD weekly-review) |
 | 2026-08-09 | /pika-labs-review/ | 9 | 69.2 | ≤40 | links+FAQ+Schema | queue (TBD weekly-review) |
 | 2026-08-09 | /redbubble-review/ | 8 | 69.2 | ≤40 | 信任型 FAQ≥5+引用链 | queue (TBD weekly-review) |
+
+## 2026-08-13 运行记录 (daily-search)
+- 数据源: data/gsc_data.json (8/8 落盘, 427 query; gsc-oauth.json 仍缺失 → OAuth API 不可用, 数据窗口 6/28-8/5 未更新)
+- 幂等检查: 全部 27 个展示≥10 query 已映射; 唯一新增无专页词 = **copywriting ai** (11 imp / 0 clk / pos 89.91, 无专页) → 入 Data-Driven Queue
+- 推排名清单: 无新候选 (pos 20-70 扫描与 8/9 同源同结果); **print-price-ai-tools-2026 行 → DONE (8/13 T6 执行, T+7 对比 8/21)**
+- 噪音排除: writesonic site: 过滤符 query (11 imp / pos 7) 不登记 (与 8/9 一致)
+- T3 补执行记录: is-magicdrop-legit (8/11 排期因 cron 凭证故障错过, 8/13 补执行, 引用链+内链4+dateModified)
+
+| 2026-08-13 | copywriting ai | 11 | 89.91 | 无专页 | TBD (weekly-review) | queue |

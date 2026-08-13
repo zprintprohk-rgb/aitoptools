@@ -6,7 +6,7 @@
     "category": "POD Platforms",
     "categorySlug": "ai-ecommerce",
     "datePublished": "2026-08-05",
-    "dateModified": "2026-08-05",
+    "dateModified": "2026-08-13",
     "ogImage": "/og-image.png",
     "tldr": [
       "Printify wins on price and catalog size - up to 40% lower base costs and 850+ products, best for margin-focused sellers.",
@@ -112,7 +112,7 @@
       },
       {
         "type": "p",
-        "text": "Pricing is where the two platforms diverge hardest. Printify's whole model is built on a network of providers competing on cost, so base prices are consistently lower - roughly 30-50% on most apparel products. Printful owns or controls more of its production, which is why their base prices run higher. Both platforms charge you only when an order comes in; there is no subscription required to sell, though both offer paid membership tiers with discounted base costs and faster support."
+        "text": "Pricing is where the two platforms diverge hardest. Printify's whole model is built on a network of providers competing on cost, so base prices are consistently lower - roughly 30-50% on most apparel products. Printful owns or controls more of its production, which is why their base prices run higher. Both platforms charge you only when an order comes in; there is no subscription required to sell, though both offer paid membership tiers with discounted base costs and faster support. For the complete walkthrough of that math - including the AI tools that speed up quoting - see our <a href=\"/blog/print-price-ai-tools-2026/\">print pricing guide</a>."
       },
       {
         "type": "note",
@@ -1088,7 +1088,7 @@
     "category": "Pricing & Margins",
     "categorySlug": "ai-ecommerce",
     "datePublished": "2026-08-06",
-    "dateModified": "2026-08-06",
+    "dateModified": "2026-08-13",
     "ogImage": "/og-image.png",
     "affiliateUrl": "https://claid.ai?via=jerome94",
     "ctaText": "Try Claid AI Free",
@@ -1178,7 +1178,7 @@
       },
       {
         "type": "p",
-        "text": "Platform calculators do the arithmetic, but you have to feed them the right numbers. I price the same product on at least two platforms before I commit: base cost, print price per color, shipping to my top three destinations, and any per-order fees. Gelato's local-production model matters if you sell into the EU - 140+ hubs in 32 countries mean a German customer's shirt ships from a German hub, which changes both the shipping line and the customs exposure on your quote. Printful's 340+ product catalog is smaller but in-house, while Printify's 850+ product network is a marketplace of competing print providers - the price difference between providers on the same product is often larger than the difference between platforms."
+        "text": "Platform calculators do the arithmetic, but you have to feed them the right numbers. I price the same product on at least two platforms before I commit: base cost, print price per color, shipping to my top three destinations, and any per-order fees. Gelato's local-production model matters if you sell into the EU - 140+ hubs in 32 countries mean a German customer's shirt ships from a German hub, which changes both the shipping line and the customs exposure on your quote. Printful's 340+ product catalog is smaller but in-house, while Printify's 850+ product network is a marketplace of competing print providers - the price difference between providers on the same product is often larger than the difference between platforms. Both platforms publish their numbers openly, which makes the math repeatable: <a href=\"https://printify.com/pricing/\" rel=\"noopener\">Printify's pricing pages</a>, <a href=\"https://www.printful.com/pricing/\" rel=\"noopener\">Printful's pricing pages</a>, and <a href=\"https://www.gelato.com/pricing/\" rel=\"noopener\">Gelato's pricing page</a> are the tabs I keep open while quoting."
       },
       {
         "type": "h3",
@@ -1340,8 +1340,8 @@
     ],
     "related": [
       {
-        "title": "Best AI Tools for POD Pricing",
-        "url": "/best/ai-tools-for-pod-pricing/"
+        "title": "Best Print on Demand Companies",
+        "url": "/best/print-on-demand-companies/"
       },
       {
         "title": "Printify vs Printful 2026: Which POD Partner Should You Choose?",
@@ -1356,8 +1356,8 @@
         "url": "/claid-ai-review/"
       },
       {
-        "title": "Best AI Tools for Pricing Strategy",
-        "url": "/best/ai-tools-for-pricing-strategy/"
+        "title": "Printify vs Gelato: Cost and Margin Comparison",
+        "url": "/compare/printful-vs-gelato/"
       }
     ]
   },
@@ -1368,7 +1368,7 @@
     "category": "POD Platforms",
     "categorySlug": "ai-ecommerce",
     "datePublished": "2026-08-07",
-    "dateModified": "2026-08-07",
+    "dateModified": "2026-08-13",
     "ogImage": "/og-image.png",
     "affiliateUrl": "https://claid.ai?via=jerome94",
     "ctaText": "Try Claid AI Free",
@@ -1460,6 +1460,10 @@
           "The HTML title of the lander is 'magicdrop.com is for sale - get a quote within 24 hours | Afternic'. There is no product catalog, no pricing page, no login, and no support system anywhere on the domain.",
           "When a marketplace or SaaS domain ends up parked on Afternic, the practical reading is that the company stopped operating that service. Domains that are actively running a business are not listed for resale."
         ]
+      },
+      {
+        "type": "p",
+        "text": "Both checks are reproducible in five minutes: open <a href=\"https://www.afternic.com/domain/magicdrop.com\" rel=\"noopener\">the Afternic listing for magicdrop.com</a> and you will see the parked, for-sale state recorded above, cross-checked against the live redirect on 7 August 2026. Run the same two-minute check (domain status plus a review-site search) on any platform before you commit a single design to it."
       },
       {
         "type": "note",
@@ -1719,12 +1723,12 @@
   },
   {
     "slug": "best-free-creative-fabrica-assets-this-week",
-    "title": "Best Free Creative Fabrica Assets This Week (Aug 8, 2026): 40+ Free Picks for POD Sellers",
-    "metaDescription": "I pulled Creative Fabrica's daily free picks for 3 days and sorted them for POD sellers: Halloween PNGs, fonts, clipart bundles, and the workflow to turn free assets into sellable designs.",
+    "title": "Best Free Creative Fabrica Assets This Week (Aug 13, 2026): 100+ Free Picks for POD Sellers",
+    "metaDescription": "I pulled Creative Fabrica's daily free picks for 8 days and sorted them for POD sellers: Halloween PNGs, fonts, clipart bundles, and the workflow to turn free assets into sellable designs.",
     "category": "Design Assets",
     "categorySlug": "ai-print-design",
     "datePublished": "2026-08-08",
-    "dateModified": "2026-08-08",
+    "dateModified": "2026-08-13",
     "ogImage": "/og-image.png",
     "affiliateUrl": "https://www.creativefabrica.com/ref/27832838/",
     "ctaText": "Get This Week's Free Creative Fabrica Assets",
@@ -1758,7 +1762,7 @@
       },
       {
         "type": "h2",
-        "text": "This Week's Picks: The Full Sort (August 6-8)"
+        "text": "This Week's Picks: The Full Sort (August 6-13)"
       },
       {
         "type": "p",
@@ -1767,7 +1771,7 @@
       {
         "type": "table",
         "headers": [
-          "Asset (Aug 6-8)",
+          "Asset (Aug 6-13)",
           "Type",
           "Best for POD"
         ],
@@ -1946,8 +1950,62 @@
             "Whimsical Christmas Clipart",
             "Clipart",
             "Christmas early bird - bank it for Q4"
+          ],
+          [
+            "Fall Halloween Sublimation Bundle",
+            "Sublimation bundle",
+            "Halloween sublimation tees and tumblers (8/9 headline)"
+          ],
+          [
+            "Handmade (font)",
+            "Font",
+            "Hand-lettered quote designs (8/10 headline)"
+          ],
+          [
+            "Child (font)",
+            "Font",
+            "Kids and family niche designs (8/11 headline)"
+          ],
+          [
+            "I choose you (quote design)",
+            "Design",
+            "Romance / couple niche POD (8/12 headline)"
+          ],
+          [
+            "Whimsical Christmas Moose Clipart Bundle",
+            "Clipart bundle",
+            "Q4 Christmas designs (8/13 headline)"
+          ],
+          [
+            "Cute Ghost with Witch Hat",
+            "PNG",
+            "Halloween kids apparel (8/13)"
+          ],
+          [
+            "Retro Fall PNG Design",
+            "PNG",
+            "Autumn tees and mugs (8/13)"
+          ],
+          [
+            "BOO Halloween Embroidery Design",
+            "Embroidery",
+            "Embroidery / patch niche (8/13)"
+          ],
+          [
+            "Christmas Santa Machine Embroidery",
+            "Embroidery",
+            "Q4 embroidery / holiday niche (8/13)"
+          ],
+          [
+            "Whimsical Christmas Signpost PNG Bundle",
+            "PNG bundle",
+            "Q4 Christmas designs (8/13)"
           ]
         ]
+      },
+      {
+        "type": "p",
+        "text": "August 9-13 added five more daily drops (100 slots). The standout shift: Christmas assets started arriving in volume (10 by August 13, including two embroidery designs) while the Halloween stream kept flowing - Q4 planning is officially on."
       },
       {
         "type": "h2",
@@ -1998,11 +2056,11 @@
       },
       {
         "type": "h2",
-        "text": "The 3-Day Haul in Numbers"
+        "text": "The 8-Day Haul in Numbers"
       },
       {
         "type": "p",
-        "text": "Across the August 6, 7, and 8 drops I logged 60 asset slots (20 per day) and kept 40+ that are genuinely usable in a print or POD context. By category: 13 Halloween-themed assets, 8 back-to-school / teacher assets, 6 fonts, 6 clipart bundles, 3 templates, 2 seasonal fall themes, plus a Procreate brush mega bundle and a handful of evergreen quotes and florals. If I had bought those bundles at their retail price (most free-pick bundles retail between $1 and $9, with the Procreate brushes alone typically around $9), the haul would have cost me roughly $45-60. The free account cost me nothing. The real cost is time: about 15 minutes a day to open the email, scan 20 assets, and download the ones that match my store. At that rate, a week of free picks is under two hours of work for a catalog of design raw material that would otherwise take a full weekend of sourcing or a paid subscription to build."
+        "text": "Across the August 6 through 13 drops I logged 160 asset slots (20 per day) and kept the subset that is genuinely usable in a print or POD context. By category: 13 Halloween-themed assets in the first three days alone, and the Halloween keepers grew to 28 unique assets by August 13; the Christmas pile reached 10 assets ahead of Q4."
       },
       {
         "type": "h2",
@@ -2586,7 +2644,7 @@
     "category": "POD Platforms",
     "categorySlug": "ai-ecommerce",
     "datePublished": "2026-08-10",
-    "dateModified": "2026-08-10",
+    "dateModified": "2026-08-13",
     "ogImage": "/og-image.png",
     "tldr": [
       "Printful and Printify merged in November 2024 and now sit under one parent company, FYUL - but both platforms still operate independently with separate accounts, catalogs, and support.",
@@ -2887,6 +2945,10 @@
       {
         "type": "p",
         "text": "Every big merger spawns rumors, and POD communities have had their share since 2024. Here is what I have verified is NOT happening as of August 2026: there is no plan to force everyone onto one platform, no requirement to consolidate your Printful and Printify accounts, no change to existing subscriptions, and no disappearance of either brand - both keep their names, apps, and marketing. If you see a claim that Printify is shutting down or that Printful accounts are being migrated, check it against the platform help centers before acting; neither has ever been true in the 20 months since the announcement."
+      },
+      {
+        "type": "p",
+        "text": "One cautionary tail worth reading while you re-evaluate partners: our <a href=\"/blog/is-magicdrop-legit/\">is MagicDrop legit check</a> documents how quickly a POD platform can go from storefront to parked domain - and the five-minute verification routine that would have caught it."
       },
       {
         "type": "h2",

@@ -313,6 +313,7 @@ M1 复盘 — aitoptools
 | 8/9 (D3 晚) | 增量 1 URL (Halloween 支柱 blog) | **1/1** | 0 | sitemap 340 URL (push 后上线) | Hermes 19:45 产出 halloween-pod-ideas-2026 (8/15 支柱提前 6 天, 去风险), sitemap 340 (+1), IndexNow 增量推送 200 |
 | 8/10 (D4) | 增量 2 URL (FYUL 合并 blog + 对比页更新) | **2/2** | 0 | sitemap 341 URL (push 后上线) | Hermes 19:45 产出 printful-printify-merger-fyul-2026 (雷达信号 #1: Printful+Printify 合并=FYUL, 承接 printify vs printful 68 展示/排名 76), 对比页 FYUL 重定位, sitemap 341 (+1), IndexNow 增量推送 2/2 200 |
 | 8/11 (D5) | 增量 1 URL (Halloween 辐条② blog) | 待 push 后推送 | 0 | sitemap 342 URL (本地产出) | Hermes 19:45 产出 printful-vs-printify-halloween-2026 (8/18 辐条②提前 7 天, Halloween 集群 > 常规选题; 目录+毛利对比, 主 CTA Printify/副 CTA Printful), sitemap 342 (+1), IndexNow 增量推送随本 commit 执行 |
+| 8/13 (D7) | 增量 4 URL (辐条②新页 + T3/T6/周更帖刷新) | **4/4** | 0 | sitemap 342 URL (未变) | daily-search 19:2x: halloween 辐条② printful-vs-printify-halloween-2026 补推 (8/11 产出后未推) + print-price-ai-tools-2026 (T6) + is-magicdrop-legit (T3 补执行) + best-free-creative-fabrica-assets-this-week (周更 8/13) 重推; 本地构建验证 11/11 页 PASS |
 | T+7 (8/14) | 增量 | __ | __ | __ | 首读数: GSC 展示 + IndexNow 计数 |
 | T+30 (9/5) | 增量 | __ | __ | __ | 路线决策点 |
 - 记录人: gsc-indexnow cron (12:40) 每次提交后填; 凭证缺失时填 "blocked_missing_credentials"
@@ -1039,4 +1040,29 @@ TBD (1 push 整合)
 - **P0 = 0 (连续第 4 天)**; P1: Synthesia 确认待 user / W-8BEN-E Pending (8/13 复核) / Printify promo (8/13-14 二查) / Placeit 8/14 催办; P2 暂缓清单不变
 - 下个检查点: 8/13 tax-audit 再复核 + Synthesia 确认检查; 8/13-14 Printify promo 二查; 8/14 Placeit 催办
 - 跨项目提醒: togthr Deploy 失败 (非本域) / GSC 索引通知 / Supabase zprintpro 暂停 (均非本域)
+- 无 push (监控任务)
+
+## 2026-08-12 · 联盟监控 (daily-ops 合并 cron 12:2x 增量轮)
+- 邮件: SINCE 11-Aug 15 封全量核实 (SOCKS5 127.0.0.1:7892) — **0 新审批 / 0 新商户邮件** (Synthesia 3x 确认为 8/11 已知批次)
+- **CF freebie 8/12 已到货** (8/11 22:13 UTC 提前到达, 早间 05:46 轮未抓到): 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-12.md; 🎃 x1 (Coquette Patchwork Fall Pumpkin PNG) + 圣诞素材 x4 (Q4 备选); 素材池 7 天累计 27 🎃 (去重 26)
+- **Printify promo 回复**: 增量扫描 0 回复 (最后邮件仍为 8/9 14:30 营销) — 8/13-14 二查窗口维持
+- 其他: newsletter.printful.com 8/11 17:09 "5 winners. Free merch" (营销, 非动作); supabase.com 8/11 18:18 安全漏洞通知 (⚠️ 跨项目 zprintpro 域, 提醒 K3); togthr CI 失败 x4 + GMC 通知 x2 (跨项目噪音)
+- **排名哨兵首拉** (PHASE 三.1 预跑): 窗口 8/5-8/11 与 baseline 同窗口, 20/20 query 命中, 0 告警; 8/13 起正式每日
+- SSoT: affiliate-programs.json 更新 (high_signal_findings_24h_8_12_1223 + rank_sentinel_8_12 + tax_audit note)
+- **P0 = 0 (连续第 5 天)**; P1/P2 与 05:4x 轮一致
+- 无 push (监控任务)
+
+## 2026-08-13 · 联盟监控 (daily-ops 合并 cron 13:1x)
+- 邮件: SINCE 12-Aug 15 封全量核实 (SOCKS5 127.0.0.1:7892) — **0 新审批 / 0 新商户邮件** (Synthesia 5 封均为 8/11 已知批次)
+- **tax-audit 8/13 复核** (AutoGLM 1.1.8 只读): Printful dashboard/affiliate/tax → W-8BEN-E **仍 Pending** (8/9 提交后第 4 个工作日, 页面提示 "up to 3 business days" **窗口已过**; Edit 可用; 只读未做任何操作) → **升级 user**: 浏览器补第 4/5 行 + 签名上传 (8/9 黄框提示同此); 下次复核 8/14; Impact LOGIN_REQUIRED (不自动登录)
+- **printful-watcher SKIP**: email_verified=true (8/8 实证), status=active, 无状态异常
+- **CF freebie 8/13 已到货** (03:59 UTC): 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-13.md; 万圣节 x2 (Cute Ghost with Witch Hat / BOO Halloween Embroidery 刺绣) + 圣诞 x6 (Q4 备选, 含刺绣 x1); **素材池 8 天累计 29 万圣节 (去重 28)**
+- **Printify promo 回复**: 二查窗口开启 (8/13-14), 今日扫描仍 0 回复 (回信 8/8 00:27 已发 5 天); 8/14 仍无 → 升级 user 走 PartnerStack 站内催
+- **排名哨兵正式每日拉取第 1 天** (窗口 8/6-8/12 vs baseline 8/5-8/11): **1 ALERT — kittl review 68.5→74.0 (下跌 5.5 位, imps 2→1)**; 16/20 query 命中 (4 零展示词无数据属正常); 日志 .hermes/logs/rank-sentinel-2026-08-13.md
+- **ai-crawler-monitor**: beacon 已上线 (layout.js:71 + out/ 部署确认), 但无 CF API token → 自动拉取 NODATA (GEO_BLIND); 8/19 GEO 首读数需 token 或 dashboard 人工导出; robots.txt + llms.txt 放行健康
+- 链接部署核查: 7 approved-active 全部 link_deployed=true (无变化)
+- SSoT: affiliate-programs.json 更新 (tax_audit 8/13 + high_signal_findings_24h_8_13 + rank_sentinel_8_13 + manual_checklist_2026_08_13 + aging)
+- **P0 = 0 (连续第 6 天)**; P1: W-8BEN-E 超窗口 Pending (user 补行) / Printify promo 二查 (8/14 收口) / Synthesia 确认待 user / Placeit 8/14 催办; P2 暂缓清单不变
+- 下个检查点: 8/14 tax-audit 复核 + Printify promo 二查收口 + Placeit 催办评估 + T+7 首读数
+- 跨项目提醒: GSC zprintpro 结构化数据修复确认 x2 + GMC zprintpro 7 月效果 (均非本域); Supabase 安全漏洞通知 (8/11, 提醒 K3)
 - 无 push (监控任务)
