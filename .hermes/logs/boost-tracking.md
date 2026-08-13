@@ -96,3 +96,11 @@
 - 本地构建: npm run build PASS; out/ 产物 11/11 页含新链接/Schema 核验 PASS
 - IndexNow: 4 URL 推送 4/4 HTTP 200 (8/13 19:2x)
 - T+7 对比: #1/#2 → 8/15; #3/#4 → 8/21 (与 #4 8/21 里程碑合并读)
+
+## 8/14 T+7 首读记录 (daily-search; 正式读数 = .hermes/reports/t7-reading-2026-08-14.md, weekly-review cron 05:3x 产出)
+
+- **读数窗口**: GSC API 实时 7d 8/7-8/13 (T+2 → 有效至 8/11); 日均展示 **216.5** (vs 基线 ~197, +10%)
+- **决策**: **Branch A (加速·温和版)** — 展示 ≥200 且多数目标页位置改善 (print-price +4.0 / magicdrop +2.1 / manychat +6.6 / printify-alternatives +1.9); 点击仍 0 (深度排名期常态)
+- **告警项**: kittl review 哨兵 68.5→74.0 (-5.5) → 8/14 专项诊断: 低量噪音 (7 imp/28d) + 3 项 GEO 缺口, 见 kittl-diagnosis-0814.md; copy ai review -7.5 → 8/16 B 类快修候选
+- **窗口说明**: 本读数基本不含 Boost 效果 (内容 8/13 上线, T+1~2 延迟) — 属 Boost 前基线确认 + 监控起点; #1/#2 严格 T+7 = **8/15**; #3/#4 T+7 = 8/21 (与 print-price ≤30 里程碑合并)
+- **风险开关**: 8/15-8/16 大面积下滑 ≥10 位 → Branch D (紧急审计 + 暂停 Boost 2 天)

@@ -5,13 +5,13 @@
   "last_submitted_hash": "DA67C5E3C73897C83ACCC12D9C5A7F059BC987E312BE7C95868AB861EA55248E",
   "last_seen": {
     "public/sitemap.xml": {
-      "mtime": "2026-08-11T11:51:18.375892+00:00",
+      "mtime": "2026-08-13T21:39:12.274Z",
       "bytes": 42305,
       "sha256": "58E31EB9B93538D4F919B0138BDA395EA140EEA4125312BAB156808D04DF613C"
     }
   },
-  "last_run": "2026-08-13T11:46:34.030075+00:00",
-  "last_run_status": "daily-search 8/13: +1 new URL (halloween spoke) + 3 refreshed (T3/T6/weekly), pushed 4 URLs status 200",
+  "last_run": "2026-08-13T21:39:12.275Z",
+  "last_run_status": "daily-search 8/14: sitemap.xml 发现 541 条(199 /best/ 重复, 04:52 重新生成产物) 修复回 342 条, hash 58E31E 与上次提交一致 → 无新 URL, IndexNow NOOP; GSC API 实时源启用(28d 608 queries); mining 0 新增队列",
   "indexnow_submitted": true,
   "gsc_submitted": false,
   "indexnow_first_full_push": "2026-08-06",

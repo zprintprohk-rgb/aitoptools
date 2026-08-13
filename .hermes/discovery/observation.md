@@ -154,3 +154,11 @@
 - **凤凰 (PH Sivi AI)**: low priority — 先观察, 若确认为 POD 垂直则升 medium
 - **G2 源**: 降级为月度检查 (连续 3 轮 0 命中, 此为最终决定)
 - **YouTube/TikTok 源**: 降级为双周检查 (上两轮 0 垂直命中)
+
+### 8/14 观察名单更新 (周五 regular 轮, v2.7)
+
+- **新增 1 观察**: Mock IT (mock-it.co, AI 服装 mockup 生成器) — 与 Mockey/Placeit/Mockuuups 同质, 差异化待核
+- **总积压**: 45 (44 旧 + Mock IT)
+- **市场信号**: Printful 官方博客发 "Gelato vs Printify" 对比 (FYUL 旗下互比, 我们 /compare/printful-vs-gelato/ + printify-vs-gelato 需保新鲜度)
+- **HN 源**: hn_fetch_v3 网络不可达 (超时) — 建议双周检查 (与 G2/YouTube 同级)
+- **连续 3 轮 0 high/medium**: 垂直赛道成熟, 雷达重心从"找新工具"转"盯竞品内容/排名变化"
