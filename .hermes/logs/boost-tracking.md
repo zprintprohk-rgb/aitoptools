@@ -13,8 +13,8 @@
 
 | # | 页面 | 展示 | 优化前排名 | 目标 | 状态 | 优化日期 | T+7 排名 |
 |---|---|---|---|---|---|---|---|
-| 1 | /stickermule-review/ | 179 | 35.1 | ≤15 | ✅ DONE (BLUF+表+内链+FAQ6) | 8/8 | 待 8/15 对比 |
-| 2 | /runway-ml-review/ | 201 | 63.0 | ≤20 | ✅ DONE (BLUF+表+内链+FAQ6) | 8/8 | 待 8/15 对比 |
+| 1 | /stickermule-review/ | 179 | 35.1 | ≤15 | ✅ DONE (BLUF+表+内链+FAQ6) | 8/8 | 36.0 (+1.3) 8/15 T+7 |
+| 2 | /runway-ml-review/ | 201 | 63.0 | ≤20 | ✅ DONE (BLUF+表+内链+FAQ6) | 8/8 | 65.2 (+3.5) 8/15 T+7 |
 | 3 | /blog/is-magicdrop-legit/ | 33 | 64.6 | ≤20 | ✅ DONE 8/13 (8/11 排期错过→补执行; FAQ5+引用链+内链4) | 8/13 | 待 8/21 对比 |
 | 4 | /blog/print-price-ai-tools-2026/ | 26 | 69.5 | ≤30 | ✅ DONE 8/13 (对比表+引用链3+内链4+Schema; 8/21 ≤30) | 8/13 | 待 8/21 对比 |
 | 5 | /kittl-review/ | 49 | 59.7 | ≤40 | 队列 | - | - |
@@ -104,3 +104,11 @@
 - **告警项**: kittl review 哨兵 68.5→74.0 (-5.5) → 8/14 专项诊断: 低量噪音 (7 imp/28d) + 3 项 GEO 缺口, 见 kittl-diagnosis-0814.md; copy ai review -7.5 → 8/16 B 类快修候选
 - **窗口说明**: 本读数基本不含 Boost 效果 (内容 8/13 上线, T+1~2 延迟) — 属 Boost 前基线确认 + 监控起点; #1/#2 严格 T+7 = **8/15**; #3/#4 T+7 = 8/21 (与 print-price ≤30 里程碑合并)
 - **风险开关**: 8/15-8/16 大面积下滑 ≥10 位 → Branch D (紧急审计 + 暂停 Boost 2 天)
+
+## 8/15 #1/#2 T+7 严格复核记录 (daily-search; review-0815 职责)
+
+- **T+7 读数 (并发哨兵已填表)**: #1 /stickermule-review/ 35.1 → **36.0 (+1.3, 达标保持; 7d 页级 111 imp/39 位, 28d 337 imp 全站第 1)**; #2 /runway-ml-review/ 63.0 → **65.2 (+3.5, 微降; 7d 页级 43 imp/73 位)** → #2 触发内容处置
+- **严格复核 GEO 8 项**: #1 缺 dateModified/featureLine/引用链; #2 同缺 + 内容偏薄 (2161 字符) + 定价表双份不一致
+- **修复执行 (8/15)**: 两页 + dateModified=2026-08-15 + featureLine; #1 + Sources 引用链 (官方产品页); #2 定价表统一 (Free 125 一次性/Standard $15 月付 $12 年付 625 credits/Pro $28/Unlimited $35, 多源核实) + POD 场景扩写段 + Sources 引用链 2 (官方定价页 + 官方帮助中心) → 2161→3475 字符; kittl-review dateModified/featureLine 补全 (T14 项提前)
+- **风险开关**: kittl 哨兵 8/15 = 67.0 连续 2 日稳定, **0 ALERT** → Branch A 继续; 大面积下滑 >=10 位未触发
+- **北极星**: Boost 完成度维持 4/25; #3/#4 T+7 = 8/21 (与 print-price <=30 里程碑合并)

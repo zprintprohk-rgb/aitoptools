@@ -10,8 +10,8 @@
       "sha256": "58E31EB9B93538D4F919B0138BDA395EA140EEA4125312BAB156808D04DF613C"
     }
   },
-  "last_run": "2026-08-13T21:39:12.275Z",
-  "last_run_status": "daily-search 8/14: sitemap.xml 发现 541 条(199 /best/ 重复, 04:52 重新生成产物) 修复回 342 条, hash 58E31E 与上次提交一致 → 无新 URL, IndexNow NOOP; GSC API 实时源启用(28d 608 queries); mining 0 新增队列",
+  "last_run": "2026-08-14T19:49:10.949Z",
+  "last_run_status": "daily-search 8/15: sitemap 342 条 hash 58E31E 与上次提交一致 → 无新 URL, IndexNow NOOP; GSC API 28d 250q + 7d 97 页拉取成功 (T+2 并入 8/12-8/13); mining 0 新增; #1/#2 T+7 严格复核 DONE (GEO 修复 3 页)",
   "indexnow_submitted": true,
   "gsc_submitted": false,
   "indexnow_first_full_push": "2026-08-06",

@@ -65,3 +65,12 @@
 - **推排名清单 (pos 20-70)**: 无新候选; 已登记候选全部维持; 新增观察: gearlaunch (5 imp / pos 33.8, 有页 /gear-launch-review-2026/, 内链强化候选)
 - **噪音排除**: writesonic site: 过滤符 query (11 imp / pos 7) 不登记 (与 8/9 一致)
 - **备注**: runwayml (26 imp/71.6) + descript.com reviews (17 imp/68.8) 均已有专页 (runway-ml-review / descript-review) — 非无专页词, 标题对齐机会归 8/16 B 类快修
+
+## 2026-08-15 daily-search 运行记录 (GSC API 实时 + T+2 并入)
+
+- **数据源**: ① GSC API 实时 (gsc-oauth.json 有效) — 28d 窗口 7/18-8/14 共 250 query (rowLimit) + 7d 97 页 + 28d 117 页; **T+2 并入达成**: 7d 窗口 8/8-8/14 已含 8/12-8/13 (T+7 首读缺失段)
+- **幂等检查 (imp>=10 共 17 条)**: 全部已有专页或已在队列 → **Data-Driven Queue 无新增**
+- **观察**: ai print estimator (18 imp/74.7, 8/8 起 13→18 上升, 队列已有) / copywriting ai (17 imp/89.7, 队列已有) / **变体并入: ai copywriting (11 imp/92.9) 与 copywriting ai 同意图 → 并入既有队列行, 不重复登记**
+- **推排名清单 (pos 20-70)**: 无新候选; **gear-launch-review-2026 (7d 19 imp/pos 38, 28d 起量) — B类快修 (8/14 f4f5c64) 后上升, 观察维持**
+- **噪音排除**: writesonic site: 过滤符 (11 imp/pos 7) 不登记 (与 8/9-8/14 一致); jasper 系 3 变体 (jasper ai review 109 / jasper review 20 / jasper reviews 17) 全映射 /jasper-ai-review/
+- **备注**: descript.com reviews (18 imp/68.9) 有专页, 标题对齐归 8/16 B 类快修候选维持; watchlist copymatic review 未达门槛
