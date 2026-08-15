@@ -82,3 +82,36 @@
 | 8/22 | — | Boost T+14 Branch A/B/C/D 判定 |
 
 > **Execution complete 03:40-04:3x CST** | Step 0: #1/#2 严格复核 DONE + T+2 并入 DONE + kittl 哨兵 0 ALERT | Step 1: IndexNow NOOP (hash 不变) + mining 0 新增 | Step 2: SKIP (周六) | Step 3: 3 页 GEO 修复 + build PASS + push (count=1) | Step 4: SKIP (周六)
+
+
+---
+
+## 19:23 补充执行 (本 cron 第二触发)
+
+> 03:40 主执行已完整(见上), 本段为幂等复核 + daily-ops PUSH_READY 消费。
+
+- **Step 0 STRATEGY**: 幂等 NOOP — 8/15 TASKS (#1/#2 严格复核) 晨间已完成 (review-0815.md 存在); 傍晚 review 复核追加 (kittl 63.0 连续 2 日改善确认 / tax-audit 仍 Pending NOOP / Branch A 继续) → 已随本批 commit
+- **Step 1 IndexNow**: 复核 NOOP — sitemap sha256 58E31E 不变 (342 URLs), 与 state last_seen 一致, 无新 URL 可推
+- **Step 1b GSC Mining**: 幂等 NOOP (晨间已执行, 0 新增; 无新数据源)
+- **Step 2 Discovery**: SKIP (周六, 仅周一/三/五)
+- **Step 3 Content**: 幂等 NOOP (无 radar 新候选, 晨间 3 页修复已部署)
+- **Step 4 Geo-Technical**: SKIP (周六, 仅周一; next 8/17)
+- **PUSH_READY 消费** (daily-ops-2026-08-15.md): 台账 affiliate-programs.json / AFFILIATE_LOG.md / rank-sentinel-20q.json 已 commit (681a121, 7 files +578/-169) → push (含午后 e2edd56 + 8e7b0b8 两笔未推 commit 一并上送) → 远端同步确认 ## main...origin/main
+- **push-count=2** (纪律上限 5 内; 本批为纯 ops 台账, 无 src 变更, 不占内容部署 build)
+
+
+---
+
+## 20:24 补充执行 (本 cron 第三触发 / 幂等复核)
+
+> 03:40 主执行 + 19:23 补充执行已完成, 本段为再次幂等复核, 无新工作量。
+
+- **Step 0 STRATEGY**: 幂等 NOOP — 8/15 TASKS (#1/#2 严格复核) 已 DONE (review-0815.md 存在); STRATEGY-0815 TASKS 表无 8/15 剩余项 (8/16 起为 T1-T3, 8/17 为 T4-T6, 均已排期)
+- **Step 1 IndexNow**: 复核 NOOP — sitemap sha256 58E31E / 42305 B 与 state last_seen 完全一致, 无新 URL; C2b 表无新增
+- **Step 1b GSC Mining**: 幂等 NOOP (晨间已执行 0 新增; GSC API 数据当日无新拉取窗口)
+- **Step 2 Discovery**: SKIP (周六, 仅周一/三/五; next 8/17)
+- **Step 3 Content**: 幂等 NOOP (晨间 3 页修复已部署; 无新 radar 候选; git status 无 src 变更)
+- **Step 4 Geo-Technical**: SKIP (周六, 仅周一; next 8/17)
+- **哨兵复核**: rank-sentinel 0 ALERT; kittl 67.0->63.0 连续 2 日改善确认, Branch A 继续
+- **PUSH_READY 消费**: daily-ops-2026-08-15.md 标记为 PUSH_READY 无, 19:23 已消费完毕 (681a121); 0 commits ahead of origin
+- **push-count=2** (不变; 本段纯日志复核, 无内容变更, 不产生新 push)
