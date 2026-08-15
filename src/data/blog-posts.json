@@ -228,7 +228,10 @@
   "affiliateUrl": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
   "ctaText": "Try Printful Free",
   "secondaryAffiliateUrl": "https://try.printify.com/4fs863rfz2yc",
-  "secondaryCtaText": "Try Printify Free"
+  "secondaryCtaText": "Try Printify Free",
+  "publishedAt": "2026-08-05",
+  "status": "published",
+  "wordCount": null
  },
  {
   "slug": "how-to-use-ai-for-print-design",
@@ -536,7 +539,10 @@
    }
   ],
   "affiliateUrl": "https://try.printify.com/4fs863rfz2yc",
-  "ctaText": "Try Printify Free"
+  "ctaText": "Try Printify Free",
+  "publishedAt": "2026-08-05",
+  "status": "published",
+  "wordCount": null
  },
  {
   "slug": "ai-packaging-design-tools-2026",
@@ -759,7 +765,10 @@
    }
   ],
   "affiliateUrl": "https://try.printify.com/4fs863rfz2yc",
-  "ctaText": "Try Printify Free"
+  "ctaText": "Try Printify Free",
+  "publishedAt": "2026-08-05",
+  "status": "published",
+  "wordCount": null
  },
  {
   "slug": "best-ai-background-removers-2026",
@@ -1079,7 +1088,10 @@
     "title": "Printful vs Printify 2026: Which POD Partner Should You Choose?",
     "url": "/blog/printful-vs-printify-2026/"
    }
-  ]
+  ],
+  "publishedAt": "2026-08-05",
+  "status": "published",
+  "wordCount": null
  },
  {
   "slug": "print-price-ai-tools-2026",
@@ -1359,7 +1371,10 @@
     "title": "Printify vs Gelato: Cost and Margin Comparison",
     "url": "/compare/printful-vs-gelato/"
    }
-  ]
+  ],
+  "publishedAt": "2026-08-06",
+  "status": "published",
+  "wordCount": null
  },
  {
   "slug": "is-magicdrop-legit",
@@ -1719,7 +1734,10 @@
     "title": "Claid AI Review 2026: Ultra-Realistic AI Product Photography",
     "url": "/claid-ai-review/"
    }
-  ]
+  ],
+  "publishedAt": "2026-08-07",
+  "status": "published",
+  "wordCount": null
  },
  {
   "slug": "best-free-creative-fabrica-assets-this-week",
@@ -2205,7 +2223,10 @@
     "title": "Print Price AI Tools 2026: How to Price Print Jobs and POD Products",
     "url": "/blog/print-price-ai-tools-2026/"
    }
-  ]
+  ],
+  "publishedAt": "2026-08-08",
+  "status": "published",
+  "wordCount": null
  },
  {
   "slug": "halloween-pod-ideas-2026",
@@ -2635,7 +2656,10 @@
     "title": "Best Free Creative Fabrica Assets This Week",
     "url": "/blog/best-free-creative-fabrica-assets-this-week/"
    }
-  ]
+  ],
+  "publishedAt": "2026-08-09",
+  "status": "published",
+  "wordCount": null
  },
  {
   "slug": "printful-printify-merger-fyul-2026",
@@ -3008,7 +3032,10 @@
   "affiliateUrl": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
   "ctaText": "Try Printful Free",
   "secondaryAffiliateUrl": "https://try.printify.com/4fs863rfz2yc",
-  "secondaryCtaText": "Try Printify Free"
+  "secondaryCtaText": "Try Printify Free",
+  "publishedAt": "2026-08-10",
+  "status": "published",
+  "wordCount": null
  },
  {
   "slug": "printful-vs-printify-halloween-2026",
@@ -3411,7 +3438,10 @@
     "title": "Best Free Creative Fabrica Assets This Week",
     "url": "/blog/best-free-creative-fabrica-assets-this-week/"
    }
-  ]
+  ],
+  "publishedAt": "2026-08-11",
+  "status": "published",
+  "wordCount": null
  },
  {
   "slug": "kittl-halloween-template-test-2026",
@@ -3419,8 +3449,8 @@
   "metaDescription": "I tested Kittl's Halloween template catalog and built 5 POD design blueprints from free Creative Fabrica assets: exact templates, margins, and the license-safe workflow.",
   "category": "Design Assets",
   "categorySlug": "ai-print-design",
-  "datePublished": "2026-08-17",
-  "dateModified": "2026-08-17",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-16",
   "ogImage": "/og-image.png",
   "affiliateUrl": "https://kittl.pxf.io/qWNvPn",
   "ctaText": "Start Your Halloween Designs on Kittl Free",
@@ -3443,6 +3473,12 @@
    {
     "type": "p",
     "text": "Each blueprint pairs a tracked free asset (from our August 2026 Creative Fabrica drops) with a Kittl Halloween template type, a product, and the margin math. Base costs are mid-2026 Printify and Printful sample-order pricing; retail is the typical Etsy range for the niche."
+   },
+   {
+    "type": "screenshot",
+    "src": "/tool-screenshots/blog/kittl-halloween-template-test-2026-01.webp",
+    "alt": "Kittl-style Halloween template library with t-shirt, hoodie, poster and sticker categories",
+    "caption": "Kittl's Halloween template category, organized by product type. Illustrative UI example (not a live screen capture)."
    },
    {
     "type": "table",
@@ -3526,6 +3562,12 @@
     "text": "We already tested Kittl hands-on for our full review - vector-first editor, AI text effects, and print-ready exports are the features that matter for POD - and this workflow leans on exactly those. If you are choosing between design tools, the Kittl vs Canva comparison covers when a general-purpose tool is the better pick."
    },
    {
+    "type": "screenshot",
+    "src": "/tool-screenshots/blog/kittl-halloween-template-test-2026-02.webp",
+    "alt": "Design editor canvas with BOO! Halloween t-shirt design, font and license-check panels",
+    "caption": "Editor view: swap the template font and colors, then confirm the free asset's commercial license before exporting. Illustrative UI example (not a live screen capture)."
+   },
+   {
     "type": "h2",
     "text": "The 5 Blueprints"
    },
@@ -3585,6 +3627,12 @@
     ]
    },
    {
+    "type": "screenshot",
+    "src": "/tool-screenshots/blog/kittl-halloween-template-test-2026-03.webp",
+    "alt": "Export dialog with 300 DPI PNG, SVG and JPG options for print-on-demand uploads",
+    "caption": "Export at 300 DPI PNG for Printful/Printify uploads. Illustrative UI example (not a live screen capture)."
+   },
+   {
     "type": "h2",
     "text": "What the Workflow Costs (2026 Pricing, Verified)"
    },
@@ -3622,6 +3670,12 @@
       "Product photo enhancement, background removal, upscaling to 300 DPI"
      ]
     ]
+   },
+   {
+    "type": "screenshot",
+    "src": "/tool-screenshots/blog/kittl-halloween-template-test-2026-04.webp",
+    "alt": "Black t-shirt and purple hoodie product mockups with BOO! Halloween design",
+    "caption": "The same design file on a t-shirt and a hoodie mockup with 2026 sample-order base costs. Illustrative UI example (not a live screen capture)."
    },
    {
     "type": "note",
@@ -3679,6 +3733,9 @@
     "title": "Claid AI Review 2026: Ultra-Realistic AI Product Photography",
     "url": "/claid-ai-review/"
    }
-  ]
+  ],
+  "publishedAt": "2026-08-15",
+  "status": "published",
+  "wordCount": 1459
  }
 ]

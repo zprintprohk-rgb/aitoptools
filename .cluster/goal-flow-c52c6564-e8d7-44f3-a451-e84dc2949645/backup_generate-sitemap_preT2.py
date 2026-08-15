@@ -94,8 +94,12 @@ def main():
                 loc_m = re.search(r'<loc>(.*?)</loc>', block)
                 if loc_m:
                     existing.append((loc_m.group(1), block))
-        merged_blocks = [f'  <url><loc>{u}</loc><changefreq>weekly</changefreq></url>' for u in new_urls]
-        seen = set(new_urls)
+        merged_blocks = []
+        seen = set()
+        for u in new_urls:
+            if u not in seen:
+                merged_blocks.append(f'  <url><loc>{u}</loc><changefreq>weekly</changefreq></url>')
+                seen.add(u)
         for loc, block in existing:
             if loc not in seen:
                 merged_blocks.append('  ' + block)
@@ -117,6 +121,10 @@ def main():
         'User-agent: ClaudeBot\nAllow: /\n\n'
         'User-agent: PerplexityBot\nAllow: /\n\n'
         'User-agent: Google-Extended\nAllow: /\n\n'
+        'User-agent: Applebot-Extended\nAllow: /\n\n'
+        'User-agent: Amazonbot\nAllow: /\n\n'
+        'User-agent: meta-externalagent\nAllow: /\n\n'
+        'User-agent: cohere-ai\nAllow: /\n\n'
         f'User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n'
     )
     for subdir in ('public', 'out'):

@@ -1,6 +1,6 @@
 # 拍板看板（user 只看这里）
 
-> 更新：2026-08-15 08:15 · 千问 3.8-Max 维护。无待拍板项时本表为空，您无需做任何事。
+> 更新：2026-08-16 03:55 · K3 维护。无待拍板项时本表为空，您无需做任何事。
 
 ## 待拍板
 
@@ -21,20 +21,21 @@
 
 ## 执行进展速览（无需动作）
 
-- 8/15 ✅ #1/#2 T+7 严格复核：stickermule 36.0 保持（28d 337 展示全站第 1）/ runway 65.2 微降已处置（GEO 3 项修复+定价表扩写 2161→3475 字符）；当日 push 1 次（B 类快修+Boost #5/#6+W-8 上传+修复）；**push 纪律切换为"产出即部署"**（您 8/15 拍板）
-- 8/14 ✅ **T+7 首读数完成：Branch A 温和加速**（日均展示 216.5，+10%；print-price +4.0 / kittl +4.6 / manychat +6.6；copy ai -7.5 入快修）；GSC API 实时源启用（DATA_STALE 解除）；sitemap 重复 bug 应急修复
-- 8/14 ⚠️ **cron 丢失事件**：10 个既有 cron 全部消失（疑似 Gateway 重启存储丢失）→ 已按配置重建 11 个，恢复基准已存档；重建窗口无执行缺口
-- 8/13 ✅ Boost #3/#4 完成（4/25）+ IndexNow 4/4 200 + 死链 2 条修复 + 周更帖刷新；cron 模型凭证 4 连 401 已恢复
-- 8/12 ✅ 战略 v2.0 三支柱下发 + Kittl 全量激活（260 处 CTA）+ GSC 通道打通
-- 联盟：W-8BEN-E 已上传 Pending review / Synthesia 待邮件确认 / Kittl 激活无转化（待 Impact 数据）/ 累计 $0
+- 8/16 ⏳ **今日主任务已排期**（cron 84c86e36，07:15 触发；03:50 声明的 11524761611778 未落库，主线 03:53 已重建并字节级核验在库）：T1 copy-ai-review 快修 + T2 sitemap 脚本替换（merged 版+27单测）+ T3 辐条①补正（保留 slug 补字段+截图）+ T3b 全 11 篇 blog 补 publishedAt + T4 外链提交（user 授权全权处理）+ T5 排期治理 + T6 根目录卫生 + T7 合并 1 push + T8 RESULT-0816。原 W1-0816（de9fad65）因 gateway restart 超时失败 3 次被系统禁用，已重建。⚠️ 观察项（R-14）：cron 工具视图与任务库背离（list/get 不可见、jobs.json 权威库完好），07:15 触发预计不受影响，执行后复核；另有会话 03:40 起每分钟无效 cron.add（178 次全被拒，不写库），T5 排查来源。
+- 8/15 ⚠️ **排期失控+push 违规**：外部实例提前执行了 8/17 Boost#5/#6、8/17 辐条①（不达标版）、8/18 llms、8/23 集群push、8/31 IndexNow、9/13 T30校准（deleteAfterRun 已删原任务）；当日实际 6 次 push（违反单日1push）。好消息：T+2 GSC 7d 日均展示 307.2（+56% vs 基线），Branch A 数据更强。
+- 8/15 ✅ #1/#2 T+7 严格复核 + push 纪律切换为"产出即部署"
+- 8/14 ✅ T+7 首读 Branch A 温和加速 + cron 丢失事件重建
+- 联盟：W-8BEN-E Pending review / Synthesia 待邮件确认 / Kittl 激活无转化 / 累计 $0
 
 ## 近期日程（无需动作）
 
-- 8/16: B 类快修 + sitemap bug 修复 + S1 扩写启动 + S3 外链首批 8 站（当日合并 push）
-- 8/17: 辐条① Halloween 实测发布 + geo-technical + radar + Boost #5/#6 幂等验证
-- 8/18: Halloween deadline 判定（19:37，D6 为下单前置）
-- 8/19: GEO 首读数（09:00，D7 为前置）
+- 8/16 07:15: B类快修(copy-ai) + sitemap脚本替换 + 辐条①补正 + 全blog补publishedAt + 外链提交 + 排期治理 + 合并1push + RESULT-0816（cron 84c86e36）
+- 8/17: Boost #5/#6 幂等验证（已提前部署，预期 NOOP）+ geo-technical + radar + mining
+- 8/18: Halloween deadline 判定（19:37，D6 cookie 为下单前置）
+- 8/19: GEO 首读数（D7 CF token 为前置）
 - 8/21: print-price ≤30 里程碑 + #3/#4 T+7
 - 8/22: Boost T+14 Branch A/B/C/D 判定
+- 8/25: W3 万圣节全量push（98ebd150，需确认无重复）
+- 9/13前: 重建 T30 校准 cron（原 02fee02d 被 deleteAfterRun 删除）
 - 9/13: T+30 全量校准（V2 目标 $2,200 核验）
-- 9/29: Printify $150 博客挑战赛截止（规则已核实：月访客 1000 门槛当前不满足，ALLOWED-WITH-CONDITIONS）
+- 9/29: Printify $150 博客挑战赛截止

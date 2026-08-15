@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHASE-2026-08-13-09-13 执行闭环总览</title>
+<style>
+  :root{
+    --paper:#FAF7F2; --ink:#17201c; --green:#0b5f59; --amber:#d97706;
+    --line:rgba(23,32,28,.22); --muted:#4a5568;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--paper);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;line-height:1.65;}
+  .wrap{max-width:1080px;margin:0 auto;padding:48px 32px 80px;}
+  /* Müller-Brockmann: 严格对齐、网格、黑白+单一强调色、无装饰 */
+  header{border-bottom:3px solid var(--ink);padding-bottom:20px;margin-bottom:40px;}
+  .kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);font-weight:600;}
+  h1{font-size:30px;line-height:1.25;margin:8px 0 6px;font-weight:700;}
+  .sub{color:var(--muted);font-size:14px;}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0 44px;}
+  .metric{border:1px solid var(--line);padding:16px 14px;background:#fff;}
+  .metric .n{font-size:30px;font-weight:700;line-height:1.1;}
+  .metric .l{font-size:12px;color:var(--muted);margin-top:6px;letter-spacing:.05em;}
+  .metric .n.amber{color:var(--amber);}
+  .metric .n.green{color:var(--green);}
+  h2{font-size:18px;font-weight:700;margin:44px 0 14px;padding-top:18px;border-top:1px solid var(--line);letter-spacing:.04em;}
+  h2 .no{color:var(--amber);margin-right:8px;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 8px;background:#fff;}
+  th{background:var(--ink);color:#f7f2ea;text-align:left;padding:8px 10px;font-weight:600;font-size:12.5px;letter-spacing:.04em;}
+  td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;}
+  tr:nth-child(even) td{background:#fdfbf7;}
+  .ok{color:var(--green);font-weight:700;}
+  .warn{color:var(--amber);font-weight:700;}
+  .bad{color:#b91c1c;font-weight:700;}
+  .tag{display:inline-block;font-size:11px;padding:1px 8px;border:1px solid var(--line);margin-right:6px;white-space:nowrap;}
+  .tag.g{color:var(--green);border-color:var(--green);}
+  .tag.a{color:var(--amber);border-color:var(--amber);}
+  .tag.r{color:#b91c1c;border-color:#b91c1c;}
+  .note{font-size:13px;color:var(--muted);background:#fff;border:1px solid var(--line);padding:12px 14px;margin:10px 0;}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);}.cols{grid-template-columns:1fr;}}
+  ul{margin:6px 0 6px 22px;font-size:13.5px;}
+  li{margin:3px 0;}
+  footer{margin-top:56px;border-top:3px solid var(--ink);padding-top:14px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Execution Closure · 2026-08-15</div>
+  <h1>PHASE-2026-08-13-09-13 指令执行闭环总览</h1>
+  <div class="sub">排名冲刺期 Phase 2 v2.0 · 三文件深度解读 → 台账 → 核验 → 修复 → 复核 → 交接 · 主控汇总（5 路 Agent 独立核查 + 主线 git/cron 实证）</div>
+</header>
+
+<div class="grid">
+  <div class="metric"><div class="n">42</div><div class="l">指令台账条目（A-F 六类）</div></div>
+  <div class="metric"><div class="n green">27/27</div><div class="l">sitemap 修复单测（v2 动态断言）</div></div>
+  <div class="metric"><div class="n amber">12</div><div class="l">风险/异常记录（含回滚方案）</div></div>
+  <div class="metric"><div class="n">8</div><div class="l">待 user/千问拍板项（P-1~P-8）</div></div>
+</div>
+
+<h2><span class="no">01</span>执行快照核验（PHASE §零 · 10 项）</h2>
+<table>
+  <tr><th style="width:170px">快照项</th><th>PHASE 声明</th><th style="width:300px">实测裁决（证据）</th><th style="width:60px">状态</th></tr>
+  <tr><td>T+7 首读数</td><td>Branch A 温和加速</td><td>成立：216.5/197 = +10%（1299/6 精确）</td><td class="ok">✅</td></tr>
+  <tr><td>Boost 完成度</td><td>4/25（#1-#4）</td><td>成立；#5/#6 已部署（b7df3ab ∈ origin/main）</td><td class="ok">✅</td></tr>
+  <tr><td>记分卡</td><td>A=180/B=138/C=14</td><td><b>偏差</b>：审计产物 = 341 页 A=187/B=138/C=16；A=180 无出处（转抄失真）</td><td class="warn">⚠️</td></tr>
+  <tr><td>外链 S3</td><td>首批 8 站排 8/16</td><td><b>偏差</b>：8/14 实测 0/8（6 CAPTCHA/登录、2 需回链拍板）；批2 12 站 0/12</td><td class="warn">⚠️</td></tr>
+  <tr><td>联盟</td><td>7 活跃 + Synthesia</td><td>成立；行动卡 3 项在 BOARD</td><td class="ok">✅</td></tr>
+  <tr><td>阻塞</td><td>D6 cookie / D7 CF token</td><td>成立：D6=Halloween 下单唯一硬阻塞；D7=8/19 GEO 读数前置（均 user 行动）</td><td class="warn">⚠️</td></tr>
+  <tr><td>push 纪律</td><td>单日 1 push（8/15 切换）</td><td><b>偏差</b>：8/15 实际 ≥5 次（计数口径待统一 P-3）</td><td class="warn">⚠️</td></tr>
+  <tr><td>sitemap 技术债</td><td>8/16 必修</td><td>根因已定位（标记剥除→幂等失配→每次 +199）；v2 修复补丁 + 单测 27/27 就绪</td><td class="warn">⚠️</td></tr>
+  <tr><td>cron 健康</td><td>11 任务重建</td><td>成立 + 新发现：W3-0825 万圣节 push 重复 2 条（8/25 双触发风险）；agentId=main 是 list 过滤为 0 的根因</td><td class="warn">⚠️</td></tr>
+  <tr><td>哨兵</td><td>每日 20q</td><td>成立：8/15 双轮 0 ALERT；kittl review 最新 63.0（GSC T+2 修订）</td><td class="ok">✅</td></tr>
+</table>
+<div class="note"><b>并行实例发现（R-12）</b>：执行期间另一会话已推进至 origin/main HEAD=b58cb7d——扩写 Top5-7 复核达标（7of7）、IndexNow 全推 342 URL、T30 校准提前检查点（GSC 30d 4211 imp / 联盟 $0 / Branch A 维持）、generate-sitemap.py 部分修复（robots 4 代理已并入本任务 v2 修复版）。</div>
+
+<h2><span class="no">02</span>技术债修复闭环（generate-sitemap.py 541 事故根因）</h2>
+<div class="cols">
+  <div>
+    <table>
+      <tr><th style="width:110px">环节</th><th>结论</th></tr>
+      <tr><td>根因</td><td>合并逻辑按 <code>&lt;url&gt;</code> 切分，<b>剥除 PROGRAMMATIC-SEO 标记</b> → generate-pages.js 幂等正则失配 → 每次追加 199 条（342+199=541）</td></tr>
+      <tr><td>修复策略</td><td>保留/治愈标记块 + 规范化去重（&amp;/尾斜杠）+ new_urls 自去重 + --project-dir 可测</td></tr>
+      <tr><td>v2 合并</td><td>并入生产 robots 4 AI 代理 + heal 去重修正（代码复核 4 阻断全闭环）</td></tr>
+      <tr><td>验证</td><td><b>27/27 PASS</b>：343/343/0、标记恢复、二次运行字节一致、541 自愈、循环稳定、数据污染回归</td></tr>
+      <tr><td>补丁</td><td>sitemap_fix_v2.patch（LF 纯净，6 hunks）<b>git apply --check 通过</b></td></tr>
+    </table>
+  </div>
+  <div>
+    <div class="note" style="margin-top:0">
+      <b>⚠️ 8/16 T2 执行前必读</b><br>
+      ① 修复落地前 <b>generate-pages.js 绝不可运行</b>（当前 sitemap 无标记，一跑即 542）<br>
+      ② 应用路径：整文件替换 generate-sitemap_merged.py（或 git apply v2 补丁）→ 沙盒/实跑验证 343/343/0 + 标记 + robots 无损 → 单测通过后 cron 恢复自动调用<br>
+      ③ 首次运行「治愈标记」：343 → 343，仅恢复标记块，URL 零增删
+    </div>
+  </div>
+</div>
+
+<h2><span class="no">03</span>交叉核验：数字口径裁决（8 项）</h2>
+<table>
+  <tr><th style="width:190px">核验项</th><th>裁决</th><th style="width:90px">状态</th></tr>
+  <tr><td>记分卡 A/B/C</td><td>全站口径 = <b>341 页 A=187/B=138/C=16</b>（B=138 跨版本稳定；117 页子集不可对比）</td><td class="warn">P-1</td></tr>
+  <tr><td>kittl review</td><td>当前真实值 <b>63.0</b>（同口径不同数据时点，GSC T+2 修订；非错误）</td><td class="ok">✅</td></tr>
+  <tr><td>Boost #5/#6</td><td>PHASE 正确：b7df3ab 为 8/15 push（48e6163）祖先，已部署</td><td class="ok">✅</td></tr>
+  <tr><td>W-8BEN-E</td><td>v2 Pending（第 1 个工作日，窗口内正常）；触发线口径待统一（5 工作日 ≈8/21 vs 8/18 从严）</td><td class="warn">P-4</td></tr>
+  <tr><td>cron 基线</td><td>4 合并 cron 全在库；11 条清单未实际记录（恢复基准名不副实）；重复对待删</td><td class="warn">P-2</td></tr>
+  <tr><td>北极星 216.5/197</td><td>出处一致、+10% 计算成立；UV 后移为独立指标不冲突</td><td class="ok">✅</td></tr>
+  <tr><td>push 次数</td><td>8/15 实际 ≥5 次 ≠ 1（过渡期 flush 可解释；计数口径待统一）</td><td class="warn">P-3</td></tr>
+  <tr><td>Printify 门槛</td><td>结论成立：月访客 1000 不满足（邮件 #495/#497 实证）</td><td class="ok">✅</td></tr>
+</table>
+
+<h2><span class="no">04</span>8/16-8/17 执行准备（消费对象：每日 cron）</h2>
+<table>
+  <tr><th style="width:80px">任务</th><th style="width:110px">排期</th><th>实况与动作</th></tr>
+  <tr><td>T1 快修</td><td>8/16</td><td>实待办收窄为 <b>copy-ai-review 1 项</b>（title 66→50-60、meta 146→150-160）；descript 已修、kittl-vs-canva 词序已对齐、printful alternatives 无下滑信号</td></tr>
+  <tr><td>T2 sitemap</td><td>8/16</td><td>应用 v2 补丁/整文件替换 → 单测 27/27 先跑 → 实跑验证 343/343/0 + 标记 + robots 无损</td></tr>
+  <tr><td>T3 扩写+外链</td><td>8/16</td><td>S1 队列 7 项已全完成 → <b>幂等 NOOP</b>（Top 20 补建待 P-5）；S3 外链=重试 Startuplist + AI Toolz Dir API 重提（回链待 P-6）+ 人工 4 站排期</td></tr>
+  <tr><td>T4 辐条①</td><td>8/17</td><td>Kittl 设计（夜间窗口）→ slug 定名 → 截图 3-5 张（public/tool-screenshots/blog/ 需新建）→ blog-posts.json → sitemap（修复版）→ IndexNow → push；llms.txt 补 2 条</td></tr>
+  <tr><td>T6 Boost 幂等</td><td>8/17</td><td>预期 NOOP（dateModified=2026-08-17 已写入）</td></tr>
+  <tr><td>T7 判定</td><td>8/18</td><td>19:37 cron：D6 未就位 → 下单 NO-GO、内容环节照常</td></tr>
+  <tr><td>T8 GEO 读数</td><td>8/19</td><td>D7 未就位 → dashboard 人工导出兜底或顺延（≥3 天升级 user）</td></tr>
+</table>
+
+<h2><span class="no">05</span>待拍板清单（P-1 ~ P-8）</h2>
+<table>
+  <tr><th style="width:70px">编号</th><th>事项</th><th style="width:110px">谁</th><th style="width:110px">时限</th></tr>
+  <tr><td>P-1</td><td>记分卡口径确认（341 页 187/138/16）；RESULT-0812「333/180/14」出处回查</td><td>千问</td><td>8/16 前</td></tr>
+  <tr><td>P-2</td><td>W3-0825 万圣节全量 push 重复对删 1 条（98ebd150 / d9aacbed）</td><td>user</td><td>8/25 前（建议 8/16）</td></tr>
+  <tr><td>P-3</td><td>push 计数口径统一（daily-ops 为准；commit push-count 字段废弃）</td><td>执行层</td><td>8/16 起</td></tr>
+  <tr><td>P-4</td><td>W-8 触发线口径统一（v2 起算 5 工作日 ≈8/21；8/18 从严线保留为早预警）</td><td>千问</td><td>8/18 前</td></tr>
+  <tr><td>P-5</td><td>S1 扩写队列补建 Top 20（当前 7 项已完）</td><td>千问</td><td>8/16 起</td></tr>
+  <tr><td>P-6</td><td>外链回链拍板 2 站（AI Toolz Dir / Wired Business）</td><td>K3/user</td><td>8/16</td></tr>
+  <tr><td>P-7</td><td>D6 printful_session_cookie 补录（user 登录取 cookie 存 .hermes/secrets/）</td><td>user</td><td>8/18 前</td></tr>
+  <tr><td>P-8</td><td>D7 CF API token 或 dashboard 导出授权</td><td>user</td><td>8/19 前</td></tr>
+</table>
+
+<h2><span class="no">06</span>交付物索引</h2>
+<table>
+  <tr><th style="width:220px">文档</th><th>内容</th></tr>
+  <tr><td>00-overview.md</td><td>三文件角色/层级/约束/冲突裁决规则</td></tr>
+  <tr><td>01-task-ledger.md</td><td>42 条目台账（A 快照 10 / B 目标 5 / C 排期 10 / D 指令 9 / E 闸门 4 / F 待核实 4）</td></tr>
+  <tr><td>02-artifacts.md</td><td>任务 → 产物 → 证据链对照</td></tr>
+  <tr><td>03-risk-log.md</td><td>R-01~R-12 风险/异常（含处置与回滚）+ P 清单</td></tr>
+  <tr><td>04-review-record.md</td><td>复核自检（7 项验收证据 + 6 项修正留痕）</td></tr>
+  <tr><td>05-handoff.md</td><td>交接：状态总览/下一步/回滚方式/提醒</td></tr>
+  <tr><td>subagent_01~04 + review-code.md</td><td>5 路独立核查原始报告（证据链）</td></tr>
+  <tr><td>generate-sitemap_merged.py + sitemap_fix_v2.patch + sitemap_fix_test_v2.py</td><td>8/16 T2 修复三件套（单测 27/27，补丁 apply-check 通过）</td></tr>
+</table>
+
+<footer>
+  <span>aitoptools.net · 排名冲刺期 Phase 2 · 执行闭环 2026-08-15</span>
+  <span>Müller-Brockmann 功能主义网格 · 黑 + 纸白 + 琥珀</span>
+</footer>
+</div>
+</body>
+</html>

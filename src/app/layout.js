@@ -181,6 +181,7 @@ export default function RootLayout({ children }) {
               </div>
               <div className="footer-nav">
                 <h4>Resources</h4>
+                <Link href="/resources/">Resource Directory</Link>
                 <Link href="/about/">About</Link>
                 <Link href="/contact/">Contact</Link>
                 <Link href="/sponsorships/">Advertise</Link>

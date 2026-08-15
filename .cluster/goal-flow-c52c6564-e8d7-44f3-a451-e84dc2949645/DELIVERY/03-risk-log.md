@@ -98,14 +98,6 @@
 - **处置建议**：① 8/16 优先补正：补 publishedAt/wordCount/status 字段（字段可后补，不改 URL）；② slug 重命名需谨慎（URL 变更+IndexNow 重推+旧 URL 404），建议**不重命名**（IndexNow 已推送过该 URL，保一致），改为在文章内不影响 SEO 处说明；若千问坚持重命名，走"新 slug 发布 + 旧 URL 301/404 处理"流程（涉及部署，需 user 拍板）；③ 补截图需先造 Kittl 设计（夜间窗口）+ 截图转 WebP 放 public/tool-screenshots/blog/（目录新建）后二次 push（当日 1 push 合并）；④ 8/17 T4 任务改为"辐条①补正核验 + llms.txt 补 2 条 halloween 链接"。
 - **回滚/调整**：不重命名前提下无需回滚；若重命名，git revert 该 blog 条目并走新 slug 流程。
 
-## R-14 ⚠️ cron 子系统健康异常（8/16 04:3x 晨检：工具视图与 jobs.json 背离 + 循环 add 风暴）
-
-- **描述**：8/16 晨检发现三件事：① AutoClaw cron 工具视图与权威库背离——`cron list` 返回 0（不含探针）、`cron get 84c86e36` 报「未找到」，但权威库 jobs.json L165-194 明确显示 84c86e36 存在、enabled=true、nextRun=8/16 07:15；② gateway.log 显示 03:40 起约 **178 次重复 cron.add 全部失败**（均 INVALID_REQUEST，schedule.at=2026-08-01T13:11Z 为过去时间，疑似某卡死会话在循环尝试），且 03:39 有一次 gateway 日志轮转/重启、03:53:55 成功创建 84c86e36（`cron: job created`）；③ 新建探针任务（1ae7be03，23:59 NOOP）立即可见，说明工具创建/读取自身任务正常，唯独看不到 jobs.json 存量任务。
-- **判定**：按 R-01 纪律（信 jobs.json 全量、不信过滤 list），**84c86e36 已在库排期，07:15 大概率正常触发**，不宜重复创建（防双触发）；但 cron 子系统出现「视图背离 + 循环 add + 近期重启」组合，属健康隐患，需当日盯防。
-- **证据**：cron list/get 实测；jobs.json L165-194；gateway.log（178 次 INVALID_REQUEST / 03:39 轮转 / 03:53:55 job created）；探针 1ae7be03 创建即可见。
-- **处置**：① 07:15 后核验是否真跑（查 RESULT-0816 / 执行日志），未跑再手工触发或重建；② 排查 178 次循环 cron.add 的发起源（疑似卡死会话），必要时终止；③ 探针 1ae7be03（23:59 NOOP）保留作当日调度 canary，确认后再删；④ 本条入 RESULT-0816 观察段。
-- **回滚/调整**：未改动任何排期，仅观察 + 留痕。
-
 ## 需 user/千问拍板清单（汇总）
 
 | 编号 | 事项 | 建议动作 | 时限 |
