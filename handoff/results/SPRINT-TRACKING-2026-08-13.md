@@ -51,3 +51,17 @@
 3. 万圣节辐条①实测/下单: 8/17-8/18 由季节集群 cron 执行（预算硬限 $25/单，支付二次确认）
 4. Shopify $150 申请: 9/4 user 行动卡
 5. Kittl 假设值替换: 9/13 T+30 用 Impact 真实数据
+
+---
+
+
+---
+
+## CRON-BACKUP 2026-08-15 (T30 校准任务状态变更 — 备份纪律 §7)
+
+- **id**: 02fee02d-4fc5-400c-af1a-4144c716cfcb | **name**: W4-0913 T30全量校准
+- **schedule**: at 2026-09-12T23:15:00Z (9/13 07:15 北京) | sessionTarget: isolated | deleteAfterRun: true | delivery: none | timeoutSeconds: 1800
+- **事件**: 2026-08-15 20:27 首次被提前触发 (303s 超时), 20:34 重跑 (本次); T+2 早检完成 (日志 t30-early-0815.md); **运行结束后原任务将自动删除**
+- **payload 摘要**: 三源汇总 (GSC 30d + beacon 30d + 联盟只读) / K3 KPI 六项核验 / V2 修正目标核验 (UV 100-150 + Kittl 假设替换) / 决策树 (月化 ≥$400 提强度 / $200-400 重排 / <$200 升级 user) / 产出 PHASE-2026-09-14-*.md + RESULT-2026-09-13.md + t30-0913.md / 输出中文
+- **处置**: isolated cron run 无写权限 (update/add 均被拒, 仅 self remove) → 未能原地保活; **9/13 前需重建**, 建议 prompt 首段加幂等守卫 (RESULT-2026-09-13.md 存在且 mtime<12h → ALREADY DONE)
+- **完整重建规格**: .hermes/logs/t30-early-0815.md 第七节
