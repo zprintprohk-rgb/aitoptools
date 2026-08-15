@@ -1,0 +1,3 @@
+RESULT-2026-08-15-W3 sitemap verify: 342 urls
+byStatus: {"200":342}
+bad count: 0

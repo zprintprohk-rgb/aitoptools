@@ -1,0 +1,120 @@
+== IMPROVED >=3 (baseline 8/4-8/9 -> 8/10-8/11) ==
+  pictory ai reviews: imp 1->1, pos 99.0 -> 81.0 (gain 18.0)
+  pictory ai review: imp 1->1, pos 100.0 -> 86.0 (gain 14.0)
+  gearlaunch: imp 1->3, pos 39.0 -> 31.3 (gain 7.7)
+  mockey: imp 6->2, pos 47.3 -> 41.0 (gain 6.3)
+  dallle: imp 1->1, pos 98.0 -> 92.0 (gain 6.0)
+  pixlr ai: imp 5->1, pos 44.6 -> 39.0 (gain 5.6)
+  magicdrop legit: imp 5->1, pos 62.2 -> 57.0 (gain 5.2)
+  omnisend reviews: imp 2->1, pos 89.5 -> 85.0 (gain 4.5)
+  printify alternatives: imp 8->4, pos 83.0 -> 78.8 (gain 4.2)
+  ai copy writing: imp 3->2, pos 83.7 -> 79.5 (gain 4.2)
+  photoroom app reviews: imp 1->1, pos 68.0 -> 64.0 (gain 4.0)
+  printful or printify: imp 2->2, pos 74.5 -> 70.5 (gain 4.0)
+  jasper writing assistant: imp 1->1, pos 84.0 -> 80.0 (gain 4.0)
+  ai copywriting: imp 2->1, pos 89.5 -> 86.0 (gain 3.5)
+  printify vs printful: imp 13->5, pos 84.5 -> 81.0 (gain 3.5)
+  lumen5 pricing: imp 1->1, pos 78.0 -> 75.0 (gain 3.0)
+  predis.ai review: imp 1->1, pos 71.0 -> 68.0 (gain 3.0)
+  total: 17
+
+== DECLINED >=5 ==
+  b12 website builder is b12io worth it: imp 1->1, pos 56.0 -> 61.0 (drop 5.0)
+  gelato pod: imp 3->1, pos 28.3 -> 34.0 (drop 5.7)
+  jasper ai writer: imp 2->1, pos 65.0 -> 71.0 (drop 6.0)
+  alternatives to printful: imp 6->2, pos 69.3 -> 77.0 (drop 7.7)
+  copy ai review: imp 3->7, pos 73.3 -> 83.1 (drop 9.8)
+  copymatic review: imp 2->2, pos 55.0 -> 70.5 (drop 15.5)
+  is society6 worth it: imp 1->1, pos 32.0 -> 48.0 (drop 16.0)
+  gem pages: imp 1->1, pos 36.0 -> 54.0 (drop 18.0)
+  gempages: imp 1->1, pos 39.0 -> 58.0 (drop 19.0)
+  total: 9
+
+== KITTL/PRINTFUL/PRINTIFY related ==
+  ai shirt design generator: base=imp=1 pos=97.0 | new=N/A
+  ai t shirt design generator: base=imp=1 pos=99.0 | new=imp=1 pos=100.0
+  alternative to printful for fine art printing: base=imp=1 pos=87.0 | new=N/A
+  alternatives to printful: base=imp=6 pos=69.3 | new=imp=2 pos=77.0
+  alternatives to printify: base=imp=6 pos=79.7 | new=imp=3 pos=80.7
+  best print providers on printify: base=imp=1 pos=78.0 | new=N/A
+  best printful alternative for etsy sellers: base=imp=1 pos=68.0 | new=N/A
+  best printful alternatives: base=N/A | new=imp=1 pos=71.0
+  best printify alternatives: base=imp=2 pos=80.5 | new=N/A
+  canva vs kittl: base=imp=4 pos=70.0 | new=imp=1 pos=72.0
+  companies like printful: base=imp=2 pos=74.0 | new=imp=1 pos=76.0
+  creativehub vs printful: base=imp=2 pos=80.5 | new=N/A
+  creatsy vs placeit: base=imp=2 pos=77.0 | new=N/A
+  descubra o poder do gerador de texto e imagens por ai do renildomarcioai. obtenha resultados de qualidade profissional em questão de segundos. experimente agora mesmo: base=imp=1 pos=63.0 | new=N/A
+  gelato app review: base=N/A | new=imp=1 pos=51.0
+  gelato pod: base=imp=3 pos=28.3 | new=imp=1 pos=34.0
+  gelato pod review: base=imp=2 pos=57.0 | new=imp=2 pos=60.0
+  gelato print on demand review: base=N/A | new=imp=1 pos=54.0
+  gelato print on demand reviews: base=imp=1 pos=56.0 | new=N/A
+  gelato review: base=imp=2 pos=54.5 | new=imp=2 pos=58.0
+  gelato reviews: base=imp=4 pos=45.5 | new=N/A
+  gelato trustpilot: base=imp=1 pos=27.0 | new=N/A
+  gelato vs printify: base=imp=1 pos=74.0 | new=N/A
+  gooten vs printful: base=N/A | new=imp=1 pos=76.0
+  is gelato worth it: base=N/A | new=imp=1 pos=26.0
+  is kittl better than canva: base=imp=1 pos=75.0 | new=N/A
+  is kittl legit: base=N/A | new=imp=1 pos=67.0
+  is kittl worth it: base=imp=1 pos=73.0 | new=N/A
+  is printful better than printify: base=N/A | new=imp=1 pos=91.0
+  is printful or printify better: base=imp=1 pos=92.0 | new=N/A
+  is printify better than printful: base=N/A | new=imp=1 pos=92.0
+  is printify or printful better: base=N/A | new=imp=1 pos=91.0
+  is society6 good quality: base=N/A | new=imp=1 pos=67.0
+  is society6 legit: base=imp=1 pos=54.0 | new=N/A
+  is society6 worth it: base=imp=1 pos=32.0 | new=imp=1 pos=48.0
+  kittl: base=imp=7 pos=67.0 | new=imp=4 pos=64.8
+  kittl ai: base=N/A | new=imp=1 pos=62.0
+  kittl alternatives: base=imp=2 pos=85.5 | new=N/A
+  kittl cost: base=imp=1 pos=92.0 | new=imp=1 pos=96.0
+  kittl price: base=imp=1 pos=94.0 | new=imp=1 pos=93.0
+  kittl review: base=imp=2 pos=68.5 | new=imp=1 pos=67.0
+  kittl reviews: base=imp=1 pos=69.0 | new=N/A
+  kittl vs canva: base=imp=8 pos=72.1 | new=imp=3 pos=74.3
+  kittl.: base=imp=1 pos=67.0 | new=N/A
+  mockey: base=imp=6 pos=47.3 | new=imp=2 pos=41.0
+  mockey ai mockup generator: base=N/A | new=imp=1 pos=37.0
+  other companies like printify: base=N/A | new=imp=1 pos=76.0
+  placeit: base=imp=4 pos=65.8 | new=N/A
+  placeit mockup generator: base=imp=1 pos=55.0 | new=N/A
+  placeit pricing: base=imp=1 pos=81.0 | new=imp=1 pos=80.0
+  placeit review: base=N/A | new=imp=2 pos=71.5
+  placeit vs kittl: base=imp=1 pos=42.0 | new=N/A
+  printful alternative for wall art: base=imp=2 pos=95.5 | new=N/A
+  printful alternatives: base=imp=18 pos=75.6 | new=imp=7 pos=76.0
+  printful competitors: base=imp=1 pos=75.0 | new=N/A
+  printful or printify: base=imp=2 pos=74.5 | new=imp=2 pos=70.5
+  printful trustpilot: base=N/A | new=imp=1 pos=41.0
+  printful vs gelato: base=imp=2 pos=58.5 | new=N/A
+  printful vs gooten: base=N/A | new=imp=1 pos=77.0
+  printful vs printify: base=imp=12 pos=79.5 | new=imp=2 pos=81.5
+  printful vs printify for etsy: base=N/A | new=imp=1 pos=83.0
+  printful vs printify pricing: base=N/A | new=imp=1 pos=84.0
+  printify alternative: base=imp=1 pos=80.0 | new=N/A
+  printify alternative fine art printing: base=imp=2 pos=96.0 | new=N/A
+  printify alternatives: base=imp=8 pos=83.0 | new=imp=4 pos=78.8
+  printify and printful: base=N/A | new=imp=1 pos=83.0
+  printify or printful: base=imp=1 pos=79.0 | new=N/A
+  printify printful: base=imp=1 pos=78.0 | new=N/A
+  printify vs gelato: base=imp=1 pos=75.0 | new=N/A
+  printify vs printful: base=imp=13 pos=84.5 | new=imp=5 pos=81.0
+  printify vs printful for etsy: base=N/A | new=imp=1 pos=84.0
+  printify vs printful prices: base=N/A | new=imp=1 pos=80.0
+  reviews for society6: base=imp=1 pos=52.0 | new=N/A
+  reviews of society6: base=imp=1 pos=69.0 | new=N/A
+  similar to printify: base=N/A | new=imp=1 pos=75.0
+  sites like printful: base=N/A | new=imp=1 pos=72.0
+  sites like printify: base=N/A | new=imp=1 pos=73.0
+  sites similar to printful: base=N/A | new=imp=1 pos=72.0
+  society6 ai art policy: base=N/A | new=imp=1 pos=47.0
+  society6 reviews: base=N/A | new=imp=1 pos=68.0
+  stores like printify: base=N/A | new=imp=1 pos=76.0
+  veed pod: base=N/A | new=imp=1 pos=8.0
+  websites like printful: base=N/A | new=imp=1 pos=76.0
+
+== SITE TOTALS ==
+  BASE 8/4-8/9: imp=1183 clicks=0 avg_pos=63.2
+  NEW 8/10-8/11: imp=498 clicks=0 avg_pos=60.3

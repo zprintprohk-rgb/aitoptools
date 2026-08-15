@@ -115,3 +115,19 @@
 - **哨兵复核**: rank-sentinel 0 ALERT; kittl 67.0->63.0 连续 2 日改善确认, Branch A 继续
 - **PUSH_READY 消费**: daily-ops-2026-08-15.md 标记为 PUSH_READY 无, 19:23 已消费完毕 (681a121); 0 commits ahead of origin
 - **push-count=2** (不变; 本段纯日志复核, 无内容变更, 不产生新 push)
+
+---
+
+## ?? 20:41 ? W3-0831 IndexNow ?????? (cron 26a0ac2a ??)
+- 20:24 ?? model-call ??, ? 20:29 ??? FULL-PUSH 342 URL status 200 (sha256 58E31E); ????????
+- sitemap ??: 342/342 URL HTTP 200, bad=0 (fresh ????); verify-deploy-v2 ?? PASS
+- gsc-indexnow-state.json ??? (last_submitted_hash=58E31E, 342/200); C2b ? 8/15 ???
+- ??: .hermes/logs/indexnow-0831.md
+
+---
+
+## 补充 20:41 · W3-0831 IndexNow 月末全推收口 (cron 26a0ac2a 重试)
+- 20:24 首跑 model-call 超时, 但 20:29 已完成 FULL-PUSH 342 URL status 200 (sha256 58E31E); 本跑不再重复推送
+- sitemap 核验: 342/342 URL HTTP 200, bad=0 (fresh 全量检查); verify-deploy-v2 全部 PASS
+- gsc-indexnow-state.json 已同步 (last_submitted_hash=58E31E, 342/200); C2b 表 8/15 行已记
+- 报告: .hermes/logs/indexnow-0831.md

@@ -74,3 +74,11 @@
 - **推排名清单 (pos 20-70)**: 无新候选; **gear-launch-review-2026 (7d 19 imp/pos 38, 28d 起量) — B类快修 (8/14 f4f5c64) 后上升, 观察维持**
 - **噪音排除**: writesonic site: 过滤符 (11 imp/pos 7) 不登记 (与 8/9-8/14 一致); jasper 系 3 变体 (jasper ai review 109 / jasper review 20 / jasper reviews 17) 全映射 /jasper-ai-review/
 - **备注**: descript.com reviews (18 imp/68.9) 有专页, 标题对齐归 8/16 B 类快修候选维持; watchlist copymatic review 未达门槛
+
+
+## 2026-08-15 weekly-review 更新 (AUTOCLAW_PRIMARY)
+- 数据源: GSC API 实时 (哨兵 8/15-eve, 7d 窗口 8/8-8/14, T+2 并入)
+- Data-Driven Queue: 展示>=10 无专页 = 0 -> 无新增 (与 8/15 daily-search 幂等一致; copywriting ai 已入队 8/13, 变体 ai copywriting 已并入)
+- 观察 watchlist: teelaunch (28d 2 imp / 1 clk / pos 7.0, 无专页, 全站首个点击信号之一, 未达 10 imp 门槛)
+- 推排名清单: print-price-ai-tools-2026 DONE 8/13 维持 (T+7 8/21 与 <=30 里程碑合并读); copy ai review / printful alternatives 归 8/16 B 类快修 (f4f5c64 已 commit)
+- Boost 效果: is magicdrop legit 62.5 -> 42.9 (+19.7 位, #3 显现); kittl review 67 -> 63 (+4.0, T14 内链生效); runway ml 67.6 -> 65.2 (+2.4, 8/15 处置后)

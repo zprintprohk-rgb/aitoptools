@@ -314,6 +314,7 @@ M1 复盘 — aitoptools
 | 8/10 (D4) | 增量 2 URL (FYUL 合并 blog + 对比页更新) | **2/2** | 0 | sitemap 341 URL (push 后上线) | Hermes 19:45 产出 printful-printify-merger-fyul-2026 (雷达信号 #1: Printful+Printify 合并=FYUL, 承接 printify vs printful 68 展示/排名 76), 对比页 FYUL 重定位, sitemap 341 (+1), IndexNow 增量推送 2/2 200 |
 | 8/11 (D5) | 增量 1 URL (Halloween 辐条② blog) | 待 push 后推送 | 0 | sitemap 342 URL (本地产出) | Hermes 19:45 产出 printful-vs-printify-halloween-2026 (8/18 辐条②提前 7 天, Halloween 集群 > 常规选题; 目录+毛利对比, 主 CTA Printify/副 CTA Printful), sitemap 342 (+1), IndexNow 增量推送随本 commit 执行 |
 | 8/13 (D7) | 增量 4 URL (辐条②新页 + T3/T6/周更帖刷新) | **4/4** | 0 | sitemap 342 URL (未变) | daily-search 19:2x: halloween 辐条② printful-vs-printify-halloween-2026 补推 (8/11 产出后未推) + print-price-ai-tools-2026 (T6) + is-magicdrop-legit (T3 补执行) + best-free-creative-fabrica-assets-this-week (周更 8/13) 重推; 本地构建验证 11/11 页 PASS |
+| 8/15 (W3 月末全推) | 全量 342 URL (重推) | **342/342** | 0 | sitemap 342 URL (未变) | W3-0831 cron 20:29 FULL-PUSH 342 URL status 200 (sha256 58E31E); 核验 342/342 200 bad=0; 无新 URL 增量, C2b 记账 |
 | T+7 (8/14) | 增量 | __ | __ | __ | 首读数: GSC 展示 + IndexNow 计数 |
 | T+30 (9/5) | 增量 | __ | __ | __ | 路线决策点 |
 - 记录人: gsc-indexnow cron (12:40) 每次提交后填; 凭证缺失时填 "blocked_missing_credentials"
