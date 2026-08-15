@@ -53,7 +53,7 @@ function generateJsonLd(comp) {
       '@type': 'Article',
       headline: comp.title,
       description: comp.metaDesc,
-      author: { '@type': 'Organization', name: 'Print AI Tools' },
+      author: { '@type': 'Person', name: 'Jerome Tang', jobTitle: 'Print Industry Expert', worksFor: { '@type': 'Organization', name: 'Shenzhen Cai Long Printing' } },
       publisher: { '@type': 'Organization', name: 'Print AI Tools', url: 'https://aitoptools.net/' },
       datePublished: comp.datePublished,
       dateModified: comp.dateModified || comp.datePublished,
@@ -260,6 +260,16 @@ export default function ComparisonPage({ params }) {
         </div>
 
         {/* Why trust us — shared editorial module */}
+        {/* W2-0823 four-layer internal links: compare -> compare/list */}
+        <div className="related-links" style={{ marginTop: 40 }}>
+          <h2 id="more-comparisons" style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--k-deep)' }}>More Head-to-Head Comparisons</h2>
+          <ul style={{ fontSize: '0.95rem', lineHeight: 1.8, paddingLeft: 20 }}>
+            {comparisons.filter(c => c.slug !== comp.slug).map(c => (
+              <li key={c.slug}><Link href={`/compare/${c.slug}/`}>{c.title}</Link></li>
+            ))}
+          </ul>
+        </div>
+
         <WhyTrustUs />
 
         {/* FAQ */}

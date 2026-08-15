@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import reviews from '@/data/reviews'
+import comparisons from '@/data/comparisons.json'
 import RatingBar from '@/components/RatingBar'
 import ProsCons from '@/components/ProsCons'
 import { buildAffLinkAttrs } from '@/lib/affiliate'
@@ -67,7 +68,8 @@ function generateReviewJsonLd(review) {
     '@graph': [{
       '@type': 'Review',
       name: review.title,
-      author: { '@type': 'Organization', name: 'Print AI Tools' },
+      author: { '@type': 'Person', name: 'Jerome Tang', jobTitle: 'Print Industry Expert', worksFor: { '@type': 'Organization', name: 'Shenzhen Cai Long Printing', address: { '@type': 'PostalAddress', addressLocality: 'Shenzhen', addressCountry: 'CN' } } },
+      publisher: { '@type': 'Organization', name: 'Print AI Tools', url: 'https://aitoptools.net/' },
       datePublished: review.datePublished || '2026-06-25',
       dateModified: review.dateModified || review.datePublished || '2026-06-25',
       reviewRating: { '@type': 'Rating', ratingValue: String(review.rating), bestRating: '5', worstRating: '1' },
@@ -104,6 +106,24 @@ function generateFaqJsonLd(review) {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: review.faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
   })
+}
+
+const HUB_ROUNDUPS = [
+  { cats: ['ai-print-design'], href: '/best/best-ai-tshirt-design-generators/', label: 'Best AI T-Shirt Design Generators (2026)', desc: 'our ranked roundup of 7 design tools for print-on-demand sellers' },
+  { cats: ['ai-ecommerce'], href: '/best/printful-alternatives/', label: 'Best Printful Alternatives (2026)', desc: 'cheaper and faster POD platform options, ranked' },
+  { cats: ['ai-writing'], href: '/best-ai-writing-tools-comparison/', label: 'Best AI Writing Tools Comparison', desc: 'Jasper vs Writesonic vs Copy.ai vs Rytr vs ChatGPT, side by side' },
+  { cats: ['ai-image'], href: '/best-ai-background-removers-2026/', label: 'Best AI Background Removers for POD', desc: '7 tools tested on real print mockups' },
+  { cats: ['ai-video', 'ai-voice'], href: '/category/ai-video/', label: 'AI Video & Voice category', desc: 'every video and voice tool review in one place' },
+]
+const POD_ROUNDUPS = [
+  { slug: 'printful-review', href: '/best/printful-alternatives/', label: 'Best Printful Alternatives (2026)', desc: 'cheaper and faster POD platform options, ranked' },
+  { slug: 'printify-review', href: '/best/printify-alternatives/', label: 'Best Printify Alternatives (2026)', desc: 'top picks after the Premium price hike' },
+  { slug: 'gelato-review', href: '/best/best-print-on-demand-companies/', label: 'Best Print-on-Demand Companies (2026)', desc: '8 POD platforms compared for Etsy and Shopify sellers' },
+]
+function getHubLinks(review) {
+  const pod = POD_ROUNDUPS.find(p => p.slug === review.slug)
+  if (pod) return [pod]
+  return HUB_ROUNDUPS.filter(h => h.cats.includes(review.categorySlug)).map(h => ({ href: h.href, label: h.label, desc: h.desc }))
 }
 
 function getCategoryDisplay(review) {
@@ -158,6 +178,9 @@ export default function ReviewPage({ params }) {
         {/* 8/6 信任三件套: 作者署名 (人格背书) */}
         <p className="byline" style={{ fontSize: '0.85rem', color: 'var(--k-secondary)', margin: '6px 0 0' }}>
           By <strong>Jerome Tang</strong> — Print industry expert · hands-on tested on real print jobs
+        </p>
+        <p style={{ fontSize: '0.85rem', color: 'var(--k-tertiary)', margin: '4px 0 0' }}>
+          <strong>How we tested:</strong> Tested by Jerome Tang, Shenzhen Cai Long Printing — hands-on account testing, live pricing verification, and real print-order checks. See our <Link href="/methodology/">full testing methodology</Link>.
         </p>
 
         {review.featureLine && (
@@ -223,6 +246,26 @@ export default function ReviewPage({ params }) {
             return <p style={{ fontSize: '0.9rem', color: 'var(--k-tertiary)' }}>Review coming soon — check back for a hands-on link.</p>
           })()}
         </div>
+
+        {/* W2-0823 four-layer internal links: tool -> compare -> list (hub cross-links) */}
+        {(() => {
+          const relatedComp = comparisons.filter(c => (c.toolA && c.toolA.reviewSlug === review.slug) || (c.toolB && c.toolB.reviewSlug === review.slug))
+          const hubs = getHubLinks(review)
+          if (!relatedComp.length && !hubs.length) return null
+          return (
+            <div className="related-links" style={{ marginTop: 36 }}>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--k-deep)' }}>Deeper Reads: Comparisons &amp; Roundups</h2>
+              <ul style={{ fontSize: '0.95rem', lineHeight: 1.8, paddingLeft: 20 }}>
+                {relatedComp.map(c => (
+                  <li key={c.slug}><Link href={`/compare/${c.slug}/`}>{c.title}</Link> — side-by-side pricing, catalog, and print-quality notes.</li>
+                ))}
+                {hubs.map(h => (
+                  <li key={h.href}><Link href={h.href}>{h.label}</Link> — {h.desc}.</li>
+                ))}
+              </ul>
+            </div>
+          )
+        })()}
 
         {/* Similar tools */}
         <div className="section-header" style={{ marginTop: 36 }}>

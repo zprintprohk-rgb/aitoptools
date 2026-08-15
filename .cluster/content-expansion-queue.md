@@ -14,3 +14,5 @@
 | 7 | kittl-vs-placeit | 2 | 39.5 | 1 | 高展示 |
 
 ## 全部候选（含未入 Top 20 的 B 级页）
+
+> 消费 (2026-08-15 W2-0823 集群 cron): Top 5-7 复核全部 >=1,500 词达标 — printify-vs-gelato 1619 / mockey-vs-placeit 2268 / kittl-vs-placeit 1539; 对比页 6/6 均有 FAQ>=6 + relatedLinks + dateModified; 队列消费完成, 无需扩写

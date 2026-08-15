@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import listicles from '@/data/listicles.json'
 import reviews from '@/data/reviews'
+import comparisons from '@/data/comparisons.json'
 import RatingBar from '@/components/RatingBar'
 import PicksCards from '@/components/PicksCards'
 import WhyTrustUs from '@/components/WhyTrustUs'
@@ -40,7 +41,7 @@ function generateJsonLd(l) {
       '@type': 'Article',
       headline: l.title,
       description: l.metaDesc,
-      author: { '@type': 'Organization', name: 'Print AI Tools' },
+      author: { '@type': 'Person', name: 'Jerome Tang', jobTitle: 'Print Industry Expert', worksFor: { '@type': 'Organization', name: 'Shenzhen Cai Long Printing' } },
       publisher: { '@type': 'Organization', name: 'Print AI Tools', url: 'https://aitoptools.net/' },
       datePublished: l.datePublished,
       dateModified: l.dateModified || l.datePublished,
@@ -192,6 +193,26 @@ export default function ListiclePage({ params }) {
         <div className="review-content" dangerouslySetInnerHTML={{ __html: l.closingContent }} />
 
         {/* Why trust us — shared editorial module */}
+        {/* W2-0823 four-layer internal links: list -> tool/compare (hub cross-links) */}
+        {(() => {
+          const names = l.items.map(it => it.name)
+          const relComp = comparisons.filter(c => names.some(n => (c.toolA && c.toolA.name === n) || (c.toolB && c.toolB.name === n)))
+          const otherHubs = listicles.filter(x => x.slug !== l.slug)
+          return (
+            <div className="related-links" style={{ marginTop: 40 }}>
+              <h2 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--k-deep)' }}>Related Comparisons ' + EM + ' Roundups</h2>
+              <ul style={{ fontSize: '0.95rem', lineHeight: 1.8, paddingLeft: 20 }}>
+                {relComp.map(c => (
+                  <li key={c.slug}><Link href={`/compare/${c.slug}/`}>{c.title}</Link> ' + EM + ' head-to-head pricing, quality, and shipping comparison.</li>
+                ))}
+                {otherHubs.map(x => (
+                  <li key={x.slug}><Link href={`/best/${x.slug}/`}>{x.title}</Link></li>
+                ))}
+              </ul>
+            </div>
+          )
+        })()}
+
         <WhyTrustUs />
 
         {/* FAQ */}
