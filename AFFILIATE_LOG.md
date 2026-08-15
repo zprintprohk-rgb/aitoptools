@@ -1066,3 +1066,54 @@ TBD (1 push 整合)
 - 下个检查点: 8/14 tax-audit 复核 + Printify promo 二查收口 + Placeit 催办评估 + T+7 首读数
 - 跨项目提醒: GSC zprintpro 结构化数据修复确认 x2 + GMC zprintpro 7 月效果 (均非本域); Supabase 安全漏洞通知 (8/11, 提醒 K3)
 - 无 push (监控任务)
+
+## 2026-08-14 · 联盟监控 (daily-ops 合并 cron 05:3x)
+- 邮件: SINCE 13-Aug 5 封全量核实 (SOCKS5 127.0.0.1:7892) - **0 新审批 / 0 新商户邮件** (GSC aitoptools 结构化数据告警 x1 + GMC zprintpro 月报 x1 + LinkedIn x2 噪音)
+- **tax-audit 8/14 复核** (AutoGLM 1.1.8 只读): Printful dashboard/affiliate/tax → W-8BEN-E **仍 Pending** (8/9 提交后第 5 个工作日, 3 business days 窗口已过; **Lines 4/5 黄框提示仍显示**; Edit 可用; 只读未操作) → **升级 user**: 浏览器补第 4/5 行 + 签名上传; 下次复核 8/15; Impact LOGIN_REQUIRED (不自动登录)
+- **printful-watcher SKIP**: email_verified=true (8/8 实证), status=active, 无状态异常
+- **CF freebie 8/14**: 未到货 (常规 ~11:00 CST, 下午轮可补抓); 素材池 8 天累计 29 万圣节 (去重 28) 充足
+- **Printify promo 回复二查收口 (8/14)**: 仍 0 回复 (回信 8/8 00:27 已发 6 天) → **升级 user** 走 PartnerStack 站内渠道催
+- **排名哨兵每日拉取第 2 天** (窗口 8/7-8/13 vs 昨日 8/6-8/12): **1 ALERT (正向) - kittl review 74.0→67.0 (改善 7.0 位, imps 2→1)**, 昨日下跌后恢复至前低 68.5 之下, T14 Kittl 内链 Boost 或已生效; 16/20 query 命中; 日志 .hermes/logs/rank-sentinel-2026-08-14.md
+- **T+7 首读数** (PHASE 节点, 8/14): 基线 8/4-8/9 (imp=1183/日均 197/clicks 0/pos 63.2) → 最新 8/10-8/11 (imp=498/日均 249/pos 60.3) + 8/7-8/13 全窗日均 ~217 (+10%); **决策树分支 B (点击 0 但位置在改善)** - 保持节奏, 9/1 前不调整; Boost 效果最早 8/15-16 数据可见 (GSC T+2)
+- **ai-crawler-monitor**: GEO_BLIND NODATA (无 CF API token); 观察: user Chrome 会话已打开 CF Web Analytics dashboard (aitoptools.net) 标签页 - 8/19 GEO 首读数可 autoglm 只读该页或人工导出
+- 链接部署核查: 7 approved-active 全部 link_deployed=true (无变化)
+- SSoT: affiliate-programs.json 更新 (tax_audit_8_14 + high_signal_findings_24h_8_14 + rank_sentinel_8_14 + manual_checklist_2026_08_14 + aging + next_action)
+- **P0 = 0 (连续第 7 天)**; P1: W-8BEN-E 超窗口 Pending (user 补行) / Printify promo 站内催 (user) / Synthesia 确认 (user) / Placeit 催办 (user, 8/14 触发); P2 暂缓清单不变 + GSC review-summary 结构化数据告警待查
+- 下个检查点: 8/15 tax-audit 复核 + CF freebie 8/14 补抓 + 8/15-16 Boost 效果首读
+- 跨项目提醒: GMC zprintpro 7 月效果 (非本域); Supabase 安全漏洞通知 (8/11, 提醒 K3)
+- 无 push (监控任务)
+
+## 2026-08-14 · 午间增量轮 (daily-ops 合并 cron 12:1x)
+- **IMAP 午间补扫** (SINCE 13-Aug 7 封全量核实, SOCKS5 127.0.0.1:7892): 较晨轮 +2 封 — **CF freebie 8/14 已到货** (09:53 CST) + GSC review-summary **修正验证邮件** (正向信号)
+- **CF freebie 8/14 补抓解析** (UID 693): 20 素材落盘 .hermes/logs/cf-freebies/2026-08-14.md; 万圣节 x4 (新增 2: Halloween Skeleton Hand Stripes PNG / Spooky Season; 重复 2: 8/9 Shop Clipart / 8/11 Fall Stripes 再次推送); 圣诞 x2; **素材池 9 天累计 31 🎃 (去重 30)** — 8/18 上线判定素材充足
+- **GSC review-summary 状态更新**: 8/13 告警 → 8/14 收到"正在验证修正效果"邮件 → 告警或已修复, 进入验证观察期 (8/15-8/19), 无需动作
+- **printful-watcher SKIP** (email_verified=true 维持); **tax-audit** 晨轮已复核 (Pending D5), 午间不重复 (8/12 先例), 下次 8/15
+- **排名哨兵**: 晨轮已拉 (窗口 8/7-8/13, 1 ALERT 正向 kittl review +7 位), GSC T+2 数据午间不变, 不重拉
+- P0 = 0 (连续第 7 天) 维持; 4 项 P1 user 行动清单不变
+- 无 push (监控任务)
+## 2026-08-15 · 联盟监控 (daily-ops 合并 cron 03:5x)
+- 邮件: SINCE 14-Aug 5 封全量核实 (SOCKS5 127.0.0.1:7892) — **0 新审批 / 0 新商户邮件** (GSC zprintpro 180 点击里程碑 [跨项目] + GSC review-summary 验证 [已知] + CF 8/14 freebie [重复] + Supabase zprintpro 暂停通知 [跨项目] + LinkedIn [噪音])
+- **tax-audit 8/15 复核** (AutoGLM 1.1.8 只读, 03:44): W-8BEN-E **仍 Pending** (8/15 02:49-02:57 v2 上传 [Line4 Corporation + Line5 Active NFFE] 后第 1 个工作日, "up to 3 business days" 窗口内正常) → **NOOP**; ⚠️ **观察: 上传文件名显示 kutoolm-browser-agent.txt (存疑)** + Lines 4/5 黄框提示仍显示 → user 确认上传文件; 下次复核 8/16; Impact LOGIN_REQUIRED (不自动登录)
+- **printful-watcher SKIP**: email_verified=true (8/8 实证), status=active, 无状态异常
+- **CF freebie 8/15**: 未到货 (常规 ~09:53 CST, 下午轮可补抓); 素材池 9 天累计 31 🎃 (去重 30) 充足
+- **排名哨兵第 3 天** (窗口 8/8-8/14): **0 ALERT** (无 ≥5 位变动; 最大 runway ml 67.6→65.2 改善 2.4; is magicdrop legit 55.5→55.1 连续改善); 修复哨兵日志 GBK 乱码 (UTF-8 重写)
+- **ai-crawler-monitor**: beacon **首读成功** (autoglm 只读 CF Web Analytics, 24h: 3 visits / 4 PV / 加载 797ms / 美国为主 10 req); AI 爬虫 UA 专属视图仍不可得 → 部分 GEO 数据, 8/19 首读数基线建立
+- 链接部署核查: 7 approved-active 全部 link_deployed=true (无变化)
+- SSoT: affiliate-programs.json 更新 (tax_audit_8_15 + high_signal_findings_24h_8_15 + rank_sentinel_8_15 + manual_checklist_2026_08_15 + aging + next_action, 含乱码修复)
+- **P0 = 0 (连续第 8 天)**; P1: W-8BEN-E 文件名存疑 (user 确认) / Printify promo 站内催 / Synthesia 确认 / Placeit 催办; P2 暂缓清单不变
+- 下个检查点: 8/16 tax-audit 复核 + Boost 效果首读 + B 类修正批量 push (★)
+- 跨项目提醒: zprintpro GSC 180 点击里程碑 (8/12) + Supabase zprintpro-production 暂停通知 (8/14) — 均提醒 K3
+- 无 push (监控任务)
+
+## 2026-08-15 · 傍晚增量轮 (daily-ops 合并 cron 19:1x)
+- **IMAP 傍晚补扫** (SINCE 15-Aug 2 封全量核实, SOCKS5 127.0.0.1:7892): **CF freebie 8/15 已到货** (10:43 CST) + **GSC review-summary 已修正** (15:48 CST)
+- **CF freebie 8/15 补抓解析** (SEQ 696): 20 素材落盘 .hermes/logs/cf-freebies/2026-08-15.md; 万圣节 x3 (新增 2: Retro Vintage Halloween Pumpkin PNG / Retro Halloween PNG Bundle Halloweentown; 重复 1: Spooky Halloween Shop Clipart 第三次推送); 圣诞 x2; **素材池 10 天累计 33 万圣节 (去重 32)** — 8/18 上线判定素材充足
+- **GSC review-summary 状态更新**: 8/13 告警 → 8/14 验证中 → **8/15 已成功修正** (正向闭环, P2 项关闭, 无需动作)
+- **tax-audit 19:13 傍晚复核** (autoglm 只读): W-8BEN-E 仍 Pending (v2 上传后第 1 个工作日, 3 business days 窗口内正常; 文件名显示 autoglm-browser-agent.pdf; Lines 4/5 黄框仍显示) → **NOOP per protocol**, 下次 8/16; Impact LOGIN_REQUIRED
+- **排名哨兵 19:1x 傍晚修订轮** (同窗口 8/8-8/14 重拉, GSC T+2 数据修订): **0 ALERT**; 正向: kittl review 67.0→63.0 (T14 内链补强见效) + is magicdrop legit 55.1→42.9 (大幅改善, 修订补录); 大面积下滑 >=10 位未触发 → Branch A 维持
+- **printful-watcher SKIP** (email_verified=true 维持); **ai-crawler-monitor** 晨轮已 beacon 首读 (3 visits / 4 PV / 797ms / 美国为主 10 req; AI 爬虫 UA 专属视图不可得 → 部分 GEO), 8/19 正式首读数
+- SSoT: affiliate-programs.json 更新 (high_signal_findings_24h_8_15_eve + next_action)
+- **P0 = 0 (连续第 8 天)**; P1 x4 (W-8BEN-E 复核 / Printify promo 站内催 / Synthesia 确认 / Placeit 催办 — 均 user 待办); P2 暂缓清单不变 (GSC review-summary 已关闭)
+- 下个检查点: 8/16 tax-audit 复核 + Boost 效果首读 + B 类修正批量 push (★)
+- 跨项目提醒: zprintpro GSC 180 点击里程碑 + Supabase zprintpro-production 暂停通知 (均提醒 K3)
+- 无 push (监控任务)

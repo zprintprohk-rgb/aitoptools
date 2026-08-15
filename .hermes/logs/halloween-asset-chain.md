@@ -65,3 +65,10 @@
 - **设计源切换**: Kittl 内置 Halloween 模板 (Fall Halloween Sublimation Bundle 等) 为主源; CF 素材降级为可选加分项 (user 手动下载时使用)
 - **B1 解除硬阻塞**: 8/11 Kittl 实测照常执行 (模板源), 素材链 ①设计 不再依赖 CF 下载
 - 影响: Halloween 链 8/18 目标不受影响; 测试单/照片墙/支柱帖全链可正常推进
+
+## 8/14 每日 brief (2026-08-14 05:29, 季节集群 cron D-4 检查)
+- 判定: **PARTIAL** (详见 .hermes/logs/halloween-deadline-0818.md)
+- 素材链仍 0/4: 设计 0 文件 (8/11 Kittl 实测仅观察, 无产出); 下单无 order_id (printful cookie 仍缺, 唯一硬阻塞); 拍照 0/6; 毛利无
+- 进展: test-address.json ✅ 已就位; B1 素材阻塞已解除 (设计源=Kittl 模板)
+- 内容: 支柱 halloween-pod-ideas-2026 ✅ (8/9) + 辐条② printful-vs-printify-halloween-2026 ✅ (8/11); 辐条① 排期 8/17 未上线
+- sitemap 342 / IndexNow: 支柱 8/9 1/1 200, 辐条② 8/13 4/4 200 ✅; GEO llms.txt 缺 2 条 ❌
