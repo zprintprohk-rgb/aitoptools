@@ -182,6 +182,8 @@ export default function RootLayout({ children }) {
               <div className="footer-nav">
                 <h4>Resources</h4>
                 <Link href="/resources/">Resource Directory</Link>
+                <a href="https://www.aitoolzdir.com" target="_blank" rel="nofollow noopener noreferrer">AI Toolz Dir</a>
+                <a href="https://wired.business" target="_blank" rel="nofollow noopener noreferrer">Wired Business</a>
                 <Link href="/about/">About</Link>
                 <Link href="/contact/">Contact</Link>
                 <Link href="/sponsorships/">Advertise</Link>

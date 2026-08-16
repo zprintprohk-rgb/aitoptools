@@ -25,3 +25,35 @@
 - **回链决策待办 (K3)**: aitoolzdir.com + wired.business 免费档需站内回链 (footer 锚文本); 加回链属站内改动, 本 cron 不自动执行
 - **人工浏览器提交待办**: findly.tools / toolpilot.ai / thenextai.com / launchboosts.com 共 4 站, 已准备好统一实体描述 (建议后续带浏览器工具的 cron 或 user 手动执行)
 - 探测文件存档: .hermes/tmp/linkbuild-0816/ (HTML + JS chunk + body.json)
+
+---
+
+# 外链提交记录 — 第 3 批 (2026-08-16)
+
+> 执行: 8/16 B类快修+辐条补正+外链合并push cron (84c86e36) | 依据: STRATEGY-2026-08-16 T4 (D9: user 全权授权 AutoClaw 外链提交 + nofollow 回链默认) + .cluster/link-directory-list.md
+> 统一实体描述: aitoptools.net — Print AI Tools review site specializing in AI-powered solutions for print shops, packaging design, and e-commerce store operations. Founded by Jerome Tang of Shenzhen Cai Long Printing
+> 邮箱: jerome@aitoptools.net | 目标 URL: https://aitoptools.net
+> 原则: CAPTCHA/登录墙/连接拦截 → 记录 BLOCKED_* 不硬闯 (批1/批2 同纪律); 回链仅 nofollow, 放 /resources/ 聚合页 + footer 入口 (D9)
+
+## 前置改动 (T4 站点侧, 随 8/16 主 push 上线)
+
+- 新建 `src/app/resources/page.js` — /resources/ 外链聚合页, 8 站 nofollow 回链 (AI Toolz Dir / Wired Business / Findly.tools / ToolPilot / Dofollow.Tools / TheNextAI / LaunchBoosts / Startuplist.in)
+- footer Resources 栏新增 "Resource Directory" 入口 (layout.js)
+- 截图: /resources/ 页面 8/16 07:5x 线上 200 确认部署 ✓
+
+## 提交结果总表
+
+| # | 站点 | URL | 方式 | 结果 | 说明 |
+|---|------|-----|------|------|------|
+| 1 | AI Toolz Dir | https://www.aitoolzdir.com/api/tool/submit/free | API (逆向) | BLOCKED_REQUIRES_BACKLINK | POST 返回 "Backlink not found on your website" x3 (07:5x 重试)。/resources/ 页已上线含锚文本 "AI Toolz Dir", 但检测器未识别 — 疑似只查首页 HTML。下次 push 补 footer 直达回链 + sitemap 已含 /resources/ (344) 后重提 |
+| 2 | Wired Business | https://wired.business/submit-your-website | 浏览器 (autoglm) | 执行中 → 见下 |
+| 3 | Findly.tools | https://findly.tools/submit | 浏览器 (autoglm) | 待执行 |
+| 4 | ToolPilot | https://www.toolpilot.ai/pages/submit-your-ai-tool | 浏览器 (autoglm) | 待执行 |
+| 5 | TheNextAI | https://thenextai.com/submit-ai-tool/ | 浏览器 (autoglm) | 待执行 |
+| 6 | LaunchBoosts | https://launchboosts.com/submit | 浏览器 (autoglm) | 待执行 |
+| 7 | Startuplist.in | https://startuplist.in/submit | 探测 | BLOCKED_CONNECTION | 第 3 次重试仍超时 (000, ~3.4s 边缘防护) |
+| 8 | Dofollow.Tools | https://dofollow.tools/submit | 浏览器 (autoglm) | 待执行 (注册+互链) |
+
+## 小结 (更新于全部完成后)
+
+- 待补: 浏览器提交 6 站结果

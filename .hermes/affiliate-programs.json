@@ -101,16 +101,16 @@
    "confirm_email_sender": "support@info.printful.com",
    "confirm_email_subject": "Confirm email address",
    "confirm_link_note": "8/8 Hermes 全权指令 #1: IMAP 实拉两封 Confirm email address (7/17 15:25Z, 7/20 17:00Z, 同 token), headless GET verify 链接 -> 重定向 auth/login + \"Email confirmation request does not exist\" = 已过期。需 printful_session_cookie 登录后台 Resend verification -> 轮询新邮件(3 次/60s) -> 重试。",
-   "last_updated": "2026-08-15",
+   "last_updated": "2026-08-16",
    "approval_email_found": "2026-07-20 09:50Z affiliate@info.printful.com Your affiliate application was approved!",
    "email_verified": true,
    "tax_status": "w8ben-e-uploaded-pending-review",
    "tax_audit": {
-    "checked": "2026-08-15",
-    "method": "autoglm browser (AutoGLM 1.1.8, user Chrome 会话, tab 97686550)",
+    "checked": "2026-08-16",
+    "method": "autoglm browser (AutoGLM 1.1.8, user Chrome 会话, tab 97687233)",
     "url": "https://www.printful.com/dashboard/affiliate/tax",
     "result": "pending-review",
-    "detail": "8/15 19:13 傍晚复核 (v2 上传后第 1 个工作日): 状态仍 Pending, 页面提示 up to 3 business days (窗口内正常); 上传文件名显示 autoglm-browser-agent.pdf (早上存疑的 kutoolm-browser-agent.txt 未再现); Lines 4/5 黄框提示仍显示 (或为静态提示); 无新 payout/tax 告警; 只读未做任何操作. NOOP per protocol, 下次 8/16"
+    "detail": "8/16 18:15 复核: 状态仍 Pending (v2 上传 8/15 02:49 后; 修正工作日口径: 8/15=周六 8/16=周日, 3 business days 窗口自 8/17 周一起算); 文件名 autoglm-browser-agent.pdf 确认 (8/15 晨 kutoolm 存疑项澄清); Lines 4/5 黄框仍显示 (静态模板提示); 无新 payout/tax 告警; 只读未做任何操作. NOOP per protocol, 下次 8/17"
    },
    "tax_upload_date": "2026-08-15",
    "tax_review_note": "signed PDF uploaded via autoglm 02:49 CST; reviewed in up to 3 business days",
@@ -269,11 +269,11 @@
   }
  ],
  "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
- "last_updated": "2026-08-15",
+ "last_updated": "2026-08-16",
  "monitoring": {
   "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
   "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
-  "next_action": "8/16: W-8BEN-E 复核 (v2 上传后第 2 个工作日, 观察文件名) + Boost 效果首读 (GSC T+2, 8/13 上线) + B 类修正批量 push (★当日) + generate-sitemap.py bug 修复 (含单测)",
+  "next_action": "8/17: W-8BEN-E 复核 (工作日口径第 1 天) + S3 外链 badge 验证 (Wired Business 24h 窗口) + Halloween 辐条①实测发布 (Kittl 设计+截图军规) + Boost #5/#6 幂等验证; 8/18: Halloween 判定 (D6 cookie 为下单前置)",
   "last_live_check": "2026-08-15 03:5x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 14-Aug 5 封全量核实 - 0 新审批; CF freebie 8/15 未到货",
   "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
   "network_diag_5_19": {
@@ -846,10 +846,108 @@
    "p2_count_24h": 6,
    "p2_notes": "暂缓清单不变; GSC review-summary 告警已闭环关闭 (8/15 修正确认); 跨项目: zprintpro GSC 180 点击里程碑 + Supabase zprintpro 暂停通知 (提醒 K3)",
    "conclusion": "0 新审批 (SINCE 15-Aug 2 封全量核实). CF freebie 8/15 到货解析完成 (20 素材, 万圣节 +2 新). GSC review-summary 已修正 (正向闭环). P0 = 0 连续第 8 天."
+  },
+  "tax_audit_8_16": {
+   "printful": "STILL-PENDING (browser 实读 8/16 18:15, v2 上传后周末 0 工作日, 3 business days 窗口自 8/17 周一起算; 文件名 autoglm-browser-agent.pdf; Lines 4/5 黄框仍显示=静态模板; NOOP per protocol, 下次 8/17)",
+   "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
+  },
+  "rank_sentinel_8_16": {
+   "status": "PIPELINE-OK (正式每日拉取第 4 天)",
+   "window": "2026-08-09..2026-08-15 (滚动, 同轮重拉昨日窗口 8/8-8/14 捕获修订)",
+   "alerts": 0,
+   "alerts_detail": "20q 无 >=5 位变动; 最大变动 printful vs printify 79.2->76.9 (改善 2.4) / runway ml 65.2->63.5 (改善 1.7) / best ai background remover 97.6->99.0 (下跌 1.4); is magicdrop legit 34.2->33.6 (pos 33.6 全站最佳, 连续改善 55.1->42.9->34.2->33.6, imps 82); kittl review 63.0 连续 3 日稳定; 16/20 query 命中",
+   "note": "日志 .hermes/logs/rank-sentinel-2026-08-16.md"
+  },
+  "high_signal_findings_24h_8_16": {
+   "as_of": "2026-08-16 18:1x",
+   "status": "RESTORED - IMAP 增量扫描 (SINCE 15-Aug 7 封全量核实, SOCKS5 127.0.0.1:7892), 0 新审批 / 0 新商户邮件",
+   "new_findings": {
+    "wired_business_8_16": {
+     "date": "2026-08-15 16:38:11 -0700 (8/16 07:38 CST)",
+     "from": "Wired Business <sam@wired.business>",
+     "subject": "Your website submission was received - Wired Business",
+     "signal": "外链目录提交确认 (aitoptools.net 已注册): 需首页/footer 加 wired.business badge 链接 + 完成验证, 24h 未检测到 badge 将自动移除. 与 session_pool 实证吻合 (8/15 23:59 UTC 在 wired.business badge 步骤) → S3 外链首批执行中. 加 footer 链接后列入 PUSH_READY"
+    },
+    "cf_free_picks_8_16": {
+     "date": "2026-08-16 01:26:07 UTC (09:26 CST)",
+     "from": "Creative Fabrica <hi@creativefabrica.com>",
+     "subject": "Today's free picks: Remember Things & 19 more",
+     "signal": "CF freebie 8/16 到货解析 (SEQ 700, 20 素材落盘 .hermes/logs/cf-freebies/2026-08-16.md). 万圣节 x3 新: Boojee Ghost Halloween PNG / Spooky Nurse Halloween PNG / Cozy Halloween Fall Cute Cat Lover PNG; 圣诞 x3 (Q4 备选). 素材池 10 天累计 36 万圣节 (去重 ~35), 远超 Halloween 辐条①门槛"
+    },
+    "supabase_paused_final_8_16": {
+     "date": "2026-08-15 19:09:42 +0000",
+     "from": "ant.wilson@supabase.com",
+     "subject": "Your Supabase Project zprintpro-production has been paused.",
+     "signal": "跨项目 (zprintpro 域) 暂停确认邮件 — 提醒 K3 处理"
+    }
+   },
+   "noise": "LinkedIn x2 (噪音) + GSC review-summary 修正确认 (已知, 8/15 已闭环)",
+   "p0_count_24h": 0,
+   "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
+   "p1_count_24h": 4,
+   "p1_notes": "W-8BEN-E Pending (周末 0 工作日, 窗口 8/17-8/19 内正常; 8/17 复核) / Printify promo 站内催 (user, 待办) / Synthesia 确认 (user, 待办) / Placeit 催办 (user, 待办)",
+   "p2_count_24h": 7,
+   "p2_notes": "暂缓清单不变; 新增: Wired Business badge 验证 (S3 外链, 24h 窗口); 跨项目: Supabase zprintpro-production 已暂停 (提醒 K3)",
+   "conclusion": "0 新审批 (SINCE 15-Aug 7 封全量核实). CF freebie 8/16 到货解析完成 (万圣节 +3 新). Wired Business 外链确认回执 (S3 执行中). W-8BEN-E 窗口口径修正 (8/17 起算). P0 = 0 连续第 9 天."
+  },
+  "ai_crawler_8_16": {
+   "as_of": "2026-08-16 18:20",
+   "method": "autoglm browser 只读 CF Web Analytics + AI Crawl Control (tab 97687234)",
+   "web_analytics_24h": {
+    "visits": 8,
+    "page_views": 8,
+    "avg_load_ms": 877,
+    "total_requests": "~2k",
+    "percent_cached": 6.1,
+    "cwv": "LCP/CLS 100% Good"
+   },
+   "web_analytics_7d": {
+    "visits": 33,
+    "page_views": 35,
+    "avg_load_ms": 1106,
+    "lcp_p50_ms": 728,
+    "lcp_p90_ms": 2412,
+    "cwv": "LCP 94% Good / 6% Poor"
+   },
+   "top_countries_7d": [
+    "United States",
+    "China",
+    "Morocco",
+    "Argentina",
+    "Jordan"
+   ],
+   "browsers_7d": [
+    "ChromeHeadless ~33",
+    "Chrome ~10",
+    "SamsungInternet",
+    "Edge"
+   ],
+   "ai_crawl_control_24h": {
+    "total_ai_crawler_requests": 136,
+    "trend": "-26.9% vs 前一周",
+    "by_bot": {
+     "BingBot": 45,
+     "Claude-SearchBot": 20,
+     "Googlebot": 15,
+     "Applebot": 14,
+     "ChatGPT-User": 12,
+     "Baidu": 8,
+     "Bytespider": 0,
+     "PerplexityBot": 0,
+     "CCBot": 0,
+     "DuckAssistBot": 0,
+     "Amazonbot": "未检测"
+    },
+    "top_path": "www.aitoptools.net/sitemap.xml (42 成功请求)",
+    "http_200": 103,
+    "status_dist": "2xx 103 / 4xx 22 / 3xx 11",
+    "data_transfer_top": "BingBot 672.53kB / Googlebot 266.69kB / Applebot 241.41kB / ChatGPT-User 214.25kB / Baidu 124.01kB"
+   },
+   "conclusion": "GEO 正向: 24h 136 次 AI 爬虫请求 (Claude-SearchBot 20 / ChatGPT-User 12 / Googlebot 15 / BingBot 45), sitemap.xml 被爬最多 — 8/19 GEO 首读数基线强化; AI 引荐流量 =0 待 8/19 beacon 归因确认; Log Explorer 需付费不可用, Perplexity/Bytespider 0 请求待观察"
   }
  },
  "pending_applications_aging": {
-  "as_of": "2026-08-15",
+  "as_of": "2026-08-16",
   "items": [
    {
     "name": "Placeit (re-apply post Marketplace upgrade)",
@@ -861,9 +959,9 @@
    {
     "name": "Synthesia (Rewardful)",
     "applied": "2026-08-11",
-    "days": 4,
+    "days": 5,
     "network": "Rewardful",
-    "next_action": "user 手动点邮箱确认链接激活 (8/11 邮件, 已 4 天); 密码重置 x2 请确认是否本人操作"
+    "next_action": "user 手动点邮箱确认链接激活 (8/11 邮件, 已 5 天); 密码重置 x2 请确认是否本人操作"
    }
   ],
   "resolved_since_2026-07-23": [
@@ -1014,5 +1112,14 @@
   "4_placeit": "催办草稿 drafts/placeit-followup-email.md 版本 B 就绪, user 手动发送",
   "5_boost_read": "8/15-16 Boost 效果首读窗口 (8/13 上线, GSC T+2), 明日哨兵观察",
   "_cf_freebie_8_15": "CF freebie 8/15 未到货 (常规 ~09:53 CST, 下午轮可补抓); 素材池 9 天累计 31 万圣节 (去重 30) 充足"
+ },
+ "manual_checklist_2026_08_16": {
+  "generated_by": "aitoptools daily-ops cron 2026-08-16 18:1x (IMAP 实拉 + autoglm 只读复核)",
+  "1_tax_audit": "W-8BEN-E 8/16 复核 STILL PENDING - 工作日口径修正: v2 上传 8/15 (周六), 8/16 (周日) 均非工作日, 3 business days 窗口自 8/17 周一起算 (8/19 到期); 文件名 autoglm-browser-agent.pdf 确认; NOOP, 下次 8/17",
+  "2_wired_business": "新 (S3 外链): Wired Business 提交确认回执 - 需 footer 加 badge 链接 + 完成验证 (24h 内未检测自动移除); session_pool 实证 8/15 23:59 在 badge 步骤",
+  "3_printify_promo": "站内催待 user 执行 (回信 8/8 已发 8 天 0 回复; PartnerStack 站内渠道)",
+  "4_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 邮件, 已 5 天; SINCE<90d 不自动)",
+  "5_placeit": "催办草稿 drafts/placeit-followup-email.md 版本 B 就绪, user 手动发送",
+  "_cf_freebie_8_16": "CF freebie 8/16 解析落盘 (20 素材, 万圣节 +3 新); 素材池 10 天累计 36 万圣节 (去重 ~35) 充足"
  }
 }

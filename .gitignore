@@ -30,3 +30,11 @@ test-address.json
 # openclaw execution temp files, incl. JWT/token artifacts (2026-08-12 P0)
 .openclaw-tmp-*
 .openclaw/
+
+# Hermes runtime files (2026-08-16 T6)
+HEARTBEAT.md
+IDENTITY.md
+SOUL.md
+TOOLS.md
+USER.md
+GSC数据/

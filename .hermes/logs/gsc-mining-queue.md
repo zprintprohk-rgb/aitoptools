@@ -82,3 +82,13 @@
 - 观察 watchlist: teelaunch (28d 2 imp / 1 clk / pos 7.0, 无专页, 全站首个点击信号之一, 未达 10 imp 门槛)
 - 推排名清单: print-price-ai-tools-2026 DONE 8/13 维持 (T+7 8/21 与 <=30 里程碑合并读); copy ai review / printful alternatives 归 8/16 B 类快修 (f4f5c64 已 commit)
 - Boost 效果: is magicdrop legit 62.5 -> 42.9 (+19.7 位, #3 显现); kittl review 67 -> 63 (+4.0, T14 内链生效); runway ml 67.6 -> 65.2 (+2.4, 8/15 处置后)
+
+
+## 2026-08-16 weekly-review 更新 (AUTOCLAW_PRIMARY, 7d 窗口 8/9-8/15 全量拉取)
+- 数据源: GSC API 实时 (本跑 07:47, 372 query / 115 页 / 5 日; T+2 有效至 8/13)
+- 日均展示 341.8 (5 日终值 1709 imp; 8/13 单日 531 = 峰值) vs 上周 216.5, +58% 放量; 7d 首个点击 (gear-launch-review-2026 @38.6)
+- Data-Driven Queue: 展示>=10 无专页 = 0 -> 无新增 (is magicdrop legit 58 / jasper 41 / omnisend 22 / manychat 20 / midjourney 20 / sticker mule 18 / printful alternatives 16 / magicdrop legit 14 / print price ai tool 12 / bluehost 10 全部已有专页; copywriting ai 已入队 8/13)
+- 观察 watchlist: teelaunch (28d 2 imp/1 clk/pos 7.0) + copymatic review (未达 10 imp 门槛)
+- 推排名清单: print-price-ai-tools-2026 DONE 8/13 维持 (本窗口 12 imp @64.5, 基线 69.5 -> -5.0, T+7 8/21 与 <=30 里程碑合并读); copy ai review 8/16 B 类快修已部署 (afc0dff, title 66->56), T+7 8/23 读
+- Boost 效果: is magicdrop legit 42.4 维持 (页级 /blog/is-magicdrop-legit/ pos 19.0 = 全站首个 top-20 页); kittl review 63.0 连续 2 日改善; print price ai tool 64.5 (-5.0)
+- push 纪律 (reflog 实证): 8/12=7 / 8/13=8 超限 (存量), 8/14=2 / 8/15=4 / 8/16=1; 详见周报 Step 0b

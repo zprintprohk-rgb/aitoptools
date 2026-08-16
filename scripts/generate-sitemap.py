@@ -214,6 +214,7 @@ def main():
         'terms',
         'submit-tool',
         'sponsorships',
+        'resources',
     ]
     for cs in cat_slugs:
         pages.append(f'category/{cs}')

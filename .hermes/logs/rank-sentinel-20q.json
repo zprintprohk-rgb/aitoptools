@@ -564,12 +564,103 @@
      "position": 90.5
     }
    }
+  },
+  {
+   "date": "2026-08-16",
+   "window": "2026-08-09..2026-08-15",
+   "queries": {
+    "printful alternatives": {
+     "impressions": 20,
+     "clicks": 0,
+     "position": 77.1
+    },
+    "printify alternatives": {
+     "impressions": 8,
+     "clicks": 0,
+     "position": 80.875
+    },
+    "canva vs kittl": {
+     "impressions": 1,
+     "clicks": 0,
+     "position": 72
+    },
+    "kittl review": {
+     "impressions": 2,
+     "clicks": 0,
+     "position": 63
+    },
+    "kittl vs placeit": null,
+    "halloween print on demand": null,
+    "halloween shirt design": null,
+    "halloween sublimation": null,
+    "jasper ai review": {
+     "impressions": 50,
+     "clicks": 0,
+     "position": 91.3
+    },
+    "midjourney review": {
+     "impressions": 23,
+     "clicks": 0,
+     "position": 87.3913043478261
+    },
+    "is magicdrop legit": {
+     "impressions": 82,
+     "clicks": 0,
+     "position": 33.646341463414636
+    },
+    "omnisend review": {
+     "impressions": 25,
+     "clicks": 0,
+     "position": 85.44
+    },
+    "manychat shopify": {
+     "impressions": 22,
+     "clicks": 0,
+     "position": 82.81818181818181
+    },
+    "printful vs printify": {
+     "impressions": 7,
+     "clicks": 0,
+     "position": 76.85714285714286
+    },
+    "runway ml": {
+     "impressions": 2,
+     "clicks": 0,
+     "position": 63.5
+    },
+    "best ai background remover": {
+     "impressions": 3,
+     "clicks": 0,
+     "position": 99
+    },
+    "bluehost review 2026": {
+     "impressions": 12,
+     "clicks": 0,
+     "position": 67.08333333333333
+    },
+    "descript.com reviews": {
+     "impressions": 7,
+     "clicks": 0,
+     "position": 71.28571428571429
+    },
+    "siteground review 2026": {
+     "impressions": 4,
+     "clicks": 0,
+     "position": 82
+    },
+    "copywriting ai": {
+     "impressions": 2,
+     "clicks": 0,
+     "position": 90.5
+    }
+   }
   }
  ],
  "last_pull": {
-  "date": "2026-08-15",
-  "window": "2026-08-08..2026-08-14",
+  "date": "2026-08-16",
+  "window": "2026-08-09..2026-08-15",
   "alerts": 0,
-  "alerts_detail": "0 alerts; 20q 无 >=5 位变动; 最大变动 runway ml 67.6->65.2 (改善 2.4) / printify alternatives 81.0->79.3 (改善 1.7) / printful vs printify 77.6->79.2 (下跌 1.6); is magicdrop legit 55.5->55.1 连续改善"
- }
+  "alerts_detail": "0 alerts; 20q 无 >=5 位变动 (同窗口重拉 8/8-8/14 vs 滚动 8/9-8/15); 最大变动 printful vs printify 79.2->76.9 (改善 2.4) / runway ml 65.2->63.5 (改善 1.7) / best ai background remover 97.6->99.0 (下跌 1.4); is magicdrop legit 34.2->33.6 连续改善 (pos 33.6 全站最佳, imps 82); kittl review 63.0 稳定; 16/20 query 命中"
+ },
+ "last_updated": "2026-08-16"
 }
