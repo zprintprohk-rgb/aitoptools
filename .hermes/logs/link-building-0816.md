@@ -65,3 +65,18 @@
 - **AI Toolz Dir: SUBMITTED ✅（外链 0/20 → 1/20）** — footer 回链上线并核验后重提, POST /api/tool/submit/free → HTTP 200, 响应 「Submission received successfully.」; 待收录确认（审核周期未知, 次日检查）
 - Wired Business: footer 回链已上线, 浏览器提交待执行（autoglm）
 - Findly/ToolPilot/TheNextAI/LaunchBoosts/Dofollow: 浏览器提交待补
+
+## 8/16 晚浏览器提交 (autoglm, 19:3x-19:4x)
+
+| # | 站点 | 方式 | 结果 | 说明 |
+|---|---|---|---|---|
+| 2 | Wired Business | 浏览器 (autoglm) | REGISTERED ✅（审核队列中） | 输入 URL 后系统提示 This website is already in our review queue（上午已提交成功）; 点 Complete the badge verification → Almost there! Your website https://aitoptools.net is registered and waiting to go live; footer 回链已上线, badge 验证 24h 内自动检测 |
+| 5 | TheNextAI | 浏览器 (autoglm) | SUBMITTED ✅ | Thanks for submitting your tool to The Next AI, 24-48h 审核; 分类 Design & UI / 定价 Free; 数学验证码 5+2=7 通过, 无阻塞 |
+| 6 | LaunchBoosts | 浏览器 (autoglm) | 执行中 | 结果待补 |
+| 6 | LaunchBoosts | 浏览器 (autoglm) | BLOCKED_BY_LOGIN | 提交页重定向到 /auth/signin (callbackUrl=/submit), 需注册登录; 按纪律不自动注册, 记阻塞待人工或后续处理 |
+
+## 小结（8/16 全天）
+
+- **新提交成功 2 站**（AI Toolz Dir API + TheNextAI 表单）, Wired Business 确认已注册（上午提交, 审核队列中）→ 外链累计 3/20 已提交/注册, 0 收录待验证
+- 阻塞: LaunchBoosts BLOCKED_BY_LOGIN（新）; Startuplist BLOCKED_CONNECTION x3; Findly/ToolPilot/Dofollow 待补
+- 回链: AI Toolz Dir + Wired Business footer nofollow 已上线并核验（8/16 push #2）

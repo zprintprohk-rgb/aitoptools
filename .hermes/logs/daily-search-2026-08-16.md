@@ -67,3 +67,8 @@
 
 - AI Toolz Dir: SUBMITTED ✅（HTTP 200 Submission received successfully, footer 回链核验上线后重提成功）— 外链 0/20 → 1/20
 - 其余站点浏览器提交待补（Wired Business 回链已上线）
+
+## T4 外链最终（19:4x）
+
+- SUBMITTED/REGISTERED 3 站: AI Toolz Dir（API 200）+ TheNextAI（表单, 24-48h 审核）+ Wired Business（已注册, badge 验证中）— 外链 0/20 → 3/20 已提交
+- BLOCKED: LaunchBoosts（BLOCKED_BY_LOGIN, 需注册）; Startuplist（BLOCKED_CONNECTION x3）; Findly/ToolPilot/Dofollow 浏览器提交待补（明日/后续 cron）
