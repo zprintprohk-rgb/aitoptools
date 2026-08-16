@@ -1,22 +1,22 @@
 {
   "schema": 1,
   "doc": "sitemap submission state for gsc/indexnow cron. last_submitted_* stays null until first successful submission.",
-  "last_submitted_mtime": "2026-08-13T21:38:55.892Z",
-  "last_submitted_hash": "58E31EB9B93538D4F919B0138BDA395EA140EEA4125312BAB156808D04DF613C",
+  "last_submitted_mtime": "2026-08-16T11:27:34.795Z",
+  "last_submitted_hash": "1D1A141E1DC4BCB159BAC363765CBA0D74BA489D6BDF0DB885D375421444B260",
   "last_seen": {
     "public/sitemap.xml": {
-      "mtime": "2026-08-13T21:39:12.274Z",
-      "bytes": 42305,
-      "sha256": "58E31EB9B93538D4F919B0138BDA395EA140EEA4125312BAB156808D04DF613C"
+      "mtime": "2026-08-16T00:24:02.468Z",
+      "bytes": 42583,
+      "sha256": "1D1A141E1DC4BCB159BAC363765CBA0D74BA489D6BDF0DB885D375421444B260"
     }
   },
-  "last_run": "2026-08-15T12:44:14.000Z",
-  "last_run_status": "W3-0831 8/31 IndexNow 全推: 20:29 首跑(超时前) FULL-PUSH 342 URL status 200 hash 58E31E; sitemap 核验 342/342 200 bad=0; 无新增 URL; C2b 8/15 行已记; state 同步完成",
+  "last_run": "2026-08-16T11:27:34.795Z",
+  "last_run_status": "INCREMENTAL-0816 (daily-search 19:2x): 3 URL (resources + kittl-halloween + copy-ai-review refresh) all 200; sitemap 344; C2b 8/16 row recorded",
   "indexnow_submitted": true,
   "gsc_submitted": false,
   "indexnow_first_full_push": "2026-08-06",
-  "indexnow_urls_pushed": 342,
-  "indexnow_status_200": 342,
+  "indexnow_urls_pushed": 344,
+  "indexnow_status_200": 344,
   "indexnow_key_file": ".hermes/secrets/indexnow-key.txt",
   "last_check_hash_match": true
 }
