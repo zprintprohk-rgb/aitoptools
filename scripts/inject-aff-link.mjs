@@ -96,7 +96,11 @@ function injectHtml(html) {
     // 注入 data-*
     newAttrs += ` data-merchant="${m}" data-link-id="${linkId}" data-target="product"`;
     // href 替换 (注入 UTM)
-    const newHref = injectUtm(finalHref, m, linkId);
+    // 2026-08-17 halloween 集群: 已带 UTM 的 sponsored 链接 (如
+    // ?utm_source=aitoptools&utm_medium=blog&utm_campaign=halloween2026) 不再追加,
+    // 避免双重 utm_ 参数; aff-link 标记与 data-* 照常注入。
+    const hasUtm = /[?&]utm_/.test(finalHref);
+    const newHref = hasUtm ? finalHref : injectUtm(finalHref, m, linkId);
     newAttrs = newAttrs.replace(/href=["'][^"']+["']/, `href="${newHref}"`);
 
     return `<a${newAttrs}>`;

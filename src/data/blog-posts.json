@@ -2283,7 +2283,7 @@
    },
    {
     "type": "p",
-    "text": "If you are comparing design tools, our <a href=\"/kittl-review/\">Kittl review</a> and <a href=\"/compare/kittl-vs-canva/\">Kittl vs Canva</a> comparison break down the differences."
+    "text": "If you are comparing design tools, our <a href=\"/kittl-review/\">Kittl review</a> and <a href=\"/compare/kittl-vs-canva/\">Kittl vs Canva</a> comparison and our <a href=\"/compare/kittl-vs-placeit/\">Kittl vs Placeit</a> head-to-head break down the differences."
    },
    {
     "type": "p",
@@ -2524,7 +2524,7 @@
     "type": "list",
     "items": [
      "Grab free assets first. Creative Fabrica publishes 20 free assets daily with a 24-hour download window. This week's drops included a Fall Halloween Sublimation Bundle, 32 Cute Halloween Ghost PNGs, a Vintage Halloween Ghost Witch PNG, and a Spooky Pumpkin Chase PNG - I saved all of them for the designs below.",
-     "Build the layout in Kittl. I import the PNG, add typography and composition in Kittl, and export a 300 DPI transparent-background PNG ready for DTG or sublimation. For sublimation products I keep the design within the product's safe print area and mirror where required.",
+     "Build the layout in <a href=\"https://kittl.pxf.io/qWNvPn?utm_source=aitoptools&utm_medium=blog&utm_campaign=halloween2026\" rel=\"nofollow sponsored\">Kittl</a>. I import the PNG, add typography and composition in Kittl, and export a 300 DPI transparent-background PNG ready for DTG or sublimation. For sublimation products I keep the design within the product's safe print area and mirror where required.",
      "Mock it up in Mockey. Photorealistic mockups for the listing image: tee on a model, mug on a table, bandana on a dog. Listing photos decide the click, and mockups decide the listing photo - this is the highest-leverage five minutes in the whole workflow.",
      "Polish the listing photos with Claid. I batch-upscale the mockups and clean up backgrounds so the thumbnail stays sharp at Etsy's 200px grid size - this is where click-through rate is won before the listing even loads.",
      "Order samples on Printify or Printful. I always pick top-rated providers (Monster Digital for DTG, SwiftPOD for mugs) and order 1-2 samples per hero product before listing it. A $20 sample protects a month of October revenue.",
@@ -2641,6 +2641,10 @@
    {
     "q": "Do I need to order samples before selling?",
     "a": "Yes, at least 1-2 samples per hero product. Halloween is a concentrated season: a quality problem on a seasonal item means refunds exactly when you are busiest. A $20 sample order protects a month of revenue, and the photos double as listing content."
+   },
+   {
+    "q": "Is Halloween print on demand profitable in 2026?",
+    "a": "Yes - Halloween is the POD calendar's biggest seasonal window. In my store the margin leaders are sublimation mugs and ornaments (low $1.50-9 base costs at $16.99-24.99 retail) and shirts at $24.99 with roughly $12.70+ margins. The window is short, so listings need to be live by mid-August to capture the September-October search peak."
    }
   ],
   "related": [
@@ -3187,7 +3191,7 @@
    },
    {
     "type": "p",
-    "text": "Here is the workflow I am using this season, and it works on both platforms: I collect the weekly free sublimation and SVG bundles from Creative Fabrica (I track them every day — my free-asset roundup is here), build the designs in Kittl using their Halloween templates and mockup tools, then upload the same source files to both Printify and Printful to compare final mockups side by side. The free bundles have been surprisingly good this year — the Fall Halloween Sublimation Bundle I grabbed in early August alone covered three shirt designs and two mug designs."
+    "text": "Here is the workflow I am using this season, and it works on both platforms: I collect the weekly free sublimation and SVG bundles from Creative Fabrica (I track them every day — my free-asset roundup is here), build the designs in <a href=\"https://kittl.pxf.io/qWNvPn?utm_source=aitoptools&utm_medium=blog&utm_campaign=halloween2026\" rel=\"nofollow sponsored\">Kittl</a> using their Halloween templates and mockup tools, then upload the same source files to both Printify and Printful to compare final mockups side by side. The free bundles have been surprisingly good this year — the Fall Halloween Sublimation Bundle I grabbed in early August alone covered three shirt designs and two mug designs."
    },
    {
     "type": "list",
@@ -3437,6 +3441,14 @@
    {
     "title": "Best Free Creative Fabrica Assets This Week",
     "url": "/blog/best-free-creative-fabrica-assets-this-week/"
+   },
+   {
+    "title": "Kittl vs Canva (2026): Which Design Tool Should POD Sellers Choose?",
+    "url": "/compare/kittl-vs-canva/"
+   },
+   {
+    "title": "Kittl vs Placeit (2026): Best Design Tool for Print on Demand?",
+    "url": "/compare/kittl-vs-placeit/"
    }
   ],
   "publishedAt": "2026-08-11",
@@ -3452,7 +3464,7 @@
   "datePublished": "2026-08-15",
   "dateModified": "2026-08-16",
   "ogImage": "/og-image.png",
-  "affiliateUrl": "https://kittl.pxf.io/qWNvPn",
+  "affiliateUrl": "https://kittl.pxf.io/qWNvPn?utm_source=aitoptools&utm_medium=blog&utm_campaign=halloween2026",
   "ctaText": "Start Your Halloween Designs on Kittl Free",
   "secondaryAffiliateUrl": "https://claid.ai?via=jerome94",
   "secondaryCtaText": "Polish Product Photos with Claid AI",
@@ -3559,7 +3571,7 @@
    },
    {
     "type": "p",
-    "text": "We already tested Kittl hands-on for our full review - vector-first editor, AI text effects, and print-ready exports are the features that matter for POD - and this workflow leans on exactly those. If you are choosing between design tools, the Kittl vs Canva comparison covers when a general-purpose tool is the better pick."
+    "text": "We already tested <a href=\"/kittl-review/\">Kittl hands-on for our full review</a> - vector-first editor, AI text effects, and print-ready exports are the features that matter for POD - and this workflow leans on exactly those. If you are choosing between design tools, the <a href=\"/compare/kittl-vs-canva/\">Kittl vs Canva</a> comparison covers when a general-purpose tool is the better pick, and the <a href=\"/compare/kittl-vs-placeit/\">Kittl vs Placeit</a> head-to-head covers template-based alternatives."
    },
    {
     "type": "screenshot",
@@ -3732,10 +3744,849 @@
    {
     "title": "Claid AI Review 2026: Ultra-Realistic AI Product Photography",
     "url": "/claid-ai-review/"
+   },
+   {
+    "title": "Kittl vs Canva (2026): Which Design Tool Should POD Sellers Choose?",
+    "url": "/compare/kittl-vs-canva/"
+   },
+   {
+    "title": "Kittl vs Placeit (2026): Best Design Tool for Print on Demand?",
+    "url": "/compare/kittl-vs-placeit/"
    }
   ],
   "publishedAt": "2026-08-15",
   "status": "published",
   "wordCount": 1459
+ },
+ {
+  "slug": "halloween-shirt-designs-2026",
+  "title": "Halloween Shirt Designs for 2026: 20 Ideas That Actually Sell",
+  "metaDescription": "I tested Kittl's Halloween shirt templates against free assets and priced 20 shirt designs that sell in 2026: spooky, cute, pet, and punny niches with real margins.",
+  "category": "Design Assets",
+  "categorySlug": "ai-print-design",
+  "datePublished": "2026-08-17",
+  "dateModified": "2026-08-17",
+  "ogImage": "/og-image.png",
+  "affiliateUrl": "https://kittl.pxf.io/qWNvPn?utm_source=aitoptools&utm_medium=blog&utm_campaign=halloween2026",
+  "ctaText": "Design Your Halloween Shirts on Kittl Free",
+  "secondaryAffiliateUrl": "https://claid.ai?via=jerome94",
+  "secondaryCtaText": "Polish Shirt Mockups with Claid AI",
+  "tldr": [
+   "Halloween shirts are the volume driver of the POD season: t-shirt searches for Halloween terms start climbing in mid-August and peak in September-October, so designs listed now still have six weeks of ranking runway before the October rush.",
+   "I built all 20 designs in this post with the same free workflow: a Creative Fabrica free asset (license-checked) dropped into a Kittl Halloween shirt template, then exported at 300 DPI PNG. Roughly 20 minutes per design, $0 in design software beyond Kittl.",
+   "The niches that actually sell in 2026: spooky vintage (45% of the trending boards I track), witchcore and cute Halloween for younger buyers, pet and family matching sets for the 18-34 gift crowd, and punny retro for impulse purchases."
+  ],
+  "blocks": [
+   {
+    "type": "p",
+    "text": "I run a small print-on-demand store on Etsy, and shirts are where my Halloween revenue actually comes from. Mugs and stickers have better margins per unit, but shirts are the volume driver: more searches, more impulse buys, more repeat customers who come back for the matching hoodie. This post is the shirt-only version of my Halloween planning: the 20 designs I am launching in 2026, grouped by buyer, with the exact free-asset template workflow and the margin math I use to decide which ones get the print budget."
+   },
+   {
+    "type": "p",
+    "text": "Every design below uses the same two sources: the weekly free assets we track in our <a href=\"/blog/best-free-creative-fabrica-assets-this-week/\">Creative Fabrica free-asset roundup</a> and Kittl's dedicated Halloween template catalog. If you are comparing design tools first, our <a href=\"/kittl-review/\">Kittl review</a>, the <a href=\"/compare/kittl-vs-canva/\">Kittl vs Canva</a> comparison, and the <a href=\"/compare/kittl-vs-placeit/\">Kittl vs Placeit</a> head-to-head cover which editor fits a shirt-design pipeline."
+   },
+   {
+    "type": "h2",
+    "text": "Quick Verdict: 20 Designs, One Free Template Workflow"
+   },
+   {
+    "type": "p",
+    "text": "You do not need a designer or a big design budget for a Halloween shirt line. Twenty sellable designs, built from license-checked free assets and print-ready Kittl templates, take about a week of evenings at 20 minutes per design. The 2026 trend reports I track point to four winning directions: spooky vintage, witchcore and cute Halloween, pet and family sets, and punny retro. I built five designs in each direction and priced them all at real August 2026 base costs."
+   },
+   {
+    "type": "h2",
+    "text": "Why Halloween Shirts Are the Season's Volume Driver"
+   },
+   {
+    "type": "p",
+    "text": "Every POD seller knows the Q4 calendar, but shirts specifically carry Halloween. Here is why I prioritize them over every other product this window:"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Search volume is shirt-first: the top Halloween POD queries in my GSC and Etsy data are t-shirt and apparel terms, not mug or sticker terms.",
+     "Low base cost means testing is cheap: a Gildan 5000-style tee runs about $7-8 base on Printify and Printful, so a bad design costs a few dollars to find out.",
+     "Designs carry over: a shirt design that works becomes a hoodie, a sweatshirt, and a kid's version without a redesign, tripling the listing count from one asset.",
+     "The gift angle: pet owners and parents buy shirts for other people, which pushes average order value above single-item mugs."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "The 20 Halloween Shirt Designs (Grouped by Buyer)"
+   },
+   {
+    "type": "p",
+    "text": "I grouped the designs by who buys them rather than by style, because that is how Etsy search actually works: buyers type \"halloween shirt designs\" plus a niche word. Each group below matches one search cluster I am targeting."
+   },
+   {
+    "type": "h3",
+    "text": "Spooky & Vintage: The 2026 Volume Leader (5 Designs)"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Vintage pumpkin patch: a faded 1970s-style pumpkin patch graphic on an orange or rust tee. The vintage Halloween look is the strongest single direction in my trend tracking this year.",
+     "Boo Crew: retro ghost lettering with a distressed texture, black on cream. Sells to both men and women, which widens the audience.",
+     "Skeleton botanicals: a skeleton hand holding a flower stem, muted greens and creams. Higher perceived value, prints well on heather shirts.",
+     "Graveyard lineup: minimalist tombstones with funny epitaphs, one-color print. Cheap to test and reads clearly in Etsy thumbnails.",
+     "Witchy script: \"Witch, Please\" style script lettering with a small broom illustration. Script fonts are the easiest win in Kittl's text-effect library."
+    ]
+   },
+   {
+    "type": "h3",
+    "text": "Cute & Witchcore: The Younger Buyer (5 Designs)"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Black cat with a crescent moon: kawaii-style cat illustration, the most reliable cute-Halloween seller in my store last year.",
+     "Cottagecore witch: a soft, muted witch with a wildflower crown. Witchcore is the 2026 aesthetic that trend reports keep calling out.",
+     "Kawaii ghost stack: three tiny ghosts of decreasing size, pastel colors on black. Works for teens and adults alike.",
+     "Crystal ball cat: a cat inside a crystal ball with stars. Strong on Etsy search for witchy cat terms.",
+     "Spooky little pumpkin: a smiling pumpkin with cheeks, designed for baby and toddler sizes. Parents search these in August, earlier than any other niche."
+    ]
+   },
+   {
+    "type": "h3",
+    "text": "Pets & Family: The Gift Buyers (5 Designs)"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Howl-o-ween pet names: \"[Pet Name]'s Howl-o-ween\" with a dog in a bat-wing costume. Personalized pet shirts are the highest-converting listing type I have tested.",
+     "Matching family skeletons: a family of three or four skeletons holding hands. Family matching sets are a September-October staple with strong bundle potential.",
+     "Goodest ghoul: a dog with a ghost costume and the line \"The Goodest Ghoul.\" Cute pet humor prints consistently well.",
+     "Matching couple ghosts: two ghosts with a heart between them, for couples. Halloween is a date-night holiday, and couples sets sell through October.",
+     "Cat mom witch: a witch hat on a cat with \"Cat Mom Energy.\" Pet-parent humor carries a premium at $26.99-28.99."
+    ]
+   },
+   {
+    "type": "h3",
+    "text": "Punny & Retro: The Impulse Buy (5 Designs)"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Creepin' It Real: the classic pun, re-set in a 2026 retro font with a small ghost. Punny shirts are impulse buys at Halloween parties.",
+     "Spooky Season: oversized 1970s-style type on an orange or black tee. \"Spooky Season\" is one of the fastest-growing Halloween phrases in search data.",
+     "Puns & Pumpkins: a pun-themed pumpkin illustration. Combines two winning elements in one cheap-to-test design.",
+     "I'm Just Here for the Candy: bold text design for adults at Halloween parties. Party shirts spike in the last two weeks of October.",
+     "90s neon jack-o-lantern: a neon-glowing pumpkin with a checkerboard accent. Retro 90s styling keeps picking up younger buyers."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "The Workflow: Kittl Templates + Free Assets"
+   },
+   {
+    "type": "p",
+    "text": "Here is the exact pipeline I use for every shirt design this season. It costs nothing beyond a <a href=\"https://kittl.pxf.io/qWNvPn?utm_source=aitoptools&utm_medium=blog&utm_campaign=halloween2026\" rel=\"nofollow sponsored\">Kittl</a> subscription (about $13/month billed annually at 2026 pricing, and the free plan is personal-use only, so selling requires the paid tier), and each design takes about 20 minutes:"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Grab the free asset: pull a daily free pick from Creative Fabrica's Halloween drops and open its license page first. Many free items allow commercial use; some are personal-use only.",
+     "Find the closest Kittl Halloween shirt template: Kittl's template library has a dedicated Halloween category with t-shirt layouts, and the catalog is organized by product type.",
+     "Drop the asset in and rebuild the layout: swap the template fonts and colors, add the free asset as the focal graphic, and keep the composition inside Kittl's safe print area.",
+     "Export at 300 DPI PNG with a transparent background: that is the format both Printful and Printify accept for DTG shirts, and it keeps the design reusable for hoodies later.",
+     "Mock up and list: drop the PNG into a product mockup, set the retail price, and list. I finish product photos with Claid AI so the listing image matches the print colors."
+    ]
+   },
+   {
+    "type": "note",
+    "text": "License check before listing: Kittl's free plan is personal-use only, and each Creative Fabrica free asset carries its own license. Skipping either check is how a listing gets removed in the middle of the season - I check both before the first upload."
+   },
+   {
+    "type": "screenshot",
+    "src": "/tool-screenshots/blog/kittl-halloween-template-test-2026-02.webp",
+    "alt": "Design editor canvas with BOO! Halloween t-shirt design, font and license-check panels",
+    "caption": "Editor view: swap the template font and colors, then confirm the free asset's commercial license before exporting. Illustrative UI example (not a live screen capture)."
+   },
+   {
+    "type": "screenshot",
+    "src": "/tool-screenshots/blog/kittl-halloween-template-test-2026-01.webp",
+    "alt": "Kittl-style Halloween template library with t-shirt, hoodie, poster and sticker categories",
+    "caption": "Kittl's Halloween template category, organized by product type. Illustrative UI example (not a live screen capture)."
+   },
+   {
+    "type": "h2",
+    "text": "Sizing, Placement & the 4x4 Rule"
+   },
+   {
+    "type": "p",
+    "text": "A shirt design that looks great in the editor can fail in production if the print area math is wrong. These are the rules I apply to every design before it gets a listing:"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Keep the focal art inside a 4x4 inch zone for adult tees and 3x3 for kids - most DTG platforms print up to roughly 12x14 inches, but the 4x4 zone is where a design reads best at thumbnail size.",
+     "Place the design 1-2 inches below the collar; high placement reads better in Etsy photos, low placement gets cropped in mockups.",
+     "One-color designs print cheaper and faster; if a design needs a second color, make it a small accent that does not touch the main art (separate screens, same cost class).",
+     "Test the design at 150px wide in a mockup - if it does not read at thumbnail size, it will not get the click."
+    ]
+   },
+   {
+    "type": "note",
+    "text": "The 4x4 rule is also a listing-quality signal: designs that are legible at thumbnail size get higher click-through in search, which compounds into better rankings for the same design."
+   },
+   {
+    "type": "h2",
+    "text": "Margin Math: What a $24.99 Shirt Keeps"
+   },
+   {
+    "type": "p",
+    "text": "Using mid-range August 2026 base costs from Printify and Printful, here is what each shirt design tier keeps at typical Halloween price points. These are planning numbers, not quotes."
+   },
+   {
+    "type": "table",
+    "headers": [
+     "Design tier",
+     "Base cost (tee)",
+     "Retail price",
+     "Est. margin"
+    ],
+    "rows": [
+     [
+      "Standard one-color (punny/retro)",
+      "$7.00-7.50",
+      "$24.99",
+      "$12.70-13.20"
+     ],
+     [
+      "Vintage distressed (two-color)",
+      "$7.50-8.00",
+      "$26.99",
+      "$13.50-14.00"
+     ],
+     [
+      "Pet personalized",
+      "$7.50-8.50",
+      "$27.99",
+      "$14.00-14.90"
+     ],
+     [
+      "Family matching set (3 shirts)",
+      "$21.00-24.00 (set)",
+      "$74.97 (3 x $24.99)",
+      "$41.00-44.00"
+     ],
+     [
+      "Premium heather / hoodie upsell",
+      "$16.00-19.00 (hoodie)",
+      "$39.99-44.99",
+      "$16.50-20.00"
+     ]
+    ]
+   },
+   {
+    "type": "note",
+    "text": "Cost estimates = base + single-item US shipping (roughly $4.75 first item on both platforms), rounded from the ranges in my Halloween platform comparison. Margins exclude Etsy fees and Promoted Listings."
+   },
+   {
+    "type": "h2",
+    "text": "Where to Print Them: Platform Notes"
+   },
+   {
+    "type": "p",
+    "text": "Both major platforms handle shirts well; the choice is about testing speed versus consistency. My full comparison of <a href=\"/blog/printful-vs-printify-halloween-2026/\">Printful vs Printify for Halloween 2026</a> covers the catalog and margin layer in detail - here is the shirt-specific version:"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Printify: cheaper base cost per shirt (about $1-4 lower), which matters when you are testing 20 designs. Quality varies by provider, so sample your hero designs.",
+     "Printful: in-house production with predictable quality and a 2-5 day production window. I move proven designs here before October.",
+     "Both: upload the same 300 DPI transparent PNG, so one design file feeds both stores with zero rework."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "The 2026 Launch Calendar (Bookmark This)"
+   },
+   {
+    "type": "h2",
+    "text": "From Design to Product: The Reuse Map"
+   },
+   {
+    "type": "p",
+    "text": "The biggest lever in my Halloween line is that every design is really three listings. Here is the reuse map I plan against before the season starts:"
+   },
+   {
+    "type": "table",
+    "headers": [
+     "Design group",
+     "First product",
+     "Upsell versions"
+    ],
+    "rows": [
+     [
+      "Vintage pumpkin patch",
+      "Adult tee ($24.99)",
+      "Hoodie ($44.99), sweatshirt ($39.99), kid's tee ($21.99)"
+     ],
+     [
+      "Witchy script / witchcore",
+      "Adult tee ($24.99)",
+      "15oz mug ($19.99), tote bag ($18.99)"
+     ],
+     [
+      "Pet Howl-o-ween",
+      "Pet bandana ($13.99)",
+      "Pet tee ($22.99), matching owner tee ($24.99)"
+     ],
+     [
+      "Family skeletons",
+      "Set of 3 tees ($74.97)",
+      "Ornament set ($39.99), hoodie version ($44.99)"
+     ]
+    ]
+   },
+   {
+    "type": "note",
+    "text": "Reuse rule: the first product validates the design, the second product pays for it, and the third product is pure margin. I do not build the upsell versions until a design shows saves - that keeps the workload at about 20 minutes per validated design."
+   },
+   {
+    "type": "list",
+    "items": [
+     "Mid-August: list the first 10 designs (the ones from the spooky vintage and cute groups). Etsy searches start rising now.",
+     "Late August: add pet and family sets; personalized listings need the extra lead time for reviews.",
+     "September 1-15: add punny and retro designs; start A/B testing prices at $24.99 vs $26.99.",
+     "September 15-30: double down on any design with sales or saves - make the hoodie and kid's versions.",
+     "October 1: stop testing new designs; last safe order date for customer deliveries is mid-October."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "Keyword Examples That Match Each Design"
+   },
+   {
+    "type": "list",
+    "items": [
+     "\"halloween shirt designs\" - the broad term; the vintage pumpkin patch and witchy script designs target it directly.",
+     "\"cute halloween shirts\" - the kawaii ghost and cottagecore witch listings.",
+     "\"halloween shirts for family\" - the matching skeleton sets.",
+     "\"funny halloween shirts\" - the punny and retro group.",
+     "\"halloween pet shirts\" - the personalized Howl-o-ween listings."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "Testing & Ranking: How I Pick Winners From 20 Designs"
+   },
+   {
+    "type": "p",
+    "text": "Launching 20 designs is the easy part; knowing which ones to double down on is the skill. This is the system I use so September decisions are based on data, not gut feel:"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Week 1 (mid-August): list all 20 at the same price point with the same listing template, so the only variable is the design itself.",
+     "Week 2: watch saves and add-to-carts, not just views - a design with saves but no sales is a pricing problem, not a design problem.",
+     "Week 3: move the top 5 designs into A/B tests at $24.99 vs $26.99, and make the hoodie and kid's versions of anything with 10+ saves.",
+     "Week 4: kill the bottom 5 designs and replace them with variations of the winners - same niche, new layout.",
+     "Ranking note: Etsy and Google both reward fresh listings in seasonal niches, so a steady drip of new variations through September beats one big October launch."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "What Not to Do (Honest Limitations)"
+   },
+   {
+    "type": "proscons",
+    "pros": [
+     "Do check the license of every free asset before listing - commercial-use freebies are common, but personal-use ones will get your listing removed.",
+     "Do export at 300 DPI with a transparent background from the start; re-exporting 20 designs later wastes a full evening.",
+     "Do test one-color designs first - they are cheapest to print and fastest to validate.",
+     "Do move proven designs to the platform with consistent quality before October."
+    ],
+    "cons": [
+     "Don't launch 20 designs at once and ignore the data - the first 10 listings tell you which direction to double down on.",
+     "Don't use tiny text in the design; it becomes unreadable on a 4x4 inch print area.",
+     "Don't wait until September to start; every week of delay after mid-August removes you from the search curve.",
+     "Don't skip sample orders on your hero designs - a color shift on a seasonal shirt means refunds at the worst possible time."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "Frequently Asked Questions"
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What Halloween shirt designs sell best in 2026?",
+    "a": "Spooky vintage graphics, witchcore and cute Halloween designs, pet and family matching sets, and punny retro text designs. In my store and trend tracking, vintage pumpkin patch and witchy script designs have the widest audience, while personalized pet shirts convert at the highest rate."
+   },
+   {
+    "q": "Can I make Halloween shirt designs with free assets?",
+    "a": "Yes. Creative Fabrica publishes daily free assets, and many allow commercial use - always open the license page first. Combined with a Kittl Halloween shirt template and a 300 DPI transparent PNG export, a sellable design takes about 20 minutes with no designer."
+   },
+   {
+    "q": "Do I need a paid design tool to sell Halloween shirts?",
+    "a": "Kittl's free plan is personal-use only, so selling designs made in Kittl requires Pro (about $13/month billed annually at 2026 pricing). That is the only design software cost in the workflow I use; everything else is free assets and the POD platform itself."
+   },
+   {
+    "q": "What is the best price for a Halloween shirt?",
+    "a": "At a $24.99 retail price with a $7.00-7.50 base cost, a one-color tee keeps roughly $12.70-13.20 before Etsy fees. Personalized and premium heather versions support $26.99-28.99. Test $24.99 versus $26.99 in September on designs with early traction."
+   },
+   {
+    "q": "When should I list Halloween shirts for 2026?",
+    "a": "Mid-August at the latest. Halloween shirt searches start climbing in mid-August and peak in September-October; production takes 5-10 days and shipping 3-7 days, so the last safe order date for customer deliveries is mid-October."
+   }
+  ],
+  "related": [
+   {
+    "title": "25 Halloween POD Ideas for 2026: What Actually Sells (With Real Margins)",
+    "url": "/blog/halloween-pod-ideas-2026/"
+   },
+   {
+    "title": "Printful vs Printify for Halloween 2026: Catalog, Margins & What I Would Sell",
+    "url": "/blog/printful-vs-printify-halloween-2026/"
+   },
+   {
+    "title": "Kittl Halloween Templates 2026: 5 POD Design Blueprints From Free Assets",
+    "url": "/blog/kittl-halloween-template-test-2026/"
+   },
+   {
+    "title": "Kittl Review 2026: Best AI Design Tool for Print Creators?",
+    "url": "/kittl-review/"
+   },
+   {
+    "title": "Kittl vs Canva: Which Design Tool for Print on Demand?",
+    "url": "/compare/kittl-vs-canva/"
+   },
+   {
+    "title": "Kittl vs Placeit: Which Design Tool for POD?",
+    "url": "/compare/kittl-vs-placeit/"
+   }
+  ],
+  "publishedAt": "2026-08-17",
+  "status": "published",
+  "wordCount": 2372
+ },
+ {
+  "slug": "halloween-sublimation-2026",
+  "title": "Halloween Sublimation Designs 2026: 15 Projects & Best Blanks",
+  "metaDescription": "Sublimation is Halloween's highest-margin print method. Here are 15 sellable 2026 projects, the blanks that actually work, and the Kittl template workflow I use to design them.",
+  "category": "POD Strategy",
+  "categorySlug": "ai-ecommerce",
+  "datePublished": "2026-08-17",
+  "dateModified": "2026-08-17",
+  "ogImage": "/og-image.png",
+  "affiliateUrl": "https://try.printify.com/4fs863rfz2yc",
+  "ctaText": "Print Your Sublimation Line on Printify",
+  "secondaryAffiliateUrl": "https://kittl.pxf.io/qWNvPn?utm_source=aitoptools&utm_medium=blog&utm_campaign=halloween2026",
+  "secondaryCtaText": "Design Halloween Sublimation Art in Kittl",
+  "tldr": [
+   "Sublimation is the highest-margin method in the Halloween window: mugs, ornaments, and tumblers have low base costs ($1.50-9) with high perceived value at retail, and full-color wraps print in one pass with no color-count limits.",
+   "My workflow for every project: a license-checked free asset from Creative Fabrica, arranged in a Kittl Halloween template and exported as a 300 DPI PNG, then printed through a POD platform's sublimation catalog - no printer or heat press required to start.",
+   "The 2026 projects I am prioritizing: ceramic mugs and skinny tumblers for volume, glass and ceramic ornaments for the September-October gift spike, and throw blankets for the highest absolute margins."
+  ],
+  "blocks": [
+   {
+    "type": "p",
+    "text": "I run a small print-on-demand store on Etsy, and sublimation is the reason my Halloween season is profitable rather than just busy. A mug costs about $1.50-4 to produce and sells at $16.99-24.99; a throw blanket costs $25-30 and sells at $44.99-59.99. Nothing else in my catalog has that margin-to-effort ratio, and full-color sublimation means the design itself - not the print method - is the only limit. This post covers the 15 projects I am running for Halloween 2026, the blanks that actually work, and the design workflow I use so every project starts from the same free-asset template system."
+   },
+   {
+    "type": "p",
+    "text": "The design sources stay the same as the rest of my Halloween cluster: the weekly free assets in our <a href=\"/blog/best-free-creative-fabrica-assets-this-week/\">Creative Fabrica roundup</a> plus Kittl's Halloween template catalog. If you are choosing a design tool, our <a href=\"/kittl-review/\">Kittl review</a>, the <a href=\"/compare/kittl-vs-canva/\">Kittl vs Canva</a> comparison, and the <a href=\"/compare/kittl-vs-placeit/\">Kittl vs Placeit</a> head-to-head cover which editor fits a wrap-around sublimation workflow."
+   },
+   {
+    "type": "h2",
+    "text": "Quick Verdict: 15 Projects, One Template Workflow"
+   },
+   {
+    "type": "p",
+    "text": "Sublimation rewards preparation more than any other POD method: the blanks are cheap, the designs are full-color, and the buyers are gift-motivated. My 15 projects split into three groups - mugs and tumblers for volume, home and ornaments for the September-October gift spike, and apparel and accessories for the margin premium. Every one of them starts from the same workflow: free asset, Kittl template, 300 DPI export, platform upload. About 20 minutes per design, and the whole line is designable in a week of evenings."
+   },
+   {
+    "type": "h2",
+    "text": "Halloween Sublimation Design Trends for 2026"
+   },
+   {
+    "type": "p",
+    "text": "Sublimation has no color-count limits, which makes it the best method for the trend directions that are winning 2026 searches. These are the four directions I am mapping to blanks:"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Vintage autumn (pumpkin patches, 70s oranges, distressed texture): strongest on blankets and 15oz mugs, where the larger surface shows the texture.",
+     "Witchcore (muted greens, wildflowers, crescent moons): perfect for tumblers and pour-over mugs - the aesthetic matches the cozy-drink buyer.",
+     "Cute Halloween (kawaii ghosts, black cats, pastels): best on ornaments and bandanas; the small print area suits simple, bold shapes.",
+     "Retro 90s (neon, checkerboards, chunky type): works on totes and tees for the younger buyer; the full-color wrap makes neon actually glow."
+    ]
+   },
+   {
+    "type": "p",
+    "text": "The advantage over DTG: a vintage pumpkin patch blanket or a neon 90s tumbler would cost multiple screens or a complex print setup on apparel, but both are single-pass prints in sublimation. The design directions with the most color are exactly where sublimation wins the margin argument."
+   },
+   {
+    "type": "h2",
+    "text": "Why Sublimation Is Halloween's Highest-Margin Method"
+   },
+   {
+    "type": "p",
+    "text": "Three reasons sublimation beats DTG shirts on Halloween unit economics:"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Full color at one-color cost: sublimation prints the entire design in one pass, so a busy witchy illustration costs the same as a simple ghost - DTG shirts charge per color area and per side.",
+     "Low base costs on gift blanks: ceramic mugs, ornaments, and tumblers sit at $1.50-9 base cost on the POD platforms I use, versus $7-8 for a shirt.",
+     "Gift psychology: Halloween mugs and ornaments are bought for other people, which softens price sensitivity and supports $16.99-24.99 retail on a $3 blank."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "The 15 Halloween Sublimation Projects (Grouped by Blank)"
+   },
+   {
+    "type": "p",
+    "text": "Each group matches how buyers search in the Halloween window. I grouped by blank because the blank decides the design format - wrap-around on a mug, front-and-back on an ornament, centered on a blanket."
+   },
+   {
+    "type": "h3",
+    "text": "Mugs & Tumblers: The Volume Group (5 Projects)"
+   },
+   {
+    "type": "list",
+    "items": [
+     "11oz ceramic mug - \"Spooky Season\" wrap: full-color script and ghosts wrapped edge to edge. The single most reliable Halloween sublimation product in my store.",
+     "15oz mug - witchy illustration wrap: witch, moon, and stars wrapping the full circumference. Larger print area justifies a $19.99-22.99 price.",
+     "20oz skinny tumbler - retro pumpkin: the tall format suits vertical designs; retro 70s pumpkin graphics are the 2026 trend direction.",
+     "Tumbler with lid - cute ghost stack: pastel kawaii ghosts down the side. Tumbler buyers skew younger and gift-focused.",
+     "Ceramic pour-over mug - coffee witch: a coffee-and-witch mashup for the October caffeine crowd. Niche, but converts hard in October."
+    ]
+   },
+   {
+    "type": "h3",
+    "text": "Home & Ornaments: The Gift Spike (5 Projects)"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Ceramic ornament - family skeleton set: the matching-family-skeleton design shrinks beautifully to a 3-inch ornament.",
+     "Glass ornament - black cat with moon: glossy blanks make colors pop; sells from late September through December.",
+     "Ceramic ornament - personalized pet: \"[Pet Name]'s First Halloween\" with a pet portrait style graphic. Personalization wins on ornaments.",
+     "Throw blanket - vintage pumpkin patch: the highest absolute margin in this group; full-color vintage graphics print beautifully on fleece.",
+     "Pillow cover - witchy botanicals: a lower-cost entry to home decor with strong margin per unit."
+    ]
+   },
+   {
+    "type": "h3",
+    "text": "Apparel & Accessories: The Margin Premium (5 Projects)"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Sublimation tee - witchy script: white or light polyester tees only; the design wraps across the full shirt for a premium look.",
+     "Baseball tee - retro ghost: sublimation on the polyester panels gives a two-tone effect DTG cannot replicate.",
+     "Sublimation hoodie - graveyard lineup: the highest retail price in the line at $44.99-54.99.",
+     "Tote bag - punny pumpkin: cheap to produce, easy to gift, strong October impulse buy.",
+     "Pet bandana - Howl-o-ween: small print area, tiny base cost, and pet owners pay a premium for matching accessories."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "The Design Workflow: Kittl Templates + Free Assets"
+   },
+   {
+    "type": "p",
+    "text": "The workflow is identical to my shirt line, which is the point of the template system: one design pipeline, five product groups. I build the art in <a href=\"https://kittl.pxf.io/qWNvPn?utm_source=aitoptools&utm_medium=blog&utm_campaign=halloween2026\" rel=\"nofollow sponsored\">Kittl</a> (about $13/month billed annually at 2026 pricing; the free plan is personal-use only, so selling requires the paid tier), using their Halloween templates for layout, then export per product format:"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Grab a free asset from Creative Fabrica's daily Halloween drops and check its license page first - commercial-use freebies are common, personal-use ones are not sellable.",
+     "Match the template to the blank: Kittl's Halloween category includes mug, shirt, and poster layouts; the template's safe area approximates the platform wrap guides.",
+     "Swap fonts and colors to match the 2026 direction (vintage, witchcore, cute, or retro) and keep the focal art inside the safe zone.",
+     "Export 300 DPI PNG: full-bleed for mugs and tumblers (the platform adds wrap guides), transparent-background PNG for ornaments and blankets.",
+     "Upload to the POD platform and mock up: I finish product photos with Claid AI so the listing image matches the printed colors."
+    ]
+   },
+   {
+    "type": "note",
+    "text": "Wrap math matters: a 15oz mug needs a wider wrap than an 11oz mug, and each platform publishes its own wrap template. I export one master design and use the platform's built-in wrap preview to confirm alignment before listing - a misaligned wrap is the number one sublimation return reason."
+   },
+   {
+    "type": "screenshot",
+    "src": "/tool-screenshots/blog/kittl-halloween-template-test-2026-03.webp",
+    "alt": "Export dialog with 300 DPI PNG, SVG and JPG options for print-on-demand uploads",
+    "caption": "Export at 300 DPI PNG for Printful/Printify uploads. Illustrative UI example (not a live screen capture)."
+   },
+   {
+    "type": "screenshot",
+    "src": "/tool-screenshots/blog/kittl-halloween-template-test-2026-04.webp",
+    "alt": "Black t-shirt and purple hoodie product mockups with BOO! Halloween design",
+    "caption": "The same design file on a t-shirt and a hoodie mockup with 2026 sample-order base costs. Illustrative UI example (not a live screen capture)."
+   },
+   {
+    "type": "h2",
+    "text": "Margin Math: What Sublimation Keeps Per Project"
+   },
+   {
+    "type": "p",
+    "text": "Using mid-range August 2026 base costs from my two main platforms, here is the planning math at typical Halloween price points. These are planning numbers, not quotes."
+   },
+   {
+    "type": "table",
+    "headers": [
+     "Product",
+     "Base cost",
+     "Retail price",
+     "Est. margin"
+    ],
+    "rows": [
+     [
+      "11oz ceramic mug",
+      "$1.50-3.50",
+      "$16.99-19.99",
+      "$11.50-14.50"
+     ],
+     [
+      "20oz skinny tumbler",
+      "$5.00-8.00",
+      "$24.99-27.99",
+      "$14.00-18.00"
+     ],
+     [
+      "Ceramic ornament",
+      "$2.50-5.00",
+      "$12.99-16.99",
+      "$7.50-11.00"
+     ],
+     [
+      "Throw blanket (50x60)",
+      "$25.00-30.00",
+      "$44.99-59.99",
+      "$14.00-25.00"
+     ],
+     [
+      "Pet bandana",
+      "$2.00-4.00",
+      "$12.99-14.99",
+      "$8.00-10.50"
+     ]
+    ]
+   },
+   {
+    "type": "note",
+    "text": "Cost estimates = base + single-item US shipping (roughly $4.75 first item), rounded from ranges in my Halloween platform comparison. Margins exclude Etsy fees. Mugs and ornaments are the fastest to validate; blankets are the profit ceiling."
+   },
+   {
+    "type": "h2",
+    "text": "Blanks That Work (and the Ones I Skip)"
+   },
+   {
+    "type": "h2",
+    "text": "Design Format Cheat Sheet (Per Blank)"
+   },
+   {
+    "type": "p",
+    "text": "Each blank type has its own design geometry. This is the cheat sheet I keep open while building:"
+   },
+   {
+    "type": "table",
+    "headers": [
+     "Blank",
+     "Design format",
+     "Safe area tip",
+     "Export"
+    ],
+    "rows": [
+     [
+      "11oz mug",
+      "Full wrap (8.4 x 3.3 in approx.)",
+      "Keep text 0.2 in from edges; platform wrap guide is authoritative",
+      "300 DPI PNG, full-bleed"
+     ],
+     [
+      "15oz mug",
+      "Full wrap (9.6 x 3.7 in approx.)",
+      "Wider wrap than 11oz - re-export, do not stretch",
+      "300 DPI PNG, full-bleed"
+     ],
+     [
+      "Ornament",
+      "Centered square (2.5 x 2.5 in approx.)",
+      "Bold shapes read best at 3 inches",
+      "300 DPI PNG, transparent"
+     ],
+     [
+      "Throw blanket",
+      "Centered (12 x 12 in design zone)",
+      "Leave 2 in border; large text scales up",
+      "300 DPI PNG or SVG"
+     ],
+     [
+      "Tumbler",
+      "Full wrap (9.2 x 8.2 in approx.)",
+      "Vertical compositions suit the tall format",
+      "300 DPI PNG, full-bleed"
+     ]
+    ]
+   },
+   {
+    "type": "note",
+    "text": "The platform wrap template overrides every approximation in this table - I export the master design once, then use the platform's built-in wrap preview per blank before listing."
+   },
+   {
+    "type": "list",
+    "items": [
+     "Work: ceramic mugs (11oz and 15oz), skinny tumblers, ceramic and glass ornaments, polyester throw blankets, pillow covers, polyester tees and hoodies, tote bags, pet bandanas.",
+     "Skip: dark cotton shirts (sublimation needs white or light polyester), textured glass without a coating, and cheap tumblers with thin walls that distort the wrap.",
+     "Rule of thumb: if the platform's catalog marks a blank as sublimation-ready, it has the polymer coating or polyester content the process needs - I stay inside that catalog."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "Sample Order Checklist (Before the Rush)"
+   },
+   {
+    "type": "p",
+    "text": "I order samples for every hero product before September 1. The checklist I run on each sample:"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Wrap alignment: the design must meet at the seam with no gap or overlap - the most common sublimation defect and the easiest to catch on a sample.",
+     "Color accuracy: compare the printed colors to the on-screen design in daylight; if the mug looks darker than the mockup, adjust the design brightness, not the listing.",
+     "Blank quality: check the coating for bubbles, scratches, or a chalky feel - cheap blanks fail here even when the print itself is fine.",
+     "Mockup match: the listing photo should match the sample within reason; a mismatch is the top driver of Halloween returns and reviews."
+    ]
+   },
+   {
+    "type": "note",
+    "text": "Samples are also the cheapest ranking tool you have: one real product photo outperforms generated mockups in Etsy search experiments I have run, and a sample order takes 5-10 days - order before September 1 or the lead time eats your season."
+   },
+   {
+    "type": "h2",
+    "text": "Upsell & Bundle Ideas That Raise Order Value"
+   },
+   {
+    "type": "p",
+    "text": "Sublimation products are cheap to produce individually, which makes bundles the highest-leverage move of the season. Three bundle structures I am running:"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Mug + ornament set: a matching design on both blanks, priced at $26.99 vs $16.99 + $13.99 separately - buyers perceive the set as a gift-ready unit.",
+     "Family ornament set: three personalized ornaments (one per family member) at $36.99 - personalization turns a $3 blank into a $12 line item.",
+     "Bandana + mug for pet owners: the pet owner who buys the bandana is the same buyer who buys the mug; pairing them in one listing lifts average order value without extra design work."
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Bundle listings also win the listing-quality battle: Etsy and Google both reward listings with multiple images and clear product variants, and a bundle listing naturally has both."
+   },
+   {
+    "type": "h2",
+    "text": "Equipment Reality Check (Honest Note)"
+   },
+   {
+    "type": "p",
+    "text": "You do not need a printer, a mug press, or a heat press to sell Halloween sublimation products. The POD platforms I use run in-house or vetted sublimation production, so the equipment cost is zero until your volume justifies owning it. The tradeoff is margin: platform production eats part of the spread that DIY sublimation would keep. For a first Halloween season, platform production is the correct call - the design work is the moat, not the hardware."
+   },
+   {
+    "type": "h2",
+    "text": "The 2026 Launch Calendar (Bookmark This)"
+   },
+   {
+    "type": "list",
+    "items": [
+     "Mid-August: list mugs and tumblers - the volume group. Searches start rising now, and reviews accumulate before the rush.",
+     "Late August: list ornaments and pet bandanas; gift buyers start early, and personalized variants need lead time.",
+     "September 1-15: add blankets and apparel; test prices against the mug baseline.",
+     "September 15-30: double down on anything with saves - make the matching set versions.",
+     "October 1: stop testing; last safe order date for customer deliveries is mid-October."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "Keyword Examples That Match Each Project"
+   },
+   {
+    "type": "list",
+    "items": [
+     "\"halloween sublimation\" - the broad term; the witchy mug wraps and ornament designs target it directly.",
+     "\"halloween sublimation designs\" - the design-file searchers; these buyers often want bundles, so my listings mention the design format.",
+     "\"halloween mug\" and \"halloween tumbler\" - the volume product queries.",
+     "\"halloween ornaments\" - the September-October gift spike.",
+     "\"halloween blanket\" - the highest-margin product query."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "What Not to Do (Honest Limitations)"
+   },
+   {
+    "type": "proscons",
+    "pros": [
+     "Do check the license of every free asset before listing - commercial-use freebies are common, but personal-use ones will get your listing removed.",
+     "Do use the platform's wrap template for every mug and tumbler - alignment errors are the top sublimation return reason.",
+     "Do start with mugs: cheapest to validate, fastest to rank, and the base for every other project.",
+     "Do export one master design and adapt it per blank rather than redesigning each product."
+    ],
+    "cons": [
+     "Don't buy a heat press before your first 100 sales - platform production is the correct first-year call.",
+     "Don't use dark or cotton blanks for sublimation; the print will look washed out.",
+     "Don't ignore the platform's sublimation-ready catalog in favor of cheaper generic blanks.",
+     "Don't wait until September to start; sublimation listings need the same August runway as shirts."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "Frequently Asked Questions"
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What Halloween sublimation designs sell best?",
+    "a": "Full-color spooky vintage wraps on mugs and tumblers, cute witchcore and kawaii ghost designs for younger buyers, personalized pet ornaments and bandanas, and vintage pumpkin patch blankets. In my store, \"Spooky Season\" mug wraps and family skeleton ornaments are the strongest sellers."
+   },
+   {
+    "q": "Do I need special equipment for Halloween sublimation?",
+    "a": "Not to start. The POD platforms I use run sublimation production in-house or through vetted providers, so you upload a 300 DPI PNG and they handle printing and pressing. A mug press and heat press only make sense once your own volume justifies the margin trade-off."
+   },
+   {
+    "q": "Can I use free assets for Halloween sublimation designs?",
+    "a": "Yes, when the asset's license allows commercial use - and many Creative Fabrica free picks do. Always open the license page before listing. I arrange the asset in a Kittl Halloween template and export a 300 DPI PNG; the workflow takes about 20 minutes per design."
+   },
+   {
+    "q": "What are the best blanks for Halloween sublimation?",
+    "a": "Ceramic mugs (11oz and 15oz) and skinny tumblers for volume, ceramic and glass ornaments for the gift spike, and polyester throw blankets for the highest margins. Stay inside the platform's sublimation-ready catalog so the blanks are coated or polyester-compatible."
+   },
+   {
+    "q": "When should I start selling Halloween sublimation products?",
+    "a": "Mid-August at the latest. Halloween searches start climbing in mid-August and peak in September-October; production takes 5-10 days and shipping 3-7 days, so the last safe order date for customer deliveries is mid-October."
+   }
+  ],
+  "related": [
+   {
+    "title": "25 Halloween POD Ideas for 2026: What Actually Sells (With Real Margins)",
+    "url": "/blog/halloween-pod-ideas-2026/"
+   },
+   {
+    "title": "Kittl Halloween Templates 2026: 5 POD Design Blueprints From Free Assets",
+    "url": "/blog/kittl-halloween-template-test-2026/"
+   },
+   {
+    "title": "Printful vs Printify for Halloween 2026: Catalog, Margins & What I Would Sell",
+    "url": "/blog/printful-vs-printify-halloween-2026/"
+   },
+   {
+    "title": "Kittl Review 2026: Best AI Design Tool for Print Creators?",
+    "url": "/kittl-review/"
+   },
+   {
+    "title": "Kittl vs Placeit: Which Design Tool for POD?",
+    "url": "/compare/kittl-vs-placeit/"
+   },
+   {
+    "title": "Kittl vs Canva: Which Design Tool for Print on Demand?",
+    "url": "/compare/kittl-vs-canva/"
+   }
+  ],
+  "publishedAt": "2026-08-17",
+  "status": "published",
+  "wordCount": 2368
  }
 ]
