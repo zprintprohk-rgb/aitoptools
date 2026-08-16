@@ -57,3 +57,11 @@
 ## 小结 (更新于全部完成后)
 
 - 待补: 浏览器提交 6 站结果
+
+---
+
+# 8/16 晚补充 (daily-search 19:5x 承接)
+
+- **AI Toolz Dir: SUBMITTED ✅（外链 0/20 → 1/20）** — footer 回链上线并核验后重提, POST /api/tool/submit/free → HTTP 200, 响应 「Submission received successfully.」; 待收录确认（审核周期未知, 次日检查）
+- Wired Business: footer 回链已上线, 浏览器提交待执行（autoglm）
+- Findly/ToolPilot/TheNextAI/LaunchBoosts/Dofollow: 浏览器提交待补

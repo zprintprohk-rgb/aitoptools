@@ -63,3 +63,7 @@
 5. Halloween 辐条①实测发布（8/18 上线判定前置）
 6. GEO 首读数准备（8/19, D7 CF token 未就位 → dashboard 人工导出兜底）
 7. 重建 T30 校准 cron（9/13 前）
+## T4 外链更新（19:5x）
+
+- AI Toolz Dir: SUBMITTED ✅（HTTP 200 Submission received successfully, footer 回链核验上线后重提成功）— 外链 0/20 → 1/20
+- 其余站点浏览器提交待补（Wired Business 回链已上线）
