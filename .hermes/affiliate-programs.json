@@ -101,16 +101,16 @@
    "confirm_email_sender": "support@info.printful.com",
    "confirm_email_subject": "Confirm email address",
    "confirm_link_note": "8/8 Hermes 全权指令 #1: IMAP 实拉两封 Confirm email address (7/17 15:25Z, 7/20 17:00Z, 同 token), headless GET verify 链接 -> 重定向 auth/login + \"Email confirmation request does not exist\" = 已过期。需 printful_session_cookie 登录后台 Resend verification -> 轮询新邮件(3 次/60s) -> 重试。",
-   "last_updated": "2026-08-16",
+   "last_updated": "2026-08-17",
    "approval_email_found": "2026-07-20 09:50Z affiliate@info.printful.com Your affiliate application was approved!",
    "email_verified": true,
    "tax_status": "w8ben-e-uploaded-pending-review",
    "tax_audit": {
-    "checked": "2026-08-16",
-    "method": "autoglm browser (AutoGLM 1.1.8, user Chrome 会话, tab 97687233)",
+    "checked": "2026-08-17",
+    "method": "autoglm browser (AutoGLM 1.1.8, user Chrome ??, tab 97687274)",
     "url": "https://www.printful.com/dashboard/affiliate/tax",
     "result": "pending-review",
-    "detail": "8/16 18:15 复核: 状态仍 Pending (v2 上传 8/15 02:49 后; 修正工作日口径: 8/15=周六 8/16=周日, 3 business days 窗口自 8/17 周一起算); 文件名 autoglm-browser-agent.pdf 确认 (8/15 晨 kutoolm 存疑项澄清); Lines 4/5 黄框仍显示 (静态模板提示); 无新 payout/tax 告警; 只读未做任何操作. NOOP per protocol, 下次 8/17"
+    "detail": "8/17 06:40 ??: ??? Pending (v2 ?? 8/15 02:49 ?; ?????? 1 ? 8/17 ??, 3 business days ?? 8/17-8/19 ???); ??? autoglm-browser-agent.pdf ??; Lines 4/5 ????? (??????); ?? payout/tax ??; ????????. NOOP per protocol, ?? 8/18"
    },
    "tax_upload_date": "2026-08-15",
    "tax_review_note": "signed PDF uploaded via autoglm 02:49 CST; reviewed in up to 3 business days",
@@ -269,12 +269,12 @@
   }
  ],
  "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
- "last_updated": "2026-08-16",
+ "last_updated": "2026-08-17",
  "monitoring": {
   "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
   "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
-  "next_action": "8/17: W-8BEN-E 复核 (工作日口径第 1 天) + S3 外链 badge 验证 (Wired Business 24h 窗口) + Halloween 辐条①实测发布 (Kittl 设计+截图军规) + Boost #5/#6 幂等验证; 8/18: Halloween 判定 (D6 cookie 为下单前置)",
-  "last_live_check": "2026-08-15 03:5x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 14-Aug 5 封全量核实 - 0 新审批; CF freebie 8/15 未到货",
+  "next_action": "8/18: W-8BEN-E ?? (???? 2 ?) + Halloween ???? (D6 printful_session_cookie ?????) + GEO ????? (D7 CF API token); 8/19: GEO ??? (beacon 7 ?, dashboard ??????)",
+  "last_live_check": "2026-08-17 06:5x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 16-Aug 9 ????? - 0 ???; Wired Business verify ??; CF freebie 8/17 ???",
   "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
   "network_diag_5_19": {
    "imap.gmail.com:993": "TIMEOUT 8s",
@@ -944,10 +944,94 @@
     "data_transfer_top": "BingBot 672.53kB / Googlebot 266.69kB / Applebot 241.41kB / ChatGPT-User 214.25kB / Baidu 124.01kB"
    },
    "conclusion": "GEO 正向: 24h 136 次 AI 爬虫请求 (Claude-SearchBot 20 / ChatGPT-User 12 / Googlebot 15 / BingBot 45), sitemap.xml 被爬最多 — 8/19 GEO 首读数基线强化; AI 引荐流量 =0 待 8/19 beacon 归因确认; Log Explorer 需付费不可用, Perplexity/Bytespider 0 请求待观察"
+  },
+  "tax_audit_8_17": {
+   "printful": "STILL-PENDING (browser ?? 8/17 06:40, v2 ????????? 1 ? (8/17 ??), 3 business days ?? 8/17-8/19 ???; ??? autoglm-browser-agent.pdf ??; Lines 4/5 ??=????; ????; NOOP per protocol, ?? 8/18)",
+   "impact": "LOGIN_REQUIRED (app.impact.com ? user ??; ?????, ???)"
+  },
+  "high_signal_findings_24h_8_17": {
+   "as_of": "2026-08-17 06:5x",
+   "status": "RESTORED - IMAP ???? (SINCE 16-Aug 9 ?????, SOCKS5 127.0.0.1:7892), 0 ??? / 0 ?????",
+   "new_findings": {
+    "wired_business_verify_8_17": {
+     "date": "2026-08-16 04:39:02 -0700 (8/16 19:39 CST)",
+     "from": "Wired Business <sam@wired.business>",
+     "subject": "Your Wired Business submission needs one more step",
+     "signal": "S3 ??????: footer ?? 8/16 ? push ?? (b6a7681, live ?? homepage 2 ? wired.business), ???? = ? Verify my badge; 8/17 06:41 autoglm ?? -> **????, aitoptools.net LIVE** (wired.business/done?type=live&slug=aitoptools-net); ???? 1/20 LIVE"
+    },
+    "printful_survey_8_16": {
+     "date": "2026-08-16 21:51:37 +0000",
+     "from": "survey@newsletter.printful.com",
+     "subject": "A $5 reward for your feedback",
+     "signal": "??/???? (??, ???)"
+    }
+   },
+   "noise": "LinkedIn x2 + GSC zprintpro ?? x2 (???) + Supabase ???? (?? 8/16)",
+   "p0_count_24h": 0,
+   "p0_notes": "?. 7 approved-active ?? link_deployed=true.",
+   "p1_count_24h": 4,
+   "p1_notes": "W-8BEN-E Pending (?? 8/17-8/19 ???; 8/18 ??) / Printify promo ??? (user, ??) / Synthesia ?? (user, ??) / Placeit ?? (user, ??)",
+   "p2_count_24h": 7,
+   "p2_notes": "??????; Wired Business badge ????? (LIVE); AI Toolz Dir ????? (BLOCKED_REQUIRES_BACKLINK ???? footer ?????, ???); ???: Supabase zprintpro-production ??? (?? K3)",
+   "conclusion": "0 ??? (SINCE 16-Aug 9 ?????). CF freebie 8/17 ??? (?? ~09:26-10:43 CST, ?????). Wired Business ???? -> S3 ???? LIVE. P0 = 0 ??? 10 ?."
+  },
+  "rank_sentinel_8_17": {
+   "status": "PIPELINE-OK (??????? 5 ?)",
+   "window": "2026-08-10..2026-08-16 (??, ???????? 8/9-8/15 ????)",
+   "alerts": 1,
+   "alerts_detail": "printful vs printify 76.9->82.3 (?? 5.5 ?, imps 7->3 ????, ????; 8/16 ??? +2.4) - ??, 8/22 T+14 ????; is magicdrop legit 33.6->31.1 (????, ???? 5 ??? 55.1->42.9->34.2->33.6->31.1); kittl review 63.0 ?? 4 ???; runway ml / best ai background remover / copywriting ai ??? 0 ?? (????); 16/20 query ??",
+   "note": "?? .hermes/logs/rank-sentinel-2026-08-17.md"
+  },
+  "manual_checklist_2026_08_17": {
+   "generated_by": "aitoptools daily-ops cron 2026-08-17 06:5x (IMAP ?? + autoglm ??/????)",
+   "1_tax_audit": "W-8BEN-E 8/17 ?? STILL PENDING (?????? 1 ?, ?? 8/17-8/19 ???; ??? autoglm-browser-agent.pdf; Lines 4/5 ??=????) -> NOOP, ?? 8/18",
+   "2_wired_business": "???: 8/17 06:41 autoglm ?? Verify my badge -> **???? LIVE** (wired.business/done?type=live&slug=aitoptools-net); ?? user ??",
+   "3_printify_promo": "???? user ?? (?? 8/8 ?? 9 ? 0 ??; PartnerStack ????)",
+   "4_synthesia_confirm": "?????? user ??? (8/11 ??, ? 6 ?; SINCE<90d ???)",
+   "5_placeit": "???? drafts/placeit-followup-email.md ?? B ??, user ????",
+   "_cf_freebie_8_17": "CF freebie 8/17 ??? (?? ~09:26-10:43 CST); ??? 10 ??? 36 ??? (?? ~35) ??"
+  },
+  "ai_crawler_8_17": {
+   "as_of": "2026-08-17 06:43",
+   "method": "autoglm browser 只读 CF Web Analytics + AI Crawl Control (tab 97687258)",
+   "web_analytics_24h": {
+    "visits": 7,
+    "page_views": 7,
+    "avg_load_ms": 846,
+    "cwv": "LCP 100% Good"
+   },
+   "web_analytics_7d": {
+    "visits": 33,
+    "page_views": 35,
+    "avg_load_ms": 1150,
+    "cwv": "LCP 94% Good / 6% Poor"
+   },
+   "ai_crawl_control_24h": {
+    "total_ai_crawler_requests": 160,
+    "trend": "+0.43% vs 前窗口",
+    "allowed": 119,
+    "unsuccessful": 41,
+    "by_bot": {
+     "BingBot": 23,
+     "Baidu": 22,
+     "ChatGPT-User": 20,
+     "Googlebot": 19,
+     "Claude-SearchBot": 14,
+     "Applebot": 7,
+     "Other": "+1 More 51.84KB",
+     "PerplexityBot": 0,
+     "Bytespider": 0,
+     "CCBot": 0,
+     "DuckDuckGoAssistBot": 0
+    },
+    "status_dist": "2xx 105 / 4xx 41 / 3xx 14",
+    "note": "Claude-SearchBot 峰值 8/16 13:00 (~5 请求/单点); Baidu+ChatGPT-User 全天分散; 4xx 41 需留意 (多为 sitemap/爬虫路径?)"
+   },
+   "conclusion": "GEO 正向持续: 24h 160 次 AI 爬虫请求 (BingBot 23 / Baidu 22 / ChatGPT-User 20 / Googlebot 19 / Claude-SearchBot 14), 8/19 GEO 首读数基线强化; AI 引荐流量仍待 beacon 归因"
   }
  },
  "pending_applications_aging": {
-  "as_of": "2026-08-16",
+  "as_of": "2026-08-17",
   "items": [
    {
     "name": "Placeit (re-apply post Marketplace upgrade)",
@@ -959,9 +1043,9 @@
    {
     "name": "Synthesia (Rewardful)",
     "applied": "2026-08-11",
-    "days": 5,
+    "days": 6,
     "network": "Rewardful",
-    "next_action": "user 手动点邮箱确认链接激活 (8/11 邮件, 已 5 天); 密码重置 x2 请确认是否本人操作"
+    "next_action": "user ??????????? (8/11 ??, ? 6 ?); ???? x2 ?????????"
    }
   ],
   "resolved_since_2026-07-23": [

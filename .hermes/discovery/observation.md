@@ -162,3 +162,9 @@
 - **市场信号**: Printful 官方博客发 "Gelato vs Printify" 对比 (FYUL 旗下互比, 我们 /compare/printful-vs-gelato/ + printify-vs-gelato 需保新鲜度)
 - **HN 源**: hn_fetch_v3 网络不可达 (超时) — 建议双周检查 (与 G2/YouTube 同级)
 - **连续 3 轮 0 high/medium**: 垂直赛道成熟, 雷达重心从"找新工具"转"盯竞品内容/排名变化"
+### 8/17 观察名单更新 (周一 regular 轮, v2.8)
+- **总积压**: 45 (44 旧 + Mock IT 8/14) + 0 新 = 45; **连续第 4 轮 0 high/medium**
+- **市场事件**: FYUL 完成 Riga 97,000 sq ft 设施迁移 (Q1 2026, asicentral) — 合并整合进入实体阶段; POD 市场 2026 .64B → 2034 .7B (straitsresearch)
+- **雷达重心转移确认**: 垂直赛道成熟, 从「找新工具」转「竞品内容/排名变化 + 信任验证引用源 (Trustpilot/BBB/gridinsoft)」; legit-check 产线 8/17 已消费信任源 (is-magicdrop-legit 扩写)
+- **CF freebie 源**: 正常 (Mystery Freebie Tuesday 持续); 周更帖 8/20 前后刷新
+- **HN 源**: 维持降级 (网络不可达, 同 8/14)

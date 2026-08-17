@@ -92,3 +92,16 @@
 - 推排名清单: print-price-ai-tools-2026 DONE 8/13 维持 (本窗口 12 imp @64.5, 基线 69.5 -> -5.0, T+7 8/21 与 <=30 里程碑合并读); copy ai review 8/16 B 类快修已部署 (afc0dff, title 66->56), T+7 8/23 读
 - Boost 效果: is magicdrop legit 42.4 维持 (页级 /blog/is-magicdrop-legit/ pos 19.0 = 全站首个 top-20 页); kittl review 63.0 连续 2 日改善; print price ai tool 64.5 (-5.0)
 - push 纪律 (reflog 实证): 8/12=7 / 8/13=8 超限 (存量), 8/14=2 / 8/15=4 / 8/16=1; 详见周报 Step 0b
+
+## 2026-08-17 weekly-review 更新
+- 数据源: GSC API 实时 (8/10-8/16, 406 query; data/gsc_data.json 已刷新)
+- 扫描: 展示≥10 共 406 query 全量比对专页映射 → **0 个无专页新词** (magicdrop 集群 3 词 + trustpilot 均已有页; ai print estimator 9 imp 仍 <10 维持队列)
+- Data-Driven Queue: **无新增**
+- 推排名清单: 无新候选 (Boost 25 队列维持 6/25); print-price-ai-tools-2026 行 T+7 8/21 读数 (当前 62.9, 目标 ≤30 预警)
+
+## 2026-08-17 daily-search 运行记录 (幂等复核 + 补充观察)
+- 数据源: ② data/gsc_data.json (8/17 11:35 UTC weekly-review 刷新, 窗口 8/10-8/16, 406 query); ① GSC API 亦有效 (gsc-oauth.json 存在, 2,365B), 本跑消费同源不重复拉取
+- Data-Driven Queue: 展示>=10 共 13 query, 全部已有专页 → **无新增** (与 8/17 weekly-review 幂等一致; magicdrop 簇 3 词 + trustpilot 均已有页)
+- 推排名清单: 无新候选 (与 weekly-review 一致); **观察补充: sticker mule 19 imp @ pos 37.4** (20-70 区间, 8/21 Boost 决策参考, 未登记避免与 weekly-review 冲突)
+- Boost 效果 (8/17 批次 vs 8/16 批次): **is magicdrop legit 42.4 → 29.8 (+12.6 位, 82 imp)**; magicdrop trustpilot 13 imp @ 19.1 (page-1 边缘, T2 FAQ 覆盖); print price ai tool 62.9 (8/21 T+7 读数, 目标 <=30 预警维持)
+- T2 扩写联动: is-magicdrop-legit 8/17 扩写 (Trustpilot 专章 + 3 FAQ 变体 + gear-launch 互链) 直接服务 top query 簇, 与推排名清单 #1 合并执行

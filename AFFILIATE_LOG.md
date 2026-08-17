@@ -316,6 +316,7 @@ M1 复盘 — aitoptools
 | 8/13 (D7) | 增量 4 URL (辐条②新页 + T3/T6/周更帖刷新) | **4/4** | 0 | sitemap 342 URL (未变) | daily-search 19:2x: halloween 辐条② printful-vs-printify-halloween-2026 补推 (8/11 产出后未推) + print-price-ai-tools-2026 (T6) + is-magicdrop-legit (T3 补执行) + best-free-creative-fabrica-assets-this-week (周更 8/13) 重推; 本地构建验证 11/11 页 PASS |
 | 8/15 (W3 月末全推) | 全量 342 URL (重推) | **342/342** | 0 | sitemap 342 URL (未变) | W3-0831 cron 20:29 FULL-PUSH 342 URL status 200 (sha256 58E31E); 核验 342/342 200 bad=0; 无新 URL 增量, C2b 记账 |
 | 8/16 (D10) | 增量 3 URL (新页 /resources/ + 辐条①补正 + copy-ai-review 刷新) | **3/3** | 0 | sitemap 344 URL (push 后上线) | daily-search 19:2x: resources 聚合页 (T4 外链回链) + kittl-halloween-template-test-2026 (T3 补正后) + copy-ai-review (T1 刷新页) 增量推送 3/3 200; footer 回链随 8/16 push #2 上线 |
+| 8/17 (D11) | 增量 7 URL (Boost 双页 + Halloween 5 页) | **7/7** | 0 | sitemap 346 URL (push 后上线) | daily-search 19:5x: 8/17 两脚本先推 (boost 2: midjourney-review/jasper-ai-review; halloween 5: 含新增辐条③④) 全 200; 本跑 diff 确认 0 待推 URL, state 同步 sha 8D78639B; C2b 记账 |
 | T+7 (8/14) | 增量 | __ | __ | __ | 首读数: GSC 展示 + IndexNow 计数 |
 | T+30 (9/5) | 增量 | __ | __ | __ | 路线决策点 |
 - 记录人: gsc-indexnow cron (12:40) 每次提交后填; 凭证缺失时填 "blocked_missing_credentials"
@@ -1132,5 +1133,20 @@ TBD (1 push 整合)
 - SSoT: affiliate-programs.json 更新 (tax_audit_8_16 + high_signal_findings_24h_8_16 + rank_sentinel_8_16 + manual_checklist_2026_08_16 + aging + next_action)
 - **P0 = 0 (连续第 9 天)**; P1: W-8BEN-E Pending (窗口内正常, 8/17 复核) / Printify promo 站内催 (user) / Synthesia 确认 (user) / Placeit 催办 (user); P2 暂缓清单不变 + Wired Business badge 验证 (S3 外链)
 - 下个检查点: 8/17 tax-audit 复核 (工作日口径第 1 天) + S3 外链 badge 验证 + 8/17 Halloween 辐条①实测发布
+- 跨项目提醒: Supabase zprintpro-production **已暂停** (8/15 19:09 UTC 确认邮件, 提醒 K3)
+- 无 push (监控任务; PUSH_READY 见产物)
+
+## 2026-08-17 · 每日联盟运营 (daily-ops 合并 cron 06:5x)
+- 邮件: SINCE 16-Aug 9 封全量核实 (SOCKS5 127.0.0.1:7892) — 0 新审批 / 0 新商户邮件
+- **新发现**: Wired Business needs one more step 验证提醒 (8/16 19:39 CST) — footer 回链已 8/16 push 上线 (live 实测 homepage 2 处 wired.business), 8/17 06:41 autoglm 点击 Verify my badge → **验证成功, aitoptools.net 已 LIVE 上线** (wired.business/done?type=live&slug=aitoptools-net) — S3 外链首站 LIVE
+- **tax-audit 8/17 复核** (AutoGLM 1.1.8 只读, 06:40): W-8BEN-E **仍 Pending** — 工作日口径第 1 天 (8/17 周一, 窗口 8/17-8/19 内正常); 文件名 autoglm-browser-agent.pdf 确认; Lines 4/5 黄框=静态模板 → **NOOP per protocol**, 下次复核 8/18
+- **printful-watcher SKIP**: email_verified=true (8/8 实证), status=active, 无状态异常
+- **CF freebie 8/17**: 未到货 (常规 ~09:26-10:43 CST, 下午轮可补); 素材池 10 天累计 36 万圣节 (去重 ~35) 充足
+- **排名哨兵第 5 天** (窗口 8/10-8/16, 同轮重拉 8/9-8/15): **1 ALERT** — printful vs printify 76.9→82.3 (下跌 5.5 位, imps 7→3 低量噪音, 单日波动; 8/16 曾改善 +2.4, 观察); **is magicdrop legit 31.1 = 历史最佳** (连续改善 55.1→42.9→34.2→33.6→31.1); kittl review 63.0 连续 4 日稳定; 日志 .hermes/logs/rank-sentinel-2026-08-17.md
+- **ai-crawler-monitor**: CF Web Analytics 只读采集中 (autoglm, tab 97687258)
+- 链接部署核查: 7 approved-active 全部 link_deployed=true (无变化)
+- SSoT: affiliate-programs.json 更新 (tax_audit_8_17 + high_signal_findings_24h_8_17 + rank_sentinel_8_17 + manual_checklist_2026_08_17 + aging + next_action)
+- **P0 = 0 (连续第 10 天)**; P1: W-8BEN-E Pending (窗口内正常, 8/18 复核) / Printify promo 站内催 (user) / Synthesia 确认 (user) / Placeit 催办 (user); P2 暂缓清单不变 + Wired Business 验证已闭环
+- 下个检查点: 8/18 tax-audit 复核 (工作日第 2 天) + Halloween 上线判定 (D6 cookie) + GEO 首读数前置 (D7)
 - 跨项目提醒: Supabase zprintpro-production **已暂停** (8/15 19:09 UTC 确认邮件, 提醒 K3)
 - 无 push (监控任务; PUSH_READY 见产物)
