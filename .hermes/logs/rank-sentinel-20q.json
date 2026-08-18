@@ -4,22 +4,18 @@
   "printful alternatives": {
    "impressions": 17,
    "clicks": 0,
-   "position": 75.88235294117646
+   "position": 78
   },
   "printify alternatives": {
-   "impressions": 11,
+   "impressions": 7,
    "clicks": 0,
-   "position": 80.72727272727273
+   "position": 85.42857142857143
   },
-  "canva vs kittl": {
-   "impressions": 1,
-   "clicks": 0,
-   "position": 72
-  },
+  "canva vs kittl": null,
   "kittl review": {
    "impressions": 1,
    "clicks": 0,
-   "position": 67
+   "position": 59
   },
   "kittl vs placeit": null,
   "halloween print on demand": null,
@@ -28,63 +24,47 @@
   "jasper ai review": {
    "impressions": 42,
    "clicks": 0,
-   "position": 90.5
+   "position": 91.47619047619048
   },
   "midjourney review": {
-   "impressions": 28,
+   "impressions": 14,
    "clicks": 0,
-   "position": 86.82142857142857
+   "position": 86.21428571428571
   },
   "is magicdrop legit": {
-   "impressions": 18,
+   "impressions": 82,
    "clicks": 0,
-   "position": 62.5
+   "position": 25.951219512195124
   },
   "omnisend review": {
-   "impressions": 18,
+   "impressions": 19,
    "clicks": 0,
-   "position": 84.77777777777777
+   "position": 86.15789473684211
   },
   "manychat shopify": {
    "impressions": 18,
    "clicks": 0,
-   "position": 84.05555555555556
+   "position": 82.11111111111111
   },
   "printful vs printify": {
-   "impressions": 9,
+   "impressions": 1,
    "clicks": 0,
-   "position": 76.88888888888889
+   "position": 84
   },
-  "runway ml": {
-   "impressions": 10,
-   "clicks": 0,
-   "position": 67.6
-  },
-  "best ai background remover": {
-   "impressions": 6,
-   "clicks": 0,
-   "position": 97.33333333333333
-  },
+  "runway ml": null,
+  "best ai background remover": null,
   "bluehost review 2026": {
-   "impressions": 10,
+   "impressions": 11,
    "clicks": 0,
-   "position": 66
+   "position": 68.45454545454545
   },
   "descript.com reviews": {
-   "impressions": 10,
+   "impressions": 5,
    "clicks": 0,
-   "position": 69.4
+   "position": 72.6
   },
-  "siteground review 2026": {
-   "impressions": 8,
-   "clicks": 0,
-   "position": 82.125
-  },
-  "copywriting ai": {
-   "impressions": 4,
-   "clicks": 0,
-   "position": 90.5
-  }
+  "siteground review 2026": null,
+  "copywriting ai": null
  },
  "snapshots": [
   {
@@ -732,8 +712,78 @@
     },
     "copywriting ai": null
    }
+  },
+  {
+   "date": "2026-08-19",
+   "window": "2026-08-12..2026-08-18",
+   "queries": {
+    "printful alternatives": {
+     "impressions": 17,
+     "clicks": 0,
+     "position": 78
+    },
+    "printify alternatives": {
+     "impressions": 7,
+     "clicks": 0,
+     "position": 85.42857142857143
+    },
+    "canva vs kittl": null,
+    "kittl review": {
+     "impressions": 1,
+     "clicks": 0,
+     "position": 59
+    },
+    "kittl vs placeit": null,
+    "halloween print on demand": null,
+    "halloween shirt design": null,
+    "halloween sublimation": null,
+    "jasper ai review": {
+     "impressions": 42,
+     "clicks": 0,
+     "position": 91.47619047619048
+    },
+    "midjourney review": {
+     "impressions": 14,
+     "clicks": 0,
+     "position": 86.21428571428571
+    },
+    "is magicdrop legit": {
+     "impressions": 82,
+     "clicks": 0,
+     "position": 25.951219512195124
+    },
+    "omnisend review": {
+     "impressions": 19,
+     "clicks": 0,
+     "position": 86.15789473684211
+    },
+    "manychat shopify": {
+     "impressions": 18,
+     "clicks": 0,
+     "position": 82.11111111111111
+    },
+    "printful vs printify": {
+     "impressions": 1,
+     "clicks": 0,
+     "position": 84
+    },
+    "runway ml": null,
+    "best ai background remover": null,
+    "bluehost review 2026": {
+     "impressions": 11,
+     "clicks": 0,
+     "position": 68.45454545454545
+    },
+    "descript.com reviews": {
+     "impressions": 5,
+     "clicks": 0,
+     "position": 72.6
+    },
+    "siteground review 2026": null,
+    "copywriting ai": null
+   }
   }
  ],
- "last_pull": "2026-08-17 06:4x CST",
- "last_updated": "2026-08-17"
+ "last_pull": "2026-08-19 05:5x CST",
+ "last_updated": "2026-08-19"
 }

@@ -1151,3 +1151,20 @@ TBD (1 push 整合)
 - 下个检查点: 8/18 tax-audit 复核 (工作日第 2 天) + Halloween 上线判定 (D6 cookie) + GEO 首读数前置 (D7)
 - 跨项目提醒: Supabase zprintpro-production **已暂停** (8/15 19:09 UTC 确认邮件, 提醒 K3)
 - 无 push (监控任务; PUSH_READY 见产物)
+
+## 2026-08-19 · 每日联盟运营 (daily-ops 合并 cron 05:5x)
+- **PHASE 节点**: 8/19 GEO 首读数 — PARTIAL (GSC 侧由 daily-search 8/19 02:24 完成 (372 q / 858 imp; date 2,235 imp / 2 clicks); beacon 侧 BROWSER_UNAVAILABLE 顺延; D7 CF API token 未配置)
+- 邮件: SINCE 17-Aug 10 封全量核实 (SOCKS5 127.0.0.1:7892) — 0 新审批 / 0 新商户邮件; 8/18 daily-ops 缺口由今晨 search-growth 兜底 (内容已 8/19 02:24 push)
+- **新发现 (S3 外链 #2)**: LaunchBuck (hello@launchbuck.com, 8/17 13:48 UTC) "About Print AI Tools" — 一次性邀请: 免费目录 listing + 真实 dofollow backlink (badge 验证); 提交入口 launchbuck.com/submit; 待 user 拍板提交, 上线 badge 后 PUSH_READY
+- **Wired Business LIVE 确认邮件** (8/17 06:41 CST): S3 外链第 1 站 LIVE 邮件闭环确认 (1/20 LIVE)
+- **CF freebie 8/17+8/18 解析落盘** (各 22 素材, 万圣节 +8 新): 8/17 (Halloween Witch Sublimation Bundle 头条 / Spooky Memories / Brushstroke Pumpkin Bow / Mega Fall Halloween Png Bundle) + 8/18 (Funny Halloween Quotes / Cowboy Zombie / Trending Halloween Dog / Watercolor Halloween Clipart Mega Bundle); 素材池 12 天累计 44 🎃 (去重 ~43) 充足
+- **tax-audit 8/19 复核**: BROWSER_UNAVAILABLE (autoglm "No credits left. Please recharge.") — 工作日第 3 天 (窗口 8/17-8/19 最后一天) 未复核; 上次 8/17 = Pending; 下次 8/20; **8/21 第 5 工作日仍 Pending → 升级 user 联系 support 行动卡**
+- **printful-watcher SKIP**: email_verified=true (8/8 实证), status=active, 无状态异常
+- **排名哨兵第 6 天** (窗口 8/12..8/18, 补 8/18 缺口, 基准 8/17 快照): **1 ALERT 正向 — is magicdrop legit 31.1→26.0 (改善 5.2 位, 历史最佳, 连续 6 次改善 55.1→42.9→34.2→33.6→31.1→26.0, imps 82; 修订 28.5 确认)**; kittl review 63.0→59.0 (改善 4.0); printify alternatives 81.3→85.4 (下跌 4.1 低量噪音观察); 日志 .hermes/logs/rank-sentinel-2026-08-19.md
+- **ai-crawler-monitor**: BROWSER_UNAVAILABLE (autoglm 无 credits) — CF Web Analytics 未读; GEO 首读数 beacon 侧顺延; 上次 8/17: 24h 160 AI 爬虫请求
+- 链接部署核查: 7 approved-active 全部 link_deployed=true (无变化)
+- SSoT: affiliate-programs.json 更新 (last_updated=8/19; tax_audit_8_19 / high_signal_findings_24h_8_19 / rank_sentinel_8_19 / ai_crawler_8_19 / manual_checklist_2026_08_19 / aging Synthesia D8 / next_action)
+- **P0 = 0 (连续第 11 天)**; P1 x4 (W-8BEN-E Pending 窗口最后一天 / Printify promo 站内催 / Synthesia 确认 D8 / Placeit 催办 — 均 user 待办); P2 暂缓清单不变 + LaunchBuck S3 候选 + autoglm credits 耗尽
+- 下个检查点: 8/20 tax-audit 复核 (工作日第 4 天) + CF freebie 8/19 补抓 + GEO beacon 侧重试; 8/21 W-8BEN-E 第 5 工作日判定; 8/22 Boost T+14 判定
+- 跨项目提醒: z-printpro.com GSC 索引问题 x2 + Supabase security (均提醒 K3)
+- 无 push (监控任务; PUSH_READY 无)

@@ -101,16 +101,17 @@
    "confirm_email_sender": "support@info.printful.com",
    "confirm_email_subject": "Confirm email address",
    "confirm_link_note": "8/8 Hermes 全权指令 #1: IMAP 实拉两封 Confirm email address (7/17 15:25Z, 7/20 17:00Z, 同 token), headless GET verify 链接 -> 重定向 auth/login + \"Email confirmation request does not exist\" = 已过期。需 printful_session_cookie 登录后台 Resend verification -> 轮询新邮件(3 次/60s) -> 重试。",
-   "last_updated": "2026-08-17",
+   "last_updated": "2026-08-19",
    "approval_email_found": "2026-07-20 09:50Z affiliate@info.printful.com Your affiliate application was approved!",
    "email_verified": true,
    "tax_status": "w8ben-e-uploaded-pending-review",
    "tax_audit": {
-    "checked": "2026-08-17",
+    "checked": "2026-08-17 (BROWSER_UNAVAILABLE on 8/19)",
     "method": "autoglm browser (AutoGLM 1.1.8, user Chrome ??, tab 97687274)",
     "url": "https://www.printful.com/dashboard/affiliate/tax",
     "result": "pending-review",
-    "detail": "8/17 06:40 ??: ??? Pending (v2 ?? 8/15 02:49 ?; ?????? 1 ? 8/17 ??, 3 business days ?? 8/17-8/19 ???); ??? autoglm-browser-agent.pdf ??; Lines 4/5 ????? (??????); ?? payout/tax ??; ????????. NOOP per protocol, ?? 8/18"
+    "detail": "8/17 06:40 ??: ??? Pending (v2 ?? 8/15 02:49 ?; ?????? 1 ? 8/17 ??, 3 business days ?? 8/17-8/19 ???); ??? autoglm-browser-agent.pdf ??; Lines 4/5 ????? (??????); ?? payout/tax ??; ????????. NOOP per protocol, ?? 8/18",
+    "next": "2026-08-20"
    },
    "tax_upload_date": "2026-08-15",
    "tax_review_note": "signed PDF uploaded via autoglm 02:49 CST; reviewed in up to 3 business days",
@@ -269,12 +270,12 @@
   }
  ],
  "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
- "last_updated": "2026-08-17",
+ "last_updated": "2026-08-19",
  "monitoring": {
   "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
   "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
-  "next_action": "8/18: W-8BEN-E ?? (???? 2 ?) + Halloween ???? (D6 printful_session_cookie ?????) + GEO ????? (D7 CF API token); 8/19: GEO ??? (beacon 7 ?, dashboard ??????)",
-  "last_live_check": "2026-08-17 06:5x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 16-Aug 9 ????? - 0 ???; Wired Business verify ??; CF freebie 8/17 ???",
+  "next_action": "8/20: W-8BEN-E 复核 (工作日第 4 天, autoglm 需恢复) + CF freebie 8/19 补抓 + GEO beacon 侧重试 (autoglm/API); 8/21: W-8BEN-E 第 5 工作日仍 Pending -> 升级 user 联系 support; 8/22: Boost T+14 判定",
+  "last_live_check": "2026-08-19 05:5x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 17-Aug 10 emails - 0 approvals; CF freebie 8/17+8/18 parsed; LaunchBuck S3 lead new; autoglm BROWSER_UNAVAILABLE (no credits)",
   "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
   "network_diag_5_19": {
    "imap.gmail.com:993": "TIMEOUT 8s",
@@ -1028,10 +1029,75 @@
     "note": "Claude-SearchBot 峰值 8/16 13:00 (~5 请求/单点); Baidu+ChatGPT-User 全天分散; 4xx 41 需留意 (多为 sitemap/爬虫路径?)"
    },
    "conclusion": "GEO 正向持续: 24h 160 次 AI 爬虫请求 (BingBot 23 / Baidu 22 / ChatGPT-User 20 / Googlebot 19 / Claude-SearchBot 14), 8/19 GEO 首读数基线强化; AI 引荐流量仍待 beacon 归因"
+  },
+  "high_signal_findings_24h_8_19": {
+   "as_of": "2026-08-19 06:0x",
+   "status": "RESTORED - IMAP incremental scan (SINCE 17-Aug 10 emails, SOCKS5 127.0.0.1:7892), 0 new approvals / 0 new merchant emails",
+   "new_findings": {
+    "launchbuck_s3_lead_8_17": {
+     "date": "2026-08-17 13:48:53 +0000",
+     "from": "LaunchBuck <hello@launchbuck.com>",
+     "subject": "About Print AI Tools",
+     "signal": "S3 外链新机会 (一次性邀请邮件): LaunchBuck = indie products directory. 免费 listing + 真实 dofollow backlink (site badge 验证, 非 nofollow) + 社区曝光. 提交入口 https://launchbuck.com/submit. 非营销列表邮件. 处置: S3 外链候选 #2 (继 Wired Business), 待提交 (外部动作, 不自动); 提交并上线 badge 后 PUSH_READY"
+    },
+    "wired_business_live_email_8_17": {
+     "date": "2026-08-16 15:41:09 -0700 (8/17 06:41 CST)",
+     "from": "Wired Business <sam@wired.business>",
+     "subject": "Your website is live on Wired Business!",
+     "signal": "S3 外链第 1 站 LIVE 邮件闭环确认 (8/17 06:41 autoglm 验证 + 邮件佐证齐); S3 外链 1/20 LIVE 确认"
+    },
+    "cf_free_picks_8_17": {
+     "date": "2026-08-17 01:19:02 +0000 (09:19 CST)",
+     "from": "Creative Fabrica <hi@creativefabrica.com>",
+     "subject": "Today free picks: Halloween Witch Sublimation Bundle & 19 more",
+     "signal": "CF freebie 8/17 到货解析 (22 素材落盘 .hermes/logs/cf-freebies/2026-08-17.md). 万圣节 x4: Halloween Witch Sublimation Bundle (头条) / Spooky Memories / Brushstroke Halloween Pumpkin Bow PNG / The Mega Fall Halloween Png Bundle; 圣诞 x4 (Q4 备选)"
+    },
+    "cf_free_picks_8_18": {
+     "date": "2026-08-18 01:55:39 +0000 (09:55 CST)",
+     "from": "Creative Fabrica <hi@creativefabrica.com>",
+     "subject": "Today free picks: 104 MagicPro Manga Procreate Brushes & 19 more",
+     "signal": "CF freebie 8/18 到货解析 (22 素材落盘 .hermes/logs/cf-freebies/2026-08-18.md). 万圣节 x4: Funny Halloween Quotes / Cowboy Zombie / Trending Halloween PNG Halloween Dog / Watercolor Halloween Clipart Mega Bundle; 圣诞 x1 (Letter to Santa; MagicPro Manga 已修正归类到其他). 素材池 12 天累计 44 (去重 ~43)"
+    }
+   },
+   "noise": "LinkedIn x1 (噪音) + GSC z-printpro.com 索引问题 x2 (跨项目, 提醒 K3) + Supabase security 通知 x1 (跨项目, 8/11 已知)",
+   "p0_count_24h": 0,
+   "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
+   "p1_count_24h": 4,
+   "p1_notes": "W-8BEN-E Pending (8/19 窗口最后一天, BROWSER_UNAVAILABLE 未复核; 8/20 复核, 8/21 第 5 工作日仍 Pending 则升级 user 联系 support) / Printify promo 站内催 (user, 待办) / Synthesia 确认 (user, 待办 D8) / Placeit 催办 (user, 待办)",
+   "p2_count_24h": 7,
+   "p2_notes": "暂缓清单不变; 新增: LaunchBuck S3 外链候选 (待提交) + autoglm credits 耗尽 (浏览器任务受阻); 跨项目: zprintpro GSC 索引问题 + Supabase security (提醒 K3)",
+   "conclusion": "0 新审批 (SINCE 17-Aug 10 封全量核实). CF freebie 8/17+8/18 解析完成 (万圣节 +8 新). LaunchBuck S3 外链新机会 (待提交). Wired Business LIVE 邮件闭环. autoglm BROWSER_UNAVAILABLE (no credits) 影响 tax-audit + GEO beacon. P0 = 0 连续第 11 天."
+  },
+  "tax_audit_8_19": {
+   "printful": "BROWSER_UNAVAILABLE (autoglm no credits, task result: No credits left. Please recharge.) - 8/19 工作日第 3 天 (窗口 8/17-8/19 最后一天) 未复核; 上次状态 8/17 06:40 = Pending; 下次复核 8/20 (第 4 工作日); 8/21 (第 5 工作日) 仍 Pending -> 升级 user 联系 support 行动卡 (per PHASE)",
+   "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
+  },
+  "rank_sentinel_8_19": {
+   "status": "PIPELINE-OK (正式每日拉取第 6 天, 补 8/18 缺口; 8/18 daily-ops 未运行)",
+   "window": "2026-08-12..2026-08-18 (滚动, 与 8/17 快照 8/10..8/16 比较; 同轮重拉 8/10..8/16 捕获修订)",
+   "alerts": 1,
+   "alerts_detail": "is magicdrop legit 31.1 -> 26.0 (改善 5.2 位, 历史最佳, 连续 6 次改善 55.1/42.9/34.2/33.6/31.1/26.0, imps 76->82) - 正向 ALERT, 无修复项; kittl review 63.0 -> 59.0 (改善 4.0, 低量); printify alternatives 81.3 -> 85.4 (下跌 4.1, 低量噪音观察); 数据修订: is magicdrop legit 31.1 -> 28.5 (改善确认), printify alternatives 81.3 -> 83.0",
+   "note": "11/20 query 命中 (9 个零展示无数据属正常). 日志 .hermes/logs/rank-sentinel-2026-08-19.md"
+  },
+  "ai_crawler_8_19": {
+   "as_of": "2026-08-19 06:0x",
+   "method": "BROWSER_UNAVAILABLE (autoglm no credits) - CF Web Analytics / AI Crawl Control 未能读取",
+   "status": "GEO 首读数 PARTIAL: GSC 侧已由 daily-search 8/19 02:24 完成 (T5 GEO 首读数 DONE (GSC 侧)); beacon/AI 引荐侧顺延 (browser 不可用 + D7 CF API token 未配置); 上次读数 8/17: 24h 160 AI crawler requests (BingBot 23/Baidu 22/ChatGPT-User 20/Googlebot 19/Claude-SearchBot 14)",
+   "note": "建议: 补 CF API token (D7) 走 API 免浏览器, 或 autoglm credits 恢复后 dashboard 只读"
+  },
+  "manual_checklist_2026_08_19": {
+   "generated_by": "aitoptools daily-ops cron 2026-08-19 06:0x (IMAP 实拉 + 哨兵拉取; autoglm BROWSER_UNAVAILABLE)",
+   "1_tax_audit": "W-8BEN-E: 8/19 工作日第 3 天 (窗口最后一天) BROWSER_UNAVAILABLE 未复核 (autoglm no credits); 上次 8/17 = Pending; 8/20 复核; 8/21 第 5 工作日仍 Pending -> 联系 Printful support 行动卡",
+   "2_autoglm_credits": "autoglm credits 耗尽 (No credits left) - 影响 tax-audit / GEO beacon / S3 提交等全部浏览器任务; user 充值或确认次日恢复",
+   "3_launchbuck": "S3 外链候选 #2: LaunchBuck 邀请 (launchbuck.com/submit, 免费 dofollow badge) - 待 user 拍板提交 (外部动作不自动); 提交后加 footer badge 链接 -> PUSH_READY",
+   "4_printify_promo": "站内催待 user 执行 (回信 8/8 已发 11 天 0 回复; PartnerStack 站内渠道)",
+   "5_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 邮件, 已 8 天; SINCE<90d 不自动)",
+   "_placeit": "催办草稿 drafts/placeit-followup-email.md 版本 B 就绪, user 手动发送",
+   "_cf_freebie": "CF freebie 8/17+8/18 解析落盘 (各 22 素材, 万圣节 +8); 8/19 未到货 (常规 ~09:55 CST, 下午轮可补); 素材池 12 天累计 44 (去重 ~43) 充足"
   }
  },
  "pending_applications_aging": {
-  "as_of": "2026-08-17",
+  "as_of": "2026-08-19",
   "items": [
    {
     "name": "Placeit (re-apply post Marketplace upgrade)",
@@ -1043,9 +1109,9 @@
    {
     "name": "Synthesia (Rewardful)",
     "applied": "2026-08-11",
-    "days": 6,
+    "days": 8,
     "network": "Rewardful",
-    "next_action": "user ??????????? (8/11 ??, ? 6 ?); ???? x2 ?????????"
+    "next_action": "user 手动点确认链接激活 (8/11 申请, 已 8 天; 确认邮件 SINCE<90d 不自动); 密码重置 x2 请确认是否本人操作"
    }
   ],
   "resolved_since_2026-07-23": [
