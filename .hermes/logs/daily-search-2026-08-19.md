@@ -53,3 +53,27 @@
 - .hermes/logs/indexnow-2026-08-19.log + gsc-indexnow-state.json (sha 891B0E6F)
 - handoff/results/RESULT-2026-08-19.md / handoff/BOARD.md / AFFILIATE_LOG.md (C2b 8/19 行)
 - 本文件
+
+---
+
+## STRATEGY-2026-08-19 消费段（07:06 轮 AutoClaw，首个消费轮）
+
+- **T1 核查**: 402 仍间歇（zai，8/18 整批失败已绕行）→ 本 cron 显式 model=deepseek-v4-flash 有效; W-8BEN-E 窗口末日 BLOCKED_CREDENTIALS → 行动卡升级（联系 Printful support）; LaunchBuck S3 待 D16; printify alternatives 低量噪音维持观察 — 各日志已写 → NOOP
+- **T2 Bing/BWT 核查**: bing-index-check-0819.md 已落盘（06:45）: BWT 凭证缺失 → user 行动卡（Import from GSC 5 分钟）; IndexNow 近 7 天全 200（8/14-15 4xx 为 hash 误报）; site: 抽样被 Bing 反爬拦截（以 BWT 后台为准）; 技术栈预测因子全命中 → R2 唯一缺口 = BWT 验证 → 报告存在 → NOOP
+- **T3 legit 备战**: legit-template-v2.md（rubric 30/25/25/20 公开评分版）+ legit-factcheck-0819.md（queue #3-5 事实核实: Trustpilot 403 受限如实标注, D13 拍板后补）→ 草稿存在 → NOOP（只备不部署）
+- **T4 printful-vs-printify CTR 修复**: 已部署（title 77→57 主词前置+年份+问句 / meta 156 含 CTA, commit 646631e）+ build PASS → 已部署 → NOOP; T+7 哨兵观察挂起
+- **T5 T+14 预备**: t14-check-0819.md（#1 38.93 C/D、#2 NODATA 8/21 新拉、print-price 60.25 PARTIAL 预案 A/B + 触发条件）→ 预案存在 → NOOP
+- **T6 合并 push**: 646631e（T4 + RESULT 段 + 联盟运营状态同步）已 push（build PASS 205 文件）→ 当日已 push → NOOP
+- **R1/R2 落地状态**: R1（GEO 兑现时点提前）: legit 簇 pos 17-30 已是 AI 引用候选, 8/21 20 词 AI 引用审计通过标准下调为 1-2 条引用 ✅; R2（Bing 第一站外通道）: 技术侧就绪 + user 行动卡（BWT Import from GSC）✅
+- **DEEPDIVE 三引擎一底座**: legit 产线仅 GearLaunch pilot（D12 未拍板）/ answer-first 5/5 PASS / 外链台账 LIVE 1/20 / GA4 NODATA — 与 RESULT 一致 → NOOP
+
+## 本 07:06 轮新增执行
+
+- **Step 1 IndexNow**: sitemap sha 891B0E6F 未变（public=out=state）→ 无增量 → NOOP（周更帖为内容刷新非新 URL, 不触发推送）
+- **Step 2 discovery-radar**: discovery/2026-08-19.md 已存在（周三 ✅）→ NOOP
+- **Step 3 content-production**: 周更帖 best-free-creative-fabrica-assets-this-week 更新（Aug 17-18 素材, cf-freebies 8/17+8/18 日志 8/19 恢复解析）: title/dateModified/meta + 新增 New Drops 段 + 数字段 200 slots/35 Halloween/15 Christmas; 8/14-16 缺口诚实标注不虚构 → build PASS（205 文件/788 aff-link）+ out 5 项核验 PASS
+- **Step 4 geo-technical**: 周一任务 → SKIP（今日周三）
+
+## push-count = 2
+- #1 646631e（06:0x, T4 + 状态同步）
+- #2 本次（周更帖更新 + RESULT/daily-search 追加 + 0819 草稿/核查报告入库）
