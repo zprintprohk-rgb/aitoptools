@@ -317,6 +317,7 @@ M1 复盘 — aitoptools
 | 8/15 (W3 月末全推) | 全量 342 URL (重推) | **342/342** | 0 | sitemap 342 URL (未变) | W3-0831 cron 20:29 FULL-PUSH 342 URL status 200 (sha256 58E31E); 核验 342/342 200 bad=0; 无新 URL 增量, C2b 记账 |
 | 8/16 (D10) | 增量 3 URL (新页 /resources/ + 辐条①补正 + copy-ai-review 刷新) | **3/3** | 0 | sitemap 344 URL (push 后上线) | daily-search 19:2x: resources 聚合页 (T4 外链回链) + kittl-halloween-template-test-2026 (T3 补正后) + copy-ai-review (T1 刷新页) 增量推送 3/3 200; footer 回链随 8/16 push #2 上线 |
 | 8/17 (D11) | 增量 7 URL (Boost 双页 + Halloween 5 页) | **7/7** | 0 | sitemap 346 URL (push 后上线) | daily-search 19:5x: 8/17 两脚本先推 (boost 2: midjourney-review/jasper-ai-review; halloween 5: 含新增辐条③④) 全 200; 本跑 diff 确认 0 待推 URL, state 同步 sha 8D78639B; C2b 记账 |
+| 8/19 (D13) | 增量 3 URL (is-gearlaunch-legit 新页 + kittl-vs-placeit + gear-launch-review-2026 更新) | **3/3** | 0 | sitemap 347 URL (push 后上线) | daily-search 02:3x: legit 产线 pilot 上线 + 战线 A-2/A-3 更新; 见 .hermes/logs/indexnow-2026-08-19.log |
 | T+7 (8/14) | 增量 | __ | __ | __ | 首读数: GSC 展示 + IndexNow 计数 |
 | T+30 (9/5) | 增量 | __ | __ | __ | 路线决策点 |
 - 记录人: gsc-indexnow cron (12:40) 每次提交后填; 凭证缺失时填 "blocked_missing_credentials"

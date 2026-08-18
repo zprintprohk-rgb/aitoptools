@@ -1,22 +1,22 @@
 {
   "schema": 1,
   "doc": "sitemap submission state for gsc/indexnow cron. last_submitted_* stays null until first successful submission.",
-  "last_submitted_mtime": "2026-08-17T11:49:58.390Z",
-  "last_submitted_hash": "1D1A141E1DC4BCB159BAC363765CBA0D74BA489D6BDF0DB885D375421444B260",
+  "last_submitted_mtime": "2026-08-18T18:38:05.958Z",
+  "last_submitted_hash": "891B0E6F92125FAD58870A2424C95EF00CCAD44B7F80D4BD4F3423536C6F172D",
   "last_seen": {
     "public/sitemap.xml": {
-      "mtime": "2026-08-17T11:49:21.944Z",
-      "bytes": 42809,
-      "sha256": "8D78639B0FA8E572BF34A4600B4E46A70A59C8B14240222B8BC54818ADAE7DE9"
+      "mtime": "2026-08-18T18:38:05.958Z",
+      "bytes": 42914,
+      "sha256": "891B0E6F92125FAD58870A2424C95EF00CCAD44B7F80D4BD4F3423536C6F172D"
     }
   },
-  "last_run": "2026-08-17T11:49:58.390Z",
-  "last_run_status": "INCREMENTAL-0817 (daily-search 19:5x): 2 new URLs (halloween shirt-designs + sublimation) already pushed 5/5 200 by W3-0825 cron; boost 2 pages pushed earlier; no pending URLs; sitemap 346; C2b 8/17 row recorded",
+  "last_run": "2026-08-18T18:38:05.958Z",
+  "last_run_status": "INCREMENTAL-0819 (daily-search 02:3x): 3 new/updated URLs pushed 3/3 200 (is-gearlaunch-legit new + kittl-vs-placeit + gear-launch-review-2026 updated); sitemap 346->347; C2b 8/19 row recorded",
   "indexnow_submitted": true,
   "gsc_submitted": false,
   "indexnow_first_full_push": "2026-08-06",
-  "indexnow_urls_pushed": 344,
-  "indexnow_status_200": 344,
+  "indexnow_urls_pushed": 347,
+  "indexnow_status_200": 347,
   "indexnow_key_file": ".hermes/secrets/indexnow-key.txt",
   "last_check_hash_match": true
 }

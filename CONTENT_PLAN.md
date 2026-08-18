@@ -244,3 +244,27 @@
 | 2026-08-08 | ai print estimator | 13 | 73.8 | 无专页 | TBD | queue-new |
 
 > 注: 多数为"有专页但排名深" — 优先内链/FAQ 强化而非新建页; ai print estimator 为唯一无专页新词
+
+
+---
+
+## Data-Driven Queue 追加 (2026-08-19 daily-search, GSC 8/12-8/18 实测)
+> 数据源: GSC API (gsc-oauth.json 有效); 372 queries / 858 imp (query 维度, GSC 采样); mining 规则: imp≥10 & CTR<0.05 & 无专页
+
+**queue-new: 0 条** (全部 imp≥10 query 已有专页, 含 designpickle-review 已覆盖 design pickle 簇 23 imp @~50)
+
+**boost-existing 追加 (排名 20-70, 有专页):**
+| 日期 | query | 展示 | 排名 | 专页 | 状态 |
+|------|-------|------|------|------|------|
+| 2026-08-19 | sticker mule | 15 | 38.9 | stickermule-review | queue (8/21 T+14 决策参考) |
+| 2026-08-19 | design pickle review/reviews | 12+11 | 49.4/53.0 | designpickle-review | queue |
+| 2026-08-19 | creative fabrica | 7 | 53.7 | creative-fabrica-review | queue |
+| 2026-08-19 | printful vs gelato | 7 | 62.9 | compare/printful-vs-gelato | queue |
+| 2026-08-19 | heygen review | 7 | 65.7 | heygen-review | queue |
+| 2026-08-19 | print price ai tool | 8 | 60.2 | blog/print-price-ai-tools-2026 | queue (8/21 ≤30 里程碑) |
+| 2026-08-19 | bluehost review 2026 | 11 | 68.5 | bluehost-review-2026 | queue |
+| 2026-08-19 | adcreative.ai reviews | 5 | 66.8 | adcreative-ai-review | queue |
+| 2026-08-19 | omnisend review | 19 | 86.2 | omnisend-review | queue (深水区) |
+| 2026-08-19 | manychat shopify | 18 | 82.1 | manychat-ai-review | queue (深水区) |
+
+**排名改善观察 (GEO compare 8/4-9 vs 8/10-16):** is magicdrop legit 63.5→28.5 (-35, imp 27→88); magicdrop legit 62.2→36.3; sticker mule 61.0→37.2; 下滑: copy ai review 73.3→84.6 (imp 3→11, 关注), shopify magic 71.0→80.9

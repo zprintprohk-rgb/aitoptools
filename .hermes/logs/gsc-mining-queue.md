@@ -105,3 +105,10 @@
 - 推排名清单: 无新候选 (与 weekly-review 一致); **观察补充: sticker mule 19 imp @ pos 37.4** (20-70 区间, 8/21 Boost 决策参考, 未登记避免与 weekly-review 冲突)
 - Boost 效果 (8/17 批次 vs 8/16 批次): **is magicdrop legit 42.4 → 29.8 (+12.6 位, 82 imp)**; magicdrop trustpilot 13 imp @ 19.1 (page-1 边缘, T2 FAQ 覆盖); print price ai tool 62.9 (8/21 T+7 读数, 目标 <=30 预警维持)
 - T2 扩写联动: is-magicdrop-legit 8/17 扩写 (Trustpilot 专章 + 3 FAQ 变体 + gear-launch 互链) 直接服务 top query 簇, 与推排名清单 #1 合并执行
+
+---
+## 2026-08-19 运行记录 (daily-search, GSC API 实测 8/12-8/18)
+- 数据源: GSC API (gsc-oauth.json 有效) — 372 queries / 858 imp (query 维度; date 维度 2,235 imp/2 clicks, GSC 采样差异如实标注)
+- Data-Driven Queue (imp≥10 无专页): **0 新增** — design pickle 簇 (23 imp @~50) 已有 designpickle-review 专页 → 转 boost
+- 推排名清单新增 10 行 (见 CONTENT_PLAN.md 追加段): sticker mule 38.9 / design pickle 49.4 / creative fabrica 53.7 / printful vs gelato 62.9 / heygen 65.7 / print price ai tool 60.2 / bluehost 68.5 / adcreative 66.8 / omnisend 86.2 / manychat 82.1
+- 幂等: 8/19 行不存在 → 本次追加
