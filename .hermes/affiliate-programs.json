@@ -1,1275 +1,1286 @@
 {
- "description": "Affiliate program application tracker for aitoptools.net (Print AI Tools)",
- "payment_account": {
-  "provider": "Airwallex (USD)",
-  "beneficiary_name": "SHEN ZHEN SHI CAI LONG YIN SHUA BAO ZHUANG YOU XIAN GONG SI",
-  "account_number": "7949835442",
-  "routing_aba": "016",
-  "bank": "DBS Bank (Hong Kong) Limited",
-  "swift": "DHBKHKHH",
-  "bank_address": "Ground Floor, The Center, 99 Queen's Road Central, Central, Hong Kong SAR",
-  "status": "ready"
- },
- "target": {
-  "total": 3000,
-  "deadline": "2027-01-15",
-  "current": 0
- },
- "programs": [
-  {
-   "name": "Hostinger Affiliate Program",
-   "network": "CJ / ShareASale",
-   "commission": "$60-100/sale",
-   "status": "not-applied",
-   "signup_url": "https://www.hostinger.com/affiliates",
-   "notes": "High priority — $60-100 per sale, 30-50 sales = target met"
+  "description": "Affiliate program application tracker for aitoptools.net (Print AI Tools)",
+  "payment_account": {
+    "provider": "Airwallex (USD)",
+    "beneficiary_name": "SHEN ZHEN SHI CAI LONG YIN SHUA BAO ZHUANG YOU XIAN GONG SI",
+    "account_number": "7949835442",
+    "routing_aba": "016",
+    "bank": "DBS Bank (Hong Kong) Limited",
+    "swift": "DHBKHKHH",
+    "bank_address": "Ground Floor, The Center, 99 Queen's Road Central, Central, Hong Kong SAR",
+    "status": "ready"
   },
-  {
-   "name": "NordVPN Affiliate Program",
-   "network": "Nord Affiliates (Direct)",
-   "commission": "40%+ recurring",
-   "status": "approved",
-   "approved_date": "2026-07-16",
-   "manager": "颜 (Yan)",
-   "affiliate_id": 152693,
-   "offer_id": 15,
-   "url_id": 902,
-   "my_link_nordvpn": "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=152693&url_id=902",
-   "my_link_nordpass": "https://go.nordpass.io/aff_c?offer_id=488&aff_id=152693&url_id=9356",
-   "login_url": "https://affiliates.nordvpn.com/users/login",
-   "ppc_restriction": "No NordVPN/NordPass/Nord brand keywords on Google/Bing Ads",
-   "notes": "✅ APPROVED 2026-07-16. Account manager: 颜 (Yan). Also covers NordPass. Site pages: /nordvpn-review/ and /nordpass-review/ 8/6 P0-3: 裸链修复 (nordvpn.com -> go.nordvpn.net 跟踪链, data 已修, 待 push).",
-   "link_deployed": true,
-   "link_fix_date": "2026-08-06",
-   "link_fix_note": "8/6 发现: nordvpn-review 页 affiliateUrl + 2 CTA 均为裸链 nordvpn.com (approved 7/16 但跟踪链从未部署, 点击零归因). 已手术式修复 -> go.nordvpn.net/aff_c?offer_id=15&aff_id=152693&url_id=902 (reviews.json 2 行). 待 build+push 上线. 8/7 已上线 (commit db0bb02), 线上 /nordvpn-review/ 确认 3 处 go.nordvpn.net 跟踪链 (aff_c?offer_id=15&aff_id=152693&url_id=902).",
-   "link_deploy_date": "2026-08-07",
-   "last_updated": "2026-08-07"
+  "target": {
+    "total": 3000,
+    "deadline": "2027-01-15",
+    "current": 0
   },
-  {
-   "name": "Jasper AI Affiliate Program",
-   "network": "Impact",
-   "commission": "20-30% recurring",
-   "status": "not-applied",
-   "signup_url": "https://jasper.ai/affiliates",
-   "notes": "Premium tool, high monthly subscription"
-  },
-  {
-   "name": "Writesonic Affiliate Program",
-   "network": "PartnerStack",
-   "commission": "20-30% recurring",
-   "status": "not-applied",
-   "signup_url": "https://writesonic.com/affiliates",
-   "notes": "Best value AI writing tool"
-  },
-  {
-   "name": "Copy.ai Affiliate Program",
-   "network": "Impact",
-   "commission": "20-30% recurring",
-   "status": "not-applied",
-   "signup_url": "https://copy.ai/affiliates",
-   "notes": ""
-  },
-  {
-   "name": "Canva Affiliate Program",
-   "network": "Impact",
-   "commission": "~$12/sale one-time",
-   "status": "not-applied",
-   "signup_url": "https://www.canva.com/affiliates/",
-   "notes": "High volume potential, lower per-sale"
-  },
-  {
-   "name": "Shopify Affiliate Program",
-   "network": "Impact",
-   "commission": "Up to $150/sale",
-   "status": "not-applied",
-   "signup_url": "https://www.shopify.com/affiliates",
-   "notes": "Highest per-sale value, competitive niche"
-  },
-  {
-   "name": "Printful Affiliate Program",
-   "network": "Impact",
-   "commission": "$150+/sale",
-   "status": "active",
-   "approved_date": "2026-07-20",
-   "verification": "8/8 实证: 无验证流程 (in-house 系统 internal account 跳过邮箱验证), email_verified=true; 旧 verify-link-expired/resend-pending-cookie 表述作废 (2026-08-09 daily-ops 对齐 SSoT)",
-   "my_link_printful": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
-   "signup_url": "https://www.printful.com/affiliates",
-   "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json printful.com). 10% x 12 months + bonus campaigns ($50 at $5000 sales, $25 for 5 ordering customers). Confirmation email still in Gmail — unconfirmed (Gmail channel offline). 7/29 12:30 replace_affiliate_links.py --apply 上线 (claid 10 / printful 36 / printify 21 HTML 命中,build PASS),verification 待 user 浏览器确认邮箱后改 email-confirmed-7/xx 8/5 修复: affiliates.json + tools/printful.json 中 15297661:*** 脱敏泄漏 (线上 out/ 55 文件 110+ 坏链), 已改回真链, 待下次 build+push 生效. 8/6 P0-2 修正: 确认邮件并非不存在 — 7/20 17:00 support@info.printful.com 'Confirm email address' 已在 Gmail 定位, 此前 'email-unconfirmed' 是脚本查询窗口 (SINCE 30-Jul) 太窄的误判。链接待 user 手动点击 (或已过期需重发)。 8/6 IMAP 全量确认: 获批邮件 7/20 09:50 (非 7/24), 同日 17:00 确认邮件. Impact 系统邮件 Gmail 0 封 (可能走 Outlook 副邮箱). 8/9 daily-ops: 按 8/8 实证对齐 SSoT (email_verified=true / status=active / tax_status=w8ben-e-generated-not-signed Pending), 解除旧 BLOCKER 表述; tax-audit 结果见 monitoring.",
-   "link_deployed": true,
-   "confirm_email_found": true,
-   "confirm_email_date": "2026-07-20T17:00:38Z",
-   "confirm_email_sender": "support@info.printful.com",
-   "confirm_email_subject": "Confirm email address",
-   "confirm_link_note": "8/8 Hermes 全权指令 #1: IMAP 实拉两封 Confirm email address (7/17 15:25Z, 7/20 17:00Z, 同 token), headless GET verify 链接 -> 重定向 auth/login + \"Email confirmation request does not exist\" = 已过期。需 printful_session_cookie 登录后台 Resend verification -> 轮询新邮件(3 次/60s) -> 重试。",
-   "last_updated": "2026-08-19",
-   "approval_email_found": "2026-07-20 09:50Z affiliate@info.printful.com Your affiliate application was approved!",
-   "email_verified": true,
-   "tax_status": "w8ben-e-uploaded-pending-review",
-   "tax_audit": {
-    "checked": "2026-08-17 (BROWSER_UNAVAILABLE on 8/19)",
-    "method": "autoglm browser (AutoGLM 1.1.8, user Chrome ??, tab 97687274)",
-    "url": "https://www.printful.com/dashboard/affiliate/tax",
-    "result": "pending-review",
-    "detail": "8/17 06:40 ??: ??? Pending (v2 ?? 8/15 02:49 ?; ?????? 1 ? 8/17 ??, 3 business days ?? 8/17-8/19 ???); ??? autoglm-browser-agent.pdf ??; Lines 4/5 ????? (??????); ?? payout/tax ??; ????????. NOOP per protocol, ?? 8/18",
-    "next": "2026-08-20"
-   },
-   "tax_upload_date": "2026-08-15",
-   "tax_review_note": "signed PDF uploaded via autoglm 02:49 CST; reviewed in up to 3 business days",
-   "browser_login_state": "autoglm session OK (Jerome logged in) - session cookie extraction N/A, browser session usable for order placement",
-   "tax_upload_v2": "2026-08-15 02:57 CST - Line4 Corporation + Line5 Active NFFE (corrected from Nonparticipating FFI)"
-  },
-  {
-   "name": "Mockey AI Affiliate Program",
-   "network": "Endorsely",
-   "commission": "30% recurring / 90-day cookie",
-   "status": "approved",
-   "approved_date": "2026-07-22",
-   "manager": "Endorsely auto",
-   "affiliate_id": "jerome796 (via=jerome796)",
-   "my_link_mockey": "https://mockey.ai?via=jerome796",
-   "signup_url": "https://endorsely.com/programs/mockey-ai",
-   "notes": "✓ APPROVED 2026-07-22 (per credentials.affiliate.local.json + AFFILIATE_LOG.md). 30% recurring 90-day cookie, PayPal monthly. K3 7/29 拍板补回 programs 数组 (原本仅 milestones 段提到, SSoT 不完整). 7/24 已上线 out/ mockey.ai?via=jerome796 替换占位.",
-   "link_deployed": true,
-   "link_deploy_note": "8/6 核查 9 工具池全真链 (mockey.ai?via=jerome796 已上线 out/ 7/24)"
-  },
-  {
-   "name": "Gelato Affiliate Program",
-   "network": "PartnerStack",
-   "commission": "15-20% recurring (TBD, 8/1 K3 报告 dashboard 后续看)",
-   "status": "approved",
-   "approved_date": "2026-08-01",
-   "applied_date": "2026-07-24",
-   "verification": "inferred-from-email (Gmail webmail K3 manual fetch, IMAP still DEGRADED)",
-   "manager": "partnerships@gelato.com (Alex)",
-   "affiliate_id": "upftmv48rtcl (try.gelato.com slug)",
-   "my_link_gelato": "https://try.gelato.com/upftmv48rtcl",
-   "my_link_redirects_to": "https://www.gelato.com/print-on-demand",
-   "signup_url": "https://partnerships.gelato.com (redirects to dash.partnerstack.com)",
-   "paypal_setup": "pending (K3 dash.partnerstack.com 后续设)",
-   "notes": "APPROVED 2026-08-01 (per K3 8/1 09:56 Gmail webmail welcome email from Alex). 7/24 重申 → 8 天出结果 (正常 7-14 天窗口). 推广链接 K3 8/1 10:02 从 dash.partnerstack.com 取到 (try.gelato.com/upftmv48rtcl, 重定向 gelato.com/print-on-demand). Commission 率邮件未明, 标准 15-20% 销售循环, 需 dashboard 查实际率. PayPal 收款待设. 7/24 首申因 identity mismatch 被拒, 修复 About 页 + 网站脚署名 + 邮箱一致后重申通过. 8/2 攒批替换 38+ 处站内 gelato.com 链接为 affiliate 链接. 8/5 确认 link_deployed:true (8/2 攒批 38+ 处替换 + 8/3 push b0b3d2b 上线).",
-   "link_deployed": true
-  },
-  {
-   "name": "Printify Affiliate Program",
-   "network": "PartnerStack",
-   "commission": "20-30% recurring",
-   "status": "approved",
-   "approved_date": "2026-07-24",
-   "manager": "PartnerStack auto",
-   "affiliate_id": "jerome88 (PartnerStack network)",
-   "my_link_printify": "https://try.printify.com/4fs863rfz2yc",
-   "signup_url": "https://partners.printify.com",
-   "notes": "✓ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json). 20-30% recurring, $5 minimum payout. K3 7/29 拍板补回 programs 数组 (原本仅 resolved_since 段提到, SSoT 不完整). 7/29 12:30 replace_affiliate_links.py --apply 上线 (21 HTML 改, build PASS).",
-   "promo_code_status": "invite-received",
-   "promo_code_findings": "8/4 邮件 \"Ready-to-Use Banners, Logos & Your Promo Guide\" 含 custom promo code 邀请: \"Want a custom promo code? Request one made just for your followers. Just reply and let us know.\" (IMAP 8/7 核查) — 需回信要码, 拿到后建 /promo/printify-promo-code 页",
-   "last_updated": "2026-08-08",
-   "link_activity_8_7": {
-    "signal": "8/7 00:18 UTC PartnerStack 主动邮件 \"Your Printify link is getting some activity!\" — 联盟链接出现新点击 (首次活动信号, 未提转化数)",
-    "date": "2026-08-07",
-    "note": "正面信号: 归因链路开始工作. 回复邮件的 promo code 请求仍待 user 发送 (drafts/printify-promo-code-reply.md 已就绪)."
-   },
-   "link_deployed": true,
-   "link_deploy_note": "8/6 核查 9 工具池全真链 (try.printify.com/4fs863rfz2yc 已上线 out/)",
-   "promo_request_sent": "2026-08-08 via SMTP 465 SSL (gmail_credentials 通道, 真密码 .env IMAP_PASSWORD), subject \"Promo Code Request - aitoptools\", Message-ID <178612007459.38260.17414933324366495799@aitoptools.net>, 留证 .hermes/tmp/printify-sent.txt; 72h 后检查回复 (monitor cron 已覆盖 mail.printify.com)"
-  },
-  {
-   "name": "Photoroom Affiliate Program",
-   "network": "PartnerStack / Referral",
-   "commission": "20-30% recurring",
-   "status": "not-applied",
-   "signup_url": "https://www.photoroom.com/affiliates",
-   "notes": "AI product photography for POD sellers"
-  },
-  {
-   "name": "Claid AI Affiliate Program",
-   "network": "PartnerStack / FirstPromoter",
-   "commission": "20% lifetime recurring",
-   "status": "approved",
-   "approved_date": "2026-07-24",
-   "manager": "FirstPromoter auto",
-   "affiliate_id": "jerome94 (via=jerome94)",
-   "my_link_claid": "https://claid.ai?via=jerome94",
-   "signup_url": "https://partners.claid.ai",
-   "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5). 20% recurring lifetime, 60-day cookie, min $20 payout. 8/5 user completed backend setup: PayPal doolen@126.com bound (Net-15, auto-pay $20+), company info saved (Shenzhen Cailong Printing Packaging Co., Ltd. / 914403000561993977), VAT left blank (optional). Claid = first affiliate with full payout chain — commissions land directly in PayPal. Link live: https://claid.ai?via=jerome94",
-   "payout_ready": true,
-   "payout_method": "PayPal",
-   "paypal_email": "doolen@126.com",
-   "payout_terms": "Net-15 monthly, auto-pay at $20+",
-   "company_name": "Shenzhen Cailong Printing Packaging Co., Ltd.",
-   "company_number": "914403000561993977",
-   "vat_id": "left-blank (CN credit code fails format check; optional field)",
-   "verification": "account-fully-configured-2026-08-05",
-   "link_deployed": true,
-   "link_deploy_note": "8/6 核查 9 工具池全真链 (claid.ai?via=jerome94 已上线 out/)"
-  },
-  {
-   "name": "Kittl Affiliate Program",
-   "network": "Impact",
-   "commission": "20% first 12 months (paid subscription)",
-   "status": "approved",
-   "approved_date": "2026-07-30",
-   "applied_date": "2026-07-15",
-   "link_deployed": true,
-   "pxf_link": "https://kittl.pxf.io/qWNvPn",
-   "contract_terms": "paid-subscription-20pct-30d-referral, sign-up-$0-30d-referral",
-   "impact_brand_dropdown": "Kittl (confirmed 2026-07-30 03:33 Impact dashboard screenshot)",
-   "impact_marketplace_upgrade": "passed (2026-07-30 inferred — full dashboard visible incl. Snapshot/Brand dropdown = Marketplace feature unlocked)",
-   "real_metrics_14d_7_14_to_7_28": {
-    "clicks": 1,
-    "actions": 0,
-    "action_earnings_usd": 0,
-    "sale_amount_usd": 0,
-    "conversion_rate": 0,
-    "epc_usd": 0,
-    "today_earnings_usd": 0,
-    "total_pending_usd": 0,
-    "balance_usd": 0,
-    "auto_withdraw_threshold_usd": 10
-   },
-   "homepage_pxf_decision_7_30_03_43_revert": "选 A 维持现状 (pxf Check Deal + organic Visit Official Site 都在). K3 7/30 03:43 user 推翻 03:40 选 B 撤首页决定, 理由: 14 天 1 click 不可怕 (网站根本没流量, baseline 建立), 现在做撤按钮是过度优化, 应聚焦流量基础建设 (北极星指标从转化率转移流量).",
-   "signup_url": "https://kittl.com/affiliates",
-   "notes": "✓ APPROVED 2026-07-30 (per user Impact dashboard screenshot 03:33). 20% first 12 months on paid subscription (Pro $13/mo or Expert $30/mo). 30-day referral period. K3 7/30 03:43 user 拍板 选 A 维持现状: 首页 pxf Check Deal 保留 + organic Visit Official Site ↗ 出口保留 (7/29 13:35 commit 2131e76 状态不动). 7/30 03:40 选 B 撤首页 决定作废. Marketplace 升级悄悄过 (7/30 推断, 因能看到完整 Snapshot/Brand dropdown dashboard = Marketplace feature), 之前 7/15 申请的 13 天阻塞解除. 6 个其他 Impact 系申请 (Canva/Shopify/Bluehost/Surfer/Copy.ai/Placeit) K3 7/30 拍板 先缓缓, 等 Kittl 跑通再说 (按 user 7/30 03:43 战略调整, 北极星从转化率转移流量)."
-  },
-  {
-   "name": "Placeit Affiliate Program",
-   "network": "Impact",
-   "commission": "$50/year or $20/month new sub",
-   "status": "pending",
-   "signup_url": "https://placeit.net/affiliates",
-   "notes": "Mockup generator. Impact account exists, pending Marketplace upgrade to apply."
-  },
-  {
-   "name": "Surfer SEO Affiliate Program",
-   "network": "Impact",
-   "commission": "20-30% recurring",
-   "status": "not-applied",
-   "signup_url": "https://surferseo.com/affiliates/",
-   "notes": "Phase 2 — high commission on SEO tool"
-  },
-  {
-   "name": "Bluehost Affiliate Program",
-   "network": "CJ",
-   "commission": "$65-100/sale",
-   "status": "not-applied",
-   "signup_url": "https://www.bluehost.com/affiliates",
-   "notes": "High volume web hosting"
-  },
-  {
-   "name": "Synthesia Affiliate Program",
-   "network": "Rewardful (synthesia.getrewardful.com)",
-   "commission": "TBD (待确认, Personal Plan 档)",
-   "status": "applied-pending-email-confirm",
-   "applied_date": "2026-08-11",
-   "account_email": "jerome@aitoptools.net",
-   "login_url": "https://synthesia.getrewardful.com",
-   "emails_evidence": "8/11 17:21/17:34/18:22 x3 \"Please confirm your email address\" (Conrad, affiliates@rewardful.com, Welcome to Synthesia Affiliate Program - Personal Plan) + 8/11 17:51/17:59 x2 \"Reset password instructions\" (rewardful.com, 账户 jerome@aitoptools.net)",
-   "activation_note": "激活邮件 SINCE=1天 < 90天约束, 不自动点击确认链接; 待 user 手动决定: (a) 打开确认链接激活 (2min) (b) 若非本人申请则忽略并注意密码重置邮件风险",
-   "signup_url": "https://www.synthesia.io/affiliates",
-   "notes": "8/12 daily-ops IMAP 新发现 (SINCE 30-Jul 135 封全量核实). 申请来自 8/11 (Rewardful 网络). 密码重置 x2 需 user 确认是否本人操作. 确认后 status -> approved + link 部署评审.",
-   "last_updated": "2026-08-12"
-  }
- ],
- "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
- "last_updated": "2026-08-19",
- "monitoring": {
-  "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
-  "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
-  "next_action": "8/20: W-8BEN-E 复核 (工作日第 4 天, autoglm 需恢复) + CF freebie 8/19 补抓 + GEO beacon 侧重试 (autoglm/API); 8/21: W-8BEN-E 第 5 工作日仍 Pending -> 升级 user 联系 support; 8/22: Boost T+14 判定",
-  "last_live_check": "2026-08-19 05:5x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 17-Aug 10 emails - 0 approvals; CF freebie 8/17+8/18 parsed; LaunchBuck S3 lead new; autoglm BROWSER_UNAVAILABLE (no credits)",
-  "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
-  "network_diag_5_19": {
-   "imap.gmail.com:993": "TIMEOUT 8s",
-   "imap.gmail.com:587": "TIMEOUT 5s",
-   "imap.gmail.com:465": "TIMEOUT 5s",
-   "imap.gmail.com:443": "TIMEOUT 5s",
-   "smtp.gmail.com:587": "OK",
-   "smtp.gmail.com:465": "OK",
-   "www.google.com:443": "TIMEOUT 5s",
-   "DNS imap.gmail.com": "OK (12 IPs returned)"
-  },
-  "network_diag_12_00": {
-   "imap.gmail.com:993_default_dns": "142.250.157.108/109 → TCP 0.06-0.20s OK ✅",
-   "imap.gmail.com:993_AI_ADDRCONFIG_dns": "64.233.189.108/109 → TCP timeout ❌ (污染)",
-   "imap.gmail.com:143_default_dns": "TIMEOUT (明文 IMAP 不用, 但要避开)",
-   "smtp.gmail.com:587": "OK (干扰信号, 不能收邮件)",
-   "www.google.com:443": "TIMEOUT (跟 5:19 一样, 跟 imap 无关)",
-   "outlook.office365.com:993": "OK (对照组, 993 端口整体通, 不是 993 端口挡)",
-   "imaplib.IMAP4_SSL(default_dns_ip)": "LOGIN OK, 'authenticated (Success)'",
-   "imaplib.IMAP4_SSL(AI_ADDRCONFIG_ip)": "LOGIN FAIL, WinError 10060 (走污染 IP)",
-   "root_cause": "GFW DNS poisoning — AI_ADDRCONFIG getaddrinfo 命中污染池",
-   "fix": "强制 default getaddrinfo + 测 TCP 0.05s 内 OK + imaplib 用该 IP",
-   "scratch_script": ".hermes/tmp/affiliate-monitor-2026-07-30-12-00-fetch.py (可复用到下个 cron)",
-   "DNS_cache_state": "system DNS cache 12:00 返回 142.250.157.x (跟 AI_ADDRCONFIG 64.233.189.x 镜像, 一污染一真, 极罕见)"
-  },
-  "high_signal_findings_7d": {
-   "as_of": "2026-07-30 12:00",
-   "lookback_days": 7,
-   "total_messages": 5,
-   "per_sender": {
-    "printful.com": 1,
-    "printify.com": 4
-   },
-   "high_signal_count": 0,
-   "messages": [
+  "programs": [
     {
-     "date": "2026-07-24 09:44:22",
-     "from": "printful.com",
-     "subject": "Wondering how to promote your affiliate link?",
-     "signal": "印证 7/24 Printful approval 真实 (Gmail 通道缺失时未抓到, 现独立核实)"
+      "name": "Hostinger Affiliate Program",
+      "network": "CJ / ShareASale",
+      "commission": "$60-100/sale",
+      "status": "not-applied",
+      "signup_url": "https://www.hostinger.com/affiliates",
+      "notes": "High priority — $60-100 per sale, 30-50 sales = target met"
     },
     {
-     "date": "2026-07-23 21:37:15",
-     "from": "printify.com",
-     "subject": "Printify review - Challenge Launched!",
-     "signal": "印证 7/24 Printify approval + $150 blog challenge (9/29 截止)"
+      "name": "NordVPN Affiliate Program",
+      "network": "Nord Affiliates (Direct)",
+      "commission": "40%+ recurring",
+      "status": "approved",
+      "approved_date": "2026-07-16",
+      "manager": "颜 (Yan)",
+      "affiliate_id": 152693,
+      "offer_id": 15,
+      "url_id": 902,
+      "my_link_nordvpn": "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=152693&url_id=902",
+      "my_link_nordpass": "https://go.nordpass.io/aff_c?offer_id=488&aff_id=152693&url_id=9356",
+      "login_url": "https://affiliates.nordvpn.com/users/login",
+      "ppc_restriction": "No NordVPN/NordPass/Nord brand keywords on Google/Bing Ads",
+      "notes": "✅ APPROVED 2026-07-16. Account manager: 颜 (Yan). Also covers NordPass. Site pages: /nordvpn-review/ and /nordpass-review/ 8/6 P0-3: 裸链修复 (nordvpn.com -> go.nordvpn.net 跟踪链, data 已修, 待 push).",
+      "link_deployed": true,
+      "link_fix_date": "2026-08-06",
+      "link_fix_note": "8/6 发现: nordvpn-review 页 affiliateUrl + 2 CTA 均为裸链 nordvpn.com (approved 7/16 但跟踪链从未部署, 点击零归因). 已手术式修复 -> go.nordvpn.net/aff_c?offer_id=15&aff_id=152693&url_id=902 (reviews.json 2 行). 待 build+push 上线. 8/7 已上线 (commit db0bb02), 线上 /nordvpn-review/ 确认 3 处 go.nordvpn.net 跟踪链 (aff_c?offer_id=15&aff_id=152693&url_id=902).",
+      "link_deploy_date": "2026-08-07",
+      "last_updated": "2026-08-07"
     },
     {
-     "date": "2026-07-24 03:50:23",
-     "from": "printify.com",
-     "subject": "You've completed the 'Printify review' Challenge",
-     "signal": "7/24 03:50 GMT = 7/24 11:50 Asia/Shanghai, 跟 user 上线时间一致"
+      "name": "Jasper AI Affiliate Program",
+      "network": "Impact",
+      "commission": "20-30% recurring",
+      "status": "not-applied",
+      "signup_url": "https://jasper.ai/affiliates",
+      "notes": "Premium tool, high monthly subscription"
     },
     {
-     "date": "2026-07-25 14:30:32",
-     "from": "printify.com",
-     "subject": "How Much Can You Earn with Printify?",
-     "signal": "教育邮件, 无关 approval"
+      "name": "Writesonic Affiliate Program",
+      "network": "PartnerStack",
+      "commission": "20-30% recurring",
+      "status": "not-applied",
+      "signup_url": "https://writesonic.com/affiliates",
+      "notes": "Best value AI writing tool"
     },
     {
-     "date": "2026-07-29 14:30:23",
-     "from": "printify.com",
-     "subject": "These Affiliates Did It. You Can Too.",
-     "signal": "教育邮件, 无关 approval"
+      "name": "Copy.ai Affiliate Program",
+      "network": "Impact",
+      "commission": "20-30% recurring",
+      "status": "not-applied",
+      "signup_url": "https://copy.ai/affiliates",
+      "notes": ""
+    },
+    {
+      "name": "Canva Affiliate Program",
+      "network": "Impact",
+      "commission": "~$12/sale one-time",
+      "status": "not-applied",
+      "signup_url": "https://www.canva.com/affiliates/",
+      "notes": "High volume potential, lower per-sale"
+    },
+    {
+      "name": "Shopify Affiliate Program",
+      "network": "Impact",
+      "commission": "Up to $150/sale",
+      "status": "not-applied",
+      "signup_url": "https://www.shopify.com/affiliates",
+      "notes": "Highest per-sale value, competitive niche"
+    },
+    {
+      "name": "Printful Affiliate Program",
+      "network": "Impact",
+      "commission": "$150+/sale",
+      "status": "active",
+      "approved_date": "2026-07-20",
+      "verification": "8/8 实证: 无验证流程 (in-house 系统 internal account 跳过邮箱验证), email_verified=true; 旧 verify-link-expired/resend-pending-cookie 表述作废 (2026-08-09 daily-ops 对齐 SSoT)",
+      "my_link_printful": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a",
+      "signup_url": "https://www.printful.com/affiliates",
+      "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json printful.com). 10% x 12 months + bonus campaigns ($50 at $5000 sales, $25 for 5 ordering customers). Confirmation email still in Gmail — unconfirmed (Gmail channel offline). 7/29 12:30 replace_affiliate_links.py --apply 上线 (claid 10 / printful 36 / printify 21 HTML 命中,build PASS),verification 待 user 浏览器确认邮箱后改 email-confirmed-7/xx 8/5 修复: affiliates.json + tools/printful.json 中 15297661:*** 脱敏泄漏 (线上 out/ 55 文件 110+ 坏链), 已改回真链, 待下次 build+push 生效. 8/6 P0-2 修正: 确认邮件并非不存在 — 7/20 17:00 support@info.printful.com 'Confirm email address' 已在 Gmail 定位, 此前 'email-unconfirmed' 是脚本查询窗口 (SINCE 30-Jul) 太窄的误判。链接待 user 手动点击 (或已过期需重发)。 8/6 IMAP 全量确认: 获批邮件 7/20 09:50 (非 7/24), 同日 17:00 确认邮件. Impact 系统邮件 Gmail 0 封 (可能走 Outlook 副邮箱). 8/9 daily-ops: 按 8/8 实证对齐 SSoT (email_verified=true / status=active / tax_status=w8ben-e-generated-not-signed Pending), 解除旧 BLOCKER 表述; tax-audit 结果见 monitoring.",
+      "link_deployed": true,
+      "confirm_email_found": true,
+      "confirm_email_date": "2026-07-20T17:00:38Z",
+      "confirm_email_sender": "support@info.printful.com",
+      "confirm_email_subject": "Confirm email address",
+      "confirm_link_note": "8/8 Hermes 全权指令 #1: IMAP 实拉两封 Confirm email address (7/17 15:25Z, 7/20 17:00Z, 同 token), headless GET verify 链接 -> 重定向 auth/login + \"Email confirmation request does not exist\" = 已过期。需 printful_session_cookie 登录后台 Resend verification -> 轮询新邮件(3 次/60s) -> 重试。",
+      "last_updated": "2026-08-19",
+      "approval_email_found": "2026-07-20 09:50Z affiliate@info.printful.com Your affiliate application was approved!",
+      "email_verified": true,
+      "tax_status": "w8ben-e-uploaded-pending-review",
+      "tax_audit": {
+        "checked": "2026-08-19 (BROWSER_UNAVAILABLE x2: 05:5x + 12:19 autoglm no credits)",
+        "method": "autoglm browser (AutoGLM 1.1.8, user Chrome ??, tab 97687274)",
+        "url": "https://www.printful.com/dashboard/affiliate/tax",
+        "result": "pending-review",
+        "detail": "8/17 06:40 Pending (v2 上传 8/15 02:49); 8/19 两次重试 BROWSER_UNAVAILABLE (autoglm 无 credits); 窗口 8/17-8/19 最后一天未复核; 8/21 第 5 工作日仍 Pending -> 升级 user 联系 support",
+        "next": "2026-08-20"
+      },
+      "tax_upload_date": "2026-08-15",
+      "tax_review_note": "signed PDF uploaded via autoglm 02:49 CST; reviewed in up to 3 business days",
+      "browser_login_state": "autoglm session OK (Jerome logged in) - session cookie extraction N/A, browser session usable for order placement",
+      "tax_upload_v2": "2026-08-15 02:57 CST - Line4 Corporation + Line5 Active NFFE (corrected from Nonparticipating FFI)"
+    },
+    {
+      "name": "Mockey AI Affiliate Program",
+      "network": "Endorsely",
+      "commission": "30% recurring / 90-day cookie",
+      "status": "approved",
+      "approved_date": "2026-07-22",
+      "manager": "Endorsely auto",
+      "affiliate_id": "jerome796 (via=jerome796)",
+      "my_link_mockey": "https://mockey.ai?via=jerome796",
+      "signup_url": "https://endorsely.com/programs/mockey-ai",
+      "notes": "✓ APPROVED 2026-07-22 (per credentials.affiliate.local.json + AFFILIATE_LOG.md). 30% recurring 90-day cookie, PayPal monthly. K3 7/29 拍板补回 programs 数组 (原本仅 milestones 段提到, SSoT 不完整). 7/24 已上线 out/ mockey.ai?via=jerome796 替换占位.",
+      "link_deployed": true,
+      "link_deploy_note": "8/6 核查 9 工具池全真链 (mockey.ai?via=jerome796 已上线 out/ 7/24)"
+    },
+    {
+      "name": "Gelato Affiliate Program",
+      "network": "PartnerStack",
+      "commission": "15-20% recurring (TBD, 8/1 K3 报告 dashboard 后续看)",
+      "status": "approved",
+      "approved_date": "2026-08-01",
+      "applied_date": "2026-07-24",
+      "verification": "inferred-from-email (Gmail webmail K3 manual fetch, IMAP still DEGRADED)",
+      "manager": "partnerships@gelato.com (Alex)",
+      "affiliate_id": "upftmv48rtcl (try.gelato.com slug)",
+      "my_link_gelato": "https://try.gelato.com/upftmv48rtcl",
+      "my_link_redirects_to": "https://www.gelato.com/print-on-demand",
+      "signup_url": "https://partnerships.gelato.com (redirects to dash.partnerstack.com)",
+      "paypal_setup": "pending (K3 dash.partnerstack.com 后续设)",
+      "notes": "APPROVED 2026-08-01 (per K3 8/1 09:56 Gmail webmail welcome email from Alex). 7/24 重申 → 8 天出结果 (正常 7-14 天窗口). 推广链接 K3 8/1 10:02 从 dash.partnerstack.com 取到 (try.gelato.com/upftmv48rtcl, 重定向 gelato.com/print-on-demand). Commission 率邮件未明, 标准 15-20% 销售循环, 需 dashboard 查实际率. PayPal 收款待设. 7/24 首申因 identity mismatch 被拒, 修复 About 页 + 网站脚署名 + 邮箱一致后重申通过. 8/2 攒批替换 38+ 处站内 gelato.com 链接为 affiliate 链接. 8/5 确认 link_deployed:true (8/2 攒批 38+ 处替换 + 8/3 push b0b3d2b 上线).",
+      "link_deployed": true
+    },
+    {
+      "name": "Printify Affiliate Program",
+      "network": "PartnerStack",
+      "commission": "20-30% recurring",
+      "status": "approved",
+      "approved_date": "2026-07-24",
+      "manager": "PartnerStack auto",
+      "affiliate_id": "jerome88 (PartnerStack network)",
+      "my_link_printify": "https://try.printify.com/4fs863rfz2yc",
+      "signup_url": "https://partners.printify.com",
+      "notes": "✓ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json). 20-30% recurring, $5 minimum payout. K3 7/29 拍板补回 programs 数组 (原本仅 resolved_since 段提到, SSoT 不完整). 7/29 12:30 replace_affiliate_links.py --apply 上线 (21 HTML 改, build PASS).",
+      "promo_code_status": "invite-received",
+      "promo_code_findings": "8/4 邮件 \"Ready-to-Use Banners, Logos & Your Promo Guide\" 含 custom promo code 邀请: \"Want a custom promo code? Request one made just for your followers. Just reply and let us know.\" (IMAP 8/7 核查) — 需回信要码, 拿到后建 /promo/printify-promo-code 页",
+      "last_updated": "2026-08-08",
+      "link_activity_8_7": {
+        "signal": "8/7 00:18 UTC PartnerStack 主动邮件 \"Your Printify link is getting some activity!\" — 联盟链接出现新点击 (首次活动信号, 未提转化数)",
+        "date": "2026-08-07",
+        "note": "正面信号: 归因链路开始工作. 回复邮件的 promo code 请求仍待 user 发送 (drafts/printify-promo-code-reply.md 已就绪)."
+      },
+      "link_deployed": true,
+      "link_deploy_note": "8/6 核查 9 工具池全真链 (try.printify.com/4fs863rfz2yc 已上线 out/)",
+      "promo_request_sent": "2026-08-08 via SMTP 465 SSL (gmail_credentials 通道, 真密码 .env IMAP_PASSWORD), subject \"Promo Code Request - aitoptools\", Message-ID <178612007459.38260.17414933324366495799@aitoptools.net>, 留证 .hermes/tmp/printify-sent.txt; 72h 后检查回复 (monitor cron 已覆盖 mail.printify.com)"
+    },
+    {
+      "name": "Photoroom Affiliate Program",
+      "network": "PartnerStack / Referral",
+      "commission": "20-30% recurring",
+      "status": "not-applied",
+      "signup_url": "https://www.photoroom.com/affiliates",
+      "notes": "AI product photography for POD sellers"
+    },
+    {
+      "name": "Claid AI Affiliate Program",
+      "network": "PartnerStack / FirstPromoter",
+      "commission": "20% lifetime recurring",
+      "status": "approved",
+      "approved_date": "2026-07-24",
+      "manager": "FirstPromoter auto",
+      "affiliate_id": "jerome94 (via=jerome94)",
+      "my_link_claid": "https://claid.ai?via=jerome94",
+      "signup_url": "https://partners.claid.ai",
+      "notes": "✅ APPROVED 2026-07-24 (per AGENTS.md §5). 20% recurring lifetime, 60-day cookie, min $20 payout. 8/5 user completed backend setup: PayPal doolen@126.com bound (Net-15, auto-pay $20+), company info saved (Shenzhen Cailong Printing Packaging Co., Ltd. / 914403000561993977), VAT left blank (optional). Claid = first affiliate with full payout chain — commissions land directly in PayPal. Link live: https://claid.ai?via=jerome94",
+      "payout_ready": true,
+      "payout_method": "PayPal",
+      "paypal_email": "doolen@126.com",
+      "payout_terms": "Net-15 monthly, auto-pay at $20+",
+      "company_name": "Shenzhen Cailong Printing Packaging Co., Ltd.",
+      "company_number": "914403000561993977",
+      "vat_id": "left-blank (CN credit code fails format check; optional field)",
+      "verification": "account-fully-configured-2026-08-05",
+      "link_deployed": true,
+      "link_deploy_note": "8/6 核查 9 工具池全真链 (claid.ai?via=jerome94 已上线 out/)"
+    },
+    {
+      "name": "Kittl Affiliate Program",
+      "network": "Impact",
+      "commission": "20% first 12 months (paid subscription)",
+      "status": "approved",
+      "approved_date": "2026-07-30",
+      "applied_date": "2026-07-15",
+      "link_deployed": true,
+      "pxf_link": "https://kittl.pxf.io/qWNvPn",
+      "contract_terms": "paid-subscription-20pct-30d-referral, sign-up-$0-30d-referral",
+      "impact_brand_dropdown": "Kittl (confirmed 2026-07-30 03:33 Impact dashboard screenshot)",
+      "impact_marketplace_upgrade": "passed (2026-07-30 inferred — full dashboard visible incl. Snapshot/Brand dropdown = Marketplace feature unlocked)",
+      "real_metrics_14d_7_14_to_7_28": {
+        "clicks": 1,
+        "actions": 0,
+        "action_earnings_usd": 0,
+        "sale_amount_usd": 0,
+        "conversion_rate": 0,
+        "epc_usd": 0,
+        "today_earnings_usd": 0,
+        "total_pending_usd": 0,
+        "balance_usd": 0,
+        "auto_withdraw_threshold_usd": 10
+      },
+      "homepage_pxf_decision_7_30_03_43_revert": "选 A 维持现状 (pxf Check Deal + organic Visit Official Site 都在). K3 7/30 03:43 user 推翻 03:40 选 B 撤首页决定, 理由: 14 天 1 click 不可怕 (网站根本没流量, baseline 建立), 现在做撤按钮是过度优化, 应聚焦流量基础建设 (北极星指标从转化率转移流量).",
+      "signup_url": "https://kittl.com/affiliates",
+      "notes": "✓ APPROVED 2026-07-30 (per user Impact dashboard screenshot 03:33). 20% first 12 months on paid subscription (Pro $13/mo or Expert $30/mo). 30-day referral period. K3 7/30 03:43 user 拍板 选 A 维持现状: 首页 pxf Check Deal 保留 + organic Visit Official Site ↗ 出口保留 (7/29 13:35 commit 2131e76 状态不动). 7/30 03:40 选 B 撤首页 决定作废. Marketplace 升级悄悄过 (7/30 推断, 因能看到完整 Snapshot/Brand dropdown dashboard = Marketplace feature), 之前 7/15 申请的 13 天阻塞解除. 6 个其他 Impact 系申请 (Canva/Shopify/Bluehost/Surfer/Copy.ai/Placeit) K3 7/30 拍板 先缓缓, 等 Kittl 跑通再说 (按 user 7/30 03:43 战略调整, 北极星从转化率转移流量)."
+    },
+    {
+      "name": "Placeit Affiliate Program",
+      "network": "Impact",
+      "commission": "$50/year or $20/month new sub",
+      "status": "pending",
+      "signup_url": "https://placeit.net/affiliates",
+      "notes": "Mockup generator. Impact account exists, pending Marketplace upgrade to apply."
+    },
+    {
+      "name": "Surfer SEO Affiliate Program",
+      "network": "Impact",
+      "commission": "20-30% recurring",
+      "status": "not-applied",
+      "signup_url": "https://surferseo.com/affiliates/",
+      "notes": "Phase 2 — high commission on SEO tool"
+    },
+    {
+      "name": "Bluehost Affiliate Program",
+      "network": "CJ",
+      "commission": "$65-100/sale",
+      "status": "not-applied",
+      "signup_url": "https://www.bluehost.com/affiliates",
+      "notes": "High volume web hosting"
+    },
+    {
+      "name": "Synthesia Affiliate Program",
+      "network": "Rewardful (synthesia.getrewardful.com)",
+      "commission": "TBD (待确认, Personal Plan 档)",
+      "status": "applied-pending-email-confirm",
+      "applied_date": "2026-08-11",
+      "account_email": "jerome@aitoptools.net",
+      "login_url": "https://synthesia.getrewardful.com",
+      "emails_evidence": "8/11 17:21/17:34/18:22 x3 \"Please confirm your email address\" (Conrad, affiliates@rewardful.com, Welcome to Synthesia Affiliate Program - Personal Plan) + 8/11 17:51/17:59 x2 \"Reset password instructions\" (rewardful.com, 账户 jerome@aitoptools.net)",
+      "activation_note": "激活邮件 SINCE=1天 < 90天约束, 不自动点击确认链接; 待 user 手动决定: (a) 打开确认链接激活 (2min) (b) 若非本人申请则忽略并注意密码重置邮件风险",
+      "signup_url": "https://www.synthesia.io/affiliates",
+      "notes": "8/12 daily-ops IMAP 新发现 (SINCE 30-Jul 135 封全量核实). 申请来自 8/11 (Rewardful 网络). 密码重置 x2 需 user 确认是否本人操作. 确认后 status -> approved + link 部署评审.",
+      "last_updated": "2026-08-12"
     }
-   ],
-   "p0_count": 0,
-   "p1_count": 0,
-   "p2_count": 0,
-   "conclusion": "✅ 7d 邮件扫描: 0 actionable 高信号. 7/24 同期 4 个 approval (claid/printful/printify/mockey) 全部已 link_deployed, 7/30 03:33 Kittl 也已. 没有 P0/P1/P2 阻塞."
-  },
-  "network_diag_7_31": {
-   "imap.gmail.com:993_default_dns": "64.233.187.108/109 → TCP timeout ❌ (新污染段, 7/30 142.250.157.x 已重污染)",
-   "imap.gmail.com:993_8.8.8.8_dns": "64.233.187.108/109 → TCP timeout ❌ (DNS 同步被污染)",
-   "imap.gmail.com:993_1.1.1.1_dns": "查询超时 ❌ (UDP 53 端口挡)",
-   "imap.gmail.com:993_9.9.9.9_dns": "74.125.71.108/109 → TCP timeout ❌ (段级屏蔽, 跨 resolver 同步)",
-   "imap.gmail.com:993_retry_default_3x": "3 次重试都返回 64.233.187.x, 无新 IP, 段级锁定",
-   "root_cause": "GFW 周期性重污染整个 default 段 (7/30 142.250.157.x → 7/31 64.233.187.x), 跨 4 DNS resolver 同步污染, 7/30 fix 是一次性窗口不是永久方案",
-   "fix_7_30_status": "fix 模式 (default getaddrinfo + 显式 IP) 失效, 7/31 跨 resolver 验证不工作",
-   "user_action_options": {
-    "A_proxy": "走 HTTP/SOCKS 代理 (公司 VPN / Cloudflare WARP / 自建) — 1-2h 实施, 治本但需 user 决策",
-    "B_gmail_api": "改 Gmail API + OAuth HTTPS — 2h 实施, 但 443 也 timeout (per 7/30 5:19), 可能同样挡",
-    "C_intermittent": "接受 DEGRADED, cron 改推算 state file + user 手动告知 — 0 实施, 失去 24h 自动发现",
-    "D_wait_window": "等 24h 后 GFW 短期放行窗口 — 0 实施, 赌时间差, 风险高"
-   },
-   "scratch_script": ".hermes/tmp/affiliate-monitor-2026-07-31-12-00-fetch.py (多 DNS resolver 版, 可复用 A 方案)"
-  },
-  "high_signal_findings_24h_7_31": {
-   "as_of": "2026-07-31 15:11",
-   "lookback_hours_24h": 24,
-   "lookback_days_7d": 7,
-   "status": "DEGRADED — Gmail 通道不可用, 24h 邮件扫描未跑",
-   "inferred_from_7_30_baseline": {
-    "24h_baseline_7_30": 1,
-    "7d_baseline_7_30": 5,
-    "high_signal_baseline_7_30": 0
-   },
-   "p0_count_24h": "DEGRADED — 无法独立核实, 6 个 approved-active 全部 link_deployed, 推断 0",
-   "p1_count_24h": "DEGRADED — 无法独立核实 3 项 aging (Gelato/PS/Deel) 是否出结果, state file 推断无变化",
-   "p2_count_24h": "DEGRADED — 4 申请候选 + 5 评测候选 + 11 选 2 维持暂缓",
-   "conclusion": "❌ 24h 邮件扫描 DEGRADED, 真实邮件证据缺失. 7/30 baseline 5 封 0 high-signal 维持. 6 个 approved-active 全部 link_deployed, P0 仍 = 0 (按 state file 推断). 3 项 aging 升 7d 阈值临界, state file 无变化."
-  },
-  "high_signal_findings_24h_8_1": {
-   "as_of": "2026-08-01 09:56",
-   "status": "PARTIALLY-RESTORED — IMAP 仍 DEGRADED, user webmail 兜底告知 2 封邮件",
-   "user_reported_emails": {
-    "gelato_welcome": {
-     "date": "2026-08-01",
-     "from": "partnerships@gelato.com",
-     "subject": "Welcome to the Gelato Partner Program",
-     "signal": "✅ Gelato 批准! 7/24 重申 → 8 天出结果 (正常 7-14 天窗口). 推广链接待 dash.partnerstack.com 取.",
-     "link_obtained": "try.gelato.com/upftmv48rtcl (K3 8/1 10:02 dash.partnerstack.com 取链)"
-    },
-    "printful_marketing": {
-     "date": "2026-08-01",
-     "from": "printful.com",
-     "subject": "Winter's coming. Your lineup should too.",
-     "signal": "📢 营销邮件非验证. AOC 卫衣/运动衫新品 = 内容素材 (Picjam/GreenOnion 评测可提). Printful verification 邮件仍未见 (in-house 系统对内部账号可能跳过)."
-    }
-   },
-   "p0_count_24h": 1,
-   "p1_count_24h": 0,
-   "p2_count_24h": 1,
-   "conclusion": "Gelato approval + link obtained 同日 (8/1). 7 个 approved-active 全部 link_deployed (含 Gelato 新链). 8/2 攒批 1 commit 替换站内 38+ 处 gelato.com 链接. PayPal 收款 K3 后续设. PartnerStack Network / Deel 仍 pending.",
-   "link_obtained": true,
-   "paypal_setup": "pending (K3 dash.partnerstack.com 后续设)"
-  },
-  "network_diag_8_1_22_55": {
-   "as_of": "2026-08-01 22:55:43",
-   "imap.gmail.com:993_default_dns": "108.177.125.108 → TCP 3s timeout ❌ (新污染段, 7/30 142.250.157.x → 7/31 64.233.187.x → 8/1 108.177.125.x)",
-   "imap.gmail.com:993_8.8.8.8_dns": "142.251.8.109 → TCP 60ms OK ✅ (新! 首次返回可达 IP, 端口 993 通, 窗口期)",
-   "imap.gmail.com:993_1.1.1.1_dns": "command timeout ❌ (UDP 53 仍挡, 7/31 一致)",
-   "imap.gmail.com:993_9.9.9.9_dns": "2a00:1450:400c:c0b::6d (IPv6) → IPv4 connect getaddrinfo failed ❌",
-   "imap.gmail.com:993_retry_8.8.8.8": "n/a (8.8.8.8 IP 1 hit 就 OK, 不需重试)",
-   "root_cause": "GFW 周期性重污染 default DNS 段 (7/30 → 7/31 → 8/1 三次换段), 8.8.8.8 段首次出现可达 IP 142.251.8.109, 是 7/30 fix 模式 (强制 default IP) 失效后, 8.8.8.8 强制 IP 模式 复用的窗口期",
-   "fix_7_30_status": "fix 模式 (default getaddrinfo + 显式 IP) 失效, 跨 3 天 (7/30 → 7/31 → 8/1) 验证不工作",
-   "fix_8.8.8.8_status": "🟡 窗口期, 8.8.8.8 强制 IP 142.251.8.109 端口 993 通, 但 Gmail App Password D7 缺, login 仍 fail. 6-12h 后 GFW 可能再次污染",
-   "user_action_options": {
-    "P1-A_app_password_now": "今天 23:00 前补 Gmail App Password (16 字符, Google 账号 → 安全 → 两步验证 → 应用专用密码), 写入 .hermes/secrets/gmail_credentials.json, 之后 IMAP 用 8.8.8.8 IP 142.251.8.109 强制连, 8.8.8.8 窗口期 + 凭证补 = 通道激活",
-    "P1-B_wait_window": "等 24h 后 GFW 短期放行窗口 — 0 实施, 赌时间差, 风险高 (7/30 教训: 窗口期 6-12h 就过)",
-    "P1-C_proxy": "走 HTTP/SOCKS 代理 (公司 VPN / Cloudflare WARP / 自建) — 1-2h 实施, 治本但需 user 决策",
-    "P1-D_gmail_api": "改 Gmail API + OAuth HTTPS — 2h 实施, 但 443 也 timeout (per 7/30 5:19 + 7/31), 可能同样挡",
-    "P1-E_intermittent": "接受 DEGRADED, cron 改推算 state file + user 手动告知 — 0 实施, 失去 24h 自动发现, 已持续 14d"
-   },
-   "scratch_script": ".hermes/tmp/affiliate-monitor-2026-08-01-22-55-multi-resolver.py (本轮, 可复用 P1-A 方案)"
-  },
-  "high_signal_findings_24h_8_1_22_55": {
-   "as_of": "2026-08-01 22:55:43",
-   "status": "PARTIALLY-RESTORED — IMAP 网络层 8.8.8.8 窗口期 OK, 凭证层 D7 仍缺, agent 无法独立抓邮件, K3 8/1 09:56 + 10:02 webmail 兜底告知",
-   "user_reported_emails_8_1": {
-    "gelato_welcome_8_1_09_56": {
-     "date": "2026-08-01",
-     "from": "partnerships@gelato.com (Alex)",
-     "subject": "Welcome to the Gelato Partner Program",
-     "signal": "✅ Gelato 批准! 7/24 重申 → 8 天出结果 (正常 7-14 天窗口内). 推广链接 K3 8/1 10:02 从 dash.partnerstack.com 取到 (try.gelato.com/upftmv48rtcl, 重定向 gelato.com/print-on-demand). 7 → 7 approved-active (含 Gelato).",
-     "link_obtained": "try.gelato.com/upftmv48rtcl (K3 8/1 10:02 dash.partnerstack.com 取链)"
-    },
-    "printful_marketing_8_1": {
-     "date": "2026-08-01",
-     "from": "printful.com",
-     "subject": "Winter's coming. Your lineup should too.",
-     "signal": "📢 营销邮件非验证. AOC 卫衣/运动衫新品 = 内容素材 (Picjam/GreenOnion 评测可提). Printful verification 邮件仍未见 (in-house 系统对内部账号可能跳过). D8+ P1 仍 hold, K3 浏览器点确认链接 1min 解决"
-    }
-   },
-   "agent_independent_findings_8_1_22_55": {
-    "imap_channel_status": "PARTIAL-RESTORE (网络层 8.8.8.8 OK + 凭证层 D7 缺)",
-    "8.8.8.8_window": "首次返回可达 IP 142.251.8.109, TCP 60ms OK, 端口 993 通. 是补 App Password 的窗口期",
-    "default_dns_new_segment": "108.177.125.x 段 (7/30 142.250.157.x → 7/31 64.233.187.x → 8/1 108.177.125.x), TCP timeout, 跨 3 天重污染",
-    "8.8.8.8_window_TTL_estimate": "6-12h (per 7/30 教训, GFW 窗口期短, 错过需等下个周期)"
-   },
-   "p0_count_24h": 0,
-   "p0_notes": "✅ 无. Gelato 8/1 10:02 link obtained + commit 86756b9 5 处替换 + 8/2 攒批 38+ 处. 1 天内不算 P0 红",
-   "p1_count_24h": 5,
-   "p1_notes": "Gmail IMAP 通道 D14 PARTIAL-RESTORE (8.8.8.8 OK + D7 缺凭证) / Claid PayPal D8+ / Printful 邮箱 D8+ / PartnerStack Network 8d / Deel 8d (5d 阈值突破, 8d). 全部需 user 浏览器 1-5min 行动",
-   "p2_count_24h": 11,
-   "p2_notes": "维持暂缓 (K3 7/30 03:43 拍板 等 Kittl 跑通): 4 申请候选 (Hostinger/Jasper/Writesonic/Copy.ai) + 5 评测候选 (M3 gate) + 2 resolved (6 个 Impact 系 Canva/Shopify/Bluehost/Surfer/Copy.ai/Placeit 等 Marketplace 升级后启用)",
-   "conclusion": "✅ 7 → 7 approved-active 全部 link 到位 (含 Gelato 8/1 新链). 6 个全 link_deployed + Gelato 部分 5/38+ 部署. P0 = 0 (攒批纪律维持). P1 = 5 (3 个 user 行动 + 2 个 aging). Gmail IMAP 8.8.8.8 出现窗口期, 建议今天 23:00 前补 App Password, cron 8/2 12:00 验证 login"
-  },
-  "high_signal_findings_24h_8_5": {
-   "as_of": "2026-08-05 10:40",
-   "status": "RESTORED — IMAP 独立扫描 57 封 (SINCE 30-Jul), 高价值 4 条",
-   "new_findings": {
-    "claid_reset_password_8_4": {
-     "date": "2026-08-04 08:02",
-     "from": "partners@claid.ai",
-     "subject": "Reset password instructions",
-     "signal": "FirstPromoter 支持 8/3 手动触发的重置邮件已到收件箱 (Gabriela 8/3 12:22 转述 FirstPromoter 建议 forgot-password; 8/4 10:57 确认已手动触发). P1 Claid 登录问题解决路径完整就绪, 需 user 浏览器点击 (严禁 agent 自动点)."
-    },
-    "letsenhance_followup_8_4": {
-     "date": "2026-08-04 10:57",
-     "from": "gabriela.d@letsenhance.io",
-     "subject": "Re: Your Monthly Performance Update",
-     "signal": "Gabriela 确认 FirstPromoter 已手动触发重置邮件, 建议查收件箱/垃圾箱. 线索闭环: 8/2 升级 -> 8/3 FirstPromoter 建议 -> 8/4 邮件到达."
-    },
-    "google_security_8_3_20_43": {
-     "date": "2026-08-03 20:43",
-     "from": "accounts.google.com",
-     "subject": "安全提醒",
-     "signal": "已授权 \"Microsoft apps and services\" 访问 Google 账号数据 — 若 user 未主动操作需检查账号活动; 8/3 03:11 两条为已知 App Password 轮换 (移除旧 Hermes 密码 + 新建 Hermes IMAP)."
-    },
-    "printify_promo_8_4": {
-     "date": "2026-08-04 14:30",
-     "from": "printify.com",
-     "subject": "Ready-to-Use Banners, Logos and Your Promo Guide",
-     "signal": "营销物料 (banner/logo 素材), 可用于 $150 blog challenge (9/29 截止) 推广素材, 非审批邮件."
-    }
-   },
-   "confirmed_baseline": {
-    "partnerstack_network_declined": "8/1 邮件 (networkquality@partnerstack.com) 确认拒绝: \"Your profile is not a great fit, but may be in the future\". 已有合作 (Printify/Gelato) 不受影响. 与 8/3 基线一致, 本次 IMAP 独立核实原文.",
-    "claid_monthly_8_1": "Clicks 0 / Referrals 0 / Customers 0 / Earnings $0 (7 月, 已知基线)",
-    "gelato_welcome_7_31": "welcome 邮件 (alexandra.drewnicki@gelato.com) 在收件箱, 已知基线"
-   },
-   "p0_count_24h": 1,
-   "p0_notes": "Printful 联盟链接 15297661:*** 脱敏泄漏已上线 (out/ 55 文件 110+ 坏链, 8/3 程序化 push 带入) — 数据文件已修 (affiliates.json + tools/printful.json), 待下次 build+push 生效. 死链属紧急修复范畴, 建议随 8/5 攒批或单独 push.",
-   "p1_count_24h": 3,
-   "p1_notes": "Claid 重置密码 (链接已到, 待 user 点击+更新凭证) / Claid PayPal 收款待设 (D12+) / Printful 邮箱确认待点 (D12+)",
-   "p2_count_24h": 11,
-   "p2_notes": "维持暂缓 (K3 7/30 拍板等 Kittl 跑通): 4 申请候选 + 5 评测候选 + 2 resolved",
-   "conclusion": "Gmail IMAP 通道彻底恢复 (SOCKS5). Claid 登录问题解决路径闭环 (重置邮件已到). 新 P0: Printful *** 坏链 (数据已修, 待部署). PartnerStack Network 拒绝已 IMAP 独立核实 (无新信息)."
-  },
-  "high_signal_findings_24h_8_6": {
-   "as_of": "2026-08-06 12:07",
-   "status": "RESTORED — IMAP 68 封 (SINCE 30-Jul), 0 新审批",
-   "new_findings": {
-    "claid_reset_2nd_8_5": {
-     "date": "2026-08-05 09:25+09:30",
-     "from": "partners@claid.ai",
-     "subject": "Reset password instructions (第二条)",
-     "signal": "8/5 09:25 + 09:30 两条重置邮件 (token HpS3ToZt5HfH5z9fBnQG). 8/5 11:28 Gabriela 确认首条 token 已过期. 按 v4 基线: user 8/5 已全部办妥 (account-fully-configured), 勿再提醒."
-    },
-    "letsenhance_8_5_11_28": {
-     "date": "2026-08-05 11:28",
-     "from": "gabriela.d@letsenhance.io",
-     "subject": "Re: Your Monthly Performance Update",
-     "signal": "FirstPromoter 确认首条 reset token 已过期, 建议 claid.firstpromoter.com/forgot-password 重发. 已由 user 8/5 处理 (v4 基线)."
-    },
-    "supabase_paused_8_5": {
-     "date": "2026-08-05 05:05",
-     "from": "supabase.com",
-     "subject": "Your Supabase Project zprintpro-production has been paused",
-     "signal": "⚠️ 非本域 (zprintpro 项目). 免费项目被暂停, 不阻塞 aitoptools 联盟. 提醒 K3 处理 zprintpro 侧."
-    },
-    "printful_halloween_8_6": {
-     "date": "2026-08-06 01:23",
-     "from": "newsletter.printful.com",
-     "subject": "Halloween products",
-     "signal": "营销邮件. 素材可作内容 (Halloween 旺季 POD 选题)."
-    }
-   },
-   "p0_count_24h": 1,
-   "p0_notes": "NordVPN 裸链 (approved 7/16 但 go.nordvpn.net 跟踪链从未部署, nordvpn-review 页 2 CTA 零归因) — 数据已修, 待 build+push.",
-   "p1_count_24h": 1,
-   "p1_notes": "Printful 邮箱确认邮件 (7/20 17:00, D17) 仍待 user 点击 — 唯一未激活项, 可能已过期需重发.",
-   "p2_count_24h": 11,
-   "p2_notes": "维持暂缓. Supabase zprintpro 暂停 (跨项目提醒). Google 8/3 20:43 Microsoft 授权 (非自主动作, 已 3 天无反馈, 降 P2).",
-   "conclusion": "0 新审批. Printful 坏链 P0 已随 8/6 攒批上线 (线上字节级验证真链). 新 P0: NordVPN 裸链 (数据已修待 push). Printful 邮箱确认 D17 仍唯一 user 行动项."
-  },
-  "high_signal_findings_24h_8_8_14_2x": {
-   "as_of": "2026-08-08 14:20",
-   "status": "RESTORED — IMAP 独立扫描 92 封 (SINCE 29-Jul), 0 新审批",
-   "new_findings": {
-    "cf_free_picks_8_8": {
-     "date": "2026-08-08 05:54 CST",
-     "from": "hi@creativefabrica.com",
-     "subject": "Today's free picks: Wildlife Bear, Rustic Forest Bear Head & 19 more",
-     "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-08.md. 万圣节素材: Trending Halloween Dog / Spooky Treats / Skeletons Dancing / Sweet And Twisted (暗黑甜点系, 边缘归类). 素材池连续 3 天 (8/6-8/8) 积累 ≥10 个 🎃, 远超 Halloween 辐条①门槛."
-    }
-   },
-   "p0_count_24h": 1,
-   "p0_notes": "Printful 邮箱确认 — 唯一未激活项. 7/20 确认链接已过期 (8/8 00:50 headless 实测 'Email confirmation request does not exist'), 后台重发被阻 = printful_session_cookie 缺失. user 二选一: A) 装 AutoGLM Chrome 扩展 (2min) → AutoClaw 自动提取; B) 手动 F12 复制 cookie → .hermes/secrets/printful_session_cookie.txt → watcher (每时 8-22) 自动重发.",
-   "p1_count_24h": 2,
-   "p1_notes": "Printify promo code 回复检查 (8/11, 回信 8/8 00:27 已发, SMTP 465 留证) / Placeit Impact pending (8/14 超期催办草稿已就绪, 当天评估发送).",
-   "p2_count_24h": 7,
-   "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai, K3 7/30 拍板等 Kittl 跑通) / PartnerStack Network 重试待 user 拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目).",
-   "conclusion": "0 新审批 (SINCE 29-Jul 92 封全量核实). CF freebie 8/8 解析完成 (20 素材). 唯一 P0 = Printful cookie 阻塞不变. Printify promo 回信已发, 8/11 查回复. Placeit 8/14 触发催办."
-  },
-  "high_signal_findings_24h_8_9": {
-   "as_of": "2026-08-09 16:3x",
-   "status": "RESTORED — IMAP 独立扫描 23 封 (SINCE 08-Aug), 0 新审批 / 0 新商户邮件",
-   "new_findings": {
-    "cf_free_picks_8_9": {
-     "date": "2026-08-08 23:24 (提前到达, 常规 ~05:54 CST)",
-     "from": "hi@creativefabrica.com",
-     "subject": "Today's free picks: Fall Halloween Sublimation Bundle & 19 more",
-     "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). UID 640, 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-09.md. 万圣节素材 x5: Fall Halloween Sublimation Bundle / 32 Cute Halloween Ghost Pngs / Spooky Halloween Shop Clipart / Vintage Halloween Ghost Witch / Spooky Pumpkin Chase. 素材池 4 天累计 19 🎃, 远超 Halloween 辐条①门槛; 8/11 Kittl 实测建议用 Fall Halloween Sublimation Bundle (升华烫画 = Kittl 主要场景)."
-    }
-   },
-   "p0_count_24h": 1,
-   "p0_notes": "Printful 邮箱确认 — 唯一未激活项 (D20). 7/20 确认链接已过期 (8/8 headless 实测), 后台重发被阻 = printful_session_cookie 缺失. user 二选一: A) 装 AutoGLM Chrome 扩展 (2min) → AutoClaw 自动提取; B) 手动 F12 复制 cookie → .hermes/secrets/printful_session_cookie.txt → watcher (每时 8-22) 自动重发.",
-   "p1_count_24h": 2,
-   "p1_notes": "Printify promo code 回复检查 (8/11, 回信 8/8 00:27 已发; 今日无回复属正常 — 未到检查窗口) / Placeit Impact pending (8/14 超期催办, 草稿 drafts/placeit-followup-email.md 就绪, 8/14 当天评估).",
-   "p2_count_24h": 7,
-   "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai, K3 7/30 拍板等 Kittl 跑通) / PartnerStack Network 重试待 user 拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目). 今日 23 封噪音 = togthr CI 失败 x12 (跨项目) + GSC 通知 x7 (zprintpro/togthr, 跨项目) + LinkedIn 1.",
-   "conclusion": "0 新审批 (SINCE 08-Aug 23 封全量核实). CF freebie 8/9 解析完成 (20 素材, 5 🎃). 唯一 P0 = Printful cookie 阻塞不变 (D20). Printify promo 回复未到 (正常, 8/11 检查). Placeit 8/14 触发催办."
-  },
-  "tax_audit_8_9": {
-   "printful": "PENDING (browser 实证, NOOP per protocol)",
-   "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; W-8 不适用佐证 8/1, 余额<)"
-  },
-  "high_signal_findings_24h_8_10": {
-   "as_of": "2026-08-10 12:1x",
-   "status": "RESTORED — IMAP 独立扫描 (SINCE 09-Aug 28 封全量核实), 0 新审批 / 0 新商户邮件",
-   "new_findings": {
-    "cf_free_picks_8_10": {
-     "date": "2026-08-10 04:05 UTC",
-     "from": "hi@creativefabrica.com",
-     "subject": "Today's free picks: Handmade & 19 more",
-     "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). UID 662, 21 素材解析落盘 .hermes/logs/cf-freebies/2026-08-10.md. 万圣节素材 x6: Halloween Black Cat Embroidery (刺绣=印刷垂直强相关) / Witch Cat Coven / Spooky Halloween Bundle / Camo Ghost Boo / Preppy Frames / Skeletons Dancing (8/8 重复). 素材池 5 天累计 25 🎃 (去重 24), 8/11 Kittl 实测素材充足."
-    },
-    "printify_grow_together_8_9": {
-     "date": "2026-08-09 14:30 UTC (上次扫描后新到)",
-     "from": "affiliate@printify.com",
-     "subject": "What's Next? Let's Grow Together🚀",
-     "signal": "通用成长营销邮件 (PartnerStack 代发), 非 promo code 回复. 佐证: affiliate link earns commissions for 12 months per referral. 含合作邀约/反馈邀请 — 不动作. promo code 回复仍未到 (8/11 检查窗口)."
-    }
-   },
-   "p0_count_24h": 0,
-   "p0_notes": "无. Printful cookie BLOCKER 已于 8/9 解除 (email_verified=true), 7 approved-active 全 link_deployed (8/10 affiliates.json 核查确认).",
-   "p1_count_24h": 2,
-   "p1_notes": "Printify promo code 回复检查 (8/11, 回信 8/8 00:27 已发, 今日仍无回复属正常 — 未到窗口) / Placeit Impact pending (8/14 超期催办, 草稿 drafts/placeit-followup-email.md 就绪, 8/14 当天评估).",
-   "p2_count_24h": 7,
-   "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai, K3 7/30 拍板等 Kittl 跑通) / PartnerStack Network 重试待 user 拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目). 今日 28 封噪音 = togthr CI 失败 x10 + GSC zprintpro/togthr x8 + Google Business Profile zprintpro 月报 x1 + LinkedIn x1.",
-   "conclusion": "0 新审批 (SINCE 09-Aug 28 封全量核实). CF freebie 8/10 解析完成 (21 素材, 6 🎃). Printify 8/9 营销邮件非回复. P0 = 0 (自 8/9 Printful 解除后首次清空). 下个检查点: 8/11 Printify promo + 8/12 tax-audit 复核 + 8/14 Placeit 催办."
-  },
-  "high_signal_findings_24h_8_11": {
-   "as_of": "2026-08-11 12:1x",
-   "status": "RESTORED — IMAP 独立扫描 (SINCE 10-Aug 21 封全量核实), 0 新审批 / 0 新商户邮件",
-   "new_findings": {
-    "cf_free_picks_8_11": {
-     "date": "2026-08-11 03:30 UTC",
-     "from": "hi@creativefabrica.com",
-     "subject": "Today's free picks: Child & 19 more",
-     "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). UID 673, 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-11.md. 万圣节素材 x1: Halloween Fall Stripes Pattern Bundle; 升华烫画素材 x1: Grandparents Grandma Grandpa Sublimation (8/11 Kittl 实测日备选, 首选仍 8/9 Fall Halloween Sublimation Bundle). 素材池 6 天累计 26 🎃 (去重 25)."
-    }
-   },
-   "p0_count_24h": 0,
-   "p0_notes": "无. 7 approved-active 全 link_deployed.",
-   "p1_count_24h": 2,
-   "p1_notes": "Printify promo code 回复检查 (8/11 窗口到期: 回信 8/8 00:27 已发, 72h 无回复 — 8/13-14 二次检查, 无回复则升级 user 走 PartnerStack 站内渠道催) / Placeit Impact pending (8/14 超期催办, 草稿 drafts/placeit-followup-email.md 就绪, 8/14 当天评估).",
-   "p2_count_24h": 7,
-   "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai, K3 7/30 拍板等 Kittl 跑通) / PartnerStack Network 重试待 user 拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目). 今日噪音 16 封 = togthr CI 失败 x6 + GSC x8 (zprintpro/togthr) + LinkedIn/Dropbox/Supabase/GMC x4.",
-   "conclusion": "0 新审批 (SINCE 10-Aug 21 封全量核实). CF freebie 8/11 解析完成 (20 素材, 1 🎃 + 1 升华烫画). Printify promo 回复 72h 窗口到期仍未到 (下个检查点 8/13-14, 无回复则升级). P0 = 0 连续第 3 天. 下个检查点: 8/12 tax-audit 复核 + 8/14 Placeit 催办."
-  },
-  "high_signal_findings_24h_8_12": {
-   "as_of": "2026-08-12 05:4x",
-   "status": "RESTORED — IMAP 独立扫描 (SINCE 30-Jul 135 封全量核实), 1 新商户邮件批次 (Synthesia)",
-   "new_findings": {
-    "synthesia_8_11": {
-     "date": "2026-08-11 17:21-18:22",
-     "from": "affiliates@rewardful.com (Conrad, Synthesia)",
-     "subject": "x3 \"Please confirm your email address\" + x2 \"Reset password instructions\"",
-     "signal": "✅ 新商户申请: Synthesia Affiliate Program - Personal Plan (Rewardful 网络, 账户 jerome@aitoptools.net). 欢迎信要求: 1. 确认邮箱 2. 取专属链接登录. 密码重置 x2 (17:51/17:59) 需 user 确认是否本人触发. 激活邮件仅 1 天 (<90d 约束) → 不自动点击, 待 user 决定. 已新增 affiliate-programs.json 条目 (status=applied-pending-email-confirm)."
-    }
-   },
-   "p0_count_24h": 0,
-   "p0_notes": "无. 7 approved-active 全 link_deployed; Printful tax 无阻塞 (Pending 正常审核中).",
-   "p1_count_24h": 3,
-   "p1_notes": "Printful W-8BEN-E Pending (8/12 复核仍 Pending, 下次 8/13) / Printify promo 回复 (8/13-14 二次检查) / Synthesia 邮箱确认待 user 手动点 (新)",
-   "p2_count_24h": 7,
-   "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai) / PartnerStack Network 重试待拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目). 今日噪音: togthr CI + GSC 通知等 (非本域).",
-   "conclusion": "1 新商户批次 (Synthesia/Rewardful, 8/11 申请, 确认链接待 user). CF freebie 8/12 尚未到货 (常规 ~11:00 CST, 昨 8/11 UID 673 已解析). Printful W-8BEN-E 8/12 复核仍 Pending (3 工作日窗口最后一天) → NOOP, 8/13 再复核. P0 = 0 连续第 4 天."
-  },
-  "tax_audit_8_12": {
-   "printful": "STILL-PENDING (browser 实证 8/12 05:44, 8/9 提交后第 3 个工作日; NOOP per protocol, 下次 8/13)",
-   "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 未自动登录, 低优先)",
-   "note_1223": "12:2x 轮未重复 browser 复核 (当日 05:44 已复核 Pending); 下次 8/13"
-  },
-  "high_signal_findings_24h_8_12_1223": {
-   "as_of": "2026-08-12 12:2x",
-   "status": "RESTORED — IMAP 增量扫描 (SINCE 11-Aug 15 封全量核实), 0 新审批 / 0 新商户邮件",
-   "new_findings": {
-    "cf_free_picks_8_12": {
-     "date": "2026-08-11 22:13 UTC (提前到达, 8/12 06:13 CST)",
-     "from": "hi@creativefabrica.com",
-     "subject": "Today's free picks: I choose you and I'll choose you. Over and over and over. & 19 more",
-     "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-12.md. 万圣节素材 x1: Coquette Patchwork Fall Pumpkin PNG (南瓜). 圣诞素材 x4 提前出现 (Q4 备选). 素材池 7 天累计 27 🎃 (去重 26)."
-    },
-    "printful_newsletter_8_11": {
-     "date": "2026-08-11 17:09",
-     "from": "newsletter.printful.com",
-     "subject": "5 winners. Free merch. You in?",
-     "signal": "营销邮件 (免费周边抽奖), 非审批/非验证. 素材可作内容."
-    },
-    "supabase_security_8_11": {
-     "date": "2026-08-11 18:18",
-     "from": "supabase.com",
-     "subject": "Action required: security vulnerabilities detected in your projects",
-     "signal": "⚠️ 跨项目 (zprintpro 域). 提醒 K3 处理 zprintpro 侧 Supabase 安全漏洞通知."
-    }
-   },
-   "p0_count_24h": 0,
-   "p0_notes": "无. 7 approved-active 全 link_deployed.",
-   "p1_count_24h": 3,
-   "p1_notes": "Printful W-8BEN-E Pending (8/13 复核) / Printify promo 回复 (8/13-14 二查, 今日增量扫描确认 0 回复) / Synthesia 邮箱确认待 user 手动点",
-   "p2_count_24h": 7,
-   "p2_notes": "维持暂缓清单不变. 今日噪音: togthr CI 失败 x4 + google.com GMC 通知 x2 (zprintpro 跨项目) + supabase 安全通知 (跨项目).",
-   "conclusion": "0 新审批 (SINCE 11-Aug 15 封全量核实). CF freebie 8/12 已到货并解析 (20 素材, 1 🎃, 早间轮未抓到现在补抓). Printify promo 回复仍 0 (8/13-14 二查窗口). P0 = 0 连续第 5 天."
-  },
-  "rank_sentinel_8_12": {
-   "status": "PIPELINE-OK (首拉 2026-08-12 12:2x)",
-   "window": "2026-08-05..2026-08-11 (同窗口比较, GSC T+1)",
-   "alerts": 0,
-   "note": "20/20 query 命中, 位置与 baseline 完全一致 (数据定稿无变动). 8/13 起正式每日拉取, 滚动窗口 8/6..8/12. 日志 .hermes/logs/rank-sentinel-2026-08-12.md"
-  },
-  "high_signal_findings_24h_8_13": {
-   "as_of": "2026-08-13 13:1x",
-   "status": "RESTORED - IMAP 增量扫描 (SINCE 12-Aug 15 封全量核实), 0 新审批 / 0 新商户邮件",
-   "new_findings": {
-    "cf_free_picks_8_13": {
-     "date": "2026-08-13 03:59 UTC",
-     "from": "hi@creativefabrica.com",
-     "subject": "Today's free picks: Whimsical Christmas Moose Clipart Bundle & 19 more",
-     "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-13.md. 万圣节素材 x2: Cute Ghost with Witch Hat / BOO Halloween Embroidery (刺绣=印刷垂直强相关). 圣诞素材 x6 提前出现 (含 headline + 刺绣 x1). 素材池 8 天累计 29 万圣节 (去重 28), 远超 Halloween 辐条①门槛."
-    }
-   },
-   "p0_count_24h": 0,
-   "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
-   "p1_count_24h": 4,
-   "p1_notes": "Printful W-8BEN-E Pending 超 3 工作日窗口 (8/13 复核, 需 user 补第 4/5 行 + 签名上传) / Printify promo 回复 (8/13-14 二查窗口开启, 今日仍 0 回复; 8/14 无回复则升级 user 走 PartnerStack 站内催) / Synthesia 邮箱确认待 user 手动点 / Placeit 8/14 超期催办评估.",
-   "p2_count_24h": 7,
-   "p2_notes": "暂缓清单不变: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai) / PartnerStack Network 重试 / Pinterest scheduler / Supabase zprintpro 暂停 (跨项目) / CF Web Analytics 无 API token (beacon 已上线, 8/19 GEO 首读数需 token 或 dashboard 人工导出).",
-   "conclusion": "0 新审批 (SINCE 12-Aug 15 封全量核实). CF freebie 8/13 到货解析完成 (20 素材, 万圣节 x2 + 圣诞 x6). Printify promo 0 回复 (二查窗口 8/13-14). W-8BEN-E 已过 3 工作日窗口仍 Pending -> 升级 user. P0 = 0 连续第 6 天."
-  },
-  "tax_audit_8_13": {
-   "printful": "STILL-PENDING (browser 实读 8/13 13:14, 8/9 提交后第 4 个工作日, 页面提示 3 business days 窗口已过; 需 user 补第 4/5 行 + 签名上传或联系 support; 下次复核 8/14)",
-   "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
-  },
-  "rank_sentinel_8_13": {
-   "status": "PIPELINE-OK (正式每日拉取第 1 天)",
-   "window": "2026-08-06..2026-08-12 (滚动窗口, 与 baseline 8/5..8/11 比较)",
-   "alerts": 1,
-   "alerts_detail": "kittl review 68.5->74.0 (下跌 5.5 位, imps 2->1) - Kittl 系变现目标词, 与今日 T14 Kittl 系内链 Boost 直接相关, 优先处理",
-   "note": "16/20 query 命中 (4 个零展示目标词无数据属正常). 日志 .hermes/logs/rank-sentinel-2026-08-13.md"
-  },
-  "tax_audit_8_14": {
-   "printful": "STILL-PENDING (browser 实读 8/14 05:38, 8/9 提交后第 5 个工作日; 页面提示 'up to 3 business days' 窗口已过; Lines 4/5 黄色提示仍显示; Edit 可用; 只读未做任何操作) -> 升级 user 补第 4/5 行 + 签名上传或联系 support; 下次复核 8/15",
-   "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
-  },
-  "high_signal_findings_24h_8_14": {
-   "as_of": "2026-08-14 05:3x",
-   "status": "RESTORED - IMAP 增量扫描 (SINCE 13-Aug 5 封全量核实), 0 新审批 / 0 新商户邮件",
-   "new_findings": {
-    "gsc_review_summary_schema_8_13": {
-     "date": "2026-08-13 01:48 -0700",
-     "from": "Google Search Console Team <sc-noreply@google.com>",
-     "subject": "在针对 aitoptools.net 提交的网址中检测到新的评价摘要结构化数据问题",
-     "signal": "aitoptools 本域新告警: 提交的网址检测到新的 review-summary 结构化数据问题 (具体 URL 需 GSC dashboard 查看). 不阻塞联盟, 列入 P2 待查 (8/19 前安排核查或由 GSC 周报覆盖)"
-    },
-    "cf_free_picks_8_14": {
-     "date": "未到货 (常规 ~11:00 CST 到达, 当前 05:30)",
-     "signal": "8/14 freebie 未到货; 8/13 已解析 (20 素材, 万圣节 x2 + 圣诞 x6). 素材池 8 天累计 29 万圣节 (去重 28) 充足"
-    }
-   },
-   "noise": "Google Merchant Center zprintpro 7月效果 (跨项目) + LinkedIn x2 (噪音)",
-   "p0_count_24h": 0,
-   "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
-   "p1_count_24h": 4,
-   "p1_notes": "Printful W-8BEN-E Pending 超窗口 D5 (8/14 复核, user 补第 4/5 行 + 签名上传) / Printify promo 回复 (8/14 二查收口: 仍 0 回复 -> 升级 user 走 PartnerStack 站内催) / Synthesia 邮箱确认待 user 手动点 / Placeit 8/14 超期催办评估 (草稿就绪, user 手动发送)",
-   "p2_count_24h": 7,
-   "p2_notes": "暂缓清单不变: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai) / PartnerStack Network 重试 / Pinterest scheduler / Supabase zprintpro 暂停 (跨项目) / CF Web Analytics 无 API token (8/19 GEO 首读数需 token 或 dashboard 人工导出; 8/14 观察: user Chrome 会话已打开 CF Analytics dashboard 标签页, 后续可用 autoglm 只读) / 新增: GSC review-summary 结构化数据告警待查",
-   "conclusion": "0 新审批 (SINCE 13-Aug 5 封全量核实). CF 8/14 freebie 未到货 (常规 11:00 CST, 下午轮可补). W-8BEN-E 超窗口 Pending D5 -> 升级 user. Printify promo 二查收口 0 回复 -> 升级 user. P0 = 0 连续第 7 天."
-  },
-  "rank_sentinel_8_14": {
-   "status": "PIPELINE-OK (正式每日拉取第 2 天)",
-   "window": "2026-08-07..2026-08-13 (滚动窗口, 与昨日快照 8/6..8/12 比较; 同时重拉昨日窗口捕获数据修订)",
-   "alerts": 1,
-   "alerts_detail": "kittl review 74.0->67.0 (改善 7.0 位, imps 2->1) - 昨日下跌后正向恢复, 低于前低 68.5, T14 Kittl 内链 Boost 或已生效, 继续观察",
-   "note": "16/20 query 命中 (4 个零展示目标词无数据属正常). GSC 数据修订: 昨日窗口重拉 printful alternatives 17->20 imps / jasper ai review 41->48 imps (补录), 位置基本稳定. 日志 .hermes/logs/rank-sentinel-2026-08-14.md"
-  },
-  "high_signal_findings_24h_8_14_noon": {
-   "as_of": "2026-08-14 12:1x",
-   "status": "RESTORED - IMAP 增量扫描 (SINCE 13-Aug 7 封全量核实, 较晨轮 +2)",
-   "new_findings": {
-    "cf_free_picks_8_14": {
-     "date": "2026-08-14 01:53:52 UTC (09:53 CST)",
-     "from": "hi@creativefabrica.com",
-     "subject": "Today's free picks: Spooky Halloween Shop Clipart PNG & 19 more",
-     "signal": "CF freebie 8/14 到货解析 (晨轮未覆盖). UID 693, 20 素材落盘 .hermes/logs/cf-freebies/2026-08-14.md. 万圣节 x4 (新增 2: Halloween Skeleton Hand Stripes PNG / Spooky Season; 重复 2: 8/9 Shop Clipart / 8/11 Fall Stripes 再次推送). 圣诞 x2 (Q4 备选). 素材池 9 天累计 31 万圣节 (去重 30), 远超 Halloween 辐条①门槛"
-    },
-    "gsc_review_summary_validation_8_14": {
-     "date": "2026-08-13 16:02:17 -0700 (8/14 07:02 CST)",
-     "from": "Google Search Console Team <sc-noreply@google.com>",
-     "subject": "验证评价摘要结构化数据问题修正效果 (aitoptools.net)",
-     "signal": "GSC 修正验证邮件 - 8/13 告警后 Google 进入验证流程 (正向信号). 8/15-8/19 观察验证结果, 无需动作"
-    }
-   },
-   "noise": "GSC review-summary 相关 (已知)",
-   "p0_count_24h": 0,
-   "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
-   "p1_count_24h": 4,
-   "p1_notes": "Printful W-8BEN-E Pending D5 (user 补第 4/5 行 + 签名上传) / Printify promo 0 回复 (user 走 PartnerStack 站内催) / Synthesia 确认待 user / Placeit 催办 (草稿就绪, user 手动发送)",
-   "p2_count_24h": 7,
-   "p2_notes": "暂缓清单不变. GSC review-summary 修正验证观察 (8/13 告警 -> 8/14 验证邮件)",
-   "conclusion": "CF freebie 8/14 到货解析 (20 素材, 万圣节 x4 其中新增 2) + GSC review-summary 修正验证邮件 (正向). P0 = 0 连续第 7 天."
-  },
-  "tax_audit_8_15": {
-   "printful": "STILL-PENDING (browser 实读 8/15 03:44, v2 上传后第 1 个工作日, 3 business days 窗口内正常; 观察: 文件名 kutoolm-browser-agent.txt 存疑 + Lines 4/5 黄框仍显示; NOOP per protocol, 下次 8/16)",
-   "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
-  },
-  "high_signal_findings_24h_8_15": {
-   "as_of": "2026-08-15 03:5x",
-   "status": "RESTORED - IMAP 增量扫描 (SINCE 14-Aug 5 封全量核实), 0 新审批 / 0 新商户邮件",
-   "new_findings": {
-    "gsc_zprintpro_180_clicks_8_14": {
-     "date": "2026-08-14 00:38:40 -0700",
-     "from": "Google Search Console Team <sc-noreply@google.com>",
-     "subject": "恭喜,您的网站在 28 天内获得 180 次点击!",
-     "signal": "跨项目 (zprintpro.com 域名, 8/12 达成 28 天 180 点击里程碑) - 非 aitoptools 本域, 提醒 K3; aitoptools 本域 GSC 无新告警"
-    },
-    "gsc_review_summary_validation_8_14": {
-     "date": "2026-08-13 16:02:17 -0700",
-     "from": "sc-noreply@google.com",
-     "subject": "验证评价摘要结构化数据问题修正效果",
-     "signal": "已知 (8/14 午间轮已记录), 验证观察期 8/15-8/19 持续"
-    },
-    "supabase_pause_8_14": {
-     "date": "2026-08-14 08:33:46 +0000",
-     "from": "ant.wilson@supabase.com",
-     "subject": "Your Supabase Project zprintpro-production is going to be paused",
-     "signal": "跨项目 (zprintpro 域), 提醒 K3 处理"
-    },
-    "cf_free_picks_8_15": {
-     "date": "未到货 (常规 ~09:53 CST, 当前 03:5x)",
-     "signal": "8/15 freebie 未到货; 8/14 已解析 (20 素材, 万圣节 x4 含新增 2); 素材池 9 天累计 31 万圣节 (去重 30) 充足"
-    }
-   },
-   "noise": "LinkedIn x1 (噪音)",
-   "p0_count_24h": 0,
-   "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
-   "p1_count_24h": 3,
-   "p1_notes": "W-8BEN-E Pending (v2 上传后窗口内正常, 但文件名存疑需 user 确认) / Printify promo 站内催 (user, 待办) / Synthesia 确认 (user, 待办) / Placeit 催办 (user, 待办)",
-   "p2_count_24h": 7,
-   "p2_notes": "暂缓清单不变; GSC review-summary 验证观察期 (8/15-8/19); 跨项目: zprintpro GSC 180 点击里程碑 + Supabase 暂停通知 (提醒 K3)",
-   "conclusion": "0 新审批 (SINCE 14-Aug 5 封全量核实). CF freebie 8/15 未到货 (下午轮补). W-8BEN-E v2 上传后窗口内 Pending, 文件名存疑升级 user 确认. P0 = 0 连续第 8 天."
-  },
-  "rank_sentinel_8_15": {
-   "status": "PIPELINE-OK (正式每日拉取第 3 天)",
-   "window": "2026-08-08..2026-08-14 (滚动, 重拉昨日窗口捕获修订)",
-   "alerts": 0,
-   "alerts_detail": "20q 无 >=5 位变动; 最大变动 runway ml 67.6->65.2 (改善 2.4) / printify alternatives 81.0->79.3 (改善 1.7) / printful vs printify 77.6->79.2 (下跌 1.6); is magicdrop legit 55.5->55.1 连续改善 (imps 40->36); 16/20 query 命中",
-   "note": "修复 8/15 哨兵日志 GBK 乱码 (重写 UTF-8). 日志 .hermes/logs/rank-sentinel-2026-08-15.md"
-  },
-  "tax_audit_8_15_eve": {
-   "printful": "STILL-PENDING (browser 实读 8/15 19:13, v2 上传后第 1 个工作日, 3 business days 窗口内正常; 文件名显示 autoglm-browser-agent.pdf; Lines 4/5 黄框仍显示; NOOP per protocol, 下次 8/16)",
-   "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
-  },
-  "high_signal_findings_24h_8_15_eve": {
-   "as_of": "2026-08-15 19:1x",
-   "status": "RESTORED - IMAP 增量扫描 (SINCE 15-Aug 2 封全量核实, SOCKS5 127.0.0.1:7892)",
-   "new_findings": {
-    "cf_free_picks_8_15": {
-     "date": "2026-08-15 02:43:11 UTC (10:43 CST)",
-     "from": "Creative Fabrica <hi@creativefabrica.com>",
-     "subject": "Today free picks: Read Me a Story, Tuck Me in Tight, Tell Me You Love Me & Kiss Me Goodnight & 19 more",
-     "signal": "CF freebie 8/15 到货解析 (傍晚轮补抓, 晨轮未覆盖). SEQ 696, 20 素材落盘 .hermes/logs/cf-freebies/2026-08-15.md. 万圣节 x3 (新增 2: Retro Vintage Halloween Pumpkin PNG / Retro Halloween PNG Bundle Halloweentown; 重复 1: Spooky Halloween Shop Clipart 第三次推送). 圣诞 x2. 素材池 10 天累计 33 万圣节 (去重 32), 远超 Halloween 辐条①门槛"
-    },
-    "gsc_review_summary_fixed_8_15": {
-     "date": "2026-08-15 00:48:02 -0700 (15:48 CST)",
-     "from": "Google Search Console Team <sc-noreply@google.com>",
-     "subject": "您已成功修正了网站 aitoptools.net 上的评价摘要结构化数据问题",
-     "signal": "GSC review-summary 结构化数据问题修正确认 (8/13 告警 → 8/14 验证中 → 8/15 已修正) — 正向闭环, P2 项关闭, 无需动作"
-    }
-   },
-   "noise": "无 (仅 CF + GSC 2 封, 零噪音)",
-   "p0_count_24h": 0,
-   "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
-   "p1_count_24h": 4,
-   "p1_notes": "W-8BEN-E Pending (v2 上传后窗口内, 19:13 傍晚复核 NOOP per protocol; 下次 8/16) / Printify promo 站内催 (user, 待办) / Synthesia 确认 (user, 待办) / Placeit 催办 (user, 待办)",
-   "p2_count_24h": 6,
-   "p2_notes": "暂缓清单不变; GSC review-summary 告警已闭环关闭 (8/15 修正确认); 跨项目: zprintpro GSC 180 点击里程碑 + Supabase zprintpro 暂停通知 (提醒 K3)",
-   "conclusion": "0 新审批 (SINCE 15-Aug 2 封全量核实). CF freebie 8/15 到货解析完成 (20 素材, 万圣节 +2 新). GSC review-summary 已修正 (正向闭环). P0 = 0 连续第 8 天."
-  },
-  "tax_audit_8_16": {
-   "printful": "STILL-PENDING (browser 实读 8/16 18:15, v2 上传后周末 0 工作日, 3 business days 窗口自 8/17 周一起算; 文件名 autoglm-browser-agent.pdf; Lines 4/5 黄框仍显示=静态模板; NOOP per protocol, 下次 8/17)",
-   "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
-  },
-  "rank_sentinel_8_16": {
-   "status": "PIPELINE-OK (正式每日拉取第 4 天)",
-   "window": "2026-08-09..2026-08-15 (滚动, 同轮重拉昨日窗口 8/8-8/14 捕获修订)",
-   "alerts": 0,
-   "alerts_detail": "20q 无 >=5 位变动; 最大变动 printful vs printify 79.2->76.9 (改善 2.4) / runway ml 65.2->63.5 (改善 1.7) / best ai background remover 97.6->99.0 (下跌 1.4); is magicdrop legit 34.2->33.6 (pos 33.6 全站最佳, 连续改善 55.1->42.9->34.2->33.6, imps 82); kittl review 63.0 连续 3 日稳定; 16/20 query 命中",
-   "note": "日志 .hermes/logs/rank-sentinel-2026-08-16.md"
-  },
-  "high_signal_findings_24h_8_16": {
-   "as_of": "2026-08-16 18:1x",
-   "status": "RESTORED - IMAP 增量扫描 (SINCE 15-Aug 7 封全量核实, SOCKS5 127.0.0.1:7892), 0 新审批 / 0 新商户邮件",
-   "new_findings": {
-    "wired_business_8_16": {
-     "date": "2026-08-15 16:38:11 -0700 (8/16 07:38 CST)",
-     "from": "Wired Business <sam@wired.business>",
-     "subject": "Your website submission was received - Wired Business",
-     "signal": "外链目录提交确认 (aitoptools.net 已注册): 需首页/footer 加 wired.business badge 链接 + 完成验证, 24h 未检测到 badge 将自动移除. 与 session_pool 实证吻合 (8/15 23:59 UTC 在 wired.business badge 步骤) → S3 外链首批执行中. 加 footer 链接后列入 PUSH_READY"
-    },
-    "cf_free_picks_8_16": {
-     "date": "2026-08-16 01:26:07 UTC (09:26 CST)",
-     "from": "Creative Fabrica <hi@creativefabrica.com>",
-     "subject": "Today's free picks: Remember Things & 19 more",
-     "signal": "CF freebie 8/16 到货解析 (SEQ 700, 20 素材落盘 .hermes/logs/cf-freebies/2026-08-16.md). 万圣节 x3 新: Boojee Ghost Halloween PNG / Spooky Nurse Halloween PNG / Cozy Halloween Fall Cute Cat Lover PNG; 圣诞 x3 (Q4 备选). 素材池 10 天累计 36 万圣节 (去重 ~35), 远超 Halloween 辐条①门槛"
-    },
-    "supabase_paused_final_8_16": {
-     "date": "2026-08-15 19:09:42 +0000",
-     "from": "ant.wilson@supabase.com",
-     "subject": "Your Supabase Project zprintpro-production has been paused.",
-     "signal": "跨项目 (zprintpro 域) 暂停确认邮件 — 提醒 K3 处理"
-    }
-   },
-   "noise": "LinkedIn x2 (噪音) + GSC review-summary 修正确认 (已知, 8/15 已闭环)",
-   "p0_count_24h": 0,
-   "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
-   "p1_count_24h": 4,
-   "p1_notes": "W-8BEN-E Pending (周末 0 工作日, 窗口 8/17-8/19 内正常; 8/17 复核) / Printify promo 站内催 (user, 待办) / Synthesia 确认 (user, 待办) / Placeit 催办 (user, 待办)",
-   "p2_count_24h": 7,
-   "p2_notes": "暂缓清单不变; 新增: Wired Business badge 验证 (S3 外链, 24h 窗口); 跨项目: Supabase zprintpro-production 已暂停 (提醒 K3)",
-   "conclusion": "0 新审批 (SINCE 15-Aug 7 封全量核实). CF freebie 8/16 到货解析完成 (万圣节 +3 新). Wired Business 外链确认回执 (S3 执行中). W-8BEN-E 窗口口径修正 (8/17 起算). P0 = 0 连续第 9 天."
-  },
-  "ai_crawler_8_16": {
-   "as_of": "2026-08-16 18:20",
-   "method": "autoglm browser 只读 CF Web Analytics + AI Crawl Control (tab 97687234)",
-   "web_analytics_24h": {
-    "visits": 8,
-    "page_views": 8,
-    "avg_load_ms": 877,
-    "total_requests": "~2k",
-    "percent_cached": 6.1,
-    "cwv": "LCP/CLS 100% Good"
-   },
-   "web_analytics_7d": {
-    "visits": 33,
-    "page_views": 35,
-    "avg_load_ms": 1106,
-    "lcp_p50_ms": 728,
-    "lcp_p90_ms": 2412,
-    "cwv": "LCP 94% Good / 6% Poor"
-   },
-   "top_countries_7d": [
-    "United States",
-    "China",
-    "Morocco",
-    "Argentina",
-    "Jordan"
-   ],
-   "browsers_7d": [
-    "ChromeHeadless ~33",
-    "Chrome ~10",
-    "SamsungInternet",
-    "Edge"
-   ],
-   "ai_crawl_control_24h": {
-    "total_ai_crawler_requests": 136,
-    "trend": "-26.9% vs 前一周",
-    "by_bot": {
-     "BingBot": 45,
-     "Claude-SearchBot": 20,
-     "Googlebot": 15,
-     "Applebot": 14,
-     "ChatGPT-User": 12,
-     "Baidu": 8,
-     "Bytespider": 0,
-     "PerplexityBot": 0,
-     "CCBot": 0,
-     "DuckAssistBot": 0,
-     "Amazonbot": "未检测"
-    },
-    "top_path": "www.aitoptools.net/sitemap.xml (42 成功请求)",
-    "http_200": 103,
-    "status_dist": "2xx 103 / 4xx 22 / 3xx 11",
-    "data_transfer_top": "BingBot 672.53kB / Googlebot 266.69kB / Applebot 241.41kB / ChatGPT-User 214.25kB / Baidu 124.01kB"
-   },
-   "conclusion": "GEO 正向: 24h 136 次 AI 爬虫请求 (Claude-SearchBot 20 / ChatGPT-User 12 / Googlebot 15 / BingBot 45), sitemap.xml 被爬最多 — 8/19 GEO 首读数基线强化; AI 引荐流量 =0 待 8/19 beacon 归因确认; Log Explorer 需付费不可用, Perplexity/Bytespider 0 请求待观察"
-  },
-  "tax_audit_8_17": {
-   "printful": "STILL-PENDING (browser ?? 8/17 06:40, v2 ????????? 1 ? (8/17 ??), 3 business days ?? 8/17-8/19 ???; ??? autoglm-browser-agent.pdf ??; Lines 4/5 ??=????; ????; NOOP per protocol, ?? 8/18)",
-   "impact": "LOGIN_REQUIRED (app.impact.com ? user ??; ?????, ???)"
-  },
-  "high_signal_findings_24h_8_17": {
-   "as_of": "2026-08-17 06:5x",
-   "status": "RESTORED - IMAP ???? (SINCE 16-Aug 9 ?????, SOCKS5 127.0.0.1:7892), 0 ??? / 0 ?????",
-   "new_findings": {
-    "wired_business_verify_8_17": {
-     "date": "2026-08-16 04:39:02 -0700 (8/16 19:39 CST)",
-     "from": "Wired Business <sam@wired.business>",
-     "subject": "Your Wired Business submission needs one more step",
-     "signal": "S3 ??????: footer ?? 8/16 ? push ?? (b6a7681, live ?? homepage 2 ? wired.business), ???? = ? Verify my badge; 8/17 06:41 autoglm ?? -> **????, aitoptools.net LIVE** (wired.business/done?type=live&slug=aitoptools-net); ???? 1/20 LIVE"
-    },
-    "printful_survey_8_16": {
-     "date": "2026-08-16 21:51:37 +0000",
-     "from": "survey@newsletter.printful.com",
-     "subject": "A $5 reward for your feedback",
-     "signal": "??/???? (??, ???)"
-    }
-   },
-   "noise": "LinkedIn x2 + GSC zprintpro ?? x2 (???) + Supabase ???? (?? 8/16)",
-   "p0_count_24h": 0,
-   "p0_notes": "?. 7 approved-active ?? link_deployed=true.",
-   "p1_count_24h": 4,
-   "p1_notes": "W-8BEN-E Pending (?? 8/17-8/19 ???; 8/18 ??) / Printify promo ??? (user, ??) / Synthesia ?? (user, ??) / Placeit ?? (user, ??)",
-   "p2_count_24h": 7,
-   "p2_notes": "??????; Wired Business badge ????? (LIVE); AI Toolz Dir ????? (BLOCKED_REQUIRES_BACKLINK ???? footer ?????, ???); ???: Supabase zprintpro-production ??? (?? K3)",
-   "conclusion": "0 ??? (SINCE 16-Aug 9 ?????). CF freebie 8/17 ??? (?? ~09:26-10:43 CST, ?????). Wired Business ???? -> S3 ???? LIVE. P0 = 0 ??? 10 ?."
-  },
-  "rank_sentinel_8_17": {
-   "status": "PIPELINE-OK (??????? 5 ?)",
-   "window": "2026-08-10..2026-08-16 (??, ???????? 8/9-8/15 ????)",
-   "alerts": 1,
-   "alerts_detail": "printful vs printify 76.9->82.3 (?? 5.5 ?, imps 7->3 ????, ????; 8/16 ??? +2.4) - ??, 8/22 T+14 ????; is magicdrop legit 33.6->31.1 (????, ???? 5 ??? 55.1->42.9->34.2->33.6->31.1); kittl review 63.0 ?? 4 ???; runway ml / best ai background remover / copywriting ai ??? 0 ?? (????); 16/20 query ??",
-   "note": "?? .hermes/logs/rank-sentinel-2026-08-17.md"
-  },
-  "manual_checklist_2026_08_17": {
-   "generated_by": "aitoptools daily-ops cron 2026-08-17 06:5x (IMAP ?? + autoglm ??/????)",
-   "1_tax_audit": "W-8BEN-E 8/17 ?? STILL PENDING (?????? 1 ?, ?? 8/17-8/19 ???; ??? autoglm-browser-agent.pdf; Lines 4/5 ??=????) -> NOOP, ?? 8/18",
-   "2_wired_business": "???: 8/17 06:41 autoglm ?? Verify my badge -> **???? LIVE** (wired.business/done?type=live&slug=aitoptools-net); ?? user ??",
-   "3_printify_promo": "???? user ?? (?? 8/8 ?? 9 ? 0 ??; PartnerStack ????)",
-   "4_synthesia_confirm": "?????? user ??? (8/11 ??, ? 6 ?; SINCE<90d ???)",
-   "5_placeit": "???? drafts/placeit-followup-email.md ?? B ??, user ????",
-   "_cf_freebie_8_17": "CF freebie 8/17 ??? (?? ~09:26-10:43 CST); ??? 10 ??? 36 ??? (?? ~35) ??"
-  },
-  "ai_crawler_8_17": {
-   "as_of": "2026-08-17 06:43",
-   "method": "autoglm browser 只读 CF Web Analytics + AI Crawl Control (tab 97687258)",
-   "web_analytics_24h": {
-    "visits": 7,
-    "page_views": 7,
-    "avg_load_ms": 846,
-    "cwv": "LCP 100% Good"
-   },
-   "web_analytics_7d": {
-    "visits": 33,
-    "page_views": 35,
-    "avg_load_ms": 1150,
-    "cwv": "LCP 94% Good / 6% Poor"
-   },
-   "ai_crawl_control_24h": {
-    "total_ai_crawler_requests": 160,
-    "trend": "+0.43% vs 前窗口",
-    "allowed": 119,
-    "unsuccessful": 41,
-    "by_bot": {
-     "BingBot": 23,
-     "Baidu": 22,
-     "ChatGPT-User": 20,
-     "Googlebot": 19,
-     "Claude-SearchBot": 14,
-     "Applebot": 7,
-     "Other": "+1 More 51.84KB",
-     "PerplexityBot": 0,
-     "Bytespider": 0,
-     "CCBot": 0,
-     "DuckDuckGoAssistBot": 0
-    },
-    "status_dist": "2xx 105 / 4xx 41 / 3xx 14",
-    "note": "Claude-SearchBot 峰值 8/16 13:00 (~5 请求/单点); Baidu+ChatGPT-User 全天分散; 4xx 41 需留意 (多为 sitemap/爬虫路径?)"
-   },
-   "conclusion": "GEO 正向持续: 24h 160 次 AI 爬虫请求 (BingBot 23 / Baidu 22 / ChatGPT-User 20 / Googlebot 19 / Claude-SearchBot 14), 8/19 GEO 首读数基线强化; AI 引荐流量仍待 beacon 归因"
-  },
-  "high_signal_findings_24h_8_19": {
-   "as_of": "2026-08-19 06:0x",
-   "status": "RESTORED - IMAP incremental scan (SINCE 17-Aug 10 emails, SOCKS5 127.0.0.1:7892), 0 new approvals / 0 new merchant emails",
-   "new_findings": {
-    "launchbuck_s3_lead_8_17": {
-     "date": "2026-08-17 13:48:53 +0000",
-     "from": "LaunchBuck <hello@launchbuck.com>",
-     "subject": "About Print AI Tools",
-     "signal": "S3 外链新机会 (一次性邀请邮件): LaunchBuck = indie products directory. 免费 listing + 真实 dofollow backlink (site badge 验证, 非 nofollow) + 社区曝光. 提交入口 https://launchbuck.com/submit. 非营销列表邮件. 处置: S3 外链候选 #2 (继 Wired Business), 待提交 (外部动作, 不自动); 提交并上线 badge 后 PUSH_READY"
-    },
-    "wired_business_live_email_8_17": {
-     "date": "2026-08-16 15:41:09 -0700 (8/17 06:41 CST)",
-     "from": "Wired Business <sam@wired.business>",
-     "subject": "Your website is live on Wired Business!",
-     "signal": "S3 外链第 1 站 LIVE 邮件闭环确认 (8/17 06:41 autoglm 验证 + 邮件佐证齐); S3 外链 1/20 LIVE 确认"
-    },
-    "cf_free_picks_8_17": {
-     "date": "2026-08-17 01:19:02 +0000 (09:19 CST)",
-     "from": "Creative Fabrica <hi@creativefabrica.com>",
-     "subject": "Today free picks: Halloween Witch Sublimation Bundle & 19 more",
-     "signal": "CF freebie 8/17 到货解析 (22 素材落盘 .hermes/logs/cf-freebies/2026-08-17.md). 万圣节 x4: Halloween Witch Sublimation Bundle (头条) / Spooky Memories / Brushstroke Halloween Pumpkin Bow PNG / The Mega Fall Halloween Png Bundle; 圣诞 x4 (Q4 备选)"
-    },
-    "cf_free_picks_8_18": {
-     "date": "2026-08-18 01:55:39 +0000 (09:55 CST)",
-     "from": "Creative Fabrica <hi@creativefabrica.com>",
-     "subject": "Today free picks: 104 MagicPro Manga Procreate Brushes & 19 more",
-     "signal": "CF freebie 8/18 到货解析 (22 素材落盘 .hermes/logs/cf-freebies/2026-08-18.md). 万圣节 x4: Funny Halloween Quotes / Cowboy Zombie / Trending Halloween PNG Halloween Dog / Watercolor Halloween Clipart Mega Bundle; 圣诞 x1 (Letter to Santa; MagicPro Manga 已修正归类到其他). 素材池 12 天累计 44 (去重 ~43)"
-    }
-   },
-   "noise": "LinkedIn x1 (噪音) + GSC z-printpro.com 索引问题 x2 (跨项目, 提醒 K3) + Supabase security 通知 x1 (跨项目, 8/11 已知)",
-   "p0_count_24h": 0,
-   "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
-   "p1_count_24h": 4,
-   "p1_notes": "W-8BEN-E Pending (8/19 窗口最后一天, BROWSER_UNAVAILABLE 未复核; 8/20 复核, 8/21 第 5 工作日仍 Pending 则升级 user 联系 support) / Printify promo 站内催 (user, 待办) / Synthesia 确认 (user, 待办 D8) / Placeit 催办 (user, 待办)",
-   "p2_count_24h": 7,
-   "p2_notes": "暂缓清单不变; 新增: LaunchBuck S3 外链候选 (待提交) + autoglm credits 耗尽 (浏览器任务受阻); 跨项目: zprintpro GSC 索引问题 + Supabase security (提醒 K3)",
-   "conclusion": "0 新审批 (SINCE 17-Aug 10 封全量核实). CF freebie 8/17+8/18 解析完成 (万圣节 +8 新). LaunchBuck S3 外链新机会 (待提交). Wired Business LIVE 邮件闭环. autoglm BROWSER_UNAVAILABLE (no credits) 影响 tax-audit + GEO beacon. P0 = 0 连续第 11 天."
-  },
-  "tax_audit_8_19": {
-   "printful": "BROWSER_UNAVAILABLE (autoglm no credits, task result: No credits left. Please recharge.) - 8/19 工作日第 3 天 (窗口 8/17-8/19 最后一天) 未复核; 上次状态 8/17 06:40 = Pending; 下次复核 8/20 (第 4 工作日); 8/21 (第 5 工作日) 仍 Pending -> 升级 user 联系 support 行动卡 (per PHASE)",
-   "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
-  },
-  "rank_sentinel_8_19": {
-   "status": "PIPELINE-OK (正式每日拉取第 6 天, 补 8/18 缺口; 8/18 daily-ops 未运行)",
-   "window": "2026-08-12..2026-08-18 (滚动, 与 8/17 快照 8/10..8/16 比较; 同轮重拉 8/10..8/16 捕获修订)",
-   "alerts": 1,
-   "alerts_detail": "is magicdrop legit 31.1 -> 26.0 (改善 5.2 位, 历史最佳, 连续 6 次改善 55.1/42.9/34.2/33.6/31.1/26.0, imps 76->82) - 正向 ALERT, 无修复项; kittl review 63.0 -> 59.0 (改善 4.0, 低量); printify alternatives 81.3 -> 85.4 (下跌 4.1, 低量噪音观察); 数据修订: is magicdrop legit 31.1 -> 28.5 (改善确认), printify alternatives 81.3 -> 83.0",
-   "note": "11/20 query 命中 (9 个零展示无数据属正常). 日志 .hermes/logs/rank-sentinel-2026-08-19.md"
-  },
-  "ai_crawler_8_19": {
-   "as_of": "2026-08-19 06:0x",
-   "method": "BROWSER_UNAVAILABLE (autoglm no credits) - CF Web Analytics / AI Crawl Control 未能读取",
-   "status": "GEO 首读数 PARTIAL: GSC 侧已由 daily-search 8/19 02:24 完成 (T5 GEO 首读数 DONE (GSC 侧)); beacon/AI 引荐侧顺延 (browser 不可用 + D7 CF API token 未配置); 上次读数 8/17: 24h 160 AI crawler requests (BingBot 23/Baidu 22/ChatGPT-User 20/Googlebot 19/Claude-SearchBot 14)",
-   "note": "建议: 补 CF API token (D7) 走 API 免浏览器, 或 autoglm credits 恢复后 dashboard 只读"
-  },
-  "manual_checklist_2026_08_19": {
-   "generated_by": "aitoptools daily-ops cron 2026-08-19 06:0x (IMAP 实拉 + 哨兵拉取; autoglm BROWSER_UNAVAILABLE)",
-   "1_tax_audit": "W-8BEN-E: 8/19 工作日第 3 天 (窗口最后一天) BROWSER_UNAVAILABLE 未复核 (autoglm no credits); 上次 8/17 = Pending; 8/20 复核; 8/21 第 5 工作日仍 Pending -> 联系 Printful support 行动卡",
-   "2_autoglm_credits": "autoglm credits 耗尽 (No credits left) - 影响 tax-audit / GEO beacon / S3 提交等全部浏览器任务; user 充值或确认次日恢复",
-   "3_launchbuck": "S3 外链候选 #2: LaunchBuck 邀请 (launchbuck.com/submit, 免费 dofollow badge) - 待 user 拍板提交 (外部动作不自动); 提交后加 footer badge 链接 -> PUSH_READY",
-   "4_printify_promo": "站内催待 user 执行 (回信 8/8 已发 11 天 0 回复; PartnerStack 站内渠道)",
-   "5_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 邮件, 已 8 天; SINCE<90d 不自动)",
-   "_placeit": "催办草稿 drafts/placeit-followup-email.md 版本 B 就绪, user 手动发送",
-   "_cf_freebie": "CF freebie 8/17+8/18 解析落盘 (各 22 素材, 万圣节 +8); 8/19 未到货 (常规 ~09:55 CST, 下午轮可补); 素材池 12 天累计 44 (去重 ~43) 充足"
-  }
- },
- "pending_applications_aging": {
-  "as_of": "2026-08-19",
-  "items": [
-   {
-    "name": "Placeit (re-apply post Marketplace upgrade)",
-    "applied": null,
-    "days": null,
-    "network": "Impact",
-    "next_action": "等 Impact Marketplace 通过后重提"
-   },
-   {
-    "name": "Synthesia (Rewardful)",
-    "applied": "2026-08-11",
-    "days": 8,
-    "network": "Rewardful",
-    "next_action": "user 手动点确认链接激活 (8/11 申请, 已 8 天; 确认邮件 SINCE<90d 不自动); 密码重置 x2 请确认是否本人操作"
-   }
   ],
-  "resolved_since_2026-07-23": [
-   {
-    "name": "Claid AI",
-    "resolved": "2026-07-24",
-    "outcome": "approved",
-    "link": "https://claid.ai?via=jerome94"
-   },
-   {
-    "name": "Printify (via PartnerStack)",
-    "resolved": "2026-07-24",
-    "outcome": "approved",
-    "link": "https://try.printify.com/4fs863rfz2yc"
-   },
-   {
-    "name": "Printful",
-    "resolved": "2026-07-24",
-    "outcome": "approved",
-    "link": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a"
-   },
-   {
-    "name": "Looka",
-    "resolved": "2026-07-24",
-    "outcome": "declined-closed-program",
-    "note": "program page not found,Looka 在 7/24 二次确认 partner program 已关闭;仅留 partnerships@looka.com 直邮渠道,优先级低"
-   },
-   {
-    "name": "Kittl (via Impact pxf.io shortlink)",
-    "resolved": "2026-07-30",
-    "outcome": "approved",
-    "link": "https://kittl.pxf.io/qWNvPn",
-    "note": "K3 7/30 03:33 user 截 Impact 后台实测: Kittl brand dropdown 已绑 + 20% paid subscription + 14 天 1 click 0 conversion $0 EPC. Marketplace 升级悄悄过 (7/30 推断)."
-   },
-   {
-    "name": "Gelato (via PartnerStack)",
-    "resolved": "2026-08-01",
-    "outcome": "approved",
-    "note": "K3 8/1 09:56 手动告知: 收 Gelato 欢迎邮件 (partnerships@gelato.com, 发件人 Alex). 7/24 重申 → 8 天出结果 (正常 7-14 天窗口内). dashboard: dash.partnerstack.com. 8/1 10:02 K3 从 dash.partnerstack.com 取推广链接 try.gelato.com/upftmv48rtcl (重定向 gelato.com/print-on-demand). commission 率待 dashboard 查询. PayPal 收款待设.",
-    "source": "K3 Gmail webmail manual fetch (8/1 09:56) — IMAP 通道仍 DEGRADED, agent 无法独立核实, user 兜底告知",
-    "link": "https://try.gelato.com/upftmv48rtcl"
-   },
-   {
-    "name": "Impact Marketplace Upgrade",
-    "resolved": "2026-07-30",
-    "outcome": "approved",
-    "note": "Marketplace 升级悄悄过 (7/30 推断 — user 能看到完整 Snapshot/Brand dropdown dashboard, 这是 Marketplace-only feature). 之前 7/18 申请的 11 天阻塞解除. 6 个 Impact 系申请 (Canva/Shopify/Bluehost/Surfer/Copy.ai/Placeit) 现在可以 apply."
-   },
-   {
-    "name": "PartnerStack Network membership",
-    "resolved": "2026-08-01",
-    "outcome": "declined",
-    "note": "8/1 邮件确认拒绝: \"Your profile is not a great fit, but may be in the future\". 已有 PartnerStack 合作 (Printify/Gelato) 不受影响. 可重新申请 (需 user 拍板是否重试). 8/5 IMAP 独立核实原文.",
-    "source": "IMAP 独立核实 (2026-08-05)"
-   },
-   {
-    "name": "Deel (pending PartnerStack network)",
-    "resolved": "2026-08-01",
-    "outcome": "blocked-by-network-decline",
-    "note": "Deel 激活依赖 PartnerStack Network 批准, 网络 8/1 被拒 -> 自动激活路径失效. 需 user 拍板: 单独直签 Deel 或放弃.",
-    "source": "IMAP 独立核实 (2026-08-05)"
-   }
-  ]
- },
- "milestones": {
-  "2026-07-16_nord_approved": "✅ Nord Security affiliate program approved. Manager: Yan. Links: NordVPN + NordPass. Site pages live at /nordvpn-review/ and /nordpass-review/",
-  "2026-07-22_mockey_approved": "✅ Mockey AI (Endorsely) approved & active. Link: https://mockey.ai?via=jerome796. 30% recurring / 90-day cookie / PayPal monthly.",
-  "2026-07-24_batch_4_approved": "✅ 4 程序同日获批: Claid (FirstPromoter 20% lifetime) / Printify (PartnerStack 20-30%) / Printful (in-house 10%×12) / Looka (declined — program closed). 来源: AGENTS.md §5 + credentials.affiliate.local.json,Gmail 通道缺失无法独立核实邮件。",
-  "2026-07-24_new_applications": "📤 同日新增 3 申请: Gelato (PartnerStack 重申,identity mismatch 修复) / PartnerStack 网络成员资格 / Deel (挂 PartnerStack 网络下,网络批后自动激活). 状态: pending 4 天.",
-  "2026-08-01_gelato_approved": "✅ Gelato (PartnerStack) 批准! K3 8/1 09:56 手动告知 welcome email. 推广链接待 dash.partnerstack.com 取 + PayPal 收款待设. commission 率待 dashboard 查询. 来源: user Gmail webmail fetch, IMAP 仍 DEGRADED, agent 推测 + user 兜底.",
-  "2026-08-01_gelato_link_obtained": "K3 8/1 10:02 从 dash.partnerstack.com 取 Gelato 推广链接 try.gelato.com/upftmv48rtcl (重定向 gelato.com/print-on-demand). 6 → 7 approved-active 全 link_deployed. 8/2 攒批替换 38+ 处站内链接.",
-  "2026-08-05_gmail_imap_restored": "Gmail IMAP 通道彻底恢复 (SOCKS5 127.0.0.1:7892, 57 封拉取 OK). 7/30 DEGRADED 起持续 D6+ 的通道问题闭环.",
-  "2026-08-05_claid_reset_email": "Claid/FirstPromoter 登录问题解决路径闭环: 8/4 08:02 重置密码邮件到达收件箱 (FirstPromoter 手动触发). 待 user 浏览器点击设新密码 + 更新本地凭证.",
-  "2026-08-05_printful_link_fix": "修复 Printful 联盟链接脱敏泄漏 (15297661:*** -> 真链 e946341e..., affiliates.json + tools/printful.json, 数据层已修). 线上 out/ 55 文件坏链待下次 build+push 生效.",
-  "2026-08-11_synthesia_applied": "📤 新申请 (8/11, Rewardful 网络): Synthesia Affiliate Program - Personal Plan, 账户 jerome@aitoptools.net. 8/12 IMAP 发现 3x 确认邮件 + 2x 密码重置. 确认链接待 user 手动点 (SINCE<90d 约束不自动)."
- },
- "manual_checklist_2026_08_07": {
-  "generated_by": "Hermes 8/7 磁盘核查 (非会话记忆, 全部来自 F:\\aitoptools 文件+IMAP实拉)",
-  "1_printful_confirm": "pending-user-click — 7/20 确认邮件已定位 (printful.com/verify/0/...?key=...), D18 已过期风险, 需 user 点或后台重发",
-  "2_printify_promo_code": "invite-received — 8/4 邮件含要码邀请 (Reply and let us know), 需 user 3分钟回信; 码到即建 promo 页",
-  "3_pinterest_scheduler": "not-configured — scheduler.md 不存在, 积压 5/16 待发布; 配好 Metricool/Tailwind 后建 .hermes/drafts/pinterest/scheduler.md",
-  "4_impact_w8ben": "not-applicable — 8/1 Mavis WebBridge 实测 Impact 平台不要求 W-8 (余额<$600 不触发), VAT 已保存; Claid W-8BEN-E 8/5 拍板挂起 (等法人拼音姓名, 不阻塞)"
- },
- "manual_checklist_2026_08_08": {
-  "generated_by": "aitoptools-affiliate-monitor cron 2026-08-08 01:49 (IMAP 实拉 + 文件核查)",
-  "1_printful_cookie": "BLOCKER — 7/20 确认链接已过期 (8/8 00:50 headless 实测 'Email confirmation request does not exist'), 后台重发被阻. 两条路: A) 装 AutoGLM Chrome 扩展 (2min) → AutoClaw 自动提取; B) 手动 F12 复制 cookie → .hermes/secrets/printful_session_cookie.txt. 落地后 printful-verify watcher (每时 8-22) 自动重发",
-  "2_printify_promo_code": "RESOLVED 2026-08-08 00:27 — 回信已发 (SMTP 465, Message-ID <178612007459.38260.17414933324366495799@aitoptools.net>), 8/11 检查回复",
-  "3_pinterest_scheduler": "not-configured (P2, 不影响佣金) — 同 cookie 方案可一并处理 .hermes/secrets/pinterest_session.txt",
-  "4_gsc_oauth": "optional — gsc-oauth.json 缺失 (数据管线降级为本地 csv, 不影响联盟佣金)",
-  "_second_scan_14_2x": "CF freebie 8/8 解析落盘 (20 素材, 4 🎃 含边缘归类 Sweet And Twisted); 0 新审批; P0 仍 = Printful cookie"
- },
- "manual_checklist_2026_08_09": {
-  "generated_by": "aitoptools-affiliate-monitor cron 2026-08-09 16:3x (IMAP 实拉 + 文件核查)",
-  "1_printful_cookie": "RESOLVED-2026-08-09 (8/8 实证: email_verified=true, 无验证流程; 旧 BLOCKER 表述作废) — 税务项见 5_tax_audit",
-  "2_printify_promo_code": "AWAITING-REPLY — 回信 8/8 00:27 已发, 8/11 检查回复 (monitor cron 已覆盖 mail.printify.com)",
-  "3_pinterest_scheduler": "not-configured (P2, 不影响佣金) — 同 cookie 方案可一并处理 .hermes/secrets/pinterest_session.txt",
-  "4_gsc_oauth": "optional — gsc-oauth.json 缺失 (数据管线降级为本地 csv, 不影响联盟佣金)",
-  "_cf_freebie_8_9": "CF freebie 8/9 解析落盘 (20 素材, 5 🎃, 提前 23:24 到达); 0 新审批; P0 仍 = Printful cookie",
-  "5_tax_audit": "NOOP-pending (8/9 autoglm 实证: Printful W-8BEN-E Pending 待审, <=3 工作日; 复核窗口 8/12); Impact 需 user 登录后复查 (低优先)"
- },
- "manual_checklist_2026_08_10": {
-  "generated_by": "aitoptools-affiliate-monitor cron 2026-08-10 12:1x (IMAP 实拉 + 文件核查)",
-  "1_printify_promo_code": "AWAITING-REPLY — 回信 8/8 00:27 已发 (SMTP 465 留证), 8/11 检查回复 (monitor cron 已覆盖 mail.printify.com); 8/9 14:30 'What's Next? Let's Grow Together' 为通用营销非回复",
-  "2_tax_audit": "复核窗口 8/12 (Printful W-8BEN-E Pending <=3 工作日, 8/9 提交); Impact 登录复查 (可选, 低优先)",
-  "3_placeit": "8/14 超期催办评估 (草稿 drafts/placeit-followup-email.md 已就绪, 当天检查 affiliate-programs.json status)",
-  "4_pinterest_scheduler": "not-configured (P2, 不影响佣金)",
-  "_cf_freebie_8_10": "CF freebie 8/10 解析落盘 (21 素材, 6 🎃, UID 662); 素材池 5 天累计 25 🎃; 0 新审批; P0 = 0 (Printful 解除后首次清空)"
- },
- "manual_checklist_2026_08_11": {
-  "generated_by": "aitoptools-affiliate-monitor cron 2026-08-11 12:1x (IMAP 实拉 + 文件核查)",
-  "1_printify_promo_code": "NO-REPLY-72H — 回信 8/8 00:27 已发 (SMTP 465 留证), 8/11 检查窗口: 收件箱 0 回复 (Printify 最后邮件仍为 8/9 14:30 营销 'What's Next? Let's Grow Together'). 8/13-14 二次检查, 无回复则升级 user 走 PartnerStack 站内渠道催",
-  "2_tax_audit": "复核窗口 8/12 (Printful W-8BEN-E Pending <=3 工作日, 8/9 提交); Impact 登录复查 (可选, 低优先)",
-  "3_placeit": "8/14 超期催办评估 (草稿 drafts/placeit-followup-email.md 已就绪, 当天检查 affiliate-programs.json status)",
-  "4_pinterest_scheduler": "not-configured (P2, 不影响佣金)",
-  "_cf_freebie_8_11": "CF freebie 8/11 解析落盘 (20 素材, 1 🎃 + 1 升华烫画, UID 673); 素材池 6 天累计 26 🎃 (去重 25); 0 新审批; P0 = 0 连续第 3 天"
- },
- "manual_checklist_2026_08_12": {
-  "generated_by": "aitoptools daily-ops cron 2026-08-12 05:4x (IMAP 实拉 + autoglm 只读复核)",
-  "1_synthesia_email_confirm": "新发现 (Rewardful): Synthesia 欢迎信 x3 (8/11 17:21-18:22) 要求确认邮箱. 激活邮件 1 天 <90d 约束 → 不自动点. user 手动: 打开邮件内确认链接 (2min) 或回复忽略. 另密码重置 x2 (17:51/17:59) 请确认是否本人操作",
-  "2_tax_audit": "8/12 复核完成: W-8BEN-E 仍 Pending (3 工作日窗口最后一天) → NOOP; 下次复核 8/13; 8/9 黄框提示需填第 4/5 行后签名上传 (若 8/13 仍 Pending 需 user 浏览器补全)",
-  "3_printify_promo": "8/13-14 二次检查窗口 (回信 8/8 00:27 已发 5 天, 0 回复); 无回复则升级 user 走 PartnerStack 站内渠道催",
-  "4_placeit": "8/14 超期催办评估 (草稿 drafts/placeit-followup-email.md 已就绪, 当天检查 affiliate-programs.json status)",
-  "_cf_freebie_8_12": "8/12 freebie 尚未到货 (常规 ~11:00 CST); 素材池 6 天累计 26 🎃 (去重 25) 充足"
- },
- "manual_checklist_2026_08_13": {
-  "generated_by": "aitoptools daily-ops cron 2026-08-13 13:1x (IMAP 实拉 + autoglm 只读复核)",
-  "1_tax_audit": "W-8BEN-E 8/13 复核 STILL PENDING (8/9 提交后第 4 个工作日, 页面 3 business days 窗口已过) - 需 user 浏览器补第 4/5 行 + 签名上传 (或联系 Printful support); 8/9 黄框提示同此",
-  "2_printify_promo": "二查窗口开启 (8/13-14): 今日扫描仍 0 回复 (回信 8/8 00:27 已发 5 天); 8/14 仍无回复则升级 user 走 PartnerStack 站内渠道催",
-  "3_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 3x 确认邮件, SINCE<90d 不自动); 密码重置 x2 请确认是否本人操作",
-  "4_placeit": "8/14 超期催办评估 (草稿 drafts/placeit-followup-email.md 就绪, user 手动发送)",
-  "5_kittl_rank_alert": "kittl review 排名 68.5->74.0 (哨兵告警) - 今日 T14 Kittl 系内链 Boost 需覆盖该页",
-  "_cf_freebie_8_13": "CF freebie 8/13 解析落盘 (20 素材, 万圣节 x2 + 圣诞 x6); 素材池 8 天累计 29 万圣节 (去重 28) 充足"
- },
- "manual_checklist_2026_08_14": {
-  "generated_by": "aitoptools daily-ops cron 2026-08-14 05:3x (IMAP 实拉 + autoglm 只读复核)",
-  "1_tax_audit": "W-8BEN-E 8/14 复核 STILL PENDING (8/9 提交后第 5 个工作日, 超 3 business days 窗口) - 需 user 浏览器补第 4/5 行 + 签名上传 (或联系 Printful support); Lines 4/5 黄框提示仍显示",
-  "2_printify_promo": "二查收口 (8/14): 今日扫描仍 0 回复 (回信 8/8 00:27 已发 6 天) - 升级 user 走 PartnerStack 站内渠道催 (站内 message 或联系 PartnerStack support)",
-  "3_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 3x 确认邮件, SINCE<90d 不自动, 已 3 天); 密码重置 x2 请确认是否本人操作",
-  "4_placeit": "8/14 超期催办触发: 草稿 drafts/placeit-followup-email.md 版本 B 就绪 (Marketplace 升级未完成基线), user 手动发送",
-  "5_t7_read": "T+7 首读数完成 (8/14): 决策树分支 B (点击 0 但位置改善: kittl review +7 位 / 全站日均展示 +10% / 8/11 pos 57.7 最佳) - 保持节奏, 9/1 前不调整; Boost 效果最早 8/15-16 数据可见",
-  "_cf_freebie_8_14": "CF freebie 8/14 未到货 (常规 ~11:00 CST, 下午轮可补抓); 素材池 8 天累计 29 万圣节 (去重 28) 充足"
- },
- "manual_checklist_2026_08_15": {
-  "generated_by": "aitoptools daily-ops cron 2026-08-15 03:5x (IMAP 实拉 + autoglm 只读复核)",
-  "1_tax_audit": "W-8BEN-E v2 上传 (8/15 02:49-02:57, Line4 Corporation + Line5 Active NFFE) 后第 1 个工作日: 仍 Pending (3 business days 窗口内正常) -> NOOP; 观察: 上传文件名 kutoolm-browser-agent.txt 存疑, user 确认是否为签名 PDF; Lines 4/5 黄框提示仍显示 (或为静态提示)",
-  "2_printify_promo": "站内催待 user 执行 (回信 8/8 已发 7 天 0 回复; PartnerStack 站内渠道)",
-  "3_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 邮件, 已 4 天; SINCE<90d 不自动)",
-  "4_placeit": "催办草稿 drafts/placeit-followup-email.md 版本 B 就绪, user 手动发送",
-  "5_boost_read": "8/15-16 Boost 效果首读窗口 (8/13 上线, GSC T+2), 明日哨兵观察",
-  "_cf_freebie_8_15": "CF freebie 8/15 未到货 (常规 ~09:53 CST, 下午轮可补抓); 素材池 9 天累计 31 万圣节 (去重 30) 充足"
- },
- "manual_checklist_2026_08_16": {
-  "generated_by": "aitoptools daily-ops cron 2026-08-16 18:1x (IMAP 实拉 + autoglm 只读复核)",
-  "1_tax_audit": "W-8BEN-E 8/16 复核 STILL PENDING - 工作日口径修正: v2 上传 8/15 (周六), 8/16 (周日) 均非工作日, 3 business days 窗口自 8/17 周一起算 (8/19 到期); 文件名 autoglm-browser-agent.pdf 确认; NOOP, 下次 8/17",
-  "2_wired_business": "新 (S3 外链): Wired Business 提交确认回执 - 需 footer 加 badge 链接 + 完成验证 (24h 内未检测自动移除); session_pool 实证 8/15 23:59 在 badge 步骤",
-  "3_printify_promo": "站内催待 user 执行 (回信 8/8 已发 8 天 0 回复; PartnerStack 站内渠道)",
-  "4_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 邮件, 已 5 天; SINCE<90d 不自动)",
-  "5_placeit": "催办草稿 drafts/placeit-followup-email.md 版本 B 就绪, user 手动发送",
-  "_cf_freebie_8_16": "CF freebie 8/16 解析落盘 (20 素材, 万圣节 +3 新); 素材池 10 天累计 36 万圣节 (去重 ~35) 充足"
- }
+  "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
+  "last_updated": "2026-08-19",
+  "monitoring": {
+    "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
+    "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
+    "next_action": "8/20: W-8BEN-E 复核 (工作日第 4 天, autoglm 需恢复) + GEO beacon 侧重试 (autoglm/API 或 dashboard 导出兜底); 8/21: W-8BEN-E 第 5 工作日仍 Pending -> 升级 user 联系 support; 8/22: Boost T+14 判定",
+    "last_live_check": "2026-08-19 12:2x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 18-Aug 4 emails (2 CF freebie + LinkedIn 噪音 + Supabase 跨项目已知) - 0 approvals / 0 merchant mails; CF freebie 8/19 (Moon Creme & 19 more) parsed -> cf-freebies/2026-08-19.md (素材池 45 halloween); tax-audit 12:19 BROWSER_UNAVAILABLE (autoglm no credits, retry); GEO beacon still NODATA (D7 token missing)",
+    "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
+    "network_diag_5_19": {
+      "imap.gmail.com:993": "TIMEOUT 8s",
+      "imap.gmail.com:587": "TIMEOUT 5s",
+      "imap.gmail.com:465": "TIMEOUT 5s",
+      "imap.gmail.com:443": "TIMEOUT 5s",
+      "smtp.gmail.com:587": "OK",
+      "smtp.gmail.com:465": "OK",
+      "www.google.com:443": "TIMEOUT 5s",
+      "DNS imap.gmail.com": "OK (12 IPs returned)"
+    },
+    "network_diag_12_00": {
+      "imap.gmail.com:993_default_dns": "142.250.157.108/109 → TCP 0.06-0.20s OK ✅",
+      "imap.gmail.com:993_AI_ADDRCONFIG_dns": "64.233.189.108/109 → TCP timeout ❌ (污染)",
+      "imap.gmail.com:143_default_dns": "TIMEOUT (明文 IMAP 不用, 但要避开)",
+      "smtp.gmail.com:587": "OK (干扰信号, 不能收邮件)",
+      "www.google.com:443": "TIMEOUT (跟 5:19 一样, 跟 imap 无关)",
+      "outlook.office365.com:993": "OK (对照组, 993 端口整体通, 不是 993 端口挡)",
+      "imaplib.IMAP4_SSL(default_dns_ip)": "LOGIN OK, 'authenticated (Success)'",
+      "imaplib.IMAP4_SSL(AI_ADDRCONFIG_ip)": "LOGIN FAIL, WinError 10060 (走污染 IP)",
+      "root_cause": "GFW DNS poisoning — AI_ADDRCONFIG getaddrinfo 命中污染池",
+      "fix": "强制 default getaddrinfo + 测 TCP 0.05s 内 OK + imaplib 用该 IP",
+      "scratch_script": ".hermes/tmp/affiliate-monitor-2026-07-30-12-00-fetch.py (可复用到下个 cron)",
+      "DNS_cache_state": "system DNS cache 12:00 返回 142.250.157.x (跟 AI_ADDRCONFIG 64.233.189.x 镜像, 一污染一真, 极罕见)"
+    },
+    "high_signal_findings_7d": {
+      "as_of": "2026-07-30 12:00",
+      "lookback_days": 7,
+      "total_messages": 5,
+      "per_sender": {
+        "printful.com": 1,
+        "printify.com": 4
+      },
+      "high_signal_count": 0,
+      "messages": [
+        {
+          "date": "2026-07-24 09:44:22",
+          "from": "printful.com",
+          "subject": "Wondering how to promote your affiliate link?",
+          "signal": "印证 7/24 Printful approval 真实 (Gmail 通道缺失时未抓到, 现独立核实)"
+        },
+        {
+          "date": "2026-07-23 21:37:15",
+          "from": "printify.com",
+          "subject": "Printify review - Challenge Launched!",
+          "signal": "印证 7/24 Printify approval + $150 blog challenge (9/29 截止)"
+        },
+        {
+          "date": "2026-07-24 03:50:23",
+          "from": "printify.com",
+          "subject": "You've completed the 'Printify review' Challenge",
+          "signal": "7/24 03:50 GMT = 7/24 11:50 Asia/Shanghai, 跟 user 上线时间一致"
+        },
+        {
+          "date": "2026-07-25 14:30:32",
+          "from": "printify.com",
+          "subject": "How Much Can You Earn with Printify?",
+          "signal": "教育邮件, 无关 approval"
+        },
+        {
+          "date": "2026-07-29 14:30:23",
+          "from": "printify.com",
+          "subject": "These Affiliates Did It. You Can Too.",
+          "signal": "教育邮件, 无关 approval"
+        }
+      ],
+      "p0_count": 0,
+      "p1_count": 0,
+      "p2_count": 0,
+      "conclusion": "✅ 7d 邮件扫描: 0 actionable 高信号. 7/24 同期 4 个 approval (claid/printful/printify/mockey) 全部已 link_deployed, 7/30 03:33 Kittl 也已. 没有 P0/P1/P2 阻塞."
+    },
+    "network_diag_7_31": {
+      "imap.gmail.com:993_default_dns": "64.233.187.108/109 → TCP timeout ❌ (新污染段, 7/30 142.250.157.x 已重污染)",
+      "imap.gmail.com:993_8.8.8.8_dns": "64.233.187.108/109 → TCP timeout ❌ (DNS 同步被污染)",
+      "imap.gmail.com:993_1.1.1.1_dns": "查询超时 ❌ (UDP 53 端口挡)",
+      "imap.gmail.com:993_9.9.9.9_dns": "74.125.71.108/109 → TCP timeout ❌ (段级屏蔽, 跨 resolver 同步)",
+      "imap.gmail.com:993_retry_default_3x": "3 次重试都返回 64.233.187.x, 无新 IP, 段级锁定",
+      "root_cause": "GFW 周期性重污染整个 default 段 (7/30 142.250.157.x → 7/31 64.233.187.x), 跨 4 DNS resolver 同步污染, 7/30 fix 是一次性窗口不是永久方案",
+      "fix_7_30_status": "fix 模式 (default getaddrinfo + 显式 IP) 失效, 7/31 跨 resolver 验证不工作",
+      "user_action_options": {
+        "A_proxy": "走 HTTP/SOCKS 代理 (公司 VPN / Cloudflare WARP / 自建) — 1-2h 实施, 治本但需 user 决策",
+        "B_gmail_api": "改 Gmail API + OAuth HTTPS — 2h 实施, 但 443 也 timeout (per 7/30 5:19), 可能同样挡",
+        "C_intermittent": "接受 DEGRADED, cron 改推算 state file + user 手动告知 — 0 实施, 失去 24h 自动发现",
+        "D_wait_window": "等 24h 后 GFW 短期放行窗口 — 0 实施, 赌时间差, 风险高"
+      },
+      "scratch_script": ".hermes/tmp/affiliate-monitor-2026-07-31-12-00-fetch.py (多 DNS resolver 版, 可复用 A 方案)"
+    },
+    "high_signal_findings_24h_7_31": {
+      "as_of": "2026-07-31 15:11",
+      "lookback_hours_24h": 24,
+      "lookback_days_7d": 7,
+      "status": "DEGRADED — Gmail 通道不可用, 24h 邮件扫描未跑",
+      "inferred_from_7_30_baseline": {
+        "24h_baseline_7_30": 1,
+        "7d_baseline_7_30": 5,
+        "high_signal_baseline_7_30": 0
+      },
+      "p0_count_24h": "DEGRADED — 无法独立核实, 6 个 approved-active 全部 link_deployed, 推断 0",
+      "p1_count_24h": "DEGRADED — 无法独立核实 3 项 aging (Gelato/PS/Deel) 是否出结果, state file 推断无变化",
+      "p2_count_24h": "DEGRADED — 4 申请候选 + 5 评测候选 + 11 选 2 维持暂缓",
+      "conclusion": "❌ 24h 邮件扫描 DEGRADED, 真实邮件证据缺失. 7/30 baseline 5 封 0 high-signal 维持. 6 个 approved-active 全部 link_deployed, P0 仍 = 0 (按 state file 推断). 3 项 aging 升 7d 阈值临界, state file 无变化."
+    },
+    "high_signal_findings_24h_8_1": {
+      "as_of": "2026-08-01 09:56",
+      "status": "PARTIALLY-RESTORED — IMAP 仍 DEGRADED, user webmail 兜底告知 2 封邮件",
+      "user_reported_emails": {
+        "gelato_welcome": {
+          "date": "2026-08-01",
+          "from": "partnerships@gelato.com",
+          "subject": "Welcome to the Gelato Partner Program",
+          "signal": "✅ Gelato 批准! 7/24 重申 → 8 天出结果 (正常 7-14 天窗口). 推广链接待 dash.partnerstack.com 取.",
+          "link_obtained": "try.gelato.com/upftmv48rtcl (K3 8/1 10:02 dash.partnerstack.com 取链)"
+        },
+        "printful_marketing": {
+          "date": "2026-08-01",
+          "from": "printful.com",
+          "subject": "Winter's coming. Your lineup should too.",
+          "signal": "📢 营销邮件非验证. AOC 卫衣/运动衫新品 = 内容素材 (Picjam/GreenOnion 评测可提). Printful verification 邮件仍未见 (in-house 系统对内部账号可能跳过)."
+        }
+      },
+      "p0_count_24h": 1,
+      "p1_count_24h": 0,
+      "p2_count_24h": 1,
+      "conclusion": "Gelato approval + link obtained 同日 (8/1). 7 个 approved-active 全部 link_deployed (含 Gelato 新链). 8/2 攒批 1 commit 替换站内 38+ 处 gelato.com 链接. PayPal 收款 K3 后续设. PartnerStack Network / Deel 仍 pending.",
+      "link_obtained": true,
+      "paypal_setup": "pending (K3 dash.partnerstack.com 后续设)"
+    },
+    "network_diag_8_1_22_55": {
+      "as_of": "2026-08-01 22:55:43",
+      "imap.gmail.com:993_default_dns": "108.177.125.108 → TCP 3s timeout ❌ (新污染段, 7/30 142.250.157.x → 7/31 64.233.187.x → 8/1 108.177.125.x)",
+      "imap.gmail.com:993_8.8.8.8_dns": "142.251.8.109 → TCP 60ms OK ✅ (新! 首次返回可达 IP, 端口 993 通, 窗口期)",
+      "imap.gmail.com:993_1.1.1.1_dns": "command timeout ❌ (UDP 53 仍挡, 7/31 一致)",
+      "imap.gmail.com:993_9.9.9.9_dns": "2a00:1450:400c:c0b::6d (IPv6) → IPv4 connect getaddrinfo failed ❌",
+      "imap.gmail.com:993_retry_8.8.8.8": "n/a (8.8.8.8 IP 1 hit 就 OK, 不需重试)",
+      "root_cause": "GFW 周期性重污染 default DNS 段 (7/30 → 7/31 → 8/1 三次换段), 8.8.8.8 段首次出现可达 IP 142.251.8.109, 是 7/30 fix 模式 (强制 default IP) 失效后, 8.8.8.8 强制 IP 模式 复用的窗口期",
+      "fix_7_30_status": "fix 模式 (default getaddrinfo + 显式 IP) 失效, 跨 3 天 (7/30 → 7/31 → 8/1) 验证不工作",
+      "fix_8.8.8.8_status": "🟡 窗口期, 8.8.8.8 强制 IP 142.251.8.109 端口 993 通, 但 Gmail App Password D7 缺, login 仍 fail. 6-12h 后 GFW 可能再次污染",
+      "user_action_options": {
+        "P1-A_app_password_now": "今天 23:00 前补 Gmail App Password (16 字符, Google 账号 → 安全 → 两步验证 → 应用专用密码), 写入 .hermes/secrets/gmail_credentials.json, 之后 IMAP 用 8.8.8.8 IP 142.251.8.109 强制连, 8.8.8.8 窗口期 + 凭证补 = 通道激活",
+        "P1-B_wait_window": "等 24h 后 GFW 短期放行窗口 — 0 实施, 赌时间差, 风险高 (7/30 教训: 窗口期 6-12h 就过)",
+        "P1-C_proxy": "走 HTTP/SOCKS 代理 (公司 VPN / Cloudflare WARP / 自建) — 1-2h 实施, 治本但需 user 决策",
+        "P1-D_gmail_api": "改 Gmail API + OAuth HTTPS — 2h 实施, 但 443 也 timeout (per 7/30 5:19 + 7/31), 可能同样挡",
+        "P1-E_intermittent": "接受 DEGRADED, cron 改推算 state file + user 手动告知 — 0 实施, 失去 24h 自动发现, 已持续 14d"
+      },
+      "scratch_script": ".hermes/tmp/affiliate-monitor-2026-08-01-22-55-multi-resolver.py (本轮, 可复用 P1-A 方案)"
+    },
+    "high_signal_findings_24h_8_1_22_55": {
+      "as_of": "2026-08-01 22:55:43",
+      "status": "PARTIALLY-RESTORED — IMAP 网络层 8.8.8.8 窗口期 OK, 凭证层 D7 仍缺, agent 无法独立抓邮件, K3 8/1 09:56 + 10:02 webmail 兜底告知",
+      "user_reported_emails_8_1": {
+        "gelato_welcome_8_1_09_56": {
+          "date": "2026-08-01",
+          "from": "partnerships@gelato.com (Alex)",
+          "subject": "Welcome to the Gelato Partner Program",
+          "signal": "✅ Gelato 批准! 7/24 重申 → 8 天出结果 (正常 7-14 天窗口内). 推广链接 K3 8/1 10:02 从 dash.partnerstack.com 取到 (try.gelato.com/upftmv48rtcl, 重定向 gelato.com/print-on-demand). 7 → 7 approved-active (含 Gelato).",
+          "link_obtained": "try.gelato.com/upftmv48rtcl (K3 8/1 10:02 dash.partnerstack.com 取链)"
+        },
+        "printful_marketing_8_1": {
+          "date": "2026-08-01",
+          "from": "printful.com",
+          "subject": "Winter's coming. Your lineup should too.",
+          "signal": "📢 营销邮件非验证. AOC 卫衣/运动衫新品 = 内容素材 (Picjam/GreenOnion 评测可提). Printful verification 邮件仍未见 (in-house 系统对内部账号可能跳过). D8+ P1 仍 hold, K3 浏览器点确认链接 1min 解决"
+        }
+      },
+      "agent_independent_findings_8_1_22_55": {
+        "imap_channel_status": "PARTIAL-RESTORE (网络层 8.8.8.8 OK + 凭证层 D7 缺)",
+        "8.8.8.8_window": "首次返回可达 IP 142.251.8.109, TCP 60ms OK, 端口 993 通. 是补 App Password 的窗口期",
+        "default_dns_new_segment": "108.177.125.x 段 (7/30 142.250.157.x → 7/31 64.233.187.x → 8/1 108.177.125.x), TCP timeout, 跨 3 天重污染",
+        "8.8.8.8_window_TTL_estimate": "6-12h (per 7/30 教训, GFW 窗口期短, 错过需等下个周期)"
+      },
+      "p0_count_24h": 0,
+      "p0_notes": "✅ 无. Gelato 8/1 10:02 link obtained + commit 86756b9 5 处替换 + 8/2 攒批 38+ 处. 1 天内不算 P0 红",
+      "p1_count_24h": 5,
+      "p1_notes": "Gmail IMAP 通道 D14 PARTIAL-RESTORE (8.8.8.8 OK + D7 缺凭证) / Claid PayPal D8+ / Printful 邮箱 D8+ / PartnerStack Network 8d / Deel 8d (5d 阈值突破, 8d). 全部需 user 浏览器 1-5min 行动",
+      "p2_count_24h": 11,
+      "p2_notes": "维持暂缓 (K3 7/30 03:43 拍板 等 Kittl 跑通): 4 申请候选 (Hostinger/Jasper/Writesonic/Copy.ai) + 5 评测候选 (M3 gate) + 2 resolved (6 个 Impact 系 Canva/Shopify/Bluehost/Surfer/Copy.ai/Placeit 等 Marketplace 升级后启用)",
+      "conclusion": "✅ 7 → 7 approved-active 全部 link 到位 (含 Gelato 8/1 新链). 6 个全 link_deployed + Gelato 部分 5/38+ 部署. P0 = 0 (攒批纪律维持). P1 = 5 (3 个 user 行动 + 2 个 aging). Gmail IMAP 8.8.8.8 出现窗口期, 建议今天 23:00 前补 App Password, cron 8/2 12:00 验证 login"
+    },
+    "high_signal_findings_24h_8_5": {
+      "as_of": "2026-08-05 10:40",
+      "status": "RESTORED — IMAP 独立扫描 57 封 (SINCE 30-Jul), 高价值 4 条",
+      "new_findings": {
+        "claid_reset_password_8_4": {
+          "date": "2026-08-04 08:02",
+          "from": "partners@claid.ai",
+          "subject": "Reset password instructions",
+          "signal": "FirstPromoter 支持 8/3 手动触发的重置邮件已到收件箱 (Gabriela 8/3 12:22 转述 FirstPromoter 建议 forgot-password; 8/4 10:57 确认已手动触发). P1 Claid 登录问题解决路径完整就绪, 需 user 浏览器点击 (严禁 agent 自动点)."
+        },
+        "letsenhance_followup_8_4": {
+          "date": "2026-08-04 10:57",
+          "from": "gabriela.d@letsenhance.io",
+          "subject": "Re: Your Monthly Performance Update",
+          "signal": "Gabriela 确认 FirstPromoter 已手动触发重置邮件, 建议查收件箱/垃圾箱. 线索闭环: 8/2 升级 -> 8/3 FirstPromoter 建议 -> 8/4 邮件到达."
+        },
+        "google_security_8_3_20_43": {
+          "date": "2026-08-03 20:43",
+          "from": "accounts.google.com",
+          "subject": "安全提醒",
+          "signal": "已授权 \"Microsoft apps and services\" 访问 Google 账号数据 — 若 user 未主动操作需检查账号活动; 8/3 03:11 两条为已知 App Password 轮换 (移除旧 Hermes 密码 + 新建 Hermes IMAP)."
+        },
+        "printify_promo_8_4": {
+          "date": "2026-08-04 14:30",
+          "from": "printify.com",
+          "subject": "Ready-to-Use Banners, Logos and Your Promo Guide",
+          "signal": "营销物料 (banner/logo 素材), 可用于 $150 blog challenge (9/29 截止) 推广素材, 非审批邮件."
+        }
+      },
+      "confirmed_baseline": {
+        "partnerstack_network_declined": "8/1 邮件 (networkquality@partnerstack.com) 确认拒绝: \"Your profile is not a great fit, but may be in the future\". 已有合作 (Printify/Gelato) 不受影响. 与 8/3 基线一致, 本次 IMAP 独立核实原文.",
+        "claid_monthly_8_1": "Clicks 0 / Referrals 0 / Customers 0 / Earnings $0 (7 月, 已知基线)",
+        "gelato_welcome_7_31": "welcome 邮件 (alexandra.drewnicki@gelato.com) 在收件箱, 已知基线"
+      },
+      "p0_count_24h": 1,
+      "p0_notes": "Printful 联盟链接 15297661:*** 脱敏泄漏已上线 (out/ 55 文件 110+ 坏链, 8/3 程序化 push 带入) — 数据文件已修 (affiliates.json + tools/printful.json), 待下次 build+push 生效. 死链属紧急修复范畴, 建议随 8/5 攒批或单独 push.",
+      "p1_count_24h": 3,
+      "p1_notes": "Claid 重置密码 (链接已到, 待 user 点击+更新凭证) / Claid PayPal 收款待设 (D12+) / Printful 邮箱确认待点 (D12+)",
+      "p2_count_24h": 11,
+      "p2_notes": "维持暂缓 (K3 7/30 拍板等 Kittl 跑通): 4 申请候选 + 5 评测候选 + 2 resolved",
+      "conclusion": "Gmail IMAP 通道彻底恢复 (SOCKS5). Claid 登录问题解决路径闭环 (重置邮件已到). 新 P0: Printful *** 坏链 (数据已修, 待部署). PartnerStack Network 拒绝已 IMAP 独立核实 (无新信息)."
+    },
+    "high_signal_findings_24h_8_6": {
+      "as_of": "2026-08-06 12:07",
+      "status": "RESTORED — IMAP 68 封 (SINCE 30-Jul), 0 新审批",
+      "new_findings": {
+        "claid_reset_2nd_8_5": {
+          "date": "2026-08-05 09:25+09:30",
+          "from": "partners@claid.ai",
+          "subject": "Reset password instructions (第二条)",
+          "signal": "8/5 09:25 + 09:30 两条重置邮件 (token HpS3ToZt5HfH5z9fBnQG). 8/5 11:28 Gabriela 确认首条 token 已过期. 按 v4 基线: user 8/5 已全部办妥 (account-fully-configured), 勿再提醒."
+        },
+        "letsenhance_8_5_11_28": {
+          "date": "2026-08-05 11:28",
+          "from": "gabriela.d@letsenhance.io",
+          "subject": "Re: Your Monthly Performance Update",
+          "signal": "FirstPromoter 确认首条 reset token 已过期, 建议 claid.firstpromoter.com/forgot-password 重发. 已由 user 8/5 处理 (v4 基线)."
+        },
+        "supabase_paused_8_5": {
+          "date": "2026-08-05 05:05",
+          "from": "supabase.com",
+          "subject": "Your Supabase Project zprintpro-production has been paused",
+          "signal": "⚠️ 非本域 (zprintpro 项目). 免费项目被暂停, 不阻塞 aitoptools 联盟. 提醒 K3 处理 zprintpro 侧."
+        },
+        "printful_halloween_8_6": {
+          "date": "2026-08-06 01:23",
+          "from": "newsletter.printful.com",
+          "subject": "Halloween products",
+          "signal": "营销邮件. 素材可作内容 (Halloween 旺季 POD 选题)."
+        }
+      },
+      "p0_count_24h": 1,
+      "p0_notes": "NordVPN 裸链 (approved 7/16 但 go.nordvpn.net 跟踪链从未部署, nordvpn-review 页 2 CTA 零归因) — 数据已修, 待 build+push.",
+      "p1_count_24h": 1,
+      "p1_notes": "Printful 邮箱确认邮件 (7/20 17:00, D17) 仍待 user 点击 — 唯一未激活项, 可能已过期需重发.",
+      "p2_count_24h": 11,
+      "p2_notes": "维持暂缓. Supabase zprintpro 暂停 (跨项目提醒). Google 8/3 20:43 Microsoft 授权 (非自主动作, 已 3 天无反馈, 降 P2).",
+      "conclusion": "0 新审批. Printful 坏链 P0 已随 8/6 攒批上线 (线上字节级验证真链). 新 P0: NordVPN 裸链 (数据已修待 push). Printful 邮箱确认 D17 仍唯一 user 行动项."
+    },
+    "high_signal_findings_24h_8_8_14_2x": {
+      "as_of": "2026-08-08 14:20",
+      "status": "RESTORED — IMAP 独立扫描 92 封 (SINCE 29-Jul), 0 新审批",
+      "new_findings": {
+        "cf_free_picks_8_8": {
+          "date": "2026-08-08 05:54 CST",
+          "from": "hi@creativefabrica.com",
+          "subject": "Today's free picks: Wildlife Bear, Rustic Forest Bear Head & 19 more",
+          "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-08.md. 万圣节素材: Trending Halloween Dog / Spooky Treats / Skeletons Dancing / Sweet And Twisted (暗黑甜点系, 边缘归类). 素材池连续 3 天 (8/6-8/8) 积累 ≥10 个 🎃, 远超 Halloween 辐条①门槛."
+        }
+      },
+      "p0_count_24h": 1,
+      "p0_notes": "Printful 邮箱确认 — 唯一未激活项. 7/20 确认链接已过期 (8/8 00:50 headless 实测 'Email confirmation request does not exist'), 后台重发被阻 = printful_session_cookie 缺失. user 二选一: A) 装 AutoGLM Chrome 扩展 (2min) → AutoClaw 自动提取; B) 手动 F12 复制 cookie → .hermes/secrets/printful_session_cookie.txt → watcher (每时 8-22) 自动重发.",
+      "p1_count_24h": 2,
+      "p1_notes": "Printify promo code 回复检查 (8/11, 回信 8/8 00:27 已发, SMTP 465 留证) / Placeit Impact pending (8/14 超期催办草稿已就绪, 当天评估发送).",
+      "p2_count_24h": 7,
+      "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai, K3 7/30 拍板等 Kittl 跑通) / PartnerStack Network 重试待 user 拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目).",
+      "conclusion": "0 新审批 (SINCE 29-Jul 92 封全量核实). CF freebie 8/8 解析完成 (20 素材). 唯一 P0 = Printful cookie 阻塞不变. Printify promo 回信已发, 8/11 查回复. Placeit 8/14 触发催办."
+    },
+    "high_signal_findings_24h_8_9": {
+      "as_of": "2026-08-09 16:3x",
+      "status": "RESTORED — IMAP 独立扫描 23 封 (SINCE 08-Aug), 0 新审批 / 0 新商户邮件",
+      "new_findings": {
+        "cf_free_picks_8_9": {
+          "date": "2026-08-08 23:24 (提前到达, 常规 ~05:54 CST)",
+          "from": "hi@creativefabrica.com",
+          "subject": "Today's free picks: Fall Halloween Sublimation Bundle & 19 more",
+          "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). UID 640, 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-09.md. 万圣节素材 x5: Fall Halloween Sublimation Bundle / 32 Cute Halloween Ghost Pngs / Spooky Halloween Shop Clipart / Vintage Halloween Ghost Witch / Spooky Pumpkin Chase. 素材池 4 天累计 19 🎃, 远超 Halloween 辐条①门槛; 8/11 Kittl 实测建议用 Fall Halloween Sublimation Bundle (升华烫画 = Kittl 主要场景)."
+        }
+      },
+      "p0_count_24h": 1,
+      "p0_notes": "Printful 邮箱确认 — 唯一未激活项 (D20). 7/20 确认链接已过期 (8/8 headless 实测), 后台重发被阻 = printful_session_cookie 缺失. user 二选一: A) 装 AutoGLM Chrome 扩展 (2min) → AutoClaw 自动提取; B) 手动 F12 复制 cookie → .hermes/secrets/printful_session_cookie.txt → watcher (每时 8-22) 自动重发.",
+      "p1_count_24h": 2,
+      "p1_notes": "Printify promo code 回复检查 (8/11, 回信 8/8 00:27 已发; 今日无回复属正常 — 未到检查窗口) / Placeit Impact pending (8/14 超期催办, 草稿 drafts/placeit-followup-email.md 就绪, 8/14 当天评估).",
+      "p2_count_24h": 7,
+      "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai, K3 7/30 拍板等 Kittl 跑通) / PartnerStack Network 重试待 user 拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目). 今日 23 封噪音 = togthr CI 失败 x12 (跨项目) + GSC 通知 x7 (zprintpro/togthr, 跨项目) + LinkedIn 1.",
+      "conclusion": "0 新审批 (SINCE 08-Aug 23 封全量核实). CF freebie 8/9 解析完成 (20 素材, 5 🎃). 唯一 P0 = Printful cookie 阻塞不变 (D20). Printify promo 回复未到 (正常, 8/11 检查). Placeit 8/14 触发催办."
+    },
+    "tax_audit_8_9": {
+      "printful": "PENDING (browser 实证, NOOP per protocol)",
+      "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; W-8 不适用佐证 8/1, 余额<)"
+    },
+    "high_signal_findings_24h_8_10": {
+      "as_of": "2026-08-10 12:1x",
+      "status": "RESTORED — IMAP 独立扫描 (SINCE 09-Aug 28 封全量核实), 0 新审批 / 0 新商户邮件",
+      "new_findings": {
+        "cf_free_picks_8_10": {
+          "date": "2026-08-10 04:05 UTC",
+          "from": "hi@creativefabrica.com",
+          "subject": "Today's free picks: Handmade & 19 more",
+          "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). UID 662, 21 素材解析落盘 .hermes/logs/cf-freebies/2026-08-10.md. 万圣节素材 x6: Halloween Black Cat Embroidery (刺绣=印刷垂直强相关) / Witch Cat Coven / Spooky Halloween Bundle / Camo Ghost Boo / Preppy Frames / Skeletons Dancing (8/8 重复). 素材池 5 天累计 25 🎃 (去重 24), 8/11 Kittl 实测素材充足."
+        },
+        "printify_grow_together_8_9": {
+          "date": "2026-08-09 14:30 UTC (上次扫描后新到)",
+          "from": "affiliate@printify.com",
+          "subject": "What's Next? Let's Grow Together🚀",
+          "signal": "通用成长营销邮件 (PartnerStack 代发), 非 promo code 回复. 佐证: affiliate link earns commissions for 12 months per referral. 含合作邀约/反馈邀请 — 不动作. promo code 回复仍未到 (8/11 检查窗口)."
+        }
+      },
+      "p0_count_24h": 0,
+      "p0_notes": "无. Printful cookie BLOCKER 已于 8/9 解除 (email_verified=true), 7 approved-active 全 link_deployed (8/10 affiliates.json 核查确认).",
+      "p1_count_24h": 2,
+      "p1_notes": "Printify promo code 回复检查 (8/11, 回信 8/8 00:27 已发, 今日仍无回复属正常 — 未到窗口) / Placeit Impact pending (8/14 超期催办, 草稿 drafts/placeit-followup-email.md 就绪, 8/14 当天评估).",
+      "p2_count_24h": 7,
+      "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai, K3 7/30 拍板等 Kittl 跑通) / PartnerStack Network 重试待 user 拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目). 今日 28 封噪音 = togthr CI 失败 x10 + GSC zprintpro/togthr x8 + Google Business Profile zprintpro 月报 x1 + LinkedIn x1.",
+      "conclusion": "0 新审批 (SINCE 09-Aug 28 封全量核实). CF freebie 8/10 解析完成 (21 素材, 6 🎃). Printify 8/9 营销邮件非回复. P0 = 0 (自 8/9 Printful 解除后首次清空). 下个检查点: 8/11 Printify promo + 8/12 tax-audit 复核 + 8/14 Placeit 催办."
+    },
+    "high_signal_findings_24h_8_11": {
+      "as_of": "2026-08-11 12:1x",
+      "status": "RESTORED — IMAP 独立扫描 (SINCE 10-Aug 21 封全量核实), 0 新审批 / 0 新商户邮件",
+      "new_findings": {
+        "cf_free_picks_8_11": {
+          "date": "2026-08-11 03:30 UTC",
+          "from": "hi@creativefabrica.com",
+          "subject": "Today's free picks: Child & 19 more",
+          "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). UID 673, 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-11.md. 万圣节素材 x1: Halloween Fall Stripes Pattern Bundle; 升华烫画素材 x1: Grandparents Grandma Grandpa Sublimation (8/11 Kittl 实测日备选, 首选仍 8/9 Fall Halloween Sublimation Bundle). 素材池 6 天累计 26 🎃 (去重 25)."
+        }
+      },
+      "p0_count_24h": 0,
+      "p0_notes": "无. 7 approved-active 全 link_deployed.",
+      "p1_count_24h": 2,
+      "p1_notes": "Printify promo code 回复检查 (8/11 窗口到期: 回信 8/8 00:27 已发, 72h 无回复 — 8/13-14 二次检查, 无回复则升级 user 走 PartnerStack 站内渠道催) / Placeit Impact pending (8/14 超期催办, 草稿 drafts/placeit-followup-email.md 就绪, 8/14 当天评估).",
+      "p2_count_24h": 7,
+      "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai, K3 7/30 拍板等 Kittl 跑通) / PartnerStack Network 重试待 user 拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目). 今日噪音 16 封 = togthr CI 失败 x6 + GSC x8 (zprintpro/togthr) + LinkedIn/Dropbox/Supabase/GMC x4.",
+      "conclusion": "0 新审批 (SINCE 10-Aug 21 封全量核实). CF freebie 8/11 解析完成 (20 素材, 1 🎃 + 1 升华烫画). Printify promo 回复 72h 窗口到期仍未到 (下个检查点 8/13-14, 无回复则升级). P0 = 0 连续第 3 天. 下个检查点: 8/12 tax-audit 复核 + 8/14 Placeit 催办."
+    },
+    "high_signal_findings_24h_8_12": {
+      "as_of": "2026-08-12 05:4x",
+      "status": "RESTORED — IMAP 独立扫描 (SINCE 30-Jul 135 封全量核实), 1 新商户邮件批次 (Synthesia)",
+      "new_findings": {
+        "synthesia_8_11": {
+          "date": "2026-08-11 17:21-18:22",
+          "from": "affiliates@rewardful.com (Conrad, Synthesia)",
+          "subject": "x3 \"Please confirm your email address\" + x2 \"Reset password instructions\"",
+          "signal": "✅ 新商户申请: Synthesia Affiliate Program - Personal Plan (Rewardful 网络, 账户 jerome@aitoptools.net). 欢迎信要求: 1. 确认邮箱 2. 取专属链接登录. 密码重置 x2 (17:51/17:59) 需 user 确认是否本人触发. 激活邮件仅 1 天 (<90d 约束) → 不自动点击, 待 user 决定. 已新增 affiliate-programs.json 条目 (status=applied-pending-email-confirm)."
+        }
+      },
+      "p0_count_24h": 0,
+      "p0_notes": "无. 7 approved-active 全 link_deployed; Printful tax 无阻塞 (Pending 正常审核中).",
+      "p1_count_24h": 3,
+      "p1_notes": "Printful W-8BEN-E Pending (8/12 复核仍 Pending, 下次 8/13) / Printify promo 回复 (8/13-14 二次检查) / Synthesia 邮箱确认待 user 手动点 (新)",
+      "p2_count_24h": 7,
+      "p2_notes": "维持暂缓: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai) / PartnerStack Network 重试待拍板 / Pinterest scheduler / GSC oauth / Supabase zprintpro 暂停 (跨项目). 今日噪音: togthr CI + GSC 通知等 (非本域).",
+      "conclusion": "1 新商户批次 (Synthesia/Rewardful, 8/11 申请, 确认链接待 user). CF freebie 8/12 尚未到货 (常规 ~11:00 CST, 昨 8/11 UID 673 已解析). Printful W-8BEN-E 8/12 复核仍 Pending (3 工作日窗口最后一天) → NOOP, 8/13 再复核. P0 = 0 连续第 4 天."
+    },
+    "tax_audit_8_12": {
+      "printful": "STILL-PENDING (browser 实证 8/12 05:44, 8/9 提交后第 3 个工作日; NOOP per protocol, 下次 8/13)",
+      "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 未自动登录, 低优先)",
+      "note_1223": "12:2x 轮未重复 browser 复核 (当日 05:44 已复核 Pending); 下次 8/13"
+    },
+    "high_signal_findings_24h_8_12_1223": {
+      "as_of": "2026-08-12 12:2x",
+      "status": "RESTORED — IMAP 增量扫描 (SINCE 11-Aug 15 封全量核实), 0 新审批 / 0 新商户邮件",
+      "new_findings": {
+        "cf_free_picks_8_12": {
+          "date": "2026-08-11 22:13 UTC (提前到达, 8/12 06:13 CST)",
+          "from": "hi@creativefabrica.com",
+          "subject": "Today's free picks: I choose you and I'll choose you. Over and over and over. & 19 more",
+          "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-12.md. 万圣节素材 x1: Coquette Patchwork Fall Pumpkin PNG (南瓜). 圣诞素材 x4 提前出现 (Q4 备选). 素材池 7 天累计 27 🎃 (去重 26)."
+        },
+        "printful_newsletter_8_11": {
+          "date": "2026-08-11 17:09",
+          "from": "newsletter.printful.com",
+          "subject": "5 winners. Free merch. You in?",
+          "signal": "营销邮件 (免费周边抽奖), 非审批/非验证. 素材可作内容."
+        },
+        "supabase_security_8_11": {
+          "date": "2026-08-11 18:18",
+          "from": "supabase.com",
+          "subject": "Action required: security vulnerabilities detected in your projects",
+          "signal": "⚠️ 跨项目 (zprintpro 域). 提醒 K3 处理 zprintpro 侧 Supabase 安全漏洞通知."
+        }
+      },
+      "p0_count_24h": 0,
+      "p0_notes": "无. 7 approved-active 全 link_deployed.",
+      "p1_count_24h": 3,
+      "p1_notes": "Printful W-8BEN-E Pending (8/13 复核) / Printify promo 回复 (8/13-14 二查, 今日增量扫描确认 0 回复) / Synthesia 邮箱确认待 user 手动点",
+      "p2_count_24h": 7,
+      "p2_notes": "维持暂缓清单不变. 今日噪音: togthr CI 失败 x4 + google.com GMC 通知 x2 (zprintpro 跨项目) + supabase 安全通知 (跨项目).",
+      "conclusion": "0 新审批 (SINCE 11-Aug 15 封全量核实). CF freebie 8/12 已到货并解析 (20 素材, 1 🎃, 早间轮未抓到现在补抓). Printify promo 回复仍 0 (8/13-14 二查窗口). P0 = 0 连续第 5 天."
+    },
+    "rank_sentinel_8_12": {
+      "status": "PIPELINE-OK (首拉 2026-08-12 12:2x)",
+      "window": "2026-08-05..2026-08-11 (同窗口比较, GSC T+1)",
+      "alerts": 0,
+      "note": "20/20 query 命中, 位置与 baseline 完全一致 (数据定稿无变动). 8/13 起正式每日拉取, 滚动窗口 8/6..8/12. 日志 .hermes/logs/rank-sentinel-2026-08-12.md"
+    },
+    "high_signal_findings_24h_8_13": {
+      "as_of": "2026-08-13 13:1x",
+      "status": "RESTORED - IMAP 增量扫描 (SINCE 12-Aug 15 封全量核实), 0 新审批 / 0 新商户邮件",
+      "new_findings": {
+        "cf_free_picks_8_13": {
+          "date": "2026-08-13 03:59 UTC",
+          "from": "hi@creativefabrica.com",
+          "subject": "Today's free picks: Whimsical Christmas Moose Clipart Bundle & 19 more",
+          "signal": "Creative Fabrica 每日免费资产邮件 (v5 freebie 解析器已处理). 20 素材解析落盘 .hermes/logs/cf-freebies/2026-08-13.md. 万圣节素材 x2: Cute Ghost with Witch Hat / BOO Halloween Embroidery (刺绣=印刷垂直强相关). 圣诞素材 x6 提前出现 (含 headline + 刺绣 x1). 素材池 8 天累计 29 万圣节 (去重 28), 远超 Halloween 辐条①门槛."
+        }
+      },
+      "p0_count_24h": 0,
+      "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
+      "p1_count_24h": 4,
+      "p1_notes": "Printful W-8BEN-E Pending 超 3 工作日窗口 (8/13 复核, 需 user 补第 4/5 行 + 签名上传) / Printify promo 回复 (8/13-14 二查窗口开启, 今日仍 0 回复; 8/14 无回复则升级 user 走 PartnerStack 站内催) / Synthesia 邮箱确认待 user 手动点 / Placeit 8/14 超期催办评估.",
+      "p2_count_24h": 7,
+      "p2_notes": "暂缓清单不变: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai) / PartnerStack Network 重试 / Pinterest scheduler / Supabase zprintpro 暂停 (跨项目) / CF Web Analytics 无 API token (beacon 已上线, 8/19 GEO 首读数需 token 或 dashboard 人工导出).",
+      "conclusion": "0 新审批 (SINCE 12-Aug 15 封全量核实). CF freebie 8/13 到货解析完成 (20 素材, 万圣节 x2 + 圣诞 x6). Printify promo 0 回复 (二查窗口 8/13-14). W-8BEN-E 已过 3 工作日窗口仍 Pending -> 升级 user. P0 = 0 连续第 6 天."
+    },
+    "tax_audit_8_13": {
+      "printful": "STILL-PENDING (browser 实读 8/13 13:14, 8/9 提交后第 4 个工作日, 页面提示 3 business days 窗口已过; 需 user 补第 4/5 行 + 签名上传或联系 support; 下次复核 8/14)",
+      "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
+    },
+    "rank_sentinel_8_13": {
+      "status": "PIPELINE-OK (正式每日拉取第 1 天)",
+      "window": "2026-08-06..2026-08-12 (滚动窗口, 与 baseline 8/5..8/11 比较)",
+      "alerts": 1,
+      "alerts_detail": "kittl review 68.5->74.0 (下跌 5.5 位, imps 2->1) - Kittl 系变现目标词, 与今日 T14 Kittl 系内链 Boost 直接相关, 优先处理",
+      "note": "16/20 query 命中 (4 个零展示目标词无数据属正常). 日志 .hermes/logs/rank-sentinel-2026-08-13.md"
+    },
+    "tax_audit_8_14": {
+      "printful": "STILL-PENDING (browser 实读 8/14 05:38, 8/9 提交后第 5 个工作日; 页面提示 'up to 3 business days' 窗口已过; Lines 4/5 黄色提示仍显示; Edit 可用; 只读未做任何操作) -> 升级 user 补第 4/5 行 + 签名上传或联系 support; 下次复核 8/15",
+      "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
+    },
+    "high_signal_findings_24h_8_14": {
+      "as_of": "2026-08-14 05:3x",
+      "status": "RESTORED - IMAP 增量扫描 (SINCE 13-Aug 5 封全量核实), 0 新审批 / 0 新商户邮件",
+      "new_findings": {
+        "gsc_review_summary_schema_8_13": {
+          "date": "2026-08-13 01:48 -0700",
+          "from": "Google Search Console Team <sc-noreply@google.com>",
+          "subject": "在针对 aitoptools.net 提交的网址中检测到新的评价摘要结构化数据问题",
+          "signal": "aitoptools 本域新告警: 提交的网址检测到新的 review-summary 结构化数据问题 (具体 URL 需 GSC dashboard 查看). 不阻塞联盟, 列入 P2 待查 (8/19 前安排核查或由 GSC 周报覆盖)"
+        },
+        "cf_free_picks_8_14": {
+          "date": "未到货 (常规 ~11:00 CST 到达, 当前 05:30)",
+          "signal": "8/14 freebie 未到货; 8/13 已解析 (20 素材, 万圣节 x2 + 圣诞 x6). 素材池 8 天累计 29 万圣节 (去重 28) 充足"
+        }
+      },
+      "noise": "Google Merchant Center zprintpro 7月效果 (跨项目) + LinkedIn x2 (噪音)",
+      "p0_count_24h": 0,
+      "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
+      "p1_count_24h": 4,
+      "p1_notes": "Printful W-8BEN-E Pending 超窗口 D5 (8/14 复核, user 补第 4/5 行 + 签名上传) / Printify promo 回复 (8/14 二查收口: 仍 0 回复 -> 升级 user 走 PartnerStack 站内催) / Synthesia 邮箱确认待 user 手动点 / Placeit 8/14 超期催办评估 (草稿就绪, user 手动发送)",
+      "p2_count_24h": 7,
+      "p2_notes": "暂缓清单不变: 新申请候选 (Hostinger/Jasper/Writesonic/Copy.ai) / PartnerStack Network 重试 / Pinterest scheduler / Supabase zprintpro 暂停 (跨项目) / CF Web Analytics 无 API token (8/19 GEO 首读数需 token 或 dashboard 人工导出; 8/14 观察: user Chrome 会话已打开 CF Analytics dashboard 标签页, 后续可用 autoglm 只读) / 新增: GSC review-summary 结构化数据告警待查",
+      "conclusion": "0 新审批 (SINCE 13-Aug 5 封全量核实). CF 8/14 freebie 未到货 (常规 11:00 CST, 下午轮可补). W-8BEN-E 超窗口 Pending D5 -> 升级 user. Printify promo 二查收口 0 回复 -> 升级 user. P0 = 0 连续第 7 天."
+    },
+    "rank_sentinel_8_14": {
+      "status": "PIPELINE-OK (正式每日拉取第 2 天)",
+      "window": "2026-08-07..2026-08-13 (滚动窗口, 与昨日快照 8/6..8/12 比较; 同时重拉昨日窗口捕获数据修订)",
+      "alerts": 1,
+      "alerts_detail": "kittl review 74.0->67.0 (改善 7.0 位, imps 2->1) - 昨日下跌后正向恢复, 低于前低 68.5, T14 Kittl 内链 Boost 或已生效, 继续观察",
+      "note": "16/20 query 命中 (4 个零展示目标词无数据属正常). GSC 数据修订: 昨日窗口重拉 printful alternatives 17->20 imps / jasper ai review 41->48 imps (补录), 位置基本稳定. 日志 .hermes/logs/rank-sentinel-2026-08-14.md"
+    },
+    "high_signal_findings_24h_8_14_noon": {
+      "as_of": "2026-08-14 12:1x",
+      "status": "RESTORED - IMAP 增量扫描 (SINCE 13-Aug 7 封全量核实, 较晨轮 +2)",
+      "new_findings": {
+        "cf_free_picks_8_14": {
+          "date": "2026-08-14 01:53:52 UTC (09:53 CST)",
+          "from": "hi@creativefabrica.com",
+          "subject": "Today's free picks: Spooky Halloween Shop Clipart PNG & 19 more",
+          "signal": "CF freebie 8/14 到货解析 (晨轮未覆盖). UID 693, 20 素材落盘 .hermes/logs/cf-freebies/2026-08-14.md. 万圣节 x4 (新增 2: Halloween Skeleton Hand Stripes PNG / Spooky Season; 重复 2: 8/9 Shop Clipart / 8/11 Fall Stripes 再次推送). 圣诞 x2 (Q4 备选). 素材池 9 天累计 31 万圣节 (去重 30), 远超 Halloween 辐条①门槛"
+        },
+        "gsc_review_summary_validation_8_14": {
+          "date": "2026-08-13 16:02:17 -0700 (8/14 07:02 CST)",
+          "from": "Google Search Console Team <sc-noreply@google.com>",
+          "subject": "验证评价摘要结构化数据问题修正效果 (aitoptools.net)",
+          "signal": "GSC 修正验证邮件 - 8/13 告警后 Google 进入验证流程 (正向信号). 8/15-8/19 观察验证结果, 无需动作"
+        }
+      },
+      "noise": "GSC review-summary 相关 (已知)",
+      "p0_count_24h": 0,
+      "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
+      "p1_count_24h": 4,
+      "p1_notes": "Printful W-8BEN-E Pending D5 (user 补第 4/5 行 + 签名上传) / Printify promo 0 回复 (user 走 PartnerStack 站内催) / Synthesia 确认待 user / Placeit 催办 (草稿就绪, user 手动发送)",
+      "p2_count_24h": 7,
+      "p2_notes": "暂缓清单不变. GSC review-summary 修正验证观察 (8/13 告警 -> 8/14 验证邮件)",
+      "conclusion": "CF freebie 8/14 到货解析 (20 素材, 万圣节 x4 其中新增 2) + GSC review-summary 修正验证邮件 (正向). P0 = 0 连续第 7 天."
+    },
+    "tax_audit_8_15": {
+      "printful": "STILL-PENDING (browser 实读 8/15 03:44, v2 上传后第 1 个工作日, 3 business days 窗口内正常; 观察: 文件名 kutoolm-browser-agent.txt 存疑 + Lines 4/5 黄框仍显示; NOOP per protocol, 下次 8/16)",
+      "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
+    },
+    "high_signal_findings_24h_8_15": {
+      "as_of": "2026-08-15 03:5x",
+      "status": "RESTORED - IMAP 增量扫描 (SINCE 14-Aug 5 封全量核实), 0 新审批 / 0 新商户邮件",
+      "new_findings": {
+        "gsc_zprintpro_180_clicks_8_14": {
+          "date": "2026-08-14 00:38:40 -0700",
+          "from": "Google Search Console Team <sc-noreply@google.com>",
+          "subject": "恭喜,您的网站在 28 天内获得 180 次点击!",
+          "signal": "跨项目 (zprintpro.com 域名, 8/12 达成 28 天 180 点击里程碑) - 非 aitoptools 本域, 提醒 K3; aitoptools 本域 GSC 无新告警"
+        },
+        "gsc_review_summary_validation_8_14": {
+          "date": "2026-08-13 16:02:17 -0700",
+          "from": "sc-noreply@google.com",
+          "subject": "验证评价摘要结构化数据问题修正效果",
+          "signal": "已知 (8/14 午间轮已记录), 验证观察期 8/15-8/19 持续"
+        },
+        "supabase_pause_8_14": {
+          "date": "2026-08-14 08:33:46 +0000",
+          "from": "ant.wilson@supabase.com",
+          "subject": "Your Supabase Project zprintpro-production is going to be paused",
+          "signal": "跨项目 (zprintpro 域), 提醒 K3 处理"
+        },
+        "cf_free_picks_8_15": {
+          "date": "未到货 (常规 ~09:53 CST, 当前 03:5x)",
+          "signal": "8/15 freebie 未到货; 8/14 已解析 (20 素材, 万圣节 x4 含新增 2); 素材池 9 天累计 31 万圣节 (去重 30) 充足"
+        }
+      },
+      "noise": "LinkedIn x1 (噪音)",
+      "p0_count_24h": 0,
+      "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
+      "p1_count_24h": 3,
+      "p1_notes": "W-8BEN-E Pending (v2 上传后窗口内正常, 但文件名存疑需 user 确认) / Printify promo 站内催 (user, 待办) / Synthesia 确认 (user, 待办) / Placeit 催办 (user, 待办)",
+      "p2_count_24h": 7,
+      "p2_notes": "暂缓清单不变; GSC review-summary 验证观察期 (8/15-8/19); 跨项目: zprintpro GSC 180 点击里程碑 + Supabase 暂停通知 (提醒 K3)",
+      "conclusion": "0 新审批 (SINCE 14-Aug 5 封全量核实). CF freebie 8/15 未到货 (下午轮补). W-8BEN-E v2 上传后窗口内 Pending, 文件名存疑升级 user 确认. P0 = 0 连续第 8 天."
+    },
+    "rank_sentinel_8_15": {
+      "status": "PIPELINE-OK (正式每日拉取第 3 天)",
+      "window": "2026-08-08..2026-08-14 (滚动, 重拉昨日窗口捕获修订)",
+      "alerts": 0,
+      "alerts_detail": "20q 无 >=5 位变动; 最大变动 runway ml 67.6->65.2 (改善 2.4) / printify alternatives 81.0->79.3 (改善 1.7) / printful vs printify 77.6->79.2 (下跌 1.6); is magicdrop legit 55.5->55.1 连续改善 (imps 40->36); 16/20 query 命中",
+      "note": "修复 8/15 哨兵日志 GBK 乱码 (重写 UTF-8). 日志 .hermes/logs/rank-sentinel-2026-08-15.md"
+    },
+    "tax_audit_8_15_eve": {
+      "printful": "STILL-PENDING (browser 实读 8/15 19:13, v2 上传后第 1 个工作日, 3 business days 窗口内正常; 文件名显示 autoglm-browser-agent.pdf; Lines 4/5 黄框仍显示; NOOP per protocol, 下次 8/16)",
+      "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
+    },
+    "high_signal_findings_24h_8_15_eve": {
+      "as_of": "2026-08-15 19:1x",
+      "status": "RESTORED - IMAP 增量扫描 (SINCE 15-Aug 2 封全量核实, SOCKS5 127.0.0.1:7892)",
+      "new_findings": {
+        "cf_free_picks_8_15": {
+          "date": "2026-08-15 02:43:11 UTC (10:43 CST)",
+          "from": "Creative Fabrica <hi@creativefabrica.com>",
+          "subject": "Today free picks: Read Me a Story, Tuck Me in Tight, Tell Me You Love Me & Kiss Me Goodnight & 19 more",
+          "signal": "CF freebie 8/15 到货解析 (傍晚轮补抓, 晨轮未覆盖). SEQ 696, 20 素材落盘 .hermes/logs/cf-freebies/2026-08-15.md. 万圣节 x3 (新增 2: Retro Vintage Halloween Pumpkin PNG / Retro Halloween PNG Bundle Halloweentown; 重复 1: Spooky Halloween Shop Clipart 第三次推送). 圣诞 x2. 素材池 10 天累计 33 万圣节 (去重 32), 远超 Halloween 辐条①门槛"
+        },
+        "gsc_review_summary_fixed_8_15": {
+          "date": "2026-08-15 00:48:02 -0700 (15:48 CST)",
+          "from": "Google Search Console Team <sc-noreply@google.com>",
+          "subject": "您已成功修正了网站 aitoptools.net 上的评价摘要结构化数据问题",
+          "signal": "GSC review-summary 结构化数据问题修正确认 (8/13 告警 → 8/14 验证中 → 8/15 已修正) — 正向闭环, P2 项关闭, 无需动作"
+        }
+      },
+      "noise": "无 (仅 CF + GSC 2 封, 零噪音)",
+      "p0_count_24h": 0,
+      "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
+      "p1_count_24h": 4,
+      "p1_notes": "W-8BEN-E Pending (v2 上传后窗口内, 19:13 傍晚复核 NOOP per protocol; 下次 8/16) / Printify promo 站内催 (user, 待办) / Synthesia 确认 (user, 待办) / Placeit 催办 (user, 待办)",
+      "p2_count_24h": 6,
+      "p2_notes": "暂缓清单不变; GSC review-summary 告警已闭环关闭 (8/15 修正确认); 跨项目: zprintpro GSC 180 点击里程碑 + Supabase zprintpro 暂停通知 (提醒 K3)",
+      "conclusion": "0 新审批 (SINCE 15-Aug 2 封全量核实). CF freebie 8/15 到货解析完成 (20 素材, 万圣节 +2 新). GSC review-summary 已修正 (正向闭环). P0 = 0 连续第 8 天."
+    },
+    "tax_audit_8_16": {
+      "printful": "STILL-PENDING (browser 实读 8/16 18:15, v2 上传后周末 0 工作日, 3 business days 窗口自 8/17 周一起算; 文件名 autoglm-browser-agent.pdf; Lines 4/5 黄框仍显示=静态模板; NOOP per protocol, 下次 8/17)",
+      "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
+    },
+    "rank_sentinel_8_16": {
+      "status": "PIPELINE-OK (正式每日拉取第 4 天)",
+      "window": "2026-08-09..2026-08-15 (滚动, 同轮重拉昨日窗口 8/8-8/14 捕获修订)",
+      "alerts": 0,
+      "alerts_detail": "20q 无 >=5 位变动; 最大变动 printful vs printify 79.2->76.9 (改善 2.4) / runway ml 65.2->63.5 (改善 1.7) / best ai background remover 97.6->99.0 (下跌 1.4); is magicdrop legit 34.2->33.6 (pos 33.6 全站最佳, 连续改善 55.1->42.9->34.2->33.6, imps 82); kittl review 63.0 连续 3 日稳定; 16/20 query 命中",
+      "note": "日志 .hermes/logs/rank-sentinel-2026-08-16.md"
+    },
+    "high_signal_findings_24h_8_16": {
+      "as_of": "2026-08-16 18:1x",
+      "status": "RESTORED - IMAP 增量扫描 (SINCE 15-Aug 7 封全量核实, SOCKS5 127.0.0.1:7892), 0 新审批 / 0 新商户邮件",
+      "new_findings": {
+        "wired_business_8_16": {
+          "date": "2026-08-15 16:38:11 -0700 (8/16 07:38 CST)",
+          "from": "Wired Business <sam@wired.business>",
+          "subject": "Your website submission was received - Wired Business",
+          "signal": "外链目录提交确认 (aitoptools.net 已注册): 需首页/footer 加 wired.business badge 链接 + 完成验证, 24h 未检测到 badge 将自动移除. 与 session_pool 实证吻合 (8/15 23:59 UTC 在 wired.business badge 步骤) → S3 外链首批执行中. 加 footer 链接后列入 PUSH_READY"
+        },
+        "cf_free_picks_8_16": {
+          "date": "2026-08-16 01:26:07 UTC (09:26 CST)",
+          "from": "Creative Fabrica <hi@creativefabrica.com>",
+          "subject": "Today's free picks: Remember Things & 19 more",
+          "signal": "CF freebie 8/16 到货解析 (SEQ 700, 20 素材落盘 .hermes/logs/cf-freebies/2026-08-16.md). 万圣节 x3 新: Boojee Ghost Halloween PNG / Spooky Nurse Halloween PNG / Cozy Halloween Fall Cute Cat Lover PNG; 圣诞 x3 (Q4 备选). 素材池 10 天累计 36 万圣节 (去重 ~35), 远超 Halloween 辐条①门槛"
+        },
+        "supabase_paused_final_8_16": {
+          "date": "2026-08-15 19:09:42 +0000",
+          "from": "ant.wilson@supabase.com",
+          "subject": "Your Supabase Project zprintpro-production has been paused.",
+          "signal": "跨项目 (zprintpro 域) 暂停确认邮件 — 提醒 K3 处理"
+        }
+      },
+      "noise": "LinkedIn x2 (噪音) + GSC review-summary 修正确认 (已知, 8/15 已闭环)",
+      "p0_count_24h": 0,
+      "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
+      "p1_count_24h": 4,
+      "p1_notes": "W-8BEN-E Pending (周末 0 工作日, 窗口 8/17-8/19 内正常; 8/17 复核) / Printify promo 站内催 (user, 待办) / Synthesia 确认 (user, 待办) / Placeit 催办 (user, 待办)",
+      "p2_count_24h": 7,
+      "p2_notes": "暂缓清单不变; 新增: Wired Business badge 验证 (S3 外链, 24h 窗口); 跨项目: Supabase zprintpro-production 已暂停 (提醒 K3)",
+      "conclusion": "0 新审批 (SINCE 15-Aug 7 封全量核实). CF freebie 8/16 到货解析完成 (万圣节 +3 新). Wired Business 外链确认回执 (S3 执行中). W-8BEN-E 窗口口径修正 (8/17 起算). P0 = 0 连续第 9 天."
+    },
+    "ai_crawler_8_16": {
+      "as_of": "2026-08-16 18:20",
+      "method": "autoglm browser 只读 CF Web Analytics + AI Crawl Control (tab 97687234)",
+      "web_analytics_24h": {
+        "visits": 8,
+        "page_views": 8,
+        "avg_load_ms": 877,
+        "total_requests": "~2k",
+        "percent_cached": 6.1,
+        "cwv": "LCP/CLS 100% Good"
+      },
+      "web_analytics_7d": {
+        "visits": 33,
+        "page_views": 35,
+        "avg_load_ms": 1106,
+        "lcp_p50_ms": 728,
+        "lcp_p90_ms": 2412,
+        "cwv": "LCP 94% Good / 6% Poor"
+      },
+      "top_countries_7d": [
+        "United States",
+        "China",
+        "Morocco",
+        "Argentina",
+        "Jordan"
+      ],
+      "browsers_7d": [
+        "ChromeHeadless ~33",
+        "Chrome ~10",
+        "SamsungInternet",
+        "Edge"
+      ],
+      "ai_crawl_control_24h": {
+        "total_ai_crawler_requests": 136,
+        "trend": "-26.9% vs 前一周",
+        "by_bot": {
+          "BingBot": 45,
+          "Claude-SearchBot": 20,
+          "Googlebot": 15,
+          "Applebot": 14,
+          "ChatGPT-User": 12,
+          "Baidu": 8,
+          "Bytespider": 0,
+          "PerplexityBot": 0,
+          "CCBot": 0,
+          "DuckAssistBot": 0,
+          "Amazonbot": "未检测"
+        },
+        "top_path": "www.aitoptools.net/sitemap.xml (42 成功请求)",
+        "http_200": 103,
+        "status_dist": "2xx 103 / 4xx 22 / 3xx 11",
+        "data_transfer_top": "BingBot 672.53kB / Googlebot 266.69kB / Applebot 241.41kB / ChatGPT-User 214.25kB / Baidu 124.01kB"
+      },
+      "conclusion": "GEO 正向: 24h 136 次 AI 爬虫请求 (Claude-SearchBot 20 / ChatGPT-User 12 / Googlebot 15 / BingBot 45), sitemap.xml 被爬最多 — 8/19 GEO 首读数基线强化; AI 引荐流量 =0 待 8/19 beacon 归因确认; Log Explorer 需付费不可用, Perplexity/Bytespider 0 请求待观察"
+    },
+    "tax_audit_8_17": {
+      "printful": "STILL-PENDING (browser ?? 8/17 06:40, v2 ????????? 1 ? (8/17 ??), 3 business days ?? 8/17-8/19 ???; ??? autoglm-browser-agent.pdf ??; Lines 4/5 ??=????; ????; NOOP per protocol, ?? 8/18)",
+      "impact": "LOGIN_REQUIRED (app.impact.com ? user ??; ?????, ???)"
+    },
+    "high_signal_findings_24h_8_17": {
+      "as_of": "2026-08-17 06:5x",
+      "status": "RESTORED - IMAP ???? (SINCE 16-Aug 9 ?????, SOCKS5 127.0.0.1:7892), 0 ??? / 0 ?????",
+      "new_findings": {
+        "wired_business_verify_8_17": {
+          "date": "2026-08-16 04:39:02 -0700 (8/16 19:39 CST)",
+          "from": "Wired Business <sam@wired.business>",
+          "subject": "Your Wired Business submission needs one more step",
+          "signal": "S3 ??????: footer ?? 8/16 ? push ?? (b6a7681, live ?? homepage 2 ? wired.business), ???? = ? Verify my badge; 8/17 06:41 autoglm ?? -> **????, aitoptools.net LIVE** (wired.business/done?type=live&slug=aitoptools-net); ???? 1/20 LIVE"
+        },
+        "printful_survey_8_16": {
+          "date": "2026-08-16 21:51:37 +0000",
+          "from": "survey@newsletter.printful.com",
+          "subject": "A $5 reward for your feedback",
+          "signal": "??/???? (??, ???)"
+        }
+      },
+      "noise": "LinkedIn x2 + GSC zprintpro ?? x2 (???) + Supabase ???? (?? 8/16)",
+      "p0_count_24h": 0,
+      "p0_notes": "?. 7 approved-active ?? link_deployed=true.",
+      "p1_count_24h": 4,
+      "p1_notes": "W-8BEN-E Pending (?? 8/17-8/19 ???; 8/18 ??) / Printify promo ??? (user, ??) / Synthesia ?? (user, ??) / Placeit ?? (user, ??)",
+      "p2_count_24h": 7,
+      "p2_notes": "??????; Wired Business badge ????? (LIVE); AI Toolz Dir ????? (BLOCKED_REQUIRES_BACKLINK ???? footer ?????, ???); ???: Supabase zprintpro-production ??? (?? K3)",
+      "conclusion": "0 ??? (SINCE 16-Aug 9 ?????). CF freebie 8/17 ??? (?? ~09:26-10:43 CST, ?????). Wired Business ???? -> S3 ???? LIVE. P0 = 0 ??? 10 ?."
+    },
+    "rank_sentinel_8_17": {
+      "status": "PIPELINE-OK (??????? 5 ?)",
+      "window": "2026-08-10..2026-08-16 (??, ???????? 8/9-8/15 ????)",
+      "alerts": 1,
+      "alerts_detail": "printful vs printify 76.9->82.3 (?? 5.5 ?, imps 7->3 ????, ????; 8/16 ??? +2.4) - ??, 8/22 T+14 ????; is magicdrop legit 33.6->31.1 (????, ???? 5 ??? 55.1->42.9->34.2->33.6->31.1); kittl review 63.0 ?? 4 ???; runway ml / best ai background remover / copywriting ai ??? 0 ?? (????); 16/20 query ??",
+      "note": "?? .hermes/logs/rank-sentinel-2026-08-17.md"
+    },
+    "manual_checklist_2026_08_17": {
+      "generated_by": "aitoptools daily-ops cron 2026-08-17 06:5x (IMAP ?? + autoglm ??/????)",
+      "1_tax_audit": "W-8BEN-E 8/17 ?? STILL PENDING (?????? 1 ?, ?? 8/17-8/19 ???; ??? autoglm-browser-agent.pdf; Lines 4/5 ??=????) -> NOOP, ?? 8/18",
+      "2_wired_business": "???: 8/17 06:41 autoglm ?? Verify my badge -> **???? LIVE** (wired.business/done?type=live&slug=aitoptools-net); ?? user ??",
+      "3_printify_promo": "???? user ?? (?? 8/8 ?? 9 ? 0 ??; PartnerStack ????)",
+      "4_synthesia_confirm": "?????? user ??? (8/11 ??, ? 6 ?; SINCE<90d ???)",
+      "5_placeit": "???? drafts/placeit-followup-email.md ?? B ??, user ????",
+      "_cf_freebie_8_17": "CF freebie 8/17 ??? (?? ~09:26-10:43 CST); ??? 10 ??? 36 ??? (?? ~35) ??"
+    },
+    "ai_crawler_8_17": {
+      "as_of": "2026-08-17 06:43",
+      "method": "autoglm browser 只读 CF Web Analytics + AI Crawl Control (tab 97687258)",
+      "web_analytics_24h": {
+        "visits": 7,
+        "page_views": 7,
+        "avg_load_ms": 846,
+        "cwv": "LCP 100% Good"
+      },
+      "web_analytics_7d": {
+        "visits": 33,
+        "page_views": 35,
+        "avg_load_ms": 1150,
+        "cwv": "LCP 94% Good / 6% Poor"
+      },
+      "ai_crawl_control_24h": {
+        "total_ai_crawler_requests": 160,
+        "trend": "+0.43% vs 前窗口",
+        "allowed": 119,
+        "unsuccessful": 41,
+        "by_bot": {
+          "BingBot": 23,
+          "Baidu": 22,
+          "ChatGPT-User": 20,
+          "Googlebot": 19,
+          "Claude-SearchBot": 14,
+          "Applebot": 7,
+          "Other": "+1 More 51.84KB",
+          "PerplexityBot": 0,
+          "Bytespider": 0,
+          "CCBot": 0,
+          "DuckDuckGoAssistBot": 0
+        },
+        "status_dist": "2xx 105 / 4xx 41 / 3xx 14",
+        "note": "Claude-SearchBot 峰值 8/16 13:00 (~5 请求/单点); Baidu+ChatGPT-User 全天分散; 4xx 41 需留意 (多为 sitemap/爬虫路径?)"
+      },
+      "conclusion": "GEO 正向持续: 24h 160 次 AI 爬虫请求 (BingBot 23 / Baidu 22 / ChatGPT-User 20 / Googlebot 19 / Claude-SearchBot 14), 8/19 GEO 首读数基线强化; AI 引荐流量仍待 beacon 归因"
+    },
+    "high_signal_findings_24h_8_19": {
+      "as_of": "2026-08-19 06:0x",
+      "status": "RESTORED - IMAP incremental scan (SINCE 17-Aug 10 emails, SOCKS5 127.0.0.1:7892), 0 new approvals / 0 new merchant emails",
+      "new_findings": {
+        "launchbuck_s3_lead_8_17": {
+          "date": "2026-08-17 13:48:53 +0000",
+          "from": "LaunchBuck <hello@launchbuck.com>",
+          "subject": "About Print AI Tools",
+          "signal": "S3 外链新机会 (一次性邀请邮件): LaunchBuck = indie products directory. 免费 listing + 真实 dofollow backlink (site badge 验证, 非 nofollow) + 社区曝光. 提交入口 https://launchbuck.com/submit. 非营销列表邮件. 处置: S3 外链候选 #2 (继 Wired Business), 待提交 (外部动作, 不自动); 提交并上线 badge 后 PUSH_READY"
+        },
+        "wired_business_live_email_8_17": {
+          "date": "2026-08-16 15:41:09 -0700 (8/17 06:41 CST)",
+          "from": "Wired Business <sam@wired.business>",
+          "subject": "Your website is live on Wired Business!",
+          "signal": "S3 外链第 1 站 LIVE 邮件闭环确认 (8/17 06:41 autoglm 验证 + 邮件佐证齐); S3 外链 1/20 LIVE 确认"
+        },
+        "cf_free_picks_8_17": {
+          "date": "2026-08-17 01:19:02 +0000 (09:19 CST)",
+          "from": "Creative Fabrica <hi@creativefabrica.com>",
+          "subject": "Today free picks: Halloween Witch Sublimation Bundle & 19 more",
+          "signal": "CF freebie 8/17 到货解析 (22 素材落盘 .hermes/logs/cf-freebies/2026-08-17.md). 万圣节 x4: Halloween Witch Sublimation Bundle (头条) / Spooky Memories / Brushstroke Halloween Pumpkin Bow PNG / The Mega Fall Halloween Png Bundle; 圣诞 x4 (Q4 备选)"
+        },
+        "cf_free_picks_8_18": {
+          "date": "2026-08-18 01:55:39 +0000 (09:55 CST)",
+          "from": "Creative Fabrica <hi@creativefabrica.com>",
+          "subject": "Today free picks: 104 MagicPro Manga Procreate Brushes & 19 more",
+          "signal": "CF freebie 8/18 到货解析 (22 素材落盘 .hermes/logs/cf-freebies/2026-08-18.md). 万圣节 x4: Funny Halloween Quotes / Cowboy Zombie / Trending Halloween PNG Halloween Dog / Watercolor Halloween Clipart Mega Bundle; 圣诞 x1 (Letter to Santa; MagicPro Manga 已修正归类到其他). 素材池 12 天累计 44 (去重 ~43)"
+        }
+      },
+      "noise": "LinkedIn x1 (噪音) + GSC z-printpro.com 索引问题 x2 (跨项目, 提醒 K3) + Supabase security 通知 x1 (跨项目, 8/11 已知)",
+      "p0_count_24h": 0,
+      "p0_notes": "无. 7 approved-active 全部 link_deployed=true.",
+      "p1_count_24h": 4,
+      "p1_notes": "W-8BEN-E Pending (8/19 窗口最后一天, BROWSER_UNAVAILABLE 未复核; 8/20 复核, 8/21 第 5 工作日仍 Pending 则升级 user 联系 support) / Printify promo 站内催 (user, 待办) / Synthesia 确认 (user, 待办 D8) / Placeit 催办 (user, 待办)",
+      "p2_count_24h": 7,
+      "p2_notes": "暂缓清单不变; 新增: LaunchBuck S3 外链候选 (待提交) + autoglm credits 耗尽 (浏览器任务受阻); 跨项目: zprintpro GSC 索引问题 + Supabase security (提醒 K3)",
+      "conclusion": "0 新审批 (SINCE 17-Aug 10 封全量核实). CF freebie 8/17+8/18 解析完成 (万圣节 +8 新). LaunchBuck S3 外链新机会 (待提交). Wired Business LIVE 邮件闭环. autoglm BROWSER_UNAVAILABLE (no credits) 影响 tax-audit + GEO beacon. P0 = 0 连续第 11 天."
+    },
+    "tax_audit_8_19": {
+      "printful": "BROWSER_UNAVAILABLE (autoglm no credits, task result: No credits left. Please recharge.) - 8/19 工作日第 3 天 (窗口 8/17-8/19 最后一天) 未复核; 上次状态 8/17 06:40 = Pending; 下次复核 8/20 (第 4 工作日); 8/21 (第 5 工作日) 仍 Pending -> 升级 user 联系 support 行动卡 (per PHASE)",
+      "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
+    },
+    "rank_sentinel_8_19": {
+      "status": "PIPELINE-OK (正式每日拉取第 6 天, 补 8/18 缺口; 8/18 daily-ops 未运行)",
+      "window": "2026-08-12..2026-08-18 (滚动, 与 8/17 快照 8/10..8/16 比较; 同轮重拉 8/10..8/16 捕获修订)",
+      "alerts": 1,
+      "alerts_detail": "is magicdrop legit 31.1 -> 26.0 (改善 5.2 位, 历史最佳, 连续 6 次改善 55.1/42.9/34.2/33.6/31.1/26.0, imps 76->82) - 正向 ALERT, 无修复项; kittl review 63.0 -> 59.0 (改善 4.0, 低量); printify alternatives 81.3 -> 85.4 (下跌 4.1, 低量噪音观察); 数据修订: is magicdrop legit 31.1 -> 28.5 (改善确认), printify alternatives 81.3 -> 83.0",
+      "note": "11/20 query 命中 (9 个零展示无数据属正常). 日志 .hermes/logs/rank-sentinel-2026-08-19.md"
+    },
+    "ai_crawler_8_19": {
+      "as_of": "2026-08-19 06:0x",
+      "method": "BROWSER_UNAVAILABLE (autoglm no credits) - CF Web Analytics / AI Crawl Control 未能读取",
+      "status": "GEO 首读数 PARTIAL: GSC 侧已由 daily-search 8/19 02:24 完成 (T5 GEO 首读数 DONE (GSC 侧)); beacon/AI 引荐侧顺延 (browser 不可用 + D7 CF API token 未配置); 上次读数 8/17: 24h 160 AI crawler requests (BingBot 23/Baidu 22/ChatGPT-User 20/Googlebot 19/Claude-SearchBot 14)",
+      "note": "建议: 补 CF API token (D7) 走 API 免浏览器, 或 autoglm credits 恢复后 dashboard 只读"
+    },
+    "manual_checklist_2026_08_19": {
+      "generated_by": "aitoptools daily-ops cron 2026-08-19 06:0x (IMAP 实拉 + 哨兵拉取; autoglm BROWSER_UNAVAILABLE)",
+      "1_tax_audit": "W-8BEN-E: 8/19 工作日第 3 天 (窗口最后一天) BROWSER_UNAVAILABLE 未复核 (autoglm no credits); 上次 8/17 = Pending; 8/20 复核; 8/21 第 5 工作日仍 Pending -> 联系 Printful support 行动卡",
+      "2_autoglm_credits": "autoglm credits 耗尽 (No credits left) - 影响 tax-audit / GEO beacon / S3 提交等全部浏览器任务; user 充值或确认次日恢复",
+      "3_launchbuck": "S3 外链候选 #2: LaunchBuck 邀请 (launchbuck.com/submit, 免费 dofollow badge) - 待 user 拍板提交 (外部动作不自动); 提交后加 footer badge 链接 -> PUSH_READY",
+      "4_printify_promo": "站内催待 user 执行 (回信 8/8 已发 11 天 0 回复; PartnerStack 站内渠道)",
+      "5_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 邮件, 已 8 天; SINCE<90d 不自动)",
+      "_placeit": "催办草稿 drafts/placeit-followup-email.md 版本 B 就绪, user 手动发送",
+      "_cf_freebie": "CF freebie 8/17+8/18 解析落盘 (各 22 素材, 万圣节 +8); 8/19 未到货 (常规 ~09:55 CST, 下午轮可补); 素材池 12 天累计 44 (去重 ~43) 充足"
+    }
+  },
+  "pending_applications_aging": {
+    "as_of": "2026-08-19",
+    "items": [
+      {
+        "name": "Placeit (re-apply post Marketplace upgrade)",
+        "applied": null,
+        "days": null,
+        "network": "Impact",
+        "next_action": "等 Impact Marketplace 通过后重提"
+      },
+      {
+        "name": "Synthesia (Rewardful)",
+        "applied": "2026-08-11",
+        "days": 8,
+        "network": "Rewardful",
+        "next_action": "user 手动点确认链接激活 (8/11 申请, 已 8 天; 确认邮件 SINCE<90d 不自动); 密码重置 x2 请确认是否本人操作"
+      }
+    ],
+    "resolved_since_2026-07-23": [
+      {
+        "name": "Claid AI",
+        "resolved": "2026-07-24",
+        "outcome": "approved",
+        "link": "https://claid.ai?via=jerome94"
+      },
+      {
+        "name": "Printify (via PartnerStack)",
+        "resolved": "2026-07-24",
+        "outcome": "approved",
+        "link": "https://try.printify.com/4fs863rfz2yc"
+      },
+      {
+        "name": "Printful",
+        "resolved": "2026-07-24",
+        "outcome": "approved",
+        "link": "https://www.printful.com/a/15297661:e946341e64188d00218db2fbabcacc4a"
+      },
+      {
+        "name": "Looka",
+        "resolved": "2026-07-24",
+        "outcome": "declined-closed-program",
+        "note": "program page not found,Looka 在 7/24 二次确认 partner program 已关闭;仅留 partnerships@looka.com 直邮渠道,优先级低"
+      },
+      {
+        "name": "Kittl (via Impact pxf.io shortlink)",
+        "resolved": "2026-07-30",
+        "outcome": "approved",
+        "link": "https://kittl.pxf.io/qWNvPn",
+        "note": "K3 7/30 03:33 user 截 Impact 后台实测: Kittl brand dropdown 已绑 + 20% paid subscription + 14 天 1 click 0 conversion $0 EPC. Marketplace 升级悄悄过 (7/30 推断)."
+      },
+      {
+        "name": "Gelato (via PartnerStack)",
+        "resolved": "2026-08-01",
+        "outcome": "approved",
+        "note": "K3 8/1 09:56 手动告知: 收 Gelato 欢迎邮件 (partnerships@gelato.com, 发件人 Alex). 7/24 重申 → 8 天出结果 (正常 7-14 天窗口内). dashboard: dash.partnerstack.com. 8/1 10:02 K3 从 dash.partnerstack.com 取推广链接 try.gelato.com/upftmv48rtcl (重定向 gelato.com/print-on-demand). commission 率待 dashboard 查询. PayPal 收款待设.",
+        "source": "K3 Gmail webmail manual fetch (8/1 09:56) — IMAP 通道仍 DEGRADED, agent 无法独立核实, user 兜底告知",
+        "link": "https://try.gelato.com/upftmv48rtcl"
+      },
+      {
+        "name": "Impact Marketplace Upgrade",
+        "resolved": "2026-07-30",
+        "outcome": "approved",
+        "note": "Marketplace 升级悄悄过 (7/30 推断 — user 能看到完整 Snapshot/Brand dropdown dashboard, 这是 Marketplace-only feature). 之前 7/18 申请的 11 天阻塞解除. 6 个 Impact 系申请 (Canva/Shopify/Bluehost/Surfer/Copy.ai/Placeit) 现在可以 apply."
+      },
+      {
+        "name": "PartnerStack Network membership",
+        "resolved": "2026-08-01",
+        "outcome": "declined",
+        "note": "8/1 邮件确认拒绝: \"Your profile is not a great fit, but may be in the future\". 已有 PartnerStack 合作 (Printify/Gelato) 不受影响. 可重新申请 (需 user 拍板是否重试). 8/5 IMAP 独立核实原文.",
+        "source": "IMAP 独立核实 (2026-08-05)"
+      },
+      {
+        "name": "Deel (pending PartnerStack network)",
+        "resolved": "2026-08-01",
+        "outcome": "blocked-by-network-decline",
+        "note": "Deel 激活依赖 PartnerStack Network 批准, 网络 8/1 被拒 -> 自动激活路径失效. 需 user 拍板: 单独直签 Deel 或放弃.",
+        "source": "IMAP 独立核实 (2026-08-05)"
+      }
+    ]
+  },
+  "milestones": {
+    "2026-07-16_nord_approved": "✅ Nord Security affiliate program approved. Manager: Yan. Links: NordVPN + NordPass. Site pages live at /nordvpn-review/ and /nordpass-review/",
+    "2026-07-22_mockey_approved": "✅ Mockey AI (Endorsely) approved & active. Link: https://mockey.ai?via=jerome796. 30% recurring / 90-day cookie / PayPal monthly.",
+    "2026-07-24_batch_4_approved": "✅ 4 程序同日获批: Claid (FirstPromoter 20% lifetime) / Printify (PartnerStack 20-30%) / Printful (in-house 10%×12) / Looka (declined — program closed). 来源: AGENTS.md §5 + credentials.affiliate.local.json,Gmail 通道缺失无法独立核实邮件。",
+    "2026-07-24_new_applications": "📤 同日新增 3 申请: Gelato (PartnerStack 重申,identity mismatch 修复) / PartnerStack 网络成员资格 / Deel (挂 PartnerStack 网络下,网络批后自动激活). 状态: pending 4 天.",
+    "2026-08-01_gelato_approved": "✅ Gelato (PartnerStack) 批准! K3 8/1 09:56 手动告知 welcome email. 推广链接待 dash.partnerstack.com 取 + PayPal 收款待设. commission 率待 dashboard 查询. 来源: user Gmail webmail fetch, IMAP 仍 DEGRADED, agent 推测 + user 兜底.",
+    "2026-08-01_gelato_link_obtained": "K3 8/1 10:02 从 dash.partnerstack.com 取 Gelato 推广链接 try.gelato.com/upftmv48rtcl (重定向 gelato.com/print-on-demand). 6 → 7 approved-active 全 link_deployed. 8/2 攒批替换 38+ 处站内链接.",
+    "2026-08-05_gmail_imap_restored": "Gmail IMAP 通道彻底恢复 (SOCKS5 127.0.0.1:7892, 57 封拉取 OK). 7/30 DEGRADED 起持续 D6+ 的通道问题闭环.",
+    "2026-08-05_claid_reset_email": "Claid/FirstPromoter 登录问题解决路径闭环: 8/4 08:02 重置密码邮件到达收件箱 (FirstPromoter 手动触发). 待 user 浏览器点击设新密码 + 更新本地凭证.",
+    "2026-08-05_printful_link_fix": "修复 Printful 联盟链接脱敏泄漏 (15297661:*** -> 真链 e946341e..., affiliates.json + tools/printful.json, 数据层已修). 线上 out/ 55 文件坏链待下次 build+push 生效.",
+    "2026-08-11_synthesia_applied": "📤 新申请 (8/11, Rewardful 网络): Synthesia Affiliate Program - Personal Plan, 账户 jerome@aitoptools.net. 8/12 IMAP 发现 3x 确认邮件 + 2x 密码重置. 确认链接待 user 手动点 (SINCE<90d 约束不自动)."
+  },
+  "manual_checklist_2026_08_07": {
+    "generated_by": "Hermes 8/7 磁盘核查 (非会话记忆, 全部来自 F:\\aitoptools 文件+IMAP实拉)",
+    "1_printful_confirm": "pending-user-click — 7/20 确认邮件已定位 (printful.com/verify/0/...?key=...), D18 已过期风险, 需 user 点或后台重发",
+    "2_printify_promo_code": "invite-received — 8/4 邮件含要码邀请 (Reply and let us know), 需 user 3分钟回信; 码到即建 promo 页",
+    "3_pinterest_scheduler": "not-configured — scheduler.md 不存在, 积压 5/16 待发布; 配好 Metricool/Tailwind 后建 .hermes/drafts/pinterest/scheduler.md",
+    "4_impact_w8ben": "not-applicable — 8/1 Mavis WebBridge 实测 Impact 平台不要求 W-8 (余额<$600 不触发), VAT 已保存; Claid W-8BEN-E 8/5 拍板挂起 (等法人拼音姓名, 不阻塞)"
+  },
+  "manual_checklist_2026_08_08": {
+    "generated_by": "aitoptools-affiliate-monitor cron 2026-08-08 01:49 (IMAP 实拉 + 文件核查)",
+    "1_printful_cookie": "BLOCKER — 7/20 确认链接已过期 (8/8 00:50 headless 实测 'Email confirmation request does not exist'), 后台重发被阻. 两条路: A) 装 AutoGLM Chrome 扩展 (2min) → AutoClaw 自动提取; B) 手动 F12 复制 cookie → .hermes/secrets/printful_session_cookie.txt. 落地后 printful-verify watcher (每时 8-22) 自动重发",
+    "2_printify_promo_code": "RESOLVED 2026-08-08 00:27 — 回信已发 (SMTP 465, Message-ID <178612007459.38260.17414933324366495799@aitoptools.net>), 8/11 检查回复",
+    "3_pinterest_scheduler": "not-configured (P2, 不影响佣金) — 同 cookie 方案可一并处理 .hermes/secrets/pinterest_session.txt",
+    "4_gsc_oauth": "optional — gsc-oauth.json 缺失 (数据管线降级为本地 csv, 不影响联盟佣金)",
+    "_second_scan_14_2x": "CF freebie 8/8 解析落盘 (20 素材, 4 🎃 含边缘归类 Sweet And Twisted); 0 新审批; P0 仍 = Printful cookie"
+  },
+  "manual_checklist_2026_08_09": {
+    "generated_by": "aitoptools-affiliate-monitor cron 2026-08-09 16:3x (IMAP 实拉 + 文件核查)",
+    "1_printful_cookie": "RESOLVED-2026-08-09 (8/8 实证: email_verified=true, 无验证流程; 旧 BLOCKER 表述作废) — 税务项见 5_tax_audit",
+    "2_printify_promo_code": "AWAITING-REPLY — 回信 8/8 00:27 已发, 8/11 检查回复 (monitor cron 已覆盖 mail.printify.com)",
+    "3_pinterest_scheduler": "not-configured (P2, 不影响佣金) — 同 cookie 方案可一并处理 .hermes/secrets/pinterest_session.txt",
+    "4_gsc_oauth": "optional — gsc-oauth.json 缺失 (数据管线降级为本地 csv, 不影响联盟佣金)",
+    "_cf_freebie_8_9": "CF freebie 8/9 解析落盘 (20 素材, 5 🎃, 提前 23:24 到达); 0 新审批; P0 仍 = Printful cookie",
+    "5_tax_audit": "NOOP-pending (8/9 autoglm 实证: Printful W-8BEN-E Pending 待审, <=3 工作日; 复核窗口 8/12); Impact 需 user 登录后复查 (低优先)"
+  },
+  "manual_checklist_2026_08_10": {
+    "generated_by": "aitoptools-affiliate-monitor cron 2026-08-10 12:1x (IMAP 实拉 + 文件核查)",
+    "1_printify_promo_code": "AWAITING-REPLY — 回信 8/8 00:27 已发 (SMTP 465 留证), 8/11 检查回复 (monitor cron 已覆盖 mail.printify.com); 8/9 14:30 'What's Next? Let's Grow Together' 为通用营销非回复",
+    "2_tax_audit": "复核窗口 8/12 (Printful W-8BEN-E Pending <=3 工作日, 8/9 提交); Impact 登录复查 (可选, 低优先)",
+    "3_placeit": "8/14 超期催办评估 (草稿 drafts/placeit-followup-email.md 已就绪, 当天检查 affiliate-programs.json status)",
+    "4_pinterest_scheduler": "not-configured (P2, 不影响佣金)",
+    "_cf_freebie_8_10": "CF freebie 8/10 解析落盘 (21 素材, 6 🎃, UID 662); 素材池 5 天累计 25 🎃; 0 新审批; P0 = 0 (Printful 解除后首次清空)"
+  },
+  "manual_checklist_2026_08_11": {
+    "generated_by": "aitoptools-affiliate-monitor cron 2026-08-11 12:1x (IMAP 实拉 + 文件核查)",
+    "1_printify_promo_code": "NO-REPLY-72H — 回信 8/8 00:27 已发 (SMTP 465 留证), 8/11 检查窗口: 收件箱 0 回复 (Printify 最后邮件仍为 8/9 14:30 营销 'What's Next? Let's Grow Together'). 8/13-14 二次检查, 无回复则升级 user 走 PartnerStack 站内渠道催",
+    "2_tax_audit": "复核窗口 8/12 (Printful W-8BEN-E Pending <=3 工作日, 8/9 提交); Impact 登录复查 (可选, 低优先)",
+    "3_placeit": "8/14 超期催办评估 (草稿 drafts/placeit-followup-email.md 已就绪, 当天检查 affiliate-programs.json status)",
+    "4_pinterest_scheduler": "not-configured (P2, 不影响佣金)",
+    "_cf_freebie_8_11": "CF freebie 8/11 解析落盘 (20 素材, 1 🎃 + 1 升华烫画, UID 673); 素材池 6 天累计 26 🎃 (去重 25); 0 新审批; P0 = 0 连续第 3 天"
+  },
+  "manual_checklist_2026_08_12": {
+    "generated_by": "aitoptools daily-ops cron 2026-08-12 05:4x (IMAP 实拉 + autoglm 只读复核)",
+    "1_synthesia_email_confirm": "新发现 (Rewardful): Synthesia 欢迎信 x3 (8/11 17:21-18:22) 要求确认邮箱. 激活邮件 1 天 <90d 约束 → 不自动点. user 手动: 打开邮件内确认链接 (2min) 或回复忽略. 另密码重置 x2 (17:51/17:59) 请确认是否本人操作",
+    "2_tax_audit": "8/12 复核完成: W-8BEN-E 仍 Pending (3 工作日窗口最后一天) → NOOP; 下次复核 8/13; 8/9 黄框提示需填第 4/5 行后签名上传 (若 8/13 仍 Pending 需 user 浏览器补全)",
+    "3_printify_promo": "8/13-14 二次检查窗口 (回信 8/8 00:27 已发 5 天, 0 回复); 无回复则升级 user 走 PartnerStack 站内渠道催",
+    "4_placeit": "8/14 超期催办评估 (草稿 drafts/placeit-followup-email.md 已就绪, 当天检查 affiliate-programs.json status)",
+    "_cf_freebie_8_12": "8/12 freebie 尚未到货 (常规 ~11:00 CST); 素材池 6 天累计 26 🎃 (去重 25) 充足"
+  },
+  "manual_checklist_2026_08_13": {
+    "generated_by": "aitoptools daily-ops cron 2026-08-13 13:1x (IMAP 实拉 + autoglm 只读复核)",
+    "1_tax_audit": "W-8BEN-E 8/13 复核 STILL PENDING (8/9 提交后第 4 个工作日, 页面 3 business days 窗口已过) - 需 user 浏览器补第 4/5 行 + 签名上传 (或联系 Printful support); 8/9 黄框提示同此",
+    "2_printify_promo": "二查窗口开启 (8/13-14): 今日扫描仍 0 回复 (回信 8/8 00:27 已发 5 天); 8/14 仍无回复则升级 user 走 PartnerStack 站内渠道催",
+    "3_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 3x 确认邮件, SINCE<90d 不自动); 密码重置 x2 请确认是否本人操作",
+    "4_placeit": "8/14 超期催办评估 (草稿 drafts/placeit-followup-email.md 就绪, user 手动发送)",
+    "5_kittl_rank_alert": "kittl review 排名 68.5->74.0 (哨兵告警) - 今日 T14 Kittl 系内链 Boost 需覆盖该页",
+    "_cf_freebie_8_13": "CF freebie 8/13 解析落盘 (20 素材, 万圣节 x2 + 圣诞 x6); 素材池 8 天累计 29 万圣节 (去重 28) 充足"
+  },
+  "manual_checklist_2026_08_14": {
+    "generated_by": "aitoptools daily-ops cron 2026-08-14 05:3x (IMAP 实拉 + autoglm 只读复核)",
+    "1_tax_audit": "W-8BEN-E 8/14 复核 STILL PENDING (8/9 提交后第 5 个工作日, 超 3 business days 窗口) - 需 user 浏览器补第 4/5 行 + 签名上传 (或联系 Printful support); Lines 4/5 黄框提示仍显示",
+    "2_printify_promo": "二查收口 (8/14): 今日扫描仍 0 回复 (回信 8/8 00:27 已发 6 天) - 升级 user 走 PartnerStack 站内渠道催 (站内 message 或联系 PartnerStack support)",
+    "3_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 3x 确认邮件, SINCE<90d 不自动, 已 3 天); 密码重置 x2 请确认是否本人操作",
+    "4_placeit": "8/14 超期催办触发: 草稿 drafts/placeit-followup-email.md 版本 B 就绪 (Marketplace 升级未完成基线), user 手动发送",
+    "5_t7_read": "T+7 首读数完成 (8/14): 决策树分支 B (点击 0 但位置改善: kittl review +7 位 / 全站日均展示 +10% / 8/11 pos 57.7 最佳) - 保持节奏, 9/1 前不调整; Boost 效果最早 8/15-16 数据可见",
+    "_cf_freebie_8_14": "CF freebie 8/14 未到货 (常规 ~11:00 CST, 下午轮可补抓); 素材池 8 天累计 29 万圣节 (去重 28) 充足"
+  },
+  "manual_checklist_2026_08_15": {
+    "generated_by": "aitoptools daily-ops cron 2026-08-15 03:5x (IMAP 实拉 + autoglm 只读复核)",
+    "1_tax_audit": "W-8BEN-E v2 上传 (8/15 02:49-02:57, Line4 Corporation + Line5 Active NFFE) 后第 1 个工作日: 仍 Pending (3 business days 窗口内正常) -> NOOP; 观察: 上传文件名 kutoolm-browser-agent.txt 存疑, user 确认是否为签名 PDF; Lines 4/5 黄框提示仍显示 (或为静态提示)",
+    "2_printify_promo": "站内催待 user 执行 (回信 8/8 已发 7 天 0 回复; PartnerStack 站内渠道)",
+    "3_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 邮件, 已 4 天; SINCE<90d 不自动)",
+    "4_placeit": "催办草稿 drafts/placeit-followup-email.md 版本 B 就绪, user 手动发送",
+    "5_boost_read": "8/15-16 Boost 效果首读窗口 (8/13 上线, GSC T+2), 明日哨兵观察",
+    "_cf_freebie_8_15": "CF freebie 8/15 未到货 (常规 ~09:53 CST, 下午轮可补抓); 素材池 9 天累计 31 万圣节 (去重 30) 充足"
+  },
+  "manual_checklist_2026_08_16": {
+    "generated_by": "aitoptools daily-ops cron 2026-08-16 18:1x (IMAP 实拉 + autoglm 只读复核)",
+    "1_tax_audit": "W-8BEN-E 8/16 复核 STILL PENDING - 工作日口径修正: v2 上传 8/15 (周六), 8/16 (周日) 均非工作日, 3 business days 窗口自 8/17 周一起算 (8/19 到期); 文件名 autoglm-browser-agent.pdf 确认; NOOP, 下次 8/17",
+    "2_wired_business": "新 (S3 外链): Wired Business 提交确认回执 - 需 footer 加 badge 链接 + 完成验证 (24h 内未检测自动移除); session_pool 实证 8/15 23:59 在 badge 步骤",
+    "3_printify_promo": "站内催待 user 执行 (回信 8/8 已发 8 天 0 回复; PartnerStack 站内渠道)",
+    "4_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 邮件, 已 5 天; SINCE<90d 不自动)",
+    "5_placeit": "催办草稿 drafts/placeit-followup-email.md 版本 B 就绪, user 手动发送",
+    "_cf_freebie_8_16": "CF freebie 8/16 解析落盘 (20 素材, 万圣节 +3 新); 素材池 10 天累计 36 万圣节 (去重 ~35) 充足"
+  },
+  "cf_freebie_8_19": {
+    "date": "2026-08-19",
+    "subject": "Today's free picks: Moon Creme & 19 more",
+    "arrived_utc": "2026-08-18T23:00:40Z",
+    "items": 22,
+    "halloween": [
+      "Whimsical Halloween Girl Clipart Bundle"
+    ],
+    "pool_total_halloween": 45,
+    "note": "下午轮补抓 (晨跑 06:2x 后到货 07:00 CST)"
+  }
 }

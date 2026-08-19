@@ -77,3 +77,38 @@
 ## push-count = 2
 - #1 646631e（06:0x, T4 + 状态同步）
 - #2 本次（周更帖更新 + RESULT/daily-search 追加 + 0819 草稿/核查报告入库）
+
+
+---
+
+## 19:23 夜间窗口轮（STRATEGY-2026-08-19 §三 排期 · push-count 2→3）
+
+### Step 0 STRATEGY 消费 (T9b, 幂等核对)
+- STRATEGY-2026-08-19 已由 07:06 轮消费; 本夜间窗按 §三 排期核对: T1 ✅（见下）/ T2 bing-index-check-0819.md 在 → NOOP / T3 legit-template-v2+factcheck 在 → NOOP / T4 已部署 (646631e) → NOOP / T5 t14-check-0819.md 在 → NOOP / T6 当日 push 并入本窗
+- T1 实证: gateway.log 今日 0 命中 zai/402; 本 cron 显式 model=deepseek-v4-flash 全程正常 → 绕行有效, D15 仍待拍板; W-8BEN-E 超 3 工作日窗口未复核 → 行动卡（8/21 第 5 工作日仍 Pending → 联系 Printful support）; LaunchBuck D16 待拍板; printify alternatives 85.4 低量噪音
+- R1/R2 落地: R1 通过标准下调生效（8/21 审计 1-2 条引用即 PASS）; R2 唯一缺口 BWT 验证 = user 行动卡（Import from GSC 5 分钟）→ NOOP
+- DEEPDIVE: legit 仅 pilot / answer-first 5/5 / 外链 LIVE 1/20 / GA4 NODATA → NOOP
+
+### Step 1 IndexNow + GSC mining
+- sitemap sha 891B0E6F 未变（public=out=state 三方一致）→ 无增量 → NOOP; 内容刷新不产生新 URL, C2b 无新行
+- mining/boosting: 8/19 行已由 02:24 轮写入 gsc-mining-queue.md（0 new + 10 boost）→ NOOP
+
+### Step 2 discovery-radar（周三 ✅）
+- discovery/2026-08-19.md 已存在（02:24 轮完成, 10 源）→ NOOP
+
+### Step 3 content-production（消费 8/19 freebie 邮件）
+- **周更帖 best-free-creative-fabrica-assets-this-week 刷新 Aug 19 drop**: daily-ops 下午轮 12:17 补抓邮件 "Moon Creme & 19 more"（22 slots, 🎃 x1 = Whimsical Halloween Girl Clipart Bundle, 池 45）→ New Drops h2 17-18→17-19（44→66 slots）/ 表格新增 Aug 19 行 / 分析段追加 30-font bundle + 池 45 / 数字段 200→222 slots、Halloween keepers 35→36、Christmas 15 不变（8/19 无圣诞素材, 诚实标注）; title 200+→220+, meta 10→11 days, tldr 同步; 来源 .hermes/logs/cf-freebies/2026-08-19.md
+- diff 核验: 12+/6- 仅预期字段; 全库 git grep 旧标题残留 = 0
+- 98 篇 reviews backlog 维持如实标注（晨轮已处理 gear-launch 行）
+
+### Step 4 geo-technical
+- 周一任务 → SKIP（今日周三）
+
+## push-count = 3
+- #3 夜间窗单次 push: 周更帖 Aug 19 刷新 + daily-ops 8/19 产物（affiliate-programs.json / AFFILIATE_LOG.md / daily-ops-2026-08-19.md / rank-sentinel-2026-08-19.md / cf-freebies/2026-08-19.md / geo-0819.md / geo-cf-analytics-export-fallback.md / goal-evidence-0819.md）+ RESULT/daily-search 追加
+- 预检: npm run build PASS + out 产物核验 → 才 push（见下文 build 段）
+
+## 凭证/阻塞如实标注
+- 402: 今日无新发作（gateway.log 0 命中）; D15 二选一仍待 user 拍板
+- W-8BEN-E: 超窗未复核 BLOCKED_CREDENTIALS → 行动卡维持
+- D7 CF token / D6 cookie / GA4 D14 / BWT 凭证: 均 NODATA 如实

@@ -1168,3 +1168,11 @@ TBD (1 push 整合)
 - 下个检查点: 8/20 tax-audit 复核 (工作日第 4 天) + CF freebie 8/19 补抓 + GEO beacon 侧重试; 8/21 W-8BEN-E 第 5 工作日判定; 8/22 Boost T+14 判定
 - 跨项目提醒: z-printpro.com GSC 索引问题 x2 + Supabase security (均提醒 K3)
 - 无 push (监控任务; PUSH_READY 无)
+## 2026-08-19 · 下午轮刷新 (daily-ops 12:2x)
+- **CF freebie 8/19 补抓** (IMAP ID=716, 8/18 23:00:40 UTC = 8/19 07:00 CST, 晨跑 06:2x 后到货): "Today's free picks: Moon Creme & 19 more" 22 素材解析落盘 .hermes/logs/cf-freebies/2026-08-19.md — 🎃 x1 (Whimsical Halloween Girl Clipart Bundle); 素材池 13 天累计 45 🎃 (去重 ~44)
+- **邮件复核** (SINCE 18-Aug 4 封全量): 0 新审批 / 0 新商户邮件; 噪音 LinkedIn x1 + Supabase security x1 (跨项目已知)
+- **tax-audit 12:19 重试**: BROWSER_UNAVAILABLE (autoglm "No credits left. Please recharge." 实测确认) — 8/19 工作日第 3 天未复核; 下次 8/20 (工作日第 4 天); 8/21 第 5 工作日仍 Pending → 升级 user 联系 support
+- **GEO beacon 侧**: 维持 NODATA (D7 CF API token 未配置 + autoglm 无 credits); 兜底指引 geo-cf-analytics-export-fallback.md 已建, 待 user dashboard 手动导出
+- **printful-watcher SKIP**: email_verified=true (8/8 实证), 无状态异常
+- SSoT: affiliate-programs.json 更新 (last_live_check 12:2x / tax_audit.next=8/20 / cf_freebie_8_19)
+- 无 push (监控任务; PUSH_READY 见 daily-ops 产物)
