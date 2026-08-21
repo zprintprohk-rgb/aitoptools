@@ -72,3 +72,9 @@
 - 进展: test-address.json ✅ 已就位; B1 素材阻塞已解除 (设计源=Kittl 模板)
 - 内容: 支柱 halloween-pod-ideas-2026 ✅ (8/9) + 辐条② printful-vs-printify-halloween-2026 ✅ (8/11); 辐条① 排期 8/17 未上线
 - sitemap 342 / IndexNow: 支柱 8/9 1/1 200, 辐条② 8/13 4/4 200 ✅; GEO llms.txt 缺 2 条 ❌
+
+## 8/21 每日 brief (2026-08-21 18:4x, 季节集群 cron 补判 — 8/18 19:37 402 失败后 user 立即执行)
+- 判定: **PARTIAL** (详见 .hermes/logs/halloween-deadline-0821.md, 3845B)
+- 内容: 5/5 全量上线 ✅ (支柱 + 辐条①②③④, 8/17 W3 push commit 3fe94ee); sitemap 347 / IndexNow 8/17 5/5 200 / llms.txt 4 行 / FAQPage 5/5 — 内容侧 LAUNCHED
+- 素材链仍 0/4: designs/ MISSING, 无 order_id (printful cookie 仍缺 = D6 唯一硬阻塞), photos/wall/ MISSING, 毛利无
+- 8/25 W3 job (98ebd150) 已提前执行完 (halloween-full-0825.md), 排期冗余待 user 确认

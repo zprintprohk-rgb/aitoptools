@@ -60,3 +60,12 @@
 - D6 printful_session_cookie 仍未就位 (8/18 判定前置, 下单环节维持 BLOCKED, 内容环节不受影响)
 - 素材链 0/4 未变; 照片墙 0/6 未变 — 均挂 D6
 - 单日 1 push 纪律: 本调度合并为 1 push
+## 七、8/21 续跑核验 (W3 job 提前触发, user "继续")
+
+- 核验时间: 2026-08-21 18:4x CST (幂等性复核, R4)
+- 结论: 内容侧 5/5 ALREADY DONE, 无需全量重推; 发现 1 处真实缺口当日补全
+- 核验明细: 5/5 slug 在 blog-posts.json (status=published) / sitemap 347 URL 含 5 halloween / keywords-200.csv 203 行 3 GEO 词在列 / FAQ 5-6/页 / Kittl UTM utm_campaign=halloween2026 各页在册
+- **缺口修复**: 辐条② printful-vs-printify-halloween-2026 related 缺 /kittl-review/ (仅 2/3 Kittl 三件套) → 已补 (title 取 reviews.json 真值, 位置跟在两个 Kittl 对比项后) → 3/3 闭环
+- dateModified: 辐条② 2026-08-11 → 2026-08-21 (内容当日变更)
+- 素材链 0/4 未变 (D6 printful cookie 仍缺; 8/21 18:4x 已发 Printful support + Printify 跟进邮件)
+- 单次 push 纪律: 本调度 1 push (blog-posts.json + affiliate-programs.json + 日志)

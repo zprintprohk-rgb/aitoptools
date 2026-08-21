@@ -110,13 +110,14 @@
         "method": "autoglm browser (AutoGLM 1.1.8, user Chrome ??, tab 97687274)",
         "url": "https://www.printful.com/dashboard/affiliate/tax",
         "result": "pending-review",
-        "detail": "8/21 12:35 browser 实读 STILL PENDING (v2 上传 8/15 02:49; 第 5 工作日 8/17-8/21, 3 business days 窗口 8/19 已过); 文件 autoglm-browser-agent.pdf; 页面提示 up to 3 business days 仍显示; 按 8/21 协议升级 user 联系 Printful support",
+        "detail": "8/21 12:35 browser 实读 STILL PENDING (v2 上传 8/15 02:49; 第 5 工作日 8/17-8/21, 3 business days 窗口 8/19 已过); 文件 autoglm-browser-agent.pdf; 页面提示 up to 3 business days 仍显示; 按 8/21 协议升级 user 联系 Printful support | 8/21 18:4x user 立即执行: 问询邮件已发 support@printful.com (SMTP 465 SSL, 存证 .hermes/tmp/smtp-sent-2026-08-21.txt), 待回复",
         "next": "2026-08-22 (或 user 联系 support 后复核)"
       },
       "tax_upload_date": "2026-08-15",
       "tax_review_note": "signed PDF uploaded via autoglm 02:49 CST; reviewed in up to 3 business days",
       "browser_login_state": "autoglm session OK (Jerome logged in) - session cookie extraction N/A, browser session usable for order placement",
-      "tax_upload_v2": "2026-08-15 02:57 CST - Line4 Corporation + Line5 Active NFFE (corrected from Nonparticipating FFI)"
+      "tax_upload_v2": "2026-08-15 02:57 CST - Line4 Corporation + Line5 Active NFFE (corrected from Nonparticipating FFI)",
+      "tax_support_email_sent": "2026-08-21 18:4x support@printful.com"
     },
     {
       "name": "Mockey AI Affiliate Program",
@@ -170,7 +171,8 @@
       },
       "link_deployed": true,
       "link_deploy_note": "8/6 核查 9 工具池全真链 (try.printify.com/4fs863rfz2yc 已上线 out/)",
-      "promo_request_sent": "2026-08-08 via SMTP 465 SSL (gmail_credentials 通道, 真密码 .env IMAP_PASSWORD), subject \"Promo Code Request - aitoptools\", Message-ID <178612007459.38260.17414933324366495799@aitoptools.net>, 留证 .hermes/tmp/printify-sent.txt; 72h 后检查回复 (monitor cron 已覆盖 mail.printify.com)"
+      "promo_request_sent": "2026-08-08 via SMTP 465 SSL (gmail_credentials 通道, 真密码 .env IMAP_PASSWORD), subject \"Promo Code Request - aitoptools\", Message-ID <178612007459.38260.17414933324366495799@aitoptools.net>, 留证 .hermes/tmp/printify-sent.txt; 72h 后检查回复 (monitor cron 已覆盖 mail.printify.com)",
+      "promo_request_followup_sent": "2026-08-21 18:4x affiliate@printify.com (回信 8/8 已发 13 天 0 回复, 跟进邮件已发, 存证同 smtp-sent-2026-08-21.txt)"
     },
     {
       "name": "Photoroom Affiliate Program",
@@ -270,7 +272,7 @@
     }
   ],
   "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
-  "last_updated": "2026-08-21",
+  "last_updated": "2026-08-21 18:45",
   "monitoring": {
     "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
     "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
@@ -1179,11 +1181,11 @@
     },
     "manual_checklist_2026_08_21": {
       "generated_by": "aitoptools daily-ops cron 2026-08-21 12:3x (IMAP 实拉 + autoglm 只读复核)",
-      "1_tax_audit": "W-8BEN-E 8/21 复核 STILL PENDING (browser 实证 12:35, v2 上传后第 5 工作日, 3 business days 窗口 8/19 已过) - 升级 user: 联系 Printful support (support@printful.com 或 affiliate 后台) 询问审核状态/是否需要补充材料",
-      "2_printify_promo": "站内催待 user 执行 (回信 8/8 已发 13 天 0 回复; PartnerStack 站内渠道)",
+      "1_tax_audit": "W-8BEN-E STILL PENDING (browser 实证 12:35) - 18:4x 已发问询邮件 support@printful.com (user 立即执行), 待回复后复核",
+      "2_printify_promo": "18:4x 跟进邮件已发 affiliate@printify.com (13 天 0 回复, 跟进), 待回复",
       "3_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 邮件, 已 10 天; SINCE<90d 不自动)",
       "4_placeit": "催办草稿 drafts/placeit-followup-email.md 版本 B 就绪, user 手动发送",
-      "5_boost_read": "8/21 节点: print-price 里程碑 <=30 未达 (62.8); #3/#4 T+7 读数已由哨兵覆盖 (is magicdrop legit 12.93 历史最佳)",
+      "5_boost_read": "8/21 节点执行完毕; PUSH_READY 内链加权已实施 (commit 21ad4d2, build PASS, 待 19:23 push)",
       "_cf_freebie": "CF freebie 8/18+8/20+8/21 三封补解析落盘; 素材池 ~54 万圣节 充足"
     }
   },
