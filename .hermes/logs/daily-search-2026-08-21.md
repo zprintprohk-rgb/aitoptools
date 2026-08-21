@@ -37,3 +37,10 @@
 
 ## push-count = 1 (本日首次, 内容部署 + 判定产物 + daily-ops 产物合并)
 
+
+> reflog 复核: origin/main@{0}=55bb1a2 (本日 push), 前次 9fd8945 (8/19) → 本日 push-count=1 属实
+
+## 晚间窗 18:36 复核 (幂等)
+- 全部产物已存在 + 已 push (55bb1a2) → Step 0-4 全部 NOOP
+- 线上部署验证 PASS: print-price (calculator title + FAQ) + merger (97,000 + FYUL House) 均 200 且新内容已生效
+- 无新增 cron 产物 (git status 仅 .cluster scratch); 本 log 的 reflog 追加 + 本段为微小改动 → 本地 commit 攒批次日 push (push-count 维持 1)
