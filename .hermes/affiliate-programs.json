@@ -101,17 +101,17 @@
       "confirm_email_sender": "support@info.printful.com",
       "confirm_email_subject": "Confirm email address",
       "confirm_link_note": "8/8 Hermes 全权指令 #1: IMAP 实拉两封 Confirm email address (7/17 15:25Z, 7/20 17:00Z, 同 token), headless GET verify 链接 -> 重定向 auth/login + \"Email confirmation request does not exist\" = 已过期。需 printful_session_cookie 登录后台 Resend verification -> 轮询新邮件(3 次/60s) -> 重试。",
-      "last_updated": "2026-08-19",
+      "last_updated": "2026-08-21",
       "approval_email_found": "2026-07-20 09:50Z affiliate@info.printful.com Your affiliate application was approved!",
       "email_verified": true,
       "tax_status": "w8ben-e-uploaded-pending-review",
       "tax_audit": {
-        "checked": "2026-08-19 (BROWSER_UNAVAILABLE x2: 05:5x + 12:19 autoglm no credits)",
+        "checked": "2026-08-21 12:35 (browser 实证 autoglm OK, credits 已恢复)",
         "method": "autoglm browser (AutoGLM 1.1.8, user Chrome ??, tab 97687274)",
         "url": "https://www.printful.com/dashboard/affiliate/tax",
         "result": "pending-review",
-        "detail": "8/17 06:40 Pending (v2 上传 8/15 02:49); 8/19 两次重试 BROWSER_UNAVAILABLE (autoglm 无 credits); 窗口 8/17-8/19 最后一天未复核; 8/21 第 5 工作日仍 Pending -> 升级 user 联系 support",
-        "next": "2026-08-20"
+        "detail": "8/21 12:35 browser 实读 STILL PENDING (v2 上传 8/15 02:49; 第 5 工作日 8/17-8/21, 3 business days 窗口 8/19 已过); 文件 autoglm-browser-agent.pdf; 页面提示 up to 3 business days 仍显示; 按 8/21 协议升级 user 联系 Printful support",
+        "next": "2026-08-22 (或 user 联系 support 后复核)"
       },
       "tax_upload_date": "2026-08-15",
       "tax_review_note": "signed PDF uploaded via autoglm 02:49 CST; reviewed in up to 3 business days",
@@ -270,12 +270,12 @@
     }
   ],
   "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
-  "last_updated": "2026-08-19",
+  "last_updated": "2026-08-21",
   "monitoring": {
     "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
     "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
-    "next_action": "8/20: W-8BEN-E 复核 (工作日第 4 天, autoglm 需恢复) + GEO beacon 侧重试 (autoglm/API 或 dashboard 导出兜底); 8/21: W-8BEN-E 第 5 工作日仍 Pending -> 升级 user 联系 support; 8/22: Boost T+14 判定",
-    "last_live_check": "2026-08-19 12:2x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 18-Aug 4 emails (2 CF freebie + LinkedIn 噪音 + Supabase 跨项目已知) - 0 approvals / 0 merchant mails; CF freebie 8/19 (Moon Creme & 19 more) parsed -> cf-freebies/2026-08-19.md (素材池 45 halloween); tax-audit 12:19 BROWSER_UNAVAILABLE (autoglm no credits, retry); GEO beacon still NODATA (D7 token missing)",
+    "next_action": "8/22: Boost T+14 判定 + tax-audit 复核 (user 联系 support 后); 8/21 已升级 user: W-8BEN-E 第 5 工作日仍 Pending 联系 support; 8/25: Halloween 集群全量 push 窗口",
+    "last_live_check": "2026-08-21 12:3x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 18-Aug 9 emails (CF freebie x4 含 8/18+8/20+8/21 三封补解析 + Claid first-month review 余额 0 + LinkedIn x2 + Supabase security 跨项目 + GSC zprintpro 跨项目) - 0 approvals / 0 新商户邮件; tax-audit 12:35 browser 实证 STILL PENDING (第 5 工作日 -> 升级 user)",
     "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
     "network_diag_5_19": {
       "imap.gmail.com:993": "TIMEOUT 8s",
@@ -1094,6 +1094,97 @@
       "5_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 邮件, 已 8 天; SINCE<90d 不自动)",
       "_placeit": "催办草稿 drafts/placeit-followup-email.md 版本 B 就绪, user 手动发送",
       "_cf_freebie": "CF freebie 8/17+8/18 解析落盘 (各 22 素材, 万圣节 +8); 8/19 未到货 (常规 ~09:55 CST, 下午轮可补); 素材池 12 天累计 44 (去重 ~43) 充足"
+    },
+    "rank_sentinel_8_21": {
+      "status": "PIPELINE-OK (第 6 天, 8/18+8/20 cron 缺失补拉)",
+      "window": "2026-08-14..2026-08-20",
+      "alerts": 1,
+      "alerts_detail": "is magicdrop legit 25.58->12.93 (改善 12.7 位, 历史最佳, imps 86->40) 正向; print price ai tool 62.33->62.75 里程碑 <=30 未达",
+      "note": "日志 .hermes/logs/rank-sentinel-2026-08-21.md"
+    },
+    "tax_audit_8_21": {
+      "printful": "STILL-PENDING (browser 实证 8/21 12:35, v2 上传后第 5 工作日, 3 business days 窗口已过; 升级 user 联系 support)",
+      "impact": "LOGIN_REQUIRED (app.impact.com 需 user 登录; 不自动登录, 低优先)"
+    },
+    "high_signal_findings_24h_8_21": {
+      "as_of": "2026-08-21 12:3x",
+      "status": "RESTORED - IMAP 增量扫描 (SINCE 18-Aug 9 封全量核实, SOCKS5 127.0.0.1:7892), 0 新审批",
+      "new_findings": {
+        "claid_first_month_review_8_19": {
+          "date": "2026-08-19 06:58:51 +0000",
+          "from": "partners@claid.ai",
+          "subject": "Claid Affiliate Program - first month review",
+          "signal": "30 天回顾邮件: current unpaid balance 0 (符合基线, 站无流量, 0 clicks/referrals). 无新收益, 无需动作; Claid payout_ready=true 链路保持 (PayPal doolen@126.com)"
+        },
+        "cf_free_picks_8_18": {
+          "date": "2026-08-18 01:55:39 UTC",
+          "subject": "104 MagicPro Manga Procreate Brushes & 19 more",
+          "signal": "补解析 (8/18 cron 缺失): 20 素材, 万圣节 x5 (Funny Halloween Quotes / Trending Halloween Dog 重复 / Cowboy Zombie / Watercolor Halloween Clipart Mega Bundle / Autumn Png Sublimation Bundle)"
+        },
+        "cf_free_picks_8_20": {
+          "date": "2026-08-19 22:59:08 UTC",
+          "subject": "Autography & 19 more",
+          "signal": "补解析 (8/20 cron 缺失): 20 素材, 万圣节 x2 (Retro Pumpkin Patch / Halloween PNG Sublimation Bundle)"
+        },
+        "cf_free_picks_8_21": {
+          "date": "2026-08-21 01:36:51 UTC",
+          "subject": "Best Friends Humor Quotes & 19 more",
+          "signal": "20 素材, 万圣节 x3 (Vintage Halloween Town PNG / Halloween Highland Cow PNG Bundle / Halloween Clipart Bundle PNG); 素材池 45->~54 万圣节 (去重 ~50+) 远超门槛"
+        }
+      },
+      "p0_count_24h": 0,
+      "p1_count_24h": 4,
+      "p1_notes": "W-8BEN-E 第 5 工作日仍 Pending (升级 user 联系 support) / Printify promo 站内催 (user 待办) / Synthesia 确认 (user 待办, D10) / Placeit 催办 (user 待办)",
+      "p2_count_24h": 7,
+      "p2_notes": "暂缓清单不变; autoglm credits 已恢复 (8/21 tax-audit 实证 OK), GEO beacon 侧可重试; 跨项目: Supabase security + GSC zprintpro (提醒 K3)",
+      "conclusion": "0 新审批 (SINCE 18-Aug 9 封全量核实). Claid 首月回顾余额 0 (符合基线). CF freebie 8/18+8/20+8/21 三封补解析 (+10 万圣节). W-8BEN-E 第 5 工作日仍 Pending -> 升级 user. P0 = 0 连续第 12 天."
+    },
+    "cf_freebie_8_18": {
+      "date": "2026-08-18",
+      "subject": "104 MagicPro Manga Procreate Brushes & 19 more",
+      "arrived_utc": "2026-08-18T01:55:39Z",
+      "items": 20,
+      "halloween": [
+        "Funny Halloween Quotes",
+        "Trending Halloween PNG, Halloween Dog (重复 8/8)",
+        "Cowboy Zombie",
+        "Watercolor Halloween Clipart Mega Bundle",
+        "Autumn Png Sublimation Bundle"
+      ],
+      "note": "8/18 cron 缺失日补解析"
+    },
+    "cf_freebie_8_20": {
+      "date": "2026-08-20",
+      "subject": "Autography & 19 more",
+      "arrived_utc": "2026-08-19T22:59:08Z",
+      "items": 20,
+      "halloween": [
+        "Retro Pumpkin Patch Png, Trendy Fall PNG",
+        "Halloween PNG Sublimation Bundle"
+      ],
+      "note": "8/20 cron 缺失日补解析"
+    },
+    "cf_freebie_8_21": {
+      "date": "2026-08-21",
+      "subject": "Best Friends Humor Quotes & 19 more",
+      "arrived_utc": "2026-08-21T01:36:51Z",
+      "items": 20,
+      "halloween": [
+        "Vintage Halloween Town PNG Gothic PNG",
+        "Halloween Highland Cow PNG Bundle",
+        "Halloween Clipart Bundle PNG"
+      ],
+      "pool_total_halloween": "~54 (去重 ~50+)",
+      "note": "素材池 45->~54 万圣节"
+    },
+    "manual_checklist_2026_08_21": {
+      "generated_by": "aitoptools daily-ops cron 2026-08-21 12:3x (IMAP 实拉 + autoglm 只读复核)",
+      "1_tax_audit": "W-8BEN-E 8/21 复核 STILL PENDING (browser 实证 12:35, v2 上传后第 5 工作日, 3 business days 窗口 8/19 已过) - 升级 user: 联系 Printful support (support@printful.com 或 affiliate 后台) 询问审核状态/是否需要补充材料",
+      "2_printify_promo": "站内催待 user 执行 (回信 8/8 已发 13 天 0 回复; PartnerStack 站内渠道)",
+      "3_synthesia_confirm": "确认链接仍待 user 手动点 (8/11 邮件, 已 10 天; SINCE<90d 不自动)",
+      "4_placeit": "催办草稿 drafts/placeit-followup-email.md 版本 B 就绪, user 手动发送",
+      "5_boost_read": "8/21 节点: print-price 里程碑 <=30 未达 (62.8); #3/#4 T+7 读数已由哨兵覆盖 (is magicdrop legit 12.93 历史最佳)",
+      "_cf_freebie": "CF freebie 8/18+8/20+8/21 三封补解析落盘; 素材池 ~54 万圣节 充足"
     }
   },
   "pending_applications_aging": {

@@ -11,3 +11,9 @@
 
 ## 2026-08-17
 - (历史) POD 市场锚点: Q4 = 全年 40-60% 收入; FYUL Riga Q1 完成信号
+## 2026-08-21
+- Nano Banana 2 (Gemini 免费, 2026-02-26 上线) = POD 设计免费化信号, 3 源印证 — t-shirt 设计内容可提
+- BF 2026 = 11/27 再次确认 (merchone), 与 D11 吻合
+- FYUL 统一品牌新闻稿 (printweek 2025-11-28) 已入 merger-fyul 扩写引用链
+- POD 市场锚点更新: grandview .1B (2026) → .5B (2033)
+- legit 事实核实: Gelato TP 4.4-4.5/3,136 + TeePublic TP 4.4/640k + Redbubble BBB 非认证/90天退款 (备料, D12/D13 未拍板不部署)

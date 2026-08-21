@@ -10,13 +10,13 @@
       "sha256": "891B0E6F92125FAD58870A2424C95EF00CCAD44B7F80D4BD4F3423536C6F172D"
     }
   },
-  "last_run": "2026-08-18T18:38:05.958Z",
-  "last_run_status": "INCREMENTAL-0819 (daily-search 02:3x): 3 new/updated URLs pushed 3/3 200 (is-gearlaunch-legit new + kittl-vs-placeit + gear-launch-review-2026 updated); sitemap 346->347; C2b 8/19 row recorded",
+  "last_run": "2026-08-21T05:10:00.000Z",
+  "last_run_status": "INCREMENTAL-0821 (daily-search 12:5x): 2 updated URLs pushed 2/2 200 (print-price Plan A + merger-fyul expansion); sitemap unchanged 347; C2b 8/21 row recorded",
   "indexnow_submitted": true,
   "gsc_submitted": false,
   "indexnow_first_full_push": "2026-08-06",
-  "indexnow_urls_pushed": 347,
-  "indexnow_status_200": 347,
+  "indexnow_urls_pushed": 349,
+  "indexnow_status_200": 349,
   "indexnow_key_file": ".hermes/secrets/indexnow-key.txt",
   "last_check_hash_match": true
 }

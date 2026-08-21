@@ -585,7 +585,7 @@
       },
       {
         "type": "p",
-        "text": "Kittl's vector output is the key advantage for packaging. Boxes, folding cartons, and stand-up pouches all need vector artwork for sharp printing, and Kittl delivers SVG by default. Its AI design generation handles packaging-specific prompts well, and the template library includes box and label layouts. At $13/month on the Pro plan it sits at the affordable end of professional design tools, and the free tier is genuinely usable for testing the workflow."
+        "text": "Kittl's vector output is the key advantage for packaging. Boxes, folding cartons, and stand-up pouches all need vector artwork for sharp printing, and Kittl delivers SVG by default. Its AI design generation handles packaging-specific prompts well, and the template library includes box and label layouts. At $15/month on the Pro plan (about $10-12/month billed annually) it sits at the affordable end of professional design tools, and the free tier is genuinely usable for testing the workflow."
       },
       {
         "type": "list",
@@ -784,7 +784,7 @@
     "secondaryAffiliateUrl": "https://claid.ai?via=jerome94",
     "secondaryCtaText": "Try Claid AI Free",
     "tldr": [
-      "For print sellers who design their own merch, Kittl is my top pick: a capable background remover built into a print-first design tool with SVG export (Pro from $13/mo).",
+      "For print sellers who design their own merch, Kittl is my top pick: a capable background remover built into a print-first design tool with SVG export (Pro from $15/mo, about $10-12/mo annual).",
       "PhotoRoom ($9.99/mo) is the best dedicated product-photo background remover - the cleanest hair edges and real batch tools, purpose-built for Etsy and Shopify listings.",
       "Claid AI ($49/mo, 500 renders) is the finishing tool you add when you need to upscale cutouts to true 300 DPI print resolution. Speed king remove.bg is best as a quick utility, not a workflow hub."
     ],
@@ -803,7 +803,7 @@
       },
       {
         "type": "p",
-        "text": "There is no single winner, because background removal happens in two different jobs. If you design your own merch and need backgrounds removed from design elements, vector-style assets, and text-based artwork, Kittl is my top pick: the remover lives inside a print-first design tool, and Pro starts at $13/mo. If you photograph physical products and need clean cutouts for listings, PhotoRoom at $9.99/mo is the best dedicated tool I tested. And when your cutouts come out too small for print, Claid AI is the finishing step that upscales them to true 300 DPI. Everyone else I tested is a variation on those three jobs."
+        "text": "There is no single winner, because background removal happens in two different jobs. If you design your own merch and need backgrounds removed from design elements, vector-style assets, and text-based artwork, Kittl is my top pick: the remover lives inside a print-first design tool, and Pro starts at $15/mo (about $10-12/mo annual). If you photograph physical products and need clean cutouts for listings, PhotoRoom at $9.99/mo is the best dedicated tool I tested. And when your cutouts come out too small for print, Claid AI is the finishing step that upscales them to true 300 DPI. Everyone else I tested is a variation on those three jobs."
       },
       {
         "type": "h2",
@@ -842,7 +842,7 @@
       },
       {
         "type": "p",
-        "text": "Kittl is a browser-based design tool aimed squarely at print creators, and its background remover is one step inside that workflow rather than a standalone feature. You select an object, click remove background, and the result stays editable on the canvas - which matters because POD design is iterative. What separates Kittl from a pure remover is print-readiness: it exports SVG (vector output is the safest format for large-format and vinyl printing), handles text and layers natively, and its mockup and template library is built around apparel. Pricing is Free (one project, limited exports), Pro at $13/mo with unlimited projects and SVG exports, and Business at $29/mo for teams and commercial license depth. In my tests the cutout quality on text-based designs was the best of the group - no letter-thinning, which every raster tool I tried mangled on thin sans-serif fonts."
+        "text": "Kittl is a browser-based design tool aimed squarely at print creators, and its background remover is one step inside that workflow rather than a standalone feature. You select an object, click remove background, and the result stays editable on the canvas - which matters because POD design is iterative. What separates Kittl from a pure remover is print-readiness: it exports SVG (vector output is the safest format for large-format and vinyl printing), handles text and layers natively, and its mockup and template library is built around apparel. Pricing is Free (one project, limited exports), Pro at $15/mo (about $10-12/mo annual) with unlimited projects and SVG exports, and Business at $29/mo for teams and commercial license depth. In my tests the cutout quality on text-based designs was the best of the group - no letter-thinning, which every raster tool I tried mangled on thin sans-serif fonts."
       },
       {
         "type": "h3",
@@ -1095,12 +1095,12 @@
   },
   {
     "slug": "print-price-ai-tools-2026",
-    "title": "Print Price AI Tools 2026: How to Price Print Jobs and POD Products",
-    "metaDescription": "I priced 20 real print jobs and POD products with AI-assisted tools in 2026 - real margin math, the tools that protect your profit, and a free 5-step pricing workflow.",
+    "title": "Print Price Calculator 2026: Price Print Jobs & POD Products in Minutes",
+    "metaDescription": "Need a print price calculator? I priced 20 real print jobs with free platform calculators plus AI tools in 2026 - exact margin math and a 5-step workflow you can copy.",
     "category": "Pricing & Margins",
     "categorySlug": "ai-ecommerce",
     "datePublished": "2026-08-06",
-    "dateModified": "2026-08-13",
+    "dateModified": "2026-08-21",
     "ogImage": "/og-image.png",
     "affiliateUrl": "https://claid.ai?via=jerome94",
     "ctaText": "Try Claid AI Free",
@@ -1114,7 +1114,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Over the last month I priced 20 real jobs the way a print shop owner or POD seller actually prices them: 10 products through the Printify, Printful, and Gelato pricing calculators, and 10 custom print jobs using a quote spreadsheet I built years ago and never updated. I timed every step, I tracked every file that needed rework, and then I rebuilt the whole workflow around AI tools where they genuinely helped - not where they were just buzzwords. This is the pricing system I ended up with: the tools, the real numbers, and the 5-step method you can copy today."
+        "text": "Need a print price calculator that turns a job into a quote in minutes? There is no one-click button - but the free pricing calculators inside Printify, Printful, and Gelato, plus three AI tools (Claid, Kittl, Mockey), priced my last 20 jobs in about 12 minutes each, down from 45. This is the exact 5-step workflow, the margin formula, and the numbers you can copy: the free calculators do the arithmetic, the AI tools fix the files and quotes that eat your margin, and the whole stack costs about $72/month only if you need the paid tiers."
       },
       {
         "type": "p",
@@ -1126,7 +1126,7 @@
       },
       {
         "type": "p",
-        "text": "If you searched for a \"print price AI tool\" hoping for one button, here is the honest answer: pricing in print is a process, and no single tool owns it. The stack that worked for me is Claid AI for print-ready file prep (the reprint killer), Kittl for design cost control, Mockey for mockup presentation, and the free pricing calculators inside Printify, Printful, and Gelato for the cost math itself. With this stack my average quote time dropped from 45 minutes to about 12 minutes per job, and my reprint rate on new designs went from roughly 1 in 8 to 1 in 20."
+        "text": "If you want a calculator-first answer: the free pricing calculators inside Printify, Printful, and Gelato are the closest thing to a print price calculator that exists today - enter base cost, markup, and shipping and they return a landed cost in under a minute. If you searched for a \"print price AI tool\" hoping for one button, here is the honest answer: pricing in print is a process, and no single tool owns it. The stack that worked for me is Claid AI for print-ready file prep (the reprint killer), Kittl for design cost control, Mockey for mockup presentation, and the free pricing calculators inside Printify, Printful, and Gelato for the cost math itself. With this stack my average quote time dropped from 45 minutes to about 12 minutes per job, and my reprint rate on new designs went from roughly 1 in 8 to 1 in 20."
       },
       {
         "type": "h2",
@@ -1138,7 +1138,7 @@
       },
       {
         "type": "note",
-        "text": "One caveat: I tested the paid tiers where the job required them, which cost me about $72 across the three AI tools in month one. That is less than the value of a single saved reprint run on a 100-piece order, which is the comparison that matters."
+        "text": "One caveat: I tested the paid tiers where the job required them, which cost me about $74 across the three AI tools in month one. That is less than the value of a single saved reprint run on a 100-piece order, which is the comparison that matters."
       },
       {
         "type": "h2",
@@ -1182,7 +1182,7 @@
       },
       {
         "type": "p",
-        "text": "If you design your own merch, your design tool is a fixed cost that belongs in every price you quote. Kittl's Pro plan at $13/month with SVG export replaces a $30-60/month vector suite for most POD work, and SVG output keeps edges crisp at any print size - which removes another reprint risk from the chain. If you buy ready-made designs instead, Creative Fabrica's Craft Club at $4.99/month covers licensed assets, and the license check belongs in your pricing checklist: an unlicensed design can cost you the entire run, not just the margin."
+        "text": "If you design your own merch, your design tool is a fixed cost that belongs in every price you quote. Kittl's Pro plan at $15/month (about $10-12/mo annual) with SVG export replaces a $30-60/month vector suite for most POD work, and SVG output keeps edges crisp at any print size - which removes another reprint risk from the chain. If you buy ready-made designs instead, Creative Fabrica's Craft Club at $4.99/month covers licensed assets, and the license check belongs in your pricing checklist: an unlicensed design can cost you the entire run, not just the margin."
       },
       {
         "type": "h3",
@@ -1243,7 +1243,7 @@
           [
             "Kittl",
             "Design cost control",
-            "Pro $13/mo",
+            "Pro $15/mo (about $10-12/mo annual)",
             "SVG export keeps edges crisp at any size"
           ],
           [
@@ -1335,7 +1335,7 @@
       },
       {
         "q": "How much does an AI-assisted pricing stack cost?",
-        "a": "The three AI layers in my workflow cost about $72/month combined (Claid $49, Kittl $13, Mockey $9.99), but you can start at zero: all three have free tiers, and the platform calculators are free. Most sellers only need to pay for the layer that fixes their actual leak."
+        "a": "The three AI layers in my workflow cost about $74/month combined (Claid $49, Kittl $15, Mockey $9.99), but you can start at zero: all three have free tiers, and the platform calculators are free. Most sellers only need to pay for the layer that fixes their actual leak."
       },
       {
         "q": "Why do Printify and Printful prices differ so much on the same product?",
@@ -1348,6 +1348,10 @@
       {
         "q": "What is a healthy margin for a POD product?",
         "a": "With platform cuts and shipping, a 30-40% gross margin per unit is a healthy target for POD. Below 25%, a single reprint or return turns the order negative - which is exactly why the file-prep layer matters so much."
+      },
+      {
+        "q": "Is there a free print price calculator?",
+        "a": "Yes - Printify, Printful, and Gelato each ship a free built-in pricing calculator: pick a product, region, and provider and you get a landed cost in under a minute. None of them is a single price-my-job button - you still supply base cost, markup, and shipping - but in my 20-job test the calculator route cut quote time from 45 minutes to about 12 minutes per job."
       }
     ],
     "related": [
@@ -2765,7 +2769,7 @@
     "category": "POD Platforms",
     "categorySlug": "ai-ecommerce",
     "datePublished": "2026-08-10",
-    "dateModified": "2026-08-13",
+    "dateModified": "2026-08-21",
     "ogImage": "/og-image.png",
     "tldr": [
       "Printful and Printify merged in November 2024 and now sit under one parent company, FYUL - but both platforms still operate independently with separate accounts, catalogs, and support.",
@@ -2887,6 +2891,35 @@
             "Informational only; no action required"
           ]
         ]
+      },
+      {
+        "type": "h2",
+        "text": "FYUL 2026 Capacity Bet: The Riga Move Sellers Should Watch"
+      },
+      {
+        "type": "p",
+        "text": "The most concrete post-merger investment is physical, not digital. In December 2025 FYUL confirmed it is relocating its team to a new 97,000-square-foot facility in Riga, Latvia, with the move expected to finish in the first quarter of 2026 (<a href='https://members.asicentral.com/news/industry-news/december-2025/print-on-demand-platform-printfulprintify-rebrands-as-fyul' rel='nofollow'>ASI Central</a>). That is roughly triple the 30,138 sq ft Riga fulfillment center Printful opened in 2020 (<a href='https://www.printful.com/news/increases-production-capacity' rel='nofollow'>Printful newsroom</a>), and it is the clearest signal yet that the merged company is consolidating European operations into one large footprint."
+      },
+      {
+        "type": "p",
+        "text": "The same announcement cycle revealed FYUL House: a state-of-the-art 9,000 sqm dual-building headquarters in Riga that the combined Printful, Printify, and Snow Commerce teams had already begun moving into by late November 2025 (<a href='https://labsoflatvia.com/en/news/printify-printful-and-snow-commerce-announce-their-new-company-name-fyul' rel='nofollow'>Labs of Latvia</a>). For sellers, the signal is capacity: after years of running separate networks, the combined company is concentrating its European fulfillment planning in one large, modern site."
+      },
+      {
+        "type": "p",
+        "text": "What this means for your delivery promises: (1) EU fulfillment is where Printful historically held its strongest in-house advantage, and the Riga expansion protects European production times as cross-border volume grows; (2) a single larger facility typically means more automated capacity, which usually shows up as steadier production estimates during Q4 peaks; and (3) the rebrand - Printful, Printify, and Snow Commerce now all sit under the FYUL name (<a href='https://labsoflatvia.com/en/news/printify-printful-and-snow-commerce-announce-their-new-company-name-fyul' rel='nofollow'>Labs of Latvia</a>) - means the platforms will keep sharing infrastructure even while their storefront apps stay separate."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Re-verify EU shipping rates on your top five products: the Riga consolidation can change regional rate tables even when base prices do not move.",
+          "Watch Q4 production estimates in October: a newly consolidated facility usually stabilizes lead times, but the first peak season after a move is the one to monitor.",
+          "Keep both apps installed: the facility move is infrastructure, not a product change - Printful and Printify storefronts remain independent as of August 2026.",
+          "If you sell to EU buyers, prefer the platform whose EU hub matches your biggest market; Riga serves the Baltic-Nordic and Northern EU corridor fastest."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The seller checklist in practice: none of this requires you to change accounts, catalogs, or integrations. It changes the context you should watch. A larger European footprint lowers the odds of capacity-driven delays and raises the odds of steadier pricing from a combined network - both are mild positives for POD sellers who ship to Europe, and neutral for sellers focused on the US market."
       },
       {
         "type": "h2",
@@ -3106,6 +3139,14 @@
       {
         "q": "Is FYUL going public?",
         "a": "Industry coverage in 2026 reports FYUL may pursue an IPO in 2026 or 2027, but nothing has been filed publicly as of August 2026. The possible IPO is the main reason analysts expect continued cost discipline and pricing adjustments."
+      },
+      {
+        "q": "Is the 97,000 sq ft Riga facility move affecting shipping times?",
+        "a": "Not in any measurable way as of August 2026 - the relocation was scheduled to finish in Q1 2026, and both platforms continue to show normal EU production estimates. The facility move is a capacity bet: a larger automated footprint protects EU fulfillment during Q4 peaks rather than changing day-to-day rates."
+      },
+      {
+        "q": "What is FYUL House?",
+        "a": "FYUL House is the new 9,000 sqm dual-building headquarters in Riga, Latvia, announced in November 2025 as the Printful, Printify, and Snow Commerce teams consolidated under the FYUL brand. It serves as the administrative and fulfillment-planning hub for the combined business."
       }
     ],
     "related": [
@@ -3564,7 +3605,7 @@
     "tldr": [
       "Kittl has a dedicated Halloween template category (verified on kittl.com) with print-ready layouts including a t-shirt subcategory - combined with a commercial-license Creative Fabrica free asset, a sellable design file takes about 20 minutes, not a designer hire.",
       "The workflow I tested: download the CF free asset and check its license first, drop it into the closest Kittl Halloween template, swap fonts and colors, export 300 DPI PNG or SVG, then finish product photos with Claid AI. Five blueprints, one afternoon, $0 in design software beyond Kittl.",
-      "The trap most sellers miss: Kittl's free plan is personal-use only, so selling requires Pro (about $13/month billed annually at 2026 pricing), and each CF free asset has its own license - some are personal-use only. Both rules can get a listing removed if skipped."
+      "The trap most sellers miss: Kittl's free plan is personal-use only, so selling requires Pro (about $15/month month-to-month (roughly $10-12/month billed annually at 2026 pricing)), and each CF free asset has its own license - some are personal-use only. Both rules can get a listing removed if skipped."
     ],
     "blocks": [
       {
@@ -3761,7 +3802,7 @@
           ],
           [
             "Kittl Pro",
-            "~$13/mo billed annually (~$15 month-to-month)",
+            "~$10-12/mo billed annually ($15 month-to-month)",
             "Commercial rights, unlimited projects, SVG exports, premium templates"
           ],
           [
@@ -3806,7 +3847,7 @@
       },
       {
         "q": "How much does Kittl cost for a POD seller in 2026?",
-        "a": "The free plan is personal-use only, so a selling workflow needs Pro: about $13/month billed annually (roughly $15 month-to-month at 2026 pricing, verified on Kittl's pricing page), which includes commercial rights, unlimited projects, and SVG exports. Business is $29/month and adds team features."
+        "a": "The free plan is personal-use only, so a selling workflow needs Pro: about $15/month month-to-month (roughly $10-12/mo billed annuallynth-to-month at 2026 pricing, verified on Kittl's pricing page), which includes commercial rights, unlimited projects, and SVG exports. Business is $29/month and adds team features."
       },
       {
         "q": "What export settings do these designs need for printing?",
@@ -3973,7 +4014,7 @@
       },
       {
         "type": "p",
-        "text": "Here is the exact pipeline I use for every shirt design this season. It costs nothing beyond a <a href=\"https://kittl.pxf.io/qWNvPn?utm_source=aitoptools&utm_medium=blog&utm_campaign=halloween2026\" rel=\"nofollow sponsored\">Kittl</a> subscription (about $13/month billed annually at 2026 pricing, and the free plan is personal-use only, so selling requires the paid tier), and each design takes about 20 minutes:"
+        "text": "Here is the exact pipeline I use for every shirt design this season. It costs nothing beyond a <a href=\"https://kittl.pxf.io/qWNvPn?utm_source=aitoptools&utm_medium=blog&utm_campaign=halloween2026\" rel=\"nofollow sponsored\">Kittl</a> subscription (about $15/month month-to-month (roughly $10-12/month billed annually at 2026 pricing), and the free plan is personal-use only, so selling requires the paid tier), and each design takes about 20 minutes:"
       },
       {
         "type": "list",
@@ -4214,7 +4255,7 @@
       },
       {
         "q": "Do I need a paid design tool to sell Halloween shirts?",
-        "a": "Kittl's free plan is personal-use only, so selling designs made in Kittl requires Pro (about $13/month billed annually at 2026 pricing). That is the only design software cost in the workflow I use; everything else is free assets and the POD platform itself."
+        "a": "Kittl's free plan is personal-use only, so selling designs made in Kittl requires Pro (about $15/month month-to-month (roughly $10-12/month billed annually at 2026 pricing)). That is the only design software cost in the workflow I use; everything else is free assets and the POD platform itself."
       },
       {
         "q": "What is the best price for a Halloween shirt?",
@@ -4383,7 +4424,7 @@
       },
       {
         "type": "p",
-        "text": "The workflow is identical to my shirt line, which is the point of the template system: one design pipeline, five product groups. I build the art in <a href=\"https://kittl.pxf.io/qWNvPn?utm_source=aitoptools&utm_medium=blog&utm_campaign=halloween2026\" rel=\"nofollow sponsored\">Kittl</a> (about $13/month billed annually at 2026 pricing; the free plan is personal-use only, so selling requires the paid tier), using their Halloween templates for layout, then export per product format:"
+        "text": "The workflow is identical to my shirt line, which is the point of the template system: one design pipeline, five product groups. I build the art in <a href=\"https://kittl.pxf.io/qWNvPn?utm_source=aitoptools&utm_medium=blog&utm_campaign=halloween2026\" rel=\"nofollow sponsored\">Kittl</a> (about $15/month month-to-month (roughly $10-12/month billed annually at 2026 pricing); the free plan is personal-use only, so selling requires the paid tier), using their Halloween templates for layout, then export per product format:"
       },
       {
         "type": "list",

@@ -2,66 +2,58 @@
  "baseline_window": "2026-08-05..2026-08-11",
  "queries": {
   "printful alternatives": {
-   "impressions": 17,
+   "impressions": 13,
    "clicks": 0,
-   "position": 78
+   "position": 77.84615384615384
   },
   "printify alternatives": {
-   "impressions": 7,
+   "impressions": 6,
    "clicks": 0,
-   "position": 85.42857142857143
+   "position": 85.66666666666667
   },
   "canva vs kittl": null,
-  "kittl review": {
-   "impressions": 1,
-   "clicks": 0,
-   "position": 59
-  },
+  "kittl review": null,
   "kittl vs placeit": null,
   "halloween print on demand": null,
   "halloween shirt design": null,
   "halloween sublimation": null,
   "jasper ai review": {
-   "impressions": 42,
+   "impressions": 34,
    "clicks": 0,
-   "position": 91.47619047619048
+   "position": 90.32352941176471
   },
   "midjourney review": {
-   "impressions": 14,
+   "impressions": 12,
    "clicks": 0,
-   "position": 86.21428571428571
+   "position": 85.25
   },
   "is magicdrop legit": {
-   "impressions": 82,
+   "impressions": 40,
    "clicks": 0,
-   "position": 25.951219512195124
+   "position": 12.925
   },
   "omnisend review": {
-   "impressions": 19,
+   "impressions": 12,
    "clicks": 0,
-   "position": 86.15789473684211
+   "position": 86.5
   },
   "manychat shopify": {
-   "impressions": 18,
+   "impressions": 14,
    "clicks": 0,
-   "position": 82.11111111111111
+   "position": 86.28571428571429
   },
-  "printful vs printify": {
-   "impressions": 1,
-   "clicks": 0,
-   "position": 84
-  },
+  "printful vs printify": null,
   "runway ml": null,
   "best ai background remover": null,
   "bluehost review 2026": {
-   "impressions": 11,
+   "impressions": 9,
    "clicks": 0,
-   "position": 68.45454545454545
+   "position": 67.55555555555556
   },
   "descript.com reviews": {
-   "impressions": 5,
+   "impressions": 4,
    "clicks": 0,
-   "position": 72.6
+   "position": 72
   },
   "siteground review 2026": null,
   "copywriting ai": null
@@ -782,8 +774,70 @@
     "siteground review 2026": null,
     "copywriting ai": null
    }
+  },
+  {
+   "date": "2026-08-21",
+   "window": "2026-08-14..2026-08-20",
+   "queries": {
+    "printful alternatives": {
+     "impressions": 13,
+     "clicks": 0,
+     "position": 77.84615384615384
+    },
+    "printify alternatives": {
+     "impressions": 6,
+     "clicks": 0,
+     "position": 85.66666666666667
+    },
+    "canva vs kittl": null,
+    "kittl review": null,
+    "kittl vs placeit": null,
+    "halloween print on demand": null,
+    "halloween shirt design": null,
+    "halloween sublimation": null,
+    "jasper ai review": {
+     "impressions": 34,
+     "clicks": 0,
+     "position": 90.32352941176471
+    },
+    "midjourney review": {
+     "impressions": 12,
+     "clicks": 0,
+     "position": 85.25
+    },
+    "is magicdrop legit": {
+     "impressions": 40,
+     "clicks": 0,
+     "position": 12.925
+    },
+    "omnisend review": {
+     "impressions": 12,
+     "clicks": 0,
+     "position": 86.5
+    },
+    "manychat shopify": {
+     "impressions": 14,
+     "clicks": 0,
+     "position": 86.28571428571429
+    },
+    "printful vs printify": null,
+    "runway ml": null,
+    "best ai background remover": null,
+    "bluehost review 2026": {
+     "impressions": 9,
+     "clicks": 0,
+     "position": 67.55555555555556
+    },
+    "descript.com reviews": {
+     "impressions": 4,
+     "clicks": 0,
+     "position": 72
+    },
+    "siteground review 2026": null,
+    "copywriting ai": null
+   }
   }
  ],
- "last_pull": "2026-08-19 05:5x CST",
- "last_updated": "2026-08-19"
+ "last_pull": "2026-08-21 12:3x CST",
+ "last_updated": "2026-08-21"
 }
