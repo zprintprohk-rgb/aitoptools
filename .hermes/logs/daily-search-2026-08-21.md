@@ -53,3 +53,13 @@
 - PUSH_READY 21ad4d2 (is-magicdrop-legit 内链加权) 已随 6c03f4e 于 18:48 push 上线; 线上抽查验证 PASS: halloween-pod-ideas-2026 + printful-printify-merger-fyul-2026 页面 magicdrop 入链均生效; 源数据 5/5 集群篇 related 含 magicdrop, gearlaunch 互链在
 - 今日 push-count = 2 (12:59 55bb1a2 + 18:48 6c03f4e), 在 ≤5 限额内
 - ⚠️ P0 安全事件: AFFILIATE_LOG.md 含 Gmail app_password 明文 (lckb***zvz), 公开仓库历史自 8/3 b0b3d2b 泄漏 18 天; 工作副本已清洗 (<redacted-2026-08-21>), 本 commit 随附; gmail_credentials.json 从未入历史 (安全); 处置: user 必须轮换 app password + 更新 credentials 文件; 历史清洗 (filter-repo) 待 user 决定
+
+## 19:23 cron 主窗（幂等核验收尾）
+- Step 0: 最新 STRATEGY-2026-08-22（19:20 K3 下发,效力 8/22）— 无今日 TASKS,8/22 排期: T1(daily-ops 12:17) / T4-T5(19:23 备战类) / T2-T3(判定类) / T6 收尾; 今日 T+14 判定等任务已全完成 → NOOP
+- DEEPDIVE 三引擎一底座 + STRATEGY-0819 修订核对: 今日日志已记录 → NOOP
+- Step 1: sitemap sha256 复核 MATCH=true（347 URL, 与 state 一致）→ 无新增, IndexNow 无需再推; state last_run 05:10Z INCREMENTAL-0821 2/2 200 已录
+- Step 2: discovery/2026-08-21.md 存在(3211B) → SKIP
+- Step 3: 内容生产已全完成(print-price 方案A / merger-fyul / Kittl 定价 / PUSH_READY 21ad4d2 线上验证 PASS) → NOOP
+- Step 4: geo-technical 仅周一 → SKIP
+- git 核验: main 与 origin/main 同步(b268b7d, 今日 3 push: 12:59 55bb1a2 / 18:48 6c03f4e / 18:53 b268b7d); 新增入库: BOARD.md D17 P0 安全项 + STRATEGY-2026-08-22 + PLAN-2026-09-MONTHLY + weekly-2026-08-21 + halloween-deadline-0821
+- push-count = 4（本批策略产物 1 push, ≤5 限额内）
