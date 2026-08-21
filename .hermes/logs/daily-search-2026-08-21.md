@@ -44,3 +44,7 @@
 - 全部产物已存在 + 已 push (55bb1a2) → Step 0-4 全部 NOOP
 - 线上部署验证 PASS: print-price (calculator title + FAQ) + merger (97,000 + FYUL House) 均 200 且新内容已生效
 - 无新增 cron 产物 (git status 仅 .cluster scratch); 本 log 的 reflog 追加 + 本段为微小改动 → 本地 commit 攒批次日 push (push-count 维持 1)
+
+## 晚间窗 18:39 续 (继续)
+- T1③ 补偿: Printful support W-8BEN-E 跟进草稿已落盘 .hermes/drafts/printful-w8-followup-0821.md (第 5 工作日触发, 待 user 手动发送)
+- R1 20 词 AI 引用审计轻量尝试 (web_search 2 probe): 仅站内自引用, 外部 AI 引用 0 条可见 → 如实记录未达标, 直接验证仍待 D7 beacon/autoglm 恢复
