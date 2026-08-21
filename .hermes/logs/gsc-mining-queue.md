@@ -112,3 +112,9 @@
 - Data-Driven Queue (imp≥10 无专页): **0 新增** — design pickle 簇 (23 imp @~50) 已有 designpickle-review 专页 → 转 boost
 - 推排名清单新增 10 行 (见 CONTENT_PLAN.md 追加段): sticker mule 38.9 / design pickle 49.4 / creative fabrica 53.7 / printful vs gelato 62.9 / heygen 65.7 / print price ai tool 60.2 / bluehost 68.5 / adcreative 66.8 / omnisend 86.2 / manychat 82.1
 - 幂等: 8/19 行不存在 → 本次追加
+
+## 2026-08-21 weekly-review 更新
+- 数据源: GSC API 实时 (8/14-8/20, 316 query; data/gsc_data.json 已刷新)
+- 扫描: 展示≥10 全量比对专页映射 → **0 个无专页新词** (ai print estimator 7 imp 仍 <10 维持队列)
+- 推排名清单: **+1 候选** — designpickle-review 51.70 (design pickle review/reviews 15+15 imp, daily-search 8/21 已登记, 排期 TBD)
+- Boost 25 队列: 6/25 完成 (#1-#6); #3 magicdrop 12.9 达标 ≤20 (Branch A); #4 print-price 62.8 未达 ≤30 → 方案 A 部署, 8/28 复读

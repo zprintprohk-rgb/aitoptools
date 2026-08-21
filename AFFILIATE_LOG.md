@@ -731,7 +731,7 @@ TBD (1 push 整合)
 ### 1. 5min verify PASS (5:15)
 - `F:\aitoptools\.hermes\secrets\gmail_credentials.json` EXISTS, 1640 bytes, mtime 2026/7/30 5:15:36
 - 字段: provider/auth_method/user/app_password(16 chars)/imap_host/imap_port/use_ssl/filter_senders(18 个)/filter_keywords(10 个)/check_window_hours/last_updated
-- app_password: `lckbbhousfdtlzvz` (16 chars, 空格已 strip)
+- app_password: `<redacted-2026-08-21>` (16 chars, 空格已 strip)
 - `last_updated: 2026-07-30 05:14 (auto-strip-spaces by Mavis per K3 user fix)`
 - 5:02 那轮报 STILL_MISSING → 5:14 user fix → 5:15 存盘, 6min turnaround
 
@@ -1176,18 +1176,20 @@ TBD (1 push 整合)
 - **printful-watcher SKIP**: email_verified=true (8/8 实证), 无状态异常
 - SSoT: affiliate-programs.json 更新 (last_live_check 12:2x / tax_audit.next=8/20 / cf_freebie_8_19)
 - 无 push (监控任务; PUSH_READY 见 daily-ops 产物)
-## 2026-08-21 ? ?????? (daily-ops ?? cron 12:3x)
-- **PHASE ??**: 8/21 print-price ?30 ??? + #3/#4 T+7 ?? ? ??; print price ai tool 62.33?62.75 (**??? ?30 ??**, ?? 65.5 / T+7 ~61.5 / ? 62.8); Boost #3/#4 T+7 ??????? (is magicdrop legit 12.93 ????)
-- **??**: SINCE 18-Aug 9 ????? (SOCKS5 127.0.0.1:7892) ? 0 ??? / 0 ?????; 8/18+8/20 cron ???, 8/21 ???
-- **??? (Claid ????)**: partners@claid.ai 8/19 06:58 UTC "Claid Affiliate Program - first month review" ? current unpaid balance **0** (30 ???, ????: ???? 0 clicks/referrals; ????, ????; Claid payout ????)
-- **CF freebie ?????**: 8/18 (UID 713, ??? x5) + 8/20 (UID 720, x2) + 8/21 (UID 721, x3) ?? cf-freebies/; ??? 45 -> **~54 ???** (?? ~50+) ?? Halloween ????
-- **tax-audit 8/21 ??**: browser ?? (autoglm credits ???) 12:35 ? **STILL PENDING** (v2 ?? 8/15 02:49, ? 5 ???, 3 business days ?? 8/19 ??; ?? autoglm-browser-agent.pdf) -> **?? user: ?? Printful support ??????** (P1-1 ???)
-- **printful-watcher SKIP**: email_verified=true (8/8 ??), status=active, ?????
-- **????? 6 ?** (?? 8/14..8/20, ? 8/18+8/20 ??, ?? 8/19 ??): **1 ALERT ?? ? is magicdrop legit 25.58?12.93 (?? 12.7 ?, ????, ???? 55.1?42.9?34.2?33.6?31.1?26.0?12.9, imps 40)**; ?? .hermes/logs/rank-sentinel-2026-08-21.md
-- **ai-crawler-monitor**: GEO_BLIND NODATA (D7 CF API token ???; ?? autoglm ???? tax-audit, ???????; ?? 8/17: 24h 160 AI ????); ????? autoglm ? CF Web Analytics dashboard
-- ??????: 7 approved-active ?? link_deployed=true (???)
-- SSoT: affiliate-programs.json ?? (last_updated=8/21; tax_audit_8_21 / high_signal_findings_24h_8_21 / rank_sentinel_8_21 / cf_freebie_8_18/8_20/8_21 / manual_checklist_2026_08_21 / next_action)
-- **P0 = 0 (??? 12 ?)**; P1 x4 (W-8BEN-E ? 5 ???? Pending -> user ?? support / Printify promo ??? / Synthesia ?? D10 / Placeit ?? ? ? user ??); P2 ??????
-- ?????: 8/22 Boost T+14 ?? + tax-audit ?? (user ?? support ?); 8/25 Halloween ???? push
-- ?????: Supabase security (zprintpro) + GSC z-printpro.com ???? (??? K3)
-- ? push (????); **PUSH_READY: is-magicdrop-legit ????? (?? 12.93 ????, ????/?????????)**
+
+## 2026-08-21 · 每日联盟运营 (daily-ops 合并 cron 12:3x, 18:45 user「立即执行」追加)
+- **PHASE 节点**: 8/21 print-price ≤30 里程碑 + #3/#4 T+7 读数 — 执行; print price ai tool 62.33→62.75 (**里程碑 ≤30 未达**, 基线 65.5 / T+7 ~61.5 / 现 62.8); Boost #3/#4 T+7 读数由哨兵覆盖 (is magicdrop legit 12.93 历史最佳)
+- **邮件**: SINCE 18-Aug 9 封全量核实 (SOCKS5 127.0.0.1:7892) — 0 新审批 / 0 新商户邮件; 8/18+8/20 cron 缺失日, 8/21 补解析
+- **新发现 (Claid 首月回顾)**: partners@claid.ai 8/19 06:58 UTC "Claid Affiliate Program - first month review" — current unpaid balance **0** (30 天回顾, 符合基线: 站无流量 0 clicks/referrals; 无新收益, 无需动作; Claid payout 链路保持)
+- **CF freebie 三封补解析**: 8/18 (UID 713, 万圣节 x5) + 8/20 (UID 720, x2) + 8/21 (UID 721, x3) 落盘 cf-freebies/; 素材池 45 -> **~54 万圣节** (去重 ~50+) 远超 Halloween 辐条门槛
+- **tax-audit 8/21 复核**: browser 实证 (autoglm credits 已恢复) 12:35 — **STILL PENDING** (v2 上传 8/15 02:49, 第 5 工作日, 3 business days 窗口 8/19 已过; 文件 autoglm-browser-agent.pdf) -> 18:4x 问询邮件已发 support@printful.com (SMTP 465 SSL, 存证 .hermes/tmp/smtp-sent-2026-08-21.txt), 待回复
+- **printful-watcher SKIP**: email_verified=true (8/8 实证), status=active, 无状态异常
+- **排名哨兵第 6 天** (窗口 8/14..8/20, 补 8/18+8/20 缺口, 基准 8/19 快照): **1 ALERT 正向 — is magicdrop legit 25.58→12.93 (改善 12.7 位, 历史最佳, 连续改善 55.1→42.9→34.2→33.6→31.1→26.0→12.9, imps 40)**; 日志 .hermes/logs/rank-sentinel-2026-08-21.md
+- **ai-crawler-monitor**: GEO_BLIND NODATA (D7 CF API token 未配置; 本轮 autoglm 额度用于 tax-audit, 单轮单调用约束; 上次 8/17: 24h 160 AI 爬虫请求); 下次可复用 autoglm 读 CF Web Analytics dashboard
+- 链接部署核查: 7 approved-active 全部 link_deployed=true (无变化)
+- **18:45 user「立即执行」追加**: ① W-8BEN-E 问询邮件已发 support@printful.com ② Printify promo 跟进邮件已发 affiliate@printify.com (8/8 回信 13 天 0 回复) ③ PUSH_READY 内链加权已实施: is-magicdrop-legit 入链 1→6 篇 (POD 集群 related), npm run build PASS, commit 21ad4d2, 待 19:23 push ④ Synthesia 激活不自动点 (SINCE<90d 硬约束, 仍待 user)
+- SSoT: affiliate-programs.json 更新 (last_updated=8/21; tax_audit_8_21 + tax_support_email_sent + promo_request_followup_sent / high_signal_findings_24h_8_21 / rank_sentinel_8_21 / cf_freebie_8_18/8_20/8_21 / manual_checklist_2026_08_21 / next_action)
+- **P0 = 0 (连续第 12 天)**; P1 处置后剩余: Synthesia 确认 (user 待办) / Placeit 催办 (user 待办); W-8BEN-E + Printify promo 已发信待回复
+- 下个检查点: 8/22 Boost T+14 判定 + W-8BEN-E/Printify 邮件回复检查; 8/25 Halloween 集群全量 push
+- 跨项目提醒: Supabase security (zprintpro) + GSC z-printpro.com 索引问题 (均提醒 K3)
+- 无 push (监控任务; 内链加权 commit 21ad4d2 由 19:23 搜索增长 cron 当日部署)

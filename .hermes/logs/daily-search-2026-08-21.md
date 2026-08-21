@@ -48,3 +48,8 @@
 ## 晚间窗 18:39 续 (继续)
 - T1③ 补偿: Printful support W-8BEN-E 跟进草稿已落盘 .hermes/drafts/printful-w8-followup-0821.md (第 5 工作日触发, 待 user 手动发送)
 - R1 20 词 AI 引用审计轻量尝试 (web_search 2 probe): 仅站内自引用, 外部 AI 引用 0 条可见 → 如实记录未达标, 直接验证仍待 D7 beacon/autoglm 恢复
+
+## 19:0x 晚间续 (PUSH_READY 部署验证 + 日志提交 + P0 安全事件)
+- PUSH_READY 21ad4d2 (is-magicdrop-legit 内链加权) 已随 6c03f4e 于 18:48 push 上线; 线上抽查验证 PASS: halloween-pod-ideas-2026 + printful-printify-merger-fyul-2026 页面 magicdrop 入链均生效; 源数据 5/5 集群篇 related 含 magicdrop, gearlaunch 互链在
+- 今日 push-count = 2 (12:59 55bb1a2 + 18:48 6c03f4e), 在 ≤5 限额内
+- ⚠️ P0 安全事件: AFFILIATE_LOG.md 含 Gmail app_password 明文 (lckb***zvz), 公开仓库历史自 8/3 b0b3d2b 泄漏 18 天; 工作副本已清洗 (<redacted-2026-08-21>), 本 commit 随附; gmail_credentials.json 从未入历史 (安全); 处置: user 必须轮换 app password + 更新 credentials 文件; 历史清洗 (filter-repo) 待 user 决定
