@@ -118,3 +118,10 @@
 - 扫描: 展示≥10 全量比对专页映射 → **0 个无专页新词** (ai print estimator 7 imp 仍 <10 维持队列)
 - 推排名清单: **+1 候选** — designpickle-review 51.70 (design pickle review/reviews 15+15 imp, daily-search 8/21 已登记, 排期 TBD)
 - Boost 25 队列: 6/25 完成 (#1-#6); #3 magicdrop 12.9 达标 ≤20 (Branch A); #4 print-price 62.8 未达 ≤30 → 方案 A 部署, 8/28 复读
+
+## 2026-08-22 daily-search 运行记录 (GSC API 实时 8/15-8/21)
+- 数据源: ① GSC API 实时 (gsc-oauth.json 有效, SOCKS5 OK) — 267 queries 全量拉取 (.hermes/tmp/mining-full-0822.json); 展示悬崖窗口 (8/18 起 -92%), imp>=10 仅 6 词
+- Data-Driven Queue (imp>=10 无专页): **0 新增** — design pickle review 11 / design pickle reviews 12 (有专页 designpickle-review, 已登记 Boost 候选 8/21) / is magicdrop legit 16 / jasper ai review 25 / manychat shopify 16 / print price ai tool 13 全部有专页; ai print estimator 6 imp 仍 <10 维持队列观察
+- 推排名清单: designpickle-review 51.70 (页级 30 imp) — **T5 评估通过, 列入 Boost 队列 #7 候选** (专页✓ / imp 30✓ / pos 20-70✓; 备战大纲四杠杆: BLUF+表+FAQ>=3+内链, 不部署待 D12/D13)
+- 噪音排除: 无新 site: 过滤符 query; 展示悬崖期低量词 (imp 1-4) 不登记
+- T2 联动: 严格 T+14 复读数据见 t14-targeted-0822.json + t14-verdict-0821.md 8/22 段 (Branch B #1 / Branch C #2 内链 0 + URL Inspection 重爬待 user)

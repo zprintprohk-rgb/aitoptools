@@ -318,6 +318,7 @@ M1 复盘 — aitoptools
 | 8/16 (D10) | 增量 3 URL (新页 /resources/ + 辐条①补正 + copy-ai-review 刷新) | **3/3** | 0 | sitemap 344 URL (push 后上线) | daily-search 19:2x: resources 聚合页 (T4 外链回链) + kittl-halloween-template-test-2026 (T3 补正后) + copy-ai-review (T1 刷新页) 增量推送 3/3 200; footer 回链随 8/16 push #2 上线 |
 | 8/17 (D11) | 增量 7 URL (Boost 双页 + Halloween 5 页) | **7/7** | 0 | sitemap 346 URL (push 后上线) | daily-search 19:5x: 8/17 两脚本先推 (boost 2: midjourney-review/jasper-ai-review; halloween 5: 含新增辐条③④) 全 200; 本跑 diff 确认 0 待推 URL, state 同步 sha 8D78639B; C2b 记账 |
 | 8/19 (D13) | 增量 3 URL (is-gearlaunch-legit 新页 + kittl-vs-placeit + gear-launch-review-2026 更新) | **3/3** | 0 | sitemap 347 URL (push 后上线) | daily-search 02:3x: legit 产线 pilot 上线 + 战线 A-2/A-3 更新; 见 .hermes/logs/indexnow-2026-08-19.log |
+| 8/22 (D16) | 增量 0 URL (NOOP) | — | 0 | sitemap 347 URL 未变 (sha 891B0E MATCH) | daily-search 19:5x: 无新增/更新 URL (T4/T5 只备不部署, 无 src 改动); GSC UI 端 lastDownloaded 停 7/17 需 user 重提 (P0 展示悬崖联动); mining: imp>=10 共 6 词全部已有专页, 0 新增 |
 | T+7 (8/14) | 增量 | __ | __ | __ | 首读数: GSC 展示 + IndexNow 计数 |
 | T+30 (9/5) | 增量 | __ | __ | __ | 路线决策点 |
 - 记录人: gsc-indexnow cron (12:40) 每次提交后填; 凭证缺失时填 "blocked_missing_credentials"
@@ -1193,3 +1194,18 @@ TBD (1 push 整合)
 - 下个检查点: 8/22 Boost T+14 判定 + W-8BEN-E/Printify 邮件回复检查; 8/25 Halloween 集群全量 push
 - 跨项目提醒: Supabase security (zprintpro) + GSC z-printpro.com 索引问题 (均提醒 K3)
 - 无 push (监控任务; 内链加权 commit 21ad4d2 由 19:23 搜索增长 cron 当日部署)
+## 2026-08-22 · 每日联盟运营 (daily-ops 合并 cron 18:2x)
+- **PHASE 节点**: 8/22 Boost T+14 Branch A/B/C/D 判定 - 判定书已落盘 (t14-verdict-0821: #3 magicdrop 12.93 Branch A 达标 / #1 stickermule 35.0 Branch B / #2 runway NODATA x3 悬置 / #4 print-price 62.75 PARTIAL 方案 A 已部署); 严格复读 (8/15-8/21 窗口) 由 19:23 daily-search T2 执行, 本日哨兵提供支持数据
+- **展示悬崖 (今日最大发现)**: 8/8-8/17 日均 134-531 上升带 -> 8/18/8/19/8/20 = 33/29/29 (-92%), 8/21 无数据; query 数 321->12; GSC sitemap lastDownloaded 仍 7/17 (submitted 98 / indexed 0, 线上 347 URL); robots/sitemap/live 页面全正常 + 哨兵位置稳定 -> 指向索引/覆盖层问题非排名问题; 处置: user GSC UI 重提 sitemap + daily-search 纳入 RESULT + 8/23 复盘判定
+- **RANK-ALERT 负向**: print price ai tool 62.75->71.92 (-9.17 位, imps 8->13) - 与 8/21 方案 A 部署时间重叠, 首次触及回滚阀值; 8/23-24 连续窗口确认, 持续则回滚 H1 (8/28 T+7 复读前由 daily-search/K3 判定)
+- **邮件 (SINCE 21-Aug 5 封全量, SOCKS5 127.0.0.1:7892)**: Printify 回复 (8/21 13:52 UTC) 愿给 20% off first order 码 (新用户专用, 码不可追踪佣金), 待 user 回信码名; Printful support Noelle Gould 回复 (8/21 16:39 UTC): W-8BEN-E 上传文件无法读取需重传 -> 已备 W8BEN-Jerome-Tang-prefilled.pdf 个人表方案 (W-8BEN-E 实体表第 4 项无 Individual 选项 OCR 实测), user 补填+上传
+- **CF freebie 8/22** (UID 723, Hello Honey & 19 more) 解析落盘: 万圣节 x4 (Halloween Dog Witch / Typography Sublimation / Retro PNG / Apothecary Labels); 素材池 ~58 万圣节 (去重 ~54+)
+- **tax-audit 8/22**: support 回复替代 browser 实证 - unreadable-reupload-required (实质推进); autoglm credits 仍缺
+- **printful-watcher SKIP**: email_verified=true (8/8 实证), status=active, 无状态异常
+- **排名哨兵第 7 天** (窗口 8/15..8/21): 1 负向 ALERT (print price -9.17); is magicdrop legit 13.50 (-0.57 微回撤, imps 40->16); 日志 .hermes/logs/rank-sentinel-2026-08-22.md
+- **ai-crawler-monitor**: GEO_BLIND NODATA (D7 CF API token 未配置 + autoglm credits 缺); 上次 8/17: 24h 160 AI 爬虫请求
+- **P0 = 0 链** (7 approved-active 全部 link_deployed=true 不变) + 安全 P0 (D17 gmail app password 轮换) 仍待 user; P1 x4 (W-8BEN 重传 / Printify 码名回信 / GSC sitemap 重提 / Synthesia D11) + Placeit 催办 user 待办
+- **SSoT**: affiliate-programs.json 更新 (last_updated=8/22; tax_status=w8ben-upload-unreadable-reupload-required / printify promo=offer-received-awaiting-code-name / high_signal_findings_24h_8_22 / rank_sentinel_8_22 / ai_crawler_8_22 / cf_freebie_8_22 / gsc_impression_cliff_8_22 / manual_checklist_2026_08_22)
+- 下个检查点: 8/22 19:23 daily-search (T+14 严格复读 + 展示悬崖纳入 RESULT); 8/23 集群复盘; 8/25 Halloween 全量 push 窗口
+- 跨项目提醒: Supabase security (zprintpro) + GSC z-printpro.com 索引问题 (均提醒 K3)
+- 无 push (监控任务; 无新 PUSH_READY - Printify promo 页待码名后为条件性 PUSH_READY)

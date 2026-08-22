@@ -52,3 +52,39 @@
 - 8/22 K3 复核: print-price 方案 A 分歧 (vs daily-ops 维持现状)
 - 8/23 复盘 + 合规 push; 8/25 Halloween 素材 push
 
+
+
+---
+
+# 8/22 严格复读（T+14 正式判定 · STRATEGY-2026-08-22 T2）
+
+> 执行: daily-search cron 2026-08-22 19:4x | 窗口: 8/15-8/21 (7d) | 数据: .hermes/tmp/t14-targeted-0822.json + rank-sentinel-2026-08-22.md（GSC API 实时, SOCKS5 OK）
+
+## #1 stickermule-review — Branch B 维持（低量噪音, C/B 边界）
+
+| 口径 | 8/8 基线 | 8/21 窗 (8/14-20) | **8/22 复读 (8/15-21)** | 判定 |
+|---|---|---|---|---|
+| 主词 sticker mule | 35.1 | 35.00 @6 imp | **41.00 @4 imp** | 低量波动 (Δ-6.0 但 imp 4 vs 6, 样本噪声), 不构成趋势 |
+| sticker mule review | - | NODATA | **NODATA** (0 imp) | 持续无数据 |
+| 页级 | - | 40 imp @51.98 | **39 imp @53.59** | 持平 (Δ-1.6) |
+
+- 结论: 三口径均无显著移动 → **Branch B 维持**（保持四杠杆节奏 + 补外部信号 Pinterest/社交）
+- 新发现: 站内入链核查 = 仅 self-ref 1 处（stickermule-review 在 src/data 全量仅 1 引用）→ 与 #2 同病, 列入动作项（hub 页 + POD 集群 blog 加变体锚入链）
+
+## #2 runway-ml-review — 悬置解除, 走 Branch C 路径（确认）
+
+| 口径 | 8/8 基线 | 8/21 窗 | **8/22 复读 (8/15-21)** | 判定 |
+|---|---|---|---|---|
+| 主词 runway ml review | 63.0 | NODATA x3 | **NODATA x4 连续** | 4 窗口无展示 → 非数据滞后, 进入 Branch C |
+| 变体 | - | runway ml review 72 @1 | is runway ai good 81 @1 / runway ai review 77 @1 | 弱信号 |
+| 页级 | - | 31 imp @71.03 | **28 imp @70.86** | 持平 |
+
+- **Branch C 路径执行**:
+  1. 锚文本/内链核查（本日完成）: **站内入链 = 0**（runway-ml-review 全量仅 self-ref）— 对比 midjourney-review 2 / pika-labs-review 2 → 内链缺失成立
+  2. URL Inspection 重爬请求: 本环境 API 端点 404（daily-ops 已记录工具缺口）→ **user 行动卡**: GSC UI → URL Inspection → 请求编入索引/重爬（1 min）
+  3. 外部信号: 待 autoglm/D7 恢复后 Pinterest/社交补（现 NODATA）
+- 内链补强动作项（排期 8/24 T+7 前, 需 1 次 push）: midjourney-review / pika-labs-review / heygen-review / ai-video hub 页 → /runway-ml-review/ 变体锚入链 (runway alternatives / compared to X)
+
+## 严格复读结论汇总
+- #1 Branch B 维持; #2 Branch C 启动（内链 0 + 重爬待 user）; #3 Branch A 维持（13.50 微回撤, 页级 14.21 仍历史最佳）; #4 见 RANK-ALERT（-9.17, 8/23-24 连续窗口确认, 持续 >=5 位则回滚 H1）
+- 判定书 8/22 段完成 → T2 幂等键达成

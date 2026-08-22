@@ -101,23 +101,29 @@
       "confirm_email_sender": "support@info.printful.com",
       "confirm_email_subject": "Confirm email address",
       "confirm_link_note": "8/8 Hermes 全权指令 #1: IMAP 实拉两封 Confirm email address (7/17 15:25Z, 7/20 17:00Z, 同 token), headless GET verify 链接 -> 重定向 auth/login + \"Email confirmation request does not exist\" = 已过期。需 printful_session_cookie 登录后台 Resend verification -> 轮询新邮件(3 次/60s) -> 重试。",
-      "last_updated": "2026-08-21",
+      "last_updated": "2026-08-22",
       "approval_email_found": "2026-07-20 09:50Z affiliate@info.printful.com Your affiliate application was approved!",
       "email_verified": true,
-      "tax_status": "w8ben-e-uploaded-pending-review",
+      "tax_status": "w8ben-upload-unreadable-reupload-required",
       "tax_audit": {
-        "checked": "2026-08-21 12:35 (browser 实证 autoglm OK, credits 已恢复)",
-        "method": "autoglm browser (AutoGLM 1.1.8, user Chrome ??, tab 97687274)",
-        "url": "https://www.printful.com/dashboard/affiliate/tax",
-        "result": "pending-review",
-        "detail": "8/21 12:35 browser 实读 STILL PENDING (v2 上传 8/15 02:49; 第 5 工作日 8/17-8/21, 3 business days 窗口 8/19 已过); 文件 autoglm-browser-agent.pdf; 页面提示 up to 3 business days 仍显示; 按 8/21 协议升级 user 联系 Printful support | 8/21 18:4x user 立即执行: 问询邮件已发 support@printful.com (SMTP 465 SSL, 存证 .hermes/tmp/smtp-sent-2026-08-21.txt), 待回复",
-        "next": "2026-08-22 (或 user 联系 support 后复核)"
+        "checked": "2026-08-22 (support 邮件回复替代 browser 实证; autoglm credits 仍缺, web_search 实测 insufficient_credits)",
+        "method": "IMAP 邮件回复 (support@printful.com, Noelle Gould, 8/21 16:39 UTC = 8/22 00:39 CST)",
+        "result": "unreadable-reupload-required",
+        "detail": "Noelle Gould: we weren't able to retrieve the information from it, 需重新上传文档并等待审核; 不推荐删除旧文档 (便于调查). 根因假设: 8/15 上传的 autoglm-browser-agent.pdf 为浏览器自动化产物, 内容非有效签名税务表 (8/15 曾记录文件名存疑); W-8BEN-E 实体表第 4 项无 Individual 选项 (OCR 实测), 个人账号应改用个人表 W-8BEN. 已备 W8BEN-Jerome-Tang-prefilled.pdf (.hermes/tmp/, 预填姓名/国籍) -> user 补填地址/生日/签名后上传, 指引 w8ben-fill-guide-0822.md",
+        "next": "user 补填+上传预填 PDF 后复核; 8/25 仍 Pending -> 发第二封跟进 (STRATEGY-0822 NOTES 3)"
       },
       "tax_upload_date": "2026-08-15",
       "tax_review_note": "signed PDF uploaded via autoglm 02:49 CST; reviewed in up to 3 business days",
       "browser_login_state": "autoglm session OK (Jerome logged in) - session cookie extraction N/A, browser session usable for order placement",
       "tax_upload_v2": "2026-08-15 02:57 CST - Line4 Corporation + Line5 Active NFFE (corrected from Nonparticipating FFI)",
-      "tax_support_email_sent": "2026-08-21 18:4x support@printful.com"
+      "tax_support_email_sent": "2026-08-21 18:4x support@printful.com",
+      "tax_support_reply": {
+        "from": "Noelle Gould (Support) <support@printful.com>",
+        "date_utc": "2026-08-21 16:39",
+        "summary": "文件无法读取信息, 要求重新上传; 不推荐删除旧文档",
+        "action": "re-upload valid signed W-8BEN (personal form)"
+      },
+      "payout_ready": false
     },
     {
       "name": "Mockey AI Affiliate Program",
@@ -161,9 +167,9 @@
       "my_link_printify": "https://try.printify.com/4fs863rfz2yc",
       "signup_url": "https://partners.printify.com",
       "notes": "✓ APPROVED 2026-07-24 (per AGENTS.md §5 + credentials.affiliate.local.json). 20-30% recurring, $5 minimum payout. K3 7/29 拍板补回 programs 数组 (原本仅 resolved_since 段提到, SSoT 不完整). 7/29 12:30 replace_affiliate_links.py --apply 上线 (21 HTML 改, build PASS).",
-      "promo_code_status": "invite-received",
-      "promo_code_findings": "8/4 邮件 \"Ready-to-Use Banners, Logos & Your Promo Guide\" 含 custom promo code 邀请: \"Want a custom promo code? Request one made just for your followers. Just reply and let us know.\" (IMAP 8/7 核查) — 需回信要码, 拿到后建 /promo/printify-promo-code 页",
-      "last_updated": "2026-08-08",
+      "promo_code_status": "offer-received-awaiting-code-name",
+      "promo_code_findings": "8/4 邮件 \"Ready-to-Use Banners, Logos & Your Promo Guide\" 含 custom promo code 邀请: \"Want a custom promo code? Request one made just for your followers. Just reply and let us know.\" (IMAP 8/7 核查) — 需回信要码, 拿到后建 /promo/printify-promo-code 页 | 8/21 回复: 20% off first order 码可创建 (新用户专用, 码不可追踪佣金), 待回信码名",
+      "last_updated": "2026-08-22",
       "link_activity_8_7": {
         "signal": "8/7 00:18 UTC PartnerStack 主动邮件 \"Your Printify link is getting some activity!\" — 联盟链接出现新点击 (首次活动信号, 未提转化数)",
         "date": "2026-08-07",
@@ -172,7 +178,13 @@
       "link_deployed": true,
       "link_deploy_note": "8/6 核查 9 工具池全真链 (try.printify.com/4fs863rfz2yc 已上线 out/)",
       "promo_request_sent": "2026-08-08 via SMTP 465 SSL (gmail_credentials 通道, 真密码 .env IMAP_PASSWORD), subject \"Promo Code Request - aitoptools\", Message-ID <178612007459.38260.17414933324366495799@aitoptools.net>, 留证 .hermes/tmp/printify-sent.txt; 72h 后检查回复 (monitor cron 已覆盖 mail.printify.com)",
-      "promo_request_followup_sent": "2026-08-21 18:4x affiliate@printify.com (回信 8/8 已发 13 天 0 回复, 跟进邮件已发, 存证同 smtp-sent-2026-08-21.txt)"
+      "promo_request_followup_sent": "2026-08-21 18:4x affiliate@printify.com (回信 8/8 已发 13 天 0 回复, 跟进邮件已发, 存证同 smtp-sent-2026-08-21.txt)",
+      "promo_code_reply_8_21": {
+        "from": "Affiliate Printify <affiliate@printify.com>",
+        "date_utc": "2026-08-21 13:52",
+        "summary": "可创建 20% off first order 专属码 (仅新未激活用户); 码本身不可追踪佣金, 用户仍需走联盟链接注册; 询问码名",
+        "next": "user 回信给码名 (建议 AITOOL20); 码到即建 /promo/printify-promo-code 页 + PUSH_READY"
+      }
     },
     {
       "name": "Photoroom Affiliate Program",
@@ -272,12 +284,12 @@
     }
   ],
   "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
-  "last_updated": "2026-08-21 18:45",
+  "last_updated": "2026-08-22 18:2x CST",
   "monitoring": {
     "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
     "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
-    "next_action": "8/22: Boost T+14 判定 + tax-audit 复核 (user 联系 support 后); 8/21 已升级 user: W-8BEN-E 第 5 工作日仍 Pending 联系 support; 8/25: Halloween 集群全量 push 窗口",
-    "last_live_check": "2026-08-21 12:3x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 18-Aug 9 emails (CF freebie x4 含 8/18+8/20+8/21 三封补解析 + Claid first-month review 余额 0 + LinkedIn x2 + Supabase security 跨项目 + GSC zprintpro 跨项目) - 0 approvals / 0 新商户邮件; tax-audit 12:35 browser 实证 STILL PENDING (第 5 工作日 -> 升级 user)",
+    "next_action": "8/22: user 三动作: 1 W-8BEN 重传 (预填 PDF 补填+上传, 3min) 2 Printify 回信码名 (1min) 3 GSC UI 重提 sitemap.xml (1min, sitemap lastDownloaded 仍 7/17); 8/23 集群复盘 (b58cb7d 已含集群产物需核对); 8/25 Halloween 全量 push 窗口",
+    "last_live_check": "2026-08-22 18:2x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 21-Aug 5 emails: Printify promo 回复 (20% 码待名) + Printful support 回复 (W-8BEN 文件不可读需重传) + CF freebie x2 (8/21 UID 721 已解析 / 8/22 UID 723 新解析) + Amplified 营销 (9/24 事件) - 0 新审批 / 0 新商户申请",
     "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
     "network_diag_5_19": {
       "imap.gmail.com:993": "TIMEOUT 8s",
@@ -1187,7 +1199,12 @@
       "4_placeit": "催办草稿 drafts/placeit-followup-email.md 版本 B 就绪, user 手动发送",
       "5_boost_read": "8/21 节点执行完毕; PUSH_READY 内链加权已实施 (commit 21ad4d2, build PASS, 待 19:23 push)",
       "_cf_freebie": "CF freebie 8/18+8/20+8/21 三封补解析落盘; 素材池 ~54 万圣节 充足"
-    }
+    },
+    "high_signal_findings_24h_8_22": "Printify promo 回复 (8/21 13:52 UTC, 8/8 回信 13 天 0 回复后首次) + Printful W-8BEN-E support 回复 (8/21 16:39 UTC, 文件不可读需重传) - 两条链均推进",
+    "rank_sentinel_8_22": "1 负向 ALERT: print price ai tool 62.75->71.92 (-9.17, imps 8->13); 日志 rank-sentinel-2026-08-22.md",
+    "ai_crawler_8_22": "GEO_BLIND NODATA (D7 CF API token 未配置 + autoglm credits 缺); 上次 8/17: 24h 160 AI 爬虫请求",
+    "cf_freebie_8_22": "UID 723 (Hello Honey & 19 more) 解析落盘 (万圣节 x4: Halloween Dog Witch / Typography Sublimation / Retro PNG / Apothecary Labels); 素材池 ~58 万圣节 (去重 ~54+)",
+    "gsc_impression_cliff_8_22": "展示悬崖: 8/8-8/17 日均 134-531 上升带 -> 8/18/8/19/8/20 = 33/29/29 (-92%), 8/21 无数据; query 数 321->12; sitemap lastDownloaded 7/17 submitted 98 indexed 0 (线上 347 URL); robots/sitemap/live 页面均正常, 哨兵位置稳定 -> 指向索引/覆盖层问题非排名问题; 处置: user GSC UI 重提 sitemap + daily-search 19:23 纳入 RESULT + 8/23 复盘判定 (数据滞后 vs 真实回撤 vs 核心更新)"
   },
   "pending_applications_aging": {
     "as_of": "2026-08-19",
@@ -1375,5 +1392,13 @@
     ],
     "pool_total_halloween": 45,
     "note": "下午轮补抓 (晨跑 06:2x 后到货 07:00 CST)"
+  },
+  "manual_checklist_2026_08_22": {
+    "generated_by": "aitoptools daily-ops cron 2026-08-22 18:2x (IMAP 实拉 + GSC API + 文件核查)",
+    "1_w8ben_reupload": "P1 - Printful support (Noelle) 8/21 回复: 文件无法读取需重传. 已备 W8BEN-Jerome-Tang-prefilled.pdf (个人表, 预填姓名/国籍), user 补填 地址/生日/签名 -> 上传 Tax & Legal",
+    "2_printify_code_name": "P1 - Printify 8/21 回复愿给 20% off first order 码 (新用户专用, 码不可追踪佣金), 待 user 回信码名 (建议 AITOOL20); 码到建 /promo/printify-promo-code 页",
+    "3_gsc_sitemap_resubmit": "P1 - GSC sitemap lastDownloaded 仍 7/17 (36 天未更新, indexed 0); user GSC UI 重提 sitemap.xml (1min); 与展示悬崖排查联动",
+    "4_synthesia_confirm": "user 待办 - 确认链接 8/11 邮件 (D11), SINCE<90d 不自动点击; 密码重置 x2 确认是否本人",
+    "5_placeit_followup": "user 待办 - 草稿 drafts/placeit-followup-email.md 版本 B 就绪"
   }
 }
