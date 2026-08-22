@@ -10,8 +10,8 @@
       "sha256": "891B0E6F92125FAD58870A2424C95EF00CCAD44B7F80D4BD4F3423536C6F172D"
     }
   },
-  "last_run": "2026-08-22T11:50:00.000Z",
-  "last_run_status": "NOOP-0822 (daily-search 19:5x): sitemap 347 unchanged hash MATCH (891B0E); 0 new/updated URLs (T4/T5 prepare-only, no src changes); mining imp>=10 6 queries all mapped; C2b 8/22 row recorded",
+  "last_run": "2026-08-23T04:40:00.000Z",
+  "last_run_status": "NOOP-0823 (daily-search 04:4x): sitemap 347 unchanged hash MATCH (891B0E); 0 new/updated URLs (legit x2 只备不部署, no src commit); mining imp>=10 4 queries all mapped; C2b 8/23 row recorded",
   "indexnow_submitted": true,
   "gsc_submitted": false,
   "indexnow_first_full_push": "2026-08-06",

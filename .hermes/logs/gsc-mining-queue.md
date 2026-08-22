@@ -125,3 +125,10 @@
 - 推排名清单: designpickle-review 51.70 (页级 30 imp) — **T5 评估通过, 列入 Boost 队列 #7 候选** (专页✓ / imp 30✓ / pos 20-70✓; 备战大纲四杠杆: BLUF+表+FAQ>=3+内链, 不部署待 D12/D13)
 - 噪音排除: 无新 site: 过滤符 query; 展示悬崖期低量词 (imp 1-4) 不登记
 - T2 联动: 严格 T+14 复读数据见 t14-targeted-0822.json + t14-verdict-0821.md 8/22 段 (Branch B #1 / Branch C #2 内链 0 + URL Inspection 重爬待 user)
+
+## 2026-08-23 daily-search 运行记录 (GSC API 实时 8/16-8/22)
+- 数据源: ① GSC API 实时 (gsc-oauth.json 有效; Authorization 必须显式 Bearer 前缀, 掩码占位符致 401 — daily-ops 已修复并记录) — 201 queries (.hermes/tmp/cliff-0823.json); 悬崖期 imp>=10 仅 4 词
+- Data-Driven Queue (imp>=10 无专页): **0 新增** — print price ai tool 12 / is magicdrop legit 10 / jasper ai review 19 / manychat shopify 12 全部有专页; design pickle 簇 8+8 imp 有专页 (designpickle-review, Boost #7 已登记)
+- 推排名清单: 无新候选 (pos 20-70 扫描: creative fabrica 50.4 / design pickle 50.5 / midjourney 84.6 深水区); 已登记候选维持
+- 噪音排除: 悬崖期低量词 (imp<5) 不登记; 0 个新无专页词
+- T2 联动: print price ai tool 72.92 (8/16-22) 连续 2 窗跌 >=5 位 -> Day-1 确认, 回滚预案已备 (print-price-revert-0823.md, 只备不改, 8/24 Day-2 执行判定)

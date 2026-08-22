@@ -319,6 +319,7 @@ M1 复盘 — aitoptools
 | 8/17 (D11) | 增量 7 URL (Boost 双页 + Halloween 5 页) | **7/7** | 0 | sitemap 346 URL (push 后上线) | daily-search 19:5x: 8/17 两脚本先推 (boost 2: midjourney-review/jasper-ai-review; halloween 5: 含新增辐条③④) 全 200; 本跑 diff 确认 0 待推 URL, state 同步 sha 8D78639B; C2b 记账 |
 | 8/19 (D13) | 增量 3 URL (is-gearlaunch-legit 新页 + kittl-vs-placeit + gear-launch-review-2026 更新) | **3/3** | 0 | sitemap 347 URL (push 后上线) | daily-search 02:3x: legit 产线 pilot 上线 + 战线 A-2/A-3 更新; 见 .hermes/logs/indexnow-2026-08-19.log |
 | 8/22 (D16) | 增量 0 URL (NOOP) | — | 0 | sitemap 347 URL 未变 (sha 891B0E MATCH) | daily-search 19:5x: 无新增/更新 URL (T4/T5 只备不部署, 无 src 改动); GSC UI 端 lastDownloaded 停 7/17 需 user 重提 (P0 展示悬崖联动); mining: imp>=10 共 6 词全部已有专页, 0 新增 |
+| 8/23 (D17) | 增量 0 URL (NOOP) | — | 0 | sitemap 347 URL 未变 (sha 891B0E MATCH) | daily-search 04:4x: 无新增/更新 URL (legit x2 成稿未部署, 待 D12/D13); 悬崖判定 Branch B 落盘 (cliff-verdict-0823.md); mining 0 新增; T2 Day-1 回滚预案只备不改 |
 | T+7 (8/14) | 增量 | __ | __ | __ | 首读数: GSC 展示 + IndexNow 计数 |
 | T+30 (9/5) | 增量 | __ | __ | __ | 路线决策点 |
 - 记录人: gsc-indexnow cron (12:40) 每次提交后填; 凭证缺失时填 "blocked_missing_credentials"
@@ -1209,3 +1210,17 @@ TBD (1 push 整合)
 - 下个检查点: 8/22 19:23 daily-search (T+14 严格复读 + 展示悬崖纳入 RESULT); 8/23 集群复盘; 8/25 Halloween 全量 push 窗口
 - 跨项目提醒: Supabase security (zprintpro) + GSC z-printpro.com 索引问题 (均提醒 K3)
 - 无 push (监控任务; 无新 PUSH_READY - Printify promo 页待码名后为条件性 PUSH_READY)
+
+## 2026-08-23 · 每日联盟运营 (daily-ops 合并 cron 04:2x, 悬崖判定日数据位)
+- **STRATEGY 消费**: STRATEGY-2026-08-23 (悬崖判定日) — T1 ①-④ 数据位完成 (见下), T2 Day-1 触发, T3/T4 备战属 19:23, T5 周报 07:47 未跑 (04:26 时点) 晚间核对, T6 收尾 19:23
+- **T1 悬崖数据位**: 8/21/8/22 仍无回填 (T+2 窗关闭) -> 悬崖第 5 天 (8/18=33/8/19=29/8/20=29/8/21-22 NODATA), **分支 A (数据滞后) 不成立**; 页型分解: review -95% / programmatic -97% / blog -97% / homepage -25% (相对抗跌); query 数 409->314->12; 本地索引审计: out/ 355 HTML 仅 404 页 noindex + live 9 页全 200 canonical 自指 + robots 正常 -> **无页面级损坏线索**; 数据位倾向分支 B (曝光测试结束/核心更新), 正式判定 19:23 daily-search (cliff-verdict-0823.md); 8/23 节点=集群合并 push 核对: b58cb7d (author 8/15, 消息标 0823) 与 2365ad4 均已推上线, 无重复执行风险
+- **RANK-ALERT 持续**: print price ai tool 71.92->72.92 (8/16..8/22), 累计 vs 基线 62.75 = -10.17; T2 Day-1 确认窗触发 -> 回滚预案 drafts/print-price-revert-0823.md (只备不改, 8/24 Day-2 执行权); is magicdrop legit 13.40 维持
+- **邮件 (SINCE 22-Aug 3 封全量)**: 全已知 (Noelle 8/21 16:39 / Amplified 营销 / CF 8/22) - **0 新审批 / 0 新回复**; W-8BEN 重传与 Printify 码名均仍待 user 动作; CF freebie 8/23 未到 (预计 09:30-10:30 CST, 明日补解析)
+- **tax-audit**: 等待 user 重传 W-8BEN (无新 support 邮件); autoglm credits 缺 -> BROWSER_UNAVAILABLE 记录
+- **printful-watcher SKIP**: email_verified=true (8/8 实证), status=active, 无状态异常
+- **工作区卫生 ⚠️**: 未提交 legit x2 (is-spocket-legit / is-kittl-legit, blog-posts.json +746 行) + reviews.json + BOARD.md — 与「只备不部署」纪律冲突; 未 build 未部署无线上影响; 来源待 19:23 核对 (8/22 晚或 8/23 凌晨会话预写?)
+- **P0 = 0 链** (link_deployed 7/7 不变) + 展示悬崖 P0 (排查中, 数据位已齐) + D17 gmail 轮换待 user; P1 x4 (W-8BEN 重传 / Printify 码名 / GSC sitemap 重提 / Synthesia D12) + Placeit 催办
+- **SSoT**: affiliate-programs.json 更新 (last_updated=8/23; rank_sentinel_8_23 / ai_crawler_8_23 / gsc_cliff_8_23 / workspace_uncommitted_8_23)
+- 下个检查点: 8/23 19:23 daily-search (悬崖判定落盘 + 未提交 legit 核对 + T6 收尾); 8/24 print-price Day-2 + 周复盘; 8/25 Halloween 全量 push 窗口
+- 跨项目提醒: Supabase security (zprintpro) + GSC z-printpro.com 索引问题 (均提醒 K3)
+- 无 push (监控职责; 无新 PUSH_READY)
