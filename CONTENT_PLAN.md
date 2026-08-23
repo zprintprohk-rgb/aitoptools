@@ -268,3 +268,18 @@
 | 2026-08-19 | manychat shopify | 18 | 82.1 | manychat-ai-review | queue (深水区) |
 
 **排名改善观察 (GEO compare 8/4-9 vs 8/10-16):** is magicdrop legit 63.5→28.5 (-35, imp 27→88); magicdrop legit 62.2→36.3; sticker mule 61.0→37.2; 下滑: copy ai review 73.3→84.6 (imp 3→11, 关注), shopify magic 71.0→80.9
+
+---
+
+## Data-Driven Queue 追加 (2026-08-24 daily-search, GSC 8/10-8/23 实测)
+> 数据源: GSC API 实时; 悬崖期 250 queries; mining 规则: imp≥10 & CTR<0.05 & 无专页
+
+**queue-new: 0 条** (imp≥10 9 词全有专页或已在队列; ai print estimator 13 imp 仍在队列观察)
+
+**boost-existing 追加 (排名 20-70, imp≥5, 有专页):**
+| 日期 | query | 展示 | 排名 | 专页 | 状态 |
+|------|-------|------|------|------|------|
+| 2026-08-24 | kittl | 8 | 66.2 | kittl-review | queue (观察) |
+| 2026-08-24 | gempages | 5 | 57.6 | gempages-review | queue (观察) |
+
+**排名改善观察 (悬崖期):** is magicdrop legit 92 imp @28.0 (页级 13.40 历史最佳维持); design pickle 双词初现 (Boost #7 候选); 全站仍处 Branch B 滚动期 (至 9/6), 不做恐慌性改版

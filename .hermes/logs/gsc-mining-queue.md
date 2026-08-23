@@ -132,3 +132,16 @@
 - 推排名清单: 无新候选 (pos 20-70 扫描: creative fabrica 50.4 / design pickle 50.5 / midjourney 84.6 深水区); 已登记候选维持
 - 噪音排除: 悬崖期低量词 (imp<5) 不登记; 0 个新无专页词
 - T2 联动: print price ai tool 72.92 (8/16-22) 连续 2 窗跌 >=5 位 -> Day-1 确认, 回滚预案已备 (print-price-revert-0823.md, 只备不改, 8/24 Day-2 执行判定)
+
+## 2026-08-24 weekly-review 更新
+- 数据源: GSC API 实时 (8/17-8/23, 100 query; 悬崖期; data/gsc_data.json 已刷新)
+- 扫描: 展示≥10 仅 2 词 (print price ai tool 11 / manychat shopify 10) 均已有专页 → **0 个无专页新词**
+- 推排名清单: designpickle-review 双词悬崖内仍稳定 (49.5/56.5, 8 imps) → Boost #7 候选维持; ai print estimator 队列维持
+- 备注: 悬崖期 (Branch B 滚动至 9/6) 队列排期全部顺延, 位置数据仍可信 (magicdrop 18.0 未回退)
+
+## 2026-08-24 daily-search 运行记录 (GSC API 实时 8/10-8/23, 250 rows)
+- 数据源: ① GSC API 实时 (gsc-oauth.json 有效, SOCKS5 OK) — 250 queries (.hermes/tmp/mining-full-0824.json); 悬崖期 imp>=10 仅 9 词
+- Data-Driven Queue (imp>=10 无专页): **0 新增** — is magicdrop legit 92 / jasper ai review 68 / bluehost review 2026 17 / design pickle review+reviews 16+15 / ai print estimator 13 (队列已有 8/8) / creative fabrica 12 / copy ai review 11 / jasper review 10 全部有专页或已在队列
+- 推排名清单: **+2 候选** — kittl (8 imp @66.2, 有页 kittl-review) / gempages (5 imp @57.6, 有页 gempages-review); design pickle (Boost #7) 49.4/53.9 双词维持; creative fabrica 52.3 维持; heygen 66.0 / adcreative 67.2 / bluehost 67.5 均已登记 (8/19)
+- 噪音排除: 悬崖期低量词 (imp<5) 不登记; 0 个新无专页词
+- T2 联动: print price ai tool NODATA (8/17-23 窗 0 imps) -> rank-sentinel 已判定回滚顺延 (Day-2), 8/25 复读

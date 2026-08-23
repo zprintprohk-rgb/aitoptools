@@ -101,15 +101,15 @@
       "confirm_email_sender": "support@info.printful.com",
       "confirm_email_subject": "Confirm email address",
       "confirm_link_note": "8/8 Hermes 全权指令 #1: IMAP 实拉两封 Confirm email address (7/17 15:25Z, 7/20 17:00Z, 同 token), headless GET verify 链接 -> 重定向 auth/login + \"Email confirmation request does not exist\" = 已过期。需 printful_session_cookie 登录后台 Resend verification -> 轮询新邮件(3 次/60s) -> 重试。",
-      "last_updated": "2026-08-22",
+      "last_updated": "2026-08-24",
       "approval_email_found": "2026-07-20 09:50Z affiliate@info.printful.com Your affiliate application was approved!",
       "email_verified": true,
       "tax_status": "w8ben-upload-unreadable-reupload-required",
       "tax_audit": {
-        "checked": "2026-08-22 (support 邮件回复替代 browser 实证; autoglm credits 仍缺, web_search 实测 insufficient_credits)",
-        "method": "IMAP 邮件回复 (support@printful.com, Noelle Gould, 8/21 16:39 UTC = 8/22 00:39 CST)",
-        "result": "unreadable-reupload-required",
-        "detail": "Noelle Gould: we weren't able to retrieve the information from it, 需重新上传文档并等待审核; 不推荐删除旧文档 (便于调查). 根因假设: 8/15 上传的 autoglm-browser-agent.pdf 为浏览器自动化产物, 内容非有效签名税务表 (8/15 曾记录文件名存疑); W-8BEN-E 实体表第 4 项无 Individual 选项 (OCR 实测), 个人账号应改用个人表 W-8BEN. 已备 W8BEN-Jerome-Tang-prefilled.pdf (.hermes/tmp/, 预填姓名/国籍) -> user 补填地址/生日/签名后上传, 指引 w8ben-fill-guide-0822.md",
+        "checked": "2026-08-24",
+        "method": "IMAP 邮件检查 (SINCE 23-Aug 2 封全量) - 无 Printful 新回复; autoglm credits 缺 -> BROWSER_UNAVAILABLE (连续第 4 天)",
+        "result": "unreadable-reupload-required (维持)",
+        "detail": "等待 user 重传 W8BEN-Jerome-Tang-prefilled.pdf; Noelle 8/21 回复后无新进展",
         "next": "user 补填+上传预填 PDF 后复核; 8/25 仍 Pending -> 发第二封跟进 (STRATEGY-0822 NOTES 3)"
       },
       "tax_upload_date": "2026-08-15",
@@ -284,7 +284,7 @@
     }
   ],
   "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
-  "last_updated": "2026-08-23 04:2x CST",
+  "last_updated": "2026-08-24 01:5x CST",
   "monitoring": {
     "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
     "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
@@ -1404,5 +1404,45 @@
     "3_gsc_sitemap_resubmit": "P1 - GSC sitemap lastDownloaded 仍 7/17 (36 天未更新, indexed 0); user GSC UI 重提 sitemap.xml (1min); 与展示悬崖排查联动",
     "4_synthesia_confirm": "user 待办 - 确认链接 8/11 邮件 (D11), SINCE<90d 不自动点击; 密码重置 x2 确认是否本人",
     "5_placeit_followup": "user 待办 - 草稿 drafts/placeit-followup-email.md 版本 B 就绪"
+  },
+  "rank_sentinel_8_24": {
+    "window": "2026-08-17..2026-08-23",
+    "hits": "2/20",
+    "alerts": "0 新增",
+    "note": "悬崖持续; print price NODATA -> T2 Day-2 回滚顺延; design pickle 双词 8 imps 新信号"
+  },
+  "ai_crawler_8_24": "GEO_BLIND NODATA (D7 CF API token 未配置 + autoglm credits 缺)",
+  "cf_freebie_8_23": {
+    "date": "2026-08-23",
+    "subject": "Today's free picks: I'm Dreaming of a White Christmas... & 19 more",
+    "arrived_utc": "2026-08-22T23:38:09Z",
+    "halloween": [
+      "Halloween Spooky Quotes PNG Bundle",
+      "Halloween Clipart Bundle PNG"
+    ],
+    "note": "补解析 (昨日窗口后到达); 圣诞向 x3 入 BF 备选池"
+  },
+  "mail_check_8_24": {
+    "since": "23-Aug-2026",
+    "total": 2,
+    "approvals": 0,
+    "merchant_replies": 0,
+    "cf_freebie": "8/23 补解析",
+    "other": "Supabase togthr-life 暂停预警 (ant.wilson@supabase.com 8/23 14:31 CST)"
+  },
+  "supabase_pause_alert_8_24": {
+    "project": "togthr-life",
+    "id": "pcgwvqpzyqijrvikfawd",
+    "received": "2026-08-23 06:31 UTC",
+    "action": "owner 登录保活, 否则项目暂停 (跨项目运营告警, 非联盟)"
+  },
+  "workspace_uncommitted_8_24": "legit x2 仍未提交 (blog-posts.json +746 / reviews.json 4 行) + reviews.json 内链插入 HTML bug (Trust check 段落插入 CTA anchor 内未闭合) - 部署前必修, 待 19:23/K3 决策",
+  "manual_checklist_2026_08_24": {
+    "generated_by": "aitoptools daily-ops cron 2026-08-24 01:5x (IMAP 实拉 + GSC API + 文件核查)",
+    "1_w8ben_reupload": "P1 - 待 user 重传 (3min); 预填 PDF 已备; 无新 support 邮件",
+    "2_printify_code_name": "P1 - 待 user 回信码名 (1min); 建议 AITOOL20",
+    "3_supabase_togthr": "P1 - togthr-life 即将暂停, owner 登录保活 (1min)",
+    "4_gsc_sitemap": "P1 - GSC UI 重提 sitemap (1min) 仍待确认",
+    "5_legit_x2": "P2 - 未提交 + reviews.json HTML bug, 部署前修复"
   }
 }

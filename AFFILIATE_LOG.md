@@ -320,6 +320,7 @@ M1 复盘 — aitoptools
 | 8/19 (D13) | 增量 3 URL (is-gearlaunch-legit 新页 + kittl-vs-placeit + gear-launch-review-2026 更新) | **3/3** | 0 | sitemap 347 URL (push 后上线) | daily-search 02:3x: legit 产线 pilot 上线 + 战线 A-2/A-3 更新; 见 .hermes/logs/indexnow-2026-08-19.log |
 | 8/22 (D16) | 增量 0 URL (NOOP) | — | 0 | sitemap 347 URL 未变 (sha 891B0E MATCH) | daily-search 19:5x: 无新增/更新 URL (T4/T5 只备不部署, 无 src 改动); GSC UI 端 lastDownloaded 停 7/17 需 user 重提 (P0 展示悬崖联动); mining: imp>=10 共 6 词全部已有专页, 0 新增 |
 | 8/23 (D17) | 增量 0 URL (NOOP) | — | 0 | sitemap 347 URL 未变 (sha 891B0E MATCH) | daily-search 04:4x: 无新增/更新 URL (legit x2 成稿未部署, 待 D12/D13); 悬崖判定 Branch B 落盘 (cliff-verdict-0823.md); mining 0 新增; T2 Day-1 回滚预案只备不改 |
+| 8/24 (daily) | 增量 0 URL (sitemap 347 hash MATCH) | 0/0 | 0 | sitemap 347 URL (未变) | daily-search 02:2x: sitemap 347 hash 891B0E MATCH -> IndexNow 0 提交 (NOOP); mining imp>=10 9 词全有专页 (0 queue-new); boost +2 (kittl/gempages); C2b 记账 |
 | T+7 (8/14) | 增量 | __ | __ | __ | 首读数: GSC 展示 + IndexNow 计数 |
 | T+30 (9/5) | 增量 | __ | __ | __ | 路线决策点 |
 - 记录人: gsc-indexnow cron (12:40) 每次提交后填; 凭证缺失时填 "blocked_missing_credentials"
@@ -1224,3 +1225,19 @@ TBD (1 push 整合)
 - 下个检查点: 8/23 19:23 daily-search (悬崖判定落盘 + 未提交 legit 核对 + T6 收尾); 8/24 print-price Day-2 + 周复盘; 8/25 Halloween 全量 push 窗口
 - 跨项目提醒: Supabase security (zprintpro) + GSC z-printpro.com 索引问题 (均提醒 K3)
 - 无 push (监控职责; 无新 PUSH_READY)
+
+
+## 2026-08-24 · 每日联盟运营 (daily-ops 合并 cron 01:5x)
+- **PHASE 节点**: 8/24 周复盘 (W2 末) — 偏差 >20% 成立 (本周日均展示 ~29-40 vs 北极星 216.5, -85%), 但 8/23 已判 Branch B (核心更新曝光测试结束) 并延长滚动期至 9/6, 周复盘结论=已涵盖, 不做恐慌性改版; 8/25 Halloween 全量 push 窗口明日
+- **T2 print-price Day-2**: 窗口 8/17..8/23 主词 NODATA (0 imps) — 无法确认持续下跌, 回滚执行顺延 (数据不可信期 + 无位置可比较); 8/25 复读: pos<67.75 预案作废 / pos>=67.75 执行回滚; 8/28 T+7 最终对照
+- **排名哨兵第 9 天** (窗口 8/17..8/23): 20q 命中 2/20 (昨日 10/20), 0 新增 ALERT (bluehost +1.75 / descript +1.0 改善); 悬崖持续加深; 新信号 design pickle 双词 8 imps (Boost #7 候选); 日志 rank-sentinel-2026-08-24.md
+- **邮件 (SINCE 23-Aug 2 封全量, SOCKS5)**: CF freebie 8/23 补解析 (万圣节 x2: Spooky Quotes PNG + Clipart Bundle PNG; 圣诞 x3 入 BF 备选池) + **Supabase togthr-life 暂停预警** (8/23 14:31 CST, 7 天无活动即将暂停, 跨项目运营告警); 0 新审批 / 0 新商户回复; W-8BEN 重传与 Printify 码名仍待 user
+- **tax-audit 8/24**: 无新 support 邮件 (Noelle 8/21 后无进展); user 未重传; autoglm credits 缺 -> BROWSER_UNAVAILABLE (连续第 4 天); tax_status=unreadable-reupload-required 维持
+- **printful-watcher SKIP**: email_verified=true (8/8 实证), status=active, 无状态异常
+- **ai-crawler-monitor**: GEO_BLIND NODATA (D7 CF API token 未配置 + autoglm credits 缺)
+- **工作区卫生 ⚠️ 新增**: legit x2 仍未提交 (blog-posts.json +746 / reviews.json 4 行) + **发现 reviews.json 内链插入 HTML bug** (kittl review: Trust check 段落被插入 CTA anchor 内, 锚点未闭合 — 部署必坏) — 部署前必修, 待 19:23/K3 决策
+- **P0 = 0 链** (link_deployed 7/7 不变) + 展示悬崖 (Branch B 滚动期) + D17 gmail 轮换待 user; P1 x4 (W-8BEN / Printify 码名 / GSC sitemap 重提 / Synthesia D12) + Placeit 催办 + **新增 Supabase togthr-life 保活**
+- **SSoT**: affiliate-programs.json 更新 (last_updated=8/24; rank_sentinel_8_24 / ai_crawler_8_24 / cf_freebie_8_23 / mail_check_8_24 / supabase_pause_alert_8_24 / workspace_uncommitted_8_24 / manual_checklist_2026_08_24)
+- 下个检查点: 8/24 19:23 daily-search (print-price 严格复读 + legit x2 决策); 8/25 Halloween 集群全量 push 窗口
+- 跨项目提醒: Supabase togthr-life 暂停预警 (新) + Supabase security (zprintpro) + GSC z-printpro.com 索引问题 (均提醒 K3)
+- 无 push (监控职责; 无新 PUSH_READY - print-price 回滚顺延未执行, legit x2 未部署)

@@ -13,3 +13,17 @@
 - 退款政策页 URL（三工具官方页）
 - 域名注册年限（whois）
 - 「扣款不退」投诉模式核查（Reddit/Trustpilot 搜索）
+
+## 2026-08-24 补充（web_search 恢复，Trustpilot 数据到位）
+
+| 工具 | Trustpilot 评分 (X/5) | 评论数 | 来源 | 备注 |
+|---|---|---|---|---|
+| Spocket | 4.0 (4-star) | 10,661 | trustpilot.com/review/spocket.co (web_search 快照 8/24) | alidropship 声称 4.8/10k+ 与该官方页口径冲突, 以 TP 官方页 4.0 为准 |
+| Kittl | 4.7 | 1,257 | trustpilot.com/review/kittl.com | 消费者反馈 "widespread satisfaction" + 真人客服 |
+| Society6 | 3.6 | 2,111 | trustpilot.com/review/www.society6.com | "highly mixed" 体验; Reply 94% 差评 |
+
+## 2026-08-24 新补维度
+- **Society6 BBB**: A+ Accredited (bbb.org/us/co/englewood/profile/online-retailer/society6-1296-1000166109) — 与 Redbubble (非认证) 形成对照, legit 页可直接用
+- Spocket/Kittl BBB 状态: 待补 (web_search 未直接返回, 下次顺带)
+- Shopify App Store Spocket 差评模式 (apps.shopify.com/spocket/reviews): "联系不到供应商"抱怨 — is-spocket-legit 扣分项素材
+- 域名年限/whois: 仍待补

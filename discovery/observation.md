@@ -17,3 +17,11 @@
 - FYUL 统一品牌新闻稿 (printweek 2025-11-28) 已入 merger-fyul 扩写引用链
 - POD 市场锚点更新: grandview .1B (2026) → .5B (2033)
 - legit 事实核实: Gelato TP 4.4-4.5/3,136 + TeePublic TP 4.4/640k + Redbubble BBB 非认证/90天退款 (备料, D12/D13 未拍板不部署)
+
+## 2026-08-24
+- Kittl 2026-03-20 产品更新: AI Style 新增 "Design" 类别 (poster/t-shirt/POD 专用) — kittl-review 功能行更新候选 (附官方 URL)
+- Recraft Crisp Upscale 300 DPI 实测胜出 (icons8 7/2026, 1920x1080@300DPI=6.4x3.6in) — upscaler 对比页引用候选
+- FYUL 里加 97,000 sq ft 设施迁移 (asicentral 12/2025) 二次信号 — merger-fyul citation 升级候选
+- Halloween 2026 五趋势 (Vintage/Kawaii/Witchcore/Gothic/Funny, merchize 7/28) — 8/25 Halloween 全量 push 窗口素材
+- BF 2026 = 11/27 podbase 再次确认; EverBee vs Alura 官方对比 (5/12/2026) = 簇 E 备料 (D12 前只备)
+- web_search credits 8/24 恢复 (autoglm) — 雷达/核实链路解锁
