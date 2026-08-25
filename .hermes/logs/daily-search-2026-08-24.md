@@ -48,3 +48,16 @@
 - 推排名台账: reflog 复核 8/23 = 1 push 合规
 
 ## push-count: 1 (本日 geo-technical + 日志合并; 不含 legit x2)
+---
+
+## 19:23 复跑核验 (cron 78e5671a 二次触发) — 全 NOOP
+
+> 核验时间: 2026-08-24 19:23 CST · 当日全量执行已在凌晨 02:1x-06:2x 完成并 push (795a567)
+
+- Step 0: 无 STRATEGY-2026-08-24 (最新=08-23, 已消费) / BOARD D12+D13 仍 ⏳ 未拍板 → legit x2 维持悬置 (blog-posts.json +1500 / reviews.json 修改继续留本地不 commit, 符合纪律)
+- Step 1: sitemap 347 URLs vs state last_run 2026-08-24T02:20 一致 → IndexNow NOOP; mining 无新数据窗 → NOOP
+- Step 2: discovery/2026-08-24.md + observation.md 已存在 → SKIP (幂等)
+- Step 3: reviews.json/legit 改动仍待拍板, CF freebie 周更窗口未到 → NOOP
+- Step 4: geo-technical 周一已全量完成 (llms.txt 355 mentions 已部署) → NOOP
+- PUSH_READY: daily-ops-0824 无新标记 → 本复跑不 push (push-count 维持 1, 不浪费 build quota)
+- 结论: 产物正常即视为成功, 本次复跑零新增改动

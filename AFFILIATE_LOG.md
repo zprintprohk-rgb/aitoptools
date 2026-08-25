@@ -1241,3 +1241,26 @@ TBD (1 push 整合)
 - 下个检查点: 8/24 19:23 daily-search (print-price 严格复读 + legit x2 决策); 8/25 Halloween 集群全量 push 窗口
 - 跨项目提醒: Supabase togthr-life 暂停预警 (新) + Supabase security (zprintpro) + GSC z-printpro.com 索引问题 (均提醒 K3)
 - 无 push (监控职责; 无新 PUSH_READY - print-price 回滚顺延未执行, legit x2 未部署)
+
+
+## [2026-08-24 06:38] D17 Gmail app password 轮换 ✅ 已闭环
+
+- 事件: 用户提供新 app password（16 位，4 组），执行层完成轮换收尾
+- 动作: ① 备份原凭证（gmail_credentials.json + hermes .env .bak-20260824）② 两处更新（secrets app_password + hermes IMAP_PASSWORD）③ 冒烟测试 IMAP ✅（729 封可读）④ SMTP ✅（登录成功）⑤ 旧密码（cfgw****）已作废——Google 侧已删除重建
+- 安全影响: 公开仓库历史泄漏的旧密码正式失效，P0 事件根治；IMAP 联盟审批监控链恢复安全
+- 备注: 兼容性验证——新密码无空格版可正常登录（fetch_affiliate_mails.py 读取兼容）
+
+## 2026-08-26 · 每日联盟运营 (daily-ops 合并 cron 04:4x CST)
+- **P0 追踪**: #1 W-8BEN 重传 ❌ (连续>=3天, Noelle 8/21 后无新进展, 8/24 仅评分调查噪声) / #2 Gmail app password 轮换 ✅ 8/24 已闭环 / #3 Printful Cookie 或 Printify 切换确认 ❌ (D6 阻塞) -> **SYSTEM BLOCKED BY HUMAN BOTTLENECK** 输出
+- **PHASE**: 8/26 Printify 挑战资格确认窗口 D1 (8/26-8/30) + B 级扩写第二批启动; 8/25 产物缺失根因=cron billing cooldown 失败 (lastRunStatus=error), 今日恢复
+- **🎉 Printify promo code AITOOLTOOLS20 已创建** (8/24 20:12 CST 邮件实证; user 8/22 回信码名; 码不可追踪佣金, 用户仍需走联盟链接) -> PUSH_READY: /promo/printify-promo-code 页 (19:23 建页)
+- **RANK-ALERT (T2)**: print price ai tool 72.92->81.3 (-8.38, 窗 8/19..8/25, imps 恢复 12) -> 回滚预案触发 (pos>=67.75) -> PUSH_READY: print-price 回滚 (8/28 T+7 最终对照)
+- **排名哨兵**: 20q 命中 1/20 (manychat shopify 91.3, +0.62 改善), 悬崖持续 (日均 23.6); 哨兵日志 rank-sentinel-2026-08-26.md
+- **邮件 (SINCE 23-Aug 14 封全量)**: 0 新审批; 新事件=Printify 码 (见上) + Supabase togthr-life 已暂停 (8/24 15:08 CST, 跨项目告警) + CF freebie x2 (8/24 万圣节x4/圣诞x1 + 8/25 圣诞x3, 入 cf-freebies/2026-08-26.md); Google 安全提醒 x2 = 轮换已知
+- **tax-audit 8/26**: 无新 tax 邮件 -> tax_status=unreadable-reupload-required 维持; autoglm credits 未确认 -> BROWSER_UNAVAILABLE (第 6 天); 第二封跟进待授权
+- **printful-watcher SKIP** (email_verified=true, status=active); **ai-crawler GEO_BLIND NODATA** (D7 CF token 缺失)
+- **工作区卫生**: legit x2 + reviews.json 锚点 bug 仍未提交未修复 (8/24 已标); 8/24 19:23 产物 (daily-search/AFFILIATE_LOG/gsc_data/BOARD) 未提交 — 待批量 commit (本任务不 push)
+- **SSoT**: affiliate-programs.json 更新 (last_updated=8/26; printify.promo_code=AITOOLTOOLS20; rank_sentinel_8_26 / ai_crawler_8_26 / mail_check_8_26 / cf_freebie_8_24 / cf_freebie_8_25 / printify_promo_code_8_24 / supabase_pause_alert_8_24 / print_price_day3_8_26)
+- 下个检查点: 8/26 19:23 daily-search (PUSH_READY x2 消费: print-price 回滚 + printify promo 页; 8/25 遗留核对); 8/28 T+7 print-price 对照
+- 跨项目提醒: Supabase togthr-life 暂停 (待 K3 决定恢复/接受) + zprintpro Supabase security + GSC z-printpro.com 索引
+- 无 push (监控职责; PUSH_READY x2 标记已出, 由 19:23 消费)

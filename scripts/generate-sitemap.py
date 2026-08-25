@@ -215,6 +215,7 @@ def main():
         'submit-tool',
         'sponsorships',
         'resources',
+        'promo/printify-promo-code',
     ]
     for cs in cat_slugs:
         pages.append(f'category/{cs}')

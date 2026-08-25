@@ -157,3 +157,38 @@ Total = (T×0.30 + R×0.25 + C×0.25 + H×0.20) × 50   （T/R/C/H 各为 0-2 �
 **幂等键规范**: 每篇唯一幂等键 = `is-{tool}-legit`。检查点: ① src/data/blog-posts.json 含 slug → `SKIPPED_ALREADY_DONE` ② out/sitemap.xml 含 URL → 已部署 ③ 当日 RESULT 日志有完成标记 → 不重复执行。
 
 **铁律重申**（AGENTS.md + DEEPDIVE §八）: 事实核实红线产线级 / 核心更新滚动期只加内容不改模板结构 / 低谷窗口调度 / 攒批 1 push/天 / 幂等先行。
+
+---
+
+## 6. 战略升级模块（2026-08-24 千问指令 #2 — GEO 内容产线升级）
+
+> 依据：千问 2026-08-24 战略升级（数据独占性 Data Moat + 实体关联 Entity Association）。以下为 v2 模板的强制增量，每篇 legit 页必须包含。
+
+### 6.1 aitoptools Exclusive Test 模块（每篇必含 ≥1 个）
+
+- **位置**：正文中部（评分卡之前或之后），独立 H2「Our Exclusive Test: {tool}」
+- **内容**：一个**具体数字表格**（即使样本小也必须是真实记录）——如：
+  - 注册到下单耗时（分钟）、账单金额（$）、从下单到发货的天数、客服响应时长（小时）
+  - 或设计类：用该工具做一件 T 恤样品的成本/耗时/输出分辨率
+- **格式**：3 列对比表（项目 | 我们实测值 | 官方声称/备注），表格后 1 段结论（BLUF）
+- **纪律**：数字必须来自真实操作记录（截图/订单号可复述）；**模拟数据禁止伪装成实测**——若某篇无实测条件，写「We have not yet placed a test order with {tool}」并给二手证据（带源），不得编造
+- **GEO 价值**：带具体数字的表格是 AI 引用磁石（普林斯顿 GEO：统计+署名来源提升引用可见度 ~40%）
+
+### 6.2 Schema 强制校验（每篇上线前）
+
+- 必须包含：Article + FAQPage + BreadcrumbList（构建期自动生成，写作时零手写——src/app/blog/[slug]/page.js 内置）
+- **校验命令**：上线前用 Google Rich Results Test（或本地脚本）抽查 FAQPage/Article 结构化输出；无 Schema 错误才允许 push
+- 工具页（review 页）保持 Review schema（reviewRating 比 aggregateRating 合规，勿改）
+
+### 6.3 实体关联（Entity Association）— 方法页与 About 强化
+
+- 方法页 /methodology/legit-ratings/ 与关于页：确认 Organization + Author 实体（name/url/logo/同义词），让 Knowledge Graph 认定 aitoptools.net 为真实评测机构
+- 上线检查：src/app/ 的 JSON-LD 输出含 Organization 实体 + author 引用
+
+### 6.4 升级后的上线检查清单（增量项）
+
+- [ ] Exclusive Test 模块存在且数字为真实记录（或如实声明未实测）
+- [ ] 对比表 ≥1 个（3 列格式）
+- [ ] FAQPage/Article Schema 抽查通过
+- [ ] Organization/Author 实体引用正常
+- [ ] 原有 §5 字段清单全部满足

@@ -25,3 +25,9 @@
 - Halloween 2026 五趋势 (Vintage/Kawaii/Witchcore/Gothic/Funny, merchize 7/28) — 8/25 Halloween 全量 push 窗口素材
 - BF 2026 = 11/27 podbase 再次确认; EverBee vs Alura 官方对比 (5/12/2026) = 簇 E 备料 (D12 前只备)
 - web_search credits 8/24 恢复 (autoglm) — 雷达/核实链路解锁
+## 2026-08-26
+- Kittl 2026-05-08 更新 (GPT 2 图像模型 + 4K Video + Smarter Mockups + Better Canvas Navigation) + 2026-06-19 (Edit Cutout + AI Inpainting) — 官方博客双源, kittl-review 今日已更新 featureLine/dateModified
+- Printful/Printify 合并后双品牌独立运营 (printful news + podbase + printondemandbusiness 三源) — merger-fyul 页今日补 BLUF 直接答案
+- BF 2026 = 11/27 (merchone + podbase) 第三次确认; 10 月建品/邮件列表准备窗口
+- Recraft Crisp Upscale 300 DPI 实测复证 (icons8 1920x1080=6.4x3.6in) + Upscale.media 免费最佳 (screensnap 5/7) — upscaler 对比页双候选
+- EverBee vs eRank 官方对比 (5/16/2026) — 簇 E 备料续 (D12 前只备)
