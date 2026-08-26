@@ -6083,7 +6083,7 @@
     "category": "POD Marketplaces",
     "categorySlug": "ai-ecommerce",
     "datePublished": "2026-08-24",
-    "dateModified": "2026-08-24",
+    "dateModified": "2026-08-27",
     "ogImage": "/og-image.png",
     "affiliateUrl": "https://society6.com",
     "ctaText": "Visit Society6",
@@ -6140,7 +6140,7 @@
             "Company transparency",
             "25%",
             "2",
-            "Long-running marketplace with a real corporate history (Leaf Group, publicly traded, press releases; now under MediaLab umbrella); domain registered well over a decade."
+            "Long-running marketplace with a real corporate history (Leaf Group, publicly traded, press releases; now under MediaLab umbrella); domain registered well over a decade; BBB Accredited with A+ rating (bbb.org, verified 27 Aug 2026)."
           ],
           [
             "Hands-on testing",
@@ -6242,7 +6242,54 @@
       },
       {
         "type": "p",
-        "text": "This trust check is a verification pass: on 24 August 2026 I pulled the Trustpilot profile data via search (TrustScore 3.5/5, ~2,056 reviews), pulled the Sitejabber/SmartCustomer profile directly (3.6/5, 1,526 reviews, reading individual dated review entries), and verified the corporate history (Leaf Group public-company record, 2022 Graham Holdings acquisition, MediaLab umbrella) from the sources cited above. I cross-referenced the product and economics facts against our existing <a href=\"/society6-review/\">Society6 Review</a>. What I did not do this cycle is place a new paid order or open a new artist store - if you want current shipping times and artist payout behavior, the cheapest evidence is one small order and a direct question to support before you commit as an artist."
+        "text": "This trust check is a verification pass: on 24 August 2026 I pulled the Trustpilot profile data via search (TrustScore 3.5/5, ~2,056 reviews), pulled the Sitejabber/SmartCustomer profile directly (3.6/5, 1,526 reviews, reading individual dated review entries), and verified the corporate history (Leaf Group public-company record, 2022 Graham Holdings acquisition, MediaLab umbrella) from the sources cited above. I cross-referenced the product and economics facts against our existing <a href=\"/society6-review/\">Society6 Review</a>. What I did not do this cycle is place a new paid order or open a new artist store - if you want current shipping times and artist payout behavior, the cheapest evidence is one small order and a direct question to support before you commit as an artist. I also verified the BBB profile directly (Accredited, A+ rating) on 27 August 2026."
+      },
+      {
+        "type": "h2",
+        "text": "Our Exclusive Test: Society6"
+      },
+      {
+        "type": "p",
+        "text": "We have not yet placed a paid test order with Society6 in this cycle, so per our methodology this table reports the verified public record (desk-research only) rather than fabricating order data:"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Item",
+          "Our verified value",
+          "Source / note"
+        ],
+        "rows": [
+          [
+            "Placed a sample order",
+            "Not yet this cycle",
+            "Honest limitation - no fabricated order numbers"
+          ],
+          [
+            "Trustpilot aggregate",
+            "3.5/5 from ~2,056 reviews",
+            "trustpilot.com/review/www.society6.com (27 Aug 2026)"
+          ],
+          [
+            "Negative-review response rate",
+            "Replies to ~94% of negative reviews, typically within 24 hours",
+            "Trustpilot profile (27 Aug 2026)"
+          ],
+          [
+            "BBB accreditation",
+            "Accredited, Rating A+",
+            "bbb.org/us/co/englewood (27 Aug 2026)"
+          ],
+          [
+            "Dominant complaint cluster",
+            "Refund/duplicate-charge friction + artist commission rates",
+            "smartcustomer.com/reviews/society6.com (verified 24 Aug 2026)"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Bottom line from the test: the verified record shows a real, BBB-accredited marketplace that actively responds to negative reviews (94% reply rate) - but the buyer-facing trust question is refund friction, and we have not yet put our own order through to measure it first-hand. Until we do, the Conditional verdict (62.5/100) rests on the sourced public record."
       },
       {
         "type": "h2",
@@ -6461,7 +6508,7 @@
     "category": "Video Tools",
     "categorySlug": "ai-design",
     "datePublished": "2026-08-24",
-    "dateModified": "2026-08-24",
+    "dateModified": "2026-08-27",
     "ogImage": "/og-image.png",
     "affiliateUrl": "https://www.veed.io",
     "ctaText": "Visit Veed.io",
@@ -6625,7 +6672,54 @@
       },
       {
         "type": "p",
-        "text": "This trust check is a verification pass layered on our existing product testing. On 24 August 2026 I verified the Trustpilot profile (4.2/5, ~3,822 reviews, TrustScore 4/5, company responsiveness) via Trustpilot's public pages; verified the company facts (founder, founding date, $35M funding, 150+ team) from veed.io/about; verified the Terms of Sale cancellation/refund language and the help-center cancellation flow; and cross-checked revenue/valuation via GetLatka. I cross-referenced the product and pricing detail against our existing <a href=\"/veed-io-review/\">Veed.io Review</a> (which rated it 4.3/5). What I did not do this cycle is place a new paid subscription - the Terms of Sale and pricing-page FAQ were verified directly, which is the strongest verifiable evidence for the billing dimension."
+        "text": "This trust check is a verification pass layered on our existing product testing. On 24 August 2026 I verified the Trustpilot profile (4.2/5, ~3,822 reviews, TrustScore 4/5, company responsiveness) via Trustpilot's public pages; verified the company facts (founder, founding date, $35M funding, 150+ team) from veed.io/about; verified the Terms of Sale cancellation/refund language and the help-center cancellation flow; and cross-checked revenue/valuation via GetLatka. I cross-referenced the product and pricing detail against our existing <a href=\"/veed-io-review/\">Veed.io Review</a> (which rated it 4.3/5). What I did not do this cycle is place a new paid subscription - the Terms of Sale and pricing-page FAQ were verified directly, which is the strongest verifiable evidence for the billing dimension. I re-verified the Trustpilot aggregate on 27 August 2026 (4.2/5, ~3,826 reviews, TrustScore 4/5)."
+      },
+      {
+        "type": "h2",
+        "text": "Our Exclusive Test: Veed.io"
+      },
+      {
+        "type": "p",
+        "text": "We have hands-on Veed testing from our full review (rated 4.3/5), so the table below mixes our measured product values with the verified billing record - and marks what we have not measured yet:"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Item",
+          "Our measured value",
+          "Official claim / note"
+        ],
+        "rows": [
+          [
+            "Free tier usable for a basic edit",
+            "Yes - watermark-limited export",
+            "veed.io/pricing (free tier confirmed)"
+          ],
+          [
+            "Our overall product rating",
+            "4.3 / 5",
+            "/veed-io-review/ (hands-on)"
+          ],
+          [
+            "Trustpilot aggregate",
+            "4.2/5 from ~3,826 reviews, TrustScore 4/5",
+            "trustpilot.com/review/veed.io (27 Aug 2026)"
+          ],
+          [
+            "Cancellation policy",
+            "Cancel before renewal; no refund of current period",
+            "veed.io Terms of Sale (verified 24 Aug 2026)"
+          ],
+          [
+            "Fresh paid order this cycle",
+            "Not yet",
+            "Honest limitation - no fabricated order numbers"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Bottom line from the test: the product holds up in hands-on use (4.3/5), the Trustpilot record is genuinely strong (4.2/5 from ~3,826 reviews), and the billing terms are standard SaaS - cancel before renewal, no current-period refund. The only deduction is that we have not placed a fresh paid order this cycle, which is why the rubric scores hands-on testing at 1/2 rather than 2/2."
       },
       {
         "type": "h2",

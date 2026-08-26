@@ -292,7 +292,7 @@
   }
  ],
  "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
- "last_updated": "2026-08-26",
+ "last_updated": "2026-08-27 03:0x (8/26 午间轮收尾补写)",
  "monitoring": {
   "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
   "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
@@ -1216,7 +1216,39 @@
   "rank_sentinel_8_23": "print price ai tool 72.92 (8/16..8/22, 累计 -10.17 vs 基线 62.75, T2 Day-1 触发, 预案 drafts/print-price-revert-0823.md 只备不改); is magicdrop legit 13.40 维持; 日志 rank-sentinel-2026-08-23.md",
   "ai_crawler_8_23": "GEO_BLIND NODATA (D7 CF API token 未配置 + autoglm credits 缺); 上次 8/17: 24h 160 AI 爬虫请求",
   "gsc_cliff_8_23": "数据位 (T1 ①-④ 完成): 8/21/8/22 仍无回填 -> 悬崖第 5 天, 分支 A 不成立; 页型分解: review -95% / programmatic -97% / blog -97% / homepage -25% (相对抗跌); query 数 409->314->12; 本地审计: out/ 355 HTML 仅 404 页 noindex, live 9 页全 200 canonical 自指, robots/sitemap 正常 -> 无页面级损坏线索; 数据位倾向分支 B (曝光测试结束/核心更新), 正式判定待 19:23 daily-search (cliff-verdict-0823.md)",
-  "workspace_uncommitted_8_23": "未提交改动: src/data/blog-posts.json +746 行 (新 legit 2 篇: is-spocket-legit / is-kittl-legit) + reviews.json 4 行 + handoff/BOARD.md 62 行 — 与「只备不部署」纪律冲突, 未 build 未部署无线上影响, 来源待 8/23 19:23 核对 (可能为 8/22 晚/8/23 凌晨会话预写)"
+  "workspace_uncommitted_8_23": "未提交改动: src/data/blog-posts.json +746 行 (新 legit 2 篇: is-spocket-legit / is-kittl-legit) + reviews.json 4 行 + handoff/BOARD.md 62 行 — 与「只备不部署」纪律冲突, 未 build 未部署无线上影响, 来源待 8/23 19:23 核对 (可能为 8/22 晚/8/23 凌晨会话预写)",
+  "mail_check_8_26_noon": {
+   "as_of": "2026-08-26 12:2x CST (8/27 03:0x 会话恢复补写)",
+   "since": "25-Aug-2026",
+   "total": 6,
+   "approvals": 0,
+   "merchant_replies": 0,
+   "tax_emails": 0,
+   "cf_freebie_8_26": "parsed (Black Ink Brush, 00:52 UTC, halloween x4 + christmas x1)",
+   "other": "Google Merchant 商店品质报告 x2 (8/25, 跨项目 GMC) + Photoroom 数据共享提醒 x1 + Printful 评分调查 (已知噪声)"
+  },
+  "cf_freebie_8_26": {
+   "date": "2026-08-26",
+   "subject": "Today free picks: Black Ink Brush & 19 more",
+   "arrived_utc": "2026-08-26T00:52:10Z",
+   "halloween": [
+    "Vintage Spider Halloween PNG Design",
+    "Coquette Halloween PNG Bundle Spooky PNG",
+    "Spooky Goose Horror Halloween PNG Tee",
+    "Spooky Season Halloween Embroidery File"
+   ],
+   "christmas": [
+    "Christmas Lights - Love"
+   ],
+   "note": "午间轮补抓解析, 落盘 cf-freebies/2026-08-26.md (万圣节素材库 +4, 圣诞/BF 备选池 +1)"
+  },
+  "tax_audit_8_26_noon": {
+   "browser_attempt": "autoglm run 任务提交 (12:2x) 后被 gateway 重启中断, 未取得 Tax & Legal 实读",
+   "result": "unreadable-reupload-required (维持)",
+   "detail": "IMAP 增量确认 0 新 tax 邮件; autoglm credits 未实测; 8/27 cron 再试",
+   "next": "8/27 04:4x cron 复核"
+  },
+  "ai_crawler_8_26_noon": "GEO_BLIND NODATA (D7 CF API token 未配置; autoglm 未完成)"
  },
  "pending_applications_aging": {
   "as_of": "2026-08-19",

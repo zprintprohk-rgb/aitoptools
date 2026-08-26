@@ -9,10 +9,13 @@
 | # | 主题 | GSC imp (STRATEGY 8/17) | 目标页面 (已上线) | 候选 sub/站点 | 状态 |
 |---|------|------|------|------|------|
 | 1 | Is Spocket legit? | 74 | https://aitoptools.net/spocket-review/ | r/dropshipping, r/printondemand, r/Shopify | ✅ 草稿 8/24 (seed-02) |
-| 2 | Is Kittl worth it? / Kittl legit | 67+73 | https://aitoptools.net/kittl-review/ | r/printondemand, r/graphic_design, Quora | 待写 |
-| 3 | Is Society6 legit? | 59 | https://aitoptools.net/society6-review/ | r/printondemand, r/EtsySellers, r/passive_income | 待写 (factcheck 8/22 已备) |
+| 2 | Is Kittl worth it? / Kittl legit | 67+73 | https://aitoptools.net/kittl-review/ | r/printondemand, r/graphic_design, Quora | ✅ 草稿 8/26 (seed-03) |
+| 3 | Is Society6 legit? | 59 | https://aitoptools.net/society6-review/ | r/printondemand, r/EtsySellers, r/passive_income | ✅ 草稿 8/27 (seed-04) |
 | 4 | Is TeePublic legit? | 66 | https://aitoptools.net/teepublic-review/ | r/printondemand, r/artbusiness | 待写 (factcheck 8/22 已备) |
 | 5 | Is Redbubble legit? | 67 | https://aitoptools.net/redbubble-review/ | r/redbubble, r/passive_income | 待写 |
+| 6 | Is Veed safe? (is veed io safe) | 80 | https://aitoptools.net/veed-review/ | Quora, r/artificial, r/VideoEditing | ⚠️ 待 review 页上线 (veed-review 未在 sitemap) |
+| 7 | Is PosterMyWall safe? | 63.5 | https://aitoptools.net/postermywall-review/ | Quora, r/graphic_design, r/smallbusiness | 待写 (factcheck 8/22 已备) |
+| 8 | Is Gelato worth it? | 26 | https://aitoptools.net/gelato-review/ | r/printondemand, r/printify | 待写 (factcheck 8/20 已备) |
 
 ## 完成记录
 
@@ -20,6 +23,8 @@
 |------|------|------|----------|----------|
 | 8/19 | reddit-seed-01.md | Is GearLaunch legit? | /blog/is-gearlaunch-legit/ | 待 user 发布 |
 | 8/24 | reddit-seed-02.md | Is Spocket legit? | /spocket-review/ | 待 user 发布 |
+| 8/26 | reddit-seed-03.md | Is Kittl worth it? | /kittl-review/ | 待 user 发布 |
+| 8/27 | reddit-seed-04.md | Is Society6 legit? | /society6-review/ | 待 user 发布 |
 
 ## 节奏
 

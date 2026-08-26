@@ -54,8 +54,23 @@ def query(token, days, dims):
     return r.json().get("rows", [])
 
 
+def sitemaps(token):
+    """读 GSC sitemap 管道状态（lastDownloaded/isPending/errors）— sitemap-recovery-monitor 数据源"""
+    url = "https://searchconsole.googleapis.com/webmasters/v3/sites/sc-domain%3Aaitoptools.net/sitemaps"
+    r = requests.get(url, headers={"Authorization": f"Bearer {token}"}, proxies=PROXIES, timeout=30)
+    r.raise_for_status()
+    return r.json().get("sitemap", [])
+
+
 if __name__ == "__main__":
     args = sys.argv[1:]
+    if args and args[0] == "sitemaps":
+        token = get_token()
+        sm = sitemaps(token)
+        print(f"# GSC sitemap 管道 | {len(sm)} 条提交")
+        for s in sm[:10]:
+            print(f"  {s.get('path', '')} | lastDownloaded={s.get('lastDownloaded', 'N/A')} | isPending={s.get('isPending', '?')} | errors={s.get('errors', 0)}")
+        sys.exit(0)
     days, dims = 7, []
     if args and args[0] in ("queries", "urls"):
         dims = ["query"] if args[0] == "queries" else ["page"]

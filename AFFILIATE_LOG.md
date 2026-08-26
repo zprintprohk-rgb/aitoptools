@@ -1264,3 +1264,9 @@ TBD (1 push 整合)
 - 下个检查点: 8/26 19:23 daily-search (PUSH_READY x2 消费: print-price 回滚 + printify promo 页; 8/25 遗留核对); 8/28 T+7 print-price 对照
 - 跨项目提醒: Supabase togthr-life 暂停 (待 K3 决定恢复/接受) + zprintpro Supabase security + GSC z-printpro.com 索引
 - 无 push (监控职责; PUSH_READY x2 标记已出, 由 19:23 消费)
+## 2026-08-26 · daily-ops 午间轮收尾 (12:2x 执行, 8/27 03:0x 会话恢复补写)
+- IMAP 增量扫描 (SINCE 25-Aug 6 封全量): 0 新审批 / 0 新商户回复 / 0 tax 邮件; CF freebie 8/26 到货解析 (Black Ink Brush, 万圣节 x4 + 圣诞 x1, 落盘 cf-freebies/2026-08-26.md)
+- 其余邮件: Google Merchant 商店品质报告 x2 (8/25, 跨项目 GMC) + Photoroom 数据共享提醒 x1 + Printful 评分调查 (已知噪声)
+- tax-audit 午间 autoglm 尝试: 任务提交后被 gateway 重启中断, 未取得 Tax & Legal 实读; tax_status=unreadable-reupload-required 维持; 8/27 cron 再试
+- ai-crawler: GEO_BLIND NODATA (D7 CF API token 未配置)
+- SSoT: affiliate-programs.json 补写 noon flags (mail_check_8_26_noon / cf_freebie_8_26 / tax_audit_8_26_noon / ai_crawler_8_26_noon)

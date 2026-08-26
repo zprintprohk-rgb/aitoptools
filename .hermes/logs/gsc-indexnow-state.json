@@ -1,22 +1,22 @@
 {
-  "schema": 1,
-  "doc": "sitemap submission state for gsc/indexnow cron. last_submitted_* stays null until first successful submission.",
-  "last_submitted_mtime": "2026-08-25T21:05:40.121Z",
-  "last_submitted_hash": "35CDF6D3A9AD578476831B80D829A30C715439D7841EDF9C46B8D8E66CA2C344",
-  "last_seen": {
-    "public/sitemap.xml": {
-      "mtime": "2026-08-25T21:05:40.121Z",
-      "bytes": 43020,
-      "sha256": "35CDF6D3A9AD578476831B80D829A30C715439D7841EDF9C46B8D8E66CA2C344"
-    }
-  },
-  "last_run": "2026-08-25T21:06:57.990Z",
-  "last_run_status": "IndexNow 2/2 200 (promo/printify-promo-code + blog/print-price-ai-tools-2026 revert); mining 0 new (8/17-23 window, all imp>=10 mapped); sitemap 348",
-  "indexnow_submitted": true,
-  "gsc_submitted": false,
-  "indexnow_first_full_push": "2026-08-06",
-  "indexnow_urls_pushed": 351,
-  "indexnow_status_200": 351,
-  "indexnow_key_file": ".hermes/secrets/indexnow-key.txt",
-  "last_check_hash_match": false
+ "schema": 1,
+ "doc": "sitemap submission state for gsc/indexnow cron. last_submitted_* stays null until first successful submission.",
+ "last_submitted_mtime": "2026-08-26T13:11:08.789Z",
+ "last_submitted_hash": "4475D33309FB0E704E866094475B83A18576D0DB1EA6B037404213E918D01EB0",
+ "last_seen": {
+  "public/sitemap.xml": {
+   "mtime": "2026-08-26T13:11:08.789Z",
+   "bytes": 43625,
+   "sha256": "4475D33309FB0E704E866094475B83A18576D0DB1EA6B037404213E918D01EB0"
+  }
+ },
+ "last_run": "2026-08-27T03:2x:00.000Z",
+ "last_run_status": "IndexNow 6/6 200 (methodology x2 + legit x4, 8/26 部署补推); mining 0 new (8/18-24 window, 11 query all mapped); sitemap 354",
+ "indexnow_submitted": true,
+ "gsc_submitted": false,
+ "indexnow_first_full_push": "2026-08-06",
+ "indexnow_urls_pushed": 357,
+ "indexnow_status_200": 357,
+ "indexnow_key_file": ".hermes/secrets/indexnow-key.txt",
+ "last_check_hash_match": true
 }
