@@ -60,3 +60,11 @@
 - 8/28 T+7 print-price 终判 (回滚后对比) + W3 节点复核
 - W-8BEN 重传 / Printful cookie / Supabase togthr-life = user 真人动作 (三线并行阻塞)
 - D12/D13 拍板 → legit x4 一次性部署 + legit 放量 cron 激活
+
+## 19:23 复跑核验 (cron re-trigger) — NOOP
+- 幂等检查: 本日全部产物已存在 (daily-search-0826 / RESULT-0826 / discovery-0826 / daily-ops-0826 / rank-sentinel-0826 / indexnow log) → 各 Step 不再重跑
+- STRATEGY: 最新仍为 08-25 (已消费), 无 08-26 新排期; 下个检查点 8/28 T+7 print-price 终判 (非今日)
+- DEEPDIVE: legit 悬置 (D12/D13 ⏳) / answer-first 5 资产已扫 / 外链 LIVE=1 / GA4 NODATA — 均维持
+- 新增观察: cf-freebies 8/26 期午间轮补抓已登记 (万圣节 x4 + 圣诞 x1 + Black Ink Brush 主推, 邮件 8/26 00:52 UTC) — 素材仅登记不下载, 下个周更窗口并入周更帖 (本周帖已 8/26 晨刷新 282 槽)
+- blog-posts.json legit x4 悬置态保持 (D12/D13 未拍板, 不入 commit)
+- push-count 维持 = 1 (本次复跑无 push, log-only 本地 commit)
