@@ -31,3 +31,11 @@
 - BF 2026 = 11/27 (merchone + podbase) 第三次确认; 10 月建品/邮件列表准备窗口
 - Recraft Crisp Upscale 300 DPI 实测复证 (icons8 1920x1080=6.4x3.6in) + Upscale.media 免费最佳 (screensnap 5/7) — upscaler 对比页双候选
 - EverBee vs eRank 官方对比 (5/16/2026) — 簇 E 备料续 (D12 前只备)
+
+## 2026-08-28
+- Google 8 月行业级波动: seroundtable 8/5-6 峰值 (有站 -70%) + seovendor 排名稳流量跌 = AI Overviews 点击再分配 — 与本站悬崖 (8/18 起) 机制吻合, Branch B 维持的外部佐证; searchengineland: 2026 确认 core update 仅 6 月一次
+- Etsy 2026-08-11 新规: 电脑工具制作产品须卖家原创设计, 购买模板/授权内容受限 — POD 卖家内容/种子帖候选 (官方规则页待核)
+- Redbubble royalty 阶梯重组 (merchtitans 4/7) + Amazon Merch 版税 2026-06-01 调整 — is-redbubble-legit 补引候选 (待官方源核实)
+- Bing 索引 → ChatGPT 搜索喂入 (docdigitalsem 3/17) + OAI-SearchBot 可经 BWT/IndexNow 触发 (clickrank) — R2 战略外部印证, IndexNow 增量照常
+- Kittl product-updates 8 月无新更新 (最新仍 5/8); kittl.com/compare 官方竞品枢纽在案
+- GEO 市场锚点: US GEO $365.4M (2026, CAGR 42.9%) omnibound 5/7 — methodology 引用候选

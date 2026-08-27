@@ -1270,3 +1270,5 @@ TBD (1 push 整合)
 - tax-audit 午间 autoglm 尝试: 任务提交后被 gateway 重启中断, 未取得 Tax & Legal 实读; tax_status=unreadable-reupload-required 维持; 8/27 cron 再试
 - ai-crawler: GEO_BLIND NODATA (D7 CF API token 未配置)
 - SSoT: affiliate-programs.json 补写 noon flags (mail_check_8_26_noon / cf_freebie_8_26 / tax_audit_8_26_noon / ai_crawler_8_26_noon)
+
+- 2026-08-28 02:5x daily-ops 补偿预跑 (8/27 12:17 计划运行 deepseek billing 击穿, D15 未拍板; 本 cron 会话 zai 默认链执行): IMAP 全量 203 封 / 0 新审批 / 0 新税务邮件 (W-8BEN 第 8 天 ❌, Cookie/Printify ❌ → SYSTEM BLOCKED BY HUMAN BOTTLENECK 维持第 5 天); CF freebie 无新增 (8/26 23:29 Snowman 待并入); 哨兵复用 02:33 同窗口 0 ALERT; 报告 .hermes/logs/daily-ops-2026-08-28.md

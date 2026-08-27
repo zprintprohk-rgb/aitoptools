@@ -68,8 +68,8 @@ function generateReviewJsonLd(review) {
     '@graph': [{
       '@type': 'Review',
       name: review.title,
-      author: { '@type': 'Person', name: 'Jerome Tang', jobTitle: 'Print Industry Expert', worksFor: { '@type': 'Organization', name: 'Shenzhen Cai Long Printing', address: { '@type': 'PostalAddress', addressLocality: 'Shenzhen', addressCountry: 'CN' } } },
-      publisher: { '@type': 'Organization', name: 'Print AI Tools', url: 'https://aitoptools.net/' },
+      author: { '@type': 'Person', name: 'Jerome Tang', jobTitle: 'Print Industry Expert', url: 'https://aitoptools.net/author/jerome-tang/', worksFor: { '@type': 'Organization', name: 'Shenzhen Cai Long Printing', address: { '@type': 'PostalAddress', addressLocality: 'Shenzhen', addressCountry: 'CN' } } },
+      publisher: { '@type': 'Organization', name: 'Print AI Tools', url: 'https://aitoptools.net/', logo: { '@type': 'ImageObject', url: 'https://aitoptools.net/og-image.png' } },
       datePublished: review.datePublished || '2026-06-25',
       dateModified: review.dateModified || review.datePublished || '2026-06-25',
       reviewRating: { '@type': 'Rating', ratingValue: String(review.rating), bestRating: '5', worstRating: '1' },

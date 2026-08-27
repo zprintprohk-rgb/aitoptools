@@ -20,7 +20,7 @@ import { buildToolLinkIndex, autoLinkTools } from '@/lib/blog-links.mjs'
 const DOMAIN = 'https://aitoptools.net'
 const AUTHOR_NAME = 'Jerome Tang'
 const AUTHOR_TITLE = 'Print Industry Expert'
-const AUTHOR = { '@type': 'Person', name: AUTHOR_NAME, jobTitle: AUTHOR_TITLE }
+const AUTHOR = { '@type': 'Person', name: AUTHOR_NAME, jobTitle: AUTHOR_TITLE, url: 'https://aitoptools.net/author/jerome-tang/' }
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }))

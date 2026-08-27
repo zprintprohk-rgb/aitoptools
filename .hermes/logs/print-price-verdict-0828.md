@@ -27,3 +27,9 @@
   - 若后续窗口 pos 回升 <67.75 且 imps 恢复 → 方案 A 作废预案正式落档
   - 若 pos 持续 ≥67.75 → 已回滚版定档, 方案 A 关闭 (calculator 产线立项样板状态同步 BOARD)
 - 幂等: 本文件存在非空 → NOOP
+## 四、终版复核 (2026-08-28 02:2x, 完整窗口含 8/27 终值)
+- 数据源: 项目自带 gsc_query.py (queries days 7, end=2026-08-27, T+1 终值)
+- print price ai tool: **imps=10 / clicks=0 / ctr=0 / pos=83.7** (初判 8/27 至 8/26: imps=8 / pos=82.62, 同分支)
+- 判定不变: pos 83.7 >= 67.75 且 imps>0 -> **维持方案 A 已回滚对照 (FINAL ✅)**
+- 一次性 cron job (71d0face, 20:37 槽位) 已移除 — verdict 终版已落盘, 无需空跑 NOOP
+- 后续复核: 9/6 Branch B 滚动期结束 / 9/13 T30 校准 (t30-0913.md)

@@ -78,3 +78,9 @@
 - 内容: 5/5 全量上线 ✅ (支柱 + 辐条①②③④, 8/17 W3 push commit 3fe94ee); sitemap 347 / IndexNow 8/17 5/5 200 / llms.txt 4 行 / FAQPage 5/5 — 内容侧 LAUNCHED
 - 素材链仍 0/4: designs/ MISSING, 无 order_id (printful cookie 仍缺 = D6 唯一硬阻塞), photos/wall/ MISSING, 毛利无
 - 8/25 W3 job (98ebd150) 已提前执行完 (halloween-full-0825.md), 排期冗余待 user 确认
+
+## 8/28 每日 brief (2026-08-28 02:4x, user 指令「执行」)
+- 设计阶段首次落地 ✅: 2 个设计 (Gothic Skull Rose v2 + Coquette Black Cat) + 透明底印刷就绪 PNG, 详见 .hermes/logs/halloween-designs-0828.md
+- 设计源通道: Seedream (image_generate MiniMax 通道 key 失效已记录); 骷髅 v1 带水印弃用重生成
+- 素材链 1/4: 设计 ✅ / 下单 ❌ (printful cookie P0 未解) / 拍照 ❌ / 毛利 ❌
+- W3-0825 job (98ebd150) 已确认不在 job 列表 (自删生效)

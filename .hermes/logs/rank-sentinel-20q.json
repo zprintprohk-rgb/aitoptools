@@ -38,9 +38,9 @@
    "position": 86.43
   },
   "manychat shopify": {
-   "impressions": 12,
+   "impressions": 8,
    "clicks": 0,
-   "position": 91.92
+   "position": 90.6
   },
   "printful vs printify": null,
   "runway ml": null,
@@ -1032,8 +1032,30 @@
     "delta_vs_baseline_62_75": -18.55,
     "verdict": "ROLLBACK_TRIGGERED"
    }
+  },
+  {
+   "date": "2026-08-27",
+   "window": "2026-08-21..2026-08-27",
+   "note": "8/27 daily-ops billing 失败补偿, 8/28 02:3x 补拉; 悬崖 Day-10, 3/20 命中",
+   "queries": {
+    "manychat shopify": {
+     "impressions": 8,
+     "clicks": 0,
+     "position": 90.6
+    },
+    "print price ai tool": {
+     "impressions": 10,
+     "clicks": 0,
+     "position": 83.7
+    },
+    "sticker mule": {
+     "impressions": 1,
+     "clicks": 0,
+     "position": 35
+    }
+   }
   }
  ],
- "last_pull": "2026-08-23 04:2x CST",
- "last_updated": "2026-08-26"
+ "last_pull": "2026-08-28 02:3x CST",
+ "last_updated": "2026-08-28"
 }
