@@ -47,3 +47,9 @@
 - IndexNow: indexnow-2026-08-28.log (push 后补写)
 - GA4: 凭证未就位 → NORTH-STAR GA4 NODATA
 - 联盟: affiliate-programs.json (8/28 02:5x) + mention-ops-2026-08-28.md
+- IndexNow 结果 (push 后补推): 2/2 200 (is-teepublic-legit / is-redbubble-legit), state urls_pushed 357→359, sitemap hash 已更新 — 本行与 state/indexnow log 为 push 后产物, 随下一批合并 commit
+
+## 幂等复跑核验 (03:4x, 「执行」补偿触发)
+- 凌晨窗口 (02:46-03:1x) 已完整执行 Step 0-3 + push (57f6fa4, push-count=1) + IndexNow 2/2 200 (state 359)
+- 本次核验: 产物 5/5 在位 (daily-search log 4905B / discovery 4340B / RESULT 3930B / indexnow log / state) | STRATEGY-2026-08-28 仍缺 (晨检跟进) | git 远端同步 (ahead 0, behind 0) | 03:1x 后无新增写入
+- 判定: NOOP — 不重复生产, 不占 push; 本记录与 state / indexnow log 随下一批合并 commit

@@ -101,16 +101,16 @@
       "confirm_email_sender": "support@info.printful.com",
       "confirm_email_subject": "Confirm email address",
       "confirm_link_note": "8/8 Hermes 全权指令 #1: IMAP 实拉两封 Confirm email address (7/17 15:25Z, 7/20 17:00Z, 同 token), headless GET verify 链接 -> 重定向 auth/login + \"Email confirmation request does not exist\" = 已过期。需 printful_session_cookie 登录后台 Resend verification -> 轮询新邮件(3 次/60s) -> 重试。",
-      "last_updated": "2026-08-26",
+      "last_updated": "2026-08-29",
       "approval_email_found": "2026-07-20 09:50Z affiliate@info.printful.com Your affiliate application was approved!",
       "email_verified": true,
       "tax_status": "w8ben-upload-unreadable-reupload-required",
       "tax_audit": {
-        "checked": "2026-08-26",
-        "method": "IMAP 邮件检查 (SINCE 23-Aug 全量 14 封) - 无新 tax 邮件 (仅 8/24 19:03 support 评分调查噪声); autoglm credits 未确认 -> BROWSER_UNAVAILABLE (连续第 6 天)",
+        "checked": "2026-08-29",
+        "method": "IMAP 邮件检查 (SINCE 28-Aug 全量 3 封逐封核查) - 无新 tax 邮件 (仅 8/28 09:44 info.printful.com ToS 教育邮件, 非税务); autoglm browser credits 缺 -> BROWSER_UNAVAILABLE (连续第 9 天)",
         "result": "unreadable-reupload-required (维持)",
-        "detail": "等待 user 重传 W8BEN-Jerome-Tang-prefilled.pdf; Noelle 8/21 回复后无新进展; 8/24 计划第二封跟进因不自动发信约束未发",
-        "next": "user 重传后复核; 或授权 19:23 代发第二封跟进"
+        "detail": "等待 user 重传 W8BEN-Jerome-Tang-prefilled.pdf; Noelle 8/21 回复后无新进展 (第 9 天)",
+        "next": "user 重传后复核; D15 拍板后可恢复 autoglm 浏览器实读"
       },
       "tax_upload_date": "2026-08-15",
       "tax_review_note": "signed PDF uploaded via autoglm 02:49 CST; reviewed in up to 3 business days",
@@ -292,12 +292,12 @@
     }
   ],
   "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
-  "last_updated": "2026-08-28 02:5x (daily-ops 补偿预跑: IMAP 全量 203 封 0 新审批/0 新税务; 哨兵复用 02:33 窗口; 报告 daily-ops-2026-08-28.md)",
+  "last_updated": "2026-08-29 04:5x (daily-ops 补偿预跑 zai 默认链: IMAP SINCE 28-Aug 3 封 0 新审批/0 新税务; 哨兵窗口 8/22..8/28 1/20 命中 0 ALERT; 报告 daily-ops-2026-08-29.md)",
   "monitoring": {
     "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
     "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
     "next_action": "8/23: user 三动作不变 (1 W-8BEN 重传 2 Printify 码名回信 3 GSC sitemap 重提); 19:23 daily-search 悬崖正式判定落盘 (cliff-verdict-0823); 8/24 print-price Day-2 确认 (预案只备不改); 8/25 Halloween 全量 push 窗口",
-    "last_live_check": "2026-08-23 04:2x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 22-Aug 3 emails 全已知 (Noelle 8/21 16:39 已处理 / Amplified 营销 / CF 8/22 已解析) - 0 新审批 / 0 新回复 / 0 新商户; CF freebie 8/23 未到 (预计 09:30-10:30 CST)",
+    "last_live_check": "2026-08-29 04:4x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 28-Aug 3 封全量 (GitHub Cursor 权限 / GSC 里程碑非本域 / Printful ToS 教育邮件) - 0 新审批 / 0 新商户回复 / 0 新税务; CF freebie 8/27-8/29 连续 3 天未到货",
     "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
     "network_diag_5_19": {
       "imap.gmail.com:993": "TIMEOUT 8s",
@@ -1491,5 +1491,30 @@
   "cf_freebie_8_25": true,
   "printify_promo_code_8_24": true,
   "workspace_uncommitted_8_26": true,
-  "print_price_day3_8_26": true
+  "print_price_day3_8_26": true,
+  "mail_check_8_29": {
+    "since": "28-Aug-2026",
+    "total": 3,
+    "approvals": 0,
+    "merchant_replies": 0,
+    "tax_mails": 0,
+    "notable": "Printful ToS 教育邮件 (info.printful.com 8/28 09:44, 非审批非税务); GitHub Cursor 权限 1 封 (工具噪音); GSC 里程碑 1 封 (非本域, 按 8/28 修订规则不展开)",
+    "cf_freebie": "8/27-8/29 连续 3 天未到货 (素材池 45 🎃 维持)"
+  },
+  "rank_sentinel_8_29": {
+    "window": "2026-08-22..2026-08-28",
+    "prev_window": "2026-08-21..2026-08-27",
+    "hits": "1/20",
+    "alerts": 0,
+    "note": "悬崖 Day-11 维持; manychat shopify pos 91.8 (+0.7 改善, 9 imp, 唯一存活词); print price ai tool pos 83.3 平 (12 imp, 回滚后无恢复信号, T+7 终判数据点交 19:23 daily-search); sticker mule pos 35 (1 imp); 其余 17 核心词零展示"
+  },
+  "tax_audit_8_29": "BLOCKED_USER_ACTION 维持 (unreadable-reupload-required 第 9 天; IMAP 0 新税务 + BROWSER_UNAVAILABLE 连续第 9 天; 详见 tax-monitor-2026-08-29.md)",
+  "ai_crawler_8_29": "GEO_BLIND NODATA (D7 CF API token 未配置 + autoglm browser credits 缺; 上次读数 8/17: 160 请求/24h)",
+  "cf_freebie_status_8_29": "8/27-8/29 连续 3 天未到货; 素材池 45 🎃 维持充足, Halloween 集群不受影响",
+  "manual_checklist_2026_08_29": {
+    "generated_by": "aitoptools daily-ops cron 2026-08-29 04:5x (IMAP 实拉 + GSC API, zai 默认链补偿执行)",
+    "1_w8ben_reupload": "P1 - 第 9 天, 联盟破零唯一闸门; W8BEN-Jerome-Tang-prefilled.pdf 已备, user 补填并上传 Tax & Legal (3min)",
+    "2_printify_challenge_inquiry": "P1 - $150 挑战资格问询草稿 2 份已备 (.hermes/drafts/printify-150-eligibility-0827.md / printify-150-submission-0827.md), PHASE 窗口 8/26-8/30 明日截止, user 挑一封发送",
+    "3_d15_model_billing": "P0 - deepseek 402 (consecutiveErrors=3) + fallback model_not_found + zai 403 繁忙 (daily-search 8/28); 充值 DeepSeek 或 cron model 改默认链, 二选一拍板"
+  }
 }

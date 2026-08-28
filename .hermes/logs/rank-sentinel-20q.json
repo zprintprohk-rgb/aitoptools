@@ -1054,8 +1054,48 @@
      "position": 35
     }
    }
+  },
+  {
+   "date": "2026-08-29",
+   "window": "2026-08-22..2026-08-28",
+   "queries": {
+    "printful alternatives": null,
+    "printify alternatives": null,
+    "canva vs kittl": null,
+    "kittl review": null,
+    "kittl vs placeit": null,
+    "halloween print on demand": null,
+    "halloween shirt design": null,
+    "halloween sublimation": null,
+    "jasper ai review": null,
+    "midjourney review": null,
+    "is magicdrop legit": null,
+    "omnisend review": null,
+    "manychat shopify": {
+     "impressions": 9,
+     "clicks": 0,
+     "position": 91.77777777777777
+    },
+    "printful vs printify": null,
+    "runway ml": null,
+    "best ai background remover": null,
+    "bluehost review 2026": null,
+    "descript.com reviews": null,
+    "siteground review 2026": null,
+    "copywriting ai": null,
+    "print price ai tool": {
+     "impressions": 12,
+     "clicks": 0,
+     "position": 83.33333333333333
+    },
+    "sticker mule": {
+     "impressions": 1,
+     "clicks": 0,
+     "position": 35
+    }
+   }
   }
  ],
- "last_pull": "2026-08-28 02:3x CST",
- "last_updated": "2026-08-28"
+ "last_pull": "2026-08-29 04:5x CST",
+ "last_updated": "2026-08-29"
 }

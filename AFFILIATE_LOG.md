@@ -1272,3 +1272,15 @@ TBD (1 push 整合)
 - SSoT: affiliate-programs.json 补写 noon flags (mail_check_8_26_noon / cf_freebie_8_26 / tax_audit_8_26_noon / ai_crawler_8_26_noon)
 
 - 2026-08-28 02:5x daily-ops 补偿预跑 (8/27 12:17 计划运行 deepseek billing 击穿, D15 未拍板; 本 cron 会话 zai 默认链执行): IMAP 全量 203 封 / 0 新审批 / 0 新税务邮件 (W-8BEN 第 8 天 ❌, Cookie/Printify ❌ → SYSTEM BLOCKED BY HUMAN BOTTLENECK 维持第 5 天); CF freebie 无新增 (8/26 23:29 Snowman 待并入); 哨兵复用 02:33 同窗口 0 ALERT; 报告 .hermes/logs/daily-ops-2026-08-28.md
+## 2026-08-29 · 每日联盟运营 (daily-ops 合并 cron 04:5x, 补偿预跑 zai 默认链)
+- **P0 追踪**: #1 W-8BEN 重传 ❌ (8/21 起第 9 天) / #2 Gmail app password 轮换 ✅ (8/24 闭环) / #3 Printful Cookie 或 Printify 切换确认 ❌ -> **SYSTEM BLOCKED BY HUMAN BOTTLENECK 维持第 6 天**
+- **⚠️ 402 告警置顶**: 每日联盟运营 consecutiveErrors=3 (deepseek-v4-flash 402 + fallback deepseek__840d2872 model_not_found); 每日搜索增长 8/28 19:23 三模型全败 (zai 403 繁忙 + deepseek cooldown + model_not_found); 每周复盘 8/23 同因; 今日 12:17 将再失败 — D15 拍板超期 (规则线 2 天)
+- **PHASE (Step 0)**: 8/29 无单日节点 NOOP; W3 窗口内: Printify $150 挑战资格确认 **8/30 截止** (2 草稿 8/27 已备待 user 发送); 明日 8/31 IndexNow 增量全推 + sitemap 核验 + 月末收口
+- **排名哨兵第 11 天** (窗口 8/22..8/28 vs 8/21..8/27): 20q 命中 1/20, **0 新增 ALERT**; manychat shopify 91.8 (+0.7, 9 imp); print price ai tool 83.3 平 (12 imp, 回滚后无恢复信号, T+7 终判数据点交 daily-search); sticker mule 35 (1 imp); 其余 17 词零展示 — 悬崖维持 (Branch B 滚动期至 9/6); 日志 rank-sentinel-2026-08-29.md
+- **邮件 (SINCE 28-Aug 3 封全量, SOCKS5 7892)**: 0 新审批 / 0 新商户回复 / 0 新税务; Printful ToS 教育邮件 (info.printful.com 8/28, 非审批); CF freebie 8/27-8/29 连续 3 天未到货 (素材池 45 🎃 维持); GSC 里程碑 1 封非本域不展开
+- **tax-audit (Step 2b)**: 条件满足; IMAP 0 新税务 + autoglm credits 缺 -> BROWSER_UNAVAILABLE (连续第 9 天); tax_status=unreadable-reupload-required 维持, payout_ready=false
+- **printful-watcher SKIP** (email_verified=true, status=active); **ai-crawler GEO_BLIND NODATA** (D7 CF token 缺)
+- **GSC sitemap 管道**: lastDownloaded=2026-08-28T02:31Z, errors=0 (Google 自动刷新正常; user 手动重提 P1 仍未做)
+- **SSoT**: affiliate-programs.json 更新 (last_updated=8/29; printful.tax_audit / monitoring.last_live_check / mail_check_8_29 / rank_sentinel_8_29 / tax_audit_8_29 / ai_crawler_8_29 / cf_freebie_status_8_29 / manual_checklist_2026_08_29)
+- 下个检查点: 今日 12:17 daily-ops 计划运行 (预计 402 失败, 本产物即今日有效版本); 今日 19:23 daily-search (print-price T+7 终判); 明日 8/31 IndexNow 全推 + 月末收口
+- 无 push (监控职责; 哨兵 0 ALERT, 无 PUSH_READY)
