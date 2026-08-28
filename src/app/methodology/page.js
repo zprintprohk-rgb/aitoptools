@@ -9,7 +9,32 @@ export const metadata = {
 
 export default function MethodologyPage() {
   return (
-    <div className="methodology-page">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'Our Methodology — How We Test & Score AI Tools',
+            url: 'https://aitoptools.net/methodology/',
+            dateModified: '2026-07-27',
+            author: {
+              '@type': 'Person',
+              name: 'Jerome Tang',
+              jobTitle: 'Print Industry Expert',
+              url: 'https://aitoptools.net/author/jerome-tang/',
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Print AI Tools',
+              url: 'https://aitoptools.net/',
+              logo: { '@type': 'ImageObject', url: 'https://aitoptools.net/og-image.png' },
+            },
+          }),
+        }}
+      />
+      <div className="methodology-page">
       <h1>How We Test &amp; Score AI Tools</h1>
       <p className="methodology-lede">
         Most AI review sites rank tools from a landing page. We rank them from a print job.
@@ -141,6 +166,7 @@ export default function MethodologyPage() {
       </section>
 
       <WhyTrustUs />
-    </div>
+      </div>
+    </>
   )
 }

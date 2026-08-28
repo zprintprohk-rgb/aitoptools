@@ -8,7 +8,32 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="about-page">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'AboutPage',
+            name: 'About Print AI Tools',
+            url: 'https://aitoptools.net/about/',
+            mainEntity: {
+              '@type': 'Organization',
+              name: 'Print AI Tools',
+              url: 'https://aitoptools.net/',
+              logo: { '@type': 'ImageObject', url: 'https://aitoptools.net/og-image.png' },
+              description: 'Hands-on reviews of the best AI tools for print shops, packaging design, cross-border e-commerce, and independent store owners.',
+              founder: {
+                '@type': 'Person',
+                name: 'Jerome Tang',
+                jobTitle: 'Print Industry Expert',
+                url: 'https://aitoptools.net/author/jerome-tang/',
+              },
+            },
+          }),
+        }}
+      />
+      <div className="about-page">
       <h1 style={{ fontSize: '2rem', fontWeight: 700, color: '#1c1917', marginBottom: 24 }}>About Print AI Tools</h1>
 
       <div className="highlight-box">
@@ -53,6 +78,7 @@ export default function AboutPage() {
       <h2 style={{ fontSize: '1.3rem', fontWeight: 600, margin: '28px 0 10px', color: '#292524' }}>Get in Touch</h2>
       <p>Have an AI tool you think print shop owners or independent store operators should know about? <Link href="/submit-tool/">Submit it for review</Link>.</p>
       <p>Interested in sponsoring a review or getting featured placement? Check out our <Link href="/sponsorships/">sponsorship options</Link>.</p>
-    </div>
+      </div>
+    </>
   )
 }
