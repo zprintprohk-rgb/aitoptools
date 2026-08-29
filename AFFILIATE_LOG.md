@@ -309,6 +309,8 @@ M1 复盘 — aitoptools
 | ✅ T0 (8/6 提前完成) | 332 URL (真实唯一数) | **332/332** | 0 | 待验证 | 首次全量推送 200; 此前"730"是重复计数误估 |
 | 8/8 (D2) | 增量 6 URL (blog 补推) | **6/6** | 0 | sitemap 338 URL 已上线 | sitemap 补跑修复 6 篇 Blog 缺失 (332 旧唯一 + 6 blog, 顺带去重 199 重复) |
 | 8/8 (D2 晚) | 增量 1 URL (CF freebie 周更 blog) | **1/1** | 0 | sitemap 339 URL 已上线 | Hermes 19:45 产出 weekly CF freebie post (best-free-creative-fabrica-assets-this-week), sitemap 339 (+1), IndexNow 增量推送 200 |
+| 8/29 | 增量 1 URL (is-gelato-legit, legit 第9篇) | **1/1** | 0 | sitemap 357 URL 已 push (e789387) | state 359→360; daily-search 凌晨窗口 |
+| 8/29 晚 | 增量 1 URL (is-postermywall-legit, legit 第10篇收官) | **1/1** | 0 | sitemap 358 URL 已 push | state 360→361; daily-search 晚间槽 |
 | 8/9 (D3) | 全量 339 URL (sitemap 变更后重推) | **339/339** | 0 | sitemap 339 URL 已上线 | 16:33 hermes 12:40 cron: +1 blog URL (best-free-creative-fabrica-assets-this-week) 已含; 本跑复查 hash 匹配 (1D71C1...) 无新增 URL, 不重复推送 |
 | 8/9 (D3 晚) | 增量 1 URL (Halloween 支柱 blog) | **1/1** | 0 | sitemap 340 URL (push 后上线) | Hermes 19:45 产出 halloween-pod-ideas-2026 (8/15 支柱提前 6 天, 去风险), sitemap 340 (+1), IndexNow 增量推送 200 |
 | 8/10 (D4) | 增量 2 URL (FYUL 合并 blog + 对比页更新) | **2/2** | 0 | sitemap 341 URL (push 后上线) | Hermes 19:45 产出 printful-printify-merger-fyul-2026 (雷达信号 #1: Printful+Printify 合并=FYUL, 承接 printify vs printful 68 展示/排名 76), 对比页 FYUL 重定位, sitemap 341 (+1), IndexNow 增量推送 2/2 200 |
@@ -1284,3 +1286,4 @@ TBD (1 push 整合)
 - **SSoT**: affiliate-programs.json 更新 (last_updated=8/29; printful.tax_audit / monitoring.last_live_check / mail_check_8_29 / rank_sentinel_8_29 / tax_audit_8_29 / ai_crawler_8_29 / cf_freebie_status_8_29 / manual_checklist_2026_08_29)
 - 下个检查点: 今日 12:17 daily-ops 计划运行 (预计 402 失败, 本产物即今日有效版本); 今日 19:23 daily-search (print-price T+7 终判); 明日 8/31 IndexNow 全推 + 月末收口
 - 无 push (监控职责; 哨兵 0 ALERT, 无 PUSH_READY)
+- **修订 (05:1x)**: 并行 daily-search 补偿会话 05:08 已清除本 cron deepseek model pin + 失效 fallback (payload.model=zai/zai_auto, fallbacks=[] 字节级复核) — 12:17 起恢复默认链, 上行「今日 12:17 将再失败」作废; D15 根因拍板 (充值 DeepSeek / 修 c493 key / MINIMAX) 维持开放

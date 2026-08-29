@@ -48,3 +48,19 @@
 - web_search x4 (autoglm): TP/Shopify/退款政策/公司背景 官方快照 8/29
 - IndexNow: push 后补推 (结果随下一批 commit)
 - GA4: 凭证未就位 → NORTH-STAR GA4 NODATA
+
+## 晚间计划槽 19:23 run (第二次触发: 幂等核验 + PMW 部署)
+
+- Step 0: 最新策略仍 STRATEGY-2026-08-27 (8/28、8/29 连续缺发维持); 8/27 T1-T6 已由凌晨 run 收口 → 幂等核验 NOOP; T5 legit 持续 → 本槽完成**第 10 篇, 系列 10/10 收官**
+- Step 1: IndexNow 凌晨 gelato 增量已入 state (360/360 全 200); 本批新增 1 URL (PMW) → push 后补推; GSC 晚间补拉 (gsc_query.py days 4 直拉成功): 8/25=22 / 8/26=22, **8/27-28 仍滞后未出** → 悬崖 Day-12 无新数据点, t30 T+17 维持; mining 窗口与凌晨相同 → 0 新增维持
+- Step 2: radar 周六 SKIP | Step 4: geo-technical 周一档 SKIP
+- Step 3: **is-postermywall-legit 部署 (legit 第 10 篇)**:
+  - 凌晨会话已备草稿 (38 blocks/8 FAQ/62.5 rubric/2,889 词) 标记「数据缺口」未部署; 本槽完成事实核实后部署
+  - 事实核实 (web_search ×7, 8/29): Trustpilot **4.5/5 TrustScore 确认** (www+ca+ie 镜像 102-105 reviews, page=5 快照 TrustScore 4.5/103); G2 **4.7/5 × 71 verified** (g2.com/sellers/postermywall); BBB 非 accredited 确认 (Foster City profile 官方快照); 官方退款政策页确认 (退运费不退/缺陷重印免费); 80,000+ 模板官方搜索页口径确认
+  - **事实修正 ①定价**: 官方支持文档 (2026-08-04 更新) Premium **$13/月月付 或 $109/年 (≈$9.08/月)**, Premium Plus $30/月 或 $319/年; 草稿沿用 $9.95 为第三方 (crozdesk) 旧价 → blog 正文/表格/FAQ 全部替换 (10 处, 定价表 +1 行 Premium Plus)
+  - **事实修正 ②reviews.json postermywall-review 同步**: price 字段损坏值 "Free (Pro .95/mo)" → "Free (Premium $13/mo)"; content 定价行 Pro $9.95 → Premium $13/月或 $109/年; dateModified=2026-08-29
+  - 复核后 **3,010 词** (≥2,500 军规) / 8 FAQ (信任型 ≥5) / BLUF 首段 / 来源链 / related 4 条齐备
+  - validate_content_data.py **全部通过**; generate-sitemap.py **358 URL** (357→358, public+out 双侧 PMW 已含); build **PASS 168 页** (799 aff-link/214 文件, exit 0)
+- Push 纪律: 本批合并 = PMW 新页 + sitemap 358 + reviews 定价修正 + gelato 交叉链接 (凌晨遗留) + affiliate-programs.json (daily-ops 午间收口) + indexnow state + 本日志 + RESULT 晚间段 + C2b 行 — **单次 push**
+- push-count: **2** (当日第 2 次, 上限 5 合规) | daily-ops-2026-08-29 PUSH_READY: 无 | IndexNow PMW: push 后补推, 结果随下一批 commit
+- 402/模型: 本会话默认链 (zai_auto) 全程无 402 (默认链稳定第 2 天)
