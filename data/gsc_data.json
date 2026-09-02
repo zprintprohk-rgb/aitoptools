@@ -1,1184 +1,417 @@
 {
- "range": "2026-08-17_2026-08-23",
- "exported": "2026-08-24",
- "source": "GSC API (service account, SOCKS5 127.0.0.1:7892)",
- "total_impressions": 160,
+ "range": "2026-08-23_2026-08-29",
+ "exported": "2026-08-30",
+ "source": "GSC API (service account, SOCKS5 127.0.0.1:7892) via scripts/gsc_query.py",
+ "total_impressions": 35,
  "total_clicks": 0,
  "ctr": 0,
- "queries": {
-  "ai listing website": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 88.5
-  },
-  "ai print estimator": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 76
-  },
-  "ai printing software": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 92
-  },
-  "ai tool for print production pipeline": {
-   "imp": 3,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 88
-  },
-  "ai tools for etsy sellers": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 82
-  },
-  "ai upscaler comparison": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 73
-  },
-  "alternative to printful": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 78
-  },
-  "alternatives to printful": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 75
-  },
-  "b12 ai website": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 50
-  },
-  "b12 website builder is b12io worth it": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 51
-  },
-  "befunky photo editor review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 49
-  },
-  "best ai ecommerce automation tools with real product images": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 93
-  },
-  "best ai image generator for t shirt design": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 86
-  },
-  "best ai seo tools for ecommerce": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 90
-  },
-  "best ai tools for ecommerce seo optimization": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 93
-  },
-  "best ai tools for editing ecommerce photos 2026": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 86
-  },
-  "best free ai t shirt design generator": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 97
-  },
-  "best free ai t-shirt design generator": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 95
-  },
-  "best printful alternatives": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 76
-  },
-  "bluehost ai website builder review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 78
-  },
-  "bluehost review 2026": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 65
-  },
-  "capcut ai video generator review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 67
-  },
-  "cerative fabrica": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 89
-  },
-  "claid ai review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 62
-  },
-  "copy ai reviews": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 84
-  },
-  "copy reviews": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 67
-  },
-  "copy.a": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 81
-  },
-  "copy.ai review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 86
-  },
-  "copymatic": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 82
-  },
-  "creative fabrica": {
-   "imp": 5,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 50.4
-  },
-  "creative fabrica reviews": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 49
-  },
-  "creativefabrica": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 43
-  },
-  "dalll": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 86
-  },
-  "descript ai reviews": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 79
-  },
-  "descript news": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 80.5
-  },
-  "descript.com reviews": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 70
-  },
-  "design pickle review": {
-   "imp": 4,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 49.5
-  },
-  "design pickle reviews": {
-   "imp": 4,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 56.5
-  },
-  "evaluate the ai-powered video generation company heygen on lip sync": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 99
-  },
-  "gem pages": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 77
-  },
-  "gem pages shopify": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 17
-  },
-  "gempage": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 62
-  },
-  "gempages": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 76
-  },
-  "gempages alternative": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 87
-  },
-  "gempages reviews": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 71
-  },
-  "google gemini review 2026": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 62
-  },
-  "heygen review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 68
-  },
-  "heygen video editing company reviews": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 71
-  },
-  "heygrn": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 57.5
-  },
-  "imagetostl.com safe": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 62
-  },
-  "is kittl better than canva": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 72.5
-  },
-  "is magicdrop legit": {
-   "imp": 4,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 18
-  },
-  "is midjourney worth it 2026": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 54
-  },
-  "is photoroom legit": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 53
-  },
-  "is pixlr legit": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 68
-  },
-  "is veed io safe": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 89
-  },
-  "is veed legit": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 79
-  },
-  "jasper ai chat review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 88
-  },
-  "jasper ai review": {
-   "imp": 9,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 88.2
-  },
-  "jasper review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 92
-  },
-  "kittl ai vectorizer": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 69
-  },
-  "kittl vs canva": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 76.5
-  },
-  "looka review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 85
-  },
-  "lumen5 pricing": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 63
-  },
-  "magicdrop free money": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 54
-  },
-  "manychat shopify": {
-   "imp": 10,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 95
-  },
-  "marketing copy ai": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 65
-  },
-  "midjourney review": {
-   "imp": 5,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 85.2
-  },
-  "mockey": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 40.5
-  },
-  "mule stickers": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 54
-  },
-  "mulesticker": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 69.5
-  },
-  "munch. ai": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 76
-  },
-  "omnisend review": {
-   "imp": 3,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 86
-  },
-  "photoroom prompts": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 60
-  },
-  "pika ai is free or paid": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 77
-  },
-  "placeit review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 61
-  },
-  "print price ai tool": {
-   "imp": 11,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 75.9
-  },
-  "printful alternatives": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 78
-  },
-  "printify alternatives": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 84
-  },
-  "printify vs gooten": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 74
-  },
-  "printify vs printful": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 71
-  },
-  "read more on b12sites.com": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 45
-  },
-  "reelcraft ai review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 75
-  },
-  "runway app review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 85
-  },
-  "shopify magic": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 56
-  },
-  "shopify magic app": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 61
-  },
-  "sites similar to printful": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 60
-  },
-  "spocket dropshipping review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 72
-  },
-  "spocket review": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 81
-  },
-  "spocket reviews": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 77
-  },
-  "spoket": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 59
-  },
-  "sticker mule usa": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 36
-  },
-  "stickermule studio": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 69.5
-  },
-  "teepublic ai": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 52
-  },
-  "tome series a": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 97
-  },
-  "tome.app price": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 71
-  },
-  "upscale. media": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 78
-  },
-  "what is the best ai image generator for etsy product mockups?": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 70
-  },
-  "what's the best ai tool for shopify sellers": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 84
-  },
-  "zyro": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 88
-  }
+ "note": "query 维度合计 35 imp (长尾匿名化未归因); 页面维度 8/23-27 有效日合计 102 imp; 8/28-29 GSC T+2 未出",
+ "daily_effective": {
+  "window": "2026-08-23_2026-08-27",
+  "days": 5,
+  "impressions": 102,
+  "daily_avg": 20.4
  },
- "pages": {
-  "https://aitoptools.net/": {
-   "imp": 20,
+ "queries": {
+  "adcreative.ai review\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com": {
+   "imp": 1,
    "clk": 0,
    "ctr": 0,
-   "pos": 64.8
+   "pos": 1
   },
-  "https://aitoptools.net/about/": {
+  "b12 ai\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com": {
+   "imp": 1,
+   "clk": 0,
+   "ctr": 0,
+   "pos": 3
+  },
+  "omnisend\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com": {
    "imp": 2,
    "clk": 0,
    "ctr": 0,
-   "pos": 7
+   "pos": 9.5
   },
-  "https://aitoptools.net/adcreative-ai-review/": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 89.5
-  },
-  "https://aitoptools.net/ai-image-upscaler-comparison/": {
-   "imp": 8,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 69.5
-  },
-  "https://aitoptools.net/algomo-review/": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 56
-  },
-  "https://aitoptools.net/b12-ai-review/": {
-   "imp": 7,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 53.1
-  },
-  "https://aitoptools.net/befunky-review/": {
-   "imp": 3,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 41.7
-  },
-  "https://aitoptools.net/best-ai-tools/": {
-   "imp": 6,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 61
-  },
-  "https://aitoptools.net/best/best-ai-listing-tools/": {
-   "imp": 3,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 86
-  },
-  "https://aitoptools.net/best/best-ai-photoshoot-tools/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 68
-  },
-  "https://aitoptools.net/best/best-ai-seo-tools-for-ecommerce/": {
-   "imp": 6,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 81.2
-  },
-  "https://aitoptools.net/best/best-ai-tools-for-ecommerce-product-photos/": {
-   "imp": 6,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 92.8
-  },
-  "https://aitoptools.net/best/best-ai-tools-for-etsy-product-photos/": {
-   "imp": 4,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 71.2
-  },
-  "https://aitoptools.net/best/best-ai-tools-for-etsy-sellers/": {
-   "imp": 3,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 81.3
-  },
-  "https://aitoptools.net/best/best-ai-tools-for-etsy-seo/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 80
-  },
-  "https://aitoptools.net/best/best-ai-tools-for-product-photography/": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 82
-  },
-  "https://aitoptools.net/best/best-ai-tools-for-shopify/": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 75.5
-  },
-  "https://aitoptools.net/best/best-ai-tshirt-design-generators/": {
-   "imp": 30,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 76.9
-  },
-  "https://aitoptools.net/best/best-pod-for-etsy-sellers/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 57
-  },
-  "https://aitoptools.net/best/printful-alternatives/": {
-   "imp": 21,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 69
-  },
-  "https://aitoptools.net/best/printify-alternatives/": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 79
-  },
-  "https://aitoptools.net/blog/": {
-   "imp": 3,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 26.3
-  },
-  "https://aitoptools.net/blog/halloween-pod-ideas-2026/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 11
-  },
-  "https://aitoptools.net/blog/how-to-use-ai-for-print-design/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 87
-  },
-  "https://aitoptools.net/blog/is-magicdrop-legit/": {
-   "imp": 6,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 22.8
-  },
-  "https://aitoptools.net/blog/printful-printify-merger-fyul-2026/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 10
-  },
-  "https://aitoptools.net/blog/printful-vs-printify-halloween-2026/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 10
-  },
-  "https://aitoptools.net/bluehost-review-2026/": {
-   "imp": 3,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 69.3
-  },
-  "https://aitoptools.net/capcut-ai-review/": {
-   "imp": 3,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 25.7
-  },
-  "https://aitoptools.net/claid-ai-review/": {
-   "imp": 4,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 54.5
-  },
-  "https://aitoptools.net/compare/": {
-   "imp": 7,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 56
-  },
-  "https://aitoptools.net/compare/kittl-vs-canva/": {
-   "imp": 7,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 72.3
-  },
-  "https://aitoptools.net/compare/kittl-vs-placeit/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 2
-  },
-  "https://aitoptools.net/compare/mockey-vs-placeit/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 65
-  },
-  "https://aitoptools.net/compare/printful-vs-gelato/": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 66
-  },
-  "https://aitoptools.net/compare/printful-vs-printify/": {
-   "imp": 9,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 59.4
-  },
-  "https://aitoptools.net/compare/printify-vs-gelato/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 71
-  },
-  "https://aitoptools.net/copy-ai-review/": {
-   "imp": 16,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 72.2
-  },
-  "https://aitoptools.net/creative-fabrica-review/": {
-   "imp": 15,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 61.3
-  },
-  "https://aitoptools.net/cursor-review/": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 68.5
-  },
-  "https://aitoptools.net/dalle-review/": {
-   "imp": 7,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 78.3
-  },
-  "https://aitoptools.net/descript-review/": {
-   "imp": 9,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 80.7
-  },
-  "https://aitoptools.net/designpickle-review/": {
-   "imp": 8,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 53
-  },
-  "https://aitoptools.net/disclaimer/": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 9
-  },
-  "https://aitoptools.net/gear-launch-review-2026/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 59
-  },
-  "https://aitoptools.net/gelato-review/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 80
-  },
-  "https://aitoptools.net/gemini-review/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 62
-  },
-  "https://aitoptools.net/gempages-review/": {
-   "imp": 26,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 68
-  },
-  "https://aitoptools.net/gorgias-ai-review-2026/": {
-   "imp": 7,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 73.7
-  },
-  "https://aitoptools.net/heygen-review/": {
-   "imp": 13,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 67.6
-  },
-  "https://aitoptools.net/imagetostl-review-2026/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 62
-  },
-  "https://aitoptools.net/jasper-ai-review/": {
-   "imp": 24,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 85.2
-  },
-  "https://aitoptools.net/kittl-review/": {
-   "imp": 8,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 72.5
-  },
-  "https://aitoptools.net/logoai-review/": {
-   "imp": 3,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 79.3
-  },
-  "https://aitoptools.net/looka-review/": {
-   "imp": 5,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 84.2
-  },
-  "https://aitoptools.net/lumen5-review/": {
-   "imp": 6,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 74.3
-  },
-  "https://aitoptools.net/mailchimp-review/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 96
-  },
-  "https://aitoptools.net/manychat-ai-review/": {
-   "imp": 29,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 83.8
-  },
-  "https://aitoptools.net/methodology/": {
+  "writesonic\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com": {
    "imp": 2,
    "clk": 0,
    "ctr": 0,
    "pos": 1
   },
-  "https://aitoptools.net/midjourney-review/": {
-   "imp": 13,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 78.9
-  },
-  "https://aitoptools.net/mockey-review/": {
-   "imp": 5,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 57
-  },
-  "https://aitoptools.net/murf-ai-review/": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 72
-  },
-  "https://aitoptools.net/namecheap-review/": {
-   "imp": 3,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 60.3
-  },
-  "https://aitoptools.net/omnisend-review/": {
-   "imp": 12,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 73.5
-  },
-  "https://aitoptools.net/packify-ai-review/": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 60.5
-  },
-  "https://aitoptools.net/pebblely-review-2026/": {
-   "imp": 3,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 81
-  },
-  "https://aitoptools.net/persify-review/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 99
-  },
-  "https://aitoptools.net/photoroom-review/": {
-   "imp": 4,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 62.2
-  },
-  "https://aitoptools.net/pictory-review/": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 77
-  },
-  "https://aitoptools.net/pika-labs-review/": {
-   "imp": 8,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 67.9
-  },
-  "https://aitoptools.net/pixlr-ai-review/": {
-   "imp": 5,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 69.4
-  },
-  "https://aitoptools.net/placeit-review/": {
-   "imp": 4,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 68.2
-  },
-  "https://aitoptools.net/postermywall-review/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 70
-  },
-  "https://aitoptools.net/predis-ai-review/": {
-   "imp": 4,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 44
-  },
-  "https://aitoptools.net/printful-review/": {
-   "imp": 3,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 49
-  },
-  "https://aitoptools.net/printreadybook-review/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 62
-  },
-  "https://aitoptools.net/reconvert-upsell-review-2026/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 83
-  },
-  "https://aitoptools.net/runway-ml-review/": {
-   "imp": 6,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 76.5
-  },
-  "https://aitoptools.net/shopify-magic-review/": {
-   "imp": 21,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 69.9
-  },
-  "https://aitoptools.net/society6-review/": {
-   "imp": 13,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 55.8
-  },
-  "https://aitoptools.net/spocket-review/": {
-   "imp": 6,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 72.7
-  },
-  "https://aitoptools.net/sponsorships/": {
-   "imp": 2,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 10
-  },
-  "https://aitoptools.net/stickermule-review/": {
-   "imp": 20,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 60.5
-  },
-  "https://aitoptools.net/synthesia-review/": {
-   "imp": 3,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 74
-  },
-  "https://aitoptools.net/teepublic-review/": {
-   "imp": 7,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 49
-  },
-  "https://aitoptools.net/tome-review-2026/": {
-   "imp": 4,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 82.8
-  },
-  "https://aitoptools.net/topaz-photo-ai-review-2026/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 58
-  },
-  "https://aitoptools.net/upscale-media-review/": {
-   "imp": 5,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 78.8
-  },
-  "https://aitoptools.net/veed-io-review/": {
-   "imp": 10,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 69.8
-  },
-  "https://aitoptools.net/viralcraft-ai-review/": {
-   "imp": 1,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 75
-  },
-  "https://aitoptools.net/vistacreate-review/": {
-   "imp": 5,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 64
-  },
-  "https://aitoptools.net/zmo-ai-review/": {
-   "imp": 4,
-   "clk": 0,
-   "ctr": 0,
-   "pos": 77
-  },
-  "https://aitoptools.net/zyro-review/": {
+  "ai tool for print production pipeline": {
    "imp": 1,
    "clk": 0,
    "ctr": 0,
    "pos": 88
   },
-  "https://www.aitoptools.net/munch-ai-review/": {
-   "imp": 1,
+  "ai tools for print on demand": {
+   "imp": 3,
    "clk": 0,
    "ctr": 0,
-   "pos": 76
+   "pos": 72
   },
-  "https://www.aitoptools.net/zyro-review/": {
+  "manychat shopify": {
+   "imp": 8,
+   "clk": 0,
+   "ctr": 0,
+   "pos": 99.9
+  },
+  "mockey": {
    "imp": 1,
    "clk": 0,
    "ctr": 0,
-   "pos": 57
+   "pos": 39
+  },
+  "print price ai tool": {
+   "imp": 11,
+   "clk": 0,
+   "ctr": 0,
+   "pos": 85.9
+  },
+  "revery reviews": {
+   "imp": 1,
+   "clk": 0,
+   "ctr": 0,
+   "pos": 78
+  },
+  "sticker mule": {
+   "imp": 2,
+   "clk": 0,
+   "ctr": 0,
+   "pos": 47.5
+  },
+  "sticker mule pricing": {
+   "imp": 2,
+   "clk": 0,
+   "ctr": 0,
+   "pos": 28
   }
  },
- "note": "weekly-review 2026-08-24 拉取; 展示悬崖期 (8/18 起日均 ~27, Branch B 判定); query 维度求和(160) < date 维度, GSC 已知采样差异; 8/22-8/23 未回; prev 窗口 8/14-8/20 存 .hermes/tmp/weekly-gsc-0824.json",
- "prev_range": "2026-08-14_2026-08-20"
+ "pages": {
+  "/": {
+   "imp": 18,
+   "clk": 0,
+   "pos": 78.4
+  },
+  "/adcreative-ai-review/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 1
+  },
+  "/ai-image-upscaler-comparison/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 4
+  },
+  "/algomo-review/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 7
+  },
+  "/b12-ai-review/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 72
+  },
+  "/best/best-ai-tshirt-design-generators/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 56
+  },
+  "/best/printful-alternatives/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 67
+  },
+  "/blog/is-magicdrop-legit/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 2
+  },
+  "/blog/printful-vs-printify-halloween-2026/": {
+   "imp": 4,
+   "clk": 0,
+   "pos": 8
+  },
+  "/bluehost-review-2026/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 53
+  },
+  "/capcut-ai-review/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 55
+  },
+  "/category/ai-ecommerce/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 3
+  },
+  "/compare/printful-vs-gelato/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 59
+  },
+  "/compare/printful-vs-printify/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 8
+  },
+  "/creative-fabrica-review/": {
+   "imp": 4,
+   "clk": 0,
+   "pos": 65.2
+  },
+  "/elevenlabs-review/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 2
+  },
+  "/gear-launch-review-2026/": {
+   "imp": 2,
+   "clk": 0,
+   "pos": 80
+  },
+  "/gelato-review/": {
+   "imp": 4,
+   "clk": 0,
+   "pos": 68
+  },
+  "/gempages-review/": {
+   "imp": 5,
+   "clk": 0,
+   "pos": 66.2
+  },
+  "/kittl-review/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 52
+  },
+  "/looka-review/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 5
+  },
+  "/mailchimp-review/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 79
+  },
+  "/manychat-ai-review/": {
+   "imp": 14,
+   "clk": 0,
+   "pos": 91.6
+  },
+  "/mockey-review/": {
+   "imp": 2,
+   "clk": 0,
+   "pos": 54.5
+  },
+  "/omnisend-review/": {
+   "imp": 2,
+   "clk": 0,
+   "pos": 9.5
+  },
+  "/placeit-review/": {
+   "imp": 2,
+   "clk": 0,
+   "pos": 68
+  },
+  "/printreadybook-review/": {
+   "imp": 2,
+   "clk": 0,
+   "pos": 79.5
+  },
+  "/removebg-review/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 58
+  },
+  "/revery-ai-review/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 78
+  },
+  "/sellhound-review-2026/": {
+   "imp": 2,
+   "clk": 0,
+   "pos": 4
+  },
+  "/shopify-magic-review/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 84
+  },
+  "/society6-review/": {
+   "imp": 3,
+   "clk": 0,
+   "pos": 61
+  },
+  "/stickermule-review/": {
+   "imp": 13,
+   "clk": 0,
+   "pos": 56.6
+  },
+  "/teepublic-review/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 91
+  },
+  "/tome-review-2026/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 8
+  },
+  "/topaz-photo-ai-review-2026/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 79
+  },
+  "/vistacreate-review/": {
+   "imp": 1,
+   "clk": 0,
+   "pos": 73
+  },
+  "/writesonic-review/": {
+   "imp": 2,
+   "clk": 0,
+   "pos": 1
+  }
+ },
+ "daily14": {
+  "2026-08-16": {
+   "imp": 491,
+   "clk": 1,
+   "pos": 71.4
+  },
+  "2026-08-17": {
+   "imp": 421,
+   "clk": 0,
+   "pos": 70.2
+  },
+  "2026-08-18": {
+   "imp": 33,
+   "clk": 0,
+   "pos": 78.2
+  },
+  "2026-08-19": {
+   "imp": 29,
+   "clk": 0,
+   "pos": 67.7
+  },
+  "2026-08-20": {
+   "imp": 29,
+   "clk": 0,
+   "pos": 69.9
+  },
+  "2026-08-21": {
+   "imp": 17,
+   "clk": 0,
+   "pos": 59.8
+  },
+  "2026-08-22": {
+   "imp": 21,
+   "clk": 0,
+   "pos": 59
+  },
+  "2026-08-23": {
+   "imp": 22,
+   "clk": 0,
+   "pos": 42.5
+  },
+  "2026-08-24": {
+   "imp": 17,
+   "clk": 0,
+   "pos": 71.4
+  },
+  "2026-08-25": {
+   "imp": 22,
+   "clk": 0,
+   "pos": 64.6
+  },
+  "2026-08-26": {
+   "imp": 22,
+   "clk": 0,
+   "pos": 62.9
+  },
+  "2026-08-27": {
+   "imp": 19,
+   "clk": 0,
+   "pos": 60.2
+  }
+ },
+ "queries_14d_rows": 40,
+ "cliff": {
+  "start": "2026-08-18",
+  "day": 15,
+  "pre_baseline_daily": "152-230 (8/2-8/5)",
+  "branch": "B 滚动期至 9/6"
+ },
+ "top20_pages_pos_lt_20": [
+  {
+   "page": "/adcreative-ai-review/",
+   "pos": 1,
+   "imp": 1
+  },
+  {
+   "page": "/ai-image-upscaler-comparison/",
+   "pos": 4,
+   "imp": 1
+  },
+  {
+   "page": "/algomo-review/",
+   "pos": 7,
+   "imp": 1
+  },
+  {
+   "page": "/blog/is-magicdrop-legit/",
+   "pos": 2,
+   "imp": 1
+  },
+  {
+   "page": "/blog/printful-vs-printify-halloween-2026/",
+   "pos": 8,
+   "imp": 4
+  },
+  {
+   "page": "/category/ai-ecommerce/",
+   "pos": 3,
+   "imp": 1
+  },
+  {
+   "page": "/compare/printful-vs-printify/",
+   "pos": 8,
+   "imp": 1
+  },
+  {
+   "page": "/elevenlabs-review/",
+   "pos": 2,
+   "imp": 1
+  },
+  {
+   "page": "/looka-review/",
+   "pos": 5,
+   "imp": 1
+  },
+  {
+   "page": "/omnisend-review/",
+   "pos": 9.5,
+   "imp": 2
+  },
+  {
+   "page": "/sellhound-review-2026/",
+   "pos": 4,
+   "imp": 2
+  },
+  {
+   "page": "/tome-review-2026/",
+   "pos": 8,
+   "imp": 1
+  },
+  {
+   "page": "/writesonic-review/",
+   "pos": 1,
+   "imp": 2
+  }
+ ]
 }

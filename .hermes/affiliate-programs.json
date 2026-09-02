@@ -292,7 +292,7 @@
   }
  ],
  "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
- "last_updated": "2026-08-29 12:2x (12:17 daily-ops NOOP 收口)",
+ "last_updated": "2026-08-30 12:3x (12:17 daily-ops: browser 实读恢复, tax STILL-PENDING 第10天, rank ALERT manychat 低样本, CF freebies 恢复到货)",
  "monitoring": {
   "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
   "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
@@ -1521,5 +1521,10 @@
  "cron_health_8_29": {
   "daily_ops": "payload model=zai/zai_auto fallbacks=[] (05:08 生效); 12:17 计划槽正常跑通 = 默认链恢复实证; lastRunStatus error×3 (deepseek 402) 本 run 完成后翻转; D15 根因拍板维持开放",
   "next": "19:23 daily-search / 8/31 IndexNow 全推+月末收口"
- }
+ },
+ "tax_audit_8_30": "STILL-PENDING (browser 实证 8/30 12:27, autoglm credits 恢复 -> BROWSER_UNAVAILABLE 解除; 状态 Pending, 文件 autoglm-browser-agent.pdf, Lines 4/5 静态提示, Edit 可用; Noelle 8/21 unreadable-reupload-required 第 10 天 -> BLOCKED_USER_ACTION 维持; 截图 .hermes/audit/printful-tax-20260830.jpeg)",
+ "mail_check_8_30": "IMAP SINCE 26-Aug 18 封核查: 0 封税务/审批; CF freebies 8/26 x2 + 8/28 + 8/29 恢复到货; GSC 250-clicks 恭喜邮件归属 zprintpro.com (aitoptools 28d 仅 1 click 实证排除); 2 封自荐提交 (SocialEcho/Coarena) 待垂直过滤",
+ "cf_freebie_status_8_30": "恢复到货: 8/26 Black Ink Brush + 8/26 Whimsical Dancing Snowman (冬季储备) + 8/28 Vintage Beach Summer + 8/29 Mama; 素材池 45 个 Halloween 维持 + 4 非万圣节主题",
+ "rank_sentinel_8_30": "7d 8/23-29: 35 imp/0 click; 20q 仅 manychat shopify 命中 8 imp pos 99.9 (91.8->99.9 变动8.1 触发 ALERT 但低样本噪声, 观察); print-price 85.9 (-2.6 无 alert); 日值 8/27=19 imp 悬崖持续",
+ "ai_crawler_8_30": "GEO_BLIND NODATA 维持 (D7 CF token 未配); GEO 探针 7d: adcreative.ai review pos 1.0 / writesonic 1.0 / b12 ai 3.0 / omnisend 9.5; browser credits 已恢复 (8/30 实证)"
 }

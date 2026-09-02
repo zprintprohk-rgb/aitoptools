@@ -64,3 +64,5 @@
 - Push 纪律: 本批合并 = PMW 新页 + sitemap 358 + reviews 定价修正 + gelato 交叉链接 (凌晨遗留) + affiliate-programs.json (daily-ops 午间收口) + indexnow state + 本日志 + RESULT 晚间段 + C2b 行 — **单次 push**
 - push-count: **2** (当日第 2 次, 上限 5 合规) | daily-ops-2026-08-29 PUSH_READY: 无 | IndexNow PMW: push 后补推, 结果随下一批 commit
 - 402/模型: 本会话默认链 (zai_auto) 全程无 402 (默认链稳定第 2 天)
+- IndexNow 补推结果: **200 OK, 1/1** (https://aitoptools.net/blog/is-postermywall-legit/); state 360→361 (361/361 全 200); 明细 .hermes/logs/indexnow-0829-evening.json; 本行随下一批 commit
+- 晚间 run 结束: 19:23-19:44, 全部 Step 收口, 产物在位 (本文件 + RESULT-0829 晚间段 + C2b 行 + commit acbaea8 已推送)

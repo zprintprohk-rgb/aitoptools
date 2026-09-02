@@ -32,6 +32,13 @@
 - Recraft Crisp Upscale 300 DPI 实测复证 (icons8 1920x1080=6.4x3.6in) + Upscale.media 免费最佳 (screensnap 5/7) — upscaler 对比页双候选
 - EverBee vs eRank 官方对比 (5/16/2026) — 簇 E 备料续 (D12 前只备)
 
+## 2026-09-02
+- Google 官方否认 Reddit 特殊优待 (seroundtable 9/1 video) — 与 everything-pr Reddit ~40% 引用份额并存: Reddit 信号来自普遍性, mention-ops 种子帖策略不变
+- AIO 引用: 85.5% 来自 earned media (authoritytech 3/26) + top-10 重叠降至 17% (BrightEdge 2026-02, omnibound 聚合) — R1/mention-ops 战略外部加固, methodology 页引用候选
+- StickerMule 2026-08 三波官方更新: Public API (8/3-16) / Grok 图像生成进 artwork upload (7/20-8/2) / 付费活动+阶梯佣金 (8/17-30) — stickermule-review 9/2 刷新入页 (3 官方源)
+- seroundtable: spam update (8/18-21) 后波动未平息 — 悬崖 Branch B 滚动期 (至 9/6) 外部佐证延续
+- Canva AI 2.0 对话式设计 coming soon (canva.com 官方, 单源 watch) — 下轮雷达复访
+- tidio 9+/month 残留复查 = 0 (8/29 修复已生效), 无需动作
 ## 2026-08-28
 - Google 8 月行业级波动: seroundtable 8/5-6 峰值 (有站 -70%) + seovendor 排名稳流量跌 = AI Overviews 点击再分配 — 与本站悬崖 (8/18 起) 机制吻合, Branch B 维持的外部佐证; searchengineland: 2026 确认 core update 仅 6 月一次
 - Etsy 2026-08-11 新规: 电脑工具制作产品须卖家原创设计, 购买模板/授权内容受限 — POD 卖家内容/种子帖候选 (官方规则页待核)
@@ -39,3 +46,10 @@
 - Bing 索引 → ChatGPT 搜索喂入 (docdigitalsem 3/17) + OAI-SearchBot 可经 BWT/IndexNow 触发 (clickrank) — R2 战略外部印证, IndexNow 增量照常
 - Kittl product-updates 8 月无新更新 (最新仍 5/8); kittl.com/compare 官方竞品枢纽在案
 - GEO 市场锚点: US GEO $365.4M (2026, CAGR 42.9%) omnibound 5/7 — methodology 引用候选
+
+## 2026-08-31
+- Google August 2026 spam update 确认 (8/18 开始 / 8/21 结束, seroundtable+searchengineland): 本站悬崖 Day-1 (8/18) 与 spam update 起始日重合 — Branch B 滚动期纪律 (至 9/6) 外部实证; post-update 波动持续
+- AIO 引用 top-10 份额 76%→38% (ahrefs 863K SERP) + BrightEdge 2026-02 重叠 17% + ~半数引用在 pos 4-20 (botrank) — R1 战略数据加固, legit 簇 pos 17-30 = 引用候选区间
+- Reddit ~40% AI 引用来源份额 (everything-pr 8/16) — mention-ops reddit 种子线佐证
+- Redbubble Standard 档 50% 平台费 (fourthwall 8/28, 二手) — is-redbubble-legit 补引候选, 待官方源
+- Kittl 8 月无新更新 (最新 6/19); POD 平台 8 月无新政策 — 雷达 0 新工具候选

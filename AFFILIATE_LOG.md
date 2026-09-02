@@ -1287,3 +1287,11 @@ TBD (1 push 整合)
 - 下个检查点: 今日 12:17 daily-ops 计划运行 (预计 402 失败, 本产物即今日有效版本); 今日 19:23 daily-search (print-price T+7 终判); 明日 8/31 IndexNow 全推 + 月末收口
 - 无 push (监控职责; 哨兵 0 ALERT, 无 PUSH_READY)
 - **修订 (05:1x)**: 并行 daily-search 补偿会话 05:08 已清除本 cron deepseek model pin + 失效 fallback (payload.model=zai/zai_auto, fallbacks=[] 字节级复核) — 12:17 起恢复默认链, 上行「今日 12:17 将再失败」作废; D15 根因拍板 (充值 DeepSeek / 修 c493 key / MINIMAX) 维持开放
+
+## 2026-08-30 (12:17 daily-ops)
+- Tax & Legal browser 实读恢复 (autoglm credits 修复, 9 天来首次): W-8BEN-E 状态 **Pending** 维持, 文件 autoglm-browser-agent.pdf, Lines 4/5 黄框为静态模板提示, Edit 可用, 页面无 re-upload 标记; Noelle 8/21 邮件要求重传 unreadable 文件 -> 重传仍待 user (第 10 天) -> BLOCKED_USER_ACTION 维持; 截图存档 .hermes/audit/printful-tax-20260830.jpeg
+- IMAP SINCE 26-Aug 全量 18 封: 0 封 Printful 税务/新审批; 8/28 affiliate@info.printful.com 教育邮件 (ToS 阅读, 非税务); 8/29 Monthly updates 教育邮件
+- CF freebies 恢复到货 (纠正 8/29 时点性误判): 8/26 Black Ink Brush / 8/26 Whimsical Dancing Snowman Bundle (冬季储备) / 8/28 Vintage Beach Summer / 8/29 Mama; Halloween 素材池 45 个维持充足
+- GSC 恭喜邮件 (28 天 250 clicks) 归属 zprintpro.com, 非 aitoptools.net (GSC API 实证 28d 仅 1 click)
+- 自荐提交 x2 (SocialEcho / Coarena) 已记录, 待垂直过滤另议; GitHub secrets 告警 (8/25) 属 zprintpro 仓库跨项目事项, 已转告
+- 排名哨兵: 7d 8/23-29 = 35 imp / 0 click; ALERT: manychat shopify pos 91.8 -> 99.9 (低样本噪声, 观察); 日值 8/27 = 19 imp, 悬崖持续
