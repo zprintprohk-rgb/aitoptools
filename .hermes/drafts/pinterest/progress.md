@@ -2,7 +2,7 @@
 
 > 规则: 每天 2 张（8/6 起）, 发布包在 ready-to-post-*.md, user 手工发布（Hermes 不自动登录）
 
-## 进度: 15/16
+## 进度: 15/16 (8/11 后中断 — 402 停摆 9/3-9/11)
 
 | # | 日期 | 目标页面 | 发布包 | 状态 |
 |---|------|---------|--------|------|
@@ -17,11 +17,26 @@
 | 9 | 2026-08-08 | /best/printify-alternatives/（GSC 60 展示/排名 78） | ready-to-post-2026-08-08.md | 📝 待发布 |
 | 10 | 2026-08-09 | /best/best-ai-tshirt-design-generators/ | ready-to-post-2026-08-09.md | 📝 待发布 |
 | 11 | 2026-08-09 | /best/best-print-on-demand-companies/ | ready-to-post-2026-08-09.md | 📝 待发布 |
-| 12 | 2026-08-10 | /claid-ai-review/（变现权重 #1, 收款就绪） | ready-to-post-2026-08-10.md | 📝 待发布 |
-| 13 | 2026-08-10 | /kittl-review/（变现权重 #2） | ready-to-post-2026-08-10.md | 📝 待发布 |
-| 14 | 2026-08-11 | /printify-review/（与今日 Halloween 辐条② Blog 联动） | ready-to-post-2026-08-11.md | 📝 待发布 |
-| 15 | 2026-08-11 | /printful-review/（与今日 Halloween 辐条② Blog 联动） | ready-to-post-2026-08-11.md | 📝 待发布 |
+| 12 | 2026-08-10 | ready-to-post-2026-08-10.md | 📝 待发布 |
+| 13 | 2026-08-10 | ready-to-post-2026-08-10.md | 📝 待发布 |
+| 14 | 2026-08-11 | ready-to-post-2026-08-11.md | 📝 待发布 |
+| 15 | 2026-08-11 | ready-to-post-2026-08-11.md | 📝 待发布 |
 
-## 剩余 1 张（8/12 计划）
+---
 
-- [ ] mockey（变现权重 #3, 30% 循环）— 8/12 产出 ready-to-post-2026-08-12.md 即完成 16/16
+## 2026-09-12 周产批次 (W-new-1) — 7 张新图已产
+
+> 402 停摆 (9/3-9/11) 期间 pin 产能为零；9/12 恢复日补齐一周包。
+> 清单: `weekly-manifest-2026-09-12.md` | 图片: `images/*.webp` (1000x1500, 品牌色文字卡)
+
+| # | 目标页面 | 优先级 | 状态 |
+|---|---------|--------|------|
+| 16 | /blog/black-friday-pod-strategy-2026/（今日新建支柱） | 🥇 Q4 商业意图 | 📝 待发布 |
+| 17 | /blog/printful-vs-printify-2026/ | 🥇 常青决策页 | 📝 待发布 |
+| 18 | /compare/printful-vs-gelato/（boost pos 63.2） | 🥈 推排名 | 📝 待发布 |
+| 19 | /compare/kittl-vs-canva/（boost pos 72.3） | 🥈 推排名 | 📝 待发布 |
+| 20 | /blog/print-price-ai-tools-2026/（boost pos ~64） | 🥈 推排名 | 📝 待发布 |
+| 21 | /creative-fabrica-review/（boost pos 50.4） | 🥉 推排名 | 📝 待发布 |
+| 22 | /designpickle-review/（Boost 队列 #7） | 🥉 推排名 | 📝 待发布 |
+
+**累计产出: 22 张**（15 张 8/5-8/11 批次 + 7 张 9/12 批次）；**已发布 0 张** — 发布全部待 user 手工操作。
