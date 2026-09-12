@@ -205,7 +205,7 @@ def main():
 
     # Build page list
     pages = [
-        '',                          # homepage
+        '',
         'about',
         'contact',
         'disclaimer',
@@ -214,13 +214,24 @@ def main():
         'terms',
         'submit-tool',
         'sponsorships',
+        'partnerships',
+        'author/jerome-tang',
         'resources',
         'promo/printify-promo-code',
         'methodology',
         'methodology/legit-ratings',
     ]
+    # /compare/ URLs derive from comparisons.json (2026-09-12 fix): a NEW comparison
+    # never reached the sitemap because only preserved blocks carried /compare/*.
+    try:
+        with open(os.path.join(root, 'src', 'data', 'comparisons.json'), 'r', encoding='utf-8') as f:
+            comparisons = json.load(f)
+        compare_slugs = [c['slug'] for c in comparisons if c.get('slug')]
+    except (OSError, json.JSONDecodeError, TypeError, KeyError):
+        compare_slugs = []
     for cs in cat_slugs:
         pages.append(f'category/{cs}')
+    pages.extend(f'compare/{s}' for s in compare_slugs)
     pages.extend(slugs)
     pages.append('blog')             # blog index
     pages.extend(f'blog/{s}' for s in blog_slugs)

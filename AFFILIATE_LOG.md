@@ -323,6 +323,8 @@ M1 复盘 — aitoptools
 | 8/22 (D16) | 增量 0 URL (NOOP) | — | 0 | sitemap 347 URL 未变 (sha 891B0E MATCH) | daily-search 19:5x: 无新增/更新 URL (T4/T5 只备不部署, 无 src 改动); GSC UI 端 lastDownloaded 停 7/17 需 user 重提 (P0 展示悬崖联动); mining: imp>=10 共 6 词全部已有专页, 0 新增 |
 | 8/23 (D17) | 增量 0 URL (NOOP) | — | 0 | sitemap 347 URL 未变 (sha 891B0E MATCH) | daily-search 04:4x: 无新增/更新 URL (legit x2 成稿未部署, 待 D12/D13); 悬崖判定 Branch B 落盘 (cliff-verdict-0823.md); mining 0 新增; T2 Day-1 回滚预案只备不改 |
 | 8/24 (daily) | 增量 0 URL (sitemap 347 hash MATCH) | 0/0 | 0 | sitemap 347 URL (未变) | daily-search 02:2x: sitemap 347 hash 891B0E MATCH -> IndexNow 0 提交 (NOOP); mining imp>=10 9 词全有专页 (0 queue-new); boost +2 (kittl/gempages); C2b 记账 |
+| 9/12 (恢复日 ①) | 增量 5 URL (孤儿页补推) | **5/5** | 0 | sitemap 358 → 361 URL (随本批 push 上线) | gsc-indexnow 12:44: out/ 363 页 vs sitemap 358 差集定位 5 个"线上 200 且无 noindex 但从未入图"页面 (mockey-vs-placeit / best-ai-tshirt-design-generators / best-print-on-demand-companies / partnerships / author/jerome-tang); 同时修 generate-sitemap.py (补 comparisons→compare/ 派生 + 2 基页) |
+| 9/12 (恢复日 ②) | 增量 1 URL (black-friday-pod-strategy-2026) | 见 9/13 对账 | 0 | sitemap 361 → **362 URL** (随本批 push 上线) | Hermes 19:45 content cron: Q4 BF 集群支柱上线 (3,048 词, Claid 主 CTA + Mockey 副 CTA, validate PASS / build PASS 365 页); IndexNow 提交在 CF deploy 后执行 |
 | T+7 (8/14) | 增量 | __ | __ | __ | 首读数: GSC 展示 + IndexNow 计数 |
 | T+30 (9/5) | 增量 | __ | __ | __ | 路线决策点 |
 - 记录人: gsc-indexnow cron (12:40) 每次提交后填; 凭证缺失时填 "blocked_missing_credentials"
@@ -1295,3 +1297,17 @@ TBD (1 push 整合)
 - GSC 恭喜邮件 (28 天 250 clicks) 归属 zprintpro.com, 非 aitoptools.net (GSC API 实证 28d 仅 1 click)
 - 自荐提交 x2 (SocialEcho / Coarena) 已记录, 待垂直过滤另议; GitHub secrets 告警 (8/25) 属 zprintpro 仓库跨项目事项, 已转告
 - 排名哨兵: 7d 8/23-29 = 35 imp / 0 click; ALERT: manychat shopify pos 91.8 -> 99.9 (低样本噪声, 观察); 日值 8/27 = 19 imp, 悬崖持续
+
+## 2026-09-12 · 每日联盟申请审批监控 (12:1x 执行, 402 停摆 15 天后首个恢复运行日)
+- **🔴 P0 置顶 (超期 13 天)**: **2026-08-28 → 09-11 共 15 天全部 cron 运行 100% 失败**, 错误 `HTTP 402: Insufficient Balance` (DeepSeek). executions.db 实证: affiliate-monitor 15/16 · daily-content 15/15 · gsc-indexnow 15/15 · daily-radar 7/7 · weekly-report 2/2 · zprintpro-daily-seo 15/15 · 备份数据库 56/59. 最后有效产物 9/2 (commit 3a343be); 线上无损坏 (site 200, 本地 CSS 41d6f17fd1783abd = 线上)
+- **根因**: `config.yaml` 第 512 行起 `fallback_model` 整段被注释 → deepseek 402 后无 failover; `.env` 已有 `MINIMAX_CN_API_KEY` 未接线. **当前余额实查 = 1.59 CNY** (is_available=true, granted 0.00) → 今晚 19:45 极可能再 402. 待 user 二选一: 充值 DeepSeek / 接 minimax fallback
+- **IMAP 实拉 (SOCKS5 7892, SINCE 29-Aug, 25 封全量)**: 0 新审批 / 0 商户回复 / 0 税务邮件 (自 8/26 起 16 天 0 新审批). 值得记 6 条: Claid 月度绩效 (9/1) + Claid manager check-in (8/31) + Printify 唤醒邮件 (8/31, 反证无转化) + Printful×Amplified ×3 (9/3/9/4/9/7, 含 Kittl 50% off 年付 + 9/24 免费活动) + CF free picks ×4 + Supabase togthr-life 暂停 ×3
+- **⭐ Claid 8 月绩效首见 referral**: Clicks 3 / **Referrals 1** / Customers 0 / Earnings $0 (7 月为 0/0/0) → 归因链路已工作, 未转化客户
+- **⚠️ filter_senders 漂移 (P1)**: `gmail_credentials.json` 的 filter_senders 缺 creativefabrica.com / newsletter.printful.com / partners.claid.ai / affiliate.printify.com → 本轮 25 封过滤命中 **0**. 未动凭证文件 (硬约束), 改用 domain 全量分组扫描绕过; 待批准修复
+- **CF freebie 补解析 4 期** (402 停摆积压): 8/28 x0🎃 / 8/29 x1🎃 / 8/30 x0🎃 / 9/3 x2–3🎃; 圣诞 🎄+6 入 Q4 池; **素材池 45 → 49 🎃**; 9/3 后 8 天无新 free picks (节奏中断待观察); 落盘 cf-freebies/2026-09-12.md
+- **P2 记账**: Printify 8/31 邮件原文称 5%/12 个月, 与 SSoT 20-30% 口径不符待 dashboard 实查; Printify promo 码 AITOOLTOOLS20 (8/24 已建) 对应 /promo 页因 402 未建
+- **P1 维持**: Printful W-8BEN 重传第 22 天 (payout_ready=false, 破零唯一税务闸门) / Synthesia 确认邮件 D32 / Placeit 超期 29 天 (草稿就绪)
+- **已部署核查**: 8 个 approved/active 程序全部 link_deployed=true → P0 部署缺口 = 0 (out/ 实测 mockey 84 · claid 85 · printify 84 · kittl 80 · printful 74 · CF 54 · gelato 49 · nordvpn 4)
+- **SSoT**: affiliate-programs.json 更新 (last_updated=9/12; 新增 cron_outage_402_2026_08_28_to_09_11 / mail_check_9_12 / cf_freebie_status_9_12 / filter_senders_drift_9_12 / printify_rate_discrepancy_9_12 / manual_checklist_2026_09_12 / deepseek_balance_9_12 + Claid performance_2026_08)
+- **无 push / 无 build** (监控职责; 工作区有停摆期遗留未提交改动, 交 daily-content 恢复时一并处理)
+- 下个检查点: 今晚 19:45 daily-content (402 复发判定) / 明日 12:05 本任务 (余额+审批增量)

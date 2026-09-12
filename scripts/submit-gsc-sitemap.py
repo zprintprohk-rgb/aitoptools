@@ -73,8 +73,49 @@ def load_oauth_config():
     return json.loads(OAUTH_FILE.read_text(encoding="utf-8"))
 
 
+def get_access_token_service_account(cfg):
+    """Service-account JWT (RS256) → access_token. Requires `cryptography`."""
+    import base64
+    import time
+    from cryptography.hazmat.primitives import hashes, serialization
+    from cryptography.hazmat.primitives.asymmetric import padding
+
+    def b64u(b):
+        return base64.urlsafe_b64encode(b).rstrip(b"=")
+
+    now = int(time.time())
+    claims = {
+        "iss": cfg["client_email"],
+        "scope": ("https://www.googleapis.com/auth/webmasters "
+                  "https://www.googleapis.com/auth/indexing"),
+        "aud": cfg.get("token_uri", TOKEN_URL),
+        "iat": now,
+        "exp": now + 3600,
+    }
+    signing_input = (b64u(json.dumps({"alg": "RS256", "typ": "JWT"}).encode())
+                     + b"." + b64u(json.dumps(claims).encode()))
+    key = serialization.load_pem_private_key(cfg["private_key"].encode(), password=None)
+    sig = key.sign(signing_input, padding.PKCS1v15(), hashes.SHA256())
+    data = urllib.parse.urlencode({
+        "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+        "assertion": (signing_input + b"." + b64u(sig)).decode(),
+    }).encode("utf-8")
+    req = urllib.request.Request(cfg.get("token_uri", TOKEN_URL), data=data, method="POST",
+                                 headers={"Content-Type": "application/x-www-form-urlencoded"})
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        body = json.loads(resp.read().decode("utf-8"))
+    return body["access_token"]
+
+
 def get_access_token(cfg):
-    """Exchange refresh_token for short-lived access_token (1 hour)."""
+    """Access token: service-account JSON (type=service_account) OR OAuth refresh-token config.
+
+    2026-09-12: the secrets file on disk is a service-account key (project
+    aitoptools-505222, siteFullUser on sc-domain:aitoptools.net). Verified working:
+    sitemap PUT returns 204. The OAuth refresh-token path is kept for the future.
+    """
+    if cfg.get("type") == "service_account":
+        return get_access_token_service_account(cfg)
     data = urllib.parse.urlencode({
         "client_id": cfg["client_id"],
         "client_secret": cfg["client_secret"],

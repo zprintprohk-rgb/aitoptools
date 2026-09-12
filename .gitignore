@@ -38,3 +38,6 @@ SOUL.md
 TOOLS.md
 USER.md
 GSC数据/
+
+# goal-flow cluster workspace - contains credential backups, never commit (2026-09-12 P0)
+.cluster/
