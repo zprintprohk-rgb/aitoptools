@@ -1,13 +1,13 @@
 {
   "schema": 1,
   "doc": "sitemap submission state for gsc/indexnow cron. last_submitted_* stays null until first successful submission.",
-  "last_submitted_mtime": "2026-09-12T04:43:19.435072Z",
-  "last_submitted_hash": "A0B4AF4A7C1C26C03D3D138D35944E7431BB10F3297BAD7EC5D1ECF627E63E98",
+  "last_submitted_mtime": "2026-09-12T11:48:46.385912Z",
+  "last_submitted_hash": "DEE3A09BF579B718FD504254F1438F8D5759E18520F577A309B794A56BF3DEDC",
   "last_seen": {
     "public/sitemap.xml": {
-      "mtime": "2026-09-12T04:42:55.829612Z",
-      "bytes": 44219,
-      "sha256": "A0B4AF4A7C1C26C03D3D138D35944E7431BB10F3297BAD7EC5D1ECF627E63E98"
+      "mtime": "2026-09-12T11:48:46.385912Z",
+      "bytes": 44335,
+      "sha256": "DEE3A09BF579B718FD504254F1438F8D5759E18520F577A309B794A56BF3DEDC"
     },
     "public/sitemap-programmatic.xml": {
       "mtime": "2026-08-13T20:52:38.495623Z",
@@ -15,7 +15,7 @@
       "sha256": "DC9FB3558CC65B62B58318CBF56D6CED2B3B8D458A5EB86A10CC074D13371E98"
     }
   },
-  "last_run": "2026-09-12T11:55:21.798129+00:00",
+  "last_run": "2026-09-18T04:42:36.136858+00:00",
   "last_run_status": "ok",
   "indexnow_submitted": true,
   "gsc_submitted": true,
@@ -23,7 +23,7 @@
   "indexnow_urls_pushed": 362,
   "indexnow_status_200": 362,
   "indexnow_key_file": ".hermes/secrets/indexnow-key.txt",
-  "last_check_hash_match": false,
+  "last_check_hash_match": true,
   "gsc_submit_status": 204,
   "gsc_auth_mode": "service_account (aitoptools-505222, siteFullUser on sc-domain:aitoptools.net)",
   "gsc_first_success": "2026-09-12",
@@ -35,5 +35,23 @@
     "Do NOT re-run scripts/generate-sitemap.py for these two — sitemap-programmatic.xml is owned by scripts/generate-pages.js."
   ],
   "last_submitted_hash_note": "hash recorded = current local 361-URL sitemap; live sitemap.xml is still the 358-URL build until the next push",
-  "content_cron_0912": "black-friday-pod-strategy-2026 pushed via IndexNow"
+  "content_cron_0912": "black-friday-pod-strategy-2026 pushed via IndexNow",
+  "notes_2026-09-13": [
+    "sitemap.xml hash changed since 9/12 state write (361 -> 362 URLs, +116 bytes): the 362nd entry is /blog/black-friday-pod-strategy-2026/, committed in e1b171e.",
+    "Live https://aitoptools.net/sitemap.xml == local public/sitemap.xml byte-for-byte (362 URLs / 44335 bytes) -> deployment confirmed current, revision 2eb758dea75faf50 live.",
+    "IndexNow full push 362 URLs -> HTTP 200 (script ignores --help and executed live; quota spent once, no retry needed).",
+    "GSC sitemap PUT https://aitoptools.net/sitemap.xml -> 204 (service_account aitoptools-505222).",
+    "sitemap-programmatic.xml unchanged (hash DC9FB355) -> not re-pushed (quota discipline).",
+    "KNOWN GAP still open: best-ai-tshirt-design-generators + best-print-on-demand-companies are live 200 pages but absent from sitemap-programmatic.xml (stale file, owner = scripts/generate-pages.js, requires a build+push -> not done under can_deploy:false).",
+    "Coverage audit: 365 built pages / 362 sitemap locs / 1 noindex -> 2 pages still missing from BOTH sitemaps (/best/best-ai-tshirt-design-generators/, /best/best-print-on-demand-companies/); both live 200. Root cause = sitemap-programmatic.xml (owner scripts/generate-pages.js) not regenerated since 8/14; needs build+push.",
+    "Dead-internal-link audit (58 unique internal hrefs vs local build) found 8 dead targets; 19 references fixed locally in src/data/reviews.json (5), blog-posts.json (12), comparisons.json (2) -- wrong /best- prefix and stale /reviews/* paths. Minimal diff 17+/17-, JSON valid, NOT built/pushed (can_deploy:false) -> rides the next batch push.",
+    "Remaining: /surfshark-review/ is a hard 404 with no target page (no surfshark entry in reviews.json) -> content decision, left untouched."
+  ],
+  "notes_2026-09-18": [
+    "NO SUBMISSION THIS RUN: both sitemap hashes identical to last submission (sitemap.xml dee3a09b/362 locs/44335B; sitemap-programmatic.xml dc9fb355/199 locs). Quota preserved per Step 1 rule.",
+    "Live https://aitoptools.net/sitemap.xml = 44335 bytes HTTP 200 == local byte count -> deployment still current (no commits since e1b171e/420127f, out/ built 2026-09-13 15:28).",
+    "Coverage audit: 365 built pages vs 362 sitemap locs. Real gaps = /best/best-ai-tshirt-design-generators + /best/best-print-on-demand-companies (stale sitemap-programmatic.xml, owner scripts/generate-pages.js, needs build+push -> NOT done under can_deploy:false). Both were already pushed to IndexNow on 2026-09-12 (HTTP 200).",
+    "Working tree still holds the 9/13 dead-internal-link fixes (17+/17- across reviews.json/blog-posts.json/comparisons.json), uncommitted by design -> rides next batch push.",
+    "P0 ESCALATION 402: DeepSeek balance CNY 4.68 (is_available=true). executions.db shows HTTP 402 Insufficient Balance on 9/14 (10), 9/15 (8), 9/16 (9), 9/17 (8) = 35 failed runs / 4 consecutive days. 9/18 partial recovery (3-4 completed) but balance < threshold -> repeat 402 imminent. config.yaml fallback_model is fully commented out (no failover); MINIMAX_CN_API_KEY present in .env but not wired."
+  ]
 }

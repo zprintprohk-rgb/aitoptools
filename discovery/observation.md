@@ -53,3 +53,13 @@
 - Reddit ~40% AI 引用来源份额 (everything-pr 8/16) — mention-ops reddit 种子线佐证
 - Redbubble Standard 档 50% 平台费 (fourthwall 8/28, 二手) — is-redbubble-legit 补引候选, 待官方源
 - Kittl 8 月无新更新 (最新 6/19); POD 平台 8 月无新政策 — 雷达 0 新工具候选
+
+## 2026-09-18
+- **TWOFORM (twoform.ai) 8/20 官宣上线** — AI 包装设计建在真实生产 dieline 上; 官方定价实读 $15/$49/$100 mo (3/10/30 dieline 下载) + credit packs $5-$50 + 单份 dieline $30; 免费自设计, 工厂 100 单元起订+全球发货; Capterra 档案 8/3/2026; PR: EINPresswire/Des Moines Register 8/20 — **Phase 3 蓝海题材 (dieline = 通用站做不到)**, 但**无公开联盟入口 (Dub/PartnerStack/CJ 均无) → 不入库不产内容**, 入观察名单待联盟开放
+- **DYP.ai** — AI dieline + print-ready 导出, 入 fontiverse「11 picks」第三方榜 (design-to-print 自动化), 官方页 200; 无联盟入口 → 观察
+- **CorelDRAW Graphics Suite 2026-09 更新: 新增 text-to-vector AI 工具** (PRNewswire 9/15, 2 天前) — 印刷店/包装设计存量用户基数大, 作**内容角度候选** (非工具页), 未核联盟
+- **PeaPrint Mockup Generator** (单源 PODbusiness 4/13) + **paperboxdesigner.com** (免费 3D box template) — 低优先观察
+- **竞品定价实证 (重要, 交 daily-content 纠错)**: ① **Gelato+ 官方 $29.99/mo (年付 $19.99)**, 站内 gelato-review 标 $14.99/mo = **过期** (gelato.com/subscription-plans) ② **Printify Premium 月付 $39** (2026-02-17 生效), 年付 $299≈$24.99/mo; 站内仅标 $24.99/mo (printify.com/blog/new-printify-premium 官方) ③ **Printful Growth 维持 $24.99/mo** (bagengine 二手) — 站内 $9/mo 行待官方核
+- **4 新源 (YouTube/TikTok/G2/SourceForge) 再次全 0 垂直命中** → 数据源被榨干连续 2 轮, 建议补 PH Makers / HN Show / Indie Hackers / 公众号 POD KOL
+- Nightjar 自称 9/3 复核官方定价页 (一/二手混); WearView/AvatarIQ 无新信号; Canva AI 2.0 仍单源 watch
+- 雷达 cron 自 9/3 起随 402 停摆 16 天, 9/18 恢复; 余额 2.11 CNY 且 fallback 仍注释 → 19:45 daily-content 预测再 402

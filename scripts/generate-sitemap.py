@@ -229,9 +229,19 @@ def main():
         compare_slugs = [c['slug'] for c in comparisons if c.get('slug')]
     except (OSError, json.JSONDecodeError, TypeError, KeyError):
         compare_slugs = []
+    # /best/ listicle URLs derive from listicles.json (2026-09-18 fix): listicle pages are
+    # served at /best/{slug}/ but were never derived, so new roundups (e.g. best-print-on-demand-companies,
+    # best-ai-tshirt-design-generators) stayed out of the sitemap and could only survive via merge.
+    try:
+        with open(os.path.join(root, 'src', 'data', 'listicles.json'), 'r', encoding='utf-8') as f:
+            listicles = json.load(f)
+        listicle_slugs = [c['slug'] for c in listicles if c.get('slug')]
+    except (OSError, json.JSONDecodeError, TypeError, KeyError):
+        listicle_slugs = []
     for cs in cat_slugs:
         pages.append(f'category/{cs}')
     pages.extend(f'compare/{s}' for s in compare_slugs)
+    pages.extend(f'best/{s}' for s in listicle_slugs)
     pages.extend(slugs)
     pages.append('blog')             # blog index
     pages.extend(f'blog/{s}' for s in blog_slugs)

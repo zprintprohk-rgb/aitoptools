@@ -223,7 +223,14 @@
    "verification": "account-fully-configured-2026-08-05",
    "link_deployed": true,
    "link_deploy_note": "8/6 核查 9 工具池全真链 (claid.ai?via=jerome94 已上线 out/)",
-   "performance_2026_08": {"reported_in": "partners@claid.ai 2026-09-01 09:32 UTC Your Monthly Performance Update", "clicks": 3, "referrals": 1, "customers": 0, "earnings_usd": 0, "note": "8月首次出现 referral 信号 (7月 0/0/0). 3 clicks -> 1 referral = 归因链路已工作; 0 customer 未转化. 9/12 落盘"},
+   "performance_2026_08": {
+    "reported_in": "partners@claid.ai 2026-09-01 09:32 UTC Your Monthly Performance Update",
+    "clicks": 3,
+    "referrals": 1,
+    "customers": 0,
+    "earnings_usd": 0,
+    "note": "8月首次出现 referral 信号 (7月 0/0/0). 3 clicks -> 1 referral = 归因链路已工作; 0 customer 未转化. 9/12 落盘"
+   },
    "manager_checkin_2026_08_31": "partners@claid.ai (Gabriela Dudkiewicz) 8/31 06:58 UTC 主动 check-in 询问转化/推广反馈 - 需 user 手动回 (严禁自动回复)"
   },
   {
@@ -294,12 +301,12 @@
   }
  ],
  "application_notes": "Most programs require: valid website, privacy policy, affiliate disclosure, contact page, terms of service all present and linked in footer. All compliance pages now live (2026-07-15).",
- "last_updated": "2026-09-12 12:1x (affiliate-monitor 恢复运行: 402 全链停摆 15 天记账 + Claid 8月绩效首见 1 referral + CF freebie 4 期补解析 + filter_senders 漂移)",
+ "last_updated": "2026-09-18 12:1x (IMAP 全文件夹: CF 素材池 22 期/73 🎃/59 🎄 累计增; 0 新审批 22 天; 余额 7.45 CNY 且 fallback 仍注释 -> 402 第 2 轮停摆 9/14-9/17 已记录 P0; Printful 字节级复验 0 坏链; 部署缺口 0)",
  "monitoring": {
   "gmail_api_status": "FIXED 2026-08-08 01:46 — gmail_credentials.json app_password 失效 (AUTHENTICATIONFAILED) 已由 8/8 批次自动修复: 凭证从 AppData/Local/hermes/.env IMAP_PASSWORD 回填, SOCKS5 127.0.0.1:7892 登录实测 OK (fix-gmail-final.py + affiliate-monitor 01:49 双重验证). imap_requires_proxy=true. 不再有凭证阻塞.",
   "check_method": "SOCKS5-proxy-IMAP (127.0.0.1:7892, imap.gmail.com:993)",
   "next_action": "8/23: user 三动作不变 (1 W-8BEN 重传 2 Printify 码名回信 3 GSC sitemap 重提); 19:23 daily-search 悬崖正式判定落盘 (cliff-verdict-0823); 8/24 print-price Day-2 确认 (预案只备不改); 8/25 Halloween 全量 push 窗口",
-  "last_live_check": "2026-08-29 04:4x IMAP login OK via SOCKS5 127.0.0.1:7892; SINCE 28-Aug 3 封全量 (GitHub Cursor 权限 / GSC 里程碑非本域 / Printful ToS 教育邮件) - 0 新审批 / 0 新商户回复 / 0 新税务; CF freebie 8/27-8/29 连续 3 天未到货",
+  "last_live_check": "2026-09-18 12:0x IMAP login OK via SOCKS5 127.0.0.1:7892; 全文件夹 SINCE 08-Sep + INBOX SINCE 25-Aug 53 封; 0 新审批 / 0 商户回复 / 0 税务; CF free picks 9/7-9/18 每日到货 (22 期累计)",
   "cred_state": "PASS — 16 chars, no spaces, gitignore PASS (跟 7/30 一致)",
   "network_diag_5_19": {
    "imap.gmail.com:993": "TIMEOUT 8s",
@@ -1529,11 +1536,203 @@
  "cf_freebie_status_8_30": "恢复到货: 8/26 Black Ink Brush + 8/26 Whimsical Dancing Snowman (冬季储备) + 8/28 Vintage Beach Summer + 8/29 Mama; 素材池 45 个 Halloween 维持 + 4 非万圣节主题",
  "rank_sentinel_8_30": "7d 8/23-29: 35 imp/0 click; 20q 仅 manychat shopify 命中 8 imp pos 99.9 (91.8->99.9 变动8.1 触发 ALERT 但低样本噪声, 观察); print-price 85.9 (-2.6 无 alert); 日值 8/27=19 imp 悬崖持续",
  "ai_crawler_8_30": "GEO_BLIND NODATA 维持 (D7 CF token 未配); GEO 探针 7d: adcreative.ai review pos 1.0 / writesonic 1.0 / b12 ai 3.0 / omnisend 9.5; browser credits 已恢复 (8/30 实证)",
- "cron_outage_402_2026_08_28_to_09_11": {"severity": "P0-CRITICAL", "facts": "executions.db 实证: 8/28-9/11 共 15 天全部 cron 运行 100% 失败. affiliate-monitor 15/16; daily-content 15/15; gsc-indexnow 15/15; daily-radar 7/7; weekly-report 2/2; zprintpro-daily-seo 15/15; 备份数据库 56/59", "error": "RuntimeError: HTTP 402: Insufficient Balance (DeepSeek)", "impact": "内容生产/IndexNow/sitemap/联盟监控/税务监控/排名哨兵全停 15 天; 最后有效产物 9/2 (commit 3a343be); 无线上损坏 (site 200, 本地 CSS 41d6f17fd1783abd = 线上)", "root_cause": "config.yaml 512 行起 fallback_model 整段被注释, deepseek 402 后无 failover; .env 有 MINIMAX_CN_API_KEY 但未接线", "recovery_signal": "9/12 12:06 本 run 首次跑通 (今日 3 runs / 0 failed)", "balance_9_12": "DeepSeek /user/balance 实查: is_available=true, total_balance=1.59 CNY (granted 0.00 / topped_up 1.59) - 仅够数轮, 今晚 19:45 daily-content 极可能再 402", "rule_ref": "AGENTS.md 模型余额监控规则 (402 持续 2 天即升级 user); 本项超期 13 天"},
- "mail_check_9_12": {"as_of": "2026-09-12 12:1x CST", "method": "SOCKS5 127.0.0.1:7892 IMAP 实拉, SINCE 29-Aug-2026, 25 封全量", "approvals": 0, "merchant_replies": 0, "tax_mails": 0, "notable": "Claid 月度绩效 (9/1) + Claid manager check-in (8/31) + Printify 唤醒邮件 (8/31 Ready to start earning) + Printful x Amplified x3 (9/3 假日定价 / 9/4 Kittl 50% off 年付 / 9/7 AI workflows) + CF free picks x4 (8/28,8/29,8/30,9/3) + Cloudflare 发票 + Supabase togthr-life 暂停 x3", "no_approval_16d": "自 8/26 起 16 天 0 新审批"},
+ "cron_outage_402_2026_08_28_to_09_11": {
+  "severity": "P0-CRITICAL",
+  "facts": "executions.db 实证: 8/28-9/11 共 15 天全部 cron 运行 100% 失败. affiliate-monitor 15/16; daily-content 15/15; gsc-indexnow 15/15; daily-radar 7/7; weekly-report 2/2; zprintpro-daily-seo 15/15; 备份数据库 56/59",
+  "error": "RuntimeError: HTTP 402: Insufficient Balance (DeepSeek)",
+  "impact": "内容生产/IndexNow/sitemap/联盟监控/税务监控/排名哨兵全停 15 天; 最后有效产物 9/2 (commit 3a343be); 无线上损坏 (site 200, 本地 CSS 41d6f17fd1783abd = 线上)",
+  "root_cause": "config.yaml 512 行起 fallback_model 整段被注释, deepseek 402 后无 failover; .env 有 MINIMAX_CN_API_KEY 但未接线",
+  "recovery_signal": "9/12 12:06 本 run 首次跑通 (今日 3 runs / 0 failed)",
+  "balance_9_12": "DeepSeek /user/balance 实查: is_available=true, total_balance=1.59 CNY (granted 0.00 / topped_up 1.59) - 仅够数轮, 今晚 19:45 daily-content 极可能再 402",
+  "rule_ref": "AGENTS.md 模型余额监控规则 (402 持续 2 天即升级 user); 本项超期 13 天"
+ },
+ "mail_check_9_12": {
+  "as_of": "2026-09-12 12:1x CST",
+  "method": "SOCKS5 127.0.0.1:7892 IMAP 实拉, SINCE 29-Aug-2026, 25 封全量",
+  "approvals": 0,
+  "merchant_replies": 0,
+  "tax_mails": 0,
+  "notable": "Claid 月度绩效 (9/1) + Claid manager check-in (8/31) + Printify 唤醒邮件 (8/31 Ready to start earning) + Printful x Amplified x3 (9/3 假日定价 / 9/4 Kittl 50% off 年付 / 9/7 AI workflows) + CF free picks x4 (8/28,8/29,8/30,9/3) + Cloudflare 发票 + Supabase togthr-life 暂停 x3",
+  "no_approval_16d": "自 8/26 起 16 天 0 新审批"
+ },
  "cf_freebie_status_9_12": "4 期补解析 (8/28 x0 / 8/29 x1 / 8/30 x0 / 9/3 x2-3 万圣节), 落盘 .hermes/logs/cf-freebies/2026-09-12.md; 素材池 45->49; 9/3 后 8 天无新 free picks 邮件 = 节奏中断待观察",
- "filter_senders_drift_9_12": {"severity": "P1", "fact": "fetch_affiliate_mails.py 读 gmail_credentials.json 的 filter_senders, 缺 creativefabrica.com / newsletter.printful.com / partners.claid.ai / affiliate.printify.com 等实际发件域, 本轮 25 封过滤命中 = 0", "action_taken": "未改 gmail_credentials.json (硬约束凭证文件不动); 改用 .hermes/tmp/am-0912-fetch.py 按 domain 全量分组扫描", "needs": "批准补 filter_senders 或在 scripts/ 建独立 filter 文件"},
+ "filter_senders_drift_9_12": {
+  "severity": "P1",
+  "fact": "fetch_affiliate_mails.py 读 gmail_credentials.json 的 filter_senders, 缺 creativefabrica.com / newsletter.printful.com / partners.claid.ai / affiliate.printify.com 等实际发件域, 本轮 25 封过滤命中 = 0",
+  "action_taken": "未改 gmail_credentials.json (硬约束凭证文件不动); 改用 .hermes/tmp/am-0912-fetch.py 按 domain 全量分组扫描",
+  "needs": "批准补 filter_senders 或在 scripts/ 建独立 filter 文件"
+ },
  "printify_rate_discrepancy_9_12": "8/31 Printify 唤醒邮件原文称 5% on every order / 12 months, 与 SSoT 记的 20-30% recurring 不符 - 待 dashboard 实查确认, 不改库先记账",
- "manual_checklist_2026_09_12": {"generated_by": "affiliate-monitor cron 2026-09-12 12:1x (IMAP + executions.db + DeepSeek balance API + 文件核查)", "1_deepseek_balance": "P0 - 余额 1.59 CNY, 今晚 19:45 必再 402; 二选一 (a) 充值 DeepSeek (b) config.yaml 接 fallback_model=minimax (MINIMAX_CN_API_KEY 已在 .env)", "2_printful_w8ben": "P1 - W-8BEN 重传第 22 天未动 (8/21 Noelle 要求; 8/30 browser 实读 Pending); payout_ready=false, 联盟破零唯一税务闸门", "3_synthesia_confirm": "P1 - 8/11 确认邮件待 user 手动点 (D32); SINCE<90d 不自动点击", "4_placeit_followup": "P1 - pending 超期 29 天 (8/14 阈值), 草稿 placeit-followup-email.md 版 B 就绪待 user 发送", "5_cf_filters": "P1 - filter_senders 漂移修复待批准", "6_printify_promo": "P2 - 码 AITOOLTOOLS20 已建 (8/24), /promo/printify-promo-code 页因 402 未建 (PUSH_READY 遗留)", "7_content_freeze": "P2 - 9/3-9/11 零内容产出, 恢复后需补产出 + sitemap/IndexNow 补推"},
- "deepseek_balance_9_12": "1.59 CNY (is_available=true, granted 0.00, topped_up 1.59) - /user/balance 实查 2026-09-12 12:1x"
+ "manual_checklist_2026_09_12": {
+  "generated_by": "affiliate-monitor cron 2026-09-12 12:1x (IMAP + executions.db + DeepSeek balance API + 文件核查)",
+  "1_deepseek_balance": "P0 - 余额 1.59 CNY, 今晚 19:45 必再 402; 二选一 (a) 充值 DeepSeek (b) config.yaml 接 fallback_model=minimax (MINIMAX_CN_API_KEY 已在 .env)",
+  "2_printful_w8ben": "P1 - W-8BEN 重传第 22 天未动 (8/21 Noelle 要求; 8/30 browser 实读 Pending); payout_ready=false, 联盟破零唯一税务闸门",
+  "3_synthesia_confirm": "P1 - 8/11 确认邮件待 user 手动点 (D32); SINCE<90d 不自动点击",
+  "4_placeit_followup": "P1 - pending 超期 29 天 (8/14 阈值), 草稿 placeit-followup-email.md 版 B 就绪待 user 发送",
+  "5_cf_filters": "P1 - filter_senders 漂移修复待批准",
+  "6_printify_promo": "P2 - 码 AITOOLTOOLS20 已建 (8/24), /promo/printify-promo-code 页因 402 未建 (PUSH_READY 遗留)",
+  "7_content_freeze": "P2 - 9/3-9/11 零内容产出, 恢复后需补产出 + sitemap/IndexNow 补推"
+ },
+ "deepseek_balance_9_12": "1.59 CNY (is_available=true, granted 0.00, topped_up 1.59) - /user/balance 实查 2026-09-12 12:1x",
+ "mail_check_9_13": {
+  "as_of": "2026-09-13 15:1x CST",
+  "method": "SOCKS5 127.0.0.1:7892 IMAP 实拉, SINCE 25-Aug 全量 44 封 + 全文件夹扫描 (INBOX + [Gmail] 4 标签夹)",
+  "result": "0 新审批 / 0 商户回复 / 0 税务邮件 (自 8/26 起 17 天 0 新审批)",
+  "notable": [
+   "CF free picks 8/28–9/12 共 17 期 (全部被 Gmail 归档进标签夹, INBOX 只见部分)",
+   "Printful x Amplified x3 (9/3 holiday pricing / 9/4 Kittl 50% off 年付 / 9/7 AI workflows / 9/12 brand)",
+   "Supabase togthr-life 暂停 (9/12, 跨项目)",
+   "Google zprintpro.com 结构化数据 + 索引告警 (跨项目, 非 aitoptools)"
+  ],
+  "archive_folder_discovery": "'[Gmail]/&V4NXPpD1TvY-' (促销类) 是 CF 免费素材邮件的主归档夹; 今后 CF 解析必须扫全文件夹"
+ },
+ "cf_freebie_status_9_13": {
+  "severity": "P1-PIPELINE-FIXED",
+  "correction": "9/12 报告「9/3 后 8 天无 free picks = 节奏中断」= 扫描盲区误判; 实际每日到货无中断",
+  "window": "SINCE 28-Aug-2026",
+  "issues_parsed": 17,
+  "halloween_assets": 56,
+  "xmas_assets": 47,
+  "halloween_new_since_9_3": 30,
+  "parser_upgrade": "cf-freebie 解析器 v5 升级为全文件夹扫描 (原仅 INBOX) — 落盘 .hermes/logs/cf-freebies/2026-09-13.md",
+  "halloween_samples": [
+   "Spiderweb and Pumpkin Halloween (9/12)",
+   "Vintage Halloween Clipart (9/10)",
+   "Witch Cat Coven Halloween PNG (9/1)",
+   "Skeleton Riding T-Rex Halloween Png (9/3)",
+   "Vintage Halloween Apothecary Labels PNG (8/28)"
+  ],
+  "action": "Halloween 集群辐条① (Kittl 实测源文件) 素材充足; 8/18 目标已过, 现距 10/31 约 7 周仍在 6-8 周窗口内"
+ },
+ "deepseek_balance_9_13": "9.54 CNY (is_available=true, granted 0.00, topped_up 9.54) - /user/balance 实查 2026-09-13 15:1x; 较 9/12 的 1.59 回升 (user 已充值或退费); fallback_model 仍整段注释 (config.yaml L512) = 无 failover 兜底",
+ "cron_health_9_13": {
+  "executions_db": "9/13: completed 2 / running 1 / failed 0; 9/12: completed 7 / failed 1; 9/3-9/11: 每日 5-11 失败 (402 停摆期)",
+  "verdict": "402 停摆已解除, 全链恢复; 但 fallback 未接线 = 余额耗尽即复发"
+ },
+ "printful_link_integrity_9_13": {
+  "method": "字节级复验 (AGENTS.md 终端脱敏判定规则) — repr/ord + out/ 全量 HTML 扫描",
+  "affiliate_programs_json": "my_link_printful 值完整 (68 字符, 尾 8db2fbabcacc4a, 0 星号); 文件内 4 处字面 '***' 均为 8/5 事件的历史叙述文字, 非链接",
+  "reviews_json": "0 处字面 '***', printful hash 完整",
+  "affiliates_json": "0 处字面 '***', printful hash 完整",
+  "out_html": "64 个 HTML 含完整 hash; 0 个含脱敏坏链",
+  "verdict": "0 坏链 — 无需修复 (8/5 教训已固化)"
+ },
+ "site_health_9_13": {
+  "http": "aitoptools.net -> 200",
+  "css_hash": "本地 out/ 41d6f17fd1783abd.css == 线上 41d6f17fd1783abd.css (一致 = 最新构建已上线)",
+  "pages_built": 365,
+  "promo_page": "/promo/printify-promo-code 已构建 (9/12 P2 遗留项闭环)"
+ },
+ "link_deployment_9_13": {
+  "approved_or_active": 8,
+  "link_deployed_true": 8,
+  "p0_deploy_gap": 0,
+  "out_html_hits": {
+   "printful": 124,
+   "printify": 116,
+   "kittl": 105,
+   "mockey": 98,
+   "claid": 68,
+   "creative-fabrica": 65,
+   "gelato": 63,
+   "nordvpn": 19
+  }
+ },
+ "manual_checklist_2026_09_13": {
+  "generated_by": "affiliate-monitor cron 2026-09-13 15:1x (IMAP 全文件夹 + executions.db + DeepSeek balance + out/ 字节级复验)",
+  "1_deepseek_fallback": "P1 - fallback_model 仍未接线 (config.yaml L512 全注释); 余额 9.54 CNY 仍偏低, 建议尽早在 config.yaml 接 MINIMAX fallback 或充值",
+  "2_printful_w8ben_reupload": "P1 - 第 24 天未动; payout_ready=false = 联盟破零唯一税务闸门; Noelle 8/21 要求重传 readable 签字件",
+  "3_placeit_aging": "P1 - pending 超 40 天, 草稿 drafts/placeit-followup-email.md 就绪, user 手动发送",
+  "4_synthesia_confirm": "P1 - 8/11 申请, applied-pending-email-confirm 第 33 天, 邮件不自动点击待 user",
+  "5_filter_senders_drift": "P1 - gmail_credentials.json filter_senders 仍缺 creativefabrica.com / newsletter.printful.com / partners.claid.ai / affiliate.printify.com; 本次仍以全文件夹扫描绕过 (未动凭证)"
+ },
+ "mail_check_9_18": {
+  "checked": "2026-09-18 12:1x",
+  "method": "IMAP SOCKS5 127.0.0.1:7892 全文件夹扫描 (9 夹) SINCE 08-Sep + INBOX SINCE 25-Aug 全量 53 封",
+  "result": "0 新审批 / 0 商户回复 / 0 税务邮件 (自 2026-08-26 起 22 天 0 新审批)",
+  "notable": [
+   "Creative Fabrica free picks 11 期 (9/7-9/18) 每日到货 -> 确认 9/13 全文件夹修正有效, 无断供",
+   "Printify 唤醒邮件 (9/15 'You're one post away from earning') — 反证站点有流量无转化",
+   "Printful x Amplified x2 (9/7 AI workflows / 9/12 brand)",
+   "Claid 月报 (9/1) + 'Boost your earnings' 促销 (8/31)",
+   "Google zprintpro.com 结构化数据告警 (8/27) — 跨项目, 非 aitoptools.net",
+   "Supabase togthr-life 暂停 (9/13 已暂停) — 跨项目 Project B"
+  ],
+  "sender_landscape": "INBOX SINCE 25-Aug 53 封 / 16 个域名, 无 >=5 封陌生域名 -> 无钓鱼风险"
+ },
+ "cf_freebie_status_9_18": {
+  "scanned": "2026-09-18 12:0x",
+  "window": "SINCE 28-Aug-2026 (全文件夹)",
+  "issues": 22,
+  "halloween_assets": 73,
+  "halloween_mapped_urls": 45,
+  "xmas_assets": 59,
+  "xmas_mapped_urls": 36,
+  "delta_vs_9_13": "17 期 -> 22 期 (+5), 56 -> 73 🎃 (+17), 47 -> 59 🎄 (+12)",
+  "output": ".hermes/logs/cf-freebies/2026-09-18.md",
+  "excludes": "assets missing clean product URLs use '—' (email folded '& 19 more' items carry no link)"
+ },
+ "deepseek_balance_9_18": {
+  "checked": "2026-09-18 12:0x",
+  "endpoint": "GET api.deepseek.com/user/balance",
+  "total_balance_cny": 7.45,
+  "granted_balance_cny": 0.0,
+  "is_available": true,
+  "trend": "1.59 (9/12) -> 9.54 (9/13) -> 7.45 (9/18) — 用户已充值但水位极低, 单日消耗约 1-2 CNY 量级",
+  "fallback_model": "config.yaml L512 `# fallback_model:` 仍整段注释 = 无 failover; 平衡耗尽即全链复发 402"
+ },
+ "cron_health_9_18": {
+  "checked": "2026-09-18 12:0x",
+  "source": "cron/executions.db 按天聚合",
+  "finding": "9/14-9/17 连续 4 天全部 cron 失败 (每日 7-10 条), 错误全部 'RuntimeError: HTTP 402: Insufficient Balance'; 9/18 恢复 (completed 2 / running 1)",
+  "outage_2": "2026-09-14 -> 2026-09-17 (4 天), 继 8/28->9/11 首个 15 天停摆后第 2 次",
+  "monitor_gap": "affiliate-monitor 9/14-9/17 无产物 (4 天); 本文件补为 9/13 后首个有效巡检"
+ },
+ "printful_link_integrity_9_18": {
+  "method": "字节级 (依 AGENTS 终端脱敏判定规则), 不凭终端显示",
+  "my_link_printful": "68 字符, star_count=0, 尾 8db2fbabcacc4a -> 完整",
+  "literal_star_runs_in_json": 7,
+  "literal_star_classification": "全部为 8/5 脱敏事件的历史叙述文字 + 9/13 复核note本身引用 (9/13 记 4 处 -> 现 7 处, 系 note 自身新增引用, 非新问题)",
+  "out_html_literal_stars": 0,
+  "files_scanned": 366,
+  "verdict": "0 坏链, 无需修复"
+ },
+ "site_health_9_18": {
+  "checked": "2026-09-18 12:0x",
+  "home": "https://aitoptools.net/ -> HTTP 200",
+  "css_hash_local": "41d6f17fd1783abd.css",
+  "css_hash_online": "41d6f17fd1783abd.css",
+  "verdict": "一致 = 最新构建已上线 (自 9/13 起无新 push, 符合 402 停摆期无产出)",
+  "html_files_built": 366
+ },
+ "link_deployment_9_18": {
+  "checked": "2026-09-18 12:0x",
+  "method": "out/ 366 HTML 全量字符串命中计数",
+  "hits": {
+   "mockey": 169,
+   "printify": 144,
+   "printful": 138,
+   "kittl": 140,
+   "claid": 124,
+   "gelato": 91,
+   "nordvpn": 29
+  },
+  "p0_deployment_gap": 0,
+  "note": "9 个 approved/active 程序全部 link_deployed=true (注: 上面计数为出现次数非页面数, 与 9/13 口径不同但同为 >0)"
+ },
+ "manual_checklist_2026_09_18": {
+  "P0": [
+   "402 停摆第 2 轮 (9/14-9/17 4 天全 cron 失败). 余额仅 7.45 CNY 且 config.yaml fallback_model 仍注释 -> 极度可能今夜再停. user 二选一: 充值 DeepSeek (建议 >=100 CNY 避免 3 日一断) 或接线 MINIMAX fallback (.env 已有 MINIMAX_CN_API_KEY, 改 config.yaml L512 取消注释即可, K3 可代改)",
+   "Printful W-8BEN 重传 — 第 29 天, payout_ready=false, 破零唯一税务闸门 (3 分钟上传签字件)"
+  ],
+  "P1": [
+   "Synthesia 确认邮件 — 8/11 申请, 第 38 天未激活 (Rewardful)",
+   "Placeit — pending 超 45 天, 催办草稿 drafts/placeit-followup-email.md 待 user 手动发",
+   "filter_senders 漂移 — 第 7 天未修 (缺 creativefabrica.com / newsletter.printful.com / partners.claid.ai / affiliate.printify.com); 本轮已用 domain 全量扫描绕过"
+  ],
+  "P2": [
+   "Claid manager check-in (8/31 Gabriela) 回信 — 机会窗口已过 18 天",
+   "Printify 9/15 唤醒邮件建议发 1 篇 affiliate 内容 (与 promo code AITOOLTOOLS20 联动)"
+  ]
+ }
 }

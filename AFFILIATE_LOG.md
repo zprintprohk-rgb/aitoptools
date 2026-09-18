@@ -1311,3 +1311,30 @@ TBD (1 push 整合)
 - **SSoT**: affiliate-programs.json 更新 (last_updated=9/12; 新增 cron_outage_402_2026_08_28_to_09_11 / mail_check_9_12 / cf_freebie_status_9_12 / filter_senders_drift_9_12 / printify_rate_discrepancy_9_12 / manual_checklist_2026_09_12 / deepseek_balance_9_12 + Claid performance_2026_08)
 - **无 push / 无 build** (监控职责; 工作区有停摆期遗留未提交改动, 交 daily-content 恢复时一并处理)
 - 下个检查点: 今晚 19:45 daily-content (402 复发判定) / 明日 12:05 本任务 (余额+审批增量)
+
+
+## 2026-09-13 · 每日联盟申请审批监控 (15:1x 执行, 恢复期第 2 次巡检)
+- **402 状态降级 P0→P1**: 余额实查 **9.54 CNY** (is_available=true, granted 0.00) — 较 9/12 的 1.59 回升. executions.db: 9/13 completed 2 / running 1 / **failed 0**; 9/12 completed 7 / failed 1; 9/3-9/11 每日 5-11 全失败 (停摆期). **但 config.yaml L512 `fallback_model` 仍整段注释 = 无 failover**, 余额再耗尽即复发 → 保留为手工清单第 1 项
+- **🔧 核心发现① CF 素材管道盲区修复 (P1 闭环)**: 9/12 报告「9/3 后 8 天无 free picks = 节奏中断」**为误判** — CF 邮件自 8/31 起被 Gmail 自动归档到标签夹 `[Gmail]/&V4NXPpD1TvY-`(促销), INBOX-only 扫描漏读. 实测全文件夹扫描 SINCE 28-Aug 命中 **17 期** (含 9/3 后 11 期), **每日到货无中断**. 解析器升级 v5 = 全文件夹扫描; 落盘 cf-freebies/2026-09-13.md
+  - 🎃 万圣节素材 **56 个** (9/3 后新增约 30), 🎄 圣诞/Q4 **47 个** → Halloween 集群辐条①燃料充足; 今日距 10/31 约 7 周, 仍在 6-8 周启动窗内
+- **🔧 核心发现② Printful 链接字节级复验 = 0 坏链**: 依 AGENTS.md 终端脱敏判定规则, 未凭终端显字上报. `my_link_printful` 值完整 (68 字符, 尾 8db2fbabcacc4a, 0 星号); 文件内 4 处字面 `***` 全为 8/5 事件历史叙述文字; reviews.json / affiliates.json 字面 `***` 均 0; out/ **64 HTML 含完整 hash / 0 含脱敏坏链** → 无需修复
+- **邮件 (SOCKS5 7892, SINCE 25-Aug 44 封全量 + 全文件夹交叉)**: **0 新审批 / 0 商户回复 / 0 税务邮件** (自 8/26 起 17 天 0 新审批). 值得记: Printful x Amplified x4 (9/3 holiday pricing / 9/4 Kittl 50% off 年付 / 9/7 AI workflows / 9/12 brand) · Claid 月报+check-in (9/1/8/31) · Supabase togthr-life 暂停 x3 (跨项目) · Google zprintpro.com 结构化数据告警 (跨项目)
+- **站点健康**: aitoptools.net 200; CSS hash 本地 `41d6f17fd1783abd` == 线上 → 最新构建已上线; 构建 365 页; **`/promo/printify-promo-code` 已构建** (9/12 P2 遗留闭环)
+- **部署缺口 = 0**: 8 个 approved/active 程序 `link_deployed` 全 true (out/ HTML 命中: printful 124 · printify 116 · kittl 105 · mockey 98 · claid 68 · CF 65 · gelato 63 · nordvpn 19)
+- **P1 维持**: Printful W-8BEN 重传**第 24 天** (payout_ready=false, 破零唯一税务闸门) / Placeit pending 超 40 天 (草稿就绪待 user 发) / Synthesia 确认第 33 天 / filter_senders 漂移第 3 天 (仍缺 creativefabrica.com / newsletter.printful.com / partners.claid.ai / affiliate.printify.com, 未动凭证)
+- **SSoT**: affiliate-programs.json 更新 (last_updated=9/13 15:2x; 新增 mail_check_9_13 / cf_freebie_status_9_13 / deepseek_balance_9_13 / cron_health_9_13 / printful_link_integrity_9_13 / site_health_9_13 / link_deployment_9_13 / manual_checklist_2026_09_13; diff 11 增 3 删)
+- **无 push / 无 build / 无自动登录 / 无自动回信** (监控职责, can_deploy:false)
+- 下个检查点: 今晚 19:23 daily-search (消费 9/13 PUSH_READY 若有) / 明日 12:05 本任务 (余额水位 + 审批增量)
+
+## 2026-09-18 · 每日联盟申请审批监控 (12:0x 执行, 402 第 2 轮停摆后首个巡检)
+- **🔴 P0 置顶 · 402 全链停摆第 2 轮**: executions.db 实证 **9/14-9/17 连续 4 天全部 cron 失败** (每日 7-10 条), 错误一律 `RuntimeError: HTTP 402: Insufficient Balance`; 9/18 恢复 (completed 2 / running 1). 首轮停摆 8/28-9/11 (15 天) 后**第 2 次复发**. 根因未除: `config.yaml` L512 `fallback_model` **仍整段注释 = 无 failover**. 余额实查 **7.45 CNY** (granted 0.00; 9/12=1.59 → 9/13=9.54 → 9/18=7.45, 单日消耗约 1-2 CNY). 待 user 二选一: 充值 DeepSeek (建议 >=100 CNY 免三日一断) 或接线 MINIMAX fallback (K3 可代改 config)
+- **IMAP 实拉 (SOCKS5 7892, 全 9 夹 SINCE 08-Sep + INBOX SINCE 25-Aug 53 封)**: **0 新审批 / 0 商户回复 / 0 税务邮件** — 自 8/26 起 **22 天 0 新审批**. 发件域名 16 个, 无 >=5 封陌生域名 -> **无钓鱼风险**. 值得记: CF free picks 11 期 (9/7-9/18, 每日到货无断) · Printify 唤醒 x2 (8/31, 9/15 "You're one post away from earning") · Printful x Amplified x2 (9/7 AI workflows / 9/12 brand) · Claid 月报 (9/1) + 促销 (8/31) · Supabase togthr-life 已暂停 (9/13, 跨项目) · Google zprintpro.com 结构化数据告警 (8/27, 跨项目)
+- **🔧 核心发现 · CF 素材池累计增长 (P1 管道健康)**: 全文件夹解析 **22 期 / 73 🎃 / 59 🎄** (9/13 为 17/56/47 → +5 期 / +17 🎃 / +12 🎄). 万圣节 73 个中 **45 个已解出干净产品页 URL**, 圣诞 59 个中 36 个. 落盘 `.hermes/logs/cf-freebies/2026-09-18.md`. 距 10/31 约 6 周 -> Halloween 集群辐条①燃料充足
+- **🔧 核心发现 · Printful 链接字节级复验 = 0 坏链**: `my_link_printful` **68 字符 / 0 星号 / 尾 8db2fbabcacc4a** 完整; 文件内 7 处字面 `***` **全为 8/5 事件历史叙述文字 + 9/13 复核 note 自身引用** (9/13 记 4 处 → 现 7 处, 系 note 引用增加, **非新问题**); `out/` 366 HTML 字面 `***` = **0**. 无需修复 (避免 8/5 式误报)
+- **站点健康**: aitoptools.net -> **200**; CSS 本地 `41d6f17fd1783abd.css` == 线上 -> **一致 = 最新构建已上线** (自 9/13 无新 push, 符合停摆期无产出); 构建 HTML **366** 个
+- **部署缺口 = 0**: out/ 全量命中 — mockey 169 · printify 144 · kittl 140 · printful 138 · claid 124 · gelato 91 · nordvpn 29 (注: 计数为出现次数非页面数, 与 9/13 口径不同, 同为 >0). 9 个 approved/active 程序 `link_deployed` 全 true
+- **P1 维持**: Printful W-8BEN 重传**第 29 天** (payout_ready=false, 破零唯一税务闸门) / Synthesia 确认第 38 天 (8/11 申请) / Placeit pending 超 45 天 (催办草稿就绪待 user 发) / filter_senders 漂移第 7 天 (仍缺 creativefabrica.com · newsletter.printful.com · partners.claid.ai · affiliate.printify.com, 未动凭证文件, 已用 domain 全量扫描绕过)
+- **SSoT**: affiliate-programs.json 更新 (last_updated=9/18 12:1x; 新增 8 键 mail_check_9_18 / cf_freebie_status_9_18 / deepseek_balance_9_18 / cron_health_9_18 / printful_link_integrity_9_18 / site_health_9_18 / link_deployment_9_18 / manual_checklist_2026_09_18; 键数 63->71, **0 键丢失**, 另改 last_updated + monitoring.last_live_check)
+- **无 push / 无 build / 无自动登录 / 无自动回信** (监控职责, can_deploy:false)
+- 下个检查点: 今晚 19:23 daily-search (余额水位再判) / 9/19 12:05 本任务 (审批增量 + 402 是否第 3 轮)
+

@@ -40,3 +40,24 @@
 | 22 | /designpickle-review/（Boost 队列 #7） | 🥉 推排名 | 📝 待发布 |
 
 **累计产出: 22 张**（15 张 8/5-8/11 批次 + 7 张 9/12 批次）；**已发布 0 张** — 发布全部待 user 手工操作。
+
+---
+
+## 2026-09-18 周批（+7 张 → 累计 29）
+
+> 规则判定：无 `scheduler.md` → 周产 7 张。本批**不做重复覆盖**，只打此前 22 张未覆盖的变现页。
+
+| # | 目标页面 | 优先级 | 图片 | 状态 |
+|---|---------|--------|------|------|
+| 23 | `/promo/printify-promo-code/`（此前 0 外链的反孤页） | 🥇 商业意图 | pin-0918-printify-promo-code.webp | 📝 待发布 |
+| 24 | `/printify-review/` | 🥇 变现页 | pin-0918-printify-review.webp | 📝 待发布 |
+| 25 | `/claid-ai-review/` | 🥇 收款就绪商户 | pin-0918-claid-review.webp | 📝 待发布 |
+| 26 | `/gelato-review/` | 🥈 变现页 | pin-0918-gelato-review.webp | 📝 待发布 |
+| 27 | `/mockey-review/` | 🥉 30% 循环 | pin-0918-mockey-review.webp | 📝 待发布 |
+| 28 | `/kittl-review/`（推排名 pos ~66） | 🥈 推排名 | pin-0918-kittl-review.webp | 📝 待发布 |
+| 29 | `/blog/is-gelato-legit/` | 🥉 信任内容 | pin-0918-gelato-legit.webp | 📝 待发布 |
+
+**发布包**: `weekly-manifest-2026-09-18.md`（含标题/描述/带 utm 的目标 URL；7/7 目标 URL 已验存，无 404）
+
+⚠️ **瓶颈如实上报**: 累计产出 29 张，**已发布仍为 0 张**。产能已不是瓶颈，**user 的审批发布环节才是**。建议一次 20 分钟批处理发布。
+
